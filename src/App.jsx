@@ -24,26 +24,26 @@ function ConditionalHeader() {
   return location.pathname !== '/events' ? <Header /> : null;
 }
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/JadeTimes-Academy/">
       <ConditionalHeader />
 
       <main className="min-h-[80vh]">
         <Routes>
-          <Route path='/'                element={<Home_page />} />
-          <Route path='/about'           element={<About_page />} />
-          <Route path='/programfinder'   element={<Programfinder_page />} />
-          <Route path='/admissions'      element={<Admissions_page />} />
-          <Route path='/blog'            element={<Blog />} />
-          <Route path='/events'          element={<Events />} />
-          <Route path='/contact_us'      element={<Contact_Us />} />
-          <Route path='/alumni'          element={<Alumni />} />
-          <Route path='/StudentResources' element={<StudentResources />} />
-          <Route path='/DegreeProgramsPage' element={<DegreeProgramsPage/>} />
-          <Route path='/OnlineProgrames' element={<OnlineProgrames />} />
-          <Route path='/CareerAndAlumniServices' element={<CareerAndAlumniServices />} />
-          <Route path='*'                element={<Home_page />} />
+          <Route path="/"                              element={<Home_page />} />
+          <Route path="/about"                         element={<About_page />} />
+          <Route path="/programfinder/*"               element={<Programfinder_page />} />
+          <Route path="/admissions"                    element={<Admissions_page />} />
+          <Route path="/blog/*"                        element={<Blog />} />
+          <Route path="/events/*"                      element={<Events />} />
+          <Route path="/contact_us"                    element={<Contact_Us />} />
+          <Route path="/alumni"                        element={<Alumni />} />
+          <Route path="/StudentResources"              element={<StudentResources />} />
+          <Route path="/DegreeProgramsPage/*"          element={<DegreeProgramsPage />} />
+          <Route path="/OnlineProgrames/*"             element={<OnlineProgrames />} />
+          <Route path="/CareerAndAlumniServices/*"     element={<CareerAndAlumniServices />} />
+          <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>
 
@@ -51,5 +51,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
