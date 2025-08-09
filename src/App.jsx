@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
 
@@ -24,11 +24,48 @@ function ConditionalHeader() {
   return location.pathname !== '/events' ? <Header /> : null;
 }
 
-export default function App() {
-  return (
-    <BrowserRouter basename="/JadeTimes-Academy/">
-      <ConditionalHeader />
+// Inner app that installs a global click handler to SPA-navigate any internal <a href="/...">
+function AppInner() {
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    const onClick = (e) => {
+      // only left clicks
+      if (e.defaultPrevented || e.button !== 0) return;
+
+      const a = e.target.closest('a');
+      if (!a) return;
+
+      const href = a.getAttribute('href');
+      if (!href) return;
+
+      // ignore modifiers / target=_blank / download
+      if (a.target === '_blank' || a.hasAttribute('download') || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+      // ignore external links, hash, mailto, tel
+      if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+      if (/^https?:\/\//i.test(href) && new URL(href).origin !== window.location.origin) return;
+
+      // only handle same-origin links
+      // resolve relative paths to a pathname
+      const url = href.startsWith('http') ? new URL(href) : new URL(href, window.location.href);
+      const isSameOrigin = url.origin === window.location.origin;
+      if (!isSameOrigin) return;
+
+      // if it looks like a file download (has extension) and not just a route, let browser handle
+      if (/\.[a-z0-9]+($|\?)/i.test(url.pathname)) return;
+
+      e.preventDefault();
+      navigate(url.pathname + url.search + url.hash);
+    };
+
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
+  }, [navigate]);
+
+  return (
+    <>
+      <ConditionalHeader />
       <main className="min-h-[80vh]">
         <Routes>
           <Route path="/"                              element={<Home_page />} />
@@ -46,8 +83,15 @@ export default function App() {
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>
-
       <Footer />
-    </BrowserRouter>
+    </>
   );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter basename="/JadeTimes-Academy/">
+      <AppInner />
+    </BrowserRouter>
+ );
 }
