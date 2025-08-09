@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
 
@@ -24,35 +24,28 @@ function ConditionalHeader() {
   return location.pathname !== '/events' ? <Header /> : null;
 }
 
-// Inner app that installs a global click handler to SPA-navigate any internal <a href="/...">
+// Global click interceptor so ANY <a href="/..."> in header/footer/body routes via SPA
 function AppInner() {
   const navigate = useNavigate();
 
   useEffect(() => {
     const onClick = (e) => {
-      // only left clicks
-      if (e.defaultPrevented || e.button !== 0) return;
-
+      if (e.defaultPrevented || e.button !== 0) return; // left-click only
       const a = e.target.closest('a');
       if (!a) return;
 
       const href = a.getAttribute('href');
       if (!href) return;
 
-      // ignore modifiers / target=_blank / download
+      // ignore new-tab/download/modifier/external/hash/mail/tel
       if (a.target === '_blank' || a.hasAttribute('download') || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-
-      // ignore external links, hash, mailto, tel
       if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
       if (/^https?:\/\//i.test(href) && new URL(href).origin !== window.location.origin) return;
 
-      // only handle same-origin links
-      // resolve relative paths to a pathname
       const url = href.startsWith('http') ? new URL(href) : new URL(href, window.location.href);
-      const isSameOrigin = url.origin === window.location.origin;
-      if (!isSameOrigin) return;
+      if (url.origin !== window.location.origin) return;
 
-      // if it looks like a file download (has extension) and not just a route, let browser handle
+      // If it looks like a file path (ends with extension), let browser handle
       if (/\.[a-z0-9]+($|\?)/i.test(url.pathname)) return;
 
       e.preventDefault();
@@ -90,8 +83,8 @@ function AppInner() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/JadeTimes-Academy/">
+    <Router>
       <AppInner />
-    </BrowserRouter>
- );
+    </Router>
+  );
 }
