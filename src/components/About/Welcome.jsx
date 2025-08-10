@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AboutWelcome from '../../assets/Images/AboutWelcome.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faQuoteLeft, faChevronDown, faBullseye, faGraduationCap, faClipboardList } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Welcome = () => {
   const [missionVisible, setMissionVisible] = useState(false);
@@ -100,16 +101,13 @@ const Welcome = () => {
                     </p>
                   </div>
                 </div>
-                <button
+                <Link
+                  to="/programfinder"
                   className="flex items-center justify-between px-6 py-5 border-b border-gray-200 hover:bg-blue-50 transition-colors duration-200 focus:outline-none focus:bg-blue-100 text-left"
                   onClick={() => setDegreeVisible(!degreeVisible)}
                 >
                   <span className="flex items-center gap-3"><FontAwesomeIcon icon={faGraduationCap} className="text-blue-500" /> Explore our Courses</span>
-                  <FontAwesomeIcon
-                    icon={faChevronDown}
-                    className={`transform transition-transform duration-300 ${degreeVisible ? 'rotate-180 text-blue-600' : ''}`}
-                  />
-                </button>
+                </Link>
                 <div
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${degreeVisible ? 'max-h-screen' : 'max-h-0'}`}
                 >
@@ -119,28 +117,16 @@ const Welcome = () => {
                     </p>
                   </div>
                 </div>
-                <button
+                <Link
+                  to="/admissions"
                   className="flex items-center justify-between px-6 py-5 hover:bg-blue-50 transition-colors duration-200 focus:outline-none focus:bg-blue-100 text-left rounded-b-xl"
                   onClick={() => setExploreVisible(!exploreVisible)}
                 >
                   <span className="flex items-center gap-3"><FontAwesomeIcon icon={faClipboardList} className="text-blue-500" /> How to Enroll</span>
-                  <FontAwesomeIcon
-                    icon={faChevronDown}
-                    className={`transform transition-transform duration-300 ${exploreVisible ? 'rotate-180 text-blue-600' : ''}`}
-                  />
-                </button>
+                </Link>
                 <div
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${exploreVisible ? 'max-h-screen' : 'max-h-0'}`}
                 >
-                  <div className="p-6 bg-blue-50/50 text-gray-700 leading-relaxed">
-                    <ol className="space-y-4 list-decimal list-inside">
-                      <li><strong>Choose Your Course:</strong> Browse our programs and pick the one that suits your career goals.</li>
-                      <li><strong>Select Your Country & Batch:</strong> Find the next available batch in your region and note the enrollment deadline.</li>
-                      <li><strong>Register Online:</strong> Fill out the quick registration form on our website.</li>
-                      <li><strong>Confirm Your Seat:</strong> Make the course payment securely online to confirm your spot.</li>
-                      <li><strong>Start Learning:</strong> Join live sessions, access materials, and start building your skills.</li>
-                    </ol>
-                  </div>
                 </div>
               </nav>
             </div>

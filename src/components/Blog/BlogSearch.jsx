@@ -1,18 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import BlogSearchImg from '../../assets/Images/BlogSearchImg.jpeg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {  faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-
-const navLinks = [
-    { name: 'Filmmaking', href: '#' },
-    { name: 'Media Arts', href: '#' },
-    { name: 'Performing Arts', href: '#' },
-    { name: 'Recent', href: '#' },
-    { name: 'Alum Highlights', href: '#' },
-    { name: 'Guest Speakers', href: '#' },
-  ];
-  
 
   const BlogPostCard = ({ image, category, date, title, author }) => (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 group">
@@ -34,53 +24,13 @@ const navLinks = [
   );
 
 const BlogSearch = () => {
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+ 
+
 
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              {/* Header Navigation */}
-              <header className="py-6">
-                <div className="flex justify-between items-center border-b-2 border-gray-200 pb-4">
-                  <nav className="hidden md:flex items-center space-x-6 text-base font-semibold tracking-wider text-gray-600">
-                    {navLinks.map(link => (
-                      <a key={link.name} href={link.href} className="hover:text-purple-600 transition-colors duration-300 px-3 py-2 rounded-md">{link.name}</a>
-                    ))}
-                  </nav>
-                  <div className="md:hidden">
-                      <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                        {/* Icon */}
-                      </button>
-                    </div>
-                  <div className="relative inline-block text-left">
-                    <button
-                      type="button"
-                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                      className="inline-flex justify-between items-center w-full md:w-auto rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
-                    >
-                      View All
-                      <FontAwesomeIcon icon={faChevronDown} className={`w-4 h-4 ml-2 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-                    </button>
-                    {isDropdownOpen && (
-                      <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <div className="py-1">
-                          {navLinks.map(link => (
-                            <a key={link.name} href={link.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">{link.name}</a>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-                {isMobileMenuOpen && (
-                    <nav className="md:hidden mt-4 space-y-2">
-                      {navLinks.map(link => (
-                        <a key={link.name} href={link.href} className="block text-base text-gray-600 hover:text-purple-600 px-3 py-2 rounded-md">{link.name}</a>
-                      ))}
-                    </nav>
-                  )}
-              </header>
+ 
         
               {/* Main Content */}
               <main className="mt-12">

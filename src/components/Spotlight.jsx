@@ -1,9 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Spotlight1 from '../assets/Images/Spotlight 01.jpeg';
-import Spotlight2 from '../assets/Images/Spotlight 02.png';
-import Spotlight3 from '../assets/Images/Spotlight 03.png';
 import Spotlight4 from '../assets/Images/Spotlight 04.jpeg';
 import Spotlight5 from '../assets/Images/Spotlight 05.jpeg';
 import Spotlight6 from '../assets/Images/Spotlight 06.jpeg';
@@ -20,9 +17,9 @@ const Spotlight = () => {
         <div className="mb-10 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
           <div className="inline-block border-l-4 border-purple-700 pl-2">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-500 ">
-              SPOTLIGHT
+              ACADEMY 
               <br />
-              <span className="text-gray-700">NYFA</span>
+              <span className="text-gray-700">SPOTLIGHT</span>
             </h1>
           </div>
         </div>
@@ -31,14 +28,15 @@ const Spotlight = () => {
         {/* Top row cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
           {/* Card 1 */}
-          <a href="#" className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 block">
-            <img
-              alt="Group of people filming a scene with boom mic and lights in blue lighting"
-              className="w-full object-cover filter hover:grayscale-0 transition-all duration-300"
+          <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 block">
+            <iframe 
+              className="w-full  object-cover filter hover:grayscale-0 transition-all duration-300" 
               height="300"
-              src={Spotlight1}
-              width="400"
-            />
+              src="https://www.youtube.com/embed/ITPpLCUg0Vo" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            ></iframe>
             <div className="p-4">
               <h2 className="mt-4 text-xs tracking-widest font-semibold uppercase">
                 OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS
@@ -47,60 +45,63 @@ const Spotlight = () => {
                 NYFA holds monthly open houses as well as a number of online virtual info sessions and events.
               </p>
             </div>
-          </a>
+          </div>
 
 
            {/* Card 2 */}
-          <a href="#" className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 block">
-            <img
-              alt="Young girl smiling looking through a video camera indoors"
-              className="w-full object-cover filter hover:grayscale-0 transition-all duration-300"
+          <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 block">
+            <iframe 
+              className="w-full  object-cover filter hover:grayscale-0 transition-all duration-300" 
               height="300"
-              src={Spotlight2}
-              width="400"
-            />
+              src="https://www.youtube.com/embed/FKz0Fnk_TRM" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            ></iframe>
             <div className="p-4">
               <h2 className="mt-4 text-xs tracking-widest font-semibold uppercase">
-                SIGN UP FOR SUMMER CAMP!
+                OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS
               </h2>
               <p className="mt-1 text-xs text-gray-600 leading-relaxed">
-                NYFA has in-person and online summer camps and classes for teens ages 14-17 and kids 10-13. Camps are offered in NY, LA, Miami, Harvard, Florence, Paris, and online. Sign up your aspiring youth filmmaker, performer, or visual storyteller today!
+                NYFA holds monthly open houses as well as a number of online virtual info sessions and events.
               </p>
             </div>
-          </a>
+          </div>
 
 
            {/* Card 3 */}
-          <a href="#" className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 block">
-            <img
-              alt="NYFA logo text in black on yellow geometric background"
-              className="w-full object-cover filter  hover:grayscale-0 transition-all duration-300"
+          <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 block">
+            <iframe 
+              className="w-full  object-cover filter hover:grayscale-0 transition-all duration-300" 
               height="300"
-              src={Spotlight3}
-              width="400"
-            />
+              src="https://www.youtube.com/embed/n5mC2GT4SfU" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            ></iframe>
             <div className="p-4">
               <h2 className="mt-4 text-xs tracking-widest font-semibold uppercase">
-                EXPLORE MORE AS A NYFA MEMBER! JOIN TODAY!
+                OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS
               </h2>
               <p className="mt-1 text-xs text-gray-600 leading-relaxed">
-                Join now for $50! NYFA Membership opens the door to unique Film, Media, and Performing Arts experiences including masterclasses, discounts, and access to live online guest speaker events.
+                NYFA holds monthly open houses as well as a number of online virtual info sessions and events.
               </p>
             </div>
-          </a>
+          </div>
         </div>
       </div>
 
       {/* Full-width container for bottom image grids */}
       <div className="w-full p-4 pb-20">
-        {/* Seamless 3-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Degree Programs */}
-          <a href="/DegreeProgramsPage" className="relative group cursor-pointer overflow-hidden h-80 block">
+
+        {/* Seamless 2-column grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          {/* Youth Programs */}
+          <a href="/DegreeProgramsPage" className="relative group cursor-pointer overflow-hidden h-96 block">
             <img
-              alt="Filming inside a dimly lit space"
+              alt="Smiling young people posing for a photo"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-              src={Spotlight4}
+              src={Spotlight7}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
@@ -114,68 +115,8 @@ const Spotlight = () => {
             </div>
           </a>
 
-          {/* Certificate Programs */}
-          <a href="#" className="relative group cursor-pointer overflow-hidden h-80 block">
-            <img
-              alt="Two people filming outdoors"
-              className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-              src={Spotlight5}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-              <div>
-                <h3 className="text-white text-lg font-semibold tracking-wider">
-                  CERTIFICATE PROGRAMS
-                </h3>
-              </div>
-            </div>
-            <div className="absolute bottom-6 right-6 text-white text-2xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-              <FontAwesomeIcon icon={faArrowRight} />
-            </div>
-          </a>
-
-          {/* Short-Term Workshops */}
-          <a href="#" className="relative group cursor-pointer overflow-hidden h-80 block">
-            <img
-              alt="Group with NYFA shirts and equipment"
-              className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-              src={Spotlight6}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-              <div>
-                <h3 className="text-white text-lg font-semibold tracking-wider">
-                  SHORT-TERM WORKSHOPS
-                </h3>
-              </div>
-            </div>
-            <div className="absolute bottom-6 right-6 text-white text-2xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-              <FontAwesomeIcon icon={faArrowRight} />
-            </div>
-          </a>
-        </div>
-
-        {/* Seamless 2-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          {/* Youth Programs */}
-          <a href="#" className="relative group cursor-pointer overflow-hidden h-96 block">
-            <img
-              alt="Smiling young people posing for a photo"
-              className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-              src={Spotlight7}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-              <div>
-                <h3 className="text-white text-lg font-semibold tracking-wider">
-                  YOUTH PROGRAMS
-                </h3>
-              </div>
-            </div>
-            <div className="absolute bottom-6 right-6 text-white text-2xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-              <FontAwesomeIcon icon={faArrowRight} />
-            </div>
-          </a>
-
           {/* Study Abroad with NYFA */}
-          <a href="#" className="relative group cursor-pointer overflow-hidden h-96 block">
+          <a href="/OnlineProgrames" className="relative group cursor-pointer overflow-hidden h-96 block">
             <img
               alt="Woman filming in front of a cathedral"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -184,7 +125,7 @@ const Spotlight = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
                 <h3 className="text-white text-lg font-semibold tracking-wider">
-                  STUDY ABROAD WITH NYFA
+                   ONLINE PROGRAMS
                 </h3>
               </div>
             </div>
@@ -193,28 +134,6 @@ const Spotlight = () => {
             </div>
           </a>
         </div>
-
-        {/* Online Programs full width */}
-        <a href="/OnlineProgrames" className="relative group cursor-pointer overflow-hidden h-[500px] mt-4 block">
-          <img
-            alt="Hands typing on a laptop"
-            className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
-            src={Spotlight9}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
-            <div>
-              <h3 className="text-white text-2xl font-bold tracking-wider">
-                ONLINE PROGRAMS
-              </h3>
-              <p className="text-white mt-2 max-w-md">
-                Learn from industry experts from anywhere in the world. Explore our flexible online programs.
-              </p>
-            </div>
-          </div>
-          <div className="absolute bottom-8 right-8 text-white text-3xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-            <FontAwesomeIcon icon={faArrowRight} />
-          </div>
-        </a>
       </div>
     </div>
   );

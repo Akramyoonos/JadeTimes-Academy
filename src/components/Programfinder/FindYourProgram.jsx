@@ -45,25 +45,19 @@ const programsData = [
 ];
 
 const disciplines = [
-  '3D Animation', 'Acting for Film', 'Cinematography', 'Digital Editing',
-  'Documentary Filmmaking', 'Entertainment Media', 'ESL', 'Filmmaking',
-  'Game Design', 'Musical Theatre', 'Photography', 'Producing',
-  'Screenwriting', 'Virtual Reality'
+  'Digital Journalism', 'Broadcast Journalism', 'News Reporting & Anchoring', 'Media Ethics & Law',
+  'Digital Media Production', 'Investigative Journalism', 'Multimedia Storytelling', 'Social Media Management',
+  'Photojournalism', 'Public Relations & Media Strategy'
 ];
 
 const programTypes = [
-  'Master of Fine Arts', 'Master of Arts', 'Masters of Arts Online',
-  'Bachelor of Fine Arts', 'Bachelor of Arts', 'Associate of Fine Arts',
-  '2-Year Certificate Program', '1-Year Certificate Program',
-  'Short-Term Workshop', 'Online Short-Term Workshop', 'All Available'
+  'Master of Journalism', 'Master of Media & Communication', 'Master of Digital Media (Online)',
+  'Bachelor of Journalism', 'Bachelor of Media Studies', 'Associate Degree in Journalism',
+  '2-Year Diploma in Media & Journalism', '1-Year Professional Certificate in Journalism',
+  'Short-Term Media Workshop', 'Online Short-Term Workshop in Journalism'
 ];
 
-const locations = [
-  'New York City', 'Los Angeles', 'Miami', 'Florence, Italy',
-  'Online', 'Harvard University', 'Paris, France', 'Bejing, China'
-];
 
-const startDates = ['2025', '2026'];
 
 
 const FindYourProgram = () => {
@@ -245,34 +239,6 @@ const FindYourProgram = () => {
                   {programTypes.map(item => (
                     <label key={item} className="flex items-center gap-3 cursor-pointer hover:text-blue-600 transition-colors duration-200">
                       <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500 border-gray-300" onChange={() => handleFilterChange('programType', item)} />
-                      <span>{item}</span>
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-
-              <fieldset>
-                <legend className="font-bold uppercase text-xs mb-4 border-b-2 border-gray-200 pb-2 text-gray-800">
-                  LOCATION
-                </legend>
-                <div className="flex flex-col gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
-                  {locations.map(item => (
-                    <label key={item} className="flex items-center gap-3 cursor-pointer hover:text-blue-600 transition-colors duration-200">
-                      <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500 border-gray-300" onChange={() => handleFilterChange('location', item)} />
-                      <span>{item}</span>
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-
-              <fieldset>
-                <legend className="font-bold uppercase text-xs mb-4 border-b-2 border-gray-200 pb-2 text-gray-800">
-                  PROGRAM START DATE
-                </legend>
-                <div className="flex flex-col gap-2">
-                  {startDates.map(item => (
-                    <label key={item} className="flex items-center gap-3 cursor-pointer hover:text-blue-600 transition-colors duration-200">
-                      <input type="checkbox" className="form-checkbox h-5 w-5 text-blue-600 rounded focus:ring-blue-500 border-gray-300" onChange={() => handleFilterChange('startDate', item)} />
                       <span>{item}</span>
                     </label>
                   ))}
