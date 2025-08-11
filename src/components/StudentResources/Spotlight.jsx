@@ -4,7 +4,7 @@ import PartnershipImg02 from '../../assets/Images/PaetnershipImg02.jpeg';
 
 const Spotlight = () => {
   return (
-    <div className="bg-gray-100 font-sans py-12">
+    <div className="bg-gray-100 font-sans py-5">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               

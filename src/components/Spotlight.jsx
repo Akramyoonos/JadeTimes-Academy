@@ -1,12 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import Spotlight4 from '../assets/Images/Spotlight 04.jpeg';
-import Spotlight5 from '../assets/Images/Spotlight 05.jpeg';
-import Spotlight6 from '../assets/Images/Spotlight 06.jpeg';
 import Spotlight7 from '../assets/Images/Spotlight 07.jpeg';
 import Spotlight8 from '../assets/Images/Spotlight 08.jpeg';
-import Spotlight9 from '../assets/Images/Spotlight 09.jpeg';
 
 const Spotlight = () => {
   return (
@@ -26,7 +22,7 @@ const Spotlight = () => {
 
 
         {/* Top row cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-5">
           {/* Card 1 */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 block">
             <iframe 
@@ -92,7 +88,7 @@ const Spotlight = () => {
       </div>
 
       {/* Full-width container for bottom image grids */}
-      <div className="w-full p-4 pb-20">
+      <div className="w-full p-4 pb-10">
 
         {/* Seamless 2-column grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">

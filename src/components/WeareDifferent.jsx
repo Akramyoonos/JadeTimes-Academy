@@ -11,7 +11,7 @@ const StatCard = ({ value, label, color }) => (
 
 const WeareDifferent = () => {
   return (
-    <div className="font-sans bg-gray-50 py-24">
+    <div className="font-sans bg-gray-50 py-12">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 items-center">
           <div className="lg:pr-12">
