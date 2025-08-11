@@ -83,7 +83,7 @@ const OurFaculty = () => {
                   FACULTY
                 </h2>
               </div>
-              <a href="/FacultyDirectory" className="bg-purple-600 text-white font-bold text-base uppercase tracking-wider px-8 py-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300 inline-block text-center" >
+              <a href="/FacultyDirectoryPage" className="bg-purple-600 text-white font-bold text-base uppercase tracking-wider px-8 py-4 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300 inline-block text-center" >
                 MEET OUR FACULTY
               </a>
             </div>
