@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Spotlight7 from '../assets/Images/Spotlight 07.jpeg';
-import Spotlight8 from '../assets/Images/Spotlight 08.jpeg';
+import Spotlight8 from '../assets/Images/Spotlight 09.jpeg';
 
 const Spotlight = () => {
   return (
@@ -35,10 +35,10 @@ const Spotlight = () => {
             ></iframe>
             <div className="p-4">
               <h2 className="mt-4 text-xs tracking-widest font-semibold uppercase">
-                OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS
+                Dark Side of Bollywood | Watch Before You Start Your Acting & Modeling Journey
               </h2>
               <p className="mt-1 text-xs text-gray-600 leading-relaxed">
-                NYFA holds monthly open houses as well as a number of online virtual info sessions and events.
+                Welcome to "Exclusive Pulse" by JadeTimes Media LLC. In this episode, Nivedithaa charkrapani interviews special guest Prof. Simranjit Singh, a Film director & Assistant Professor to discuss two major topics impacting Dark Side of Bollywood
               </p>
             </div>
           </div>
@@ -56,10 +56,10 @@ const Spotlight = () => {
             ></iframe>
             <div className="p-4">
               <h2 className="mt-4 text-xs tracking-widest font-semibold uppercase">
-                OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS
+                Jadetimes International Research Conference 2025 | Dr. Jaime Geronimo Vela
               </h2>
               <p className="mt-1 text-xs text-gray-600 leading-relaxed">
-                NYFA holds monthly open houses as well as a number of online virtual info sessions and events.
+                Dr. Jaime Geronimo Vela is a multi-talented professional with a PhD in Anthropology from the prestigious University of California, Los Angeles (UCLA). Alongside his academic credentials, Dr. Vela is a seasoned SAG-AFTRA actor, director, and filmmaker known for his dynamic work both in front of and behind the camera.
               </p>
             </div>
           </div>
@@ -77,10 +77,10 @@ const Spotlight = () => {
             ></iframe>
             <div className="p-4">
               <h2 className="mt-4 text-xs tracking-widest font-semibold uppercase">
-                OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS
+               Check How PUBG’s Untold Origin Story Changed Gaming Forever | Jadetimes
               </h2>
               <p className="mt-1 text-xs text-gray-600 leading-relaxed">
-                NYFA holds monthly open houses as well as a number of online virtual info sessions and events.
+              Its realistic gunplay, massive maps, and intense last-man-standing format revolutionized online multiplayer gaming. The game’s success influenced countless titles, popularizing the battle royale genre worldwide. Today, PUBG remains a global gaming icon, spawning esports tournaments, mobile versions, and inspiring an entire generation of competitive shooters.
               </p>
             </div>
           </div>
