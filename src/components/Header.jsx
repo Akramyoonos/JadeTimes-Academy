@@ -202,7 +202,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="headerFont bg-gray-900 text-white shadow-lg sticky top-0 z-20 relative">
+      <header className="headerFont bg-gray-900 text-white shadow-lg sticky top-0 z-20 ">
         {/* Top bar (full width) */}
         <div className="bg-black/30 border-b border-gray-800">
           <div className={`w-full ${gutters}`}>
