@@ -1,0 +1,232 @@
+@import "tailwindcss";
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap';
+
+
+ :root {
+  --primary-pink: #B52E8C;
+  --secondary-blue: #3BA9F9;
+}
+
+/* Home-page Styles */
+
+.headerFont {
+  font-family: 'Montserrat', sans-serif;
+  background-color: black;
+}
+
+.headingFont {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 0 ;
+  color:#9b7f00;
+}
+
+.DifferentFont {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+}
+
+.SearchbyFont {
+      font-family: Arial, sans-serif;
+      background-color: white;
+    }
+
+.LocationFont {
+      font-family: "Inter", sans-serif;
+      height: auto;
+      padding: 4rem 2rem;
+    }
+.bg-location{
+  background-image: url('../dist/assets/bg-location-p39YHSun-p39YHSun.jpg'); /* adjust path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.StudentFont {
+  font-family: 'Open Sans', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.EventsFont{
+  font: sans-serif;
+}
+
+.OurfacultyFont {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.FooterFont{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.FollowusFont {
+  font-family: "Inter", sans-serif;
+  background-color: white;
+}
+
+.tracking-widest-2 {
+  letter-spacing: 0.2em;
+}
+
+.uppercase-small {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+   /* About-page Styles */
+
+.WelcomeFont {
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+/* Program Finder Styles */
+
+.FindYourProgramFont {
+  font-family: "Inter", sans-serif;
+}
+
+/* Resources and Information Styles */
+.ResourcesandInformationFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+    .AdmissionsFont {
+     overflow-x: hidden;
+    }
+
+/* blog search styles */
+
+.nav-font {
+      font-family: Arial, sans-serif;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+    }
+
+/* partnership styles */
+
+PartnershipFont {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+/* Festival styles */
+
+FestivalFont {
+      font-family: "Roboto Mono", monospace;
+    }
+
+/* Headlines styles */
+
+.tracking-widest {
+      letter-spacing: 0.1em;
+    }
+    /* Style for the trending image to match original text style */
+    .trending-label {
+      display: inline-block;
+      background-color: white;
+      color: black;
+      font-family: monospace;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.5rem;
+      margin-bottom: 0.5rem;
+      user-select: none;
+    }
+
+    .ExploreFont {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .BrowsebyDisciplineFont{
+      font-family: 'Barlow', sans-serif;
+    }
+
+    .BlogSearchFont {
+            font-family: 'Lato', sans-serif;
+        }
+        /* For the accessibility button */
+        .fixed-btn {
+            position: fixed;
+            top: 140px;
+            right: -10px;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+    .DiscriptionFont {
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+        .yellow-border {
+            border-left: 5px solid #FFC107;
+            padding-left: 15px;
+        }
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* === Unified 2-line heading with left magenta bar (like your 1st image) === */
+.jt-heading {
+  position: relative;
+  padding-left: 16px;   /* room for the vertical bar */
+  margin: 0;
+}
+
+/* Single-line vertical bar for all headings */
+.jt-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;                     /* nudge down so it lines up with cap height */
+  width: 4px;
+  height: 5.1em;                   /* ~one line tall */
+  background: var(--primary-pink, #B52E8C);
+  border-radius: 2px;
+}
+
+
+
+/* default: plain dark text, medium weight, uppercased */
+.jt-heading .jt-line {
+  display: block;
+  color: #111;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;     /* NOT bold */
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0;
+  font-size: clamp(24px, 4vw, 44px);
+}
+
+/* use when the heading sits on a dark/black section */
+.jt-on-dark .jt-line {
+  color: #fff;
+}
