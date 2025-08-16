@@ -107,55 +107,45 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
   );
 };
 
-// ---------- Full-bleed NYFA-style Search Overlay ----------
-const SearchOverlay = ({ open, onClose }) => {
+// ---------- Full-bleed NYFA-style Search Dropdown ----------
+const SearchDropdown = ({ open, onClose }) => {
   const boxRef = useRef(null);
   const [value, setValue] = useState('');
   useClickOutside(boxRef, onClose);
 
-  useEffect(() => {
-    document.body.style.overflow = open ? 'hidden' : 'unset';
-    return () => { document.body.style.overflow = 'unset'; };
-  }, [open]);
+  // No body scroll lock needed for dropdown
 
   return (
     <div
-      className={`fixed inset-0 z-50 transition-opacity duration-200 ${
-        open ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      ref={boxRef}
+      className={`absolute top-full left-0 w-full bg-[#101010] shadow-xl transition-all duration-300 ease-in-out ${gutters} ${
+        open
+          ? 'translate-y-0 opacity-100'
+          : '-translate-y-4 opacity-0 pointer-events-none'
       }`}
       aria-hidden={!open}
     >
-      {/* backdrop */}
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" onClick={onClose} />
-
-      {/* full-bleed dark search bar */}
-      <div className={`relative w-full`}>
-        <div
-          ref={boxRef}
-          className={`mt-4 sm:mt-6 w-full bg-[#101010] rounded-none shadow-xl ${gutters}`}
+      <div className="py-8 sm:py-10 relative">
+        <button
+          onClick={onClose}
+          className="absolute right-4 top-1/2 -translate-y-1/2 sm:right-6 text-gray-400 hover:text-white"
+          aria-label="Close search"
         >
-          <button
-            onClick={onClose}
-            className="absolute right-4 top-3 sm:right-6 sm:top-4 text-gray-400 hover:text-white"
-            aria-label="Close search"
-          >
-            <FontAwesomeIcon icon={faTimes} size="lg" />
-          </button>
-
-          <div className="py-8 sm:py-10">
-            <label htmlFor="mega-search" className="sr-only">Search</label>
-            <input
-              id="mega-search"
-              type="text"
-              autoFocus
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && onClose()}
-              placeholder="Search"
-              className="w-full bg-transparent text-white placeholder-gray-400 text-2xl sm:text-3xl outline-none pb-3 border-b-2 border-gray-600 focus:border-yellow-400 transition-colors"
-            />
-          </div>
-        </div>
+          <FontAwesomeIcon icon={faTimes} size="lg" />
+        </button>
+        <label htmlFor="mega-search" className="sr-only">
+          Search
+        </label>
+        <input
+          id="mega-search"
+          type="text"
+          autoFocus
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && onClose()}
+          placeholder="Search"
+          className="w-full bg-transparent text-white placeholder-gray-400 text-2xl sm:text-3xl outline-none pb-3 border-b-2 border-gray-600 focus:border-yellow-400 transition-colors"
+        />
       </div>
     </div>
   );
@@ -212,7 +202,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="headerFont bg-gray-900 text-white shadow-lg sticky top-0 z-20">
+      <header className="headerFont bg-gray-900 text-white shadow-lg sticky top-0 z-20 relative">
         {/* Top bar (full width) */}
         <div className="bg-black/30 border-b border-gray-800">
           <div className={`w-full ${gutters}`}>
@@ -228,7 +218,7 @@ const Header = () => {
                 <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} />
                 <button
                   aria-label="Search"
-                  onClick={() => setIsSearchOpen(true)}
+                  onClick={() => setIsSearchOpen(prev => !prev)}
                   className="text-gray-400 hover:text-white transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faSearch} />
@@ -271,10 +261,10 @@ const Header = () => {
             </div>
           </div>
         </nav>
+        <SearchDropdown open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       </header>
 
       {/* Overlays */}
-      <SearchOverlay open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>
   );
