@@ -214,7 +214,7 @@ const Header = () => {
               </div>
 
               <div className="flex items-center gap-5">
-                <span className="hidden lg:inline text-white font-semibold">1-800-611-FILM</span>
+                <span className="hidden lg:inline text-white font-semibold">1-800-JADETIMES</span>
                 <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} />
                 <button
                   aria-label="Search"
@@ -233,7 +233,7 @@ const Header = () => {
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-3">
               <NavLink to="/" className="flex-shrink-0">
-                <img alt="jadetimes logo" className="h-12 w-auto" src={logo} />
+                <img alt="JadeTimes Academy Logo" className="h-12 w-auto" src={logo} />
               </NavLink>
 
               <ul className="hidden lg:flex items-center gap-x-7">

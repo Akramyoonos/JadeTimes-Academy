@@ -1,18 +1,17 @@
-import React from 'react';
-import logo from '../assets/images/Logo.avif';
+import React from "react";
+import Logo from "../assets/Images/Logo.avif";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import {
-  faInstagram,
-  faFacebookF,
-  faXTwitter,
-  faYoutube,
-  faSnapchat,
-  faPinterestP,
-  faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons';
+  FaInstagram,
+  FaFacebookF,
+  FaTwitter,
+  FaYoutube,
+  FaSnapchatGhost,
+  FaPinterestP,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
-/* ───────── CTA config (text + color behavior) ───────── */
 const topLinks = [
   {
     text: 'REQUEST INFO',
@@ -40,96 +39,9 @@ const topLinks = [
   },
 ];
 
-/* ───────── Footer content ───────── */
-const footerColumns = [
-  {
-    title: 'About',
-    links: [
-      { text: 'JadeTimes Brochures', href: '#' },
-      { text: 'Faculty', href: '#' },
-      { text: 'Alum Network', href: '#' },
-      { text: 'Store', href: '#' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { text: 'Jobs', href: 'https://www.jadetimes.com/job-vacancies' },
-      { text: 'Teach-Out Policy', href: '#' },
-      { text: 'Privacy Policy', href: '#' },
-      { text: 'BPPE', href: '#' },
-    ],
-  },
-];
-
-const socialIcons = [
-  { icon: faInstagram, href: '#', label: 'Instagram' },
-  { icon: faFacebookF, href: '#', label: 'Facebook' },
-  { icon: faXTwitter, href: '#', label: 'X (Twitter)' },
-  { icon: faYoutube, href: '#', label: 'YouTube' },
-  { icon: faSnapchat, href: '#', label: 'Snapchat' },
-  { icon: faPinterestP, href: '#', label: 'Pinterest' },
-  { icon: faLinkedinIn, href: '#', label: 'LinkedIn' },
-];
-
-/* ───────── Small pieces ───────── */
-const FooterLink = ({ href, children, className = '' }) => (
-  <a
-    href={href}
-    className={`text-gray-400 hover:text-white hover:underline transition-colors duration-300 ${className}`}
-  >
-    {children}
-  </a>
-);
-
-const SocialIcon = ({ icon, href, label }) => (
-  <a
-    href={href}
-    aria-label={label}
-    className="text-gray-500 hover:text-white transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] transition-all duration-300"
-  >
-    <FontAwesomeIcon icon={icon} size="lg" />
-  </a>
-);
-
-const FooterColumn = ({ title, links }) => (
-  <div>
-    <h3 className="text-sm font-semibold tracking-wider uppercase text-white mb-4">{title}</h3>
-    <ul className="space-y-3">
-      {links.map((link, i) => (
-        <li key={i}>
-          <FooterLink href={link.href}>{link.text}</FooterLink>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
-const NewsletterForm = () => (
-  <div>
-    <h3 className="text-sm font-semibold tracking-wider uppercase text-white mb-4">Stay Connected</h3>
-    <p className="text-gray-400 mb-4 text-sm">Get the latest news and updates from JadeTimes.</p>
-    <form className="flex">
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="w-full bg-gray-800 text-white px-4 py-2 rounded-l-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-shadow"
-      />
-      <button
-        type="submit"
-        className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-r-md transition-colors duration-300"
-        aria-label="Subscribe to newsletter"
-      >
-        <FontAwesomeIcon icon={faPaperPlane} />
-      </button>
-    </form>
-  </div>
-);
-
-/* ───────── Footer ───────── */
-export default function Footer() {
+const Footer = () => {
   return (
-    <div className="FooterFont bg-gradient-to-b from-gray-900 to-black text-white">
+     <div className="FooterFont bg-black from-gray-900 to-black text-white">
       {/* Top CTA strip (centered text + icon, color on hover) */}
       <div className="bg-black bg-opacity-20 border-b border-gray-800">
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-3">
@@ -164,56 +76,172 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main footer content */}
-      <footer className="max-w-screen-xl mx-auto pt-16 pb-12 px-6 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          {/* Logo & socials */}
-          <div className="md:col-span-12 lg:col-span-3">
-            <img alt="New York Film Academy logo" className="h-16 w-auto mb-6" src={logo} />
-            <div className="flex flex-wrap gap-5 text-gray-500">
-              {socialIcons.map((s, i) => (
-                <SocialIcon key={i} {...s} />
-              ))}
-            </div>
-          </div>
 
-          {/* Columns */}
-          {footerColumns.map((col, i) => (
-            <div key={i} className="md:col-span-6 lg:col-span-2">
-              <FooterColumn {...col} />
+      {/* ───────── Middle Section ───────── */}
+      {/* ───────── Middle Section ───────── */}
+      <div className="py-10 px-6 md:px-20 bg-black bg-opacity-20 border-b border-gray-800">
+        <div className="flex flex-col items-start">
+            {/* Logo */}
+            <div className="mb-6">
+              <img
+                src={Logo}
+                alt="New York Film Academy Logo"
+                className="h-20"
+              />
             </div>
-          ))}
+            
+            {/* Links */}
+            <div className="flex flex-wrap gap-6 text-sm font-medium">
+              <a href="#" className="hover:text-gray-400">
+                COURSES
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                ENROLLMENT
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                INSTRUCTORS
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                CAMPUS LIFE
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                UPDATES & ARTICLES
+              </a>
+              <a href="#" className="hover:text-gray-400">
+                OUR STORY
+              </a>
+            </div>
 
-          {/* Newsletter */}
-          <div className="md:col-span-12 lg:col-span-5">
-            <NewsletterForm />
-          </div>
+            {/* Social Icons */}
+            <div className="flex gap-6 text-xl mt-8 text-gray-400">
+              <a href="#" className="hover:text-white">
+                <FaInstagram />
+              </a>
+              <a href="#" className="hover:text-white">
+                <FaFacebookF />
+              </a>
+              <a href="#" className="hover:text-white">
+                <FaTwitter />
+              </a>
+              <a href="#" className="hover:text-white">
+                <FaYoutube />
+              </a>
+              <a href="#" className="hover:text-white">
+                <FaSnapchatGhost />
+              </a>
+              <a href="#" className="hover:text-white">
+                <FaPinterestP />
+              </a>
+              <a href="#" className="hover:text-white">
+                <FaLinkedinIn />
+              </a>
+            </div>
         </div>
-      </footer>
+      </div>
 
-      {/* Bottom legal */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-screen-xl mx-auto py-8 px-6 sm:px-8 text-gray-500 text-xs leading-relaxed space-y-4 text-center">
+      {/* ───────── Bottom Section ───────── */}
+      <div className="border-t border-gray-800 py-10 px-6 md:px-20 flex flex-col md:flex-row md:justify-between gap-6 text-gray-300 text-sm">
+        {/* Left text */}
+        <div className="md:w-2/3">
           <p>
-            Copyright © 2025 New York Film Academy • <FooterLink href="#">Privacy Policy</FooterLink>
+            Copyright © 2024 JadeTimes Academy •{" "}
+            <a href="#" className="hover:text-white text-base">
+              Privacy Policy
+            </a>
           </p>
-          <p className="max-w-4xl mx-auto">
-            All programs and workshops are solely owned and operated by the New York Film Academy and are not affiliated
-            with Universal Studios or Harvard University. GI Bill® is a registered trademark of the U.S. Department of
-            Veterans Affairs (VA). More information about education benefits offered by VA is available at the official
-            U.S. government website at{' '}
+
+          <p className="mt-4">
+            All programs and workshops are solely owned and operated by the
+            JadeTimes Academy and are not affiliated with Universal <br/>
+            Studios, or Harvard University. GI Bill® is a registered trademark of the U.S.
+            Department of Veterans Affairs (VA). More <br/> information about
+            education benefits offered by VA is available at the official U.S.
+            government website <br/> at{" "}
             <a
-              className="hover:underline text-gray-400"
               href="http://www.benefits.va.gov/gibill"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline"
             >
               http://www.benefits.va.gov/gibill
             </a>
-            .
+            . Not all programs are offered at all locations.
+          </p>
+
+          <p className="mt-4">
+            BPPE: The JadeTimes Academy is approved to operate by the
+            California Bureau for Private Postsecondary Education (BPPE) <br />
+            “Approval” or “approval to operate” means that the institution is
+            compliant with the minimum standards contained in the <br /> California
+            Private Postsecondary Education Act of 2009 (as amended) and
+            Division 7.5 of Title 5 of the California Code of <br /> Education.
+          </p>
+
+          <p className="mt-4">
+            <a href="#" className="text-blue-400 hover:underline">
+              Click here
+            </a>{" "}
+            to access the Bureau for Private Postsecondary Education website.
+            <br />
+            <a href="#" className="text-blue-400 hover:underline">
+
+              Click here
+            </a>{" "}
+            to download JadeTimes Academy’s 2023 School Performance Fact
+            Sheet for the Los Angeles Campus.
+            <br />
+            <a href="#" className="text-blue-400 hover:underline">
+
+              Click here
+            </a>{" "}
+            to download JadeTimes Academy – BPPE 2023 Annual Report.
           </p>
         </div>
+
+        {/* Right language list */}
+        <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 text-right">
+          <li>
+            <a href="#" className="hover:text-white text-base">
+              RU
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-white text-base">
+              ES
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-white text-base">
+              AR
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-white text-base">
+              IT
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-white text-base">
+              PT
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-white text-base">
+              JP
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-white text-base">
+              KR
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-white text-base">
+              CN
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
-}
+};
+
+export default Footer;

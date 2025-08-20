@@ -8,32 +8,35 @@ import Upcomingevents from '../components/Upcomingevents.jsx';
 import VideoHeading from '../components/VideoHeading.jsx';
 import WeareDifferent from '../components/WeareDifferent.jsx';
 import CampusesAndLocations from '../components/CampusesAndLocations.jsx';
-import IntroAfterSearch from '../components/IntroAfterSearch.jsx'; // <- add if needed
+import IntroAfterSearch from '../components/IntroAfterSearch.jsx';
 
 const Home_page = () => {
   return (
-    <>
-      <VideoHeading
-        subtitle={<>Academy of Journalism, Communication<br />&amp; Media Innovation</>}
-        altText="People working on film editing software on multiple monitors in a dimly lit room"
-      />
+    <div className="flex flex-col">
+      
+        <VideoHeading
+          subtitle={<>Academy of Journalism, Communication<br />&amp; Media Innovation</>}
+          altText="People working on film editing software on multiple monitors in a dimly lit room"
+        />
+      
+        <SearchProgramsBy />
+      
+        <IntroAfterSearch />
+      
+        <CampusesAndLocations />
 
-      <SearchProgramsBy />
+        <Spotlight />
 
-      {/* Make sure this intro comes BEFORE Campuses & Locations */}
-      <IntroAfterSearch />  {/* remove this line if your intro already lives inside SearchProgramsBy */}
+        <WeareDifferent />
 
-      <CampusesAndLocations />
+        <Upcomingevents />
 
-      <Spotlight />
-      <WeareDifferent />
-      <OurStudents />
-      <br />
-      <br />
-      <Upcomingevents />
-      <Ourfaculty />
-      <Followus />
-    </>
+        <OurStudents />
+
+        <Ourfaculty />
+
+        <Followus />
+    </div>
   );
 };
 

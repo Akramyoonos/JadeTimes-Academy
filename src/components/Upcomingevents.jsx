@@ -1,47 +1,7 @@
 // src/components/Upcomingevents.jsx
 import React, { useState } from "react";
 
-/* ---------- Sample data in the NYFA table shape ---------- */
-const applicationDeadlines = [
-  {
-    term: "Fall ’25 Undergraduate Application Deadline",
-    early: {
-      date: "December 1, 2024",
-      fee: 75,
-      commit: "May 1, 2025",
-    },
-    general: {
-      original: "February 14, 2025",
-      extendedTo: "March 15, 2025",
-      fee: 75,
-      commit: "May 1, 2025",
-    },
-    late: {
-      original: "June 1, 2025",
-      extendedTo: "August 1, 2025",
-      fee: 200,
-    },
-  },
-  {
-    term: "Fall ’25  Graduate Application Deadline",
-    early: {
-      date: "December 1, 2024",
-      fee: 75,
-      commit: "May 1, 2025",
-    },
-    general: {
-      original: "February 14, 2025",
-      extendedTo: "March 15, 2025",
-      fee: 75,
-      commit: "May 1, 2025",
-    },
-    late: {
-      original: "June 1, 2025",
-      extendedTo: "August 1, 2025",
-      fee: 200,
-    },
-  },
-];
+import { applicationDeadlines } from "../deadlines.js";
 
 /* ---------- Icons ---------- */
 const CalendarIcon = () => (
@@ -82,7 +42,7 @@ const Upcomingevents = () => {
 
   return (
     <section className="EventsFont bg-gray-50 min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-12 sm:px-16 lg:px-20 py-12">
 
         {/* ---------- Tabs header + See events link ---------- */}
         <div className="flex items-center justify-between">

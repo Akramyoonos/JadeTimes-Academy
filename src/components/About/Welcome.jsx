@@ -53,7 +53,7 @@ const Welcome = () => {
 
             <figure className="mb-20 relative rounded-2xl overflow-hidden shadow-2xl group">
               <img
-                alt="New York Film Academy"
+                alt="JadeTimes Academy"
                 className="w-full h-auto object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
                 src={videoThumbnail}
               />
