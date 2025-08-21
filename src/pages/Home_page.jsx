@@ -29,9 +29,9 @@ const Home_page = () => {
 
         <WeareDifferent />
 
-        <Upcomingevents />
+         <OurStudents />
 
-        <OurStudents />
+        <Upcomingevents />
 
         <Ourfaculty />
 

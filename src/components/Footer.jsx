@@ -56,7 +56,7 @@ const Footer = () => {
               {/* Center label + icon together */}
               <div className="w-full max-w-[520px] mx-auto flex items-center justify-center gap-3 md:gap-4 px-6">
                 <span
-                  className={`text-white text-[13px] md:text-sm font-bold tracking-[0.35em] uppercase transition-colors duration-200 ${l.textHover}`}
+                  className={`text-white text-sm md:text-base font-bold tracking-[0.35em] uppercase transition-colors duration-200 ${l.textHover}`}
                 >
                   {l.text}
                 </span>
@@ -67,7 +67,7 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon
                     icon={faArrowUpRightFromSquare}
-                    className={`text-[13px] md:text-sm ${l.iconColor} transition-colors duration-200`}
+                    className={`text-sm md:text-base ${l.iconColor} transition-colors duration-200`}
                   />
                 </span>
               </div>
@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
             
             {/* Links */}
-            <div className="flex flex-wrap gap-6 text-sm font-medium">
+            <div className="flex flex-wrap gap-6 text-base font-medium">
               <a href="#" className="hover:text-gray-400">
                 COURSES
               </a>
