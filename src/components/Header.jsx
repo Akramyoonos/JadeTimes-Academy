@@ -15,7 +15,7 @@ import logo from '../assets/images/Logo.avif';
 // ---------------- CONFIG ----------------
 // Full-bleed: no max-width. Tweak gutters here.
 // To remove side padding entirely, change px-4 sm:px-6 lg:px-8 -> px-0
-const gutters = 'px-4 sm:px-6 lg:px-8';
+const gutters = 'px-6 sm:px-8 lg:px-10';
 
 const topBarLinks = [
   {
@@ -78,13 +78,13 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => onToggle(!isOpen)}
-        className="flex items-center space-x-1 text-gray-400 hover:text-white transition-colors duration-300"
+        className="flex items-center space-x-1 text-gray-400 gap-2 hover:text-white transition-colors duration-300"
       >
-        <FontAwesomeIcon icon={faGlobeAmericas} />
-        <span className="text-xs font-semibold">ENGLISH</span>
+                <FontAwesomeIcon icon={faGlobeAmericas} size="lg" />
+        <span className="text-base font-semibold">ENGLISH</span>
         <FontAwesomeIcon
           icon={faChevronDown}
-          className={`w-2 h-2 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
 
@@ -181,7 +181,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
               <NavLink
                 to={link.href}
                 onClick={onClose}
-                className="block py-2 text-xl font-medium text-gray-300 hover:text-yellow-400 transition-colors duration-300"
+                className="block py-2 text-3xl font-medium text-gray-300 hover:text-yellow-400 transition-colors duration-300"
               >
                 {link.text}
               </NavLink>
@@ -204,10 +204,10 @@ const Header = () => {
     <>
       <header className="headerFont bg-gray-900 text-white shadow-lg sticky top-0 z-20 ">
         {/* Top bar (full width) */}
-        <div className="bg-black/30 border-b border-gray-800">
+        <div className="hidden sm:block bg-black/30 border-b border-gray-800 py-2">
           <div className={`w-full ${gutters}`}>
-            <div className="flex items-center justify-between py-2 text-xs">
-              <div className="flex items-center gap-x-5 text-gray-400">
+            <div className="flex items-center justify-between py-4 text-md">
+              <div className="flex items-center gap-x-7 text-gray-400">
                 {topBarLinks.map(link => (
                   <a key={link.text} href={link.href} className={link.className}>{link.text}</a>
                 ))}
@@ -215,14 +215,15 @@ const Header = () => {
 
               <div className="flex items-center gap-5">
                 <span className="hidden lg:inline text-white font-semibold">1-800-JADETIMES</span>
-                <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} />
-                <button
+                 <button
                   aria-label="Search"
                   onClick={() => setIsSearchOpen(prev => !prev)}
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  className="text-gray-400 hover:text-white transition-colors  duration-300"
                 >
-                  <FontAwesomeIcon icon={faSearch} />
+                  <FontAwesomeIcon icon={faSearch} size="xl" />
                 </button>
+                <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} />
+               
               </div>
             </div>
           </div>
@@ -231,9 +232,9 @@ const Header = () => {
         {/* Main nav (full width) */}
         <nav className="relative">
           <div className={`w-full ${gutters}`}>
-            <div className="flex items-center justify-between py-3">
+            <div className="flex items-center justify-between py-6">
               <NavLink to="/" className="flex-shrink-0">
-                <img alt="JadeTimes Academy Logo" className="h-12 w-auto" src={logo} />
+                <img alt="JadeTimes Academy Logo" className="h-16 w-auto" src={logo} />
               </NavLink>
 
               <ul className="hidden lg:flex items-center gap-x-7">
@@ -241,7 +242,7 @@ const Header = () => {
                   <li key={link.text}>
                     <NavLink
                       to={link.href}
-                      className="relative block py-2 text-sm font-semibold tracking-wider uppercase text-gray-300 transition-colors duration-300 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-300 after:origin-center hover:after:scale-x-100"
+                      className="relative block py-8 text-lg font-semibold tracking-wider uppercase text-gray-300 transition-colors duration-300 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-300 after:origin-bottom hover:after:scale-x-100"
                     >
                       {link.text}
                     </NavLink>

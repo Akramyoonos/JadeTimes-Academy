@@ -100,8 +100,8 @@ export default function OurStudents() {
                 </blockquote>
 
                 <div className="mt-4">
-                  <p className="text-lg font-semibold tracking-wide">{s.name}</p>
-                  <p className="text-gray-300 uppercase tracking-[0.22em] text-xs mt-1">
+                  <p className="text-lg md:text-xl font-semibold tracking-wide">{s.name}</p>
+                  <p className="text-gray-300 uppercase tracking-[0.22em] text-xs md:text-sm mt-1">
                     {s.program}
                   </p>
                 </div>
@@ -116,19 +116,23 @@ export default function OurStudents() {
             <div className="grid grid-cols-2 md:grid-cols-4 text-center">
               {/* First three items */}
               {["Testimonials", "Diversity", "Showcase"].map((label) => (
-                <a
+                <div
                   key={label}
-                  href="#"
-                  className="group relative block py-4 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300 border-r"
+                  className="relative border-r"
                   style={{ borderColor: "rgba(255,255,255,0.2)" }}
                 >
-                  {/* Hover blue line: TOP, left -> right, above white border */}
-                  <span
-                    className="pointer-events-none absolute top-0 left-0 h-[2px] w-0 bg-sky-400 transition-all duration-300 group-hover:w-full z-10"
-                    aria-hidden="true"
-                  />
-                  {label}
-                </a>
+                  <a
+                    href="#"
+                    className="group relative block py-4 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300"
+                  >
+                    {/* Hover blue line: TOP, left -> right, above white border */}
+                    <span
+                      className="pointer-events-none absolute top-0 left-0 h-[2px] w-0 bg-sky-400 transition-all duration-300 group-hover:w-full z-10"
+                      aria-hidden="true"
+                    />
+                    {label}
+                  </a>
+                </div>
               ))}
 
               {/* Success Stories cell + DOTS above it */}

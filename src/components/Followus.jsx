@@ -33,22 +33,25 @@ const followUsImages = [
 
 const FollowUsCard = ({ src, alt }) => (
   <div className="relative overflow-hidden rounded-none shadow-sm bg-white">
-    {/* Consistent size: 4:3 ratio, cropped via object-cover */}
-    <div className="aspect-[4/3] w-full">
+    {/* Consistent size: 3:2 ratio, cropped via object-cover */}
+    <div className="aspect-[3/2] w-full">
       <img
         src={src}
         alt={alt}
-        className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+        className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
       />
     </div>
+
+    {/* Image Overlay */}
+    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
     {/* Hover CTA */}
     <a
       href="https://www.instagram.com/jadetimes_academy/"
       target="_blank"
       rel="noopener noreferrer"
-      className="absolute bottom-3 right-3 text-white text-xs sm:text-sm font-semibold flex items-center gap-2 bg-black/70 px-4 py-2 opacity-0 translate-y-2
-                 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
+      className="absolute bottom-3 right-3 text-white text-xs sm:text-sm font-semibold flex items-center gap-2 bg-fuchsia-600 px-5 py-2.5 rounded-full opacity-0 translate-y-2
+                 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-fuchsia-700"
     >
       <FontAwesomeIcon icon={faInstagram} className="text-base" />
       <span>Follow Us</span>
@@ -57,30 +60,30 @@ const FollowUsCard = ({ src, alt }) => (
 );
 
 const FollowUs = () => {
-  return (
-    <section className="bg-gray-50 py-16 sm:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Heading */}
-        <div className="mb-10 sm:mb-12">
-          <div className="flex items-start">
-            <span className="h-12 sm:h-14 w-1.5 bg-fuchsia-500 mr-4 rounded"></span>
-            <h2 className="leading-tight text-4xl sm:text-5xl font-normal tracking-tight text-gray-900">
-              FOLLOW<br/>US
-            </h2>
-          </div>
-        </div>
+    return (
+        <section className="bg-gray-50 py-16 sm:py-20">
+            <div className="px-4 sm:px-6">
+                {/* Heading */}
+                <div className="mb-10 sm:mb-12">
+                    <div className="flex items-start">
+                        <span className="h-28 sm:h-30 w-1.5 bg-fuchsia-500 mr-4 rounded"></span>
+                        <h2 className="leading-tight text-4xl sm:text-5xl font-normal tracking-tight text-gray-900">
+                            FOLLOW<br/>US
+                        </h2>
+                    </div>
+                </div>
 
-        {/* Uniform grid: 2 cols on mobile, 3 on md+ */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {followUsImages.map((img, idx) => (
-            <div key={idx} className="group">
-              <FollowUsCard src={img.src} alt={img.alt} />
+                {/* Uniform grid: 2 cols on mobile, 3 on md+ */}
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                    {followUsImages.map((img, idx) => (
+                        <div key={idx} className="group">
+                            <FollowUsCard src={img.src} alt={img.alt} />
+                        </div>
+                    ))}
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default FollowUs;

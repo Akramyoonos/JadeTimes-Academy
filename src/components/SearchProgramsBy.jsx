@@ -90,7 +90,7 @@ const Dropdown = ({ id, title, items, isOpen, onToggle, onSelect, selectedItem, 
         <div
           role="menu"
           aria-labelledby={`dd-${id}`}
-          className="absolute z-20 mt-1 w-full bg-white border border-gray-200 rounded-none"
+          className="absolute z-20 mt-1 w-full bg-white border border-gray-200 rounded-none overflow-y-auto max-h-60"
         >
           {items.map((item, i) => (
             <Link
@@ -128,9 +128,9 @@ const SearchProgramsBy = () => {
 
       {/* full-width strip; label on far left, controls on far right */}
       <div className="border-b border-gray-200">
-        <div className="w-full flex items-stretch">
+        <div className="w-full flex flex-col md:flex-row md:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="px-6 md:px-8 py-4 text-[18px] text-gray-900 whitespace-nowrap">
+          <div className="hidden md:block text-black  content-center px-8 md:px-10 py-4 text-[22px] whitespace-nowrap font-semibold">
             Search Programs by
           </div>
 
@@ -138,9 +138,9 @@ const SearchProgramsBy = () => {
           <div className="flex-1" />
 
           {/* Right group (pinned to right edge) */}
-          <div className="flex border-l border-gray-200">
+          <div className="flex flex-col md:flex-row w-full md:w-auto">
             {/* Each control has its own left divider and a min width so it feels like the reference */}
-            <div className="border-l border-gray-200">
+            <div className="hidden md:block content-center border-t md:border-t-0 md:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[0].id}
                 title={dropdowns[0].title}
@@ -149,11 +149,11 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[0].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[0].id]}
-                className="min-w-[220px]"
+                className="w-full md:w-auto md:min-w-[280px]"
               />
             </div>
 
-            <div className="border-l border-gray-200">
+            <div className="hidden md:block content-center border-t md:border-t-0 md:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[1].id}
                 title={dropdowns[1].title}
@@ -162,11 +162,11 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[1].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[1].id]}
-                className="min-w-[220px]"
+                className="w-full md:w-auto md:min-w-[280px]"
               />
             </div>
 
-            <div className="border-l border-gray-200">
+            <div className="hidden md:block content-center border-t md:border-t-0 md:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[2].id}
                 title={dropdowns[2].title}
@@ -175,7 +175,7 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[2].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[2].id]}
-                className="min-w-[220px]"
+                className="w-full md:w-auto md:min-w-[280px]"
               />
             </div>
 
@@ -184,7 +184,7 @@ const SearchProgramsBy = () => {
               <button
                 onClick={clear}
                 title="Clear filters"
-                className="hidden md:inline-flex items-center px-5 text-gray-500 hover:text-red-500 border-l border-gray-200"
+                className="hidden md:inline-flex items-center px-5 text-gray-500 hover:text-red-500 border-t md:border-t-0 md:border-l border-gray-200"
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
@@ -192,7 +192,7 @@ const SearchProgramsBy = () => {
 
             <Link
               to="/programfinder"
-              className="px-8 py-4 text-white uppercase tracking-wider text-sm font-semibold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-l border-gray-200"
+              className="w-full md:w-64 px-12 py-6 text-white uppercase tracking-wider text-lg font-semibold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t md:border-t-0 md:border-l border-gray-200 text-center"
               aria-label="Search Programs"
             >
               Search

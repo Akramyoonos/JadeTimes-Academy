@@ -42,12 +42,12 @@ const Upcomingevents = () => {
 
   return (
     <section className="EventsFont bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-12 sm:px-16 lg:px-20 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
         {/* ---------- Tabs header + See events link ---------- */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <nav className="w-full">
-            <div className="flex items-center gap-10 border-b border-gray-200">
+            <div className="flex items-center gap-4 md:gap-10 border-b border-gray-200">
               <button
                 onClick={() => setActiveTab("deadlines")}
                 className={`pt-2 pb-3 text-sm font-semibold tracking-widest uppercase ${
@@ -60,7 +60,7 @@ const Upcomingevents = () => {
                 {/* underline indicator */}
                 <div
                   className={`h-1 mt-2 transition-all ${
-                    activeTab === "deadlines" ? "bg-blue-400 w-40" : "bg-transparent w-0"
+                    activeTab === "deadlines" ? "bg-blue-400 w-full" : "bg-transparent w-0"
                   }`}
                 />
               </button>
@@ -76,7 +76,7 @@ const Upcomingevents = () => {
                 Short-Term Workshops
                 <div
                   className={`h-1 mt-2 transition-all ${
-                    activeTab === "workshops" ? "bg-blue-400 w-52" : "bg-transparent w-0"
+                    activeTab === "workshops" ? "bg-blue-400 w-full" : "bg-transparent w-0"
                   }`}
                 />
               </button>
@@ -88,7 +88,7 @@ const Upcomingevents = () => {
 
           <a
             href="/events"
-            className="ml-6 shrink-0 inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold"
+            className="mt-4 md:mt-0 md:ml-6 shrink-0 inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold"
           >
             <CalendarIcon />
             See Upcoming Events
