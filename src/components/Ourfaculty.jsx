@@ -1,98 +1,324 @@
-import React from 'react';
-import ourfaculty1 from '../assets/Images/ourfaculty1.png';
-import ourfaculty2 from '../assets/Images/ourfaculty2.png';
-import ourfaculty3 from '../assets/Images/ourfaculty3.png';
+import React from "react";
+import ourfaculty1 from "../assets/Images/ourfaculty1.png";
+import ourfaculty2 from "../assets/Images/ourfaculty2.png";
+import ourfaculty3 from "../assets/Images/ourfaculty3.png";
 
+/* ====== breakpoint helper (md = 768px by Tailwind default) ====== */
+function useBreakpoint(md = 768) {
+  const [isMdUp, setIsMdUp] = React.useState(
+    typeof window !== "undefined" ? window.innerWidth >= md : true
+  );
+  React.useEffect(() => {
+    const onResize = () => setIsMdUp(window.innerWidth >= md);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [md]);
+  return { isMdUp, isMobile: !isMdUp };
+}
+
+/** Black/white cutoff height (top banner) */
+const BLACK_HEIGHT_MOBILE = 300;
+const BLACK_HEIGHT_DESKTOP = 330;
+
+/** Shade defaults (used only when attachTo === "below") */
+const SHADE_DEFAULT = {
+  attachTo: "below",    // "below" | "image" | "frame"
+  widthPct: "100%",
+  heightPx: 140,
+  gapPx: 10,
+  radiusPx: 0,
+  topOpacity: 0.95,
+  midOpacity: 0.70,
+  midAt: 45,
+  fadeAt: 100,
+  heightPct: 88,        // legacy for "image"/"frame"
+};
+
+const COLORS = {
+  film: "#3db4ff",
+  media: "#ffca1f",
+  perform: "#b61f9f",
+};
+
+/* ================================================================
+   PER‑CARD TUNING (give separate values for mobile vs desktop)
+   ================================================================= */
 const facultyData = [
   {
-    department: "Film Arts",
+    department: "FILM ARTS",
     imageUrl: ourfaculty1,
-    altText: "Black and white portrait of a woman with glasses on her head, looking forward with a slight smile",
-    color: "#3db4ff",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
-      </svg>
-    ),
+    color: COLORS.film,
+    icon: "film",
+    imageFit: "contain",
+    imageBox: { aspect: "4/3" },
+    imageScale: 2, imageTX: 0, imageTY: -50,
+    mobile: {
+      frameWidthPct: "92%",
+      frameHeight: 120,
+      frameBottom: 8,
+      iconSize: 40,
+      iconNudgeY: 0,
+      shade: { widthPct: "96%", heightPx: 190, gapPx: 16 },
+      cardOffsetY: 60,
+    },
+    desktop: {
+      frameWidthPct: "100%",
+      frameHeight: 116,
+      frameBottom: 2,
+      iconSize: 36,
+      iconNudgeY: 0,
+      shade: { widthPct: "109.5%", heightPx: 140, gapPx: 132 },
+      cardOffsetY: 96,
+    },
   },
   {
-    department: "Media Arts",
+    department: "MEDIA ARTS",
     imageUrl: ourfaculty2,
-    altText: "Black and white portrait of a man with a hat and beard, smiling gently",
-    color: "#ffca1f",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+    color: COLORS.media,
+    icon: "camera",
+    imageFit: "contain",
+    imageBox: { aspect: "4/3" },
+    imageScale: 2, imageTX: 0, imageTY: -50,
+    mobile: {
+      frameWidthPct: "92%",
+      frameHeight: 120,
+      frameBottom: 8,
+      iconSize: 40,
+      iconNudgeY: 0,
+      shade: { widthPct: "96%", heightPx: 190, gapPx: 16 },
+      cardOffsetY: 60,
+    },
+    desktop: {
+      frameWidthPct: "100%",
+      frameHeight: 116,
+      frameBottom: 2,
+      iconSize: 36,
+      iconNudgeY: 0,
+      shade: { widthPct: "109.5%", heightPx: 140, gapPx: 132 },
+      cardOffsetY: 96,
+    },
   },
   {
-    department: "Performing Arts",
+    department: "PERFORMING ARTS",
     imageUrl: ourfaculty3,
-    altText: "Black and white portrait of a smiling woman with short hair and hoop earrings",
-    color: "#b61f9f",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 14h6" />
-      </svg>
-    ),
+    color: COLORS.perform,
+    icon: "masks",
+    imageFit: "contain",
+    imageBox: { aspect: "4/3" },
+    imageScale: 2, imageTX: 0, imageTY: -50,
+    mobile: {
+      frameWidthPct: "92%",
+      frameHeight: 120,
+      frameBottom: 8,
+      iconSize: 40,
+      iconNudgeY: 0,
+      shade: { widthPct: "96%", heightPx: 190, gapPx: 16 },
+      cardOffsetY: 60,
+    },
+    desktop: {
+      frameWidthPct: "100%",
+      frameHeight: 116,
+      frameBottom: 2,
+      iconSize: 36,
+      iconNudgeY: 0,
+      shade: { widthPct: "109.5%", heightPx: 140, gapPx: 132 },
+      cardOffsetY: 96,
+    },
   },
 ];
 
-const ChevronRightIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+/* Small arrow for "Learn more" */
+const ChevronRight = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-[14px] w-[14px]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
   </svg>
 );
 
-const FacultyCard = ({ department, imageUrl, altText, color, icon }) => (
-  <div className="relative group w-full md:w-1/3 cursor-pointer rounded-none overflow-hidden shadow-none">
-    <img alt={altText} className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" src={imageUrl} />
-    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
-    <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-3 transition-all duration-300 transform translate-y-0 group-hover:-translate-y-2">
-      <div style={{ color: color }} className="text-4xl mb-2 transform translate-y-0 group-hover:-translate-y-2 transition-transform duration-300">{icon}</div>
-      <h3 className="text-white text-2xl font-bold mb-1 transform translate-y-0 group-hover:-translate-y-2 transition-transform duration-300">{department}</h3>
-      <a href="#" style={{ color: color }} className="font-semibold text-sm uppercase tracking-widest flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
-        LEARN MORE
-        <ChevronRightIcon />
-      </a>
-    </div>
-  </div>
+/* ---- Split-line icons (transparent) ---- */
+const IconFilm = ({ size = 28 }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden>
+    <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6zM7 6.5A1.5 1.5 0 1 0 7 9a1.5 1.5 0 0 0 0-2.5zm10 0A1.5 1.5 0 1 0 17 9a1.5 1.5 0 0 0 0-2.5zM7 16.5A1.5 1.5 0 1 0 7 19a1.5 1.5 0 0 0 0-2.5zm10 0A1.5 1.5 0 1 0 17 19a1.5 1.5 0 0 0 0-2.5z"/>
+  </svg>
+);
+const IconCamera = ({ size = 28 }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden>
+    <path d="M9 7l1.5-2h3L15 7h3a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3h3zm3 3.5A4.5 4.5 0 1 0 16.5 15 4.5 4.5 0 0 0 12 10.5zm0 2A2.5 2.5 0 1 1 9.5 15 2.5 2.5 0 0 1 12 12.5z"/>
+  </svg>
+);
+const IconMasks = ({ size = 28 }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden>
+    <path d="M3 4h8v6a4 4 0 0 1-8 0V4zm10 0h8v8a4 4 0 0 1-8 0V4zM6.5 7A1.5 1.5 0 1 0 8 8.5 1.5 1.5 0 0 0 6.5 7zm4 0A1.5 1.5 0 1 0 12 8.5 1.5 1.5 0 0 0 10.5 7zm5 2A1.5 1.5 0 1 0 17 10.5 1.5 1.5 0 0 0 15.5 9zm4 0A1.5 1.5 0 1 0 21 10.5 1.5 1.5 0 0 0 19.5 9z"/>
+  </svg>
 );
 
-const OurFaculty = () => {
+const SplitIcon = ({ kind, color, size = 28, nudgeY = 0 }) => {
+  const Icon = kind === "film" ? IconFilm : kind === "camera" ? IconCamera : IconMasks;
   return (
-    <div className="OurfacultyFont">
-      <div className="bg-white">
-        <section className="bg-[#0a0a0a] text-white">
-          <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center md:items-start md:justify-start px-6 md:px-12 py-16 md:py-24 gap-12">
-            <div className="flex flex-col justify-center md:justify-start md:items-start gap-8 md:gap-12 w-full md:w-1/4">
-              <h2 className="jt-heading jt-on-dark">
-                <span className="jt-line">OUR</span>
-                <span className="jt-line">FACULTY</span>
-              </h2>
-
-              {/* square button */}
-              <a
-                href="/FacultyDirectoryPage"
-                className="bg-purple-600 text-white font-bold text-base uppercase tracking-wider px-8 py-4 rounded-none shadow-none hover:bg-purple-700 transition-colors duration-300 inline-block text-center"
-              >
-                MEET OUR FACULTY
-              </a>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-8 w-full md:w-3/4">
-              {facultyData.map((faculty) => (
-                <FacultyCard key={faculty.department} {...faculty} />
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
+    <div className="pointer-events-none" style={{ color, lineHeight: 0, transform: `translateY(${nudgeY}px)` }} aria-hidden>
+      <Icon size={size} />
     </div>
   );
 };
 
-export default OurFaculty;
+/** Build gradient CSS from a shade config */
+function buildShade(shade) {
+  const s = { ...SHADE_DEFAULT, ...(shade || {}) };
+  const background = `linear-gradient(0deg,
+    rgba(0,0,0,${s.topOpacity}) 0%,
+    rgba(0,0,0,${s.midOpacity}) ${s.midAt}%,
+    rgba(0,0,0,0) ${s.fadeAt}%)`;
+  return { ...s, background };
+}
+
+const FacultyCard = ({
+  department,
+  imageUrl,
+  color,
+  icon,
+  conf, // chosen (mobile|desktop) config
+  imageFit,
+  imageBox,
+  imageScale,
+  imageTX,
+  imageTY,
+  shade,
+}) => {
+  const useAspect = imageBox?.aspect;
+  const aspectClass = useAspect ? `aspect-[${imageBox.aspect}]` : "";
+  const fixedHeightStyle = !useAspect && imageBox?.heightPx ? { height: `${imageBox.heightPx}px` } : undefined;
+
+  const overflowClass = imageFit === "contain" ? "overflow-visible" : "overflow-hidden";
+  const S = buildShade({ ...shade, ...(conf?.shade || {}) });
+
+  return (
+    <div className="relative w-full overflow-visible" style={{ transform: `translateY(${conf?.cardOffsetY || 0}px)` }}>
+      {/* IMAGE */}
+      <div className={`relative w-full ${overflowClass} bg-black ${aspectClass} z-[1]`} style={fixedHeightStyle}>
+        <img
+          src={imageUrl}
+          alt={department}
+          className={`absolute inset-0 h-full w-full ${imageFit === "contain" ? "object-contain" : "object-cover"} grayscale will-change-transform`}
+          style={{
+            objectPosition: "50% 50%",
+            transform: `translate(${imageTX || 0}px, ${imageTY || 0}px) scale(${imageScale ?? 1})`,
+            transformOrigin: "50% 50%",
+          }}
+        />
+        {S.attachTo === "image" && (
+          <div className="absolute left-0 right-0 bottom-0 pointer-events-none" style={{ height: `${S.heightPct}%`, background: S.background }} />
+        )}
+      </div>
+
+      {/* Shade BELOW the frame */}
+      {S.attachTo === "below" && (
+        <div
+          className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-[2]"
+          style={{
+            width: S.widthPct,
+            height: `${S.heightPx}px`,
+            bottom: `calc(${conf.frameBottom}px + ${S.gapPx}px - ${S.heightPx}px)`,
+            borderRadius: S.radiusPx ? `${S.radiusPx}px` : undefined,
+            background: S.background,
+          }}
+        />
+      )}
+
+      {/* FRAME + TEXT */}
+      <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-[3] overflow-visible" style={{ bottom: `${conf.frameBottom}px`, width: conf.frameWidthPct }}>
+        <div className="relative pointer-events-auto overflow-visible" style={{ height: `${conf.frameHeight}px` }}>
+          {/* Frame */}
+          <span className="absolute left-0 right-0 bottom-0 h-[4px]" style={{ backgroundColor: color }} />
+          <span className="absolute left-0 top-0 bottom-0 w-[4px]" style={{ backgroundColor: color }} />
+          <span className="absolute right-0 top-0 bottom-0 w-[4px]" style={{ backgroundColor: color }} />
+          {/* split top */}
+          <span className="absolute left-0 top-0 h-[4px] w-[36%]" style={{ backgroundColor: color }} />
+          <span className="absolute right-0 top-0 h-[4px] w-[36%]" style={{ backgroundColor: color }} />
+
+          {/* Text — left & middle */}
+          <div className="absolute inset-y-0 left-6 right-6 flex flex-col justify-center text-left">
+            <div className="text-white text-[20px] font-semibold leading-tight drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+              {department}
+            </div>
+            <a href="#" className="mt-1 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[.22em]" style={{ color }}>
+              Learn More <ChevronRight />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* ICON SUPER LAYER (z‑9999) — stays above everything */}
+      <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-[9999] overflow-visible" style={{ bottom: `${conf.frameBottom}px`, width: conf.frameWidthPct }}>
+        <div className="relative" style={{ height: `${conf.frameHeight}px` }}>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <SplitIcon kind={icon} color={color} size={conf.iconSize} nudgeY={conf.iconNudgeY || 0} />
+          </div>
+        </div>
+      </div>
+
+      {/* Shade INSIDE frame (optional legacy) */}
+      {S.attachTo === "frame" && (
+        <div className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-[2]" style={{ bottom: `${conf.frameBottom}px`, width: conf.frameWidthPct }}>
+          <div className="relative" style={{ height: `${conf.frameHeight}px` }}>
+            <div className="absolute inset-[4px] overflow-hidden rounded-[1px]">
+              <div className="absolute left-0 right-0 bottom-0" style={{ height: `${S.heightPct}%`, background: S.background }} />
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default function OurFaculty() {
+  const { isMobile } = useBreakpoint(); // switch values for mobile vs desktop
+
+  return (
+    <section className="relative bg-white">
+      {/* Black strip on top only */}
+      <div className="absolute top-0 left-0 right-0 bg-[#0a0a0a] z-0 md:hidden" style={{ height: BLACK_HEIGHT_MOBILE }} />
+      <div className="absolute top-0 left-0 right-0 bg-[#0a0a0a] z-0 hidden md:block" style={{ height: BLACK_HEIGHT_DESKTOP }} />
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto max-w-[1280px] px-6 md:px-12 pt-16 md:pt-24">
+        <div className="flex flex-col md:flex-row gap-12">
+          {/* Headline */}
+          <div className="w-full md:w-[30%]">
+            <div className="flex items-start gap-6">
+              <span className="block w-[4px] h-[115px] bg-[#b61f9f]" />
+              <div className="leading-[1.0]">
+                <div className="text-[56px] md:text-[64px] font-light text-white">OUR</div>
+                <div className="text-[56px] md:text-[64px] font-light text-white">FACULTY</div>
+              </div>
+            </div>
+            <a href="/FacultyDirectoryPage" className="mt-8 inline-block bg-[#b61f9f] hover:bg-[#9c1988] px-8 py-4 text-[14px] font-bold uppercase tracking-wide text-white">
+              MEET OUR FACULTY
+            </a>
+          </div>
+
+          {/* Cards (stacks on mobile exactly like your screenshot) */}
+          <div className="w-full md:flex-1 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {facultyData.map((f) => (
+              <FacultyCard
+                key={f.department}
+                department={f.department}
+                imageUrl={f.imageUrl}
+                color={f.color}
+                icon={f.icon}
+                imageFit={f.imageFit}
+                imageBox={f.imageBox}
+                imageScale={f.imageScale}
+                imageTX={f.imageTX}
+                imageTY={f.imageTY}
+                shade={SHADE_DEFAULT}
+                conf={isMobile ? f.mobile : f.desktop}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Space below */}
+      <div className="h-10 md:h-14" />
+    </section>
+  );
+}

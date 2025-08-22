@@ -77,7 +77,7 @@ const Dropdown = ({ id, title, items, isOpen, onToggle, onSelect, selectedItem, 
         aria-haspopup="true"
         aria-expanded={isOpen}
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-6 py-4 text-[15px] tracking-wide uppercase text-gray-800 hover:bg-gray-50 focus:outline-none"
+        className="w-full flex items-center justify-between px-12 py-4 font-medium text-[12px] tracking-wide uppercase text-gray-800 hover:bg-gray-50 focus:outline-none"
       >
         <span className="truncate">{selectedItem || title}</span>
         <FontAwesomeIcon
@@ -130,7 +130,7 @@ const SearchProgramsBy = () => {
       <div className="border-b border-gray-200">
         <div className="w-full flex flex-col md:flex-row md:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="hidden md:block text-black  content-center px-8 md:px-10 py-4 text-[22px] whitespace-nowrap font-semibold">
+          <div className="hidden md:block text-black  content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold">
             Search Programs by
           </div>
 
@@ -192,7 +192,7 @@ const SearchProgramsBy = () => {
 
             <Link
               to="/programfinder"
-              className="w-full md:w-64 px-12 py-6 text-white uppercase tracking-wider text-lg font-semibold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t md:border-t-0 md:border-l border-gray-200 text-center"
+              className="w-full md:w-50 md:h-16 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t md:border-t-0 md:border-l border-gray-200 text-center"
               aria-label="Search Programs"
             >
               Search

@@ -1,6 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 // Images
 import followUs1 from '../assets/Images/Followus1.jpg';
@@ -16,73 +14,45 @@ import followUs10 from '../assets/Images/Followus10.jpg';
 import followUs11 from '../assets/Images/Followus11.jpg';
 import followUs12 from '../assets/Images/Followus12.jpg';
 
-const followUsImages = [
-  { src: followUs1, alt: 'Man walking towards bright orange light wearing JadeTimes shirt holding a camera' },
-  { src: followUs2, alt: 'Colorful vibrant background with JadeTimes New York Film Academy text' },
-  { src: followUs3, alt: 'Silhouette of woman holding camera in blue smoky background' },
-  { src: followUs4, alt: 'Smiling woman wearing JadeTimes cap and headphones with camera' },
-  { src: followUs5, alt: 'Woman in red shirt and beret holding film reel on pink background' },
-  { src: followUs6, alt: 'Man in suit holding JadeTimes diploma on city street' },
-  { src: followUs7, alt: 'Back of person with ring lights and official selection logo' },
-  { src: followUs8, alt: 'Man sitting at table with books and wooden chair' },
-  { src: followUs9, alt: 'Sunset sky over water with buildings' },
-  { src: followUs10, alt: 'Couple kissing outdoors in wedding attire' },
-  { src: followUs11, alt: 'Clay skull model with blue hand sculpture on wooden table' },
-  { src: followUs12, alt: 'Two people wearing masks operating film camera in black and white' },
-];
-
-const FollowUsCard = ({ src, alt }) => (
-  <div className="relative overflow-hidden rounded-none shadow-sm bg-white">
-    {/* Consistent size: 3:2 ratio, cropped via object-cover */}
-    <div className="aspect-[3/2] w-full">
-      <img
-        src={src}
-        alt={alt}
-        className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105 group-hover:brightness-75"
-      />
-    </div>
-
-    {/* Image Overlay */}
-    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-    {/* Hover CTA */}
-    <a
-      href="https://www.instagram.com/jadetimes_academy/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="absolute bottom-3 right-3 text-white text-xs sm:text-sm font-semibold flex items-center gap-2 bg-fuchsia-600 px-5 py-2.5 rounded-full opacity-0 translate-y-2
-                 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-fuchsia-700"
-    >
-      <FontAwesomeIcon icon={faInstagram} className="text-base" />
-      <span>Follow Us</span>
-    </a>
-  </div>
-);
 
 const FollowUs = () => {
     return (
-        <section className="bg-gray-50 py-16 sm:py-20">
-            <div className="px-4 sm:px-6">
-                {/* Heading */}
-                <div className="mb-10 sm:mb-12">
-                    <div className="flex items-start">
-                        <span className="h-28 sm:h-30 w-1.5 bg-fuchsia-500 mr-4 rounded"></span>
-                        <h2 className="leading-tight text-4xl sm:text-5xl font-normal tracking-tight text-gray-900">
-                            FOLLOW<br/>US
-                        </h2>
-                    </div>
-                </div>
-
-                {/* Uniform grid: 2 cols on mobile, 3 on md+ */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                    {followUsImages.map((img, idx) => (
-                        <div key={idx} className="group">
-                            <FollowUsCard src={img.src} alt={img.alt} />
-                        </div>
-                    ))}
+        <div className="max-w-7xl mx-auto px-4 mt-12 sm:px-6 lg:px-8 py-10">
+            {/* Header Section */}
+            <div className="flex justify-between items-start mb-8">
+                <div className="flex flex-col">
+                    {/* "FOLLOW US" title with purple bar */}
+                    <div className="mb-10 ml-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+          <h2 className="jt-heading">
+            <span className="jt-line">FOLLOW</span>
+            <span className="jt-line">US</span>
+          </h2>
+        </div>
                 </div>
             </div>
-        </section>
+
+            {/* Image Grid Section (3 columns) */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                {[
+                    { src: followUs1, alt: "Man illuminated by light" },
+                    { src: followUs2, alt: "NYFA Logo on a colorful background" },
+                    { src: followUs3, alt: "Woman holding a camera in a smoky environment" },
+                    { src: followUs4, alt: "Smiling student with headphones and camera gear" },
+                    { src: followUs5, alt: "Woman holding a film reel above her head" },
+                    { src: followUs6, alt: "Man in a suit walking on a city street" },
+                    { src: followUs7, alt: "Ring light with 'Official Selection' text" },
+                    { src: followUs8, alt: "Man sitting at a table with papers" },
+                    { src: followUs9, alt: "Sunset over a body of water with buildings" },
+                    { src: followUs10, alt: "Couple kissing outdoors" },
+                    { src: followUs11, alt: "Sculpture of a human skull and a hand" },
+                    { src: followUs12, alt: "Person filming with a camera, wearing a mask" },
+                ].map((image, index) => (
+                    <div key={index}>
+                        <img src={image.src} alt={image.alt} className="w-320 h-120 object-cover"/>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 };
 

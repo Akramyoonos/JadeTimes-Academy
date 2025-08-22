@@ -103,13 +103,13 @@ const Spotlight = () => {
   return (
     <div className="bg-gray-50 font-sans text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-10 ml-3 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+        <div className="mb-10 ml-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl ">
           <h2 className="jt-heading">
             <span className="jt-line">ACADEMY</span>
             <span className="jt-line">SPOTLIGHT</span>
           </h2>
         </div>
-
+ 
         <div>
           <div className="flex items-center justify-between"> {/* New flex container */}
             <button

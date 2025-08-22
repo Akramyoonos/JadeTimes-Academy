@@ -41,11 +41,11 @@ export default function CampusesAndLocations() {
         <div className="mb-10">
           <div className="flex items-start gap-4">
             <span
-              className="block h-16 w-1.5 rounded"
+              className="block h-24  w-1.5 "
               style={{ backgroundColor: BRAND_PINK }}
             />
             {/* Removed bold here: font-normal */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-tight text-black font-normal">
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl leading-tight pl-3 text-black font-normal">
               CAMPUSES &<br /> LOCATIONS
             </h2>
           </div>

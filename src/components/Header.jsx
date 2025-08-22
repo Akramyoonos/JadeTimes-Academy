@@ -22,19 +22,19 @@ const topBarLinks = [
     href: '#',
     text: 'Current Students',
     className:
-      'ml-10 md:ml-2 font-semibold hover:text-white transition-colors duration-300',
+      'ml-10 md:ml-2 font-medium text-sm hover:text-white transition-colors duration-300',
   },
   {
     href: '#',
     text: 'Parents',
     className:
-      'hidden sm:inline font-semibold hover:text-white transition-colors duration-300',
+      'hidden sm:inline font-medium text-sm hover:text-white transition-colors duration-300',
   },
   {
     href: '#',
     text: 'Online Info Sessions',
     className:
-      'hidden md:inline text-yellow-400 font-semibold hover:text-yellow-300 transition-colors duration-300',
+      'hidden md:inline font-medium text-sm text-yellow-400 font-semibold hover:text-yellow-300 transition-colors duration-300',
   },
 ];
 
@@ -80,11 +80,11 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
         onClick={() => onToggle(!isOpen)}
         className="flex items-center space-x-1 text-gray-400 gap-2 hover:text-white transition-colors duration-300"
       >
-                <FontAwesomeIcon icon={faGlobeAmericas} size="lg" />
-        <span className="text-base font-semibold">ENGLISH</span>
+        <FontAwesomeIcon icon={faGlobeAmericas} size="lg" />
+        <span className="text-sm font-light">ENGLISH</span>
         <FontAwesomeIcon
           icon={faChevronDown}
-          className={`w-5 h-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-3 h-3 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
 
@@ -206,7 +206,7 @@ const Header = () => {
         {/* Top bar (full width) */}
         <div className="hidden sm:block bg-black/30 border-b border-gray-800 py-2">
           <div className={`w-full ${gutters}`}>
-            <div className="flex items-center justify-between py-4 text-md">
+            <div className="flex items-center justify-between py-2 text-md">
               <div className="flex items-center gap-x-7 text-gray-400">
                 {topBarLinks.map(link => (
                   <a key={link.text} href={link.href} className={link.className}>{link.text}</a>
@@ -214,15 +214,15 @@ const Header = () => {
               </div>
 
               <div className="flex items-center gap-5">
-                <span className="hidden lg:inline text-white font-semibold">1-800-JADETIMES</span>
+                <span className="hidden lg:inline text-white text-sm font-light">1-800-JADETIMES</span>
                  <button
                   aria-label="Search"
                   onClick={() => setIsSearchOpen(prev => !prev)}
                   className="text-gray-400 hover:text-white transition-colors  duration-300"
                 >
-                  <FontAwesomeIcon icon={faSearch} size="xl" />
+                  <FontAwesomeIcon icon={faSearch} size="lg" />
                 </button>
-                <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} />
+                <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} size="lg" />
                
               </div>
             </div>
@@ -232,17 +232,17 @@ const Header = () => {
         {/* Main nav (full width) */}
         <nav className="relative">
           <div className={`w-full ${gutters}`}>
-            <div className="flex items-center justify-between py-6">
+            <div className="flex items-center justify-between py-2">
               <NavLink to="/" className="flex-shrink-0">
                 <img alt="JadeTimes Academy Logo" className="h-16 w-auto" src={logo} />
               </NavLink>
 
-              <ul className="hidden lg:flex items-center gap-x-7">
+              <ul className="hidden lg:flex items-center gap-x-5">
                 {navLinks.map((link) => (
                   <li key={link.text}>
                     <NavLink
                       to={link.href}
-                      className="relative block py-8 text-lg font-semibold tracking-wider uppercase text-gray-300 transition-colors duration-300 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-300 after:origin-bottom hover:after:scale-x-100"
+                      className="relative block py-7 text-sm font-medium tracking-wider uppercase text-white transition-colors duration-300 hover:text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:scale-x-0 after:bg-yellow-400 after:transition-transform after:duration-300 after:origin-bottom hover:after:scale-x-100"
                     >
                       {link.text}
                     </NavLink>

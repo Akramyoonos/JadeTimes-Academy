@@ -197,6 +197,7 @@ FestivalFont {
   position: relative;
   padding-left: 16px;   /* room for the vertical bar */
   margin: 0;
+  
 }
 
 /* Single-line vertical bar for all headings */
@@ -224,6 +225,7 @@ FestivalFont {
   line-height: 1.05;
   margin: 0;
   font-size: clamp(24px, 4vw, 44px);
+  padding-left: 12px;
 }
 
 /* use when the heading sits on a dark/black section */

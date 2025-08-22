@@ -1,12 +1,8 @@
 import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
+import tailwind from '@tailwindcss/vite'
 
 export default defineConfig({
-    base: '/JadeTimes-Academy/',
-
-  plugins: [
-    tailwindcss(),
-    react(),
-  ],
+  base: '/',   // 🔑 important
+  plugins: [react(), tailwind()],
 })
