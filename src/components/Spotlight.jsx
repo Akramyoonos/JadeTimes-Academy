@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faChevronLeft, faChevronRight, faPlay, faPause } from '@fortawesome/free-solid-svg-icons'; // Added faPlay, faPause
 import Spotlight7 from '../assets/Images/Spotlight 07.jpeg';
 import Spotlight8 from '../assets/Images/Spotlight 09.jpeg';
 import Card from './VideoCard'; // Renamed for clarity
@@ -13,6 +13,8 @@ import Spotlight5 from '../assets/Images/Spotlight 05.jpeg';
 const Spotlight = () => {
   const scrollContainerRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(false); // New state
+  const autoScrollIntervalRef = useRef(null); // New ref
 
   const handleScroll = () => {
     if (scrollContainerRef.current) {
@@ -42,6 +44,32 @@ const Spotlight = () => {
     if (scrollContainerRef.current) {
       scrollContainerRef.current.scrollLeft += scrollOffset;
     }
+  };
+
+  const startAutoScroll = () => {
+    if (autoScrollIntervalRef.current) return; // Prevent multiple intervals
+    autoScrollIntervalRef.current = setInterval(() => {
+      if (scrollContainerRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+        const maxScrollLeft = scrollWidth - clientWidth;
+
+        // If at the end, reset to beginning, otherwise scroll
+        if (scrollLeft >= maxScrollLeft) {
+          scrollContainerRef.current.scrollLeft = 0;
+        } else {
+          scroll(400); // Use the same scroll amount as buttons
+        }
+      }
+    }, 3000); // Scroll every 3 seconds
+    setIsAutoScrolling(true);
+  };
+
+  const stopAutoScroll = () => {
+    if (autoScrollIntervalRef.current) {
+      clearInterval(autoScrollIntervalRef.current);
+      autoScrollIntervalRef.current = null;
+    }
+    setIsAutoScrolling(false);
   };
 
   const cardsData = [
@@ -75,7 +103,7 @@ const Spotlight = () => {
   return (
     <div className="bg-gray-50 font-sans text-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-10 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+        <div className="mb-10 ml-3 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
           <h2 className="jt-heading">
             <span className="jt-line">ACADEMY</span>
             <span className="jt-line">SPOTLIGHT</span>
@@ -83,37 +111,44 @@ const Spotlight = () => {
         </div>
 
         <div>
-          <div
-            ref={scrollContainerRef}
-            onScroll={handleScroll}
-            className="grid grid-flow-col auto-cols-max gap-6 mb-5 overflow-x-auto pb- pr-6 no-scrollbar"
-            style={{ scrollBehavior: 'smooth' }}
-          >
-            {cardsData.map((card, index) => (
-              <Card key={index} {...card} />
-            ))}
-          </div>
-          <div className="flex justify-center items-center mt-4 scroll-none">
-            <div className="flex items-center">
-              <button
-                onClick={() => scroll(-300)}
-                className="bg-white rounded-full p-2 shadow-md"
-              >
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </button>
-              <div className="w-64 h-1 bg-blue-200 mx-2 relative rounded-full overflow-hidden">
-                <div
-                  className="absolute top-0 left-0 h-full bg-blue-500 rounded-full transition-all duration-300 ease-out"
-                  style={{ width: `${scrollProgress}%` }}
-                ></div>
-              </div>
-              <button
-                onClick={() => scroll(300)}
-                className="bg-white rounded-full p-2 shadow-md"
-              >
-                <FontAwesomeIcon icon={faChevronRight} />
-              </button>
+          <div className="flex items-center justify-between"> {/* New flex container */}
+            <button
+              onClick={() => scroll(-400)}
+              className="bg-gray-100 rounded-full p-3 shadow-md z-10 transition-all duration-300 hover:bg-gray-200 hover:scale-105" // Changed color, added hover effects
+            >
+              <FontAwesomeIcon icon={faChevronLeft} />
+            </button>
+            <div
+              ref={scrollContainerRef}
+              onScroll={handleScroll}
+              className="grid grid-flow-col auto-cols-max gap-6 mb-5 overflow-x-auto pb-4 pr-10 pl-5 no-scrollbar flex-grow"
+              style={{ scrollBehavior: 'smooth' }}
+            >
+              {cardsData.map((card, index) => (
+                <Card key={index} {...card} />
+              ))}
             </div>
+            <button
+              onClick={() => scroll(400)}
+              className="bg-gray-100 rounded-full p-3 shadow-md z-10 transition-all duration-300 hover:bg-gray-200 hover:scale-105" // Changed color, added hover effects
+            >
+              <FontAwesomeIcon icon={faChevronRight} />
+            </button>
+          </div>
+          <div className="flex justify-center items-center mt-4"> {/* Removed scroll-none */}
+            <div className="w-96 h-3 bg-gray-300 mx-2 relative rounded-full overflow-hidden shadow-lg"> {/* Increased width and height, changed color, added shadow */}
+              <div
+                className="absolute top-0 left-0 h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-300 ease-out"
+                style={{ width: `${scrollProgress}%` }}
+              ></div>
+            </div>
+            {/* New auto-scroll toggle button */}
+            <button
+              onClick={() => (isAutoScrolling ? stopAutoScroll() : startAutoScroll())}
+              className="bg-gray-100 rounded-full p-2 shadow-md ml-2 transition-all duration-300 hover:bg-gray-200 hover:scale-105" // Changed color, added hover effects
+            >
+              <FontAwesomeIcon icon={isAutoScrolling ? faPause : faPlay} />
+            </button>
           </div>
         </div>
       </div>
