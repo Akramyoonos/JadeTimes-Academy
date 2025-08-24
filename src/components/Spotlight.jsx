@@ -14,7 +14,7 @@ import Spotlight8 from '../assets/Images/Spotlight 09.jpeg';
 // CHANGE 1: Created a new Card component to match the style in the image.
 const InfoCard = ({ src, title, description }) => (
   <div className="w-90 flex-shrink-4 bg-white font-sans text-left select-none">
-    <img src={src} alt={title} className="w-full h-96 object-cover" />
+    <img src={src} alt={title} className="w-full h-96 object-cover pointer-events-none" />
     <div className="p-4">
       <h3 className="text-gray-800 text-lg font-bold uppercase mb-2 tracking-wide">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
@@ -97,34 +97,36 @@ const Spotlight = () => {
 
   return (
     <div className="bg-gray-50 font-sans text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="py-16">
         {/* This is the heading from your original code */}
-        <div className="mb-10 ml-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 md:mb-10">
           <h2 className="jt-heading">
             <span className="jt-line">ACADEMY</span>
             <span className="jt-line">SPOTLIGHT</span>
           </h2>
         </div>
 
-        <div>
-          <div className="flex items-center justify-center">
-            <div
-              ref={scrollContainerRef}
-              className={`grid grid-flow-col auto-cols-max gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial ${
-                isDragging ? 'cursor-grabbing' : 'cursor-grab'
-              }`}
-              style={{ scrollBehavior: 'smooth' }}
-              onMouseDown={onMouseDown}
-              onMouseLeave={onMouseLeave}
-              onMouseUp={onMouseUp}
-              onMouseMove={onMouseMove}
-            >
-              {/* CHANGE 3: Using the new InfoCard component and updated data. */}
-              {cardsData.map((card, index) => (
-                <InfoCard key={index} {...card} />
-              ))}
-            </div>
+        <div className="relative overflow-hidden">
+          <div
+            ref={scrollContainerRef}
+            className={`grid grid-flow-col auto-cols-max gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
+              isDragging ? 'cursor-grabbing' : 'cursor-grab'
+            }`}
+            style={{ scrollBehavior: 'smooth' }}
+            onMouseDown={onMouseDown}
+            onMouseLeave={onMouseLeave}
+            onMouseUp={onMouseUp}
+            onMouseMove={onMouseMove}
+          >
+            {/* CHANGE 3: Using the new InfoCard component and updated data. */}
+            {cardsData.map((card, index) => (
+              <InfoCard key={index} {...card} />
+            ))}
           </div>
+          {/* Left gradient overlay */}
+          <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-gray-50 to-transparent pointer-events-none hidden md:block"></div>
+          {/* Right gradient overlay */}
+          <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-gray-50 to-transparent pointer-events-none hidden md:block"></div>
         </div>
       </div>
 

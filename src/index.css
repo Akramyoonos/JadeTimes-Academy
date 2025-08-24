@@ -207,9 +207,8 @@ FestivalFont {
   left: 0;
   top: 0.18em;                     /* nudge down so it lines up with cap height */
   width: 6px;
-  height: 5.7em;                   /* ~one line tall */
+  height: 3em;                   /* ~one line tall */
   background: var(--primary-pink, #B52E8C);
-  border-radius: 2px;
 }
 
 
