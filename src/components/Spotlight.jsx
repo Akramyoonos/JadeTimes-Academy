@@ -12,9 +12,16 @@ import Spotlight8 from '../assets/Images/Spotlight 09.jpeg';
 
 
 // CHANGE 1: Created a new Card component to match the style in the image.
+// ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
 const InfoCard = ({ src, title, description }) => (
   <div className="w-90 flex-shrink-4 bg-white font-sans text-left select-none group overflow-hidden">
-    <img src={src} alt={title} className="w-full h-96 object-cover pointer-events-none transition-transform duration-500 ease-in-out group-hover:scale-110" />
+    <div className="overflow-hidden">
+      <img
+        src={src}
+        alt={title}
+        className="w-full h-96 object-cover pointer-events-none transition-transform duration-500 ease-in-out group-hover:scale-110"
+      />
+    </div>
     <div className="p-4">
       <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
