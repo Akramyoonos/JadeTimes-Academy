@@ -56,7 +56,7 @@ const Footer = () => {
               {/* Center label + icon together */}
               <div className="w-full max-w-[520px] mx-auto flex items-center justify-center gap-3 md:gap-4 px-6">
                 <span
-                  className={`text-white text-sm md:text-base font-bold tracking-[0.35em] uppercase transition-colors duration-200 ${l.textHover}`}
+                  className={`text-white text-xs md:text-sm font-bold tracking-[0.35em] uppercase transition-colors duration-200 ${l.textHover}`}
                 >
                   {l.text}
                 </span>
@@ -67,7 +67,7 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon
                     icon={faArrowUpRightFromSquare}
-                    className={`text-sm md:text-base ${l.iconColor} transition-colors duration-200`}
+                    className={`text-xs md:text-sm ${l.iconColor} transition-colors duration-200`}
                   />
                 </span>
               </div>
@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
             
             {/* Links */}
-            <div className="flex flex-wrap gap-6 text-base font-medium">
+            <div className="flex flex-wrap gap-6 text-sm font-sans">
               <a href="#" className="hover:text-gray-400">
                 COURSES
               </a>
@@ -140,17 +140,17 @@ const Footer = () => {
       </div>
 
       {/* ───────── Bottom Section ───────── */}
-      <div className="border-t border-gray-800 py-10 px-6 md:px-20 flex flex-col md:flex-row md:justify-between gap-6 text-gray-300 text-sm">
+      <div className="border-t border-gray-800 py-10 px-6 md:px-20 flex flex-col md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
         {/* Left text */}
         <div className="md:w-2/3">
           <p>
-            Copyright © 2024 JadeTimes Academy •{" "}
-            <a href="#" className="hover:text-white text-base">
+            <span className="text-gray-600">Copyright © 2024 JadeTimes Academy •</span>{" "}
+            <a href="#" className="hover:text-blue-400 text-gray-400">
               Privacy Policy
             </a>
           </p>
 
-          <p className="mt-4">
+          <p className="mt-4 text-gray-600">
             All programs and workshops are solely owned and operated by the
             JadeTimes Academy and are not affiliated with Universal <br/>
             Studios, or Harvard University. GI Bill® is a registered trademark of the U.S.
@@ -159,14 +159,14 @@ const Footer = () => {
             government website <br/> at{" "}
             <a
               href="http://www.benefits.va.gov/gibill"
-              className="text-blue-400 hover:underline"
+              className="text-gray-400 hover:text-blue-400"
             >
               http://www.benefits.va.gov/gibill
             </a>
             . Not all programs are offered at all locations.
           </p>
 
-          <p className="mt-4">
+          <p className="mt-4 text-gray-700">
             BPPE: The JadeTimes Academy is approved to operate by the
             California Bureau for Private Postsecondary Education (BPPE) <br />
             “Approval” or “approval to operate” means that the institution is
@@ -176,65 +176,65 @@ const Footer = () => {
           </p>
 
           <p className="mt-4">
-            <a href="#" className="text-blue-400 hover:underline">
+            <a href="#" className="text-gray-400  hover:text-blue-400">
               Click here
             </a>{" "}
-            to access the Bureau for Private Postsecondary Education website.
+            <span className="text-gray-700">to access the Bureau for Private Postsecondary Education website.</span>
             <br />
-            <a href="#" className="text-blue-400 hover:underline">
+            <a href="#" className="text-gray-400 hover:text-blue-400">
 
               Click here
             </a>{" "}
-            to download JadeTimes Academy’s 2023 School Performance Fact
-            Sheet for the Los Angeles Campus.
+            <span className="text-gray-700">to download JadeTimes Academy’s 2023 School Performance Fact
+            Sheet for the Los Angeles Campus.</span>
             <br />
-            <a href="#" className="text-blue-400 hover:underline">
+            <a href="#" className="text-gray-400 hover:text-blue-400">
 
               Click here
             </a>{" "}
-            to download JadeTimes Academy – BPPE 2023 Annual Report.
+            <span className="text-gray-700">to download JadeTimes Academy – BPPE 2023 Annual Report.</span>
           </p>
         </div>
 
         {/* Right language list */}
-        <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 text-right">
+        <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 text-sm text-right">
           <li>
-            <a href="#" className="hover:text-white text-base">
+            <a href="#" className="hover:text-white text-gray-400">
               RU
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-base">
+            <a href="#" className="hover:text-white text-gray-400">
               ES
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-base">
+            <a href="#" className="hover:text-white text-gray-400">
               AR
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-base">
+            <a href="#" className="hover:text-white text-gray-400">
               IT
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-base">
+            <a href="#" className="hover:text-white text-gray-400">
               PT
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-base">
+            <a href="#" className="hover:text-white text-gray-400">
               JP
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-base">
+            <a href="#" className="hover:text-white text-gray-400">
               KR
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-base">
+            <a href="#" className="hover:text-white text-gray-400">
               CN
             </a>
           </li>
