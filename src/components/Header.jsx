@@ -233,7 +233,7 @@ const Header = () => {
         <nav className="relative">
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2">
-              <NavLink to="/" className="flex-shrink-0">
+              <NavLink to="/StudentResource_page" className="flex-shrink-0">
                 <img alt="JadeTimes Academy Logo" className="h-16 w-auto" src={logo} />
               </NavLink>
 

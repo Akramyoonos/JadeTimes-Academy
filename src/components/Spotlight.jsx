@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,10 +13,10 @@ import Spotlight8 from '../assets/Images/Spotlight 09.jpeg';
 
 // CHANGE 1: Created a new Card component to match the style in the image.
 const InfoCard = ({ src, title, description }) => (
-  <div className="w-90 flex-shrink-4 bg-white font-sans text-left select-none">
-    <img src={src} alt={title} className="w-full h-96 object-cover pointer-events-none" />
+  <div className="w-90 flex-shrink-4 bg-white font-sans text-left select-none group overflow-hidden">
+    <img src={src} alt={title} className="w-full h-96 object-cover pointer-events-none transition-transform duration-500 ease-in-out group-hover:scale-110" />
     <div className="p-4">
-      <h3 className="text-gray-800 text-lg font-bold uppercase mb-2 tracking-wide">{title}</h3>
+      <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
     </div>
   </div>
@@ -51,6 +51,34 @@ const Spotlight = () => {
     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
   };
   
+  // Auto-scrolling effect
+  useEffect(() => {
+    if (!scrollContainerRef.current) return;
+
+    let scrollInterval;
+    const startScrolling = () => {
+      scrollInterval = setInterval(() => {
+        if (scrollContainerRef.current) {
+          const { scrollWidth, clientWidth, scrollLeft } = scrollContainerRef.current;
+          if (scrollLeft + clientWidth >= scrollWidth) {
+            // If reached end, loop back to beginning
+            scrollContainerRef.current.scrollLeft = 0;
+          } else {
+            scrollContainerRef.current.scrollLeft += 1; // Adjust scroll speed here
+          }
+        }
+      }, 20); // Adjust interval for smoother/faster scroll
+    };
+
+    if (!isDragging) {
+      startScrolling();
+    }
+
+    return () => {
+      clearInterval(scrollInterval);
+    };
+  }, [isDragging]);
+
   // CHANGE 2: Updated the card data to match the content from the image.
   const cardsData = [
     {
@@ -96,7 +124,7 @@ const Spotlight = () => {
   ];
 
   return (
-    <div className="bg-gray-50 font-sans text-gray-800">
+    <div className="bg-white font-sans text-gray-800">
       <div className="py-16">
         {/* This is the heading from your original code */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 md:mb-10">
