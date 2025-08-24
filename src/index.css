@@ -192,6 +192,16 @@ FestivalFont {
   animation: fade-in-up 0.8s ease-out forwards;
 }
 
+@keyframes ping-pong-scale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-ping-pong-scale {
+  animation: ping-pong-scale 2s infinite alternate;
+}
+
 /* === Unified 2-line heading with left magenta bar (like your 1st image) === */
 .jt-heading {
   position: relative;

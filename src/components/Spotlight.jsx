@@ -35,6 +35,7 @@ const Spotlight = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState('forward'); // 'forward' or 'backward'
 
   const onMouseDown = (e) => {
     setIsDragging(true);
@@ -67,11 +68,23 @@ const Spotlight = () => {
       scrollInterval = setInterval(() => {
         if (scrollContainerRef.current) {
           const { scrollWidth, clientWidth, scrollLeft } = scrollContainerRef.current;
-          if (scrollLeft + clientWidth >= scrollWidth) {
-            // If reached end, loop back to beginning
-            scrollContainerRef.current.scrollLeft = 0;
-          } else {
-            scrollContainerRef.current.scrollLeft += 1; // Adjust scroll speed here
+          const maxScrollLeft = scrollWidth - clientWidth;
+          const scrollSpeed = 1; // Adjust scroll speed here
+
+          if (scrollDirection === 'forward') {
+            if (scrollLeft >= maxScrollLeft) {
+              setScrollDirection('backward');
+              scrollContainerRef.current.scrollLeft -= scrollSpeed;
+            } else {
+              scrollContainerRef.current.scrollLeft += scrollSpeed;
+            }
+          } else { // scrollDirection === 'backward'
+            if (scrollLeft <= 0) {
+              setScrollDirection('forward');
+              scrollContainerRef.current.scrollLeft += scrollSpeed;
+            } else {
+              scrollContainerRef.current.scrollLeft -= scrollSpeed;
+            }
           }
         }
       }, 20); // Adjust interval for smoother/faster scroll
@@ -84,7 +97,7 @@ const Spotlight = () => {
     return () => {
       clearInterval(scrollInterval);
     };
-  }, [isDragging]);
+  }, [isDragging, scrollDirection]);
 
   // CHANGE 2: Updated the card data to match the content from the image.
   const cardsData = [
