@@ -1,4 +1,5 @@
-import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 // Images
 import followUs1 from '../assets/Images/Followus1.jpg';
@@ -61,6 +62,12 @@ const FollowUs = () => {
 
             {/* Gradient Overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
+
+            {/* Instagram Icon and Follow Us Link */}
+            <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+              <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
+              <a href="https://www.instagram.com/your_instagram_handle" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:underline">Follow Us</a>
+            </div>
 </div>
         ))}
       </div>
