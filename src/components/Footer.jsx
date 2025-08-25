@@ -140,7 +140,7 @@ const Footer = () => {
       </div>
 
       {/* ───────── Bottom Section ───────── */}
-      <div className="border-t border-gray-800 py-10 px-6 md:px-20 flex flex-col md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
+      <div className="border-t border-gray-800 py-10 px-6 md:px-20 flex flex-col-reverse md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
         {/* Left text */}
         <div className="md:w-2/3">
           <p>
@@ -197,7 +197,7 @@ const Footer = () => {
         </div>
 
         {/* Right language list */}
-        <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 text-sm text-right">
+        <ul className="grid grid-cols-8 gap-4 md:gap-6 text-sm text-right">
           <li>
             <a href="#" className="hover:text-white text-gray-400">
               RU
