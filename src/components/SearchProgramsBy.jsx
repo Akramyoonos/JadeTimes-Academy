@@ -130,7 +130,7 @@ const SearchProgramsBy = () => {
       <div className="border-b border-gray-200">
         <div className="w-full flex flex-col md:flex-row md:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="hidden md:block text-black  content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold">
+          <div className="block text-black  content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold">
             Search Programs by
           </div>
 
@@ -140,7 +140,7 @@ const SearchProgramsBy = () => {
           {/* Right group (pinned to right edge) */}
           <div className="flex flex-col md:flex-row w-full md:w-auto">
             {/* Each control has its own left divider and a min width so it feels like the reference */}
-            <div className="hidden md:block content-center border-t md:border-t-0 md:border-l border-gray-200">
+            <div className="content-center border-t md:border-t-0 md:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[0].id}
                 title={dropdowns[0].title}

@@ -333,13 +333,45 @@ const MegaMenu = ({ open, config, accent }) => {
   );
 };
 
-const MobileMenu = ({ isOpen, onClose }) => {
+const AccordionItem = ({ title, children, isOpen, onToggle }) => {
+  return (
+    <div className="border-b border-gray-700">
+      <button
+        className="flex justify-between items-center w-full py-3 px-4 text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
+        onClick={onToggle}
+      >
+        {title}
+        <FontAwesomeIcon
+          icon={faChevronDown}
+          className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+        />
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="pb-4 pl-8 pr-4">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
+  const [activeAccordion, setActiveAccordion] = useState(null);
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
+
+  const toggleAccordion = (key) => {
+    setActiveAccordion((prev) => (prev === key ? null : key));
+  };
 
   return (
     <div
@@ -349,33 +381,82 @@ const MobileMenu = ({ isOpen, onClose }) => {
     >
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
       <div
-        className={`absolute top-0 right-0 h-full w-80 bg-gray-900 shadow-2xl p-6 transition-transform duration-300 ease-in-out ${
+        className={`absolute top-0 right-0 h-full w-full sm:w-80 bg-[#0A0A0A] shadow-2xl rounded-l-lg p-6 transition-transform duration-300 ease-in-out overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 text-gray-400 hover:text-white"
+          className="absolute top-6 right-6 text-gray-400 hover:text-white text-2xl"
+          aria-label="Close menu"
         >
           <FontAwesomeIcon icon={faTimes} />
         </button>
 
-        <ul className="flex flex-col gap-5 mt-12">
+        <ul className="flex flex-col gap-2 mt-10">
           {navLinks.map((link) => (
             <li key={link.text}>
-              <NavLink
-                to={link.href}
-                onClick={onClose}
-                className="block py-2 text-2xl font-normal text-gray-300 hover:text-yellow-400 transition-colors duration-300"
-              >
-                {link.text}
-              </NavLink>
+              {link.menu ? (
+                <AccordionItem
+                  title={link.text}
+                  isOpen={activeAccordion === link.key}
+                  onToggle={() => toggleAccordion(link.key)}
+                >
+                  {Object.entries(megaMenus[link.menu]).map(([section, items]) => (
+                    <div key={section} className="mb-4 last:mb-0">
+                      <h4 className="uppercase text-sm font-bold text-gray-400 mb-2" style={{ color: link.accent }}>
+                        {section}
+                      </h4>
+                      <ul className="space-y-1">
+                        {items.map((item) => (
+                          <li key={item}>
+                            <a
+                              href="#" // You might want to make this dynamic based on actual routes
+                              className="block py-1 text-base text-gray-300 hover:text-white transition-colors duration-300"
+                            >
+                              {item}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </AccordionItem>
+              ) : (
+                <NavLink
+                  to={link.href}
+                  onClick={onClose}
+                  className="block px-4 py-3 text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
+                >
+                  {link.text}
+                </NavLink>
+              )}
             </li>
           ))}
         </ul>
 
-        <hr className="border-gray-700 my-6" />
-        <div className="flex flex-col gap-3">
+        <hr className="border-gray-700 my-5" />
+        <div className="flex flex-col gap-2 mt-5">
+          {topBarLinks.map((link) => (
+            <a
+              key={link.text}
+              href={link.href}
+              className="block py-2 text-lg font-normal text-gray-300 hover:text-yellow-400 transition-colors duration-300"
+              style={link.style || {}}
+            >
+              {link.text}
+            </a>
+          ))}
+          <div className="flex items-center justify-between py-2">
+            <span className="text-white font-light" style={{ fontSize: "var(--size-phone)" }}>
+              1-800-JADETIMES
+            </span>
+            <div className="flex items-center gap-5">
+              <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 mt-6">
           <a
             href="/request-info"
             className="text-center w-full px-4 py-3  font-semibold text-white"
@@ -456,7 +537,7 @@ const Header = () => {
         }}
       >
         {/* Top bar — scrolls away */}
-        <div className="hidden sm:block bg-black border-b border-gray-800">
+        <div className="hidden lg:block bg-black border-b border-gray-800">
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2" style={{ fontSize: "var(--size-topbar)" }}>
               <div className="flex items-center gap-x-6 text-gray-400">
@@ -493,7 +574,7 @@ const Header = () => {
         </div>
 
         {/* Main nav — sticky */}
-        <nav className="sticky top-0 z-30 bg-black" ref={navRef}>
+        <nav className="sticky top-0 z-30 bg-black w-full" ref={navRef}>
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2">
               <NavLink to="/" className="flex-shrink-0">
@@ -525,14 +606,14 @@ const Header = () => {
               </ul>
 
               <div className="flex items-center gap-3">
-                <div className="hidden md:flex items-center gap-2">
-                  <a
-                    href="/request-info"
-                    className="px-3 py-2  font-semibold  text-black"
-                    style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
-                  >
-                    REQUEST INFO
-                  </a>
+                <div className="hidden lg:flex items-center gap-2">
+              <a
+                href="/request-info"
+                className="px-3 py-2 text-sm font-semibold text-black"
+                style={{ backgroundColor: ACCENTS.academics }}
+              >
+                REQUEST INFO
+              </a>
                   <a
                     href="/apply"
                     className="px-3 py-2 border-2 border-white font-semibold text-white"
@@ -541,6 +622,13 @@ const Header = () => {
                     APPLY NOW
                   </a>
                 </div>
+                <button
+                  aria-label="Search"
+                  onClick={() => setIsSearchOpen((v) => !v)}
+                  className="lg:hidden text-gray-300 hover:text-white transition-colors duration-300"
+                >
+                  <FontAwesomeIcon icon={faSearch} />
+                </button>
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
                   aria-label="Toggle menu"
@@ -570,7 +658,7 @@ const Header = () => {
       </header>
 
       {/* Mobile off-canvas */}
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} isLangOpen={isLangOpen} setIsLangOpen={setIsLangOpen} />
     </>
   );
 };

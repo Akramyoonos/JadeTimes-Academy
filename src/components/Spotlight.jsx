@@ -14,7 +14,7 @@ import Spotlight8 from '../assets/Images/Spotlight 09.jpeg';
 // CHANGE 1: Created a new Card component to match the style in the image.
 // ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
 const InfoCard = ({ src, title, description }) => (
-  <div className="w-90 flex-shrink-4 bg-white font-sans text-left select-none group overflow-hidden">
+  <div className="w-full sm:w-90 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
     <div className="overflow-hidden">
       <img
         src={src}
@@ -161,10 +161,6 @@ const Spotlight = () => {
               isDragging ? 'cursor-grabbing' : 'cursor-grab'
             }`}
             style={{ scrollBehavior: 'smooth' }}
-            onMouseDown={onMouseDown}
-            onMouseLeave={onMouseLeave}
-            onMouseUp={onMouseUp}
-            onMouseMove={onMouseMove}
           >
             {/* CHANGE 3: Using the new InfoCard component and updated data. */}
             {cardsData.map((card, index) => (

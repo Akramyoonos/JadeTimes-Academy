@@ -50,14 +50,14 @@ const FollowUs = () => {
         {images.map((image, index) => (
           <div 
             key={index} 
-            className={`relative overflow-hidden shadow-lg ${index % 2 === 0 ? "mt-0" : "mt-3"}`}
+            className={`relative overflow-hidden shadow-lg`}
             style={{ aspectRatio: "1 / 1.2" }}
           >
             {/* Image */}
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-[450px] object-cover block"
+              className="w-full h-full object-cover block"
             />
 
             {/* Gradient Overlay */}

@@ -66,7 +66,7 @@ export default function OurStudents() {
         {/* ===== CONTENT ===== */}
         <section className="relative flex flex-col md:flex-row items-start justify-start px-5 sm:px-6 md:px-8 lg:px-12 pt-12 md:pt-16  gap-6 md:gap-10">
           {/* LEFT: IMAGE (natural ratio, lowered a bit) */}
-          <div className="w-full md:w-[46%] lg:w-[44%] xl:w-[42%] mt-4 md:mt-6">
+          <div className="w-full md:w-5/12 lg:w-[44%] xl:w-[42%] mt-4 md:mt-6">
             <div className="w-full overflow-hidden rounded-lg aspect-[948/815]">
               <img
                 key={s.imageUrl}
@@ -79,7 +79,7 @@ export default function OurStudents() {
 
           {/* RIGHT: TEXT (aligned; capped width + extra right padding) */}
           <div className="w-full md:flex-1">
-            <div className="pl-8 md:pl-10 lg:pl-12 pr-5 md:pr-10 lg:pr-16 max-w-3xl">
+            <div className="pl-8 md:pl-10 lg:pl-12 pr-8 md:pr-12 lg:pr-16 max-w-3xl">
               {/* Heading + SHORT purple line (only heading height) */}
               <div className="flex items-stretch mb-14 md:mb-12">
                 <span className="w-[3px] bg-fuchsia-500 mr-3 self-stretch" aria-hidden="true" />
