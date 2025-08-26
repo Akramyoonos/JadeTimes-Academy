@@ -9,6 +9,10 @@
   --secondary-blue: #3BA9F9;
 }
 
+hml {
+  scroll-behavior: smooth;
+}
+
 /* Home-page Styles */
 
 .headerFont {
