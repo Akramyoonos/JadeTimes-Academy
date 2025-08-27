@@ -128,19 +128,19 @@ const SearchProgramsBy = () => {
 
       {/* full-width strip; label on far left, controls on far right */}
       <div className="border-b border-gray-200">
-        <div className="w-full flex flex-col md:flex-row md:items-stretch">
+        <div className="w-full flex flex-col items-center lg:flex-row lg:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="block text-black  content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold">
+          <div className="block text-black content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
             Search Programs by
           </div>
 
           {/* Flexible spacer to create big gap */}
-          <div className="flex-1" />
+          <div className="flex-1 hidden lg:block" />
 
           {/* Right group (pinned to right edge) */}
-          <div className="flex flex-col md:flex-row w-full md:w-auto">
+          <div className="flex flex-col items-center lg:flex-row w-full lg:w-auto">
             {/* Each control has its own left divider and a min width so it feels like the reference */}
-            <div className="content-center border-t md:border-t-0 md:border-l border-gray-200">
+            <div className="content-center border-t lg:border-t-0 lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[0].id}
                 title={dropdowns[0].title}
@@ -149,11 +149,11 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[0].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[0].id]}
-                className="w-full md:w-auto md:min-w-[280px]"
+                className="w-full lg:w-auto lg:min-w-[280px]"
               />
             </div>
 
-            <div className="hidden md:block content-center border-t md:border-t-0 md:border-l border-gray-200">
+            <div className="content-center border-t lg:border-t-0 lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[1].id}
                 title={dropdowns[1].title}
@@ -162,11 +162,11 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[1].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[1].id]}
-                className="w-full md:w-auto md:min-w-[280px]"
+                className="w-full lg:w-auto lg:min-w-[280px]"
               />
             </div>
 
-            <div className="hidden md:block content-center border-t md:border-t-0 md:border-l border-gray-200">
+            <div className="content-center border-t lg:border-t-0 lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[2].id}
                 title={dropdowns[2].title}
@@ -175,7 +175,7 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[2].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[2].id]}
-                className="w-full md:w-auto md:min-w-[280px]"
+                className="w-full lg:w-auto lg:min-w-[280px]"
               />
             </div>
 
@@ -184,7 +184,7 @@ const SearchProgramsBy = () => {
               <button
                 onClick={clear}
                 title="Clear filters"
-                className="hidden md:inline-flex items-center px-5 text-gray-500 hover:text-red-500 border-t md:border-t-0 md:border-l border-gray-200"
+                className="inline-flex items-center px-5 text-gray-500 hover:text-red-500 border-t lg:border-t-0 lg:border-l border-gray-200"
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
@@ -192,7 +192,7 @@ const SearchProgramsBy = () => {
 
             <Link
               to="/programfinder"
-              className="w-full md:w-50 md:h-16 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t md:border-t-0 md:border-l border-gray-200 text-center"
+              className="w-full lg:w-50 lg:h-16 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-t-0 lg:border-l border-gray-200 text-center"
               aria-label="Search Programs"
             >
               Search
