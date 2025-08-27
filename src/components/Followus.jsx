@@ -1,5 +1,7 @@
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 // Images
 import followUs1 from '../assets/Images/Followus1.jpg';
@@ -17,22 +19,22 @@ import followUs12 from '../assets/Images/Followus12.jpg';
 
 const FollowUs = () => {
   const images = [
-    { src: followUs1, alt: "Man illuminated by light" },
-    { src: followUs2, alt: "NYFA Logo on a colorful background" },
-    { src: followUs3, alt: "Woman holding a camera in a smoky environment" },
-    { src: followUs4, alt: "Smiling student with headphones and camera gear" },
-    { src: followUs5, alt: "Woman holding a film reel above her head" },
-    { src: followUs6, alt: "Man in a suit walking on a city street" },
-    { src: followUs7, alt: "Ring light with 'Official Selection' text" },
-    { src: followUs8, alt: "Man sitting at a table with papers" },
-    { src: followUs9, alt: "Sunset over a body of water with buildings" },
-    { src: followUs10, alt: "Couple kissing outdoors" },
-    { src: followUs11, alt: "Sculpture of a human skull and a hand" },
-    { src: followUs12, alt: "Person filming with a camera, wearing a mask" },
+    { src: followUs1, alt: "Man illuminated by light", href: "https://www.instagram.com/" },
+    { src: followUs2, alt: "NYFA Logo on a colorful background", href: "https://www.instagram.com/" },
+    { src: followUs3, alt: "Woman holding a camera in a smoky environment", href: "https://www.instagram.com/" },
+    { src: followUs4, alt: "Smiling student with headphones and camera gear", href: "https://www.instagram.com/" },
+    { src: followUs5, alt: "Woman holding a film reel above her head", href: "https://www.instagram.com/" },
+    { src: followUs6, alt: "Man in a suit walking on a city street", href: "https://www.instagram.com/" },
+    { src: followUs7, alt: "Ring light with 'Official Selection' text", href: "https://www.instagram.com/" },
+    { src: followUs8, alt: "Man sitting at a table with papers", href: "https://www.instagram.com/" },
+    { src: followUs9, alt: "Sunset over a body of water with buildings", href: "https://www.instagram.com/" },
+    { src: followUs10, alt: "Couple kissing outdoors", href: "https://www.instagram.com/" },
+    { src: followUs11, alt: "Sculpture of a human skull and a hand", href: "https://www.instagram.com/" },
+    { src: followUs12, alt: "Person filming with a camera, wearing a mask", href: "https://www.instagram.com/" },
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 md:mt-12 sm:px-6 lg:px-8 py-10">
+    <div className="max-w-7xl mx-auto px-4 mt-12 sm:px-6 lg:px-8 py-10">
       {/* Header Section */}
       <div className="flex justify-between items-start mb-8">
         <div className="flex flex-col">
@@ -48,27 +50,28 @@ const FollowUs = () => {
       {/* Image Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
         {images.map((image, index) => (
-          <div 
+          <Link 
             key={index} 
-            className={`relative overflow-hidden shadow-lg`}
+            to={image.href}
+            className={`group relative overflow-hidden shadow-lg ${index % 2 === 0 ? "mt-0" : "mt-3"}`}
             style={{ aspectRatio: "1 / 1.2" }}
           >
             {/* Image */}
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover block"
+              className="w-full h-[450px] object-cover block transition-transform duration-300 ease-in-out group-hover:scale-105"
             />
 
             {/* Gradient Overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
 
-            {/* Instagram Icon and Follow Us Link */}
-            <div className="absolute bottom-4 left-4 text-white flex items-center space-x-2">
-              <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
-              <a href="https://www.instagram.com/your_instagram_handle" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold hover:underline">Follow Us</a>
+            {/* Instagram Overlay */}
+            <div className="absolute inset-0 flex flex-row items-center justify-center bg bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl mr-2" />
+              <span className="text-white text-lg font-semibold">Follow Us</span>
             </div>
-</div>
+          </Link>
         ))}
       </div>
     </div>

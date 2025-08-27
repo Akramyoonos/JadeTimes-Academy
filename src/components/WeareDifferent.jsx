@@ -2,6 +2,34 @@
 import React from "react";
 
 export default function WeareDifferent() {
+  const stats = [
+    // Data for the statistics displayed in the component
+    {
+      value: "135k+",
+      description: "Students Graduated Since 1992",
+      borderColor: "border-blue-500",
+      textColor: "text-blue-500",
+    },
+    {
+      value: "160+",
+      description: "International Students From Over 160 Countries",
+      borderColor: "border-violet-500",
+      textColor: "text-violet-500",
+    },
+    {
+      value: "30",
+      description: "Years of Hands-On Programs",
+      borderColor: "border-amber-500",
+      textColor: "text-amber-500",
+    },
+    {
+      value: "8",
+      description: "Campuses and Locations Worldwide",
+      borderColor: "border-blue-500",
+      textColor: "text-blue-500",
+    },
+  ];
+
   return (
     <section className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,45 +44,16 @@ export default function WeareDifferent() {
 
           {/* Right stats grid – square, no card bg, no shadows */}
           <div className="md:col-span-2 grid sm:grid-cols-2 gap-16">
-            {/* 135k+ */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center px-16 py-10 mb-4 border-4 border-blue-500 rounded-none">
-                <span className="text-6xl font-extrabold text-blue-500">135k+</span>
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className={`inline-flex items-center justify-center px-10 py-10 mb-4 border-4 ${stat.borderColor} rounded-none`}>
+                  <span className={`text-6xl font-extrabold ${stat.textColor}`}>{stat.value}</span>
+                </div>
+                <p className="text-lg text-gray-600 font-medium">
+                  {stat.description}
+                </p>
               </div>
-              <p className="text-lg text-gray-600 font-medium">
-                Students Graduated Since 1992
-              </p>
-            </div>
-
-            {/* 160+ */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center px-16 py-10 mb-4 border-4 border-violet-500 rounded-none">
-                <span className="text-6xl font-extrabold text-violet-500">160+</span>
-              </div>
-              <p className="text-lg text-gray-600 font-medium">
-                International Students From Over 160 Countries
-              </p>
-            </div>
-
-            {/* 30 */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center px-16 py-10 mb-4 border-4 border-amber-500 rounded-none">
-                <span className="text-6xl font-extrabold text-amber-500">30</span>
-              </div>
-              <p className="text-lg text-gray-600 font-medium">
-                Years of Hands-On Programs
-              </p>
-            </div>
-
-            {/* 8 */}
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center px-16 py-10 mb-4 border-4 border-blue-500 rounded-none">
-                <span className="text-6xl font-extrabold text-blue-500">8</span>
-              </div>
-              <p className="text-lg text-gray-600 font-medium">
-                Campuses and Locations Worldwide
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </div>

@@ -161,6 +161,10 @@ const Spotlight = () => {
               isDragging ? 'cursor-grabbing' : 'cursor-grab'
             }`}
             style={{ scrollBehavior: 'smooth' }}
+            onMouseDown={onMouseDown}
+            onMouseUp={onMouseUp}
+            onMouseLeave={onMouseLeave}
+            onMouseMove={onMouseMove}
           >
             {/* CHANGE 3: Using the new InfoCard component and updated data. */}
             {cardsData.map((card, index) => (

@@ -128,7 +128,7 @@ const SearchProgramsBy = () => {
 
       {/* full-width strip; label on far left, controls on far right */}
       <div className="border-b border-gray-200">
-        <div className="w-full flex flex-col items-center lg:flex-row lg:items-stretch">
+        <div className="w-full flex flex-col items-center xl:flex-row xl:items-stretch">
           {/* Left label (flush to edge) */}
           <div className="block text-black content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
             Search Programs by
@@ -192,7 +192,7 @@ const SearchProgramsBy = () => {
 
             <Link
               to="/programfinder"
-              className="w-full lg:w-50 lg:h-16 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-t-0 lg:border-l border-gray-200 text-center"
+              className="w-full lg:w-full lg:h-16 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-t-0 lg:border-l border-gray-200 text-center"
               aria-label="Search Programs"
             >
               Search

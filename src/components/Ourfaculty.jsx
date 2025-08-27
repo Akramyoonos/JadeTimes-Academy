@@ -101,6 +101,35 @@ const facultyData = [
 
       shade: { widthPct: "113%", heightPx: 190, gapPx: 10 },
     },
+    tablet: {
+      frameWidthPct: "100%",
+      frameHeight: 118,
+      frameBottom: 2,
+      iconSize: 36,
+
+      cardOffsetY: 98,
+
+      frameTX: 0,
+      frameTY: 32,
+      frameScale: 1,
+
+      shadeTX: 0,
+      shadeTY: 35,
+      shadeScale: 1,
+
+      iconTX: 0,
+      iconTY: 0,
+      iconScale: 1,
+
+      imageScale: 2,
+      imageTX: 0,
+      imageTY: -50,
+
+      // DESKTOP BAND DISABLED
+      band: { ...BAND_DEFAULT, enabled: false },
+
+      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
+    },
     desktop: {
       frameWidthPct: "100%",
       frameHeight: 118,
@@ -171,6 +200,35 @@ const facultyData = [
       band: { ...BAND_DEFAULT, ty: 115, heightPx: 30, widthPct: "115%" },
 
       shade: { widthPct: "113%", heightPx: 190, gapPx: 10 },
+    },
+    tablet: {
+      frameWidthPct: "100%",
+      frameHeight: 118,
+      frameBottom: 3,
+      iconSize: 36,
+
+      cardOffsetY: 98,
+
+      frameTX: 0,
+      frameTY: 32,
+      frameScale: 1,
+
+      shadeTX: 0,
+      shadeTY: 35,
+      shadeScale: 1,
+
+      iconTX: 0,
+      iconTY: 0,
+      iconScale: 1,
+
+      imageScale: 2,
+      imageTX: 0,
+      imageTY: -50,
+
+      // DESKTOP BAND DISABLED
+      band: { ...BAND_DEFAULT, enabled: false },
+
+      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
     },
     desktop: {
       frameWidthPct: "100%",
@@ -245,6 +303,38 @@ const facultyData = [
       reserveBottom: 0,
 
       shade: { widthPct: "113%", heightPx: 190, gapPx: 10 },
+    },
+    tablet: {
+      frameWidthPct: "100%",
+      frameHeight: 118,
+      frameBottom: 19,
+      iconSize: 36,
+
+      cardOffsetY: 98,
+
+      frameTX: 0,
+      frameTY: 32,
+      frameScale: 1,
+
+      shadeTX: 0,
+      shadeTY: 35,
+      shadeScale: 1,
+
+      iconTX: 0,
+      iconTY: 0,
+      iconScale: 1,
+
+      imageScale: 2,
+      imageTX: 0,
+      imageTY: -50,
+
+      // DESKTOP BAND DISABLED
+      band: { ...BAND_DEFAULT, enabled: false },
+
+      // also keep desktop tight just in case
+      reserveBottom: 0,
+
+      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
     },
     desktop: {
       frameWidthPct: "100%",
@@ -464,7 +554,7 @@ const FacultyCard = ({
 };
 
 export default function OurFaculty() {
-  const { isMobile } = useBreakpoint();
+  const { isLgUp, isMdUp } = useBreakpoint();
 
   return (
     <section className="relative bg-white">
@@ -493,10 +583,10 @@ export default function OurFaculty() {
           </div>
 
           {/* Cards */}
-          <div className="w-full md:flex-1">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8">
+          <div className="w-full md:flex-1 md:pr-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-4 lg:gap-8">
               {facultyData.map((f) => {
-                const conf = isMobile ? f.mobile : f.desktop;
+                const conf = isLgUp ? f.desktop : isMdUp ? f.tablet : f.mobile;
                 return (
                   <FacultyCard
                     key={f.department}

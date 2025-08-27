@@ -12,7 +12,7 @@ import {
 import logo from "../assets/images/Logo.avif";
 
 // ---------------- CONFIG ----------------
-const gutters = "px-6 sm:px-8 lg:px-10";
+const gutters = "px-6 sm:px-8 xl:px-10";
 
 // accent colors
 const ACCENTS = {
@@ -284,7 +284,7 @@ const MegaMenu = ({ open, config, accent }) => {
       }`}
     >
       <div className="w-screen bg-[#141414]">
-        <div className="py-10 px-4 sm:px-6 lg:px-8">
+        <div className="py-10 px-4 sm:px-6 xl:px-8">
           <div
             className="grid gap-x-8 gap-y-6"
             style={{ gridTemplateColumns: `repeat(${Object.keys(config).length}, minmax(0, 1fr))` }}
@@ -375,7 +375,7 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-40 transition-opacity duration-300 lg:hidden ${
+      className={`fixed inset-0 z-40 transition-opacity duration-300 xl:hidden ${
         isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
@@ -537,7 +537,7 @@ const Header = () => {
         }}
       >
         {/* Top bar — scrolls away */}
-        <div className="hidden lg:block bg-black border-b border-gray-800">
+        <div className="hidden xl:block bg-black border-b border-gray-800">
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2" style={{ fontSize: "var(--size-topbar)" }}>
               <div className="flex items-center gap-x-6 text-gray-400">
@@ -555,7 +555,7 @@ const Header = () => {
 
               <div className="flex items-center gap-5">
                 <span
-                  className="hidden lg:inline text-white font-light"
+                  className="hidden xl:inline text-white font-light"
                   style={{ fontSize: "var(--size-phone)" }}
                 >
                   1-800-JADETIMES
@@ -581,7 +581,7 @@ const Header = () => {
                 <img alt="JadeTimes Academy Logo" className="h-16 w-auto" src={logo} />
               </NavLink>
 
-              <ul className="hidden lg:flex items-center gap-x-6">
+              <ul className="hidden xl:flex items-center gap-x-6">
                 {navLinks.map((link) => (
                   <li key={link.key}>
                     {link.menu ? (
@@ -606,7 +606,7 @@ const Header = () => {
               </ul>
 
               <div className="flex items-center gap-3">
-                <div className="hidden lg:flex items-center gap-2">
+                <div className="hidden xl:flex items-center gap-2">
               <a
                 href="/request-info"
                 className="px-3 py-2 text-sm font-semibold text-black"
@@ -625,14 +625,14 @@ const Header = () => {
                 <button
                   aria-label="Search"
                   onClick={() => setIsSearchOpen((v) => !v)}
-                  className="lg:hidden text-gray-300 hover:text-white transition-colors duration-300"
+                  className="xl:hidden text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faSearch} />
                 </button>
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
                   aria-label="Toggle menu"
-                  className="lg:hidden text-gray-300 hover:text-white transition-colors duration-300"
+                  className="xl:hidden text-gray-300 hover:text-white transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faBars} />
                 </button>
