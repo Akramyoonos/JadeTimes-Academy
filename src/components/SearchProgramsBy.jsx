@@ -130,7 +130,7 @@ const SearchProgramsBy = () => {
       <div className="border-b border-gray-200">
         <div className="w-full flex flex-col items-center xl:flex-row xl:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="block text-black content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
+          <div className="hidden lg:block text-black content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
             Search Programs by
           </div>
 
@@ -140,7 +140,7 @@ const SearchProgramsBy = () => {
           {/* Right group (pinned to right edge) */}
           <div className="flex flex-col items-center lg:flex-row w-full lg:w-auto">
             {/* Each control has its own left divider and a min width so it feels like the reference */}
-            <div className="content-center border-t lg:border-t-0 lg:border-l border-gray-200">
+            <div className="hidden lg:block content-center border-t lg:border-t-0 lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[0].id}
                 title={dropdowns[0].title}
@@ -153,7 +153,7 @@ const SearchProgramsBy = () => {
               />
             </div>
 
-            <div className="content-center border-t lg:border-t-0 lg:border-l border-gray-200">
+            <div className="hidden lg:block content-center border-t lg:border-t-0 lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[1].id}
                 title={dropdowns[1].title}
@@ -166,7 +166,7 @@ const SearchProgramsBy = () => {
               />
             </div>
 
-            <div className="content-center border-t lg:border-t-0 lg:border-l border-gray-200">
+            <div className="hidden lg:block content-center border-t lg:border-t-0 lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[2].id}
                 title={dropdowns[2].title}
@@ -195,7 +195,8 @@ const SearchProgramsBy = () => {
               className="w-full lg:w-full lg:h-16 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-t-0 lg:border-l border-gray-200 text-center"
               aria-label="Search Programs"
             >
-              Search
+              <span className="lg:hidden">Search Programs by</span>
+              <span className="hidden lg:block">Search</span>
             </Link>
           </div>
         </div>

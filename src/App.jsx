@@ -20,6 +20,7 @@ import OnlineProgrames from './pages/OnlineProgrames';
 import CareerAndAlumniServices from './pages/CareerAndAlumniServices';
 import FacultyDirectoryPage from './pages/FacultyDirectoryPage';
 import StudentResource_page from './pages/StudentResource_page';
+import History_Page from './pages/History_Page';
 
 function ConditionalHeader() {
   const location = useLocation();
@@ -75,8 +76,9 @@ function AppInner() {
           <Route path="/DegreeProgramsPage/*"          element={<DegreeProgramsPage />} />
           <Route path="/OnlineProgrames/*"             element={<OnlineProgrames />} />
           <Route path="/CareerAndAlumniServices/*"     element={<CareerAndAlumniServices />} />
-          <Route path="/FacultyDirectoryPage/*"             element={<FacultyDirectoryPage />} />
-          <Route path="/StudentResource_page/*"             element={<StudentResource_page />} />
+          <Route path="/FacultyDirectoryPage/*"        element={<FacultyDirectoryPage />} />
+          <Route path="/StudentResource_page/*"        element={<StudentResource_page />} />
+          <Route path="/History_Page/*"                element={<History_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>

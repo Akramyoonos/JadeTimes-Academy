@@ -111,7 +111,7 @@ export default function OurStudents() {
         </section>
 
         {/* ===== FOOTER (white; kisses content) ===== */}
-        <footer className="relative border-t mt-0 z-0" style={{ backgroundColor: "#090909", borderColor: "black" }}>
+        <footer className="relative border-t-1 mt-0 z-0" style={{ backgroundColor: "#090909", borderColor: "gray-100" }}>
           <div className="container mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 text-center">
               {/* First three items */}

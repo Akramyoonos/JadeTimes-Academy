@@ -53,7 +53,7 @@ const navLinks = [
 const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
-      { text: "FILMMAKING", href: "/academics/areas-of-study/filmmaking" },
+      { text: "FILMMAKING", href: "/History_Page" },
       { text: "ACTING FOR FILM", href: "/academics/areas-of-study/acting-for-film" },
       { text: "PHOTOGRAPHY", href: "/academics/areas-of-study/photography" },
       { text: "PRODUCING", href: "/academics/areas-of-study/producing" },
