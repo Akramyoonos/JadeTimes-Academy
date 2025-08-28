@@ -9,7 +9,7 @@ import {
   faSearch,
   faTimes,
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/images/Logo.avif";
+import logo from "../assets/images/Logo.png";
 
 // ---------------- CONFIG ----------------
 const gutters = "px-6 sm:px-8 xl:px-10";
@@ -53,115 +53,134 @@ const navLinks = [
 const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
-      "FILMMAKING",
-      "ACTING FOR FILM",
-      "PHOTOGRAPHY",
-      "PRODUCING",
-      "SCREENWRITING",
-      "CINEMATOGRAPHY",
-      "DOCUMENTARY FILMMAKING",
-      "DIGITAL EDITING",
-      "3D ANIMATION & VISUAL EFFECTS",
-      "BROADCAST JOURNALISM",
-      "MUSICAL THEATRE",
-      "GAME DESIGN",
-      "ENTERTAINMENT MEDIA",
-      "VIRTUAL REALITY",
-      "NYFA'S PATHWAY TRACK",
+      { text: "FILMMAKING", href: "/academics/areas-of-study/filmmaking" },
+      { text: "ACTING FOR FILM", href: "/academics/areas-of-study/acting-for-film" },
+      { text: "PHOTOGRAPHY", href: "/academics/areas-of-study/photography" },
+      { text: "PRODUCING", href: "/academics/areas-of-study/producing" },
+      { text: "SCREENWRITING", href: "/academics/areas-of-study/screenwriting" },
+      { text: "CINEMATOGRAPHY", href: "/academics/areas-of-study/cinematography" },
+      { text: "DOCUMENTARY FILMMAKING", href: "/academics/areas-of-study/documentary-filmmaking" },
+      { text: "DIGITAL EDITING", href: "/academics/areas-of-study/digital-editing" },
+      { text: "3D ANIMATION & VISUAL EFFECTS", href: "/academics/areas-of-study/3d-animation-visual-effects" },
+      { text: "BROADCAST JOURNALISM", href: "/academics/areas-of-study/broadcast-journalism" },
+      { text: "MUSICAL THEATRE", href: "/academics/areas-of-study/musical-theatre" },
+      { text: "GAME DESIGN", href: "/academics/areas-of-study/game-design" },
+      { text: "ENTERTAINMENT MEDIA", href: "/academics/areas-of-study/entertainment-media" },
+      { text: "VIRTUAL REALITY", href: "/academics/areas-of-study/virtual-reality" },
+      { text: "NYFA'S PATHWAY TRACK", href: "/academics/areas-of-study/nyfas-pathway-track" },
     ],
     "DEGREE PROGRAMS": [
-      "BACHELOR OF FINE ARTS",
-      "BACHELOR OF ARTS",
-      "MASTER OF FINE ARTS",
-      "MASTER OF ARTS",
-      "ASSOCIATE OF FINE ARTS",
-      "ONLINE DEGREES",
+      { text: "BACHELOR OF FINE ARTS", href: "/academics/degree-programs/bachelor-of-fine-arts" },
+      { text: "BACHELOR OF ARTS", href: "/academics/degree-programs/bachelor-of-arts" },
+      { text: "MASTER OF FINE ARTS", href: "/academics/degree-programs/master-of-fine-arts" },
+      { text: "MASTER OF ARTS", href: "/academics/degree-programs/master-of-arts" },
+      { text: "ASSOCIATE OF FINE ARTS", href: "/academics/degree-programs/associate-of-fine-arts" },
+      { text: "ONLINE DEGREES", href: "/academics/degree-programs/online-degrees" },
     ],
     "CERTIFICATE PROGRAMS": [
-      "1 & 2-YEAR PROGRAMS",
-      "SHORT-TERM WORKSHOPS",
-      "ONLINE PROGRAMS",
-      "CORPORATE TRAINING",
+      { text: "1 & 2-YEAR PROGRAMS", href: "/academics/certificate-programs/1-2-year-programs" },
+      { text: "SHORT-TERM WORKSHOPS", href: "/academics/certificate-programs/short-term-workshops" },
+      { text: "ONLINE PROGRAMS", href: "/academics/certificate-programs/online-programs" },
+      { text: "CORPORATE TRAINING", href: "/academics/certificate-programs/corporate-training" },
     ],
-    "STUDY ABROAD WITH NYFA": ["FILMMAKING", "ACTING FOR FILM"],
+    "STUDY ABROAD WITH NYFA": [
+      { text: "FILMMAKING", href: "/academics/study-abroad-with-nyfa/filmmaking" },
+      { text: "ACTING FOR FILM", href: "/academics/study-abroad-with-nyfa/acting-for-film" },
+    ],
   },
   admissionsFinancesMenu: {
-    ADMISSIONS: [
-      "PROGRAM DATES",
-      "APPLICATION DEADLINES",
-      "ADMISSIONS REQUIREMENTS",
-      "INTERNATIONAL STUDENTS",
-      "VETERANS & MILITARY",
+    "ADMISSIONS": [
+      { text: "PROGRAM DATES", href: "/admissions/admissions/program-dates" },
+      { text: "APPLICATION DEADLINES", href: "/admissions/admissions/application-deadlines" },
+      { text: "ADMISSIONS REQUIREMENTS", href: "/admissions/admissions/admissions-requirements" },
+      { text: "INTERNATIONAL STUDENTS", href: "/admissions/admissions/international-students" },
+      { text: "VETERANS & MILITARY", href: "/admissions/admissions/veterans-military" },
     ],
-    FINANCES: [
-      "TUITION",
-      "FEDERAL FINANCIAL AID",
-      "SCHOLARSHIPS & GRANTS",
-      "PRIVATE STUDENT LOANS",
-      "HOUSING INFORMATION",
+    "FINANCES": [
+      { text: "TUITION", href: "/admissions/finances/tuition" },
+      { text: "FEDERAL FINANCIAL AID", href: "/admissions/finances/federal-financial-aid" },
+      { text: "SCHOLARSHIPS & GRANTS", href: "/admissions/finances/scholarships-grants" },
+      { text: "PRIVATE STUDENT LOANS", href: "/admissions/finances/private-student-loans" },
+      { text: "HOUSING INFORMATION", href: "/admissions/finances/housing-information" },
     ],
   },
   campusesMenu: {
-    CAMPUSES: ["New York City", "Los Angeles", "Florence, Italy", "Online"],
-    LOCATIONS: [
-      "NYFA Kazakhstan",
-      "NYFA at Harvard University",
-      "Paris, France",
-      "Beijing and Greater China",
+    "CAMPUSES": [
+      { text: "New York City", href: "/campuses/campuses/new-york-city" },
+      { text: "Los Angeles", href: "/campuses/campuses/los-angeles" },
+      { text: "Florence, Italy", href: "/campuses/campuses/florence-italy" },
+      { text: "Online", href: "/campuses/campuses/online" },
+    ],
+    "LOCATIONS": [
+      { text: "NYFA Kazakhstan", href: "/campuses/locations/nyfa-kazakhstan" },
+      { text: "NYFA at Harvard University", href: "/campuses/locations/nyfa-at-harvard-university" },
+      { text: "Paris, France", href: "/campuses/locations/paris-france" },
+      { text: "Beijing and Greater China", href: "/campuses/locations/beijing-and-greater-china" },
     ],
   },
   discoverMenu: {
     "WHO WE ARE": [
-      "ABOUT US",
-      "HISTORY",
-      "MISSION & PURPOSE",
-      "ACCREDITATION",
-      "LEADERSHIP & ADMINISTRATION",
+      { text: "ABOUT US", href: "/discover/who-we-are/about-us" },
+      { text: "HISTORY", href: "/discover/who-we-are/history" },
+      { text: "MISSION & PURPOSE", href: "/discover/who-we-are/mission-purpose" },
+      { text: "ACCREDITATION", href: "/discover/who-we-are/accreditation" },
+      { text: "LEADERSHIP & ADMINISTRATION", href: "/discover/who-we-are/leadership-administration" },
     ],
     "ON CAMPUS": [
-      "VISIT US",
-      "OPEN HOUSE & LIVE ONLINE EVENTS",
-      "ACADEMIC CALENDAR",
-      "STUDENT LIFE",
-      "HEALTH AND WELLNESS",
+      { text: "VISIT US", href: "/discover/on-campus/visit-us" },
+      { text: "OPEN HOUSE & LIVE ONLINE EVENTS", href: "/discover/on-campus/open-house-live-online-events" },
+      { text: "ACADEMIC CALENDAR", href: "/discover/on-campus/academic-calendar" },
+      { text: "STUDENT LIFE", href: "/discover/on-campus/student-life" },
+      { text: "HEALTH AND WELLNESS", href: "/discover/on-campus/health-and-wellness" },
     ],
     "NEWS AND CULTURE": [
-      "GUEST SPEAKERS",
-      "NYFA IN THE NEWS",
-      "BLOG",
-      "NYFA YOUTUBE CHANNEL",
-      "PODCASTS",
+      { text: "GUEST SPEAKERS", href: "/discover/news-and-culture/guest-speakers" },
+      { text: "NYFA IN THE NEWS", href: "/discover/news-and-culture/nyfa-in-the-news" },
+      { text: "BLOG", href: "/discover/news-and-culture/blog" },
+      { text: "NYFA YOUTUBE CHANNEL", href: "/discover/news-and-culture/nyfa-youtube-channel" },
+      { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },
     ],
   },
   youthMenu: {
     "TEEN CAMPS AND WORKSHOPS": [
-      "FILMMAKING",
-      "ACTING FOR FILM",
-      "PHOTOGRAPHY",
-      "SCREENWRITING",
-      "3D ANIMATION",
-      "GAME DESIGN",
+      { text: "FILMMAKING", href: "/youth/teen-camps-and-workshops/filmmaking" },
+      { text: "ACTING FOR FILM", href: "/youth/teen-camps-and-workshops/acting-for-film" },
+      { text: "PHOTOGRAPHY", href: "/youth/teen-camps-and-workshops/photography" },
+      { text: "SCREENWRITING", href: "/youth/teen-camps-and-workshops/screenwriting" },
+      { text: "3D ANIMATION", href: "/youth/teen-camps-and-workshops/3d-animation" },
+      { text: "GAME DESIGN", href: "/youth/teen-camps-and-workshops/game-design" },
+      { text: "PHOTOGRAPHY", href: "/youth/teen-camps-and-workshops/photography" },
+      { text: "SCREENWRITING", href: "/youth/teen-camps-and-workshops/screenwriting" },
+      { text: "3D ANIMATION", href: "/youth/teen-camps-and-workshops/3d-animation" },
+      { text: "GAME DESIGN", href: "/youth/teen-camps-and-workshops/game-design" },
     ],
     "KIDS CAMPS AND WORKSHOPS": [
-      "FILMMAKING",
-      "ACTING FOR FILM",
-      "PHOTOGRAPHY",
-      "3D ANIMATION",
-      "MUSICAL THEATRE",
+      { text: "FILMMAKING", href: "/youth/kids-camps-and-workshops/filmmaking" },
+      { text: "ACTING FOR FILM", href: "/youth/kids-camps-and-workshops/acting-for-film" },
+      { text: "PHOTOGRAPHY", href: "/youth/kids-camps-and-workshops/photography" },
+      { text: "3D ANIMATION", href: "/youth/kids-camps-and-workshops/3d-animation" },
+      { text: "MUSICAL THEATRE", href: "/youth/kids-camps-and-workshops/musical-theatre" },
+      { text: "PHOTOGRAPHY", href: "/youth/kids-camps-and-workshops/photography" },
+      { text: "3D ANIMATION", href: "/youth/kids-camps-and-workshops/3d-animation" },
+      { text: "MUSICAL THEATRE", href: "/youth/kids-camps-and-workshops/musical-theatre" },
     ],
     "YOUTH ADMISSIONS": [
-      "PROGRAM DATES",
-      "TUITION",
-      "HOUSING",
-      "INTERNATIONAL STUDENTS",
-      "YOUTH OPEN HOUSES",
+      { text: "PROGRAM DATES", href: "/youth/youth-admissions/program-dates" },
+      { text: "TUITION", href: "/youth/youth-admissions/tuition" },
+      { text: "HOUSING", href: "/youth/youth-admissions/housing" },
+      { text: "INTERNATIONAL STUDENTS", href: "/youth/youth-admissions/international-students" },
+      { text: "YOUTH OPEN HOUSES", href: "/youth/youth-admissions/youth-open-houses" },
+      { text: "PHOTOGRAPHY", href: "/youth/kids-camps-and-workshops/photography" },
+      { text: "3D ANIMATION", href: "/youth/kids-camps-and-workshops/3d-animation" },
+      { text: "MUSICAL THEATRE", href: "/youth/kids-camps-and-workshops/musical-theatre" },
     ],
-    LOCATIONS: [
-      "NEW YORK CITY",
-      "LOS ANGELES",
-      "MIAMI",
-      "FLORENCE, ITALY",
-      "HARVARD UNIVERSITY",
+    "LOCATIONS": [
+      { text: "NEW YORK CITY", href: "/youth/locations/new-york-city" },
+      { text: "LOS ANGELES", href: "/youth/locations/los-angeles" },
+      { text: "MIAMI", href: "/youth/locations/miami" },
+      { text: "FLORENCE, ITALY", href: "/youth/locations/florence-italy" },
+      { text: "HARVARD UNIVERSITY", href: "/youth/locations/harvard-university" },
+      { text: "HARVARD UNIVERSITY", href: "/youth/locations/harvard-university" },
     ],
   },
 };
@@ -290,7 +309,7 @@ const MegaMenu = ({ open, config, accent }) => {
             style={{ gridTemplateColumns: `repeat(${Object.keys(config).length}, minmax(0, 1fr))` }}
           >
             {Object.entries(config).map(([section, items]) => (
-              <div key={section}>
+              <div key={section} className="pl-5">
                 <h3
                   className="uppercase mb-4 pb-2 font-normal tracking-tight"
                   style={{
@@ -303,7 +322,7 @@ const MegaMenu = ({ open, config, accent }) => {
                   {section}
                 </h3>
 
-                <ul className="space-y-2">
+                <ul className={`space-y-2 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
                   {items.map((item) => {
                     const wrapClass =
                       section === "AREAS OF STUDY"
@@ -311,14 +330,14 @@ const MegaMenu = ({ open, config, accent }) => {
                         : "whitespace-normal leading-tight";
 
                     return (
-                      <li key={item}>
+                      <li key={item.text}>
                         <a
-                          href="#"
-                          className={`block text-gray-300 hover:text-white transition-colors ${wrapClass}`}
+                          href={item.href}
+                          className={`block text-white hover:underline transition-colors ${wrapClass}`}
                           style={{ fontSize: "var(--size-mega-item)" }}
-                          title={item}
+                          title={item.text}
                         >
-                          {item}
+                          {item.text}
                         </a>
                       </li>
                     );
@@ -409,12 +428,12 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
                       </h4>
                       <ul className="space-y-1">
                         {items.map((item) => (
-                          <li key={item}>
+                          <li key={item.text}>
                             <a
-                              href="#" // You might want to make this dynamic based on actual routes
-                              className="block py-1 text-base text-gray-300 hover:text-white transition-colors duration-300"
+                              href={item.href}
+                              className="block py-1 text-base text-white hover:text-white transition-colors duration-300"
                             >
-                              {item}
+                              {item.text}
                             </a>
                           </li>
                         ))}
@@ -459,7 +478,7 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
         <div className="flex flex-col gap-3 mt-6">
           <a
             href="/request-info"
-            className="text-center w-full px-4 py-3  font-semibold text-white"
+            className="text-center w-full px-4 py-3 font-semibold text-white border-2 border-transparent"
             style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
           >
             REQUEST INFO
@@ -609,8 +628,8 @@ const Header = () => {
                 <div className="hidden xl:flex items-center gap-2">
               <a
                 href="/request-info"
-                className="px-3 py-2 text-sm font-semibold text-black"
-                style={{ backgroundColor: ACCENTS.academics }}
+                className="px-3 py-2 font-semibold text-black border-2 border-transparent"
+                style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
               >
                 REQUEST INFO
               </a>

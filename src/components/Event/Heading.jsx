@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "../../assets/Images/EventsHeading.png"
+import Logo from "../../assets/Images/Logo.png";
 
 export default function Heading() {
   return (

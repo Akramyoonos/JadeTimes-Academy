@@ -48,19 +48,19 @@ const FollowUs = () => {
       </div>
 
       {/* Image Grid Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
         {images.map((image, index) => (
-          <Link 
-            key={index} 
+          <Link
+            key={index}
             to={image.href}
             className={`group relative overflow-hidden shadow-lg ${index % 2 === 0 ? "mt-0" : "mt-3"}`}
-            style={{ aspectRatio: "1 / 1.2" }}
+            style={{ aspectRatio: "4 / 5" }}
           >
             {/* Image */}
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-[450px] object-cover block transition-transform duration-300 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-105"
             />
 
             {/* Gradient Overlay */}
