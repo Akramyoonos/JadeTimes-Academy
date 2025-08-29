@@ -278,7 +278,7 @@ const facultyData = [
       frameBottom: -180,
       iconSize: 44,
 
-      cardOffsetY: 420,
+      cardOffsetY: 330,
 
       frameTX: 0,
       frameTY: -650,

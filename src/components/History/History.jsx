@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Admissions = () => {
+const History = () => {
     return (
         <div className="bg-gray-50 font-sans text-gray-900 pt-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12">
+            <div className="max-w-full sm:max-w-xl md:max-w-3xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12">
                 <main className="flex-1">
                     <div className="flex items-center gap-6 mb-10">
                         <span aria-hidden="true" className="block w-2 h-16 bg-yellow-300 rounded-full"></span>
@@ -52,4 +52,4 @@ const Admissions = () => {
     )
 }
 
-export default Admissions
+export default History

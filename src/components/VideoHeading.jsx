@@ -6,7 +6,7 @@ const VideoHeading = ({ title, subtitle }) => {
   return (
     <div className="font-sans relative">
       {/* Full-bleed video, perfectly pinned to all sides */}
-      <div className="relative w-full h-80 sm:h-96 md:h-[500px] lg:h-[290px] overflow-hidden">
+      <div className="relative w-full h-72 sm:h-96 md:h-[500px] lg:h-[290px] overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay

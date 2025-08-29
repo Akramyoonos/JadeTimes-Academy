@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Timeline = () => {
+const Component = () => {
   const items = [
     {
       year: "1990-1995",
@@ -170,7 +170,7 @@ Launch of the Online MA in Entrepreneurial Producing and Innovation.`,
           <div key={index} className="space-y-4 flex flex-col items-start">
           
             <h3
-              className={`border-l-4 pl-3 sm:pl-4 md:pl-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extralight leading-tight ${item.color}`}
+              className={`border-l-4 pl-3 md:pl-4 lg:pl-6 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extralight leading-tight ${item.color}`}
             >
               {item.year}
             </h3>
@@ -179,7 +179,7 @@ Launch of the Online MA in Entrepreneurial Producing and Innovation.`,
             {!expanded.includes(index) && (
               <button
                 onClick={() => showDetails(index)}
-                className="text-pink-600 text-xs sm:text-sm font-bold uppercase tracking-wide flex items-center gap-1 hover:underline ml-3 sm:ml-4 mt-2"
+                className="text-pink-600 text-xs sm:text-sm font-bold uppercase tracking-wide flex items-center gap-1 hover:underline ml-3 mt-2"
               >
                 READ MORE <span className="translate-y-[1px]">▼</span>
               </button>
@@ -191,10 +191,10 @@ Launch of the Online MA in Entrepreneurial Producing and Innovation.`,
                 {item.details.map((detail, i) => (
                   <div
                     key={i}
-                    className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6"
+                    className="flex flex-col md:flex-row md:items-start gap-2 md:gap-6"
                   >
                    
-                    <span className="text-sm sm:text-base md:text-lg text-gray-900 w-full sm:w-24 flex-shrink-0 whitespace-nowrap">
+                    <span className="text-sm sm:text-base md:text-lg text-gray-900 w-full md:w-24 flex-shrink-0 whitespace-nowrap">
                       {detail.year}
                     </span>
 
@@ -220,4 +220,4 @@ Launch of the Online MA in Entrepreneurial Producing and Innovation.`,
   );
 };
 
-export default Timeline;
+export default Component;

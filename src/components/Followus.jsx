@@ -68,7 +68,7 @@ const FollowUs = () => {
 
             {/* Instagram Overlay */}
             <div className="absolute inset-0 flex flex-row items-center justify-center bg bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <FontAwesomeIcon icon={faInstagram} className="text-white text-4xl mr-2" />
+              <FontAwesomeIcon icon={faInstagram} className="text-3xl sm:text-4xl mr-2" />
               <span className="text-white text-lg font-semibold">Follow Us</span>
             </div>
           </Link>

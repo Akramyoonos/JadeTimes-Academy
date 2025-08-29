@@ -3,7 +3,7 @@ import React from 'react';
 const Grants = () => {
   return (
     <div className="bg-white text-gray-800">
-      <div className="px-4 lg:px-20 py-12 ">
+      <div className="px-4 py-12 ">
         {/* Main Heading */}
         <div className="flex items-center mb-12">
           <div className="w-1.5 h-12 bg-purple-600 mr-6"></div>

@@ -3,7 +3,7 @@ import React from 'react';
 const ScholarshipAndGrantsOrganization = () => {
   return (
     <div className="bg-white text-gray-800">
-      <div className="container mx-auto lg:px-24 px-4 py-12">
+      <div className="container mx-auto px-6 py-12">
 
         <div className="relative mb-8">
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-purple-600 -ml-4"></div>
@@ -33,7 +33,7 @@ const ScholarshipAndGrantsOrganization = () => {
           Please visit the <a href="#" className="text-purple-600 hover:underline">Financial Aid for International Students page</a> for more information about financial aid opportunities that may be available to International Students.
         </p>
 
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Veterans</h2>
+        <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Veterans</h2>
         <p className="mb-4 text-base leading-relaxed">
           Many of our programs have been approved for veterans education benefits. In addition, all those who are not fully covered by the Post-9/11 GI bill will receive a 15% discount on tuition. Please see www.gibill.va.gov or call 1-888-GIBILL-1 (1-888-442-4551) for information on your eligibility and how to obtain your certificate of eligibility.
         </p>

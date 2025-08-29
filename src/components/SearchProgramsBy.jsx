@@ -135,7 +135,7 @@ const SearchProgramsBy = () => {
           </div>
 
           {/* Flexible spacer to create big gap */}
-          <div className="flex-1 hidden lg:block" />
+          <div className="flex-1 block lg:block" />
 
           {/* Right group (pinned to right edge) */}
           <div className="flex flex-col items-center lg:flex-row w-full lg:w-auto">

@@ -68,7 +68,7 @@ export default function CampusesAndLocations() {
                     {/* City name changes to pink on hover (no underline) */}
                     <a
                       href="#"
-                      className="text-lg text-black transition-colors duration-200 group-hover:text-[#B52E8C] hover:text-[#B52E8C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B52E8C]"
+                      className="text-base sm:text-lg text-black transition-colors duration-200 group-hover:text-[#B52E8C] hover:text-[#B52E8C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B52E8C]"
                     >
                       {item.city}
                     </a>

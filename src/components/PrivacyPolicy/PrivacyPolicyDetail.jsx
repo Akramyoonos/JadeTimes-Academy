@@ -55,7 +55,7 @@ const PrivacyPolicyDetail = () => {
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Questions</h3>
+                            <h3 className="text-lg sm:text-xl font-semibold mb-2">Questions</h3>
                             <p className="text-gray-700">Any questions regarding the digital web and mobile privacy practices of the New York Film Academy can be made to <a href="mailto:support@nyfa.edu" className="text-purple-600">support@nyfa.edu</a>.</p>
                         </div>
 

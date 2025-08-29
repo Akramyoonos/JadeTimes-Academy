@@ -113,7 +113,7 @@ export default function OurStudents() {
         {/* ===== FOOTER (white; kisses content) ===== */}
         <footer className="relative border-t-1 mt-0 z-0" style={{ backgroundColor: "#090909", borderColor: "gray-100" }}>
           <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center">
               {/* First three items */}
               {["Testimonials", "Diversity", "Showcase"].map((label) => (
                 <div

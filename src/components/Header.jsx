@@ -12,7 +12,7 @@ import {
 import logo from "../assets/images/Logo.png";
 
 // ---------------- CONFIG ----------------
-const gutters = "px-8 sm:px-8 xl:px-10";
+const gutters = "px-4 sm:px-6 md:px-8 xl:px-10";
 
 // accent colors
 const ACCENTS = {
@@ -222,7 +222,7 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => onToggle(!isOpen)}
-        className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+        className="flex items-center gap-2 text-white hover:text-white transition-colors duration-300"
       >
         <FontAwesomeIcon icon={faGlobeAmericas} />
         <span className="font-normal text-[length:var(--size-topbar)]">ENGLISH</span>
@@ -265,10 +265,10 @@ const SearchDropdown = ({ open, onClose }) => {
       }`}
       aria-hidden={!open}
     >
-      <div className="py-8 sm:py-10 relative">
+      <div className="py-12 sm:py-10 relative">
         <button
           onClick={onClose}
-          className="absolute right-4 top-1/2 -translate-y-1/2 sm:right-6 text-gray-400 hover:text-white"
+          className="absolute right-4 top-1/2 -translate-y-1/2 sm:right-6 text-white hover:text-white"
           aria-label="Close search"
         >
           <FontAwesomeIcon icon={faTimes} />
@@ -284,7 +284,7 @@ const SearchDropdown = ({ open, onClose }) => {
           onChange={(e) => setValue(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && onClose()}
           placeholder="Search"
-          className="w-full bg-transparent text-white placeholder-gray-400 text-2xl sm:text-3xl outline-none pb-3 border-b-2 border-gray-600 focus:border-yellow-400 transition-colors"
+          className="w-full bg-transparent text-white placeholder-gray-400 text-3xl sm:text-9xl outline-none pb-3 border-b-2 border-gray-600 focus:border-yellow-400 transition-colors"
         />
       </div>
     </div>
@@ -303,7 +303,7 @@ const MegaMenu = ({ open, config, accent }) => {
       }`}
     >
       <div className="w-screen bg-[#141414]">
-        <div className="py-10 px-4 sm:px-6 xl:px-8">
+        <div className="py-12 px-4 sm:px-6 xl:px-8">
           <div
             className="grid gap-x-8 gap-y-6"
             style={{ gridTemplateColumns: `repeat(${Object.keys(config).length}, minmax(0, 1fr))` }}
@@ -356,7 +356,7 @@ const AccordionItem = ({ title, children, isOpen, onToggle }) => {
   return (
     <div className="border-b border-gray-700">
       <button
-        className="flex justify-between items-center w-full py-3 text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
+        className="flex justify-between items-center w-full py-3 text-lg font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
         onClick={onToggle}
       >
         {title}
@@ -400,13 +400,13 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
     >
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
       <div
-        className={`absolute top-0 right-0 h-full w-full sm:w-80 bg-[#0A0A0A] shadow-2xl rounded-l-lg p-4 transition-transform duration-300 ease-in-out overflow-y-auto ${
+        className={`absolute top-0 right-0 h-full w-full sm:w-4/5 md:w-1/2 lg:w-1/3 bg-[#0A0A0A] shadow-2xl rounded-l-lg p-4 transition-transform duration-300 ease-in-out overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl"
+          className="absolute top-4 right-4 text-white hover:text-white text-xl"
           aria-label="Close menu"
         >
           <FontAwesomeIcon icon={faTimes} />
@@ -423,7 +423,7 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
                 >
                   {Object.entries(megaMenus[link.menu]).map(([section, items]) => (
                     <div key={section} className="mb-4 last:mb-0">
-                      <h4 className="uppercase text-sm font-bold text-gray-400 mb-2" style={{ color: link.accent }}>
+                      <h4 className="uppercase text-base font-bold text-gray-400 mb-2" style={{ color: link.accent }}>
                         {section}
                       </h4>
                       <ul className="space-y-1">
@@ -445,7 +445,7 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
                 <NavLink
                   to={link.href}
                   onClick={onClose}
-                  className="block py-3 text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
+                  className="block py-3 text-xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
                 >
                   {link.text}
                 </NavLink>
@@ -460,13 +460,13 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
             <a
               key={link.text}
               href={link.href}
-              className="block py-2 text-lg font-normal text-gray-300 hover:text-yellow-400 transition-colors duration-300"
+              className="block py-3 text-lg font-normal text-gray-300 hover:text-yellow-400 transition-colors duration-300"
               style={link.style || {}}
             >
               {link.text}
             </a>
           ))}
-          <div className="flex items-center justify-between py-2">
+          <div className="flex items-center justify-between py-3">
             <span className="text-white font-light" style={{ fontSize: "var(--size-phone)" }}>
               1-800-JADETIMES
             </span>
@@ -478,14 +478,14 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
         <div className="flex flex-col gap-3 mt-6">
           <a
             href="/request-info"
-            className="text-center w-full px-4 py-3 font-semibold text-white border-2 border-transparent rounded"
+            className="text-center w-full px-4 py-3 font-semibold text-white border-2 border-transparent "
             style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
           >
             REQUEST INFO
           </a>
           <a
             href="/apply"
-            className="text-center w-full px-4 py-3 rounded border-2 border-white font-semibold text-white"
+            className="text-center w-full px-4 py-3  border-2 border-white font-semibold text-white"
             style={{ fontSize: "var(--size-cta)" }}
           >
             APPLY NOW
@@ -558,7 +558,7 @@ const Header = () => {
         {/* Top bar — scrolls away */}
         <div className="hidden xl:block bg-black border-b border-gray-800">
           <div className={`w-full ${gutters}`}>
-            <div className="flex items-center justify-between py-2" style={{ fontSize: "var(--size-topbar)" }}>
+            <div className="flex items-center justify-between py-3" style={{ fontSize: "var(--size-topbar)" }}>
               <div className="flex items-center gap-x-6 text-gray-400">
                 {topBarLinks.map((link) => (
                   <a
@@ -582,7 +582,7 @@ const Header = () => {
                 <button
                   aria-label="Search"
                   onClick={() => setIsSearchOpen((v) => !v)}
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  className="text-white hover:text-white transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faSearch} />
                 </button>
@@ -595,9 +595,9 @@ const Header = () => {
         {/* Main nav — sticky */}
         <nav className="sticky top-0 z-30 bg-black w-full" ref={navRef}>
           <div className={`w-full ${gutters}`}>
-            <div className="flex items-center justify-between py-2">
+            <div className="flex items-center justify-between py-3">
               <NavLink to="/" className="flex-shrink-0">
-                <img alt="JadeTimes Academy Logo" className="h-10 sm:h-16 w-auto" src={logo} />
+                <img alt="JadeTimes Academy Logo" className="h-8 sm:h-10 md:h-12 lg:h-16 w-auto" src={logo} />
               </NavLink>
 
               <ul className="hidden xl:flex items-center gap-x-6">
@@ -628,14 +628,14 @@ const Header = () => {
                 <div className="hidden xl:flex items-center gap-2">
               <a
                 href="/request-info"
-                className="px-3 py-2 font-semibold text-black border-2 border-transparent rounded"
+                className="px-3 py-3 font-semibold text-black border-2 border-transparent "
                 style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
               >
                 REQUEST INFO
               </a>
                   <a
                     href="/apply"
-                    className="px-3 py-2 border-2 border-white font-semibold text-white rounded"
+                    className="px-3 py-3 border-2 border-white font-semibold text-white "
                     style={{ fontSize: "var(--size-cta)" }}
                   >
                     APPLY NOW
@@ -644,14 +644,14 @@ const Header = () => {
                 <button
                   aria-label="Search"
                   onClick={() => setIsSearchOpen((v) => !v)}
-                  className="xl:hidden text-gray-300 hover:text-white transition-colors duration-300"
+                  className="xl:hidden px-3 py-3 text-white hover:text-white transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faSearch} />
                 </button>
                 <button
                   onClick={() => setIsMobileMenuOpen(true)}
                   aria-label="Toggle menu"
-                  className="xl:hidden text-gray-300 hover:text-white transition-colors duration-300"
+                  className="xl:hidden px-3 py-3 text-white hover:text-white transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faBars} />
                 </button>

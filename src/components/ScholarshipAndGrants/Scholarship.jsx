@@ -3,9 +3,9 @@ import React from 'react';
 const Scholarship = () => {
   return (
     <div className="bg-white text-gray-800">
-      <div className="container mx-auto px-4 lg:px-20 py-12">
+      <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-3/4 pr-8">
+          <div className="w-full lg:w-3/4 lg:pr-8">
             <div className="flex items-start mb-8">
               <div className="w-1 bg-cyan-400 h-12 mr-4"></div>
               <h1 className="text-5xl font-light text-gray-700">SCHOLARSHIPS</h1>
@@ -72,7 +72,7 @@ const Scholarship = () => {
             </div>
 
           </div>
-          <div className="lg:w-1/4 mt-12 lg:mt-0">
+          <div className="w-full lg:w-1/4 mt-8 lg:mt-0">
             <div className="bg-gray-100 p-6 mb-8">
               <h4 className="text-lg font-semibold text-gray-700 mb-4">IN THIS SECTION</h4>
               <ul>

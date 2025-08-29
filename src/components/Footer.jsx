@@ -197,7 +197,7 @@ const Footer = () => {
         </div>
 
         {/* Right language list */}
-        <ul className="grid grid-cols-8 gap-4 md:gap-6 text-sm text-right">
+        <ul className="grid grid-cols-4 sm:grid-cols-8 gap-4 md:gap-6 text-sm text-right">
           <li>
             <a href="#" className="hover:text-white text-gray-400">
               RU

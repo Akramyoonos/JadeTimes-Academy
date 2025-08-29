@@ -24,14 +24,14 @@ const CalendarIcon = () => (
 /* ---------- Little render helpers ---------- */
 function Fee({ amount }) {
   return (
-    <em className="italic text-gray-600">
+    <em className="italic text-xs sm:text-sm md:text-gray-600">
       Application Fee: ${amount}
     </em>
   );
 }
 function Commit({ date }) {
   return (
-    <p className="mt-4 italic text-gray-700">
+    <p className="mt-4 italic text-xs sm:text-sm md:text-gray-700">
       <span className="font-semibold">Deadline to commit:</span> {date}
     </p>
   );
@@ -122,14 +122,14 @@ const Upcomingevents = () => {
                     <tr key={idx} className="align-top">
                       {/* Term / Type */}
                       <td className="px-6 py-8">
-                        <p className="text-xl font-semibold text-gray-700 leading-snug">
+                        <p className="text-lg sm:text-xl font-semibold text-gray-700 leading-snug">
                           {row.term}
                         </p>
                       </td>
 
                       {/* Early Action */}
                       <td className="px-6 py-8">
-                        <p className="text-gray-800">{row.early.date}</p>
+                        <p className="text-sm sm:text-base md:text-gray-800">{row.early.date}</p>
                         <p className="mt-2">
                           <Fee amount={row.early.fee} />
                         </p>
@@ -141,7 +141,7 @@ const Upcomingevents = () => {
                         <p className="text-red-600 line-through">
                           {row.general.original}
                         </p>
-                        <p className="text-gray-800">
+                        <p className="text-sm sm:text-base md:text-gray-800">
                           Extended to {row.general.extendedTo}
                         </p>
                         <p className="mt-2">
@@ -155,7 +155,7 @@ const Upcomingevents = () => {
                         <p className="text-red-600 line-through">
                           {row.late.original}
                         </p>
-                        <p className="text-gray-800">
+                        <p className="text-sm sm:text-base md:text-gray-800">
                           Extended to {row.late.extendedTo}
                         </p>
                         <p className="mt-2">

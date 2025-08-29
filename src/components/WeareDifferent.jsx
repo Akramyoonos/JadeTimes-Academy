@@ -43,7 +43,7 @@ export default function WeareDifferent() {
           </div>
 
           {/* Right stats grid – square, no card bg, no shadows */}
-          <div className="md:col-span-2 grid sm:grid-cols-2 gap-16">
+          <div className="md:col-span-2 grid sm:grid-cols-2 gap-8 sm:gap-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`inline-flex items-center justify-center px-10 py-10 mb-4 border-4 ${stat.borderColor} rounded-none`}>
