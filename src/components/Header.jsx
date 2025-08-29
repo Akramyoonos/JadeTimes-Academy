@@ -12,7 +12,7 @@ import {
 import logo from "../assets/images/Logo.png";
 
 // ---------------- CONFIG ----------------
-const gutters = "px-6 sm:px-8 xl:px-10";
+const gutters = "px-8 sm:px-8 xl:px-10";
 
 // accent colors
 const ACCENTS = {
@@ -54,8 +54,8 @@ const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
       { text: "FILMMAKING", href: "/History_Page" },
-      { text: "ACTING FOR FILM", href: "/academics/areas-of-study/acting-for-film" },
-      { text: "PHOTOGRAPHY", href: "/academics/areas-of-study/photography" },
+      { text: "ACTING FOR FILM", href: "/ScholarshipAndGrants_page" },
+      { text: "PHOTOGRAPHY", href: "/PrivacyPolicy_Page" },
       { text: "PRODUCING", href: "/academics/areas-of-study/producing" },
       { text: "SCREENWRITING", href: "/academics/areas-of-study/screenwriting" },
       { text: "CINEMATOGRAPHY", href: "/academics/areas-of-study/cinematography" },
@@ -356,7 +356,7 @@ const AccordionItem = ({ title, children, isOpen, onToggle }) => {
   return (
     <div className="border-b border-gray-700">
       <button
-        className="flex justify-between items-center w-full py-3 px-4 text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
+        className="flex justify-between items-center w-full py-3 text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
         onClick={onToggle}
       >
         {title}
@@ -370,7 +370,7 @@ const AccordionItem = ({ title, children, isOpen, onToggle }) => {
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="pb-4 pl-8 pr-4">
+        <div className="pb-4 pl-4">
           {children}
         </div>
       </div>
@@ -400,13 +400,13 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
     >
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
       <div
-        className={`absolute top-0 right-0 h-full w-full sm:w-80 bg-[#0A0A0A] shadow-2xl rounded-l-lg p-6 transition-transform duration-300 ease-in-out overflow-y-auto ${
+        className={`absolute top-0 right-0 h-full w-full sm:w-80 bg-[#0A0A0A] shadow-2xl rounded-l-lg p-4 transition-transform duration-300 ease-in-out overflow-y-auto ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 text-gray-400 hover:text-white text-2xl"
+          className="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl"
           aria-label="Close menu"
         >
           <FontAwesomeIcon icon={faTimes} />
@@ -445,7 +445,7 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
                 <NavLink
                   to={link.href}
                   onClick={onClose}
-                  className="block px-4 py-3 text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
+                  className="block py-3 text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
                 >
                   {link.text}
                 </NavLink>
@@ -478,7 +478,7 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
         <div className="flex flex-col gap-3 mt-6">
           <a
             href="/request-info"
-            className="text-center w-full px-4 py-3 font-semibold text-white border-2 border-transparent"
+            className="text-center w-full px-4 py-3 font-semibold text-white border-2 border-transparent rounded"
             style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
           >
             REQUEST INFO
@@ -597,7 +597,7 @@ const Header = () => {
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2">
               <NavLink to="/" className="flex-shrink-0">
-                <img alt="JadeTimes Academy Logo" className="h-16 w-auto" src={logo} />
+                <img alt="JadeTimes Academy Logo" className="h-10 sm:h-16 w-auto" src={logo} />
               </NavLink>
 
               <ul className="hidden xl:flex items-center gap-x-6">
@@ -628,14 +628,14 @@ const Header = () => {
                 <div className="hidden xl:flex items-center gap-2">
               <a
                 href="/request-info"
-                className="px-3 py-2 font-semibold text-black border-2 border-transparent"
+                className="px-3 py-2 font-semibold text-black border-2 border-transparent rounded"
                 style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
               >
                 REQUEST INFO
               </a>
                   <a
                     href="/apply"
-                    className="px-3 py-2 border-2 border-white font-semibold text-white"
+                    className="px-3 py-2 border-2 border-white font-semibold text-white rounded"
                     style={{ fontSize: "var(--size-cta)" }}
                   >
                     APPLY NOW

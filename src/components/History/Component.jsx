@@ -8,7 +8,7 @@ const Timeline = () => {
       details: [
         {
           year: "1992",
-          text: `A SCHOOL FOR FILMMAKERS, BY FILMMAKERS
+          text: `A SCHOOL FOR FILMMAKERS, BY FILMMAKERS 
 Jerry Sherlock (1935-2015), executive producer of The Hunt for Red October, and his son, Jean Sherlock, (owner and principal) found New York Film Academy at Robert DeNiro’s Tribeca Film Center. Jerry Sherlock assembles a team of filmmakers and educators, including Harvard graduate Michael Young (now President of the Academy) and Mitko Panov, winner of Cannes Palme D’Or, and create an alternative to traditional film schools. Together, they design and launch hands-on total immersion filmmaking workshops where each student writes, shoots, directs, and edits their short films. The first class includes 50 students from all over the world.`,
         },
         {
@@ -164,39 +164,58 @@ Launch of the Online MA in Entrepreneurial Producing and Innovation.`,
   };
 
   return (
-    <section className="w-full max-w-4xl mx-auto py-10 space-y-16">
-      {items.map((item, index) => (
-        <div key={index} className="space-y-4 flex flex-col">
-          {/* Year heading with left border */}
-          <h2
-            className={`text-3xl sm:text-4xl font-sans font-bold border-l-4 pl-4 ${item.color}`}
-          >
-            {item.year}
-          </h2>
-
-          {/* Read More button */}
-          {!expanded.includes(index) && (
-            <button
-              onClick={() => showDetails(index)}
-              className="text-pink-600 text-sm font-extrabold uppercase tracking-wide flex items-center gap-1 hover:underline ml-4"
+    <section className="w-full py-8 sm:py-10 lg:py-16">
+      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16 px-4 sm:px-6 lg:px-8">
+        {items.map((item, index) => (
+          <div key={index} className="space-y-4 flex flex-col items-start">
+          
+            <h3
+              className={`border-l-4 pl-3 sm:pl-4 md:pl-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extralight leading-tight ${item.color}`}
             >
-              READ MORE <span className="translate-y-[1px]">▼</span>
-            </button>
-          )}
+              {item.year}
+            </h3>
 
-          {/* Details */}
-          {expanded.includes(index) && (
-            <div className="ml-4 space-y-4 text-gray-700">
-              {item.details.map((detail, i) => (
-                <div key={i}>
-                  <h3 className="font-bold text-lg text-gray-900">{detail.year}</h3>
-                  <p className="whitespace-pre-line">{detail.text}</p>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
+            {/* READ MORE Button */}
+            {!expanded.includes(index) && (
+              <button
+                onClick={() => showDetails(index)}
+                className="text-pink-600 text-xs sm:text-sm font-bold uppercase tracking-wide flex items-center gap-1 hover:underline ml-3 sm:ml-4 mt-2"
+              >
+                READ MORE <span className="translate-y-[1px]">▼</span>
+              </button>
+            )}
+
+          
+            {expanded.includes(index) && (
+              <div className="ml-2 sm:ml-4 space-y-4 text-gray-700">
+                {item.details.map((detail, i) => (
+                  <div
+                    key={i}
+                    className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6"
+                  >
+                   
+                    <span className="text-sm sm:text-base md:text-lg text-gray-900 w-full sm:w-24 flex-shrink-0 whitespace-nowrap">
+                      {detail.year}
+                    </span>
+
+                 
+                    <div>
+                      {detail.topic && (
+                        <p className="uppercase font-bold text-gray-900">
+                          {detail.topic}
+                        </p>
+                      )}
+                      <p className="whitespace-pre-line text-sm sm:text-base md:text-lg mt-1 sm:mt-0">
+                        {detail.text}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

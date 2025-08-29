@@ -34,7 +34,7 @@ const FollowUs = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 mt-12 sm:px-6 lg:px-8 py-10">
+    <div className="mx-auto px-4 mt-12 sm:px-6 lg:px-12 py-10">
       {/* Header Section */}
       <div className="flex justify-between items-start mb-8">
         <div className="flex flex-col">

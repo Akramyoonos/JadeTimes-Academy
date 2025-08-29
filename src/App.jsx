@@ -21,6 +21,8 @@ import CareerAndAlumniServices from './pages/CareerAndAlumniServices';
 import FacultyDirectoryPage from './pages/FacultyDirectoryPage';
 import StudentResource_page from './pages/StudentResource_page';
 import History_Page from './pages/History_Page';
+import ScholarshipAndGrants_page from './pages/ScholarshipAndGrants_page';
+import PrivacyPolicy_Page from './pages/PrivacyPolicy_Page';
 
 function ConditionalHeader() {
   const location = useLocation();
@@ -79,6 +81,9 @@ function AppInner() {
           <Route path="/FacultyDirectoryPage/*"        element={<FacultyDirectoryPage />} />
           <Route path="/StudentResource_page/*"        element={<StudentResource_page />} />
           <Route path="/History_Page/*"                element={<History_Page />} />
+          <Route path="/ScholarshipAndGrants_page/*"   element={<ScholarshipAndGrants_page />} />
+          <Route path="/ScholarshipAndGrants_page/*"   element={<ScholarshipAndGrants_page />} />
+          <Route path="/PrivacyPolicy_Page/*"           element={<PrivacyPolicy_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>

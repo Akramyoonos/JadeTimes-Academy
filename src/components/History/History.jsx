@@ -2,7 +2,7 @@ import React from 'react'
 
 const Admissions = () => {
     return (
-        <div className="bg-gray-50 font-sans text-gray-900 py-16 sm:py-24">
+        <div className="bg-gray-50 font-sans text-gray-900 pt-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12">
                 <main className="flex-1">
                     <div className="flex items-center gap-6 mb-10">
