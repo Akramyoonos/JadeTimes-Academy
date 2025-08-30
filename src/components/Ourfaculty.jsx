@@ -563,7 +563,7 @@ export default function OurFaculty() {
       <div className="absolute top-0 left-0 right-0 bg-[#0a0a0a] z-0 hidden md:block" style={{ height: BLACK_HEIGHT_DESKTOP }} />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-[1280px] px-6 md:px-12 pt-14 md:pt-20">
+      <div className="relative z-10  max-w-[1280px] px-6 md:px-12 pt-14 md:pt-20">
         <div className="flex flex-col md:flex-row gap-12">
           {/* Headline / CTA */}
           <div className="w-full md:w-[30%]">

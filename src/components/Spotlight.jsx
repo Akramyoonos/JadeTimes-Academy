@@ -147,7 +147,7 @@ const Spotlight = () => {
     <div className="bg-white font-sans text-gray-800">
       <div className="py-16">
         {/* This is the heading from your original code */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 md:mb-10">
+        <div className="max-w-7xl  px-8 sm:px-10 lg:px-12 mb-12 md:mb-10">
           <h2 className="jt-heading">
             <span className="jt-line">ACADEMY</span>
             <span className="jt-line">SPOTLIGHT</span>

@@ -36,7 +36,7 @@ export default function CampusesAndLocations() {
         backgroundPosition: "center",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+      <div className="max-w-7xl  px-8 sm:px-10 lg:px-12 py-12 sm:py-16 lg:py-24">
         {/* Heading */}
         <div className="mb-10">
           <div className="flex items-start gap-4">
@@ -52,7 +52,7 @@ export default function CampusesAndLocations() {
         </div>
 
         {/* Regions */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pl-12">
           {REGIONS.map((region) => (
             <div key={region.title}>
               <h3 className="text-xl tracking-widest text-black/90 font-semibold mb-6">

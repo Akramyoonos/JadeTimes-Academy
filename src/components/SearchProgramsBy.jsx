@@ -130,7 +130,7 @@ const SearchProgramsBy = () => {
       <div className="border-b border-gray-200">
         <div className="w-full flex flex-col items-center xl:flex-row xl:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="hidden lg:block text-black content-center px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
+          <div className="hidden lg:block text-black content-center px-10 md:px-12 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
             Search Programs by
           </div>
 

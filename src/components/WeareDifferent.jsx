@@ -32,7 +32,7 @@ export default function WeareDifferent() {
 
   return (
     <section className="bg-gray-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl px-8 sm:px-10 lg:px-12">
         <div className="grid md:grid-cols-3 gap-10 items-start">
           {/* Left title */}
           <div className="md:col-span-1">
