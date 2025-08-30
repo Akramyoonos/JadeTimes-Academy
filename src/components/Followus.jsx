@@ -48,7 +48,7 @@ const FollowUs = () => {
       </div>
 
       {/* Image Grid Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div className="grid grid-cols-4 gap-4">
         {images.map((image, index) => (
           <Link
             key={index}
