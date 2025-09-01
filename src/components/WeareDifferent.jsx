@@ -46,8 +46,8 @@ export default function WeareDifferent() {
           <div className="md:col-span-2 grid sm:grid-cols-2 gap-8 sm:gap-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className={`inline-flex items-center justify-center px-10 py-10 mb-4 border-4 ${stat.borderColor} rounded-none`}>
-                  <span className={`text-6xl font-extrabold ${stat.textColor}`}>{stat.value}</span>
+                <div className={`inline-flex items-center justify-center px-6 py-6 sm:px-10 sm:py-10 mb-4 border-4 ${stat.borderColor} rounded-none`}>
+                  <span className={`text-5xl sm:text-6xl font-extrabold ${stat.textColor}`}>{stat.value}</span>
                 </div>
                 <p className="text-lg text-gray-600 font-medium">
                   {stat.description}

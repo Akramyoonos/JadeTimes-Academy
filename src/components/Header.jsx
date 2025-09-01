@@ -53,7 +53,7 @@ const ACCENTS = {
 const FONT_SIZES = {
   topbar: "15px",
   phone: "15px",
-  nav: "16px",
+  nav: "18px",
   cta: "15px",
   megaHeading: "16px",
   megaItem: "14px",
@@ -147,7 +147,7 @@ const megaMenus = {
   discoverMenu: {
     "WHO WE ARE": [
       { text: "ABOUT US", href: "/discover/who-we-are/about-us" },
-      { text: "HISTORY", href: "/discover/who-we-are/history" },
+      { text: "HISTORY", href: "/History_Page" },
       { text: "MISSION & PURPOSE", href: "/discover/who-we-are/mission-purpose" },
       { text: "ACCREDITATION", href: "/discover/who-we-are/accreditation" },
       { text: "LEADERSHIP & ADMINISTRATION", href: "/discover/who-we-are/leadership-administration" },
@@ -518,7 +518,7 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
 // Small helper to render desktop nav item with sliding underline
 const DesktopNavItem = ({ children, active, color, onClick, to }) => {
   const base =
-    "relative group block py-6 uppercase tracking-tight text-white hover:text-white transition-colors";
+    "relative group block py-8 uppercase tracking-tight text-white hover:text-white transition-colors";
   const styleText = { fontSize: "var(--size-nav)", fontWeight: 400 };
 
   const underlineStyle = {
@@ -659,7 +659,7 @@ const Header = () => {
             <div className="flex items-center justify-between py-2">
                {/* FIX: Replaced NavLink with a standard anchor tag */}
               <a href="/" className="flex-shrink-0">
-                <img alt="JadeTimes Academy Logo" className="h-16 w-auto" src={logo} />
+                <img alt="JadeTimes Academy Logo" className="h-12 xl:h-16 w-auto" src={logo} />
               </a>
 
               <ul className="hidden xl:flex items-center gap-x-6">
@@ -705,13 +705,13 @@ const Header = () => {
                 </div>
                 <button
                   aria-label="Search"
-                  onClick={() => setIsSearchOpen((v) => !v)}
+                  onClick={() => { setIsSearchOpen((v) => !v); setIsMobileMenuOpen(false); }}
                   className="xl:hidden text-gray-300 hover:text-white transition-colors duration-300 p-2"
                 >
                   <SearchIcon className="w-6 h-6" />
                 </button>
                 <button
-                  onClick={() => setIsMobileMenuOpen(true)}
+                  onClick={() => { setIsMobileMenuOpen(true); setIsSearchOpen(false); }}
                   aria-label="Toggle menu"
                   className="xl:hidden text-gray-300 hover:text-white transition-colors duration-300 p-2"
                 >

@@ -10,7 +10,7 @@ const VideoCard = ({ src, title, description }) => {
           alt={title}
         />
       </div>
-      <div className="p-6">
+      <div className="p-4">
         <h2 className="text-lg font-bold text-gray-800 mb-2">
           {title}
         </h2>

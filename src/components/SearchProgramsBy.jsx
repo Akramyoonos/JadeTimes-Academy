@@ -65,7 +65,11 @@ const Dropdown = ({ id, title, items, isOpen, onToggle, onSelect, selectedItem, 
   }, [isOpen, onToggle]);
 
   const select = (item) => {
-    onSelect(id, item.name);
+    if (id === 'location' && item.name === 'All Locations') {
+      onSelect(id, null);
+    } else {
+      onSelect(id, item.name);
+    }
     onToggle();
   };
 
@@ -77,7 +81,7 @@ const Dropdown = ({ id, title, items, isOpen, onToggle, onSelect, selectedItem, 
         aria-haspopup="true"
         aria-expanded={isOpen}
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-12 py-4 font-medium text-[12px] tracking-wide uppercase text-gray-800 hover:bg-gray-50 focus:outline-none"
+        className="w-full flex items-center justify-between px-12 py-4 font-medium text-[12px] tracking-wide uppercase text-gray-500 hover:bg-gray-50 focus:outline-none"
       >
         <span className="truncate">{selectedItem || title}</span>
         <FontAwesomeIcon
@@ -130,7 +134,7 @@ const SearchProgramsBy = () => {
       <div className="border-b border-gray-200">
         <div className="w-full flex flex-col items-center xl:flex-row xl:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="hidden lg:block text-black content-center px-10 md:px-12 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
+          <div className="w-full lg:text-left text-black px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
             Search Programs by
           </div>
 
@@ -140,7 +144,7 @@ const SearchProgramsBy = () => {
           {/* Right group (pinned to right edge) */}
           <div className="flex flex-col items-center lg:flex-row w-full lg:w-auto">
             {/* Each control has its own left divider and a min width so it feels like the reference */}
-            <div className="hidden lg:block content-center border-t lg:border-t-0 lg:border-l border-gray-200">
+            <div className="w-60 border-t lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[0].id}
                 title={dropdowns[0].title}
@@ -149,11 +153,11 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[0].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[0].id]}
-                className="w-full lg:w-auto lg:min-w-[280px]"
+                className="w-60 lg:w-auto lg:min-w-[240px]"
               />
             </div>
 
-            <div className="hidden lg:block content-center border-t lg:border-t-0 lg:border-l border-gray-200">
+            <div className="w-60 border-t lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[1].id}
                 title={dropdowns[1].title}
@@ -162,11 +166,11 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[1].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[1].id]}
-                className="w-full lg:w-auto lg:min-w-[280px]"
+                className="w-60 lg:w-auto lg:min-w-[240px]"
               />
             </div>
 
-            <div className="hidden lg:block content-center border-t lg:border-t-0 lg:border-l border-gray-200">
+            <div className="w-60 border-t lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[2].id}
                 title={dropdowns[2].title}
@@ -175,7 +179,7 @@ const SearchProgramsBy = () => {
                 onToggle={() => toggle(dropdowns[2].id)}
                 onSelect={choose}
                 selectedItem={selected[dropdowns[2].id]}
-                className="w-full lg:w-auto lg:min-w-[280px]"
+                className="w-60 lg:w-auto lg:min-w-[240px]"
               />
             </div>
 
@@ -192,11 +196,10 @@ const SearchProgramsBy = () => {
 
             <Link
               to="/programfinder"
-              className="w-full lg:w-full lg:h-16 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-t-0 lg:border-l border-gray-200 text-center"
+              className="w-50 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-l border-gray-200 text-center"
               aria-label="Search Programs"
             >
-              <span className="lg:hidden">Search Programs by</span>
-              <span className="hidden lg:block">Search</span>
+              <span>Search</span>
             </Link>
           </div>
         </div>

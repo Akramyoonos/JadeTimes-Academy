@@ -14,7 +14,7 @@ import Spotlight8 from '../assets/Images/Spotlight 09.jpeg';
 // CHANGE 1: Created a new Card component to match the style in the image.
 // ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
 const InfoCard = ({ src, title, description }) => (
-  <div className="w-80 md:w-96 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
+  <div className="w-[90vw] max-w-xs md:w-96 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
     <div className="overflow-hidden">
       <img
         src={src}
@@ -181,7 +181,7 @@ const Spotlight = () => {
       <div className="w-full  pb-10">
         {/* CHANGE 4: Removed the duplicate links that were present in the original code. */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <a href="/DegreeProgramsPage" className="relative group cursor-pointer overflow-hidden h-80 block">
+          <a href="/DegreeProgramsPage" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -197,7 +197,7 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/OnlineProgrames" className="relative group cursor-pointer overflow-hidden h-80 block">
+          <a href="/OnlineProgrames" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Woman filming in front of a cathedral"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -213,7 +213,7 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/DegreeProgramsPage" className="relative group cursor-pointer overflow-hidden h-80 block">
+          <a href="/DegreeProgramsPage" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -229,7 +229,7 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/OnlineProgrames" className="relative group cursor-pointer overflow-hidden h-80 block">
+          <a href="/OnlineProgrames" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Woman filming in front of a cathedral"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"

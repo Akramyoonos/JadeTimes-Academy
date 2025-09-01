@@ -42,7 +42,7 @@ const Upcomingevents = () => {
 
   return (
     <section className="EventsFont bg-gray-50 min-h-screen">
-      <div className=" px-8 sm:px-10 lg:px-12 py-12">
+      <div className=" px-4 sm:px-10 lg:px-12 py-12">
 
         {/* ---------- Tabs header + See events link ---------- */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -50,68 +50,63 @@ const Upcomingevents = () => {
             <div className="flex items-center gap-4 md:gap-10 border-b border-gray-200">
               <button
                 onClick={() => setActiveTab("deadlines")}
-                className={`pt-2 pb-3 text-sm font-semibold tracking-widest uppercase ${
+                className={`py-3 px-4 text-sm font-semibold tracking-widest uppercase ${
                   activeTab === "deadlines"
-                    ? "text-black"
-                    : "text-gray-400 hover:text-gray-600"
+                    ? "text-black border-b-4 border-blue-400"
+                    : "text-gray-400 hover:text-gray-600 border-b-2 border-transparent"
                 }`}
               >
                 Application Deadlines
-                {/* underline indicator */}
-                <div
-                  className={`h-1 mt-2 transition-all ${
-                    activeTab === "deadlines" ? "bg-blue-400 w-full" : "bg-transparent w-0"
-                  }`}
-                />
               </button>
 
               <button
                 onClick={() => setActiveTab("workshops")}
-                className={`pt-2 pb-3 text-sm font-semibold tracking-widest uppercase ${
+                className={`py-3 px-4 text-sm font-semibold tracking-widest uppercase ${
                   activeTab === "workshops"
-                    ? "text-black"
-                    : "text-gray-400 hover:text-gray-600"
+                    ? "text-black border-b-4 border-blue-400"
+                    : "text-gray-400 hover:text-gray-600 border-b-2 border-transparent"
                 }`}
               >
                 Short-Term Workshops
-                <div
-                  className={`h-1 mt-2 transition-all ${
-                    activeTab === "workshops" ? "bg-blue-400 w-full" : "bg-transparent w-0"
-                  }`}
-                />
               </button>
-
-              {/* trailing border line so it looks like the screenshot */}
-              <div className="flex-1 h-[1px] bg-gray-200 translate-y-[22px]" />
-            </div>
-          </nav>
-
-          <a
+          <div className="content-end flex-1 flex justify-end"> 
+              <a
             href="/events"
-            className="mt-4 md:mt-0 md:ml-6 shrink-0 inline-flex items-center text-indigo-600 hover:text-indigo-800 font-semibold"
+            className="mt-4 md:mt-0 mb-3 md:ml-6 shrink-0 underline inline-flex items-center text-black hover:text-indigo-600 font-semibold"
+
           >
             <CalendarIcon />
             See Upcoming Events
+           
           </a>
+          </div>
+
+            </div>
+            
+              
+          </nav>
+          
         </div>
+
+        
 
         {/* ---------- Content ---------- */}
         {activeTab === "deadlines" ? (
-          <div className="mt-8 overflow-hidden rounded-md shadow-sm border border-gray-200 bg-white">
+          <div className="mt-8  overflow-hidden rounded-md shadow-sm border border-gray-200 bg-white">
             <div className="overflow-x-auto">
-              <table className="min-w-full">
+              <table className="min-w-full ">
                 <thead>
                   <tr className="bg-black text-white">
-                    <th className="text-left py-5 px-6 text-sm font-bold tracking-wider uppercase">
+                    <th className="text-left py-5 pl-6 px-2 text-sm font-bold tracking-wider uppercase">
                       Application Type/Term
                     </th>
-                    <th className="text-left py-5 px-6 text-sm font-bold tracking-wider uppercase">
+                    <th className="text-left py-5 px-2 text-sm font-bold tracking-wider uppercase">
                       Early Action (Non-Binding)
                     </th>
-                    <th className="text-left py-5 px-6 text-sm font-bold tracking-wider uppercase">
+                    <th className="text-left py-5 px-2 text-sm font-bold tracking-wider uppercase">
                       General Application Deadline
                     </th>
-                    <th className="text-left py-5 px-6 text-sm font-bold tracking-wider uppercase">
+                    <th className="text-left py-5 px-2 text-sm font-bold tracking-wider uppercase">
                       Late Application Deadline
                     </th>
                   </tr>
@@ -121,14 +116,14 @@ const Upcomingevents = () => {
                   {applicationDeadlines.map((row, idx) => (
                     <tr key={idx} className="align-top">
                       {/* Term / Type */}
-                      <td className="px-6 py-8">
+                      <td className="px-2 pl-6 py-8">
                         <p className="text-lg sm:text-xl font-semibold text-gray-700 leading-snug">
                           {row.term}
                         </p>
                       </td>
 
                       {/* Early Action */}
-                      <td className="px-6 py-8">
+                      <td className="px-2 py-8">
                         <p className="text-sm sm:text-base md:text-gray-800">{row.early.date}</p>
                         <p className="mt-2">
                           <Fee amount={row.early.fee} />
@@ -137,7 +132,7 @@ const Upcomingevents = () => {
                       </td>
 
                       {/* General Deadline with strike + extended */}
-                      <td className="px-6 py-8">
+                      <td className="px-2 py-8">
                         <p className="text-red-600 line-through">
                           {row.general.original}
                         </p>
@@ -151,7 +146,7 @@ const Upcomingevents = () => {
                       </td>
 
                       {/* Late Deadline */}
-                      <td className="px-6 py-8">
+                      <td className="px-2 py-8">
                         <p className="text-red-600 line-through">
                           {row.late.original}
                         </p>

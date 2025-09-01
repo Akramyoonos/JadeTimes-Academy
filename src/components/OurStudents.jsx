@@ -79,10 +79,10 @@ export default function OurStudents() {
 
           {/* RIGHT: TEXT (aligned; capped width + extra right padding) */}
           <div className="w-full md:flex-1">
-            <div className="pl-8 md:pl-10 lg:pl-12 pr-8 md:pr-12 lg:pr-16 max-w-3xl">
+            <div className="pl-4 pr-4 md:pl-10 lg:pl-12 md:pr-12 lg:pr-16 max-w-3xl">
               {/* Heading + SHORT purple line (only heading height) */}
-              <div className="flex items-stretch mb-14 md:mb-12">
-                <span className="w-[3px] bg-fuchsia-500 mr-3 self-stretch" aria-hidden="true" />
+              <div className="flex items-stretch mb-10 md:mb-8">
+                <span className="w-[5px] bg-fuchsia-500 mr-3 self-stretch" aria-hidden="true" />
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-normal leading-[1.05] tracking-wide">
                   <span className="block">OUR</span>
                   <span className="block">STUDENTS</span>
@@ -91,7 +91,7 @@ export default function OurStudents() {
 
               {/* Changing content */}
               <div key={currentIndex} className="anim-text">
-                <span className="block text-5xl md:text-6xl lg:text-7xl text-fuchsia-500 mb-2" aria-hidden="true">
+                <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-fuchsia-500 mb-2" aria-hidden="true">
                   “
                 </span>
 
@@ -106,14 +106,42 @@ export default function OurStudents() {
                   </p>
                 </div>
               </div>
+
+              {/* Pagination dots - NEW LOCATION */}
+              <nav
+                aria-label="Pagination dots"
+                className="flex items-center gap-4 px-2 rounded justify-end mt-4 pb-6 md:mt-0"
+                style={{ backgroundColor: "transparent" }}
+              >
+                {studentsData.map((_, i) => {
+                  const active = i === currentIndex;
+                  const size = active ? 15 : 10; // ACTIVE 15px, INACTIVE 10px
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => setCurrentIndex(i)}
+                      aria-current={active}
+                      title={`Go to slide ${i + 1}`}
+                      className={
+                        "rounded-full transition-all duration-300 focus:outline-none cursor-pointer "
+                      }
+                      style={{
+                        width: size,
+                        height: size,
+                        backgroundColor: "rgb(56 189 248)", // sky-400
+                      }}
+                    />
+                  );
+                })}
+              </nav>
             </div>
           </div>
         </section>
 
         {/* ===== FOOTER (white; kisses content) ===== */}
-        <footer className="relative border-t-1 mt-0 z-0" style={{ backgroundColor: "gray-100", borderColor: "gray-100" }}>
+        <footer className="relative border-t mt-0 z-0" style={{  borderColor: "rgba(255,255,255,0.2)" }}>
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 text-center">
               {/* First three items */}
               {["Testimonials", "Diversity", "Showcase"].map((label) => (
                 <div
@@ -138,35 +166,7 @@ export default function OurStudents() {
               {/* Success Stories cell + DOTS above it */}
               <div className="relative">
                 {/* Dots ABOVE (not too close) */}
-                <nav
-                  aria-label="Pagination dots"
-                  className="absolute left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 px-2 rounded"
-                  style={{ top: "-2.6rem", backgroundColor: "#090909" }}
-                >
-                  {studentsData.map((_, i) => {
-                    const active = i === currentIndex;
-                    const size = active ? 15 : 10; // ACTIVE 15px, INACTIVE 10px
-                    return (
-                      <button
-                        key={i}
-                        onClick={() => setCurrentIndex(i)}
-                        aria-current={active}
-                        title={`Go to slide ${i + 1}`}
-                        className={
-                          "rounded-full transition-all duration-300 focus:outline-none cursor-pointer " +
-                          (active ? "ring-2" : "")
-                        }
-                        style={{
-                          width: size,
-                          height: size,
-                          backgroundColor: "rgb(56 189 248)", // sky-400
-                          boxShadow: active ? "0 0 0 2px rgba(125,211,252,1)" : "none", // ring-sky-300
-                        }}
-                      />
-                    );
-                  })}
-                </nav>
-
+                <div className="relative">
                 <a
                   href="#"
                   className="group relative block py-4 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300"
@@ -178,6 +178,7 @@ export default function OurStudents() {
                   />
                   Success Stories
                 </a>
+              </div>
               </div>
             </div>
           </div>

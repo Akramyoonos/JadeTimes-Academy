@@ -16,7 +16,7 @@ const Heading = () => {
       <nav className="absolute top-8 left-8 z-20 flex items-center space-x-3 text-white text-sm sm:text-base font-sans  bg-opacity-30 px-4 py-2 rounded-full">
         
         
-        <span className="font-semibold">NYFA</span>
+        <span className="font-semibold">JIU</span>
         <span className="text-gray-300">/</span>
         <span>NYFA HISTORY</span>
       </nav>

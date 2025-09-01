@@ -79,7 +79,7 @@ const Footer = () => {
 
       {/* ───────── Middle Section ───────── */}
       {/* ───────── Middle Section ───────── */}
-      <div className="py-10 px-8 sm:px-10 lg:px-12 bg-black bg-opacity-20 border-b border-gray-800">
+      <div className="py-10 px-4 sm:px-10 lg:px-12 bg-black bg-opacity-20 border-b border-gray-800">
         <div className="flex flex-col items-start">
             {/* Logo */}
             <div className="mb-6">
@@ -140,7 +140,7 @@ const Footer = () => {
       </div>
 
       {/* ───────── Bottom Section ───────── */}
-      <div className="border-t border-gray-800 py-10 px-8 sm:px-10 lg:px-12 flex flex-col-reverse md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
+      <div className="border-t border-gray-800 py-10 px-4 sm:px-10 lg:px-12 flex flex-col-reverse md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
         {/* Left text */}
         <div className="md:w-2/3">
           <p>
