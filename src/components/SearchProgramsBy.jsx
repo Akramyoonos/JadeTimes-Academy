@@ -134,7 +134,7 @@ const SearchProgramsBy = () => {
       <div className="border-b border-gray-200">
         <div className="w-full flex flex-col items-center xl:flex-row xl:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="w-full lg:text-left text-black px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
+          <div className="w-full hidden sm:block lg:text-left text-black px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
             Search Programs by
           </div>
 
@@ -144,7 +144,7 @@ const SearchProgramsBy = () => {
           {/* Right group (pinned to right edge) */}
           <div className="flex flex-col items-center lg:flex-row w-full lg:w-auto">
             {/* Each control has its own left divider and a min width so it feels like the reference */}
-            <div className="w-60 border-t lg:border-l border-gray-200">
+            <div className="w-60 border-t hidden sm:block lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[0].id}
                 title={dropdowns[0].title}
@@ -157,7 +157,7 @@ const SearchProgramsBy = () => {
               />
             </div>
 
-            <div className="w-60 border-t lg:border-l border-gray-200">
+            <div className="w-60 border-t hidden sm:block lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[1].id}
                 title={dropdowns[1].title}
@@ -170,7 +170,7 @@ const SearchProgramsBy = () => {
               />
             </div>
 
-            <div className="w-60 border-t lg:border-l border-gray-200">
+            <div className="w-60 border-t hidden sm:block lg:border-l border-gray-200">
               <Dropdown
                 id={dropdowns[2].id}
                 title={dropdowns[2].title}
@@ -196,7 +196,7 @@ const SearchProgramsBy = () => {
 
             <Link
               to="/programfinder"
-              className="w-50 px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-l border-gray-200 text-center"
+              className="w-full px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-l border-gray-200 text-center lg:w-auto"
               aria-label="Search Programs"
             >
               <span>Search</span>

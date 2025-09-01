@@ -46,7 +46,7 @@ const Upcomingevents = () => {
 
         {/* ---------- Tabs header + See events link ---------- */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-          <nav className="w-full">
+          <nav className="w-full md:w-auto">
             <div className="flex flex-col md:flex-row md:items-center md:gap-10 border-b border-gray-200">
               <div className="flex w-full md:w-auto">
                 <button
@@ -62,7 +62,7 @@ const Upcomingevents = () => {
 
                 <button
                   onClick={() => setActiveTab("workshops")}
-                  className={`flex-1 py-3 px-4 text-sm font-semibold tracking-widest uppercase ${
+                  className={`py-3 px-4 text-sm font-semibold tracking-widest uppercase whitespace-nowrap ${
                     activeTab === "workshops"
                       ? "text-black border-b-4 border-blue-400"
                       : "text-gray-400 hover:text-gray-600 border-b-2 border-transparent"
@@ -71,15 +71,15 @@ const Upcomingevents = () => {
                   Short-Term Workshops
                 </button>
               </div>
-              <a
-                href="/events"
-                className="mt-4 mb-3 md:mt-0 md:mb-0 md:ml-6 shrink-0 underline inline-flex items-center text-black hover:text-indigo-600 font-semibold self-end md:self-auto"
-              >
-                <CalendarIcon />
-                See Upcoming Events
-              </a>
             </div>
           </nav>
+          <a
+            href="/events"
+            className="mt-4 mb-3 md:mt-0 md:mb-0 md:ml-6 shrink-0 underline inline-flex justify-items-end text-black hover:text-indigo-600 font-semibold self-end md:self-auto"
+          >
+            <CalendarIcon />
+            See Upcoming Events
+          </a>
         </div>
 
         
