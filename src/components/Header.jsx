@@ -80,7 +80,7 @@ const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
       { text: "FILMMAKING", href: "/academics/areas-of-study/filmmaking" },
-      { text: "ACTING FOR FILM", href: "/academics/areas-of-study/acting-for-film" },
+      { text: "ACTING FOR FILM", href: "/Membership_Page" },
       { text: "PHOTOGRAPHY", href: "/academics/areas-of-study/photography" },
       { text: "PRODUCING", href: "/programfinder" },
       { text: "SCREENWRITING", href: "/academics/areas-of-study/screenwriting" },

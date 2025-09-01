@@ -47,45 +47,39 @@ const Upcomingevents = () => {
         {/* ---------- Tabs header + See events link ---------- */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <nav className="w-full">
-            <div className="flex items-center gap-4 md:gap-10 border-b border-gray-200">
-              <button
-                onClick={() => setActiveTab("deadlines")}
-                className={`py-3 px-4 text-sm font-semibold tracking-widest uppercase ${
-                  activeTab === "deadlines"
-                    ? "text-black border-b-4 border-blue-400"
-                    : "text-gray-400 hover:text-gray-600 border-b-2 border-transparent"
-                }`}
-              >
-                Application Deadlines
-              </button>
+            <div className="flex flex-col md:flex-row md:items-center md:gap-10 border-b border-gray-200">
+              <div className="flex w-full md:w-auto">
+                <button
+                  onClick={() => setActiveTab("deadlines")}
+                  className={`flex-1 py-3 px-4 text-sm font-semibold tracking-widest uppercase ${
+                    activeTab === "deadlines"
+                      ? "text-black border-b-4 border-blue-400"
+                      : "text-gray-400 hover:text-gray-600 border-b-2 border-transparent"
+                  }`}
+                >
+                  Application Deadlines
+                </button>
 
-              <button
-                onClick={() => setActiveTab("workshops")}
-                className={`py-3 px-4 text-sm font-semibold tracking-widest uppercase ${
-                  activeTab === "workshops"
-                    ? "text-black border-b-4 border-blue-400"
-                    : "text-gray-400 hover:text-gray-600 border-b-2 border-transparent"
-                }`}
-              >
-                Short-Term Workshops
-              </button>
-          <div className="content-end flex-1 flex justify-end"> 
+                <button
+                  onClick={() => setActiveTab("workshops")}
+                  className={`flex-1 py-3 px-4 text-sm font-semibold tracking-widest uppercase ${
+                    activeTab === "workshops"
+                      ? "text-black border-b-4 border-blue-400"
+                      : "text-gray-400 hover:text-gray-600 border-b-2 border-transparent"
+                  }`}
+                >
+                  Short-Term Workshops
+                </button>
+              </div>
               <a
-            href="/events"
-            className="mt-4 md:mt-0 mb-3 md:ml-6 shrink-0 underline inline-flex items-center text-black hover:text-indigo-600 font-semibold"
-
-          >
-            <CalendarIcon />
-            See Upcoming Events
-           
-          </a>
-          </div>
-
+                href="/events"
+                className="mt-4 mb-3 md:mt-0 md:mb-0 md:ml-6 shrink-0 underline inline-flex items-center text-black hover:text-indigo-600 font-semibold self-end md:self-auto"
+              >
+                <CalendarIcon />
+                See Upcoming Events
+              </a>
             </div>
-            
-              
           </nav>
-          
         </div>
 
         

@@ -23,6 +23,7 @@ import StudentResource_page from './pages/StudentResource_page';
 import History_Page from './pages/History_Page';
 import ScholarshipAndGrants_page from './pages/ScholarshipAndGrants_page';
 import PrivacyPolicy_Page from './pages/PrivacyPolicy_Page';
+import Membership_Page from './pages/Membership_Page';
 
 function ConditionalHeader() {
   const location = useLocation();
@@ -84,6 +85,7 @@ function AppInner() {
           <Route path="/ScholarshipAndGrants_page/*"   element={<ScholarshipAndGrants_page />} />
           <Route path="/ScholarshipAndGrants_page/*"   element={<ScholarshipAndGrants_page />} />
           <Route path="/PrivacyPolicy_Page/*"           element={<PrivacyPolicy_Page />} />
+          <Route path="/Membership_Page/*"               element={<Membership_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>

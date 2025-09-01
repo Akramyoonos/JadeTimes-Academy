@@ -1,0 +1,89 @@
+import React from "react";
+import icon1 from "../../assets/Images/facultyDataImages04.png";
+import icon2 from "../../assets/Images/facultyDataImages04.png";
+import icon3 from "../../assets/Images/facultyDataImages04.png";
+
+const MembershipPerks = () => {
+  return (
+    <div className="flex flex-col lg:flex-row gap-8 p-8 pt-10">
+    
+      <div className="flex-1">
+       
+        {/* Perks Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pl-20"> 
+
+
+         <div className="bg-blue-50 rounded-xl shadow-md p-6 flex flex-col items-center text-center w-full sm:w-64 md:w-72">
+         <img src={icon1} alt="Masterclass Icon" className="w-12 h-12 mb-4" />
+         <h3 className="text-lg font-bold mb-2">
+          Monthly 1-hour, online masterclass
+         </h3>
+         <p className="text-gray-600 text-sm">
+         on various topics in one of the 10 disciplines of study offered at
+         NYFA. (No cost to NYFA members)
+         </p>
+         </div>
+
+
+          {/* Card 2: Workshops Discount */}
+          <div className="bg-blue-50 rounded-xl shadow-md p-6 flex flex-col items-center text-center w-full sm:w-64 md:w-72">
+            <img src={icon2} alt="Workshops Icon" className="w-12 h-12 mb-4" />
+            <h3 className="text-lg font-bold mb-2">
+              20% off NYFA Online Workshops*
+            </h3>
+            <p className="text-gray-600 text-sm">
+              for any online short-term workshops offered in 2025.
+            </p>
+          </div>
+
+          {/* Card 3: Store Discount */}
+          <div className="bg-blue-50 rounded-xl shadow-md p-6 flex flex-col items-center text-center w-full sm:w-64 md:w-72">
+            <img src={icon3} alt="Store Icon" className="w-12 h-12 mb-4" />
+            <h3 className="text-lg font-bold mb-2">
+              20% off one-time total purchase**
+            </h3>
+            <p className="text-gray-600 text-sm">
+              at the online NYFA Store
+            </p>
+          </div>
+        </div>
+
+       
+        {/* Notes */}
+        <div className="mt-10 text-xs text-gray-600 leading-relaxed pl-20">
+          <p className="mb-2">
+            *The 20% tuition discount for short-term online workshops cannot be
+            made retroactive. If you registered for a short-term online workshop
+            prior to purchasing a NYFA Membership, the discount will not apply.
+          </p>
+          <p>
+            **The NYFA Store discount for a one-time purchase is valid starting
+            January 1, 2025.
+          </p>
+        </div>
+      </div>
+
+
+
+      {/* Sidebar */}
+      <aside className="w-full lg:w-70 h-full flex-shrink-0 bg-white p-6  shadow-lg -mt-35 ">
+                    <h2 id="related-links-heading" className="text-lg font-extrabold uppercase tracking-wider text-gray-800 mb-6">
+                        RELATED LINKS
+                    </h2>
+                    <nav aria-labelledby="related-links-heading" className="flex flex-col text-base font-medium text-gray-700">
+                        <a href="#" className="px-4 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
+                           LOG INTO NYFA MEMBERSHIP
+                        </a>
+                        <a href="#" className="px-4 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
+                            JOIN NYFA MEMBERSHIP
+                        </a>
+                        <a href="#" className="px-4 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
+                            CONTACT US
+                        </a>
+                    </nav>
+                </aside>
+    </div>
+  );
+};
+
+export default MembershipPerks;
