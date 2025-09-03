@@ -458,7 +458,6 @@ const FacultyCard = ({
   imageTY,
   shade,
 }) => {
-  const { isMdUp } = useBreakpoint();
   const aspectStyle = imageBox?.aspect ? { aspectRatio: imageBox.aspect, minHeight: 160 } : undefined;
   const overflowClass = imageFit === "contain" ? "overflow-visible" : "overflow-hidden";
   const S = buildShade({ ...shade, ...(conf?.shade || {}) });
@@ -477,13 +476,7 @@ const FacultyCard = ({
   const spill = Math.max(0, -(conf?.frameBottom || 0));
   const shadeSpill = S.attachTo === "below" ? Math.max(0, (S.heightPx || 0) - (S.gapPx || 0)) : 0;
   const autoReserveBottom = spill + shadeSpill + 8; // tiny buffer
-  let reserveBottom = conf?.reserveBottom !== undefined ? conf.reserveBottom : autoReserveBottom;
-
-  // Ensure a minimum bottom space for mobile view, without changing faculty position, alignment, or layout.
-  if (!isMdUp) { // Only for mobile view
-    const minMobileBottomSpace = 60; // A reasonable minimum value for bottom space on mobile
-    reserveBottom = Math.max(reserveBottom, minMobileBottomSpace);
-  }
+  const reserveBottom = conf?.reserveBottom !== undefined ? conf.reserveBottom : autoReserveBottom;
 
   return (
     <div

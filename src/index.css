@@ -9,7 +9,7 @@
   --secondary-blue: #3BA9F9;
 }
 
-hml {
+html {
   scroll-behavior: smooth;
 }
 
@@ -17,7 +17,6 @@ hml {
 
 .headerFont {
   font-family: 'Montserrat', sans-serif;
-  background-color: black;
 }
 
 .headingFont {
@@ -30,12 +29,10 @@ hml {
 
 .DifferentFont {
   font-family: 'Open Sans', sans-serif;
-  background-color: white;
 }
 
 .SearchbyFont {
-      font-family: Arial, sans-serif;
-      background-color: white;
+      font-family: 'Open Sans', sans-serif;
     }
 
 .LocationFont {
@@ -52,12 +49,11 @@ hml {
 
 .StudentFont {
   font-family: 'Open Sans', sans-serif;
-  background-color: black;
   color: white;
 }
 
 .EventsFont{
-  font: sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .OurfacultyFont {
@@ -70,11 +66,6 @@ hml {
 
 .FollowusFont {
   font-family: "Inter", sans-serif;
-  background-color: white;
-}
-
-.tracking-widest-2 {
-  letter-spacing: 0.2em;
 }
 
 .uppercase-small {
@@ -116,28 +107,25 @@ hml {
 /* blog search styles */
 
 .nav-font {
-      font-family: Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       letter-spacing: 0.05em;
       font-weight: 500;
     }
 
 /* partnership styles */
 
-PartnershipFont {
+.PartnershipFont {
       font-family: 'Montserrat', sans-serif;
     }
 
 /* Festival styles */
 
-FestivalFont {
+.FestivalFont {
       font-family: "Roboto Mono", monospace;
     }
 
 /* Headlines styles */
 
-.tracking-widest {
-      letter-spacing: 0.1em;
-    }
     /* Style for the trending image to match original text style */
     .trending-label {
       display: inline-block;
@@ -173,7 +161,7 @@ FestivalFont {
         }
 
     .DiscriptionFont {
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-family: 'Open Sans', sans-serif;
     }
 
         .yellow-border {

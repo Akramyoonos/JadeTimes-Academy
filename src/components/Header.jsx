@@ -1,13 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 // Removed NavLink import as it requires a Router context which is not available.
-// import { NavLink } from "react-router-dom";
 
-import logo  from "../assets/Images/Logo.png";
+import logo from "../assets/Images/Logo.png";
 
 // ---------------- ICONS ----------------
 // Inlined SVG icons to replace the FontAwesome package which was causing errors.
 const BarsIcon = ({ className, ...props }) => (
-  <svg xmlns="http://www.w.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className} {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={className} {...props}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
   </svg>
 );
@@ -36,8 +35,9 @@ const TimesIcon = ({ className, ...props }) => (
   </svg>
 );
 
+
 // ---------------- CONFIG ----------------
-const gutters = "px-6 sm:px-8 xl:px-10";
+const gutters = "px-4 sm:px-8 xl:px-10";
 
 // accent colors
 const ACCENTS = {
@@ -60,10 +60,10 @@ const FONT_SIZES = {
 };
 
 const topBarLinks = [
-  { href: "#", text: "Current Students" },
+  { href: "/StudentResource_page", text: "Current Students" },
   { href: "#", text: "Parents" },
   { href: "#", text: "Online Info Sessions", style: { color: ACCENTS.campuses } },
-  { href: "#", text: "Become a JadeTimes Member", style: { color: ACCENTS.academics } },
+  { href: "/Membership_Page", text: "Become a JadeTimes Member", style: { color: ACCENTS.academics } },
 ];
 
 const navLinks = [
@@ -75,7 +75,6 @@ const navLinks = [
   { key: "youth", text: "YOUTH PROGRAMS", href: "/youth", menu: "youthMenu", accent: ACCENTS.youth },
 ];
 
-// FIX: Removed duplicate menu items that were causing key warnings.
 const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
@@ -86,7 +85,7 @@ const megaMenus = {
       { text: "SCREENWRITING", href: "/academics/areas-of-study/screenwriting" },
       { text: "CINEMATOGRAPHY", href: "/academics/areas-of-study/cinematography" },
       { text: "DOCUMENTARY FILMMAKING", href: "/academics/areas-of-study/documentary-filmmaking" },
-      { text: "DIGITAL EDITING", href: "/academics/areas-of-study/digital-editing" },
+      { text: "DIGITAL EDITING", href: "/RequestInfo_Page" },
       { text: "3D ANIMATION & VISUAL EFFECTS", href: "/academics/areas-of-study/3d-animation-visual-effects" },
       { text: "BROADCAST JOURNALISM", href: "/academics/areas-of-study/broadcast-journalism" },
       { text: "MUSICAL THEATRE", href: "/academics/areas-of-study/musical-theatre" },
@@ -146,7 +145,7 @@ const megaMenus = {
   },
   discoverMenu: {
     "WHO WE ARE": [
-      { text: "ABOUT US", href: "/discover/who-we-are/about-us" },
+      { text: "ABOUT US", href: "/about" },
       { text: "HISTORY", href: "/History_Page" },
       { text: "MISSION & PURPOSE", href: "/discover/who-we-are/mission-purpose" },
       { text: "ACCREDITATION", href: "/discover/who-we-are/accreditation" },
@@ -200,17 +199,9 @@ const megaMenus = {
   },
 };
 
-
 const languages = [
-  "English",
-  "Spanish",
-  "French",
-  "German",
-  "Chinese",
-  "Japanese",
-  "Korean",
-  "Arabic",
-  "Russian",
+  "English", "Spanish", "French", "German", "Chinese",
+  "Japanese", "Korean", "Arabic", "Russian",
 ];
 
 // ---------------- HOOKS ----------------
@@ -239,6 +230,10 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
       <button
         onClick={() => onToggle(!isOpen)}
         className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors duration-300"
+        // ACCESSIBILITY: Announce dropdown state and control
+        aria-haspopup="true"
+        aria-expanded={isOpen}
+        aria-controls="language-dropdown"
       >
         <GlobeIcon className="w-5 h-5" />
         <span className="font-normal text-[length:var(--size-topbar)]">ENGLISH</span>
@@ -249,6 +244,7 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
       </button>
 
       <div
+        id="language-dropdown" // ACCESSIBILITY: ID for aria-controls
         className={`absolute right-0 mt-2 w-40 bg-black border-white border shadow-lg py-1 z-40 origin-top-right transition-all duration-500 ${
           isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0 pointer-events-none"
         }`}
@@ -275,6 +271,7 @@ const SearchDropdown = ({ open, onClose }) => {
   return (
     <div
       ref={boxRef}
+      id="search-dropdown" // ACCESSIBILITY: ID for aria-controls
       className={`absolute top-full left-0 w-full bg-[#101010] shadow-xl transition-all duration-300 ease-in-out z-51 ${gutters} ${
         open ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0 pointer-events-none"
       }`}
@@ -288,9 +285,7 @@ const SearchDropdown = ({ open, onClose }) => {
         >
           <TimesIcon className="w-6 h-6" />
         </button>
-        <label htmlFor="mega-search" className="sr-only">
-          Search
-        </label>
+        <label htmlFor="mega-search" className="sr-only">Search</label>
         <input
           id="mega-search"
           type="text"
@@ -306,17 +301,17 @@ const SearchDropdown = ({ open, onClose }) => {
   );
 };
 
-const MegaMenu = ({ open, config, accent }) => {
+const MegaMenu = ({ open, config, accent, id }) => {
   if (!config) return null;
 
   return (
     <div
+      id={id} // ACCESSIBILITY: ID for aria-controls
       className={`absolute left-0 right-0 top-full z-40 origin-top transform transition-all duration-300 ease-in-out ${
-        open
-          ? "scale-100 translate-y-0 opacity-100" : "scale-95 -translate-y-2 opacity-0 pointer-events-none"
+        open ? "scale-100 translate-y-0 opacity-100" : "scale-95 -translate-y-2 opacity-0 pointer-events-none"
       }`}
     >
-      <div className="w-screen bg-[#141414]">
+      <div className="w-full bg-[#141414]">
         <div className="py-10 px-4 sm:px-6 xl:px-8">
           <div
             className="grid gap-x-8 gap-y-6"
@@ -335,16 +330,15 @@ const MegaMenu = ({ open, config, accent }) => {
                 >
                   {section}
                 </h3>
-
                 <ul className={`space-y-2 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
-                  {items.map((item, index) => { // Added index for unique key
+                  {items.map((item) => {
                     const wrapClass =
                       section === "AREAS OF STUDY"
                         ? "max-w-[300px] whitespace-normal leading-tight"
                         : "whitespace-normal leading-tight";
-
+                    // FIX: Use a stable and unique key like href instead of index.
                     return (
-                      <li key={`${item.text}-${index}`}>
+                      <li key={item.href}>
                         <a
                           href={item.href}
                           className={`block text-white hover:underline transition-colors ${wrapClass}`}
@@ -367,18 +361,26 @@ const MegaMenu = ({ open, config, accent }) => {
 };
 
 const AccordionItem = ({ title, children, isOpen, onToggle }) => {
+  // ACCESSIBILITY: Create a unique ID for the content panel to be controlled by the button.
+  const contentId = `accordion-content-${title.replace(/\s+/g, '-').toLowerCase()}`;
+
   return (
     <div className="border-b border-gray-700">
       <button
-        className="flex justify-between items-center w-full py-3 px-4 text-left text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
+        className="flex justify-between items-center w-full py-3 text-left text-2xl font-semibold text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
         onClick={onToggle}
+        // ACCESSIBILITY: Announce dropdown state and control
+        aria-expanded={isOpen}
+        aria-controls={contentId}
       >
         {title}
         <ChevronDownIcon
           className={`w-4 h-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+          aria-hidden="true" // Decorative icon
         />
       </button>
       <div
+        id={contentId} // ACCESSIBILITY: ID for aria-controls
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
@@ -391,7 +393,7 @@ const AccordionItem = ({ title, children, isOpen, onToggle }) => {
   );
 };
 
-const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
+const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen, isSearchOpen, setIsSearchOpen }) => {
   const [activeAccordion, setActiveAccordion] = useState(null);
 
   useEffect(() => {
@@ -407,84 +409,102 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
 
   return (
     <div
+      id="mobile-menu" // ACCESSIBILITY: ID for aria-controls
       className={`fixed inset-0 z-51 transition-opacity duration-300 xl:hidden ${
         isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
+      role="dialog"
+      aria-modal="true"
+      aria-hidden={!isOpen}
     >
       <div className="absolute inset-0 bg-black/60" onClick={onClose} />
       <div
-        className={`absolute top-0 right-0 h-full w-full sm:w-80 bg-[#0A0A0A] shadow-2xl rounded-l-lg pl-6 pr-4 py-4 transition-transform duration-300 ease-in-out overflow-y-auto ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+        className={`absolute top-0 left-0 h-full w-full bg-[#0A0A0A] shadow-2xl transition-transform duration-300 ease-in-out overflow-y-auto overflow-x-hidden ${
+          isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between p-4 border-b border-gray-700">
           <a href="/" className="flex-shrink-0">
             <img alt="JadeTimes Academy Logo" className="h-10 w-auto" src={logo} />
           </a>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-white text-2xl"
-            aria-label="Close menu"
-          >
-            <TimesIcon className="w-7 h-7" />
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              aria-label="Search"
+              onClick={() => { setIsSearchOpen(true); onClose(); }}
+              className="text-gray-300 hover:text-white transition-colors duration-300 p-2"
+              aria-haspopup="true"
+              aria-expanded={isSearchOpen}
+              aria-controls="search-dropdown"
+            >
+              <SearchIcon className="w-7 h-7" />
+            </button>
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-white p-2"
+              aria-label="Close menu"
+            >
+              <TimesIcon className="w-7 h-7" />
+            </button>
+          </div>
         </div>
 
-        <ul className="flex flex-col gap-2">
-          {navLinks.map((link) => (
-            <li key={link.text}>
-              {link.menu ? (
-                <AccordionItem
-                  title={link.text}
-                  isOpen={activeAccordion === link.key}
-                  onToggle={() => toggleAccordion(link.key)}
-                >
-                  {Object.entries(megaMenus[link.menu]).map(([section, items]) => (
-                    <div key={section} className="mb-4 last:mb-0">
-                      <h4 className="uppercase text-sm font-bold text-gray-400 mb-2" style={{ color: link.accent }}>
-                        {section}
-                      </h4>
-                      <ul className="space-y-1">
-                        {items.map((item, index) => ( // Added index for unique key
-                          <li key={`${item.text}-${index}`}>
-                            <a
-                              href={item.href}
-                              className="block py-1 text-base text-left text-white hover:text-white transition-colors duration-300"
-                            >
-                              {item.text}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </AccordionItem>
-              ) : (
-                // FIX: Replaced NavLink with a standard anchor tag
-                <a
-                  href={link.href}
-                  onClick={onClose}
-                  className="block px-4 py-3 text-2xl font-semibold text-left text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
-                >
-                  {link.text}
-                </a>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="py-4 px-4">
+          <ul className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <li key={link.key}>
+                {link.menu ? (
+                  <AccordionItem
+                    title={link.text}
+                    isOpen={activeAccordion === link.key}
+                    onToggle={() => toggleAccordion(link.key)}
+                  >
+                    {Object.entries(megaMenus[link.menu]).map(([section, items]) => (
+                      <div key={section} className="mb-4 last:mb-0">
+                        <h4 className="uppercase text-sm font-bold text-gray-400 mb-2" style={{ color: link.accent }}>
+                          {section}
+                        </h4>
+                        <ul className={`space-y-1 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
+                          {/* FIX: Use a stable and unique key like href instead of index. */}
+                          {items.map((item) => (
+                            <li key={item.href}>
+                              <a
+                                href={item.href}
+                                className="block py-1 text-base text-left text-white hover:text-white transition-colors duration-300"
+                              >
+                                {item.text}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </AccordionItem>
+                ) : (
+                  <a
+                    href={link.href}
+                    onClick={onClose}
+                    className="block py-3 text-xl font-semibold text-left text-gray-300 hover:bg-gray-800 hover:text-white rounded-md transition-colors duration-300"
+                  >
+                    {link.text}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
 
-        <hr className="border-gray-700 my-5" />
-        <div className="flex flex-col gap-2 mt-5">
-          {topBarLinks.map((link) => (
-            <a
-              key={link.text}
-              href={link.href}
-              className="block py-2 text-lg font-normal text-left text-gray-300 hover:text-yellow-400 transition-colors duration-300"
-              style={link.style || {}}
-            >
-              {link.text}
-            </a>
-          ))}
+          <hr className="border-gray-700 my-5" />
+          <div className="flex flex-col gap-2 mt-5">
+            {topBarLinks.map((link) => (
+              <a
+                key={link.text}
+                href={link.href}
+                className="block py-2 text-lg font-normal text-left text-gray-300 hover:text-yellow-400 transition-colors duration-300"
+                style={link.style || {}}
+              >
+                {link.text}
+              </a>
+            ))}
+          </div>
           <div className="flex items-center justify-between py-2">
             <span className="text-white font-light" style={{ fontSize: "var(--size-phone)" }}>
               1-800-JADETIMES
@@ -493,22 +513,22 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
               <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} />
             </div>
           </div>
-        </div>
-        <div className="flex flex-col gap-3 mt-6">
-          <a
-            href="/request-info"
-            className="text-center w-full px-4 py-3 font-semibold text-white border-2 border-transparent"
-            style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
-          >
-            REQUEST INFO
-          </a>
-          <a
-            href="/apply"
-            className="text-center w-full px-4 py-3 rounded border-2 border-white font-semibold text-white"
-            style={{ fontSize: "var(--size-cta)" }}
-          >
-            APPLY NOW
-          </a>
+          <div className="flex flex-col gap-3 mt-6">
+            <a
+              href="/RequestInfo_Page"
+              className="text-center w-full px-4 py-3 font-semibold text-white border-2 border-transparent"
+              style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
+            >
+              REQUEST INFO
+            </a>
+            <a
+              href="/apply"
+              className="text-center w-full px-4 py-3 rounded border-2 border-white font-semibold text-white"
+              style={{ fontSize: "var(--size-cta)" }}
+            >
+              APPLY NOW
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -516,17 +536,19 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen }) => {
 };
 
 // Small helper to render desktop nav item with sliding underline
-const DesktopNavItem = ({ children, active, color, onClick, to }) => {
-  const base =
-    "relative group block py-8 uppercase tracking-tight text-white hover:text-white transition-colors";
+const DesktopNavItem = ({ children, active, color, onClick, to, controlsId }) => {
+  const base ="relative group block py-8 uppercase tracking-tight text-white hover:text-white transition-colors";
   const styleText = { fontSize: "var(--size-nav)", fontWeight: 400 };
-
-  const underlineStyle = {
-    backgroundColor: color || "transparent",
-  };
+  const underlineStyle = { backgroundColor: color || "transparent" };
+  
+  // ACCESSIBILITY: Add ARIA attributes if it's a button controlling a menu
+  const ariaProps = onClick ? {
+    "aria-haspopup": "true",
+    "aria-expanded": active,
+    "aria-controls": controlsId
+  } : {};
 
   if (to) {
-    // FIX: Replaced NavLink with a standard anchor tag
     return (
       <a href={to} className={base} style={styleText}>
         <span>{children}</span>
@@ -538,7 +560,7 @@ const DesktopNavItem = ({ children, active, color, onClick, to }) => {
     );
   }
   return (
-    <button onClick={onClick} className={base} style={styleText}>
+    <button onClick={onClick} className={base} style={styleText} {...ariaProps}>
       <span>{children}</span>
       <span
         className={`pointer-events-none absolute left-0 -bottom-[2px] h-[2px] w-0 group-hover:w-full transition-[width] duration-300 ${active ? "w-full" : ""}`}
@@ -554,43 +576,34 @@ const Header = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
-
-  // State for controlling top bar visibility
   const [showTopBar, setShowTopBar] = useState(true);
-  const scrollThreshold = 50; // Pixels to scroll before hiding the top bar
-
+  
+  const scrollThreshold = 50;
   const topBarRef = useRef(null);
   const [topBarHeight, setTopBarHeight] = useState(0);
-
   const navRef = useRef(null);
+  
   useClickOutside(navRef, () => setActiveMenu(null));
 
   const toggleMenu = (key) => setActiveMenu((prev) => (prev === key ? null : key));
   
-  // Effect to measure top bar height once on mount
   useEffect(() => {
     if (topBarRef.current) {
       setTopBarHeight(topBarRef.current.offsetHeight);
     }
   }, []);
 
-  // Scroll handler to track scroll direction for the top bar
   useEffect(() => {
     let lastScrollY = window.scrollY;
-
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       if (currentScrollY <= scrollThreshold) {
         setShowTopBar(true);
-      } 
-      else if (currentScrollY < lastScrollY) {
+      } else if (currentScrollY < lastScrollY) {
         setShowTopBar(true);
-      } 
-      else {
+      } else {
         setShowTopBar(false);
       }
-
       lastScrollY = currentScrollY;
     };
 
@@ -601,21 +614,15 @@ const Header = () => {
   return (
     <>
       <header
-        className="sticky top-0 z-50 bg-[#111111] text-white shadow-lg transition-transform duration-300 ease-in-out"
+        className="sticky top-0 z-50 bg-[#111111] text-white shadow-lg transition-transform duration-300 ease-in-out w-full"
         style={{
           transform: showTopBar ? 'translateY(0)' : `translateY(-${topBarHeight}px)`,
-          "--size-topbar": FONT_SIZES.topbar,
-          "--size-phone": FONT_SIZES.phone,
-          "--size-nav": FONT_SIZES.nav,
-          "--size-cta": FONT_SIZES.cta,
-          "--size-mega-heading": FONT_SIZES.megaHeading,
-          "--size-mega-item": FONT_SIZES.megaItem,
+          "--size-topbar": FONT_SIZES.topbar, "--size-phone": FONT_SIZES.phone,
+          "--size-nav": FONT_SIZES.nav, "--size-cta": FONT_SIZES.cta,
+          "--size-mega-heading": FONT_SIZES.megaHeading, "--size-mega-item": FONT_SIZES.megaItem,
         }}
       >
-        <div
-          ref={topBarRef}
-          className="hidden xl:block bg-black border-b border-gray-800"
-        >
+        <div ref={topBarRef} className="hidden xl:block bg-black border-b border-gray-800">
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2" style={{ fontSize: "var(--size-topbar)" }}>
               <div className="flex items-center gap-x-6 text-gray-400">
@@ -630,18 +637,18 @@ const Header = () => {
                   </a>
                 ))}
               </div>
-
               <div className="flex items-center gap-5">
-                <span
-                  className="hidden xl:inline text-white font-light"
-                  style={{ fontSize: "var(--size-phone)" }}
-                >
+                <span className="hidden xl:inline text-white font-light" style={{ fontSize: "var(--size-phone)" }}>
                   1-800-JADETIMES
                 </span>
                 <button
                   aria-label="Search"
                   onClick={() => setIsSearchOpen((v) => !v)}
                   className="text-gray-400 hover:text-white transition-colors duration-300"
+                  // ACCESSIBILITY: Announce dropdown state and control
+                  aria-haspopup="true"
+                  aria-expanded={isSearchOpen}
+                  aria-controls="search-dropdown"
                 >
                   <SearchIcon className="w-5 h-5" />
                 </button>
@@ -651,17 +658,12 @@ const Header = () => {
           </div>
         </div>
 
-        <nav
-          className="z-30 bg-black w-full"
-          ref={navRef}
-        >
+        <nav className="z-30 bg-black w-full" ref={navRef}>
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2">
-               {/* FIX: Replaced NavLink with a standard anchor tag */}
               <a href="/" className="flex-shrink-0">
                 <img alt="JadeTimes Academy Logo" className="h-12 xl:h-16 w-auto" src={logo} />
               </a>
-
               <ul className="hidden xl:flex items-center gap-x-6">
                 {navLinks.map((link) => (
                   <li key={link.key}>
@@ -670,26 +672,22 @@ const Header = () => {
                         active={activeMenu === link.key}
                         color={link.accent}
                         onClick={() => toggleMenu(link.key)}
+                        controlsId={`megamenu-${link.key}`} // ACCESSIBILITY
                       >
                         {link.text}
                       </DesktopNavItem>
                     ) : (
-                      <DesktopNavItem
-                        active={false}
-                        color={link.accent}
-                        to={link.href}
-                      >
+                      <DesktopNavItem active={false} color={link.accent} to={link.href}>
                         {link.text}
                       </DesktopNavItem>
                     )}
                   </li>
                 ))}
               </ul>
-
               <div className="flex items-center gap-3">
                 <div className="hidden xl:flex items-center gap-2">
                   <a
-                    href="/request-info"
+                    href="/RequestInfo_Page"
                     className="px-3 py-2 font-semibold text-black border-2 border-transparent"
                     style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
                   >
@@ -704,43 +702,43 @@ const Header = () => {
                   </a>
                 </div>
                 <button
-                  aria-label="Search"
-                  onClick={() => { setIsSearchOpen((v) => !v); setIsMobileMenuOpen(false); }}
-                  className="xl:hidden text-gray-300 hover:text-white transition-colors duration-300 p-2"
-                >
-                  <SearchIcon className="w-6 h-6" />
-                </button>
-                <button
                   onClick={() => { setIsMobileMenuOpen(true); setIsSearchOpen(false); }}
                   aria-label="Toggle menu"
                   className="xl:hidden text-gray-300 hover:text-white transition-colors duration-300 p-2"
+                  // ACCESSIBILITY: Announce menu state and control
+                  aria-haspopup="true"
+                  aria-expanded={isMobileMenuOpen}
+                  aria-controls="mobile-menu"
                 >
                   <BarsIcon className="w-6 h-6" />
                 </button>
               </div>
             </div>
           </div>
-
-          {navLinks.map(
-            (link) =>
+          {navLinks.map((link) =>
               link.menu && (
                 <MegaMenu
                   key={link.key}
+                  id={`megamenu-${link.key}`} // ACCESSIBILITY
                   open={activeMenu === link.key}
                   config={megaMenus[link.menu]}
                   accent={link.accent}
                 />
               )
           )}
-
           <SearchDropdown open={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
         </nav>
       </header>
-
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} isLangOpen={isLangOpen} setIsLangOpen={setIsLangOpen} />
+      <MobileMenu 
+        isOpen={isMobileMenuOpen} 
+        onClose={() => setIsMobileMenuOpen(false)} 
+        isLangOpen={isLangOpen} 
+        setIsLangOpen={setIsLangOpen}
+        isSearchOpen={isSearchOpen}
+        setIsSearchOpen={setIsSearchOpen}
+      />
     </>
   );
 };
 
 export default Header;
-
