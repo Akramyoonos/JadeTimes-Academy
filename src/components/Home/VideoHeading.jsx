@@ -10,7 +10,7 @@ const VideoHeading = ({ title, subtitle }) => {
         This allows the container to grow if the text content wraps on small screens, preventing overflow.
         The heights have also been adjusted for a better mobile-first experience.
       */}
-      <div className="relative w-full min-h-[280px] sm:min-h-[384px] md:min-h-[450px] lg:min-h-[500px] overflow-hidden">
+      <div className="relative w-full min-h-[220px] sm:min-h-[300px] md:min-h-[320px] lg:min-h-[400px] overflow-hidden">
         <video
           className="absolute inset-0 w-full h-full object-cover"
           autoPlay
