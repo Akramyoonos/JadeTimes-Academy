@@ -463,7 +463,7 @@ const MobileMenu = ({ isOpen, onClose, isLangOpen, setIsLangOpen, isSearchOpen, 
                         <h4 className="uppercase text-sm font-bold text-gray-400 mb-2" style={{ color: link.accent }}>
                           {section}
                         </h4>
-                        <ul className={`space-y-1 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
+                        <ul className={`space-y-1 ${section === "AREAS OF STUDY" ? "sm:columns-2" : ""}`}>
                           {/* FIX: Use a stable and unique key like href instead of index. */}
                           {items.map((item) => (
                             <li key={item.href}>
