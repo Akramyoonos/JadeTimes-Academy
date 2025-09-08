@@ -1,14 +1,14 @@
 import React from 'react';
-import Ourfaculty from '../components/Ourfaculty.jsx';
-import Followus from '../components/Followus.jsx';
-import OurStudents from '../components/OurStudents.jsx';
-import SearchProgramsBy from '../components/SearchProgramsBy.jsx';
-import Spotlight from '../components/Spotlight.jsx';
-import Upcomingevents from '../components/Upcomingevents.jsx';
-import VideoHeading from '../components/VideoHeading.jsx';
-import WeareDifferent from '../components/WeareDifferent.jsx';
-import CampusesAndLocations from '../components/CampusesAndLocations.jsx';
-import IntroAfterSearch from '../components/IntroAfterSearch.jsx';
+import Ourfaculty from '../components/Home/Ourfaculty.jsx';
+import Followus from '../components/Home/Followus.jsx';
+import OurStudents from '../components/Home/OurStudents.jsx';
+import SearchProgramsBy from '../components/Home/SearchProgramsBy.jsx';
+import Spotlight from '../components/Home/Spotlight.jsx';
+import Upcomingevents from '../components/Home/Upcomingevents.jsx';
+import VideoHeading from '../components/Home/VideoHeading.jsx';
+import WeareDifferent from '../components/Home/WeareDifferent.jsx';
+import CampusesAndLocations from '../components/Home/CampusesAndLocations.jsx';
+import IntroAfterSearch from '../components/Home/IntroAfterSearch.jsx';
 
 const Home_page = () => {
   return (

@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 
 // Local images (ensure #4 filename matches your disk)
-import studentImage1 from "../assets/Images/our-students-01-948x815-1-768x660.jpeg";
-import studentImage2 from "../assets/Images/our-students-02-948x815-1-768x660.jpeg";
-import studentImage3 from "../assets/Images/our-students-03-948x815-1-768x660.jpeg";
-import studentImage4 from "../assets/Images/our-students-04-948x815--768x660.jpeg"; // note the double "--"
+import studentImage1 from "../../assets/Images/our-students-01-948x815-1-768x660.jpeg";
+import studentImage2 from "../../assets/Images/our-students-02-948x815-1-768x660.jpeg";
+import studentImage3 from "../../assets/Images/our-students-03-948x815-1-768x660.jpeg";
+import studentImage4 from "../../assets/Images/our-students-04-948x815--768x660.jpeg"; // note the double "--"
 
 const studentsData = [
   {

@@ -4,18 +4,18 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 
 // Images
-import followUs1 from '../assets/Images/Followus1.jpg';
-import followUs2 from '../assets/Images/Followus2.jpg';
-import followUs3 from '../assets/Images/Followus3.jpg';
-import followUs4 from '../assets/Images/Followus4.jpg';
-import followUs5 from '../assets/Images/Followus5.jpg';
-import followUs6 from '../assets/Images/Followus6.jpg';
-import followUs7 from '../assets/Images/Followus7.jpg';
-import followUs8 from '../assets/Images/Followus8.jpg';
-import followUs9 from '../assets/Images/Followus9.jpg';
-import followUs10 from '../assets/Images/Followus10.jpg';
-import followUs11 from '../assets/Images/Followus11.jpg';
-import followUs12 from '../assets/Images/Followus12.jpg';
+import followUs1 from '../../assets/Images/Followus1.jpg';
+import followUs2 from '../../assets/Images/Followus2.jpg';
+import followUs3 from '../../assets/Images/Followus3.jpg';
+import followUs4 from '../../assets/Images/Followus4.jpg';
+import followUs5 from '../../assets/Images/Followus5.jpg';
+import followUs6 from '../../assets/Images/Followus6.jpg';
+import followUs7 from '../../assets/Images/Followus7.jpg';
+import followUs8 from '../../assets/Images/Followus8.jpg';
+import followUs9 from '../../assets/Images/Followus9.jpg';
+import followUs10 from '../../assets/Images/Followus10.jpg';
+import followUs11 from '../../assets/Images/Followus11.jpg';
+import followUs12 from '../../assets/Images/Followus12.jpg';
 
 const FollowUs = () => {
   const images = [

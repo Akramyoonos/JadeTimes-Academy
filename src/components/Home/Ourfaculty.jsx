@@ -1,9 +1,9 @@
 import React from "react";
 // NOTE: Make sure these image paths are correct in your project structure.
 // Using placeholders for demonstration.
-import ourfaculty1 from "../assets/Images/ourfaculty1.png";
-import ourfaculty2 from "../assets/Images/ourfaculty2.png";
-import ourfaculty3 from "../assets/Images/ourfaculty3.png";
+import ourfaculty1 from "../../assets/Images/ourfaculty1.png";
+import ourfaculty2 from "../../assets/Images/ourfaculty2.png";
+import ourfaculty3 from "../../assets/Images/ourfaculty3.png";
 
 
 /* ====== breakpoint helper (md = 768px, lg = 1024px) ====== */

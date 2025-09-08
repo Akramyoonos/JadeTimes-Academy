@@ -3,8 +3,8 @@ import { HashRouter as Router, Routes, Route, useLocation, useNavigate } from 'r
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/Home/Header';
+import Footer from './components/Home/Footer';
 
 import Home_page from './pages/Home_page';
 import About_page from './pages/About_page';
@@ -14,7 +14,7 @@ import Blog from './pages/Blog';
 import Events from './pages/Events';
 import Contact_Us from './pages/Contact_Us';
 import Alumni from './pages/Alumni';
-import StudentResources from './pages/StudentResogfgurces';
+import StudentResources from './pages/StudentResources';
 import DegreeProgramsPage from './pages/DegreeProgramsPage';
 import OnlineProgrames from './pages/OnlineProgrames';
 import CareerAndAlumniServices from './pages/CareerAndAlumniServices';

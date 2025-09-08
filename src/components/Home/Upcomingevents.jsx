@@ -1,7 +1,7 @@
 // src/components/Upcomingevents.jsx
 import React, { useState } from "react";
 
-import { applicationDeadlines } from "../deadlines.js";
+import { applicationDeadlines } from "../../deadlines.js";
 
 /* ---------- Icons ---------- */
 const CalendarIcon = () => (

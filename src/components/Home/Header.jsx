@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // Removed NavLink import as it requires a Router context which is not available.
 
-import logo from "../assets/Images/Logo.png";
+import logo from "../../assets/Images/Logo.png";
 
 // ---------------- ICONS ----------------
 // Inlined SVG icons to replace the FontAwesome package which was causing errors.

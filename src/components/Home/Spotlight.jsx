@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 // Placeholder images - replace with your actual image imports
-import NycImage from '../assets/Images/Spotlight 01.jpeg';
-import LaImage from '../assets/Images/Spotlight 02.png';
-import YouthImage from '../assets/Images/Spotlight 03.png';
-import VirtualImage from '../assets/Images/Spotlight 04.jpeg';
-import Spotlight7 from '../assets/Images/Spotlight 07.jpeg';
-import Spotlight8 from '../assets/Images/Spotlight 09.jpeg';
+import NycImage from '../../assets/Images/Spotlight 01.jpeg';
+import LaImage from '../../assets/Images/Spotlight 02.png';
+import YouthImage from '../../assets/Images/Spotlight 03.png';
+import VirtualImage from '../../assets/Images/Spotlight 04.jpeg';
+import Spotlight7 from '../../assets/Images/Spotlight 07.jpeg';
+import Spotlight8 from '../../assets/Images/Spotlight 09.jpeg';
 
 
 // CHANGE 1: Created a new Card component to match the style in the image.

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeadingBackground from '../assets/Videos/VideoHeadingBgVideo.mp4';
+import HeadingBackground from '../../assets/Videos/VideoHeadingBgVideo.mp4';
 
 const VideoHeading = ({ title, subtitle }) => {
   return (
