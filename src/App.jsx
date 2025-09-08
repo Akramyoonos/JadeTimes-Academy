@@ -14,7 +14,7 @@ import Blog from './pages/Blog';
 import Events from './pages/Events';
 import Contact_Us from './pages/Contact_Us';
 import Alumni from './pages/Alumni';
-import StudentResources from './pages/StudentResources';
+import StudentResources from './pages/StudentResogfgurces';
 import DegreeProgramsPage from './pages/DegreeProgramsPage';
 import OnlineProgrames from './pages/OnlineProgrames';
 import CareerAndAlumniServices from './pages/CareerAndAlumniServices';
