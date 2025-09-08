@@ -25,6 +25,10 @@ import ScholarshipAndGrants_page from './pages/ScholarshipAndGrants_page';
 import PrivacyPolicy_Page from './pages/PrivacyPolicy_Page';
 import Membership_Page from './pages/Membership_Page';
 import RequestInfo_Page from './pages/RequestInfo_Page';
+import ApplyNyfa_Page from './pages/ApplyNyfa_Page';
+import MissionAndPurpose_Page from './pages/MissionAndPurpose_Page';
+import VisitUs_Page from './pages/VisitUs_Page';
+import Accreditation_Page from './pages/Accreditation_Page';
 
 function ConditionalHeader() {
   const location = useLocation();
@@ -88,6 +92,10 @@ function AppInner() {
           <Route path="/PrivacyPolicy_Page/*"           element={<PrivacyPolicy_Page />} />
           <Route path="/Membership_Page/*"               element={<Membership_Page />} />
           <Route path="/RequestInfo_Page/*"               element={<RequestInfo_Page />} />
+          <Route path="/ApplyNyfa_Page/*"               element={<ApplyNyfa_Page />} />
+          <Route path="/MissionAndPurpose_Page/*"      element={<MissionAndPurpose_Page />} />
+          <Route path="/VisitUs_Page/*"                element={<VisitUs_Page />} />
+          <Route path="/Accreditation_Page/*"          element={<Accreditation_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>

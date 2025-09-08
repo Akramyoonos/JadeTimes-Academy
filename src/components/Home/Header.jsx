@@ -147,12 +147,12 @@ const megaMenus = {
     "WHO WE ARE": [
       { text: "ABOUT US", href: "/about" },
       { text: "HISTORY", href: "/History_Page" },
-      { text: "MISSION & PURPOSE", href: "/discover/who-we-are/mission-purpose" },
-      { text: "ACCREDITATION", href: "/discover/who-we-are/accreditation" },
+      { text: "MISSION & PURPOSE", href: "/MissionAndPurpose_Page" },
+      { text: "ACCREDITATION", href: "/Accreditation_Page" },
       { text: "LEADERSHIP & ADMINISTRATION", href: "/discover/who-we-are/leadership-administration" },
     ],
     "ON CAMPUS": [
-      { text: "VISIT US", href: "/discover/on-campus/visit-us" },
+      { text: "VISIT US", href: "/VisitUs_Page" },
       { text: "OPEN HOUSE & LIVE ONLINE EVENTS", href: "/discover/on-campus/open-house-live-online-events" },
       { text: "ACADEMIC CALENDAR", href: "/discover/on-campus/academic-calendar" },
       { text: "STUDENT LIFE", href: "/discover/on-campus/student-life" },
@@ -575,7 +575,7 @@ const Header = () => {
                       REQUEST INFO
                     </a>
                     <a
-                      href="/apply"
+                      href="/ApplyNyfa_Page"
                       className="px-3 py-2 border-2 border-white font-semibold text-white transition-transform hover:scale-105"
                       style={{ fontSize: "var(--size-cta)" }}
                     >
@@ -676,7 +676,7 @@ const Header = () => {
                       REQUEST INFO
                   </a>
                   <a
-                      href="/apply"
+                      href="/ApplyNyfa_Page"
                       className="px-3 py-2 border-2 border-white font-semibold text-white"
                       style={{ fontSize: "var(--size-cta)" }}
                   >
