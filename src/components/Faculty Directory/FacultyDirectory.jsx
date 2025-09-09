@@ -20,7 +20,7 @@ import facultyDataImages16 from '../../assets/Images/facultyDataImages16.jpeg';
 const initialFacultyData = [
     { id: 1, name: 'Michael J. Young', title: 'President/CEO', imageUrl: facultyDataImages01, areaOfStudy: 'Administration', link: '/blog' },
     { id: 2, name: 'David Klein', title: 'Senior Executive Vice President/COO', imageUrl: facultyDataImages02, areaOfStudy: 'Administration', link: '/faculty/2' },
-    { id: 3, name: 'Dan Mackler', title: 'Senior Vice President/CSO/Dean of NYFA Los Angeles', imageUrl: facultyDataImages03, areaOfStudy: 'Administration', link: '/faculty/3' },
+    { id: 3, name: 'Dan Mackler', title: 'Senior Vice President/CSO/Dean of JIU Los Angeles', imageUrl: facultyDataImages03, areaOfStudy: 'Administration', link: '/faculty/3' },
     { id: 4, name: 'Sonny Calderon', title: 'Vice President of Academic Affairs', imageUrl: facultyDataImages04, areaOfStudy: 'Academics', link: '/faculty/4' },
     { id: 5, name: 'Daniel Brusci', title: 'Photography', imageUrl: facultyDataImages05, areaOfStudy: 'Photography', link: '/faculty/5' },
     { id: 6, name: 'Lisa Abukusumo', title: 'Filmmaking', imageUrl: facultyDataImages06, areaOfStudy: 'Filmmaking', link: '/faculty/6' },

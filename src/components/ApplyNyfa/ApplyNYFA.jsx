@@ -11,12 +11,12 @@ const ApplyNYFA = () => {
         </h1>
 
        <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-         Thank you for your interest in applying to NYFA. We are excited to welcome you to our creative and inclusive community as you start your educational 
+         Thank you for your interest in applying to JIU. We are excited to welcome you to our creative and inclusive community as you start your educational 
          journey!
        </p>
 
         <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-          Click the links below to start or complete your application to NYFA.
+          Click the links below to start or complete your application to JIU.
           Contact us via email or text at any time for assistance.
         </p>
 
@@ -25,15 +25,15 @@ const ApplyNYFA = () => {
         <a href="#" className="text-pink-600  hover:text-pink-700">
         deadlines
         </a>{" "}
-        and links to the NYFA application below. You can also view Important
+        and links to the JIU application below. You can also view Important
         Dates and Deadlines on this webpage:{" "}
          <a
-    href="https://www.nyfa.edu/important-dates/"
+    href="https://www.JIU.edu/important-dates/"
     className="text-pink-600 break-words hover:text-pink-700"
     target="_blank"
     rel="noopener noreferrer"
   >
-    https://www.nyfa.edu/important-dates/
+    https://www.JIU.edu/important-dates/
   </a>
 </p>
 

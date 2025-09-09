@@ -14,7 +14,7 @@ const resourceData = [
     {
         href: '#',
         imgSrc: resourceImg1,
-        imgAlt: 'Two people in NYFA shirts on a film set with lighting and boom mic',
+        imgAlt: 'Two people in JIU shirts on a film set with lighting and boom mic',
         label: 'TUITION',
         gridClass: 'md:col-span-3'
     },
@@ -56,8 +56,8 @@ const resourceData = [
     {
         href: '#',
         imgSrc: resourceImg7,
-        imgAlt: 'Person wearing NYFA shirt pointing a camera on a film set',
-        label: 'MEET NYFA NEAR YOU',
+        imgAlt: 'Person wearing JIU shirt pointing a camera on a film set',
+        label: 'MEET JIU NEAR YOU',
         gridClass: 'md:col-span-3'
     }
 ];

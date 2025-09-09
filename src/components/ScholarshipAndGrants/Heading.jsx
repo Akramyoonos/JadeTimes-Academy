@@ -5,7 +5,7 @@ const Heading = () => {
   return (
     <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden">
                  <img
-                   alt="Person wearing NYFA shirt holding a camera with a blurred woman in the background"
+                   alt="Person wearing JIU shirt holding a camera with a blurred woman in the background"
                    className="w-full h-full object-cover absolute inset-0 z-0"
                    height="400"
                    src={BlogHeadingImage}
@@ -13,9 +13,9 @@ const Heading = () => {
                  />
                  <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
                  <nav className="absolute top-[15%] left-1/2 -translate-x-1/2 -translate-y-[25%] z-20 flex items-center space-x-3 text-white text-sm sm:text-base font-sans text-center whitespace-nowrap">
-                   <span className="font-semibold">NYFA</span>
+                   <span className="font-semibold">JIU</span>
                    <span className="text-gray-300">/</span>
-                   <span>NYFA Student Finances</span>
+                   <span>JIU Student Finances</span>
                    <span className="text-gray-300">/</span>
                    <span>Scholarships and Grants</span>
                  </nav>

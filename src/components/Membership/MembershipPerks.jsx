@@ -20,7 +20,7 @@ const MembershipPerks = () => {
          </h3>
          <p className="text-gray-600 text-sm">
          on various topics in one of the 10 disciplines of study offered at
-         NYFA. (No cost to NYFA members)
+         JIU. (No cost to JIU members)
          </p>
          </div>
 
@@ -29,7 +29,7 @@ const MembershipPerks = () => {
           <div className="bg-blue-50 rounded-xl shadow-md p-6 flex flex-col items-center text-center w-full sm:w-64 md:w-72">
             <img src={icon2} alt="Workshops Icon" className="w-12 h-12 mb-4" />
             <h3 className="text-lg font-bold mb-2">
-              20% off NYFA Online Workshops*
+              20% off JIU Online Workshops*
             </h3>
             <p className="text-gray-600 text-sm">
               for any online short-term workshops offered in 2025.
@@ -43,7 +43,7 @@ const MembershipPerks = () => {
               20% off one-time total purchase**
             </h3>
             <p className="text-gray-600 text-sm">
-              at the online NYFA Store
+              at the online JIU Store
             </p>
           </div>
         </div>
@@ -54,10 +54,10 @@ const MembershipPerks = () => {
           <p className="mb-2">
             *The 20% tuition discount for short-term online workshops cannot be
             made retroactive. If you registered for a short-term online workshop
-            prior to purchasing a NYFA Membership, the discount will not apply.
+            prior to purchasing a JIU Membership, the discount will not apply.
           </p>
           <p>
-            **The NYFA Store discount for a one-time purchase is valid starting
+            **The JIU Store discount for a one-time purchase is valid starting
             January 1, 2025.
           </p>
         </div>
@@ -72,10 +72,10 @@ const MembershipPerks = () => {
                     </h2>
                     <nav aria-labelledby="related-links-heading" className="flex flex-col text-base font-medium text-gray-700">
                         <a href="#" className="px-4 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-                           LOG INTO NYFA MEMBERSHIP
+                           LOG INTO JIU MEMBERSHIP
                         </a>
                         <a href="#" className="px-4 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-                            JOIN NYFA MEMBERSHIP
+                            JOIN JIU MEMBERSHIP
                         </a>
                         <a href="#" className="px-4 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
                             CONTACT US

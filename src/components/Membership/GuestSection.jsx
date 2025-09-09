@@ -23,12 +23,12 @@ const GuestSection = () => {
 
         {/* Description */}
         <p className="text-gray-700 mb-4">
-          NYFA members get exclusive priority access to our online live guest lectures, events,
+          JIU members get exclusive priority access to our online live guest lectures, events,
           and Q&As, firsthand as they occur, before any content becomes available online to
           general public audiences.
         </p>
         <p className="text-gray-700 mb-6">
-          Emails for upcoming live online events will be sent to NYFA Members, as part of the
+          Emails for upcoming live online events will be sent to JIU Members, as part of the
           priority group mailing, including event details and registration information for each
           event. <span className="font-semibold">Previous guest speakers have included:</span>
         </p>
@@ -71,7 +71,7 @@ const GuestSection = () => {
 
         {/* Footer Note */}
         <p className="text-sm text-gray-500 mt-6">
-          *Online events are free to NYFA members. NYFA will make access to online guest speaker
+          *Online events are free to JIU members. JIU will make access to online guest speaker
           events available to members as they occur.
         </p>
       </div>

@@ -30,7 +30,7 @@ const NyfaRequestInfo = () => {
               <div className="h-1/2">
                 <img 
                   src={studentImage} 
-                  alt="NYFA student working with lighting equipment" 
+                  alt="JIU student working with lighting equipment" 
                   className=" h-full min-w-7xl  "
                 />
               </div>
@@ -39,11 +39,11 @@ const NyfaRequestInfo = () => {
                   <div className="flex items-start">
                     <span className="w-1 h-20 bg-fuchsia-600 mr-6"></span>
                     <h1 className="text-4xl md:text-5xl font-light text-black tracking-wider">
-                      TAKE THE FIRST STEP<br />WITH NYFA
+                      TAKE THE FIRST STEP<br />WITH JIU
                     </h1>
                   </div>
                   <p className="mt-6 text-gray-600">
-                    At NYFA, students get hands-on, immersive training in film, media, and performing arts. Fill out the form to find out more about our programs, financial aid options, and admissions process.
+                    At JIU, students get hands-on, immersive training in film, media, and performing arts. Fill out the form to find out more about our programs, financial aid options, and admissions process.
                   </p>
                 </div>
               </div>
@@ -123,7 +123,7 @@ const NyfaRequestInfo = () => {
                 <button type="submit" className="w-full bg-cyan-400 text-black font-bold py-4 tracking-widest hover:bg-cyan-500 transition-colors">SUBMIT</button>
               </form>
               <p className="text-xs text-gray-400 mt-4">
-                By submitting this form, you give New York Film Academy your consent to contact you regarding our educational services using email, text or telephone. Msg. & data rates may apply. Please note, you are not required to provide this consent to learn more about NYFA or to enroll in our programs. we invite you to contact us directly at: +1-212-674-4300 and speak with a representative.
+                By submitting this form, you give New York Film Academy your consent to contact you regarding our educational services using email, text or telephone. Msg. & data rates may apply. Please note, you are not required to provide this consent to learn more about JIU or to enroll in our programs. we invite you to contact us directly at: +1-212-674-4300 and speak with a representative.
               </p>
             </div>
           </div>

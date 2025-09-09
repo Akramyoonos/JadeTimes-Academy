@@ -20,7 +20,7 @@ import followUs12 from '../../assets/Images/Followus12.jpg';
 const FollowUs = () => {
   const images = [
     { src: followUs1, alt: "Man illuminated by light", href: "https://www.instagram.com/" },
-    { src: followUs2, alt: "NYFA Logo on a colorful background", href: "https://www.instagram.com/" },
+    { src: followUs2, alt: "JIU Logo on a colorful background", href: "https://www.instagram.com/" },
     { src: followUs3, alt: "Woman holding a camera in a smoky environment", href: "https://www.instagram.com/" },
     { src: followUs4, alt: "Smiling student with headphones and camera gear", href: "https://www.instagram.com/" },
     { src: followUs5, alt: "Woman holding a film reel above her head", href: "https://www.instagram.com/" },

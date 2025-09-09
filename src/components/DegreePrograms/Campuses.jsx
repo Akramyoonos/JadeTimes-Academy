@@ -6,15 +6,15 @@ import campusImages03 from '../../assets/Images/Campus03.jpeg';
 // Data for the campus cards
 const campusData = [
   {
-    name: 'NYFA New York',
+    name: 'JIU New York',
     image: campusImages01,
-    alt: 'NYFA New York Campus',
+    alt: 'JIU New York Campus',
     type: 'Campus'
   },
   {
-    name: 'NYFA Los Angeles',
+    name: 'JIU Los Angeles',
     image: campusImages02,
-    alt: 'NYFA Los Angeles Campus',
+    alt: 'JIU Los Angeles Campus',
     type: 'Campus'
   },
   {

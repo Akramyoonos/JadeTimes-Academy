@@ -5,16 +5,16 @@ const ContactUs = () => {
     <div className="max-w-5xl px-6 py-16">
 
       <p className="text-sm text-gray-600 mb-8 pl-20">
-        *Online events are free to NYFA members. NYFA will make access to online
+        *Online events are free to JIU members. JIU will make access to online
         guest speaker events available to members as they occur. Some live online
-        events may be recorded and posted to NYFA’s public video platforms within
+        events may be recorded and posted to JIU’s public video platforms within
         3–8 weeks after the event, based on each guest’s permission and preferences.
       </p>
 
     
       <p className="text-lg text-gray-700 mb-12 pl-20">
         Whether you’re a beginner, looking to sharpen your skills, or want to stay
-        up-to-date on the latest industry trends, NYFA Membership allows you to
+        up-to-date on the latest industry trends, JIU Membership allows you to
         gain access to essential film, media, and performing arts principles and
         insights from anywhere in the world.
       </p>
@@ -29,10 +29,10 @@ const ContactUs = () => {
         Have a question? Call us at{" "}
         <span className="font-semibold">1-800-611-FILM</span> or email{" "}
         <a
-          href="mailto:membership@nyfa.edu"
+          href="mailto:membership@JIU.edu"
           className="text-pink-600 font-semibold hover:underline"
         >
-          membership@nyfa.edu
+          membership@JIU.edu
         </a>
         .
       </p>

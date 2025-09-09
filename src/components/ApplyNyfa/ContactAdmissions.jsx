@@ -14,7 +14,7 @@ const ContactAdmissions = () => {
       {/* Contact Information */}
       <p className="text-gray-600">
         Have a question? Call us at <span className="font-semibold">1-800-611-FILM</span> or email{" "}
-        <a href="mailto:admissions@nyfa.edu" className="text-purple-600 ">admissions@nyfa.edu</a>
+        <a href="mailto:admissions@JIU.edu" className="text-purple-600 ">admissions@JIU.edu</a>
       </p>
     </div>
   );

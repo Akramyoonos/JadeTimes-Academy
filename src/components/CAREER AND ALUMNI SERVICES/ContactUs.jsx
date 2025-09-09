@@ -23,7 +23,7 @@ const ContactUs = () => {
                 <div className="mt-10 space-y-6">
                   <div className="flex items-center">
                     <FiMail className="h-6 w-6 text-purple-600" />
-                    <span className="ml-4 text-gray-800">info@nyfa.edu</span>
+                    <span className="ml-4 text-gray-800">info@JIU.edu</span>
                   </div>
                   <div className="flex items-center">
                     <FiPhone className="h-6 w-6 text-purple-600" />

@@ -7,7 +7,7 @@ const EnrollmentPolicies = () => {
       <div className="flex items-center mb-6">
         <div className="w-1 h-20 bg-yellow-400 mr-3" />
             <h1 className="text-3xl md:text-4xl font-semi bold flex items-center gap-3">
-          NYFA ENROLLMENT AND DEFERRAL POLICIES
+          JIU ENROLLMENT AND DEFERRAL POLICIES
         </h1>
       </div>
 
@@ -27,7 +27,7 @@ const EnrollmentPolicies = () => {
             Students who are accepted by the deadline and cannot attend but want to defer their program start may defer
             up to one year (365 days) by paying the <span className="font-semibold">$500 deposit fee</span> and an
             additional <span className="font-semibold">$500 deferral fee</span>. Both the deposit and deferral fee will
-            be credited toward their first semester at NYFA.
+            be credited toward their first semester at JIU.
           </span>
         </li>
         <li className="flex">
@@ -41,8 +41,8 @@ const EnrollmentPolicies = () => {
         <li className="flex">
           <span className="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0" />
           <span>
-            NYFA considers students who are deferring their enrollment to have committed to attending NYFA. As a result,
-            students will be expected to meet all of <span className="font-semibold">NYFA application deadlines</span>{" "}
+            JIU considers students who are deferring their enrollment to have committed to attending JIU. As a result,
+            students will be expected to meet all of <span className="font-semibold">JIU application deadlines</span>{" "}
             and must confirm their commitment to their new program start date.
           </span>
         </li>
@@ -59,13 +59,13 @@ const EnrollmentPolicies = () => {
           <span>
             Students may only defer their deferral once before their acceptance is rescinded and they will receive a
             refund less the non-refundable application fee, $100 processing fee, credit card convenience fees per the
-            NYFA Refund Policy.
+            JIU Refund Policy.
           </span>
         </li>
         <li className="flex">
           <span className="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0" />
           <span>
-            At any time if a student wishes to withdraw their commitment from attending NYFA, they must notify the NYFA
+            At any time if a student wishes to withdraw their commitment from attending JIU, they must notify the JIU
             Admissions Department.
           </span>
         </li>
@@ -73,8 +73,8 @@ const EnrollmentPolicies = () => {
         <li className="flex">
           <span className="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0" />
           <span>
-            Additionally international students who plan to study at NYFA on an F-1 visa must inform the NYFA International Office of their plan to defer as it may <br />
-            impact their visa. Likewise, students using Financial Aid or Veterans benefits to study at NYFA must notify  the Financial Aid department and/or the <br /> 
+            Additionally international students who plan to study at JIU on an F-1 visa must inform the JIU International Office of their plan to defer as it may <br />
+            impact their visa. Likewise, students using Financial Aid or Veterans benefits to study at JIU must notify  the Financial Aid department and/or the <br /> 
             Veterans Department of their plan to defer, as it may impact their aid package.
           </span>
         </li>

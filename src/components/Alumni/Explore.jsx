@@ -52,7 +52,7 @@ const Explore = () => {
             <div className="relative inline-block pl-6">
               <span className="absolute left-0 top-0 h-full w-1.5 bg-purple-600"></span>
               <h1 className="text-4xl md:text-5xl font-bold tracking-wider text-gray-800 uppercase">
-                Explore NYFA Alumni
+                Explore JIU Alumni
               </h1>
             </div>
           </div>

@@ -25,7 +25,7 @@ const ScholarshipAndGrantsOrganization = () => {
 
         <h2 className="text-xl font-bold text-gray-900 mb-4">SAG Discount</h2>
         <p className="mb-10 text-base leading-relaxed">
-          NYFA offers a SAG Discount of 15%. Applicants need to demonstrate a valid/current SAG membership
+          JIU offers a SAG Discount of 15%. Applicants need to demonstrate a valid/current SAG membership
         </p>
 
         <h2 className="text-xl font-bold text-gray-900 mb-4">International Students Scholarships</h2>
@@ -38,7 +38,7 @@ const ScholarshipAndGrantsOrganization = () => {
           Many of our programs have been approved for veterans education benefits. In addition, all those who are not fully covered by the Post-9/11 GI bill will receive a 15% discount on tuition. Please see www.gibill.va.gov or call 1-888-GIBILL-1 (1-888-442-4551) for information on your eligibility and how to obtain your certificate of eligibility.
         </p>
         <p className="text-base leading-relaxed">
-          Please contact our Office of Veterans Services, 818-333-3558 to confirm program approvals. To learn more, visit <a href="#" className="text-purple-600 hover:underline">NYFA’s GI Bill and Yellow Ribbon Program page</a>.
+          Please contact our Office of Veterans Services, 818-333-3558 to confirm program approvals. To learn more, visit <a href="#" className="text-purple-600 hover:underline">JIU’s GI Bill and Yellow Ribbon Program page</a>.
         </p>
 
       </div>

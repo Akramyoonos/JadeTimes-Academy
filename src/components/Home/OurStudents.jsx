@@ -12,7 +12,7 @@ const studentsData = [
     name: "Nathan Williams",
     program: "Cinematography",
     quote:
-      "As an Entertainment Professional, I decided to take NYFA's Intro to Cinematography class to learn the craft and allow me to have more knowledgeable conversations with DPs. It expanded my knowledge, inspired me creatively and gave me more confidence on set – an invaluable resource.",
+      "As an Entertainment Professional, I decided to take JIU's Intro to Cinematography class to learn the craft and allow me to have more knowledgeable conversations with DPs. It expanded my knowledge, inspired me creatively and gave me more confidence on set – an invaluable resource.",
     imageUrl: studentImage1,
     altText: "Portrait of Nathan Williams, a cinematography student.",
   },

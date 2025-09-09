@@ -179,7 +179,7 @@ const ApplicationDeadlines = () => {
         return (
           <div className="text-gray-700 space-y-4">
             <p>
-              Short-term workshop applications are accepted up until 10 days prior to the start of the program. NYFA will continue to accept short-term workshop applications until a program is full. Please submit your application as early as possible to reserve your place.
+              Short-term workshop applications are accepted up until 10 days prior to the start of the program. JIU will continue to accept short-term workshop applications until a program is full. Please submit your application as early as possible to reserve your place.
             </p>
             <h3 className="text-xl font-semibold pt-4">Key Application Details:</h3>
             <ul className="list-disc list-inside space-y-2">
@@ -193,7 +193,7 @@ const ApplicationDeadlines = () => {
         return (
           <div className="text-gray-700 space-y-4">
              <p>
-              Applications for youth programs are accepted up until 10 days prior to the start of the program, contingent on availability. NYFA maintains an open enrollment policy for its summer camps and workshops, allowing applications to be submitted throughout the year.
+              Applications for youth programs are accepted up until 10 days prior to the start of the program, contingent on availability. JIU maintains an open enrollment policy for its summer camps and workshops, allowing applications to be submitted throughout the year.
             </p>
              <h3 className="text-xl font-semibold pt-4">Key Application Details:</h3>
              <ul className="list-disc list-inside space-y-2">
@@ -219,7 +219,7 @@ const ApplicationDeadlines = () => {
         </h1>
       </div>
       <p className="text-gray-600 mb-8">
-        NYFA offers 3 semesters and application deadlines per year for its long-term programs. Short-term and youth programs offer rolling admissions.
+        JIU offers 3 semesters and application deadlines per year for its long-term programs. Short-term and youth programs offer rolling admissions.
       </p>
 
       {/* Tabs */}

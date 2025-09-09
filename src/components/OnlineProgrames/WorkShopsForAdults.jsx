@@ -124,7 +124,7 @@ const WorkShopsForAdults = () => {
               <span>ONLINE SHORT-TERM AND EVENING WORKSHOPS FOR ADULTS</span>
             </h1>
             <p className="mt-6 text-black leading-relaxed max-w-md">
-              Unlike other online courses, in NYFA’s Hands-Online workshops, you will meet your professors and your classmates in the virtual classroom, share your ideas and collaborate on your projects.
+              Unlike other online courses, in JIU’s Hands-Online workshops, you will meet your professors and your classmates in the virtual classroom, share your ideas and collaborate on your projects.
             </p>
           </div>
         </div>

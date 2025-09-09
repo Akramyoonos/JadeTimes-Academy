@@ -39,7 +39,7 @@ const AccreditationPage = () => {
                 , 985 Atlantic Avenue, Suite 100, Alameda, CA 94501, 510.748.9001.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                NYFA's accreditation listing can be found on the{" "}
+                JIU's accreditation listing can be found on the{" "}
                 <span className="text-fuchsia-600 font-medium">
                   Council for Higher Education website
                 </span>
@@ -50,7 +50,7 @@ const AccreditationPage = () => {
                 <a href="#" className="text-fuchsia-600 font-medium  hover:text-fuchsia-700">
                   here
                 </a>{" "}
-                for NYFA's most recent WSCUC Commission Action Letter
+                for JIU's most recent WSCUC Commission Action Letter
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Click{" "}

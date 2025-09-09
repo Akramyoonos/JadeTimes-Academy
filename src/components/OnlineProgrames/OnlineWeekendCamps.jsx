@@ -16,7 +16,7 @@ const OnlineWeekendCamps = () => {
             </div>
 
             <p className="mt-6 text-gray-700 text-base sm:text-lg leading-relaxed border-t border-gray-200 pt-6">
-                NYFA offers a selection of <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline font-medium transition-colors duration-200">immersive online programs for teens and kids</a>. The workshops are active and creative learning experiences where students participate from home. Throughout the course, students interact with teachers and classmates, creating their own original work and projects.
+                JIU offers a selection of <a href="#" className="text-blue-600 hover:text-blue-800 hover:underline font-medium transition-colors duration-200">immersive online programs for teens and kids</a>. The workshops are active and creative learning experiences where students participate from home. Throughout the course, students interact with teachers and classmates, creating their own original work and projects.
             </p>
 
         </div>

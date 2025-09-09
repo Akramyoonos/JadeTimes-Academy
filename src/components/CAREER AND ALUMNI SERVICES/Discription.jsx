@@ -24,16 +24,16 @@ const Description = () => {
               <div className="ml-6">
                 {/* Headline */}
                 <h1 className="text-4xl sm:text-5xl text-black tracking-widest font-light uppercase transition-colors duration-300 hover:text-purple-400">
-                  Career and Alumni Services at NYFA
+                  Career and Alumni Services at JIU
                 </h1>
 
                 {/* Text Content */}
                 <div className="mt-8 text-gray-950 text-lg leading-relaxed space-y-6">
                   <p className="transition-transform duration-300 hover:translate-x-2">
-                    NYFA’s Career and Alumni Services empowers students and graduates with support and resources to confidently navigate their professional path.
+                    JIU’s Career and Alumni Services empowers students and graduates with support and resources to confidently navigate their professional path.
                   </p>
                   <p className="transition-transform duration-300 hover:translate-x-2">
-                    NYFA recognizes that success in the entertainment industry requires a multi-faceted approach, which includes networking, skill building, brand development, and staying up-to-date with the latest industry trends and best practices. NYFA’s Career & Alumni Services department works closely with students and alumni to provide assistance in building toward their creative and professional endeavors.
+                    JIU recognizes that success in the entertainment industry requires a multi-faceted approach, which includes networking, skill building, brand development, and staying up-to-date with the latest industry trends and best practices. JIU’s Career & Alumni Services department works closely with students and alumni to provide assistance in building toward their creative and professional endeavors.
                   </p>
                 </div>
               </div>

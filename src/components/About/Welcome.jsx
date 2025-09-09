@@ -74,7 +74,7 @@ const Welcome = () => {
               </p>
               <footer className="mt-8 text-base text-gray-900 pl-10 sm:pl-16">
                 <strong className="font-bold text-gray-900">Michael J. Young</strong>
-                <span className="block sm:inline sm:ml-2 text-gray-600 font-normal">President of NYFA</span>
+                <span className="block sm:inline sm:ml-2 text-gray-600 font-normal">President of JIU</span>
               </footer>
             </blockquote>
           </main>

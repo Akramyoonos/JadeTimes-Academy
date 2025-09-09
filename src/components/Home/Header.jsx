@@ -70,7 +70,7 @@ const navLinks = [
   { key: "academics", text: "ACADEMICS", href: "/academics", menu: "academicsMenu", accent: ACCENTS.academics },
   { key: "admissions", text: "ADMISSIONS & FINANCES", href: "/admissions", menu: "admissionsFinancesMenu", accent: ACCENTS.admissions },
   { key: "campuses", text: "CAMPUSES", href: "/campuses", menu: "campusesMenu", accent: ACCENTS.campuses },
-  { key: "discover", text: "DISCOVER NYFA", href: "/discover", menu: "discoverMenu", accent: ACCENTS.discover },
+  { key: "discover", text: "DISCOVER JIU", href: "/discover", menu: "discoverMenu", accent: ACCENTS.discover },
   { key: "alumni", text: "ALUMNI", href: "/alumni", accent: ACCENTS.alumni },
   { key: "youth", text: "YOUTH PROGRAMS", href: "/youth", menu: "youthMenu", accent: ACCENTS.youth },
 ];
@@ -92,7 +92,7 @@ const megaMenus = {
       { text: "GAME DESIGN", href: "/academics/areas-of-study/game-design" },
       { text: "ENTERTAINMENT MEDIA", href: "/academics/areas-of-study/entertainment-media" },
       { text: "VIRTUAL REALITY", href: "/academics/areas-of-study/virtual-reality" },
-      { text: "NYFA'S PATHWAY TRACK", href: "/academics/areas-of-study/nyfas-pathway-track" },
+      { text: "JIU'S PATHWAY TRACK", href: "/academics/areas-of-study/JIUs-pathway-track" },
     ],
     "DEGREE PROGRAMS": [
       { text: "BACHELOR OF FINE ARTS", href: "/academics/degree-programs/bachelor-of-fine-arts" },
@@ -108,9 +108,9 @@ const megaMenus = {
       { text: "ONLINE PROGRAMS", href: "/academics/certificate-programs/online-programs" },
       { text: "CORPORATE TRAINING", href: "/academics/certificate-programs/corporate-training" },
     ],
-    "STUDY ABROAD WITH NYFA": [
-      { text: "FILMMAKING", href: "/academics/study-abroad-with-nyfa/filmmaking" },
-      { text: "ACTING FOR FILM", href: "/academics/study-abroad-with-nyfa/acting-for-film" },
+    "STUDY ABROAD WITH JIU": [
+      { text: "FILMMAKING", href: "/academics/study-abroad-with-JIU/filmmaking" },
+      { text: "ACTING FOR FILM", href: "/academics/study-abroad-with-JIU/acting-for-film" },
     ],
   },
   admissionsFinancesMenu: {
@@ -137,8 +137,8 @@ const megaMenus = {
       { text: "Online", href: "/campuses/campuses/online" },
     ],
     "LOCATIONS": [
-      { text: "NYFA Kazakhstan", href: "/campuses/locations/nyfa-kazakhstan" },
-      { text: "NYFA at Harvard University", href: "/campuses/locations/nyfa-at-harvard-university" },
+      { text: "JIU Kazakhstan", href: "/campuses/locations/JIU-kazakhstan" },
+      { text: "JIU at Harvard University", href: "/campuses/locations/JIU-at-harvard-university" },
       { text: "Paris, France", href: "/campuses/locations/paris-france" },
       { text: "Beijing and Greater China", href: "/campuses/locations/beijing-and-greater-china" },
     ],
@@ -160,9 +160,9 @@ const megaMenus = {
     ],
     "NEWS AND CULTURE": [
       { text: "GUEST SPEAKERS", href: "/discover/news-and-culture/guest-speakers" },
-      { text: "NYFA IN THE NEWS", href: "/discover/news-and-culture/nyfa-in-the-news" },
+      { text: "JIU IN THE NEWS", href: "/discover/news-and-culture/JIU-in-the-news" },
       { text: "BLOG", href: "/discover/news-and-culture/blog" },
-      { text: "NYFA YOUTUBE CHANNEL", href: "/discover/news-and-culture/nyfa-youtube-channel" },
+      { text: "JIU YOUTUBE CHANNEL", href: "/discover/news-and-culture/JIU-youtube-channel" },
       { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },
     ],
   },

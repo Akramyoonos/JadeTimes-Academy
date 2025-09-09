@@ -11,12 +11,12 @@ const MembershipSection = () => {
           <div className="absolute left-0 top-0 h-16 w-1 bg-sky-400"></div>
 
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug pl-5">
-            EXPLORE MORE AS A NYFA MEMBER
+            EXPLORE MORE AS A JIU MEMBER
             <br />
             JOIN TODAY!
           </h3>
 
-          <h3 className="text-2xl font-semibold text-gray-700 mb-2 mt-8">NYFA Membership</h3>
+          <h3 className="text-2xl font-semibold text-gray-700 mb-2 mt-8">JIU Membership</h3>
           <p className="text-pink-600 font-bold mb-8">$50 per year</p>
 
           {/* Buttons */}
@@ -31,22 +31,22 @@ const MembershipSection = () => {
 
           {/* Description */}
           <p className="text-gray-700 font-medium mb-4">
-            NYFA Membership is open to everyone! <br />
-            You can become a NYFA Member from anywhere in the world.
+            JIU Membership is open to everyone! <br />
+            You can become a JIU Member from anywhere in the world.
           </p>
 
           <p className="text-gray-600 mb-4">
-            NYFA Membership is our way to engage with and provide valuable Film, Media, and Performing Arts experiences to our community, prospective students, parents, fans, partners, and all audiences interested in exclusive content and access to industry professionals.
+            JIU Membership is our way to engage with and provide valuable Film, Media, and Performing Arts experiences to our community, prospective students, parents, fans, partners, and all audiences interested in exclusive content and access to industry professionals.
           </p>
           <p className="text-gray-600">
-            NYFA Membership perks include:
+            JIU Membership perks include:
           </p>
         </div>
         {/* Right Content - Image */}
         <div className="flex justify-center md:justify-end md:pr-16">
           <img
             src={MemberImage}
-            alt="NYFA Member Card"
+            alt="JIU Member Card"
             className="w-full max-w-[18rem]"
           />
         </div>

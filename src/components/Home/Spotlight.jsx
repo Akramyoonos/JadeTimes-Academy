@@ -104,42 +104,42 @@ const Spotlight = () => {
     {
       src: NycImage,
       title: "JOIN OUR SEPTEMBER 20 OPEN HOUSE IN NYC",
-      description: "Experience NYFA in the heart of NYC! Join us for an unforgettable day at the New York Film Academy Open House in New York City, located at our stunning NYC campus!"
+      description: "Experience JIU in the heart of NYC! Join us for an unforgettable day at the New York Film Academy Open House in New York City, located at our stunning NYC campus!"
     },
     {
       src: LaImage,
       title: "JOIN OUR SEPTEMBER 20 OPEN HOUSE IN LA",
-      description: "Join us in person for an unforgettable day at the NYFA Los Angeles Open House. The LA campus is located in the entertainment capital of world, in the heart of the historic media district of Burbank."
+      description: "Join us in person for an unforgettable day at the JIU Los Angeles Open House. The LA campus is located in the entertainment capital of world, in the heart of the historic media district of Burbank."
     },
     {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "NYFA offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
     },
     {
       src: VirtualImage,
       title: "OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS",
-      description: "NYFA holds monthly open houses as well as a number of online virtual info sessions and events."
+      description: "JIU holds monthly open houses as well as a number of online virtual info sessions and events."
     },
         {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "NYFA offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
     },
         {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "NYFA offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
     },
         {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "NYFA offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
     },
         {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "NYFA offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
     },
   ];
 

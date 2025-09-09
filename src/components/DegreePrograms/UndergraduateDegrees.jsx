@@ -35,10 +35,10 @@ const UndergraduateDegrees = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 pt-5">
           <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-400">
-            <p className="text-gray-600 text-lg leading-relaxed font-open-sans">NYFA currently offers Bachelor of Fine Arts Degree (BFA), Bachelor's Degree (BA), and Associate of Fine Arts (AFA) undergraduate degree programs.</p>
+            <p className="text-gray-600 text-lg leading-relaxed font-open-sans">JIU currently offers Bachelor of Fine Arts Degree (BFA), Bachelor's Degree (BA), and Associate of Fine Arts (AFA) undergraduate degree programs.</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-400">
-            <p className="text-gray-600 text-lg leading-relaxed font-open-sans">These programs are available at NYFA New York City and Los Angeles. To enroll, students must have a high school diploma.</p>
+            <p className="text-gray-600 text-lg leading-relaxed font-open-sans">These programs are available at JIU New York City and Los Angeles. To enroll, students must have a high school diploma.</p>
           </div>
         </div>
 

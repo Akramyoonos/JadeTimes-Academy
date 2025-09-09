@@ -21,7 +21,7 @@ const City2 = () => {
 
         <div className="space-y-4 text-gray-600">
           <p>Tour Location: 17 Battery Place, New York, NY 10004</p>
-          <p>Tour Timings: NYFA NYC tours are Monday, Wednesday and Friday at 12PM and 3PM.</p>
+          <p>Tour Timings: JIU NYC tours are Monday, Wednesday and Friday at 12PM and 3PM.</p>
         </div>
 
         <div className="mt-8 mb-8 relative inline-block">
@@ -59,7 +59,7 @@ const City2 = () => {
             {/* Directions */}
             <div className="space-y-6">
               <h2 className="text-2xl font-light text-gray-800">
-                Directions to NYFA at Battery Place: <span className="text-purple-600">17 Battery Place NY NY 10004</span>
+                Directions to JIU at Battery Place: <span className="text-purple-600">17 Battery Place NY NY 10004</span>
               </h2>
 
               {/* Subways */}

@@ -33,10 +33,10 @@ const FeaturedContent = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
             <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end">
               <h3 className="uppercase text-xl sm:text-2xl font-extrabold tracking-wide text-white mb-3 leading-snug">
-                NYFA ALUM MASALI BADUZA STARS IN SURPRISE ‘BRIDGERTON’ ROLE
+                JIU ALUM MASALI BADUZA STARS IN SURPRISE ‘BRIDGERTON’ ROLE
               </h3>
               <p className="text-base text-gray-200 leading-relaxed mb-6 max-w-lg">
-                The newest member of the ‘ton? NYFA AFA in Acting for Film alum Masali Baduza!
+                The newest member of the ‘ton? JIU AFA in Acting for Film alum Masali Baduza!
               </p>
               <a
                 href="#"

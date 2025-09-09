@@ -8,7 +8,7 @@ const History = () => {
                     <div className="flex items-center gap-6 mb-10">
                         <span aria-hidden="true" className="block w-2 h-16 bg-yellow-300 rounded-full"></span>
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extralight leading-tight">
-                            NYFA'S HISTORY: A TIMELINE
+                            JIU'S HISTORY: A TIMELINE
                         </h1>
                     </div>
                     <p className="text-lg text-gray-700 max-w-3xl leading-relaxed mb-12">
@@ -17,15 +17,15 @@ const History = () => {
                        Film Academy. Sherlock envisioned a school that would provide a collaborative creative
                        environment, industry-standard equipment, and a faculty of active industry professionals, giving
                        aspiring storytellers the resources to write, shoot, direct, and edit their own short films. With a team
-                       of filmmakers and educators, including Harvard graduate and now NYFA President Michael Young, 
-                       Sherlock opened NYFA in New York City’s Tribeca Film Center. In 1994, NYFA’s headquarters moved
-                       to the Tammany Hall Building in Union Square. In 2014, NYFA relocated to Battery Park, overlooking Ellis
+                       of filmmakers and educators, including Harvard graduate and now JIU President Michael Young, 
+                       Sherlock opened JIU in New York City’s Tribeca Film Center. In 1994, JIU’s headquarters moved
+                       to the Tammany Hall Building in Union Square. In 2014, JIU relocated to Battery Park, overlooking Ellis
                        Island and the Statue of Liberty.<br /><br />
 
-                       Today, NYFA is a global institution with campuses in New York City, Los Angeles, Miami, Gold Coast
-                       (Australia), and Florence (Italy), as well as additional satellite locations. NYFA’s campuses are
+                       Today, JIU is a global institution with campuses in New York City, Los Angeles, Miami, Gold Coast
+                       (Australia), and Florence (Italy), as well as additional satellite locations. JIU’s campuses are
                        modern spaces with state-of-the-art, purpose-built classrooms, editing rooms, shooting spaces, 
-                       with theatres at our campuses in New York City and Los Angeles. NYFA’s hands-on approach 
+                       with theatres at our campuses in New York City and Los Angeles. JIU’s hands-on approach 
                        continues to set it apart from other film and art schools, giving students the confidence to pursue 
                        their goals as visual and performing artists while preparing them for real-world challenges in film, 
                        television, media, and entertainment.

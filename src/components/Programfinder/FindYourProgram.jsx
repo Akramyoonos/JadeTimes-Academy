@@ -178,7 +178,7 @@ const FindYourProgram = () => {
                 </h1>
               </div>
               <p className="text-base text-gray-600 mb-10 max-w-2xl">
-                Use the filters to find more information about NYFA’s programs.
+                Use the filters to find more information about JIU’s programs.
               </p>
               <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 text-base text-gray-700 select-none">
                 <div className="flex items-center gap-2">

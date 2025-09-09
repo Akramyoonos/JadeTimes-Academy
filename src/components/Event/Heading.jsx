@@ -7,7 +7,7 @@ export default function Heading() {
       <div className="container mx-auto flex items-center justify-between">
         <a href="/" className="flex-shrink-0">
             <img
-              alt="NYFA logo"
+              alt="JIU logo"
               className="h-12 w-auto"
               src={Logo} 
             />

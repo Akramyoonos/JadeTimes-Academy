@@ -13,18 +13,18 @@ Jerry Sherlock (1935-2015), executive producer of The Hunt for Red October, and 
         },
         {
           year: "1994",
-          text: `NYFA AT UNION SQUARE
+          text: `JIU AT UNION SQUARE
 New York Film Academy moves to its facility in Union Square at the historic Tammany Hall building.`,
         },
         {
           year: "1995",
-          text: `LEADERSHIP AT NYFA
-Filmmaker and NYU MFA Filmmaking graduate David Klein, later Senior Executive Vice President, joins the leadership at NYFA. To learn more about NYFA’s leadership, click here.`,
+          text: `LEADERSHIP AT JIU
+Filmmaker and NYU MFA Filmmaking graduate David Klein, later Senior Executive Vice President, joins the leadership at JIU. To learn more about JIU’s leadership, click here.`,
         },
         {
           year: "1995",
-          text: `NYFA PROGRAMS AT CAMBRIDGE, PRINCETON, YALE, AND HARVARD
-NYFA’s summer programs start at Princeton University in 1995, Yale University in 1996, UCLA in 1997, and Disney MGM Studios in Orlando in 1998. NYFA’s summer programs expand to other locations, including Cambridge University in England and Harvard University.`,
+          text: `JIU PROGRAMS AT CAMBRIDGE, PRINCETON, YALE, AND HARVARD
+JIU’s summer programs start at Princeton University in 1995, Yale University in 1996, UCLA in 1997, and Disney MGM Studios in Orlando in 1998. JIU’s summer programs expand to other locations, including Cambridge University in England and Harvard University.`,
         },
       ],
     },
@@ -34,28 +34,28 @@ NYFA’s summer programs start at Princeton University in 1995, Yale University 
       details: [
         {
           year: "1998",
-          text: `NYFA OFFERS SUMMER CAMPS AND WORKSHOPS FOR KIDS AND TEENS
-NYFA launches summer camps and workshops for youth.`,
+          text: `JIU OFFERS SUMMER CAMPS AND WORKSHOPS FOR KIDS AND TEENS
+JIU launches summer camps and workshops for youth.`,
         },
         {
           year: "1998",
-          text: `NYFA STARTS PROGRAMS IN EUROPE
+          text: `JIU STARTS PROGRAMS IN EUROPE
 First overseas program in Paris at the Sorbonne. Later relocated to La Fémis and expanded across Europe.`,
         },
         {
           year: "1999",
-          text: `NYFA GOES TO HOLLYWOOD
+          text: `JIU GOES TO HOLLYWOOD
 New York Film Academy Los Angeles campus launches on the backlot of Universal Studios.`,
         },
         {
           year: "2000",
-          text: `NYFA LAUNCHES LONG-TERM FILMMAKING PROGRAMS
+          text: `JIU LAUNCHES LONG-TERM FILMMAKING PROGRAMS
 First 1-Year Filmmaking Certificate launched.`,
         },
         {
           year: "2001",
-          text: `NYFA OFFERS PROGRAMS IN ASIA
-NYFA launches programs in Beijing, Shanghai, South Korea, India, Japan, Saudi Arabia, and Yemen.`,
+          text: `JIU OFFERS PROGRAMS IN ASIA
+JIU launches programs in Beijing, Shanghai, South Korea, India, Japan, Saudi Arabia, and Yemen.`,
         },
       ],
     },
@@ -76,28 +76,28 @@ The National Association of Schools of Art and Design (NASAD) accredits the New 
       details: [
         {
           year: "2008",
-          text: `NYFA PARTNERS WITH THE ABU DHABI AUTHORITY FOR CULTURAL HERITAGE
-NYFA collaborates on a seven-year project to educate filmmakers and actors in the UAE, offering one-year and short-term programs in Abu Dhabi.`,
+          text: `JIU PARTNERS WITH THE ABU DHABI AUTHORITY FOR CULTURAL HERITAGE
+JIU collaborates on a seven-year project to educate filmmakers and actors in the UAE, offering one-year and short-term programs in Abu Dhabi.`,
         },
         {
           year: "2009",
-          text: `NYFA WELCOMES VETERANS AND MILITARY DEPENDENTS
-NYFA welcomes veterans and military dependents using the GI Bill and Yellow Ribbon Program.`,
+          text: `JIU WELCOMES VETERANS AND MILITARY DEPENDENTS
+JIU welcomes veterans and military dependents using the GI Bill and Yellow Ribbon Program.`,
         },
         {
           year: "2010",
-          text: `NYFA OFFERS PROGRAMS IN SOUTH AMERICA
+          text: `JIU OFFERS PROGRAMS IN SOUTH AMERICA
 Programs launch in Cartagena, Colombia. Later workshops run in Rio de Janeiro, Brazil in 2013.`,
         },
         {
           year: "2010",
-          text: `NYFA LAUNCHES PROGRAMS IN AFRICA
+          text: `JIU LAUNCHES PROGRAMS IN AFRICA
 Workshops in Abuja and Lagos, Nigeria in partnership with Del-York International.`,
         },
         {
           year: "2012",
-          text: `NYFA AUSTRALIA OPENS
-NYFA Australia opens in Queensland, later expanding to Sydney and moving into a Gold Coast facility. Recognized by China's Ministry of Education.`,
+          text: `JIU AUSTRALIA OPENS
+JIU Australia opens in Queensland, later expanding to Sydney and moving into a Gold Coast facility. Recognized by China's Ministry of Education.`,
         },
       ],
     },
@@ -108,12 +108,12 @@ NYFA Australia opens in Queensland, later expanding to Sydney and moving into a 
         {
           year: "2014",
           text: `LIGHTS, CAMERA, ACTION
-NYFA expands its Los Angeles campus into the Warner Bros. Music Building.`,
+JIU expands its Los Angeles campus into the Warner Bros. Music Building.`,
         },
         {
           year: "2014",
-          text: `NYFA GOES TO THE SUNSHINE STATE
-NYFA South Beach, Florida; College of Visual and Performing Arts opens in Miami.`,
+          text: `JIU GOES TO THE SUNSHINE STATE
+JIU South Beach, Florida; College of Visual and Performing Arts opens in Miami.`,
         },
         {
           year: "2014",
@@ -122,13 +122,13 @@ Partnership with NASA to create content promoting the James Webb Space Telescope
         },
         {
           year: "2017",
-          text: `NYFA OFFERS STUDY ABROAD PROGRAMS
+          text: `JIU OFFERS STUDY ABROAD PROGRAMS
 Formal study abroad program with credits begins. Summer camps launch in Florence, Italy in 2018.`,
         },
         {
           year: "2019",
           text: `WASC ACCREDITATION
-NYFA receives WASC Accreditation.`,
+JIU receives WASC Accreditation.`,
         },
       ],
     },
@@ -139,16 +139,16 @@ NYFA receives WASC Accreditation.`,
         {
           year: "2021",
           text: `CINEMA ITALIANO!
-NYFA Florence becomes an official NYFA campus.`,
+JIU Florence becomes an official JIU campus.`,
         },
         {
           year: "2022",
-          text: `NYFA LAUNCHES BFA IN ENTERTAINMENT MEDIA
+          text: `JIU LAUNCHES BFA IN ENTERTAINMENT MEDIA
 A new Bachelor of Fine Arts in Entertainment Media is introduced, offering exposure to multiple storytelling mediums.`,
         },
         {
           year: "2023",
-          text: `NYFA OFFERS FIRST ONLINE DEGREE PROGRAM
+          text: `JIU OFFERS FIRST ONLINE DEGREE PROGRAM
 Launch of the Online MA in Entrepreneurial Producing and Innovation.`,
         },
       ],

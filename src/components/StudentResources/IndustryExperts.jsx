@@ -8,10 +8,10 @@ const IndustryExperts = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           
-          {/* Left Column: NYFA Partnerships */}
+          {/* Left Column: JIU Partnerships */}
           <div className="relative bg-gradient-to-br from-red-700 to-indigo-700 p-8 rounded-lg shadow-2xl min-h-[500px] flex flex-col justify-between text-white transform hover:scale-105 transition-transform duration-300">
             <div>
-              <h2 className="text-2xl font-bold tracking-widest">NYFA PARTNERSHIPS</h2>
+              <h2 className="text-2xl font-bold tracking-widest">JIU PARTNERSHIPS</h2>
               <p className="mt-4 text-indigo-200">Explore our collaborations with industry leaders and institutions.</p>
             </div>
             <div className="flex justify-end items-center">
@@ -41,12 +41,12 @@ const IndustryExperts = () => {
 
           {/* Right Column: Tribeca Article */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-            <img src={PartnershipImg02} alt="NYFA group at Tribeca" className="w-full h-64 object-cover"/>
+            <img src={PartnershipImg02} alt="JIU group at Tribeca" className="w-full h-64 object-cover"/>
             <div className="p-6">
               <p className="text-gray-500 text-xs font-semibold tracking-widest">JULY 16, 2025</p>
-              <h3 className="text-xl font-bold text-gray-800 leading-tight mt-2">History Made at Tribeca: NYFA Alum Mohamed Diab and Sarah Goher's Film Sweeps Awards</h3>
+              <h3 className="text-xl font-bold text-gray-800 leading-tight mt-2">History Made at Tribeca: JIU Alum Mohamed Diab and Sarah Goher's Film Sweeps Awards</h3>
               <p className="text-gray-600 text-base mt-4">
-                NYFA alum and board member Mohamad Diab's film makes history at the Tribeca Film Festival, and the NYFA community had a front-row seat.
+                JIU alum and board member Mohamad Diab's film makes history at the Tribeca Film Festival, and the JIU community had a front-row seat.
               </p>
               <a href="#" className="text-purple-600 hover:text-purple-800 font-bold text-sm tracking-wider mt-6 inline-block">LEARN MORE &rarr;</a>
             </div>

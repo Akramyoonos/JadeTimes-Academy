@@ -40,7 +40,7 @@ const HEADLINES = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-800 leading-tight uppercase">Q&A With Bob Ahmed</h3>
               <p className="text-gray-600 text-base mt-4 flex-grow">
-                Meet Pakistani-American writer and director Bob Ahmed, an alum of NYFA’s short-term filmmaking workshop. We recently caught up with Bob to discuss his career and latest project.
+                Meet Pakistani-American writer and director Bob Ahmed, an alum of JIU’s short-term filmmaking workshop. We recently caught up with Bob to discuss his career and latest project.
               </p>
               <a href="#" className="text-pink-600 hover:text-pink-800 font-bold text-sm tracking-wider mt-6 inline-block self-start">LEARN MORE &rarr;</a>
             </div>
@@ -55,9 +55,9 @@ const HEADLINES = () => {
             />
             <div className="p-6 flex flex-col flex-grow">
               <p className="text-gray-500 text-xs font-semibold tracking-widest mb-4 text-right">MAY 23, 2024</p>
-              <h3 className="text-xl font-bold text-gray-800 leading-tight uppercase">NYFA Alum Step into the Spotlight at Cannes</h3>
+              <h3 className="text-xl font-bold text-gray-800 leading-tight uppercase">JIU Alum Step into the Spotlight at Cannes</h3>
               <p className="text-gray-600 text-base mt-4 flex-grow">
-                Join us in celebrating NYFA alumni debuting films at the 77th Cannes Film Festival! Under the direction of jury president, filmmaker, and actress Greta Gerwig, known for the 2023 blockbuster...
+                Join us in celebrating JIU alumni debuting films at the 77th Cannes Film Festival! Under the direction of jury president, filmmaker, and actress Greta Gerwig, known for the 2023 blockbuster...
               </p>
               <a href="#" className="text-pink-600 hover:text-pink-800 font-bold text-sm tracking-wider mt-6 inline-block self-start">LEARN MORE &rarr;</a>
             </div>

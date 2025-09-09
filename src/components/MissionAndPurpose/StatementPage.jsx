@@ -21,7 +21,7 @@ const StatementPage = () => {
         {/* Mission */}
         <h3 className="text-2xl font-semibold mb-2">Mission</h3>
         <p className="text-gray-700 mb-8 leading-relaxed">
-          NYFA propagates visual literacy and visual storytelling through hands-on
+          JIU propagates visual literacy and visual storytelling through hands-on
           intensive learning. It seeks to make visual storytelling education
           accessible to the most diverse, international, and broadest possible
           spectrum of students, and to hone the skills of future professionals so

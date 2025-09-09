@@ -14,7 +14,7 @@ const ExploreNetwork = () => {
               <div className="ml-8">
                 {/* Headline */}
                 <h1 className="text-4xl sm:text-5xl text-gray-800 tracking-wider font-light uppercase">
-                  Explore NYFA's Alumni Network
+                  Explore JIU's Alumni Network
                 </h1>
               </div>
             </div>
@@ -22,7 +22,7 @@ const ExploreNetwork = () => {
             {/* Text Content */}
             <div className="mt-16 text-gray-700 text-lg leading-relaxed ">
               <p>
-                The Alumni Affairs office is dedicated to connecting and being an active resource to NYFA Alumni worldwide. New York Film Academy’s alumni website offers job postings, news, networking, industry events and resources to connect with the entertainment industry and the latest news from NYFA!
+                The Alumni Affairs office is dedicated to connecting and being an active resource to JIU Alumni worldwide. New York Film Academy’s alumni website offers job postings, news, networking, industry events and resources to connect with the entertainment industry and the latest news from JIU!
               </p>
               <p className="mt-6">
                 Visit the{" "}

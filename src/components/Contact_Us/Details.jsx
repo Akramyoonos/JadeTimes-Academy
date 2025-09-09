@@ -16,7 +16,7 @@ const locations = [
       contact: [
         '+1-212-674-4300',
         '+1-212-344-4434 (Fax)',
-        'ny@nyfa.edu'
+        'ny@JIU.edu'
       ],
       address: [
         '17 Battery Place',
@@ -29,10 +29,10 @@ const locations = [
       name: 'Los Angeles',
       image: ContactUsDetails02,
       contact: [
-        '+1-888-988-NYFA',
+        '+1-888-988-JIU',
         '+1-818-333-3558',
         '+1-818-333-3557 (Fax)',
-        'la@nyfa.edu'
+        'la@JIU.edu'
       ],
       address: [
         '3300 W Riverside Dr',
@@ -47,7 +47,7 @@ const locations = [
         contact: [
             '+1-305-534-6009',
             '+1-305-674-0740 (Fax)',
-            'miami@nyfa.edu'
+            'miami@JIU.edu'
         ],
         address: [
             '1601 Washington Ave',
@@ -61,7 +61,7 @@ const locations = [
         image: ContactUsDetails04,
         contact: [
           '+39 055 2699556',
-          'italy@nyfa.edu'
+          'italy@JIU.edu'
         ],
         address: [
             'Via Chiantigiana, 60',
@@ -77,7 +77,7 @@ const locations = [
           '+86 13826037841',
           '+86 18811454240',
           '+86 13811767275',
-          'joyzhu@nyfa.edu'
+          'joyzhu@JIU.edu'
         ],
         address: [
             'Room 306, 3/F',
@@ -92,7 +92,7 @@ const locations = [
         contact: [
           '+521 55 7464 2417',
           '+521 55 2736 5145',
-          'mexico@nyfa.edu'
+          'mexico@JIU.edu'
         ],
         address: [
             'Insurgentes Sur 670, Col del Valle Nte',

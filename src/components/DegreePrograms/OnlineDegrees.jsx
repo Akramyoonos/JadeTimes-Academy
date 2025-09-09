@@ -33,7 +33,7 @@ const OnlineDegrees = () => {
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-400 max-w-2xl mx-auto text-center transition-all duration-300 hover:shadow-xl hover:border-purple-600">
           <p className="text-gray-700 text-xl leading-relaxed font-open-sans">
-            In addition to our in-person degree programs, NYFA offers a selection of innovative online degree programs.
+            In addition to our in-person degree programs, JIU offers a selection of innovative online degree programs.
           </p>
         </div>
       </div>

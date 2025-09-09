@@ -32,7 +32,7 @@ const ForStudents = () => {
                     </p>
 
                     <p className="text-black font-semibold text-xl mb-12">
-                        For any technical support please email: <a href="mailto:support@nyfa.edu" className="text-purple-600">support@nyfa.edu</a>
+                        For any technical support please email: <a href="mailto:support@JIU.edu" className="text-purple-600">support@JIU.edu</a>
                     </p>
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 text-center ">
@@ -40,13 +40,13 @@ const ForStudents = () => {
                             <a href="#" className="bg-gray-800 rounded-full w-16 h-16 flex items-center justify-center mb-2">
                                 <i className="fas fa-envelope text-white text-3xl"></i>
                             </a>
-                            <span className="text-purple-800 font-semibold">NYFA Email</span>
+                            <span className="text-purple-800 font-semibold">JIU Email</span>
                         </div>
                         <div className="flex flex-col items-center">
                             <a href="#" className="bg-purple-500 rounded-full w-16 h-16 flex items-center justify-center mb-2">
                                 <i className="fas fa-th-large text-white text-3xl"></i>
                             </a>
-                            <span className="text-purple-800 font-semibold">NYFA Student Hub</span>
+                            <span className="text-purple-800 font-semibold">JIU Student Hub</span>
                         </div>
                         <div className="flex flex-col items-center">
                             <a href="#" className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mb-2">
@@ -62,7 +62,7 @@ const ForStudents = () => {
                                     <span className="absolute inset-0 flex items-center justify-center text-white text-5xl font-bold">N</span>
                                 </div>
                             </div>
-                            <span className="text-purple-800 font-semibold mb-1">NYFA Mobile App</span>
+                            <span className="text-purple-800 font-semibold mb-1">JIU Mobile App</span>
                             <div className="text-sm">
                                 <a href="#" className="text-purple-800 font-semibold">App Store</a><br />
                                 <a href="#" className="text-purple-800 font-semibold">Google Play Store</a>

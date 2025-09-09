@@ -11,7 +11,7 @@ const Heading = () => {
             <div className="absolute inset-0 bg-black/60"></div>
             
             <header className="absolute top-0 left-0 p-8 pl-22">
-                <p className="text-white text-sm tracking-widest ">NYFA / STUDENT RESOURCES</p>
+                <p className="text-white text-sm tracking-widest ">JIU / STUDENT RESOURCES</p>
             </header>
 
             <main className="relative z-10 h-full flex items-center justify-center text-center text-white">

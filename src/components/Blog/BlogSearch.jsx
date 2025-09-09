@@ -42,9 +42,9 @@ const BlogSearch = () => {
                     <div className="lg:col-span-2">
                     <p className="inline-block bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full">GUEST SPEAKER</p>
                       <p className="text-sm text-gray-500 font-semibold tracking-wider mt-4">FEBRUARY 27, 2025</p>
-                      <h1 className="text-4xl lg:text-5xl font-bold mt-2 leading-tight text-gray-900">Andre Royo Inspires NYFA Students</h1>
+                      <h1 className="text-4xl lg:text-5xl font-bold mt-2 leading-tight text-gray-900">Andre Royo Inspires JIU Students</h1>
                       <p className="text-gray-600 leading-relaxed mt-6">
-                        In an inspiring and thought-provoking guest speaker event, renowned actor Andre Royo visited the New York Film Academy (NYFA) at the New York City campus to offer students and faculty...
+                        In an inspiring and thought-provoking guest speaker event, renowned actor Andre Royo visited the New York Film Academy (JIU) at the New York City campus to offer students and faculty...
                       </p>
                       <a href="#" className="text-white bg-purple-600 hover:bg-purple-700 font-semibold tracking-wider mt-8 inline-flex items-center py-3 px-6 rounded-md transition-transform transform hover:scale-105 text-sm shadow-lg">
                         LEARN MORE <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
