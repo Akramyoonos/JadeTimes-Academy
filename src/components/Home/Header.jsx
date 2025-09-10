@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 // Removed NavLink import as it requires a Router context which is not available.
 
 import logo from "../../assets/Images/Logo.png";
+import Campus03Image from "../../assets/Images/Campus03.jpeg";
 
 // ---------------- ICONS ----------------
 // Inlined SVG icons to replace the FontAwesome package which was causing errors.
@@ -43,10 +44,10 @@ const gutters = "px-4 sm:px-6 lg:px-10";
 const ACCENTS = {
   academics: "#28A8E0", // blue
   admissions: "#A44FBF", // purple
-  campuses: "#F5C94A",   // yellow
+  campuses: "#F5C90A",   // yellow (FIXED: was invalid hex #F5C9A)
   discover: "#A44FBF",   // purple
   alumni:   "#28A8E0",   // blue
-  youth:    "#F5C94A",   // yellow
+  youth:    "#F5C90A",   // yellow
 };
 
 // one-place font size control
@@ -78,21 +79,21 @@ const navLinks = [
 const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
-      { text: "FILMMAKING", href: "/AdmissionRequirements_Page" },
-      { text: "ACTING FOR FILM", href: "/Membership_Page" },
+      { text: "FILMMAKING", href: "/academics/areas-of-study/filmmaking" },
+      { text: "ACTING FOR FILM", href: "/academics/areas-of-study/acting-for-film" },
       { text: "PHOTOGRAPHY", href: "/academics/areas-of-study/photography" },
-      { text: "PRODUCING", href: "/programfinder" },
+      { text: "PRODUCING", href: "/academics/areas-of-study/producing" },
       { text: "SCREENWRITING", href: "/academics/areas-of-study/screenwriting" },
       { text: "CINEMATOGRAPHY", href: "/academics/areas-of-study/cinematography" },
       { text: "DOCUMENTARY FILMMAKING", href: "/academics/areas-of-study/documentary-filmmaking" },
-      { text: "DIGITAL EDITING", href: "/RequestInfo_Page" },
+      { text: "DIGITAL EDITING", href: "/academics/areas-of-study/digital-editing" },
       { text: "3D ANIMATION & VISUAL EFFECTS", href: "/academics/areas-of-study/3d-animation-visual-effects" },
       { text: "BROADCAST JOURNALISM", href: "/academics/areas-of-study/broadcast-journalism" },
       { text: "MUSICAL THEATRE", href: "/academics/areas-of-study/musical-theatre" },
       { text: "GAME DESIGN", href: "/academics/areas-of-study/game-design" },
       { text: "ENTERTAINMENT MEDIA", href: "/academics/areas-of-study/entertainment-media" },
       { text: "VIRTUAL REALITY", href: "/academics/areas-of-study/virtual-reality" },
-      { text: "JIU'S PATHWAY TRACK", href: "/academics/areas-of-study/JIUs-pathway-track" },
+      { text: "JIU'S PATHWAY TRACK", href: "/academics/areas-of-study/jius-pathway-track" },
     ],
     "DEGREE PROGRAMS": [
       { text: "BACHELOR OF FINE ARTS", href: "/academics/degree-programs/bachelor-of-fine-arts" },
@@ -109,8 +110,8 @@ const megaMenus = {
       { text: "CORPORATE TRAINING", href: "/academics/certificate-programs/corporate-training" },
     ],
     "STUDY ABROAD WITH JIU": [
-      { text: "FILMMAKING", href: "/academics/study-abroad-with-JIU/filmmaking" },
-      { text: "ACTING FOR FILM", href: "/academics/study-abroad-with-JIU/acting-for-film" },
+      { text: "FILMMAKING", href: "/academics/study-abroad-with-jiu/filmmaking" },
+      { text: "ACTING FOR FILM", href: "/academics/study-abroad-with-jiu/acting-for-film" },
     ],
   },
   admissionsFinancesMenu: {
@@ -119,15 +120,27 @@ const megaMenus = {
       { text: "APPLICATION DEADLINES", href: "/admissions/admissions/application-deadlines" },
       { text: "ADMISSIONS REQUIREMENTS", href: "/admissions/admissions/admissions-requirements" },
       { text: "INTERNATIONAL STUDENTS", href: "/admissions/admissions/international-students" },
-      { text: "VETERANS & MILITARY", href: "/admissions/admissions/veterans-military" },
+      { text: "VETERANS & MILITARY DEPENDENT STUDENTS", href: "/admissions/admissions/veterans-military-dependent-students" },
+      { text: "TRANSFER STUDENTS", href: "/admissions/admissions/transfer-students" },
+      { text: "CROSS-CAMPUS STUDIES", href: "/admissions/admissions/cross-campus-studies" },
+      { text: "ADVANCED STANDING AND TUITION CREDIT", href: "/admissions/admissions/advanced-standing-and-tuition-credit" },
+      { text: "MEET JIU NEAR YOU", href: "/admissions/admissions/meet-jiu-near-you" },
+      { text: "HEALTH REQUIREMENTS", href: "/admissions/admissions/health-requirements" },
     ],
     "FINANCES": [
       { text: "TUITION", href: "/admissions/finances/tuition" },
       { text: "FEDERAL FINANCIAL AID", href: "/admissions/finances/federal-financial-aid" },
       { text: "SCHOLARSHIPS & GRANTS", href: "/admissions/finances/scholarships-grants" },
       { text: "PRIVATE STUDENT LOANS", href: "/admissions/finances/private-student-loans" },
+      { text: "GI BILL & YELLOW RIBBON PROGRAM", href: "/admissions/finances/gi-bill-yellow-ribbon-program" },
       { text: "HOUSING INFORMATION", href: "/admissions/finances/housing-information" },
     ],
+    "eventBox": {
+      title: "OPEN HOUSE & LIVE ONLINE EVENTS",
+      linkText: "EVENT DATES",
+      href: "/discover/on-campus/open-house-live-online-events",
+      image: Campus03Image
+    }
   },
   campusesMenu: {
     "CAMPUSES": [
@@ -145,25 +158,43 @@ const megaMenus = {
   },
   discoverMenu: {
     "WHO WE ARE": [
-      { text: "ABOUT US", href: "/about" },
-      { text: "HISTORY", href: "/History_Page" },
-      { text: "MISSION & PURPOSE", href: "/MissionAndPurpose_Page" },
-      { text: "ACCREDITATION", href: "/Accreditation_Page" },
+      { text: "ABOUT US", href: "/discover/who-we-are/about-us" },
+      { text: "HISTORY", href: "/discover/who-we-are/history" },
+      { text: "MISSION & PURPOSE", href: "/discover/who-we-are/mission-purpose" },
+      { text: "ACCREDITATION, LICENSING, AND APPROVALS", href: "/discover/who-we-are/accreditation-licensing-approvals" },
+      { text: "ARTICULATION", href: "/discover/who-we-are/articulation" },
+      { text: "AFFILIATIONS", href: "/discover/who-we-are/affiliations" },
+      { text: "FACULTY DIRECTORY", href: "/discover/who-we-are/faculty-directory" },
       { text: "LEADERSHIP & ADMINISTRATION", href: "/discover/who-we-are/leadership-administration" },
+      { text: "NYFA REVIEWS", href: "/discover/who-we-are/nyfa-reviews" },
+      { text: "FAQ", href: "/discover/who-we-are/faq" },
+      { text: "NYFA CATALOGS", href: "/discover/who-we-are/nyfa-catalogs" },
+      { text: "AWARDS & RANKINGS", href: "/discover/who-we-are/awards-rankings" },
     ],
     "ON CAMPUS": [
-      { text: "VISIT US", href: "/VisitUs_Page" },
+      { text: "VISIT US", href: "/discover/on-campus/visit-us" },
       { text: "OPEN HOUSE & LIVE ONLINE EVENTS", href: "/discover/on-campus/open-house-live-online-events" },
       { text: "ACADEMIC CALENDAR", href: "/discover/on-campus/academic-calendar" },
+      { text: "CAMPUS SAFETY & CLERY ACT", href: "/discover/on-campus/campus-safety-clery-act" },
+      { text: "TITLE IX", href: "/discover/on-campus/title-ix" },
       { text: "STUDENT LIFE", href: "/discover/on-campus/student-life" },
       { text: "HEALTH AND WELLNESS", href: "/discover/on-campus/health-and-wellness" },
+      { text: "CAREER AND ALUMNI SERVICES", href: "/discover/on-campus/career-alumni-services" },
+      { text: "THE FILM FESTIVAL DEPARTMENT AT NYFA", href: "/discover/on-campus/film-festival-department" },
+      { text: "JOBS AT NYFA", href: "/discover/on-campus/jobs-at-nyfa" },
+      { text: "ACCESSIBILITY SERVICES", href: "/discover/on-campus/accessibility-services" },
     ],
     "NEWS AND CULTURE": [
       { text: "GUEST SPEAKERS", href: "/discover/news-and-culture/guest-speakers" },
-      { text: "JIU IN THE NEWS", href: "/discover/news-and-culture/JIU-in-the-news" },
+      { text: "NYFA IN THE NEWS", href: "/discover/news-and-culture/nyfa-in-the-news" },
       { text: "BLOG", href: "/discover/news-and-culture/blog" },
-      { text: "JIU YOUTUBE CHANNEL", href: "/discover/news-and-culture/JIU-youtube-channel" },
+      { text: "NYFA YOUTUBE CHANNEL", href: "/discover/news-and-culture/nyfa-youtube-channel" },
       { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },
+      { text: "STUDENT RESOURCES", href: "/discover/news-and-culture/student-resources" },
+      { text: "NYFA STORE", href: "/discover/news-and-culture/nyfa-store" },
+      { text: "10 ARTS FOUNDATION", href: "/discover/news-and-culture/10-arts-foundation" },
+      { text: "COMMUNITY PARTNERSHIPS & COLLABORATIONS", href: "/discover/news-and-culture/community-partnerships-collaborations" },
+      { text: "INDUSTRY LAB", href: "/discover/news-and-culture/industry-lab" },
     ],
   },
   youthMenu: {
@@ -172,8 +203,12 @@ const megaMenus = {
       { text: "ACTING FOR FILM", href: "/youth/teen-camps-and-workshops/acting-for-film" },
       { text: "PHOTOGRAPHY", href: "/youth/teen-camps-and-workshops/photography" },
       { text: "SCREENWRITING", href: "/youth/teen-camps-and-workshops/screenwriting" },
+      { text: "DOCUMENTARY FILMMAKING", href: "/youth/teen-camps-and-workshops/documentary-filmmaking" },
       { text: "3D ANIMATION", href: "/youth/teen-camps-and-workshops/3d-animation" },
+      { text: "MUSICAL THEATRE", href: "/youth/teen-camps-and-workshops/musical-theatre" },
       { text: "GAME DESIGN", href: "/youth/teen-camps-and-workshops/game-design" },
+      { text: "ONLINE PROGRAMS FOR TEENS", href: "/youth/teen-camps-and-workshops/online-programs-for-teens" },
+      { text: "TEEN AND KIDS 2-DAY HOLIDAY WORKSHOPS", href: "/youth/teen-camps-and-workshops/teen-and-kids-2-day-holiday-workshops" },
     ],
     "KIDS CAMPS AND WORKSHOPS": [
       { text: "FILMMAKING", href: "/youth/kids-camps-and-workshops/filmmaking" },
@@ -181,20 +216,26 @@ const megaMenus = {
       { text: "PHOTOGRAPHY", href: "/youth/kids-camps-and-workshops/photography" },
       { text: "3D ANIMATION", href: "/youth/kids-camps-and-workshops/3d-animation" },
       { text: "MUSICAL THEATRE", href: "/youth/kids-camps-and-workshops/musical-theatre" },
+      { text: "GAME DESIGN", href: "/youth/kids-camps-and-workshops/game-design" },
+      { text: "ONLINE PROGRAMS FOR KIDS", href: "/youth/kids-camps-and-workshops/online-programs-for-kids" },
+      { text: "TEEN AND KIDS 2-DAY HOLIDAY WORKSHOPS", href: "/youth/kids-camps-and-workshops/teen-and-kids-2-day-holiday-workshops" },
     ],
     "YOUTH ADMISSIONS": [
       { text: "PROGRAM DATES", href: "/youth/youth-admissions/program-dates" },
       { text: "TUITION", href: "/youth/youth-admissions/tuition" },
       { text: "HOUSING", href: "/youth/youth-admissions/housing" },
+      { text: "INSURANCE", href: "/youth/youth-admissions/insurance" },
+      { text: "SUPERVISION", href: "/youth/youth-admissions/supervision" },
       { text: "INTERNATIONAL STUDENTS", href: "/youth/youth-admissions/international-students" },
+      { text: "ALL PROGRAMS AT A GLANCE", href: "/youth/youth-admissions/all-programs-at-a-glance" },
       { text: "YOUTH OPEN HOUSES", href: "/youth/youth-admissions/youth-open-houses" },
     ],
     "LOCATIONS": [
       { text: "NEW YORK CITY", href: "/youth/locations/new-york-city" },
       { text: "LOS ANGELES", href: "/youth/locations/los-angeles" },
-      { text: "MIAMI", href: "/youth/locations/miami" },
       { text: "FLORENCE, ITALY", href: "/youth/locations/florence-italy" },
       { text: "HARVARD UNIVERSITY", href: "/youth/locations/harvard-university" },
+      { text: "PARIS, FRANCE", href: "/youth/locations/paris-france" },
     ],
   },
 };
@@ -310,72 +351,145 @@ const SearchDropdown = ({ open, onClose }) => {
   );
 };
 
-const MegaMenu = ({ open, config, accent, id }) => {
-  if (!config) return null;
+const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
+    if (!config) return null;
 
-  return (
-    <div
-      id={id}
-      className={`absolute left-0 right-0 top-full z-40 origin-top transform transition-all duration-300 ease-in-out ${
-        open ? "scale-100 translate-y-0 opacity-100" : "scale-95 -translate-y-2 opacity-0 pointer-events-none"
-      }`}
-      aria-hidden={!open}
-    >
-      <div className="w-full bg-[#141414]">
-        <div className="py-10 px-8">
-          <div
-            className="grid gap-x-8 gap-y-6"
-            style={{ gridTemplateColumns: `repeat(${Object.keys(config).length}, minmax(0, 1fr))` }}
-          >
-            {Object.entries(config).map(([section, items]) => (
-              <div key={section} className="pl-5">
-                <h3
-                  className="uppercase mb-4 pb-2 font-normal tracking-tight"
-                  style={{
-                    color: "white",
-                    borderBottom: `2px solid ${accent}`,
-                    fontSize: "var(--size-mega-heading)",
-                    lineHeight: 1.25,
-                  }}
-                >
-                  {section}
-                </h3>
-                <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
-                  {items.map((item) => {
-                    const wrapClass =
-                      section === "AREAS OF STUDY"
-                        ? "max-w-[300px] whitespace-normal leading-tight"
-                        : "whitespace-normal leading-tight";
-                    return (
-                      <li key={item.href}>
-                        <a
-                          href={item.href}
-                          className={`block text-white hover:underline transition-colors ${wrapClass}`}
-                          style={{ fontSize: "var(--size-mega-item)" }}
-                          title={item.text}
-                        >
-                          {item.text}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
+    const { eventBox, ...linkSections } = config;
+    const sections = Object.entries(linkSections);
+    
+    // START: Custom layout for the Campuses Menu
+    if (id === 'megamenu-campuses') {
+      return (
+        <div
+            id={id}
+            className={`absolute left-0 right-0 top-full z-40 origin-top transform transition-all duration-300 ease-in-out ${
+                open ? "scale-100 translate-y-0 opacity-100" : "scale-95 -translate-y-2 opacity-0 pointer-events-none"
+            }`}
+            aria-hidden={!open}
+        >
+            <div className="w-full bg-[#141414]">
+                <div className="py-10 px-8">
+                    <div className="grid grid-cols-2 gap-x-12">
+                        {sections.map(([section, items]) => (
+                            <div key={section}>
+                                <h3
+                                    className="uppercase mb-2 font-normal tracking-tight text-white"
+                                    style={{ fontSize: "var(--size-mega-heading)" }}
+                                >
+                                    {section}
+                                </h3>
+                                <div
+                                    className="h-px w-full mb-4"
+                                    style={{ backgroundColor: accent }}
+                                ></div>
+                                <ul className="space-y-3">
+                                    {items.map((item) => (
+                                        <li key={item.href}>
+                                            <a
+                                                href={item.href}
+                                                className="block text-white hover:underline transition-colors"
+                                                style={{ fontSize: "var(--size-mega-item)" }}
+                                                title={item.text}
+                                                onClick={closeMenu} // Added onClick
+                                            >
+                                                {item.text}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+      );
+    }
+    // END: Custom layout for the Campuses Menu
+
+    const gridCols = sections.map(() => 'minmax(0, 1fr)').join(' ') + (eventBox ? ' minmax(350px, 400px)' : '');
+  
+    return (
+      <div
+        id={id}
+        className={`absolute left-0 right-0 top-full z-40 origin-top transform transition-all duration-300 ease-in-out ${
+          open ? "scale-100 translate-y-0 opacity-100" : "scale-95 -translate-y-2 opacity-0 pointer-events-none"
+        }`}
+        aria-hidden={!open}
+      >
+        <div className="w-full bg-[#141414]">
+          <div className="py-10 px-8">
+            <div
+              className="grid gap-x-8 gap-y-6 items-start"
+              style={{ gridTemplateColumns: gridCols }}
+            >
+              {sections.map(([section, items]) => (
+                <div key={section} className="pl-5">
+                  <h3
+                    className="uppercase mb-4 pb-2 font-normal tracking-tight"
+                    style={{
+                      color: "white",
+                      borderBottom: `2px solid ${accent}`,
+                      fontSize: "var(--size-mega-heading)",
+                      lineHeight: 1.25,
+                    }}
+                  >
+                    {section}
+                  </h3>
+                  <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
+                    {items.map((item) => {
+                      const wrapClass =
+                        section === "AREAS OF STUDY"
+                          ? "max-w-[300px] whitespace-normal leading-tight"
+                          : "whitespace-normal leading-tight";
+                      return (
+                        <li key={item.href}>
+                          <a
+                            href={item.href}
+                            className={`block text-white hover:underline transition-colors ${wrapClass}`}
+                            style={{ fontSize: "var(--size-mega-item)" }}
+                            title={item.text}
+                            onClick={closeMenu} // Added onClick
+                          >
+                            {item.text}
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+  
+              {eventBox && (
+                <div className="flex justify-center h-full">
+                  <div className="border-2 flex flex-col" style={{ borderColor: accent, width: '100%' }}>
+                    <div className="flex-grow h-48">
+                      <img src={eventBox.image} alt={eventBox.title} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="bg-white text-black p-6 flex flex-col justify-center items-center text-center">
+                      <h4 className="font-semibold uppercase text-base leading-tight">{eventBox.title}</h4>
+                      <a href={eventBox.href} className="text-sm font-bold mt-4 inline-block tracking-wider" style={{ color: accent }} onClick={closeMenu}> {/* Added onClick */}                        {eventBox.linkText} &gt;
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 const MobileMegaMenu = ({ config, accent, open }) => {
   if (!config) return null;
 
+  const { eventBox, ...linkSections } = config;
+
   return (
-    <div className={`overflow-hidden transition-all duration-500 ${open ? 'max-h-[1500px]' : 'max-h-0'}`}>
+    <div className={`overflow-hidden transition-all duration-500 ${open ? 'max-h-[2500px]' : 'max-h-0'}`}>
       <div className="py-2 pl-4 border-l-2" style={{ borderColor: accent }}>
-        {Object.entries(config).map(([section, items]) => (
+        {Object.entries(linkSections).map(([section, items]) => (
           <div key={section} className="mb-4">
             <h3
               className="uppercase mb-2 pb-1 font-semibold tracking-tight text-gray-300"
@@ -383,13 +497,11 @@ const MobileMegaMenu = ({ config, accent, open }) => {
             >
               {section}
             </h3>
-            <ul className="space-y-5">
+            <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
               {items.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="block text-gray-300 hover:text-white transition-colors"
                     style={{ fontSize: "var(--size-mega-item)" }}
                   >
@@ -400,6 +512,22 @@ const MobileMegaMenu = ({ config, accent, open }) => {
             </ul>
           </div>
         ))}
+
+        {eventBox && (
+          <div className="mt-6 pr-4">
+            <div className="border-2 flex flex-col" style={{ borderColor: accent }}>
+              <div className="h-40">
+                <img src={eventBox.image} alt={eventBox.title} className="w-full h-full object-cover" />
+              </div>
+              <div className="bg-white text-black p-4 flex flex-col justify-center items-center text-center">
+                <h4 className="font-semibold uppercase text-base leading-tight">{eventBox.title}</h4>
+                <a href={eventBox.href} className="text-sm font-bold mt-3 inline-block tracking-wider" style={{ color: accent }}>
+                  {eventBox.linkText} &gt;
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -444,7 +572,6 @@ const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [showTopBar, setShowTopBar] = useState(true);
   
-  // Consolidated state for mobile menu
   const [mobileMenuState, setMobileMenuState] = useState({
     isOpen: false,
     activeSubMenu: null,
@@ -473,6 +600,11 @@ const Header = () => {
     }));
   };
 
+  const closeAllMegaMenus = () => {
+    setActiveMenu(null);
+    setMobileMenuState(prev => ({ ...prev, isOpen: false, activeSubMenu: null }));
+  };
+
   useEffect(() => {
     if (topBarRef.current) {
       setTopBarHeight(topBarRef.current.offsetHeight);
@@ -484,13 +616,20 @@ const Header = () => {
       const currentScrollY = window.scrollY;
       setShowTopBar(currentScrollY <= scrollThreshold || currentScrollY < lastScrollY.current);
       lastScrollY.current = currentScrollY;
+
+      // New logic to close mega menus on scroll
+      if (activeMenu !== null) {
+        setActiveMenu(null);
+      }
+      if (mobileMenuState.isOpen) {
+        setMobileMenuState(prev => ({ ...prev, isOpen: false, activeSubMenu: null }));
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [activeMenu, mobileMenuState.isOpen]);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileMenuState.isOpen ? 'hidden' : 'auto';
   }, [mobileMenuState.isOpen]);
@@ -548,7 +687,6 @@ const Header = () => {
                 <img alt="JadeTimes Academy Logo" className="h-12 sm:h-16 w-auto" src={logo} />
               </a>
 
-              {/* --- FIX: Changed lg breakpoint to md for earlier visibility --- */}
               <div className="hidden md:flex items-center gap-x-6">
                 <ul className="flex items-center gap-x-6">
                     {navLinks.map((link) => (
@@ -586,7 +724,6 @@ const Header = () => {
                   </div>
               </div>
 
-              {/* --- FIX: Changed lg breakpoint to md to hide on smaller screens --- */}
               <div className="md:hidden flex items-center">
                   <button onClick={toggleMobileMenu} aria-label="Open main menu" aria-expanded={mobileMenuState.isOpen}>
                       {mobileMenuState.isOpen ? <TimesIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
@@ -595,7 +732,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* --- Mobile Menu (Now hidden on md screens and up) --- */}
           <div 
             className={`md:hidden ${mobileMenuState.isOpen ? 'block' : 'hidden'} absolute top-full left-0 w-full bg-black z-50 max-h-[calc(100vh-80px)] overflow-y-auto`}
           >
@@ -635,6 +771,7 @@ const Header = () => {
                                 open={mobileMenuState.activeSubMenu === link.key}
                                 config={megaMenus[link.menu]}
                                 accent={link.accent}
+                                closeMenu={closeAllMegaMenus} // Added prop
                               />
                             </>
                           ) : (
@@ -687,7 +824,6 @@ const Header = () => {
               </div>
           </div>
 
-          {/* This logic remains the same for desktop mega menus */}
           <div className="hidden md:block">
             {navLinks.map((link) =>
                 link.menu && (
@@ -697,6 +833,7 @@ const Header = () => {
                     open={activeMenu === link.key}
                     config={megaMenus[link.menu]}
                     accent={link.accent}
+                    closeMenu={closeAllMegaMenus} // Added prop
                   />
                 )
             )}

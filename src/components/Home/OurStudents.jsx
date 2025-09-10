@@ -151,7 +151,7 @@ export default function OurStudents() {
                 >
                   <a
                     href="#"
-                    className="group relative block py-4 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300"
+                    className="group relative block py-6 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300"
                   >
                     {/* Hover blue line: TOP, left -> right, above white border */}
                     <span
@@ -169,7 +169,7 @@ export default function OurStudents() {
                 <div className="relative">
                 <a
                   href="#"
-                  className="group relative block py-4 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300"
+                  className="group relative block py-6 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300"
                 >
                   {/* Hover blue line: TOP, left -> right, above white border */}
                   <span
