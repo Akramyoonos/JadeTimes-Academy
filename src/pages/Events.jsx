@@ -1,6 +1,5 @@
 // src/pages/Events.jsx
 import React, { useState, useEffect } from 'react';
-import Heading from '../components/Event/Heading.jsx';
 import FeaturedEventCard from '../components/Event/FeaturedEventCard.jsx';
 import EventItem from '../components/Event/EventItem.jsx';
 import Calendar from '../components/Event/Calendar.jsx';
@@ -80,7 +79,7 @@ export default function Events() {
 
   return (
     <div className="bg-[#f5f6f8] min-h-screen font-sans">
-      <Heading />
+     
 
       {/* full-width layout */}
       <main className="w-full px-6 py-8 grid lg:grid-cols-3 gap-8">

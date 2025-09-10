@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
 
@@ -29,11 +29,7 @@ import ApplyNyfa_Page from './pages/ApplyNyfa_Page';
 import MissionAndPurpose_Page from './pages/MissionAndPurpose_Page';
 import VisitUs_Page from './pages/VisitUs_Page';
 import Accreditation_Page from './pages/Accreditation_Page';
-
-function ConditionalHeader() {
-  const location = useLocation();
-  return location.pathname !== '/events' ? <Header /> : null;
-}
+import AdmissionRequirements_Page from './pages/AdmissionRequirements_Page';
 
 // Global click interceptor so ANY <a href="/..."> in header/footer/body routes via SPA
 function AppInner() {
@@ -69,7 +65,7 @@ function AppInner() {
 
   return (
     <>
-      <ConditionalHeader />
+      <Header />
       <main className="min-h-[80vh]">
         <Routes>
           <Route path="/"                              element={<Home_page />} />
@@ -96,6 +92,7 @@ function AppInner() {
           <Route path="/MissionAndPurpose_Page/*"      element={<MissionAndPurpose_Page />} />
           <Route path="/VisitUs_Page/*"                element={<VisitUs_Page />} />
           <Route path="/Accreditation_Page/*"          element={<Accreditation_Page />} />
+          <Route path="/AdmissionRequirements_Page/*"  element={<AdmissionRequirements_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>
