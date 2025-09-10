@@ -56,7 +56,7 @@ const FONT_SIZES = {
   nav: "18px",
   cta: "15px",
   megaHeading: "16px",
-  megaItem: "14px",
+  megaItem: "16px",
 };
 
 const topBarLinks = [
@@ -340,7 +340,7 @@ const MegaMenu = ({ open, config, accent, id }) => {
                 >
                   {section}
                 </h3>
-                <ul className={`space-y-2 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
+                <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
                   {items.map((item) => {
                     const wrapClass =
                       section === "AREAS OF STUDY"
@@ -383,11 +383,13 @@ const MobileMegaMenu = ({ config, accent, open }) => {
             >
               {section}
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-5">
               {items.map((item) => (
                 <li key={item.href}>
                   <a
                     href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block text-gray-300 hover:text-white transition-colors"
                     style={{ fontSize: "var(--size-mega-item)" }}
                   >
