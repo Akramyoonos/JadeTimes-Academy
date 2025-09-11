@@ -30,6 +30,9 @@ import MissionAndPurpose_Page from './pages/MissionAndPurpose_Page';
 import VisitUs_Page from './pages/VisitUs_Page';
 import Accreditation_Page from './pages/Accreditation_Page';
 import AdmissionRequirements_Page from './pages/AdmissionRequirements_Page';
+import MilitaryDependentStudents_Page from './pages/MilitaryDependentStudents_Page';
+import DatesTuition_Page from './pages/DatesTuition_Page';
+import NYFAStudentLife_Page from './pages/NYFAStudentLife_Page';
 
 // Global click interceptor so ANY <a href="/..."> in header/footer/body routes via SPA
 function AppInner() {
@@ -93,6 +96,9 @@ function AppInner() {
           <Route path="/VisitUs_Page/*"                element={<VisitUs_Page />} />
           <Route path="/Accreditation_Page/*"          element={<Accreditation_Page />} />
           <Route path="/AdmissionRequirements_Page/*"  element={<AdmissionRequirements_Page />} />
+          <Route path="/MilitaryDependentStudents/*"  element={<MilitaryDependentStudents_Page />} />
+          <Route path="/Dates&Tuition/*"           element={<DatesTuition_Page />} />
+          <Route path="/NYFAStudentLife/*"       element={<NYFAStudentLife_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>

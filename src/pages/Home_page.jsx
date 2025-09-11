@@ -15,7 +15,7 @@ const Home_page = () => {
     <div className="flex flex-col">
       
         <VideoHeading
-          subtitle={<>Academy of Journalism, Communication<br />&amp; Media Innovation</>}
+          subtitle={<></>}
           altText="People working on film editing software on multiple monitors in a dimly lit room"
         />
       
