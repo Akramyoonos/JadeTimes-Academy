@@ -183,7 +183,7 @@ const Spotlight = () => {
       <div className="w-full  pb-10">
         {/* CHANGE 4: Removed the duplicate links that were present in the original code. */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-          <a href="/DegreeProgramsPage" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
+          <a href="/Degree-Programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -199,7 +199,7 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/OnlineProgrames" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
+          <a href="/online-programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Woman filming in front of a cathedral"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -215,7 +215,7 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/DegreeProgramsPage" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
+          <a href="/Degree-Programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
@@ -231,7 +231,7 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/OnlineProgrames" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
+          <a href="/online-programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Woman filming in front of a cathedral"
               className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"

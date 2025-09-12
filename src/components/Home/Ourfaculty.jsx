@@ -625,7 +625,7 @@ export default function OurFaculty() {
               </div>
             </div>
             <a
-              href="/FacultyDirectoryPage"
+              href="/faculty-directory/"
               className="mt-4 ml-11 inline-block bg-[#b61f9f] hover:bg-white px-4 py-2 text-[12px] font-semibold uppercase tracking-wide text-white hover:text-pink-500"
             >
               MEET OUR FACULTY

@@ -145,7 +145,7 @@ const Footer = () => {
         <div className="md:w-2/3">
           <p>
             <span className="text-gray-600">Copyright © 2024 JadeTimes Academy •</span>{" "}
-            <a href="#" className="hover:text-blue-400 text-gray-400">
+            <a href="/policy/" className="hover:text-blue-400 text-gray-400">
               Privacy Policy
             </a>
           </p>

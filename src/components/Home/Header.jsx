@@ -61,10 +61,10 @@ const FONT_SIZES = {
 };
 
 const topBarLinks = [
-  { href: "/StudentResource_page", text: "Current Students" },
+  { href: "/current-student-resources/", text: "Current Students" },
   { href: "#", text: "Parents" },
   { href: "#", text: "Online Info Sessions", style: { color: ACCENTS.campuses } },
-  { href: "/Membership_Page", text: "Become a JadeTimes Member", style: { color: ACCENTS.academics } },
+  { href: "/JIU-membership/", text: "Become a JadeTimes Member", style: { color: ACCENTS.academics } },
 ];
 
 const navLinks = [
@@ -79,7 +79,7 @@ const navLinks = [
 const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
-      { text: "FILMMAKING", href: "/academics/areas-of-study/filmmaking" },
+      { text: "FILMMAKING", href: "/" },
       { text: "ACTING FOR FILM", href: "/academics/areas-of-study/acting-for-film" },
       { text: "PHOTOGRAPHY", href: "/academics/areas-of-study/photography" },
       { text: "PRODUCING", href: "/academics/areas-of-study/producing" },
@@ -87,7 +87,7 @@ const megaMenus = {
       { text: "CINEMATOGRAPHY", href: "/academics/areas-of-study/cinematography" },
       { text: "DOCUMENTARY FILMMAKING", href: "/academics/areas-of-study/documentary-filmmaking" },
       { text: "DIGITAL EDITING", href: "/academics/areas-of-study/digital-editing" },
-      { text: "3D ANIMATION & VISUAL EFFECTS", href: "/academics/areas-of-study/3d-animation-visual-effects" },
+      { text: "3D ANIMATION & VISUAL EFFECTS", href: "/Faq" },
       { text: "BROADCAST JOURNALISM", href: "/academics/areas-of-study/broadcast-journalism" },
       { text: "MUSICAL THEATRE", href: "/academics/areas-of-study/musical-theatre" },
       { text: "GAME DESIGN", href: "/academics/areas-of-study/game-design" },
@@ -101,12 +101,12 @@ const megaMenus = {
       { text: "MASTER OF FINE ARTS", href: "/academics/degree-programs/master-of-fine-arts" },
       { text: "MASTER OF ARTS", href: "/academics/degree-programs/master-of-arts" },
       { text: "ASSOCIATE OF FINE ARTS", href: "/academics/degree-programs/associate-of-fine-arts" },
-      { text: "ONLINE DEGREES", href: "/academics/degree-programs/online-degrees" },
+      { text: "ONLINE DEGREES", href: "/online-programs/" },
     ],
     "CERTIFICATE PROGRAMS": [
       { text: "1 & 2-YEAR PROGRAMS", href: "/academics/certificate-programs/1-2-year-programs" },
       { text: "SHORT-TERM WORKSHOPS", href: "/academics/certificate-programs/short-term-workshops" },
-      { text: "ONLINE PROGRAMS", href: "/academics/certificate-programs/online-programs" },
+      { text: "ONLINE PROGRAMS", href: "/online-programs/" },
       { text: "CORPORATE TRAINING", href: "/academics/certificate-programs/corporate-training" },
     ],
     "STUDY ABROAD WITH JIU": [
@@ -116,21 +116,21 @@ const megaMenus = {
   },
   admissionsFinancesMenu: {
     "ADMISSIONS": [
-      { text: "PROGRAM DATES", href: "/admissions/admissions/program-dates" },
+      { text: "PROGRAM DATES", href: "/dates-tuition/" },
       { text: "APPLICATION DEADLINES", href: "/admissions/admissions/application-deadlines" },
-      { text: "ADMISSIONS REQUIREMENTS", href: "/admissions/admissions/admissions-requirements" },
+      { text: "ADMISSIONS REQUIREMENTS", href: "/admissions-requirements/" },
       { text: "INTERNATIONAL STUDENTS", href: "/admissions/admissions/international-students" },
-      { text: "VETERANS & MILITARY DEPENDENT STUDENTS", href: "MilitaryDependentStudents" },
+      { text: "VETERANS & MILITARY DEPENDENT STUDENTS", href: "/admissions/veterans-military-dependent-students/" },
       { text: "TRANSFER STUDENTS", href: "/admissions/admissions/transfer-students" },
       { text: "CROSS-CAMPUS STUDIES", href: "/admissions/admissions/cross-campus-studies" },
       { text: "ADVANCED STANDING AND TUITION CREDIT", href: "/admissions/admissions/advanced-standing-and-tuition-credit" },
-      { text: "MEET JIU NEAR YOU", href: "/admissions/admissions/meet-jiu-near-you" },
+      { text: "MEET JIU NEAR YOU", href: "/events/list/" },
       { text: "HEALTH REQUIREMENTS", href: "/admissions/admissions/health-requirements" },
     ],
     "FINANCES": [
-      { text: "TUITION", href: "/Dates&Tuition" },
+      { text: "TUITION", href: "/dates-tuition/" },
       { text: "FEDERAL FINANCIAL AID", href: "/admissions/finances/federal-financial-aid" },
-      { text: "SCHOLARSHIPS & GRANTS", href: "/admissions/finances/scholarships-grants" },
+      { text: "SCHOLARSHIPS & GRANTS", href: "/student-finances/scholarships-and-grants/" },
       { text: "PRIVATE STUDENT LOANS", href: "/admissions/finances/private-student-loans" },
       { text: "GI BILL & YELLOW RIBBON PROGRAM", href: "/admissions/finances/gi-bill-yellow-ribbon-program" },
       { text: "HOUSING INFORMATION", href: "/admissions/finances/housing-information" },
@@ -138,7 +138,7 @@ const megaMenus = {
     "eventBox": {
       title: "OPEN HOUSE & LIVE ONLINE EVENTS",
       linkText: "EVENT DATES",
-      href: "/discover/on-campus/open-house-live-online-events",
+      href: "/events/list/",
       image: Campus03Image
     }
   },
@@ -158,28 +158,28 @@ const megaMenus = {
   },
   discoverMenu: {
     "WHO WE ARE": [
-      { text: "ABOUT US", href: "/discover/who-we-are/about-us" },
-      { text: "HISTORY", href: "/discover/who-we-are/history" },
-      { text: "MISSION & PURPOSE", href: "/discover/who-we-are/mission-purpose" },
-      { text: "ACCREDITATION, LICENSING, AND APPROVALS", href: "/discover/who-we-are/accreditation-licensing-approvals" },
+      { text: "ABOUT US", href: "/about" },
+      { text: "HISTORY", href: "JIU-history/" },
+      { text: "MISSION & PURPOSE", href: "/mission-and-purpose/" },
+      { text: "ACCREDITATION, LICENSING, AND APPROVALS", href: "/Accreditation" },
       { text: "ARTICULATION", href: "/discover/who-we-are/articulation" },
       { text: "AFFILIATIONS", href: "/discover/who-we-are/affiliations" },
-      { text: "FACULTY DIRECTORY", href: "/discover/who-we-are/faculty-directory" },
+      { text: "FACULTY DIRECTORY", href: "/faculty-directory/" },
       { text: "LEADERSHIP & ADMINISTRATION", href: "/discover/who-we-are/leadership-administration" },
       { text: "NYFA REVIEWS", href: "/discover/who-we-are/nyfa-reviews" },
-      { text: "FAQ", href: "/discover/who-we-are/faq" },
+      { text: "FAQ", href: "/faq/" },
       { text: "NYFA CATALOGS", href: "/discover/who-we-are/nyfa-catalogs" },
       { text: "AWARDS & RANKINGS", href: "/discover/who-we-are/awards-rankings" },
     ],
     "ON CAMPUS": [
-      { text: "VISIT US", href: "/discover/on-campus/visit-us" },
+      { text: "VISIT US", href: "/on-campus/visit-us/" },
       { text: "OPEN HOUSE & LIVE ONLINE EVENTS", href: "/discover/on-campus/open-house-live-online-events" },
       { text: "ACADEMIC CALENDAR", href: "/discover/on-campus/academic-calendar" },
       { text: "CAMPUS SAFETY & CLERY ACT", href: "/discover/on-campus/campus-safety-clery-act" },
       { text: "TITLE IX", href: "/discover/on-campus/title-ix" },
-      { text: "STUDENT LIFE", href: "/NYFAStudentLife" },
+      { text: "STUDENT LIFE", href: "/student-life/" },
       { text: "HEALTH AND WELLNESS", href: "/discover/on-campus/health-and-wellness" },
-      { text: "CAREER AND ALUMNI SERVICES", href: "/discover/on-campus/career-alumni-services" },
+      { text: "CAREER AND ALUMNI SERVICES", href: "/career-and-alumni-services/" },
       { text: "THE FILM FESTIVAL DEPARTMENT AT NYFA", href: "/discover/on-campus/film-festival-department" },
       { text: "JOBS AT NYFA", href: "/discover/on-campus/jobs-at-nyfa" },
       { text: "ACCESSIBILITY SERVICES", href: "/discover/on-campus/accessibility-services" },
@@ -187,10 +187,10 @@ const megaMenus = {
     "NEWS AND CULTURE": [
       { text: "GUEST SPEAKERS", href: "/discover/news-and-culture/guest-speakers" },
       { text: "NYFA IN THE NEWS", href: "/discover/news-and-culture/nyfa-in-the-news" },
-      { text: "BLOG", href: "/discover/news-and-culture/blog" },
+      { text: "BLOG", href: "/blog/" },
       { text: "NYFA YOUTUBE CHANNEL", href: "/discover/news-and-culture/nyfa-youtube-channel" },
       { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },
-      { text: "STUDENT RESOURCES", href: "/discover/news-and-culture/student-resources" },
+      { text: "STUDENT RESOURCES", href: "/student-resources/" },
       { text: "NYFA STORE", href: "/discover/news-and-culture/nyfa-store" },
       { text: "10 ARTS FOUNDATION", href: "/discover/news-and-culture/10-arts-foundation" },
       { text: "COMMUNITY PARTNERSHIPS & COLLABORATIONS", href: "/discover/news-and-culture/community-partnerships-collaborations" },
@@ -259,6 +259,26 @@ const useClickOutside = (ref, handler) => {
       document.removeEventListener("touchstart", listener);
     };
   }, [ref, handler]);
+};
+
+const getSectionHref = (section) => {
+    const hrefMap = {
+        "AREAS OF STUDY": "/academics",
+        "DEGREE PROGRAMS": "/DegreeProgramsPage",
+        "CERTIFICATE PROGRAMS": "/academics/certificate-programs",
+        "STUDY ABROAD WITH JIU": "/academics/study-abroad-with-jiu",
+        "ADMISSIONS": "/admissions",
+        "FINANCES": "/admissions/finances",
+        "CAMPUSES": "/campuses",
+        "LOCATIONS": "/campuses/locations",
+        "WHO WE ARE": "/about",
+        "ON CAMPUS": "/discover/on-campus",
+        "NEWS AND CULTURE": "/discover/news-and-culture",
+        "TEEN CAMPS AND WORKSHOPS": "/youth/teen-camps-and-workshops",
+        "KIDS CAMPS AND WORKSHOPS": "/youth/kids-camps-and-workshops",
+        "YOUTH ADMISSIONS": "/youth/youth-admissions",
+    };
+    return hrefMap[section] || "#";
 };
 
 // ---------------- PARTS ----------------
@@ -372,12 +392,14 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                     <div className="grid grid-cols-2 gap-x-12">
                         {sections.map(([section, items]) => (
                             <div key={section}>
+                                <a href={getSectionHref(section)} className="no-underline hover:underline">
                                 <h3
                                     className="uppercase mb-2 font-normal tracking-tight text-white"
                                     style={{ fontSize: "var(--size-mega-heading)" }}
                                 >
                                     {section}
                                 </h3>
+                                </a>
                                 <div
                                     className="h-px w-full mb-4"
                                     style={{ backgroundColor: accent }}
@@ -425,17 +447,19 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
             >
               {sections.map(([section, items]) => (
                 <div key={section} className="pl-5">
-                  <h3
-                    className="uppercase mb-4 pb-2 font-normal tracking-tight"
-                    style={{
-                      color: "white",
-                      borderBottom: `2px solid ${accent}`,
-                      fontSize: "var(--size-mega-heading)",
-                      lineHeight: 1.25,
-                    }}
-                  >
-                    {section}
-                  </h3>
+                  <a href={getSectionHref(section)} className="no-underline hover:underline">
+                    <h3
+                      className="uppercase mb-4 pb-2 font-normal tracking-tight"
+                      style={{
+                        color: "white",
+                        borderBottom: `2px solid ${accent}`,
+                        fontSize: "var(--size-mega-heading)",
+                        lineHeight: 1.25,
+                      }}
+                    >
+                      {section}
+                    </h3>
+                  </a>
                   <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
                     {items.map((item) => {
                       const wrapClass =
@@ -708,14 +732,14 @@ const Header = () => {
               <div className="hidden xl:flex items-center gap-3">
                   <div className="flex items-center gap-2">
                     <a
-                      href="/RequestInfo_Page"
+                      href="/request-info?"
                       className="px-3 py-2 font-semibold text-black border-2 border-transparent transition-transform hover:scale-105"
                       style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
                     >
                       REQUEST INFO
                     </a>
                     <a
-                      href="/ApplyNyfa_Page"
+                      href="/apply-now/"
                       className="px-3 py-2 border-2 border-white font-semibold text-white transition-transform hover:scale-105"
                       style={{ fontSize: "var(--size-cta)" }}
                     >
@@ -808,14 +832,14 @@ const Header = () => {
 
               <div className="flex justify-center items-center gap-3 py-4 border-t border-gray-800">
                   <a
-                      href="/RequestInfo_Page"
+                      href="/request-info?"
                       className="px-3 py-2 font-semibold text-black border-2 border-transparent"
                       style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
                   >
                       REQUEST INFO
                   </a>
                   <a
-                      href="/ApplyNyfa_Page"
+                      href="/apply-now/"
                       className="px-3 py-2 border-2 border-white font-semibold text-white"
                       style={{ fontSize: "var(--size-cta)" }}
                   >

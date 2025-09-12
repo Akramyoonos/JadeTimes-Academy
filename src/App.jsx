@@ -25,7 +25,7 @@ import ScholarshipAndGrants_page from './pages/ScholarshipAndGrants_page';
 import PrivacyPolicy_Page from './pages/PrivacyPolicy_Page';
 import Membership_Page from './pages/Membership_Page';
 import RequestInfo_Page from './pages/RequestInfo_Page';
-import ApplyNyfa_Page from './pages/ApplyNyfa_Page';
+import ApplyJIU_Page from './pages/ApplyJIU_Page';
 import MissionAndPurpose_Page from './pages/MissionAndPurpose_Page';
 import VisitUs_Page from './pages/VisitUs_Page';
 import Accreditation_Page from './pages/Accreditation_Page';
@@ -33,6 +33,7 @@ import AdmissionRequirements_Page from './pages/AdmissionRequirements_Page';
 import MilitaryDependentStudents_Page from './pages/MilitaryDependentStudents_Page';
 import DatesTuition_Page from './pages/DatesTuition_Page';
 import NYFAStudentLife_Page from './pages/NYFAStudentLife_Page';
+import Faq_Page from './pages/Faq_Page';
 
 // Global click interceptor so ANY <a href="/..."> in header/footer/body routes via SPA
 function AppInner() {
@@ -76,29 +77,30 @@ function AppInner() {
           <Route path="/programfinder/*"               element={<Programfinder_page />} />
           <Route path="/admissions"                    element={<Admissions_page />} />
           <Route path="/blog/*"                        element={<Blog />} />
-          <Route path="/events/*"                      element={<Events />} />
+          <Route path="/events/list/*"                      element={<Events />} />
           <Route path="/contact_us"                    element={<Contact_Us />} />
           <Route path="/alumni"                        element={<Alumni />} />
-          <Route path="/StudentResources"              element={<StudentResources />} />
-          <Route path="/DegreeProgramsPage/*"          element={<DegreeProgramsPage />} />
-          <Route path="/OnlineProgrames/*"             element={<OnlineProgrames />} />
-          <Route path="/CareerAndAlumniServices/*"     element={<CareerAndAlumniServices />} />
-          <Route path="/FacultyDirectoryPage/*"        element={<FacultyDirectoryPage />} />
-          <Route path="/StudentResource_page/*"        element={<StudentResource_page />} />
-          <Route path="/History_Page/*"                element={<History_Page />} />
+          <Route path="/student-resources/"              element={<StudentResources />} />
+          <Route path="/Degree-Programs/*"          element={<DegreeProgramsPage />} />
+          <Route path="/online-programs/*"             element={<OnlineProgrames />} />
+          <Route path="/career-and-alumni-services/*"     element={<CareerAndAlumniServices />} />
+          <Route path="/faculty-directory/*"        element={<FacultyDirectoryPage />} />
+          <Route path="/current-student-resources/*"        element={<StudentResource_page />} />
+          <Route path="/JIU-history/*"                element={<History_Page />} />
           <Route path="/ScholarshipAndGrants_page/*"   element={<ScholarshipAndGrants_page />} />
-          <Route path="/ScholarshipAndGrants_page/*"   element={<ScholarshipAndGrants_page />} />
-          <Route path="/PrivacyPolicy_Page/*"           element={<PrivacyPolicy_Page />} />
-          <Route path="/Membership_Page/*"               element={<Membership_Page />} />
-          <Route path="/RequestInfo_Page/*"               element={<RequestInfo_Page />} />
-          <Route path="/ApplyNyfa_Page/*"               element={<ApplyNyfa_Page />} />
-          <Route path="/MissionAndPurpose_Page/*"      element={<MissionAndPurpose_Page />} />
-          <Route path="/VisitUs_Page/*"                element={<VisitUs_Page />} />
-          <Route path="/Accreditation_Page/*"          element={<Accreditation_Page />} />
-          <Route path="/AdmissionRequirements_Page/*"  element={<AdmissionRequirements_Page />} />
-          <Route path="/MilitaryDependentStudents/*"  element={<MilitaryDependentStudents_Page />} />
-          <Route path="/Dates&Tuition/*"           element={<DatesTuition_Page />} />
-          <Route path="/NYFAStudentLife/*"       element={<NYFAStudentLife_Page />} />
+          <Route path="/student-finances/scholarships-and-grants/*"   element={<ScholarshipAndGrants_page />} />
+          <Route path="/policy/*"           element={<PrivacyPolicy_Page />} />
+          <Route path="/JIU-membership/*"               element={<Membership_Page />} />
+          <Route path="/request-info?/*"               element={<RequestInfo_Page />} />
+          <Route path="/apply-now/*"               element={<ApplyJIU_Page />} />
+          <Route path="/mission-and-purpose/*"      element={<MissionAndPurpose_Page />} />
+          <Route path="/on-campus/visit-us/*"                element={<VisitUs_Page />} />
+          <Route path="/Accreditation/*"          element={<Accreditation_Page />} />
+          <Route path="/admissions-requirements/*"  element={<AdmissionRequirements_Page />} />
+          <Route path="/admissions/veterans-military-dependent-students/*"  element={<MilitaryDependentStudents_Page />} />
+          <Route path="/dates-tuition/*"           element={<DatesTuition_Page />} />
+          <Route path="/student-life/*"       element={<NYFAStudentLife_Page />} />
+          <Route path="/Faq/*"                     element={<Faq_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>
