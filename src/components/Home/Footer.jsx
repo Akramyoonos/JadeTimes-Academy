@@ -15,7 +15,7 @@ import {
 const topLinks = [
   {
     text: 'REQUEST INFO',
-    href: '#',
+    href: '/request-info?',
     ringBorder: 'border-sky-400',
     ringFill: 'group-hover:bg-sky-400',
     iconColor: 'text-sky-300 group-hover:text-black',
@@ -23,7 +23,7 @@ const topLinks = [
   },
   {
     text: 'APPLY NOW',
-    href: '#',
+    href: '/apply-now/',
     ringBorder: 'border-yellow-400',
     ringFill: 'group-hover:bg-yellow-400',
     iconColor: 'text-yellow-300 group-hover:text-black',
@@ -31,7 +31,7 @@ const topLinks = [
   },
   {
     text: 'VISIT US',
-    href: '#',
+    href: '/on-campus/visit-us/',
     ringBorder: 'border-fuchsia-500',
     ringFill: 'group-hover:bg-fuchsia-500',
     iconColor: 'text-fuchsia-400 group-hover:text-black',
@@ -79,7 +79,7 @@ const Footer = () => {
 
       {/* ───────── Middle Section ───────── */}
       {/* ───────── Middle Section ───────── */}
-      <div className="py-10 px-4 sm:px-10 lg:px-12 bg-black bg-opacity-20 border-b border-gray-800">
+      <div className="py-10  bg-black bg-opacity-20 border-b-3 border-gray-800 mx-12">
         <div className="flex flex-col items-start">
             {/* Logo */}
             <div className="mb-6">
@@ -140,7 +140,7 @@ const Footer = () => {
       </div>
 
       {/* ───────── Bottom Section ───────── */}
-      <div className="border-t border-gray-800 py-10 px-4 sm:px-10 lg:px-12 flex flex-col-reverse md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
+      <div className=" py-10 px-4 sm:px-10 lg:px-12 flex flex-col-reverse md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
         {/* Left text */}
         <div className="md:w-2/3">
           <p>

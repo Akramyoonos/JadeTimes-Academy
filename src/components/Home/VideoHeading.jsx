@@ -49,8 +49,7 @@ const VideoHeading = ({ title, subtitle }) => {
         </div>
       </div>
 
-      {/* Accent bar remains unchanged, as it's already responsive. */}
-      <div className="h-2 bg-black w-full"></div>
+
     </div>
   );
 };

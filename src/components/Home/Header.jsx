@@ -56,7 +56,7 @@ const FONT_SIZES = {
   phone: "15px",
   nav: "18px",
   cta: "15px",
-  megaHeading: "16px",
+  megaHeading: "20px",
   megaItem: "16px",
 };
 
@@ -117,11 +117,11 @@ const megaMenus = {
   admissionsFinancesMenu: {
     "ADMISSIONS": [
       { text: "PROGRAM DATES", href: "/dates-tuition/" },
-      { text: "APPLICATION DEADLINES", href: "/admissions/admissions/application-deadlines" },
+      { text: "APPLICATION DEADLINES", href: "/important-dates/" },
       { text: "ADMISSIONS REQUIREMENTS", href: "/admissions-requirements/" },
-      { text: "INTERNATIONAL STUDENTS", href: "/admissions/admissions/international-students" },
+      { text: "INTERNATIONAL STUDENTS", href: "/admissions/international-students/" },
       { text: "VETERANS & MILITARY DEPENDENT STUDENTS", href: "/admissions/veterans-military-dependent-students/" },
-      { text: "TRANSFER STUDENTS", href: "/admissions/admissions/transfer-students" },
+      { text: "TRANSFER STUDENTS", href: "/" },
       { text: "CROSS-CAMPUS STUDIES", href: "/admissions/admissions/cross-campus-studies" },
       { text: "ADVANCED STANDING AND TUITION CREDIT", href: "/admissions/admissions/advanced-standing-and-tuition-credit" },
       { text: "MEET JIU NEAR YOU", href: "/events/list/" },
@@ -166,9 +166,9 @@ const megaMenus = {
       { text: "AFFILIATIONS", href: "/discover/who-we-are/affiliations" },
       { text: "FACULTY DIRECTORY", href: "/faculty-directory/" },
       { text: "LEADERSHIP & ADMINISTRATION", href: "/discover/who-we-are/leadership-administration" },
-      { text: "NYFA REVIEWS", href: "/discover/who-we-are/nyfa-reviews" },
+      { text: "JIU REVIEWS", href: "/discover/who-we-are/JIU-reviews" },
       { text: "FAQ", href: "/faq/" },
-      { text: "NYFA CATALOGS", href: "/discover/who-we-are/nyfa-catalogs" },
+      { text: "JIU CATALOGS", href: "/discover/who-we-are/JIU-catalogs" },
       { text: "AWARDS & RANKINGS", href: "/discover/who-we-are/awards-rankings" },
     ],
     "ON CAMPUS": [
@@ -180,18 +180,18 @@ const megaMenus = {
       { text: "STUDENT LIFE", href: "/student-life/" },
       { text: "HEALTH AND WELLNESS", href: "/discover/on-campus/health-and-wellness" },
       { text: "CAREER AND ALUMNI SERVICES", href: "/career-and-alumni-services/" },
-      { text: "THE FILM FESTIVAL DEPARTMENT AT NYFA", href: "/discover/on-campus/film-festival-department" },
-      { text: "JOBS AT NYFA", href: "/discover/on-campus/jobs-at-nyfa" },
+      { text: "THE FILM FESTIVAL DEPARTMENT AT JIU", href: "/discover/on-campus/film-festival-department" },
+      { text: "JOBS AT JIU", href: "/discover/on-campus/jobs-at-JIU" },
       { text: "ACCESSIBILITY SERVICES", href: "/discover/on-campus/accessibility-services" },
     ],
     "NEWS AND CULTURE": [
       { text: "GUEST SPEAKERS", href: "/discover/news-and-culture/guest-speakers" },
-      { text: "NYFA IN THE NEWS", href: "/discover/news-and-culture/nyfa-in-the-news" },
+      { text: "JIU IN THE NEWS", href: "/discover/news-and-culture/JIU-in-the-news" },
       { text: "BLOG", href: "/blog/" },
-      { text: "NYFA YOUTUBE CHANNEL", href: "/discover/news-and-culture/nyfa-youtube-channel" },
+      { text: "JIU YOUTUBE CHANNEL", href: "/discover/news-and-culture/JIU-youtube-channel" },
       { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },
       { text: "STUDENT RESOURCES", href: "/student-resources/" },
-      { text: "NYFA STORE", href: "/discover/news-and-culture/nyfa-store" },
+      { text: "JIU STORE", href: "/discover/news-and-culture/JIU-store" },
       { text: "10 ARTS FOUNDATION", href: "/discover/news-and-culture/10-arts-foundation" },
       { text: "COMMUNITY PARTNERSHIPS & COLLABORATIONS", href: "/discover/news-and-culture/community-partnerships-collaborations" },
       { text: "INDUSTRY LAB", href: "/discover/news-and-culture/industry-lab" },
@@ -559,7 +559,7 @@ const MobileMegaMenu = ({ config, accent, open }) => {
 
 const DesktopNavItem = ({ children, active, color, onClick, to, controlsId }) => {
   const base = "relative group block py-8 uppercase tracking-tight text-white hover:text-white transition-colors";
-  const styleText = { fontSize: "var(--size-nav)", fontWeight: 400 };
+  const styleText = { fontSize: "var(--size-nav)", fontWeight: 400, wordSpacing: '2px' };
   const underlineStyle = { backgroundColor: color || "transparent" };
   
   const ariaProps = onClick ? {
@@ -711,7 +711,7 @@ const Header = () => {
                 <img alt="JadeTimes Academy Logo" className="h-12 sm:h-16 w-auto" src={logo} />
               </a>
 
-              <div className="hidden md:flex items-center gap-x-6">
+              <div className="hidden md:flex items-center gap-x-8">
                 <ul className="flex items-center gap-x-6">
                     {navLinks.map((link) => (
                       <li key={link.key}>

@@ -127,8 +127,6 @@ const SearchProgramsBy = () => {
 
   return (
     <section className="bg-white">
-      {/* thick black bar on top */}
-      <div className="h-3 w-full bg-black" />
 
       {/* full-width strip; label on far left, controls on far right */}
       <div className="border-b border-gray-200">
