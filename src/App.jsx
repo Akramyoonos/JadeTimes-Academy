@@ -96,7 +96,7 @@ function AppInner() {
           <Route path="/student-finances/scholarships-and-grants/*"   element={<ScholarshipAndGrants_page />} />
           <Route path="/policy/*"           element={<PrivacyPolicy_Page />} />
           <Route path="/JIU-membership/*"               element={<Membership_Page />} />
-          <Route path="/request-info?/*"               element={<RequestInfo_Page />} />
+          <Route path="/request-info/*"               element={<RequestInfo_Page />} />
           <Route path="/apply-now/*"               element={<ApplyJIU_Page />} />
           <Route path="/mission-and-purpose/*"      element={<MissionAndPurpose_Page />} />
           <Route path="/on-campus/visit-us/*"                element={<VisitUs_Page />} />

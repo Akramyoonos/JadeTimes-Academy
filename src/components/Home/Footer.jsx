@@ -15,7 +15,7 @@ import {
 const topLinks = [
   {
     text: 'REQUEST INFO',
-    href: '/request-info?',
+    href: '/request-info/',
     ringBorder: 'border-sky-400',
     ringFill: 'group-hover:bg-sky-400',
     iconColor: 'text-sky-300 group-hover:text-black',

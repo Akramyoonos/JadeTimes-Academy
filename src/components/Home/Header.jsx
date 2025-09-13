@@ -732,7 +732,7 @@ const Header = () => {
               <div className="hidden xl:flex items-center gap-3">
                   <div className="flex items-center gap-2">
                     <a
-                      href="/request-info?"
+                      href="/request-info/"
                       className="px-3 py-2 font-semibold text-black border-2 border-transparent transition-transform hover:scale-105"
                       style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
                     >
@@ -832,7 +832,7 @@ const Header = () => {
 
               <div className="flex justify-center items-center gap-3 py-4 border-t border-gray-800">
                   <a
-                      href="/request-info?"
+                      href="/request-info/"
                       className="px-3 py-2 font-semibold text-black border-2 border-transparent"
                       style={{ backgroundColor: ACCENTS.academics, fontSize: "var(--size-cta)" }}
                   >
