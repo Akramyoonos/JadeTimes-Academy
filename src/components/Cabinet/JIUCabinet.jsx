@@ -1,4 +1,16 @@
 import React, { useState } from 'react';
+import JiuCABINET01 from '../../assets/Images/JiuCABINET01.jpeg';
+import JiuCABINET02 from '../../assets/Images/JiuCABINET02.jpeg';
+import JiuCABINET03 from '../../assets/Images/JiuCABINET03.jpeg';
+import JiuCABINET04 from '../../assets/Images/JiuCABINET04.jpeg';
+import JiuCABINET05 from '../../assets/Images/JiuCABINET05.jpeg';
+import JiuCABINET06 from '../../assets/Images/JiuCABINET06.jpeg';
+import JiuCABINET07 from '../../assets/Images/JiuCABINET07.jpeg';
+import JiuCABINET08 from '../../assets/Images/JiuCABINET08.jpeg';
+import JiuCABINET09 from '../../assets/Images/JiuCABINET09.jpeg';
+import JiuCABINET10 from '../../assets/Images/JiuCABINET10.jpeg';
+import JiuCABINET11 from '../../assets/Images/JiuCABINET11.png';
+import JiuCABINET12 from '../../assets/Images/JiuCABINET12.jpeg';
 
 // --- DATA FOR THE CABINET MEMBERS ---
 // NOTE: Replace the `imageUrl` placeholders with your actual image paths.
@@ -6,80 +18,80 @@ const cabinetMembers = [
     {
         name: 'Michael J. Young',
         title: 'President/CEO',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Michael+J.+Young',
+        imageUrl: JiuCABINET01,
         showConsent: true,
         description: 'Michael J. Young is the President and Chief Executive Officer at the New York Film Academy...',
     },
     {
         name: 'David Klein',
         title: 'Senior Executive Vice President/COO',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=David+Klein',
+        imageUrl: JiuCABINET02,
         description: "Klein is the Senior Executive Vice President at the New York Film Academy. Klein received his Master of Fine Arts in Film Directing at New York University's Graduate School of Film and Television in 1995. He has worked closely with NBC News, the Guggenheim Museum, the Brooklyn Museum, The Metropolitan Museum of Art and New York City public schools to create innovative media arts programs. In his current position at the Academy, he oversees the operations, development, and delivery of programs in the various disciplines taught, including Acting for Film, Filmmaking, Musical Theatre, Broadcast Journalism, and Cinematography, at the Academy's locations across the globe. As a film director and producer, Klein is a...",
     },
     {
         name: 'Dan Mackler',
         title: 'Senior Vice President/CSO/Dean of NYFA Los Angeles',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Dan+Mackler',
+        imageUrl: JiuCABINET03,
         description: 'Dan Mackler oversees the Los Angeles campus, ensuring the highest standards of education and student satisfaction...',
     },
     {
         name: 'Sonny Calderon',
         title: 'VP Academic Affairs/CAO',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Sonny+Calderon',
+        imageUrl: JiuCABINET04,
         description: 'Sonny Calderon is responsible for all academic affairs and curriculum development at the academy...',
     },
     {
         name: 'Elli Ventouras',
         title: 'Dean of NYFA New York',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Elli+Ventouras',
+        imageUrl: JiuCABINET05,
         description: 'Elli Ventouras leads the New York campus with a focus on student growth and program excellence...',
     },
     {
         name: 'Dr. Susan Ashe',
         title: 'Dean of Students, NYFA Los Angeles',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Dr.+Susan+Ashe',
+        imageUrl: JiuCABINET06,
         description: 'Dr. Susan Ashe is dedicated to student welfare and success at the Los Angeles campus...',
     },
     {
         name: 'Rosa Belerique',
         title: 'Vice President of Institutional Research and Effectiveness',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Rosa+Belerique',
+        imageUrl: JiuCABINET07,
         description: 'Rosa Belerique leads the academy\'s efforts in research and institutional effectiveness...',
     },
     {
         name: 'Randall Dottin',
         title: 'Chair of Film Arts',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Randall+Dottin',
+        imageUrl: JiuCABINET08,
         description: 'Randall Dottin is an award-winning filmmaker and the Chair of Film Arts...',
     },
     {
         name: 'Denise Hamilton',
         title: 'Senior Campus Director',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Denise+Hamilton',
+        imageUrl: JiuCABINET09,
         description: 'Denise Hamilton manages the day-to-day operations of the campus...',
     },
     {
         name: 'James S. Miller III',
         title: 'Vice President of Strategic Initiatives & Interim Executive Director, 10 ARTS Foundation',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=James+S.+Miller+III',
+        imageUrl: JiuCABINET10,
         description: 'James S. Miller III drives strategic initiatives and partnerships for the academy...',
     },
     {
         name: 'Dr. Mary Samuelson',
         title: 'Dean of General Education; Chair of Liberal Arts & Sciences',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Dr.+Mary+Samuelson',
+        imageUrl: JiuCABINET11,
         description: 'Dr. Mary Samuelson oversees the liberal arts and sciences curriculum...',
     },
     {
         name: 'Nick Sivakumaran',
         title: 'Senior Directing Instructor',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Nick+Sivakumaran',
+        imageUrl: JiuCABINET12,
         description: 'Nick Sivakumaran is a seasoned director and a senior instructor at the academy...',
     },
     {
         name: 'Andrea Swift',
         title: 'Chair of Documentary Filmmaking',
-        imageUrl: 'https://placehold.co/400x400/EFEFEFF/333?text=Andrea+Swift',
+        imageUrl: JiuCABINET06,
         description: 'Andrea Swift leads the documentary filmmaking department with extensive industry experience...',
     },
 ];
