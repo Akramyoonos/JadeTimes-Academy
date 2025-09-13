@@ -74,7 +74,7 @@ const Upcomingevents = () => {
             </div>
           </nav>
           <a
-            href="/events"
+            href="events/list/"
             className="mt-4 mb-3 md:mt-0 md:mb-0 md:ml-6 shrink-0 underline inline-flex text-black hover:text-indigo-600 font-semibold"
           >
             <CalendarIcon />
@@ -162,7 +162,7 @@ const Upcomingevents = () => {
           <div className="mt-12 text-gray-600">
             <p className="text-lg">
               Workshop schedules will be posted soon. Please check back or{" "}
-              <a href="/events" className="text-indigo-600 font-semibold hover:text-indigo-800">
+              <a href="/events/list/" className="text-indigo-600 font-semibold hover:text-indigo-800">
                 see upcoming events
               </a>
               .
