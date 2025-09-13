@@ -1,12 +1,11 @@
 import React from 'react';
-import AlumniExplore01 from '../../assets/Images/AlumniExplore01.jpeg';
+import AlumniExplore01 from '../../assets/Images/AlumniExplore03.jpeg';
 import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
-import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
 
 const AreaLeadershipSection = () => {
     const leadershipAreas = [
         {
-            title: "PRESIDENT'S PAGE",
+            title: "Board Of Directors",
             image: AlumniExplore01,
             alt: "President Michael Young at a conference",
             href: "who-we-are/leadership/board-of-directors/"
@@ -15,7 +14,7 @@ const AreaLeadershipSection = () => {
             title: "CABINET",
             image: AlumniExplore02,
             alt: "Two people wearing NYFA hoodies looking over a lake in a city park",
-            href: "/cabinet"
+            href: "/cabinet/"
         },
     ];
 
