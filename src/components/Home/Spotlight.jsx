@@ -182,7 +182,7 @@ const Spotlight = () => {
 
       <div className="w-full pb-10">
         {/* CHANGE 4: Removed the duplicate links that were present in the original code. */}
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-22 ">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 ">
           <a href="/Degree-Programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"
