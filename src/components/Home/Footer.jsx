@@ -44,7 +44,7 @@ const Footer = () => {
      <div className="FooterFont bg-black from-gray-900 to-black text-white">
       {/* Top CTA strip (centered text + icon, color on hover) */}
       <div className="bg-black bg-opacity-20 border-b border-gray-800">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-3 sm:grid-cols-3">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-3">
           {topLinks.map((l, i) => (
             <a
               key={i}
@@ -113,7 +113,7 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-6 text-xl mt-8 text-gray-400">
+            <div className="flex gap-5 text-xl mt-8 text-gray-400">
               <a href="#" className="hover:text-white">
                 <FaInstagram />
               </a>
