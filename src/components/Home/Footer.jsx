@@ -44,13 +44,13 @@ const Footer = () => {
      <div className="FooterFont bg-black from-gray-900 to-black text-white">
       {/* Top CTA strip (centered text + icon, color on hover) */}
       <div className="bg-black bg-opacity-20 border-b border-gray-800">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-3">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-3 sm:grid-cols-3">
           {topLinks.map((l, i) => (
             <a
               key={i}
               href={l.href}
               className={`group relative flex items-center border-gray-800
-                          py-5 md:py-6 hover:bg-[#0C1118] transition-colors duration-200
+                          py-5 md:py-6  transition-colors duration-200
                           ${i !== 2 ? 'border-b sm:border-b-0 sm:border-r' : 'border-b sm:border-b-0'}`}
             >
               {/* Center label + icon together */}

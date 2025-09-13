@@ -36,6 +36,9 @@ import NYFAStudentLife_Page from './pages/NYFAStudentLife_Page';
 import Faq_Page from './pages/Faq_Page';
 import ApplicationDeadlines_Page from './pages/ApplicationDeadlines_Page';
 import InternationalStudents_Page from './pages/InternationalStudents_Page';
+import LeadershipAtJIU_Page from './pages/LeadershipAtJIU_Page';
+import BoardOfDirectors_Page from './pages/BoardOfDirectors_Page';
+import Cabinet_Page from './pages/Cabinet_Page';
 
 // Global click interceptor so ANY <a href="/..."> in header/footer/body routes via SPA
 function AppInner() {
@@ -105,6 +108,9 @@ function AppInner() {
           <Route path="/Faq/*"                     element={<Faq_Page />} />
           <Route path="/important-dates/*"    element={<ApplicationDeadlines_Page />} />
           <Route path="/admissions/international-students/*"    element={<InternationalStudents_Page />} />
+           <Route path="/who-we-are/leadership/*"       element={<LeadershipAtJIU_Page />} />
+            <Route path="/who-we-are/leadership/board-of-directors/*"       element={<BoardOfDirectors_Page />} />
+            <Route path="/cabinet/*"       element={<Cabinet_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>

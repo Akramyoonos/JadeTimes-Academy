@@ -165,7 +165,7 @@ const megaMenus = {
       { text: "ARTICULATION", href: "/discover/who-we-are/articulation" },
       { text: "AFFILIATIONS", href: "/discover/who-we-are/affiliations" },
       { text: "FACULTY DIRECTORY", href: "/faculty-directory/" },
-      { text: "LEADERSHIP & ADMINISTRATION", href: "/discover/who-we-are/leadership-administration" },
+      { text: "LEADERSHIP & ADMINISTRATION", href: "/who-we-are/leadership/" },
       { text: "JIU REVIEWS", href: "/discover/who-we-are/JIU-reviews" },
       { text: "FAQ", href: "/faq/" },
       { text: "JIU CATALOGS", href: "/discover/who-we-are/JIU-catalogs" },
