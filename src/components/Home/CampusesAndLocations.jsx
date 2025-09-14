@@ -8,21 +8,32 @@ const REGIONS = [
   {
     title: "NORTH AMERICA",
     items: [
-      { city: "New York City", tag: "Campus" },
-      { city: "Los Angeles", tag: "Campus" },
-      { city: "Harvard University", tag: "Location" },
+      { city: "New York City", tag: " JIU Agent Office" },
+      { city: "New Mexico", tag: " JIU Agent Office" },
     ],
   },
   {
     title: "EUROPE",
     items: [
-      { city: "Florence, Italy", tag: "Campus" },
-      { city: "Paris, France", tag: "Location" },
+      { city: "Florence, Italy", tag: " JIU Agent Office" },
+      { city: "Paris, France", tag: " JIU Agent Office" },
+     { city: "Madrid, Spain", tag: " JIU Agent Office" },
     ],
   },
   {
-    title: "ASIA-PACIFIC",
-    items: [{ city: "Beijing, China", tag: "Location" }],
+    title: "Asia-Pacific",
+    items: [
+      { city: "Beijing, China", tag: " JIU Agent Office" },
+      { city: "Colombo, Sri Lanka", tag: " JIU Agent Office" },
+     { city: "Delhi, India", tag: " JIU Agent Office" },
+    ],
+  },
+  {
+    title: "Middle East & Africa",
+    items: [
+      { city: "Dubai, UAE", tag: " JIU Agent Office" },
+      { city: "Nairobi, Kenya", tag: " JIU Agent Office" },
+    ],
   },
 ];
 
@@ -36,7 +47,7 @@ export default function CampusesAndLocations() {
         backgroundPosition: "center",
       }}
     >
-      <div className="max-w-7xl  px-4 sm:px-10 lg:px-12 py-12 sm:py-16 lg:py-24">
+      <div className="  px-4 sm:px-10 lg:px-12 py-12 sm:py-16 lg:py-24">
         {/* Heading */}
         <div className="mb-10">
           <div className="flex items-start gap-4">
@@ -46,15 +57,15 @@ export default function CampusesAndLocations() {
             />
             {/* Removed bold here: font-normal */}
             <h2 className="text-3xl sm:text-4xl lg:text-4xl leading-tight text-black font-normal">
-              CAMPUSES &<br /> LOCATIONS
+              JIU Agent Offices<br />  (Student Support Worldwide)
             </h2>
           </div>
         </div>
 
         {/* Regions */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pl-0">
+        <div className="flex overflow-x-auto gap-8 pb-4">
           {REGIONS.map((region) => (
-            <div key={region.title}>
+            <div key={region.title} className="flex-shrink-0 w-80">
               <h3 className="text-xl tracking-widest text-black/90 font-semibold mb-6">
                 {region.title}
               </h3>

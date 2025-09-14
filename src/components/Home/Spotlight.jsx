@@ -191,7 +191,7 @@ const Spotlight = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
-                <h3 className="text-white text-lg font-semibold tracking-wider">DEGREE PROGRAMS</h3>
+                <h3 className="text-white text-lg font-semibold tracking-wider">CERTIFICATE PROGRAMS</h3>
               </div>
             </div>
             <div className="absolute bottom-6 right-6 text-white text-2xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">

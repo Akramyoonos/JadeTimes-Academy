@@ -40,14 +40,7 @@ const dropdowns = [
     id: 'location',
     title: 'ALL LOCATIONS',
     items: [
-      { name: 'All Locations', href: '/programfinder' },
-      { name: 'New York City', href: '/programfinder' },
-      { name: 'Los Angeles', href: '/programfinder' },
-      { name: 'Florence, Italy', href: '/programfinder' },
       { name: 'Online', href: '/programfinder' },
-      { name: 'Harvard University', href: '/programfinder' },
-      { name: 'Paris, France', href: '/programfinder' },
-      { name: 'Beijing, China', href: '/programfinder' },
     ],
   },
 ];

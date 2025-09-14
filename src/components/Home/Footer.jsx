@@ -114,25 +114,22 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex gap-5 text-xl mt-8 text-gray-400">
-              <a href="#" className="hover:text-white">
+              <a href="https://www.instagram.com/jadetimes_university/" className="hover:text-white">
                 <FaInstagram />
               </a>
-              <a href="#" className="hover:text-white">
+              <a href="https://web.facebook.com/jadetimesuniversity/" className="hover:text-white">
                 <FaFacebookF />
               </a>
-              <a href="#" className="hover:text-white">
+              <a href="https://x.com/JIU_University" className="hover:text-white">
                 <FaTwitter />
               </a>
-              <a href="#" className="hover:text-white">
+              <a href="https://www.youtube.com/@Jadetimes-University" className="hover:text-white">
                 <FaYoutube />
               </a>
-              <a href="#" className="hover:text-white">
-                <FaSnapchatGhost />
-              </a>
-              <a href="#" className="hover:text-white">
+              <a href="https://www.pinterest.com/jadetimesuniversity/" className="hover:text-white">
                 <FaPinterestP />
               </a>
-              <a href="#" className="hover:text-white">
+              <a href="https://www.linkedin.com/company/108746942" className="hover:text-white">
                 <FaLinkedinIn />
               </a>
             </div>
@@ -144,55 +141,39 @@ const Footer = () => {
         {/* Left text */}
         <div className="md:w-2/3">
           <p>
-            <span className="text-gray-600">Copyright © 2024 JadeTimes Academy •</span>{" "}
+            <span className="text-gray-600">Copyright © 2024 Jadetimes International University(JIU) •</span>{" "}
             <a href="/policy/" className="hover:text-blue-400 text-gray-400">
               Privacy Policy
             </a>
           </p>
 
           <p className="mt-4 text-gray-600">
-            All programs and workshops are solely owned and operated by the
-            JadeTimes Academy and are not affiliated with Universal <br/>
-            Studios, or Harvard University. GI Bill® is a registered trademark of the U.S.
-            Department of Veterans Affairs (VA). More <br/> information about
-            education benefits offered by VA is available at the official U.S.
-            government website <br/> at{" "}
-            <a
-              href="http://www.benefits.va.gov/gibill"
-              className="text-gray-400 hover:text-blue-400"
-            >
-              http://www.benefits.va.gov/gibill
-            </a>
-            . Not all programs are offered at all locations.
+
+All programs and workshops are owned and operated by Jadetimes International University LLC.JIU is an independent institution providing professional development, certificate programs, and non-degree courses. 
+          Until official authorization is granted, JIU does not confer state-recognized degrees.  
           </p>
 
           <p className="mt-4 text-gray-700">
-            BPPE: The JadeTimes Academy is approved to operate by the
-            California Bureau for Private Postsecondary Education (BPPE) <br />
-            “Approval” or “approval to operate” means that the institution is
-            compliant with the minimum standards contained in the <br /> California
-            Private Postsecondary Education Act of 2009 (as amended) and
-            Division 7.5 of Title 5 of the California Code of <br /> Education.
+            Disclaimer: Jadetimes International University is currently in the process of seeking approval and accreditation with relevant higher education authorities. All courses offered at present are for professional training and continuing education purposes only. Programs, schedules, and availability may vary by online delivery.   
           </p>
 
           <p className="mt-4">
             <a href="#" className="text-gray-400  hover:text-blue-400">
               Click here
             </a>{" "}
-            <span className="text-gray-700">to access the Bureau for Private Postsecondary Education website.</span>
+            <span className="text-gray-700">to learn more about JIU’s programs.  </span>
             <br />
             <a href="#" className="text-gray-400 hover:text-blue-400">
 
               Click here
             </a>{" "}
-            <span className="text-gray-700">to download JadeTimes Academy’s 2023 School Performance Fact
-            Sheet for the Los Angeles Campus.</span>
+            <span className="text-gray-700">to view JIU’s Global Agent Offices.  </span>
             <br />
             <a href="#" className="text-gray-400 hover:text-blue-400">
 
               Click here
             </a>{" "}
-            <span className="text-gray-700">to download JadeTimes Academy – BPPE 2023 Annual Report.</span>
+            <span className="text-gray-700">to contact JIU Admission Support.</span>
           </p>
         </div>
 
