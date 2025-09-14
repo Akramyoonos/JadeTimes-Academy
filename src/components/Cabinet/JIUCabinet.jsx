@@ -303,7 +303,7 @@ const JIUCabinet = () => {
   return (
     <div style={styles.pageContainer}>
         <div style={styles.container}>
-            <h1 style={styles.mainHeading}>NYFA CABINET</h1>
+            <h1 style={styles.mainHeading}>JIU CABINET</h1>
             
             <div style={getGridStyle()}>
                 {cabinetMembers.map((member) => (

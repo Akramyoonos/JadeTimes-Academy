@@ -1,14 +1,17 @@
 import React from 'react';
-import AlumniExplore01 from '../../assets/Images/AlumniExplore03.jpeg';
+import { Link } from 'react-router-dom';
+import AlumniExplore01 from '../../assets/Images/AlumniExplore01.jpeg';
 import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
+import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
+import AlumniExplore04 from '../../assets/Images/AlumniExplore03.jpeg';
 
-const AreaLeadershipSection = () => {
+const LeadershipSection = () => {
     const leadershipAreas = [
         {
-            title: "Board Of Directors",
+            title: "PRESIDENT'S PAGE",
             image: AlumniExplore01,
             alt: "President Michael Young at a conference",
-            href: "who-we-are/leadership/board-of-directors/"
+            href: "/leadership/president"
         },
         {
             title: "CABINET",
@@ -16,25 +19,37 @@ const AreaLeadershipSection = () => {
             alt: "Two people wearing NYFA hoodies looking over a lake in a city park",
             href: "/cabinet/"
         },
+        {
+            title: "ADMINISTRATION",
+            image: AlumniExplore03,
+            alt: "An empty theater with red carpeted stairs",
+            href: "/leadership/administration"
+        },
+        {
+            title: "BOARD OF DIRECTORS",
+            image: AlumniExplore04,
+            alt: "Close-up of a director's chair back",
+            href: "/who-we-are/leadership/board-of-directors/"
+        }
     ];
 
     return (
         <div className="bg-white">
             <div className="py-12">
-                <div className="flex items-center mb-8 px-4">
+                <div className="flex items-center mb-8 px-4 sm:px-6 lg:px-8">
                     <div className="w-1 h-10 bg-purple-600 mr-4"></div>
                     <h1 className="text-4xl font-light text-gray-800 tracking-wider">
                         AREAS OF LEADERSHIP
                     </h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     {leadershipAreas.map((area, index) => (
-                        <a href={area.href} key={index} className="relative group overflow-hidden block">
+                        <Link to={area.href} key={index} className="relative group overflow-hidden">
                             <img 
                                 src={area.image} 
                                 alt={area.alt} 
-                                className="w-full h-180 object-cover transform transition-transform duration-500 group-hover:scale-110"
+                                className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
                             />
                             <div className="absolute inset-0  bg-opacity-50 flex flex-col justify-end p-6">
                                 <div className="text-white">
@@ -57,7 +72,7 @@ const AreaLeadershipSection = () => {
                                     <h2 className="text-lg font-semibold tracking-wider">{area.title}</h2>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>
@@ -65,4 +80,4 @@ const AreaLeadershipSection = () => {
     );
 };
 
-export default AreaLeadershipSection;
+export default LeadershipSection;

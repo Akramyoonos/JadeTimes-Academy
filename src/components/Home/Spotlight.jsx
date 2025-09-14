@@ -60,7 +60,7 @@ const Spotlight = () => {
     const walk = (x - startX) * 2; //scroll-fast
     scrollContainerRef.current.scrollLeft = scrollLeft - walk;
   };
-  
+
   // Auto-scrolling effect
   useEffect(() => {
     if (!scrollContainerRef.current) return;
@@ -182,7 +182,8 @@ const Spotlight = () => {
 
       <div className="w-full pb-10">
         {/* CHANGE 4: Removed the duplicate links that were present in the original code. */}
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 ">
+        {/* CHANGE 5: Updated grid classes for mobile responsiveness. */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <a href="/Degree-Programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"

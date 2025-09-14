@@ -47,7 +47,7 @@ export default function CampusesAndLocations() {
         backgroundPosition: "center",
       }}
     >
-      <div className="  px-4 sm:px-10 lg:px-12 py-12 sm:py-16 lg:py-24">
+      <div className="  pl-4 sm:pl-10 lg:pl-10 py-8 sm:py-12 lg:py-18">
         {/* Heading */}
         <div className="mb-10">
           <div className="flex items-start gap-4">
@@ -63,7 +63,7 @@ export default function CampusesAndLocations() {
         </div>
 
         {/* Regions */}
-        <div className="flex overflow-x-auto gap-8 pb-4">
+        <div className="flex overflow-x-auto gap-12 pb-4">
           {REGIONS.map((region) => (
             <div key={region.title} className="flex-shrink-0 w-80">
               <h3 className="text-xl tracking-widest text-black/90 font-semibold mb-6">

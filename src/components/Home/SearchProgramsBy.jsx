@@ -123,7 +123,7 @@ const SearchProgramsBy = () => {
 
       {/* full-width strip; label on far left, controls on far right */}
       <div className="border-b border-gray-200">
-        <div className="w-full flex flex-col items-center xl:flex-row xl:items-stretch">
+        <div className="w-full flex flex-col items-start xl:flex-row xl:items-stretch">
           {/* Left label (flush to edge) */}
           <div className="w-full hidden sm:block lg:text-left text-black px-8 md:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center">
             Search Programs by
