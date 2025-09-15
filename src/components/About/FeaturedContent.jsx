@@ -12,11 +12,14 @@ const FeaturedContent = () => {
 
   const scroll = (direction) => {
     if (scrollContainer.current) {
-      const scrollAmount = scrollContainer.current.offsetWidth;
-      scrollContainer.current.scrollBy({ 
-        left: direction === 'left' ? -scrollAmount : scrollAmount, 
-        behavior: 'smooth' 
-      });
+      const firstArticle = scrollContainer.current.querySelector('article');
+      if (firstArticle) {
+        const scrollAmount = firstArticle.offsetWidth + 48; // 48px for space-x-12 (3rem)
+        scrollContainer.current.scrollBy({
+          left: direction === 'left' ? -scrollAmount : scrollAmount,
+          behavior: 'smooth'
+        });
+      }
     }
   };
 
@@ -39,15 +42,15 @@ const FeaturedContent = () => {
             </button>
           </div>
         </div>
-        <div ref={scrollContainer} className="flex space-x-12 overflow-hidden pb-8" role="list">
-          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-4xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
+        <div ref={scrollContainer} className="flex space-x-12 overflow-x-auto w-full pb-8" role="list">
+          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px] overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
               className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
               src={FeaturedContentImage1} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end">
+            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end items-center">
               <h3 className="uppercase text-xl sm:text-2xl font-semibold tracking-wide text-white mb-3 leading-snug">
                 NYFA ALUM MASALI BADUZA STARS IN SURPRISE ‘BRIDGERTON’ ROLE
               </h3>
@@ -64,14 +67,14 @@ const FeaturedContent = () => {
               </a>
             </div>
           </article>
-          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-4xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
+          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
               className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
               src={FeaturedContentImage2} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end">
+            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end items-center">
               <h3 className="uppercase text-xl sm:text-2xl font-semibold tracking-wide text-white mb-3 leading-snug">
                 NYFA ALUM MASALI BADUZA STARS IN SURPRISE ‘BRIDGERTON’ ROLE
               </h3>
@@ -88,14 +91,14 @@ const FeaturedContent = () => {
               </a>
             </div>
           </article>
-          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-4xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
+          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
               className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
               src={FeaturedContentImage3} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end">
+            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end items-center">
               <h3 className="uppercase text-xl sm:text-2xl font-semibold tracking-wide text-white mb-3 leading-snug">
                 NYFA ALUM MASALI BADUZA STARS IN SURPRISE ‘BRIDGERTON’ ROLE
               </h3>
@@ -112,14 +115,14 @@ const FeaturedContent = () => {
               </a>
             </div>
           </article>
-          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-4xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
+          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
               className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
               src={FeaturedContentImage4} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end">
+            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end items-center">
               <h3 className="uppercase text-xl sm:text-2xl font-semibold tracking-wide text-white mb-3 leading-snug">
                 NYFA ALUM MASALI BADUZA STARS IN SURPRISE ‘BRIDGERTON’ ROLE
               </h3>
@@ -136,14 +139,14 @@ const FeaturedContent = () => {
               </a>
             </div>
           </article>
-          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-4xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
+          <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
               className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
               src={FeaturedContentImage5} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
-            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end">
+            <div className="absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end items-center">
               <h3 className="uppercase text-xl sm:text-2xl font-semibold tracking-wide text-white mb-3 leading-snug">
                 NYFA ALUM MASALI BADUZA STARS IN SURPRISE ‘BRIDGERTON’ ROLE
               </h3>
