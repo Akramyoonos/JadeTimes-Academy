@@ -55,7 +55,7 @@ const ACCENTS = {
 const FONT_SIZES = {
   topbar: "15px",
   phone: "15px",
-  nav: "18px",
+  nav: "14px",
   cta: "15px",
   megaHeading: "20px",
   megaItem: "16px",
@@ -167,7 +167,7 @@ const megaMenus = {
       { text: "HISTORY", href: "JIU-history/" },
       { text: "MISSION & PURPOSE", href: "/mission-and-purpose/" },
       { text: "ACCREDITATION, LICENSING, AND APPROVALS", href: "/Accreditation" },
-      { text: "AFFILIATIONS", href: "/discover/who-we-are/affiliations" },
+      { text: "AFFILIATIONS", href: "/affiliations/" },
       { text: "FACULTY DIRECTORY", href: "/faculty-directory/" },
       { text: "LEADERSHIP & ADMINISTRATION", href: "/who-we-are/leadership/" },
       { text: "JIU REVIEWS", href: "/discover/who-we-are/JIU-reviews" },
@@ -186,7 +186,7 @@ const megaMenus = {
     ],
     "NEWS AND CULTURE": [
       { text: "GUEST SPEAKERS", href: "/discover/news-and-culture/guest-speakers" },
-      { text: "JIU IN THE NEWS", href: "/discover/news-and-culture/JIU-in-the-news" },
+      { text: "JIU IN THE NEWS", href: "/JIU-in-the-news/" },
       { text: "BLOG", href: "/blog/" },
       { text: "JIU YOUTUBE CHANNEL", href: "https://www.youtube.com/@Jadetimes-University" },
       { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },
@@ -467,12 +467,11 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                     >
                       <span>{section.replace(" Coming Soon", "")}</span>
                       {section.includes("Coming Soon") && (
-                        <a
-                          href="#"
+                        <span
                           className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                         >
                           Coming Soon
-                        </a>
+                        </span>
                       )}
                     </h3>
                   </a>
@@ -539,12 +538,11 @@ const MobileMegaMenu = ({ config, accent, open }) => {
             >
               <span>{section.replace(" Coming Soon", "")}</span>
               {section.includes("Coming Soon") && (
-                <a
-                  href="#"
+                <span
                   className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white "
                 >
                   Coming Soon
-                </a>
+                </span>
               )}
             </h3>
             <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
@@ -587,7 +585,7 @@ const MobileMegaMenu = ({ config, accent, open }) => {
 
 const DesktopNavItem = ({ children, active, color, onClick, to, controlsId }) => {
   const base = "relative group block py-8 uppercase tracking-tight text-white hover:text-white transition-colors";
-  const styleText = { fontSize: "var(--size-nav)", fontWeight: 400, wordSpacing: '2px' };
+  const styleText = { fontSize: "var(--size-nav)", fontWeight: 400, letterSpacing: '2px' };
   const underlineStyle = { backgroundColor: color || "transparent" };
   
   const ariaProps = onClick ? {

@@ -7,7 +7,7 @@ import FeaturedContentImage3 from "../../assets/Images/AlumniExplore03.jpeg";
 import FeaturedContentImage4 from "../../assets/Images/AlumniExplore02.jpeg";
 import FeaturedContentImage5 from "../../assets/Images/Campus01.jpeg";
 
-const Featured = () => {
+const FeaturedContent = () => {
   const scrollContainer = useRef(null);
 
   const scroll = (direction) => {
@@ -170,4 +170,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default FeaturedContent;

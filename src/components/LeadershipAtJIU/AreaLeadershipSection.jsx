@@ -11,7 +11,7 @@ const LeadershipSection = () => {
             title: "PRESIDENT'S PAGE",
             image: AlumniExplore01,
             alt: "President Michael Young at a conference",
-            href: "/leadership/president"
+            href: "/presidents-page/"
         },
         {
             title: "CABINET",

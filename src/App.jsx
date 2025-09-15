@@ -39,6 +39,16 @@ import InternationalStudents_Page from './pages/InternationalStudents_Page';
 import LeadershipAtJIU_Page from './pages/LeadershipAtJIU_Page';
 import BoardOfDirectors_Page from './pages/BoardOfDirectors_Page';
 import Cabinet_Page from './pages/Cabinet_Page';
+import JIUNews_Page from './pages/JIUNews_Page';
+import JobsAtJIU_Page from './pages/JobsAtJIU_Page';
+import PresidentPage from './pages/PresidentPage';
+import Affiliations_Page from './pages/Affiliations_Page';
+
+
+
+
+
+
 
 // Global click interceptor so ANY <a href="/..."> in header/footer/body routes via SPA
 function AppInner() {
@@ -111,6 +121,10 @@ function AppInner() {
            <Route path="/who-we-are/leadership/*"       element={<LeadershipAtJIU_Page />} />
             <Route path="/who-we-are/leadership/board-of-directors/*"       element={<BoardOfDirectors_Page />} />
             <Route path="/cabinet/*"       element={<Cabinet_Page />} />
+            <Route path="/JIU-in-the-news/*"       element={<JIUNews_Page />} />
+            <Route path="/jobs-at-nyfa/*"       element={<JobsAtJIU_Page />} />
+            <Route path="/presidents-page/"       element={<PresidentPage />} />
+            <Route path="/affiliations//*"       element={<Affiliations_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>

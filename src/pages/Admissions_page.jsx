@@ -2,7 +2,7 @@ import React from 'react'
 import Heading from '../components/Admissions/Heading'
 import Admissions from '../components/Admissions/Admissions'
 import ResourcesandInformation from '../components/Admissions/ResourcesandInformation'
-import Featured from '../components/Admissions/Featured'
+import FeaturedContent from '../components/Admissions/FeaturedContent'
 
 const Admissions_page = () => {
   return (
@@ -10,7 +10,7 @@ const Admissions_page = () => {
       <Heading />
       <Admissions />
       <ResourcesandInformation />
-      <Featured />
+      <FeaturedContent />
     </>
   )
 }

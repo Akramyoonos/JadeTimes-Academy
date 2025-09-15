@@ -104,8 +104,8 @@ const Footer = () => {
               <a href="#" className="hover:text-gray-400">
                 CAMPUS LIFE
               </a>
-              <a href="#" className="hover:text-gray-400">
-                UPDATES & ARTICLES
+              <a href="jobs-at-nyfa/" className="hover:text-gray-400">
+                JOBS
               </a>
               <a href="#" className="hover:text-gray-400">
                 OUR STORY
