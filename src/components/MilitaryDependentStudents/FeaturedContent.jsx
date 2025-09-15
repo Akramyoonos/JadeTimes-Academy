@@ -42,7 +42,7 @@ const FeaturedContent = () => {
             </button>
           </div>
         </div>
-        <div ref={scrollContainer} className="flex space-x-12 overflow-x-auto w-full pb-8" role="list">
+        <div ref={scrollContainer} className="flex space-x-12 overflow-x-auto w-full pb-8 no-scrollbar" role="list">
           <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px] overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
