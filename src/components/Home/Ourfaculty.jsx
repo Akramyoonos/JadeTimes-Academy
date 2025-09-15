@@ -1,664 +1,125 @@
-import React from "react";
-// NOTE: Make sure these image paths are correct in your project structure.
-// Using placeholders for demonstration.
-import ourfaculty1 from "../../assets/Images/ourfaculty1.png";
-import ourfaculty2 from "../../assets/Images/ourfaculty2.png";
-import ourfaculty3 from "../../assets/Images/ourfaculty3.png";
+import React from 'react';
+import ourfaculty1 from '../../assets/Images/ourfaculty1.png';
+import ourfaculty2 from '../../assets/Images/ourfaculty2.png';
+import ourfaculty3 from '../../assets/Images/ourfaculty3.png';
 
-
-/* ====== breakpoint helper (md = 768px, lg = 1024px) ====== */
-function useBreakpoint(md = 767, lg = 1023) {
-  const [breakpoints, setBreakpoints] = React.useState(() => {
-    // Default values for server-side rendering
-    if (typeof window === "undefined") {
-      return { isMdUp: true, isLgUp: true };
-    }
-    const width = window.innerWidth;
-    return {
-      isMdUp: width >= md,
-      isLgUp: width >= lg,
-    };
-  });
-
-  React.useEffect(() => {
-    const onResize = () => {
-      const width = window.innerWidth;
-      setBreakpoints({
-        isMdUp: width >= md,
-        isLgUp: width >= lg,
-      });
-    };
-
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, [md, lg]);
-
-  return breakpoints;
-}
-
-
-/** Only main black strip stays (you set this) */
-const BLACK_HEIGHT_MOBILE = 1708; // 1700
-const BLACK_HEIGHT_DESKTOP = 320;
-
-/** Shade (if you still want the dark fade below the frame) */
-const SHADE_DEFAULT = {
-  attachTo: "below", // "below" | "image" | "frame"
-  widthPct: "100%",
-  heightPx: 140,
-  gapPx: 10,
-  radiusPx: 0,
-  topOpacity: 0.95,
-  midOpacity: 0.7,
-  midAt: 45,
-  fadeAt: 100,
-  heightPct: 88,
-};
-
-/** Adjustable WHITE BAND */
-const BAND_DEFAULT = {
-  enabled: true,
-  widthPct: "88%",
-  heightPx: 160,
-  opacity: 1,
-  radiusPx: 0,
-  tx: 0,
-  ty: 0,
-  scale: 1,
-};
-
-const COLORS = {
-  film: "#3db4ff",
-  media: "#ffca1f",
-  perform: "#b61f9f",
-};
-
-/* ================================================================
-    PER-CARD TUNING
-    - mobile band shown on card 1 & 2 only (card 3 disabled)
-    - ALL desktop bands disabled
-    - last card sets reserveBottom: 0 to pull "Follow Us" up
-    ================================================================ */
+// --- Data ---
+// In a real application, this data would likely be fetched from an API.
+// To better simulate this, the data is now in a dedicated constant.
 const facultyData = [
   {
-    department: "FILM ARTS",
+    department: "Film Arts",
     imageUrl: ourfaculty1,
-    color: COLORS.film,
-    icon: "film",
-    imageFit: "contain",
-    imageBox: { aspect: "4 / 3" },
-
-    imageScale: 2,
-    imageTX: 0,
-    imageTY: -50,
-
-    mobile: {
-      frameWidthPct: "95%",
-      frameHeight: 124,
-      frameBottom: 6,
-      iconSize: 44,
-
-      cardOffsetY: 62,
-
-      frameTX: 0,
-      frameTY: 106,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: -60,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 1.8,
-      imageTX: 0,
-      imageTY: 0,
-
-      // mobile band (keep)
-      band: { ...BAND_DEFAULT, ty: 270, heightPx: 30, widthPct: "115%" },
-
-      shade: { widthPct: "113%", heightPx: 190, gapPx: 10 },
-    },
-    tablet: {
-      frameWidthPct: "100%",
-      frameHeight: 118,
-      frameBottom: 2,
-      iconSize: 36,
-
-      cardOffsetY: 98,
-
-      frameTX: 0,
-      frameTY: 32,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: 35,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 2,
-      imageTX: 0,
-      imageTY: -50,
-
-      // DESKTOP BAND DISABLED
-      band: { ...BAND_DEFAULT, enabled: false },
-
-      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
-    },
-    desktop: {
-      frameWidthPct: "100%",
-      frameHeight: 118,
-      frameBottom: 2,
-      iconSize: 36,
-
-      cardOffsetY: 98,
-
-      frameTX: 0,
-      frameTY: 32,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: 35,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 2,
-      imageTX: 0,
-      imageTY: -50,
-
-      // DESKTOP BAND DISABLED
-      band: { ...BAND_DEFAULT, enabled: false },
-
-      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
-    },
+    altText: "Black and white portrait of a woman with glasses on her head, looking forward with a slight smile.",
+    color: "#3db4ff",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+      </svg>
+    ),
   },
   {
-    department: "MEDIA ARTS",
+    department: "Media Arts",
     imageUrl: ourfaculty2,
-    color: COLORS.media,
-    icon: "camera",
-    imageFit: "contain",
-    imageBox: { aspect: "4 / 3" },
-
-    imageScale: 2,
-    imageTX: 0,
-    imageTY: -50,
-
-    mobile: {
-      frameWidthPct: "95%",
-      frameHeight: 124,
-      frameBottom: -80,
-      iconSize: 44,
-
-      cardOffsetY: 240,
-
-      frameTX: 0,
-      frameTY: -140,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: -300,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 1.8,
-      imageTX: 0,
-      imageTY: -170,
-
-      // mobile band (keep)
-      band: { ...BAND_DEFAULT, ty: 115, heightPx: 30, widthPct: "115%" },
-
-      shade: { widthPct: "113%", heightPx: 200, gapPx: 10 },
-    },
-    tablet: {
-      frameWidthPct: "100%",
-      frameHeight: 118,
-      frameBottom: 3,
-      iconSize: 36,
-
-      cardOffsetY: 98,
-
-      frameTX: 0,
-      frameTY: 32,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: 35,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 2,
-      imageTX: 0,
-      imageTY: -50,
-
-      // DESKTOP BAND DISABLED
-      band: { ...BAND_DEFAULT, enabled: false },
-
-      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
-    },
-    desktop: {
-      frameWidthPct: "100%",
-      frameHeight: 118,
-      frameBottom: 3,
-      iconSize: 36,
-
-      cardOffsetY: 98,
-
-      frameTX: 0,
-      frameTY: 32,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: 35,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 2,
-      imageTX: 0,
-      imageTY: -50,
-
-      // DESKTOP BAND DISABLED
-      band: { ...BAND_DEFAULT, enabled: false },
-
-      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
-    },
+    altText: "Black and white portrait of a man with a hat and beard, smiling gently.",
+    color: "#ffca1f",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
   },
   {
-    department: "PERFORMING ARTS",
+    department: "Performing Arts",
     imageUrl: ourfaculty3,
-    color: COLORS.perform,
-    icon: "masks",
-    imageFit: "contain",
-    imageBox: { aspect: "4 / 3" },
-
-    imageScale: 2,
-    imageTX: 0,
-    imageTY: -50,
-
-    mobile: {
-      frameWidthPct: "95%",
-      frameHeight: 124,
-      frameBottom: -180,
-      iconSize: 44,
-
-      cardOffsetY: 420,
-
-      frameTX: 0,
-      frameTY: -650,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: -810,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 1.8,
-      imageTX: 0,
-      imageTY: -590,
-
-      // MOBILE LAST BAND DISABLED
-      band: { ...BAND_DEFAULT, enabled: false },
-
-      // pull next section up (no extra bottom reserve)
-      reserveBottom: 0,
-
-      shade: { widthPct: "113%", heightPx: 190, gapPx: 10 },
-
-      // >>> extra black background just for this card on mobile
-      extraBlack: 80,
-    },
-    tablet: {
-      frameWidthPct: "100%",
-      frameHeight: 118,
-      frameBottom: 19,
-      iconSize: 36,
-
-      cardOffsetY: 98,
-
-      frameTX: 0,
-      frameTY: 32,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: 35,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 2,
-      imageTX: 0,
-      imageTY: -50,
-
-      // DESKTOP BAND DISABLED
-      band: { ...BAND_DEFAULT, enabled: false },
-
-      // also keep desktop tight just in case
-      reserveBottom: 0,
-
-      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
-    },
-    desktop: {
-      frameWidthPct: "100%",
-      frameHeight: 118,
-      frameBottom: 19,
-      iconSize: 36,
-
-      cardOffsetY: 98,
-
-      frameTX: 0,
-      frameTY: 32,
-      frameScale: 1,
-
-      shadeTX: 0,
-      shadeTY: 35,
-      shadeScale: 1,
-
-      iconTX: 0,
-      iconTY: 0,
-      iconScale: 1,
-
-      imageScale: 2,
-      imageTX: 0,
-      imageTY: -50,
-
-      // DESKTOP BAND DISABLED
-      band: { ...BAND_DEFAULT, enabled: false },
-
-      // also keep desktop tight just in case
-      reserveBottom: 0,
-
-      shade: { widthPct: "110%", heightPx: 140, gapPx: 132 },
-    },
+    altText: "Black and white portrait of a smiling woman with short hair and hoop earrings.",
+    color: "#b61f9f",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 14h6" />
+      </svg>
+    ),
   },
 ];
 
-/* Small arrow for "Learn more" */
-const ChevronRight = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-[14px] w-[14px]"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-  >
-    <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+// --- Components ---
+
+/**
+ * A reusable chevron icon component.
+ * Added focusable="false" and aria-hidden="true" for better accessibility,
+ * as it's a decorative icon within a link.
+ */
+const ChevronRightIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" focusable="false" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
   </svg>
 );
 
-/* ---- icons ---- */
-const IconFilm = ({ size = 28 }) => (
-  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden>
-    <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6zM7 6.5A1.5 1.5 0 1 0 7 9a1.5 1.5 0 0 0 0-2.5zm10 0A1.5 1.5 0 1 0 17 9a1.5 1.5 0 0 0 0-2.5zM7 16.5A1.5 1.5 0 1 0 7 19a1.5 1.5 0 0 0 0-2.5zm10 0A1.5 1.5 0 1 0 17 19a1.5 1.5 0 0 0 0-2.5z" />
-  </svg>
-);
-const IconCamera = ({ size = 28 }) => (
-  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden>
-    <path d="M9 7l1.5-2h3L15 7h3a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3h3zm3 3.5A4.5 4.5 0 1 0 16.5 15 4.5 4.5 0 0 0 12 10.5zm0 2A2.5 2.5 0 1 1 9.5 15 2.5 2.5 0 0 1 12 12.5z" />
-  </svg>
-);
-const IconMasks = ({ size = 28 }) => (
-  <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden>
-    <path d="M3 4h8v6a4 4 0 0 1-8 0V4zm10 0h8v8a4 4 0 0 1-8 0V4zM6.5 7A1.5 1.5 0 1 0 8 8.5 1.5 1.5 0 0 0 6.5 7zm4 0A1.5 1.5 0 1 0 12 8.5 1.5 1.5 0 0 0 10.5 7zm5 2A1.5 1.5 0 1 0 17 10.5 1.5 1.5 0 0 0 15.5 9zm4 0A1.5 1.5 0 1 0 21 10.5 1.5 1.5 0 0 0 19.5 9z" />
-  </svg>
-);
-const SplitIcon = ({ kind, color, size = 28 }) => {
-  const Icon = kind === "film" ? IconFilm : kind === "camera" ? IconCamera : IconMasks;
-  return (
-    <div className="pointer-events-none" style={{ color, lineHeight: 0 }} aria-hidden>
-      <Icon size={size} />
-    </div>
-  );
-};
-
-/** helpers */
-function buildShade(shade) {
-  const s = { ...SHADE_DEFAULT, ...(shade || {}) };
-  const background = `linear-gradient(0deg,
-    rgba(0,0,0,${s.topOpacity}) 0%,
-    rgba(0,0,0,${s.midOpacity}) ${s.midAt}%,
-    rgba(0,0,0,0) ${s.fadeAt}%)`;
-  return { ...s, background };
-}
-// Correctly returns a CSS transform string
-const tCenterX = (tx = 0, ty = 0, scale = 1) =>
-  `translate(-50%, 0) translate(${Number(tx)}px, ${Number(ty)}px) scale(${Number(scale)})`;
-
-const FacultyCard = ({
-  department,
-  imageUrl,
-  color,
-  icon,
-  conf,
-  imageFit,
-  imageBox,
-  imageScale,
-  imageTX,
-  imageTY,
-  shade,
-}) => {
-  const aspectStyle = imageBox?.aspect ? { aspectRatio: imageBox.aspect, minHeight: 160 } : undefined;
-  const overflowClass = imageFit === "contain" ? "overflow-visible" : "overflow-hidden";
-  const S = buildShade({ ...shade, ...(conf?.shade || {}) });
-  const band = { ...BAND_DEFAULT, ...(conf?.band || {}) };
-
-  // per-breakpoint image transform (fallback to top-level)
-  const imgScale = conf?.imageScale ?? imageScale ?? 1;
-  const imgTX = conf?.imageTX ?? imageTX ?? 0;
-  const imgTY = conf?.imageTY ?? imageTY ?? 0;
-
-  // transforms
-  const frameTransform = tCenterX(conf?.frameTX || 0, conf?.frameTY || 0, conf?.frameScale || 1);
-  const shadeTransform = tCenterX(conf?.shadeTX || 0, conf?.shadeTY || 0, conf?.shadeScale || 1);
-
-  // auto bottom space so nothing overlaps the next section
-  const spill = Math.max(0, -(conf?.frameBottom || 0));
-  const shadeSpill = S.attachTo === "below" ? Math.max(0, (S.heightPx || 0) - (S.gapPx || 0)) : 0;
-  const autoReserveBottom = spill + shadeSpill + 8; // tiny buffer
-  const reserveBottom = conf?.reserveBottom !== undefined ? conf.reserveBottom : autoReserveBottom;
-
-  return (
+/**
+ * A card component to display faculty information.
+ * It's now more accessible and uses more descriptive class names.
+ */
+const FacultyCard = ({ department, imageUrl, altText, color, icon }) => (
+  <div className="relative group w-full md:w-1/3 rounded-lg overflow-hidden shadow-xl transform-gpu transition-transform duration-500 hover:scale-105 focus-within:scale-105">
+    <a href="#" className="absolute inset-0 z-10" aria-label={`Learn more about the ${department} department`}>
+      <span className="sr-only">Learn more about the {department} department</span>
+    </a>
+    <img alt={altText} className="w-full h-full object-cover" src={imageUrl} />
+    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
     <div
-      className="relative w-full overflow-visible"
-      style={{
-        marginTop: conf?.cardOffsetY || 0,
-        marginBottom: reserveBottom, // controls how close "Follow Us" sits
-      }}
+      className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-3 transition-all duration-300 transform-gpu translate-y-0 group-hover:-translate-y-2"
     >
-      {/* IMAGE container (no per-card black bg anymore) */}
-      <div className={`relative w-full ${overflowClass} z-[1]`} style={aspectStyle}>
-        <img
-          src={imageUrl}
-          alt={department}
-          loading="eager"
-          decoding="async"
-          className={`absolute inset-0 h-full w-full ${imageFit === "contain" ? "object-contain" : "object-cover"} grayscale will-change-transform`}
-          style={{
-            objectPosition: "50% 50%",
-            transform: `translate(${imgTX}px, ${imgTY}px) scale(${imgScale})`,
-            transformOrigin: "50% 50%",
-          }}
-        />
-      </div>
-
-      {/* WHITE BAND (mobile card 1&2 only, desktop disabled via config) */}
-      {band.enabled && (
-        <div
-          className="absolute left-1/2 top-1/2 pointer-events-none z-[2]"
-          style={{
-            width: band.widthPct,
-            height: `${band.heightPx}px`,
-            background: `rgba(255,255,255,${band.opacity})`,
-            borderRadius: band.radiusPx ? `${band.radiusPx}px` : undefined,
-            transform: `translate(-50%, -50%) translate(${band.tx}px, ${band.ty}px) scale(${band.scale})`,
-          }}
-        />
-      )}
-
-      {/* Shade BELOW the frame (optional) */}
-      {S.attachTo === "below" && (
-        <div
-          className="absolute left-1/2 pointer-events-none z-[2]"
-          style={{
-            width: S.widthPct,
-            height: `${S.heightPx}px`,
-            bottom: `calc(${conf.frameBottom}px + ${S.gapPx}px - ${S.heightPx}px)`,
-            borderRadius: S.radiusPx ? `${S.radiusPx}px` : undefined,
-            background: S.background,
-            transform: shadeTransform,
-            transformOrigin: "50% 50%",
-          }}
-        />
-      )}
-
-      {/* FRAME + TEXT */}
+      <div style={{ color: color }} className="text-4xl mb-2 transform-gpu translate-y-0 group-hover:-translate-y-2 transition-transform duration-300">{icon}</div>
+      <h3 className="text-white text-2xl font-bold mb-1 transform-gpu translate-y-0 group-hover:-translate-y-2 transition-transform duration-300">{department}</h3>
       <div
-        className="absolute left-1/2 pointer-events-none z-[3] overflow-visible"
-        style={{
-          bottom: `${conf.frameBottom}px`,
-          width: conf.frameWidthPct,
-          transform: frameTransform,
-          transformOrigin: "50% 50%",
-        }}
+        style={{ color: color }}
+        className="font-semibold text-sm uppercase tracking-widest flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform-gpu translate-y-4 group-hover:translate-y-0"
       >
-        <div className="relative pointer-events-auto overflow-visible" style={{ height: `${conf.frameHeight}px` }}>
-          {/* Frame */}
-          <span className="absolute left-0 right-0 bottom-0 h-[4px]" style={{ backgroundColor: color }} />
-          <span className="absolute left-0 top-0 bottom-0 w-[4px]" style={{ backgroundColor: color }} />
-          <span className="absolute right-0 top-0 bottom-0 w-[4px]" style={{ backgroundColor: color }} />
-          {/* split top */}
-          <span className="absolute left-0 top-0 h-[4px] w-[36%]" style={{ backgroundColor: color }} />
-          <span className="absolute right-0 top-0 h-[4px] w-[36%]" style={{ backgroundColor: color }} />
-
-          {/* Text */}
-          <div className="absolute inset-y-0 left-6 right-6 flex flex-col justify-center text-left">
-            <div className="text-white text-[20px] font-semibold leading-tight drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
-              {department}
-            </div>
-            <a
-              href="#"
-              className="mt-1 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[.22em]"
-              style={{ color }}
-            >
-              Learn More <ChevronRight />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* ICON layer */}
-      <div
-        className="absolute left-1/2 pointer-events-none z-[4] overflow-visible"
-        style={{
-          bottom: `${conf.frameBottom}px`,
-          width: conf.frameWidthPct,
-          transform: tCenterX(conf?.frameTX || 0, conf?.frameTY || 0, conf?.frameScale || 1),
-          transformOrigin: "50% 50%",
-        }}
-      >
-        <div className="relative" style={{ height: `${conf.frameHeight}px` }}>
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <SplitIcon kind={icon} color={color} size={conf.iconSize} />
-          </div>
-        </div>
+        LEARN MORE
+        <ChevronRightIcon />
       </div>
     </div>
-  );
-};
+  </div>
+);
 
-export default function OurFaculty() {
-  const { isLgUp, isMdUp } = useBreakpoint();
 
-  // --- NEW: compute extra black needed per breakpoint from card configs ---
-  const extraBlackMobile = facultyData.reduce(
-    (m, f) => Math.max(m, f?.mobile?.extraBlack || 0),
-    0
-  );
-  const extraBlackDesktop = facultyData.reduce(
-    (m, f) => Math.max(m, f?.desktop?.extraBlack || 0),
-    0
-  );
-
+/**
+ * The main component for the "Our Faculty" section.
+ * Improved semantics and structure.
+ */
+const OurFaculty = () => {
   return (
-    <section className="relative bg-white overflow-x-hidden overflow-y-hidden">
-      {/* Main black strip only (with optional per-card extension) */}
-      <div
-        className="absolute top-0 left-0 right-0 bg-[#0a0a0a] z-0 md:hidden"
-        style={{ height: BLACK_HEIGHT_MOBILE + extraBlackMobile }}
-      />
-      <div
-        className="absolute top-0 left-0 right-0 bg-[#0a0a0a] z-0 hidden md:block"
-        style={{ height: BLACK_HEIGHT_DESKTOP + extraBlackDesktop }}
-      />
-
-      {/* Content */}
-      <div className="relative z-10  max-w-[1280px] px-6 md:px-07 pt-14 md:pt-18 pb-24 md:pb-32 ">
-        <div className="flex flex-col md:flex-row gap-12">
-          {/* Headline / CTA */}
-          <div className="w-full md:w-[30%]">
-            <div className="flex items-start gap-4 ml-7">
-              <span className="block w-[4px] h-[72px] md:h-[88px] bg-[#b61f9f]" />
-              <div className="leading-[1.0]">
-                <div className="text-[28px] md:text-[36px] font-light text-white">OUR</div>
-                <div className="text-[28px] md:text-[36px] font-light text-white">FACULTY</div>
+    <div className="OurfacultyFont">
+      <div className="bg-white">
+        <section className="bg-[#0a0a0a] text-white" aria-labelledby="faculty-heading">
+          <div className="max-w-7xl px-8 md:px-12 py-16 md:py-24">
+            <div className="flex flex-col md:flex-row items-center md:items-start md:justify-start gap-12">
+              <div className="flex flex-col justify-center md:justify-start md:items-start gap-8 md:gap-12 w-full md:w-1/4">
+                <div className="flex items-center gap-6">
+                  <div className="w-1.5 h-20 bg-[#b61f9f]"></div>
+                  <h2 id="faculty-heading" className="text-5xl md:text-5xl font-medium leading-tight text-white">
+                    OUR
+                    <br />
+                    FACULTY
+                  </h2>
+                </div>
+                <a href="/faculty" className="bg-purple-600 text-white font-medium text-base uppercase  px-8 py-4 shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 transition-colors duration-300 inline-block text-center">
+                  MEET OUR FACULTY
+                </a>
+              </div>
+              <div className="flex flex-col md:flex-row gap-18 w-full md:w-3/4">
+                {facultyData.map((faculty) => (
+                  <FacultyCard key={faculty.department} {...faculty} />
+                ))}
               </div>
             </div>
-            <a
-              href="/faculty-directory/"
-              className="mt-4 ml-11 inline-block bg-[#b61f9f] hover:bg-white px-4 py-2 text-[12px] font-semibold uppercase tracking-wide text-white hover:text-pink-500"
-            >
-              MEET OUR FACULTY
-            </a>
           </div>
-
-          {/* Cards */}
-          <div className="w-full md:flex-1 md:pr-3">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 md:gap-4 lg:gap-8">
-              {facultyData.map((f) => {
-                const conf = isLgUp ? f.desktop : isMdUp ? f.tablet : f.mobile;
-                return (
-                  <FacultyCard
-                    key={f.department}
-                    department={f.department}
-                    imageUrl={f.imageUrl}
-                    color={f.color}
-                    icon={f.icon}
-                    imageFit={f.imageFit}
-                    imageBox={f.imageBox}
-                    imageScale={f.imageScale}
-                    imageTX={f.imageTX}
-                    imageTY={f.imageTY}
-                    shade={SHADE_DEFAULT}
-                    conf={conf}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
-      {/* No extra spacer to avoid wasted gap */}
-    </section>
+    </div>
   );
-}
+};
+
+export default OurFaculty;

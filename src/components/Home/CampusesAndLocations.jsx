@@ -8,31 +8,31 @@ const REGIONS = [
   {
     title: "NORTH AMERICA",
     items: [
-      { city: "New York City", tag: " JIU Agent Office" },
-      { city: "New Mexico", tag: " JIU Agent Office" },
+      { city: "New York City", tag: "JIU Agent Office" },
+      { city: "New Mexico", tag: "JIU Agent Office" },
     ],
   },
   {
     title: "EUROPE",
     items: [
-      { city: "Florence, Italy", tag: " JIU Agent Office" },
-      { city: "Paris, France", tag: " JIU Agent Office" },
-     { city: "Madrid, Spain", tag: " JIU Agent Office" },
+      { city: "Florence, Italy", tag: "JIU Agent Office" },
+      { city: "Paris, France", tag: "JIU Agent Office" },
+      { city: "Madrid, Spain", tag: "JIU Agent Office" },
     ],
   },
   {
     title: "Asia-Pacific",
     items: [
-      { city: "Beijing, China", tag: " JIU Agent Office" },
-      { city: "Colombo, Sri Lanka", tag: " JIU Agent Office" },
-     { city: "Delhi, India", tag: " JIU Agent Office" },
+      { city: "Beijing, China", tag: "JIU Agent Office" },
+      { city: "Colombo, Sri Lanka", tag: "JIU Agent Office" },
+      { city: "Delhi, India", tag: "JIU Agent Office" },
     ],
   },
   {
     title: "Middle East & Africa",
     items: [
-      { city: "Dubai, UAE", tag: " JIU Agent Office" },
-      { city: "Nairobi, Kenya", tag: " JIU Agent Office" },
+      { city: "Dubai, UAE", tag: "JIU Agent Office" },
+      { city: "Nairobi, Kenya", tag: "JIU Agent Office" },
     ],
   },
 ];
@@ -47,26 +47,27 @@ export default function CampusesAndLocations() {
         backgroundPosition: "center",
       }}
     >
-      <div className="  pl-4 sm:pl-10 lg:pl-10 py-8 sm:py-12 lg:py-18">
+      <div className="pl-4 sm:pl-10 lg:pl-10 py-8 sm:py-12 lg:py-16">
         {/* Heading */}
         <div className="mb-10">
           <div className="flex items-start gap-4">
             <span
-              className="block h-24  w-1.5 "
+              className="block h-24 w-1.5"
               style={{ backgroundColor: BRAND_PINK }}
             />
-            {/* Removed bold here: font-normal */}
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl leading-tight uppercase text-black font-normal">
-              JIU Agent Offices<br />  (Student Support Worldwide)
+            {/* Responsive font size for the heading */}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-tight uppercase text-black font-normal">
+              JIU Agent Offices<br /> (Student Support Worldwide)
             </h2>
           </div>
         </div>
 
         {/* Regions */}
-        <div className="flex overflow-x-auto gap-12 pb-4">
+        {/* On mobile, regions stack vertically. On medium screens and up, they scroll horizontally. */}
+        <div className="flex flex-col md:flex-row md:overflow-x-auto gap-12 pb-4">
           {REGIONS.map((region) => (
-            <div key={region.title} className="flex-shrink-0 w-80">
-              <h3 className="text-xl tracking-widest uppercase text-black/90 font-semibold mb-6">
+            <div key={region.title} className="flex-shrink-0 w-full md:w-80 pr-4">
+              <h3 className="text-lg sm:text-xl tracking-widest uppercase text-black/90 font-semibold mb-6">
                 {region.title}
               </h3>
 
