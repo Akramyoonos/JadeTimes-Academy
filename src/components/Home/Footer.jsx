@@ -79,7 +79,7 @@ const Footer = () => {
 
       {/* ───────── Middle Section ───────── */}
       {/* ───────── Middle Section ───────── */}
-      <div className="py-10  bg-black bg-opacity-20 border-b-3 border-gray-800 mx-12">
+      <div className="py-10  bg-black bg-opacity-20 border-b-2 border-gray-800 mx-12">
         <div className="flex flex-col items-start">
             {/* Logo */}
             <div className="mb-6">
@@ -114,22 +114,22 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex gap-5 text-xl mt-8 text-gray-400">
-              <a href="https://www.instagram.com/jadetimes_university/" className="hover:text-white">
+              <a href="https://www.instagram.com/jadetimes_university/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <FaInstagram />
               </a>
-              <a href="https://web.facebook.com/jadetimesuniversity/" className="hover:text-white">
+              <a href="https://web.facebook.com/jadetimesuniversity/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <FaFacebookF />
               </a>
-              <a href="https://x.com/JIU_University" className="hover:text-white">
+              <a href="https://x.com/JIU_University" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <FaTwitter />
               </a>
-              <a href="https://www.youtube.com/@Jadetimes-University" className="hover:text-white">
+              <a href="https://www.youtube.com/@Jadetimes-University" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <FaYoutube />
               </a>
-              <a href="https://www.pinterest.com/jadetimesuniversity/" className="hover:text-white">
+              <a href="https://www.pinterest.com/jadetimesuniversity/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <FaPinterestP />
               </a>
-              <a href="https://www.linkedin.com/company/108746942" className="hover:text-white">
+              <a href="https://www.linkedin.com/company/108746942" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <FaLinkedinIn />
               </a>
             </div>
@@ -149,12 +149,12 @@ const Footer = () => {
 
           <p className="mt-4 text-gray-600">
 
-All programs and workshops are owned and operated by Jadetimes International University LLC.JIU is an independent institution providing professional development, certificate programs, and non-degree courses. 
+All programs and workshops are owned and operated by Jadetimes International University LLC.<br/> JIU is an independent institution providing professional development, certificate programs, and <br/> non-degree courses. 
           Until official authorization is granted, JIU does not confer state-recognized degrees.  
           </p>
 
           <p className="mt-4 text-gray-700">
-            Disclaimer: Jadetimes International University is currently in the process of seeking approval and accreditation with relevant higher education authorities. All courses offered at present are for professional training and continuing education purposes only. Programs, schedules, and availability may vary by online delivery.   
+            Disclaimer: Jadetimes International University is currently in the process of seeking approval and accreditation <br/> with relevant higher education authorities. All courses offered at present are for professional training <br/> and continuing education purposes only. Programs, schedules, and availability may vary by online delivery.   
           </p>
 
           <p className="mt-4">

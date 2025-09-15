@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import logo from "../../assets/Images/Logo.png";
 import Campus03Image from "../../assets/Images/Campus03.jpeg";
+import AcadamicImage from "../../assets/Images/Resources and Information02.jpeg";
 
 // ---------------- ICONS ----------------
 // Inlined SVG icons to replace the FontAwesome package which was causing errors.
@@ -95,7 +96,7 @@ const megaMenus = {
       { text: "VIRTUAL REALITY", href: "/academics/areas-of-study/virtual-reality" },
       { text: "JIU'S PATHWAY TRACK", href: "/academics/areas-of-study/jius-pathway-track" },
     ],
-    "DEGREE PROGRAMS": [
+    "DEGREE PROGRAMS Coming Soon": [
       { text: "BACHELOR OF FINE ARTS", href: "/academics/degree-programs/bachelor-of-fine-arts" },
       { text: "BACHELOR OF ARTS", href: "/academics/degree-programs/bachelor-of-arts" },
       { text: "MASTER OF FINE ARTS", href: "/academics/degree-programs/master-of-fine-arts" },
@@ -109,10 +110,12 @@ const megaMenus = {
       { text: "ONLINE PROGRAMS", href: "/online-programs/" },
       { text: "CORPORATE TRAINING", href: "/academics/certificate-programs/corporate-training" },
     ],
-    "STUDY ABROAD WITH JIU": [
-      { text: "FILMMAKING", href: "/academics/study-abroad-with-jiu/filmmaking" },
-      { text: "ACTING FOR FILM", href: "/academics/study-abroad-with-jiu/acting-for-film" },
-    ],
+        "eventBox": {
+      title: "OPEN HOUSE & LIVE ONLINE EVENTS",
+      linkText: "EVENT DATES",
+      href: "/events/list/",
+      image: AcadamicImage
+    }
   },
   admissionsFinancesMenu: {
     "ADMISSIONS": [
@@ -144,9 +147,11 @@ const megaMenus = {
   },
   campusesMenu: {
     "CAMPUSES": [
-      { text: "New York City", href: "/campuses/campuses/new-york-city" },
-      { text: "Los Angeles", href: "/campuses/campuses/los-angeles" },
-      { text: "Florence, Italy", href: "/campuses/campuses/florence-italy" },
+      { text: "New Mexico", href: "/campuses/campuses/new-york-city" },
+      { text: "Australia", href: "/campuses/campuses/australia" },
+      { text: "India", href: "/campuses/campuses/india" },
+      { text: "Spain", href: "/campuses/campuses/spain" },
+      { text: "Sri Lanka", href: "/campuses/campuses/sri-lanka" },
       { text: "Online", href: "/campuses/campuses/online" },
     ],
     "LOCATIONS": [
@@ -162,7 +167,6 @@ const megaMenus = {
       { text: "HISTORY", href: "JIU-history/" },
       { text: "MISSION & PURPOSE", href: "/mission-and-purpose/" },
       { text: "ACCREDITATION, LICENSING, AND APPROVALS", href: "/Accreditation" },
-      { text: "ARTICULATION", href: "/discover/who-we-are/articulation" },
       { text: "AFFILIATIONS", href: "/discover/who-we-are/affiliations" },
       { text: "FACULTY DIRECTORY", href: "/faculty-directory/" },
       { text: "LEADERSHIP & ADMINISTRATION", href: "/who-we-are/leadership/" },
@@ -176,19 +180,15 @@ const megaMenus = {
       { text: "OPEN HOUSE & LIVE ONLINE EVENTS", href: "/discover/on-campus/open-house-live-online-events" },
       { text: "ACADEMIC CALENDAR", href: "/discover/on-campus/academic-calendar" },
       { text: "CAMPUS SAFETY & CLERY ACT", href: "/discover/on-campus/campus-safety-clery-act" },
-      { text: "TITLE IX", href: "/discover/on-campus/title-ix" },
       { text: "STUDENT LIFE", href: "/student-life/" },
-      { text: "HEALTH AND WELLNESS", href: "/discover/on-campus/health-and-wellness" },
       { text: "CAREER AND ALUMNI SERVICES", href: "/career-and-alumni-services/" },
-      { text: "THE FILM FESTIVAL DEPARTMENT AT JIU", href: "/discover/on-campus/film-festival-department" },
-      { text: "JOBS AT JIU", href: "/discover/on-campus/jobs-at-JIU" },
       { text: "ACCESSIBILITY SERVICES", href: "/discover/on-campus/accessibility-services" },
     ],
     "NEWS AND CULTURE": [
       { text: "GUEST SPEAKERS", href: "/discover/news-and-culture/guest-speakers" },
       { text: "JIU IN THE NEWS", href: "/discover/news-and-culture/JIU-in-the-news" },
       { text: "BLOG", href: "/blog/" },
-      { text: "JIU YOUTUBE CHANNEL", href: "/discover/news-and-culture/JIU-youtube-channel" },
+      { text: "JIU YOUTUBE CHANNEL", href: "https://www.youtube.com/@Jadetimes-University" },
       { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },
       { text: "STUDENT RESOURCES", href: "/student-resources/" },
       { text: "JIU STORE", href: "/discover/news-and-culture/JIU-store" },
@@ -262,11 +262,11 @@ const useClickOutside = (ref, handler) => {
 };
 
 const getSectionHref = (section) => {
+    const sectionName = section.replace(" Coming Soon", "");
     const hrefMap = {
         "AREAS OF STUDY": "/academics",
         "DEGREE PROGRAMS": "/DegreeProgramsPage",
         "CERTIFICATE PROGRAMS": "/academics/certificate-programs",
-        "STUDY ABROAD WITH JIU": "/academics/study-abroad-with-jiu",
         "ADMISSIONS": "/admissions",
         "FINANCES": "/admissions/finances",
         "CAMPUSES": "/campuses",
@@ -278,7 +278,7 @@ const getSectionHref = (section) => {
         "KIDS CAMPS AND WORKSHOPS": "/youth/kids-camps-and-workshops",
         "YOUTH ADMISSIONS": "/youth/youth-admissions",
     };
-    return hrefMap[section] || "#";
+    return hrefMap[sectionName] || "#";
 };
 
 // ---------------- PARTS ----------------
@@ -392,12 +392,20 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                     <div className="grid grid-cols-2 gap-x-12">
                         {sections.map(([section, items]) => (
                             <div key={section}>
-                                <a href={getSectionHref(section)} className="no-underline hover:underline">
+                                <a href={getSectionHref(section)} className={`no-underline ${!section.includes("Coming Soon") ? "hover:underline" : ""}`}>
                                 <h3
-                                    className="uppercase mb-2 font-normal tracking-tight text-white"
+                                    className="uppercase mb-2 font-normal tracking-tight text-white flex items-center group"
                                     style={{ fontSize: "var(--size-mega-heading)" }}
                                 >
-                                    {section}
+                                    <span>{section.replace(" Coming Soon", "")}</span>
+                                    {section.includes("Coming Soon") && (
+                                        <a
+                                        href="#"
+                                        className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                        >
+                                        Coming Soon
+                                        </a>
+                                    )}
                                 </h3>
                                 </a>
                                 <div
@@ -406,7 +414,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                                 ></div>
                                 <ul className="space-y-3">
                                     {items.map((item) => (
-                                        <li key={item.href}>
+                                        <li key={item.text}>
                                             <a
                                                 href={item.href}
                                                 className="block text-white hover:underline transition-colors"
@@ -447,9 +455,9 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
             >
               {sections.map(([section, items]) => (
                 <div key={section} className="pl-5">
-                  <a href={getSectionHref(section)} className="no-underline hover:underline">
+                  <a href={getSectionHref(section)} className={`no-underline ${!section.includes("Coming Soon") ? "hover:underline" : ""}`}>
                     <h3
-                      className="uppercase mb-4 pb-2 font-normal tracking-tight"
+                      className="uppercase mb-4 pb-2 font-normal tracking-tight flex items-center group"
                       style={{
                         color: "white",
                         borderBottom: `2px solid ${accent}`,
@@ -457,7 +465,15 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                         lineHeight: 1.25,
                       }}
                     >
-                      {section}
+                      <span>{section.replace(" Coming Soon", "")}</span>
+                      {section.includes("Coming Soon") && (
+                        <a
+                          href="#"
+                          className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                          Coming Soon
+                        </a>
+                      )}
                     </h3>
                   </a>
                   <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
@@ -467,13 +483,15 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                           ? "max-w-[300px] whitespace-normal leading-tight"
                           : "whitespace-normal leading-tight";
                       return (
-                        <li key={item.href}>
+                        <li key={item.text}>
                           <a
                             href={item.href}
-                            className={`block text-white hover:underline transition-colors ${wrapClass}`}
+                            className={`block hover:underline transition-colors ${wrapClass} ${section.startsWith("DEGREE PROGRAMS") ? "text-gray-300" : "text-white"}`}
                             style={{ fontSize: "var(--size-mega-item)" }}
                             title={item.text}
                             onClick={closeMenu} // Added onClick
+                            target={item.href.startsWith("http") ? "_blank" : undefined}
+                            rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                           >
                             {item.text}
                           </a>
@@ -516,18 +534,28 @@ const MobileMegaMenu = ({ config, accent, open }) => {
         {Object.entries(linkSections).map(([section, items]) => (
           <div key={section} className="mb-4">
             <h3
-              className="uppercase mb-2 pb-1 font-semibold tracking-tight text-gray-300"
+              className="uppercase mb-2 pb-1 font-semibold tracking-tight text-gray-300 flex items-center"
               style={{ fontSize: "var(--size-mega-heading)" }}
             >
-              {section}
+              <span>{section.replace(" Coming Soon", "")}</span>
+              {section.includes("Coming Soon") && (
+                <a
+                  href="#"
+                  className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white "
+                >
+                  Coming Soon
+                </a>
+              )}
             </h3>
             <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
               {items.map((item) => (
-                <li key={item.href}>
+                <li key={item.text}>
                   <a
                     href={item.href}
                     className="block text-gray-300 hover:text-white transition-colors"
                     style={{ fontSize: "var(--size-mega-item)" }}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   >
                     {item.text}
                   </a>
@@ -672,7 +700,7 @@ const Header = () => {
         <div ref={topBarRef} className="bg-black border-b border-gray-800 hidden xl:block">
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2" style={{ fontSize: "var(--size-topbar)" }}>
-              <div className="flex items-center gap-x-6 text-gray-400">
+              <div className="flex items-center gap-x-6 uppercase text-gray-400">
                 {topBarLinks.map((link) => (
                   <a
                     key={link.text}

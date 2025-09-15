@@ -56,7 +56,7 @@ export default function CampusesAndLocations() {
               style={{ backgroundColor: BRAND_PINK }}
             />
             {/* Removed bold here: font-normal */}
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl leading-tight text-black font-normal">
+            <h2 className="text-3xl sm:text-4xl lg:text-4xl leading-tight uppercase text-black font-normal">
               JIU Agent Offices<br />  (Student Support Worldwide)
             </h2>
           </div>
@@ -66,7 +66,7 @@ export default function CampusesAndLocations() {
         <div className="flex overflow-x-auto gap-12 pb-4">
           {REGIONS.map((region) => (
             <div key={region.title} className="flex-shrink-0 w-80">
-              <h3 className="text-xl tracking-widest text-black/90 font-semibold mb-6">
+              <h3 className="text-xl tracking-widest uppercase text-black/90 font-semibold mb-6">
                 {region.title}
               </h3>
 
