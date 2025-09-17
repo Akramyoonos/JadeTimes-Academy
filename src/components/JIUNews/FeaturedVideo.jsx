@@ -20,7 +20,7 @@ const FeaturedVideo = () => {
       <div className="w-full flex justify-center">
         <div className="w-full md:w-4/5 lg:w-3/4 aspect-video">
           <iframe
-            className="w-full h-full rounded-lg shadow-lg"
+            className="w-full h-full  shadow-lg"
             src="https://www.youtube.com/embed/FKz0Fnk_TRM"
             title="Featured NYFA YouTube Video"
             frameBorder="0"

@@ -62,14 +62,14 @@ const ChevronRightIcon = () => (
  * It's now more accessible and uses more descriptive class names.
  */
 const FacultyCard = ({ department, imageUrl, altText, color, icon }) => (
-  <div className="relative group w-full md:w-1/3 rounded-lg overflow-hidden shadow-xl transform-gpu transition-transform duration-500 hover:scale-105 focus-within:scale-105">
-    <a href="#" className="absolute inset-0 z-10" aria-label={`Learn more about the ${department} department`}>
+  <div className="relative group w-full overflow-hidden shadow-xl transform-gpu transition-transform duration-500 hover:scale-105 focus-within:scale-105">
+    <a href="/faculty-directory/" className="absolute inset-0 z-10" aria-label={`Learn more about the ${department} department`}>
       <span className="sr-only">Learn more about the {department} department</span>
     </a>
     <img alt={altText} className="w-full h-full object-cover" src={imageUrl} />
     <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
     <div
-      className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-3 transition-all duration-300 transform-gpu translate-y-0 group-hover:-translate-y-2"
+      className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-4 transition-all duration-300 transform-gpu translate-y-0 group-hover:-translate-y-2"
     >
       <div style={{ color: color }} className="text-4xl mb-2 transform-gpu translate-y-0 group-hover:-translate-y-2 transition-transform duration-300">{icon}</div>
       <h3 className="text-white text-2xl font-bold mb-1 transform-gpu translate-y-0 group-hover:-translate-y-2 transition-transform duration-300">{department}</h3>
@@ -95,7 +95,7 @@ const OurFaculty = () => {
       <div className="bg-white">
         <section className="bg-[#0a0a0a] text-white" aria-labelledby="faculty-heading">
           <div className="max-w-7xl px-8 md:px-12 py-16 md:py-24">
-            <div className="flex flex-col md:flex-row items-center md:items-start md:justify-start gap-12">
+            <div className="flex flex-col md:flex-row items-center md:items-start md:justify-start gap-8">
               <div className="flex flex-col justify-center md:justify-start md:items-start gap-8 md:gap-12 w-full md:w-1/4">
                 <div className="flex items-center gap-6">
                   <div className="w-1.5 h-20 bg-[#b61f9f]"></div>
@@ -105,11 +105,11 @@ const OurFaculty = () => {
                     FACULTY
                   </h2>
                 </div>
-                <a href="/faculty" className="bg-purple-600 text-white font-medium text-base uppercase  px-8 py-4 shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 transition-colors duration-300 inline-block text-center">
+                <a href="/faculty-directory/" className="bg-purple-600 text-white font-medium text-base uppercase  px-8 py-4 shadow-lg hover:bg-purple-700 focus:outline-none  focus:ring-purple-300 transition-colors duration-300 inline-block text-center">
                   MEET OUR FACULTY
                 </a>
               </div>
-              <div className="flex flex-col md:flex-row gap-18 w-full md:w-3/4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full md:w-3/4">
                 {facultyData.map((faculty) => (
                   <FacultyCard key={faculty.department} {...faculty} />
                 ))}

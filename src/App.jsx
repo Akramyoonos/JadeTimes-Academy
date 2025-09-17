@@ -43,6 +43,8 @@ import JIUNews_Page from './pages/JIUNews_Page';
 import JobsAtJIU_Page from './pages/JobsAtJIU_Page';
 import PresidentPage from './pages/PresidentPage';
 import Affiliations_Page from './pages/Affiliations_Page';
+import Reviews_Page from './pages/Reviews_Page';
+
 
 
 
@@ -125,6 +127,7 @@ function AppInner() {
             <Route path="/jobs-at-nyfa/*"       element={<JobsAtJIU_Page />} />
             <Route path="/presidents-page/"       element={<PresidentPage />} />
             <Route path="/affiliations//*"       element={<Affiliations_Page />} />
+            <Route path="/reviews/page/*"       element={<Reviews_Page />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>
