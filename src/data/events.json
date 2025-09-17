@@ -1,0 +1,100 @@
+{
+  "featuredEvents": [
+    {
+      "title": "Campus Tour - New York City",
+      "date": "Friday, August 1 2025  11:00 AM – 12:00 PM EDT",
+      "location": "17 Battery Pl, NYC NY 10004",
+      "description": "Join us at NYFA for a Tour of our New York City location. Please arrive 15 minutes early to check in."
+    },
+    {
+      "title": "Campus Tour - Los Angeles",
+      "date": "Monday, August 4 2025  2:00 PM – 4:00 PM PDT",
+      "location": "3300 Riverside Dr, Burbank CA 91505",
+      "description": "Experience the vibrant campus life at our Los Angeles location. See where movie magic happens!"
+    }
+  ],
+  "dailyEvents": [
+    {
+      "date": "2025-08-01",
+      "time": "10:00 AM – 11:00 AM EDT",
+      "title": "Virtual Info Session - Film Production",
+      "location": "Online Event"
+    },
+    {
+      "date": "2025-08-02",
+      "time": "01:00 PM – 02:00 PM EDT",
+      "title": "Campus Tour - New York City",
+      "location": "17 Battery Pl, NYC NY 10004"
+    },
+    {
+      "date": "2025-08-03",
+      "time": "03:00 PM – 04:00 PM PDT",
+      "title": "Open House - Los Angeles Campus",
+      "location": "3300 Riverside Dr, Burbank CA 91505"
+    },
+    {
+      "date": "2025-08-04",
+      "time": "09:00 AM – 10:00 AM EDT",
+      "title": "Portfolio Review - Photography",
+      "location": "Zoom Meeting"
+    },
+    {
+      "date": "2025-08-05",
+      "time": "02:30 PM – 03:30 PM EDT",
+      "title": "Guest Speaker Series - Screenwriting",
+      "location": "Main Auditorium, NYC Campus"
+    },
+    {
+      "date": "2025-08-06",
+      "time": "11:00 AM – 12:00 PM PDT",
+      "title": "Acting Workshop - LA Studio",
+      "location": "LA Studio 3, Burbank CA"
+    },
+    {
+      "date": "2025-08-07",
+      "time": "04:00 PM – 05:00 PM EDT",
+      "title": "Admissions Q&A - Online",
+      "location": "Webinar"
+    },
+    {
+      "date": "2025-08-08",
+      "time": "06:00 PM – 07:00 PM EDT",
+      "title": "Alumni Mixer - NYC Rooftop",
+      "location": "Rooftop Bar, NYC"
+    },
+    {
+      "date": "2025-08-09",
+      "time": "10:30 AM – 11:30 AM PDT",
+      "title": "Film Screening & Discussion",
+      "location": "LA Screening Room"
+    },
+    {
+      "date": "2025-08-10",
+      "time": "01:00 PM – 02:00 PM EDT",
+      "title": "Music Production Demo",
+      "location": "Music Studio, NYC Campus"
+    },
+    {
+      "date": "2025-08-11",
+      "time": "03:00 PM – 04:00 PM PDT",
+      "title": "Game Design Showcase",
+      "location": "Virtual Expo"
+    },
+    {
+      "date": "2025-08-12",
+      "time": "09:00 AM – 10:00 AM EDT",
+      "title": "Animation Portfolio Workshop",
+      "location": "Art Studio, NYC Campus"
+    }
+  ],
+  "typeFilters": [
+    "Virtual Information Session",
+    "Campus Tour",
+    "Open House",
+    "College Fair",
+    "Thespian Event",
+    "Talent Convention",
+    "Graduate Fair",
+    "Guidance Visit"
+  ]
+}

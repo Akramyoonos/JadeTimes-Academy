@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-// Removed NavLink import as it requires a Router context which is not available.
+import { useSearch } from "../../context/SearchContext";
 
 import logo from "../../assets/Images/Logo.png";
 import Campus03Image from "../../assets/Images/Campus03.jpeg";
@@ -328,7 +328,7 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
 
 const SearchDropdown = ({ open, onClose }) => {
   const boxRef = useRef(null);
-  const [value, setValue] = useState("");
+  const { searchQuery, setSearchQuery } = useSearch();
   useClickOutside(boxRef, onClose);
 
   // Auto-focus input when search opens
@@ -360,8 +360,8 @@ const SearchDropdown = ({ open, onClose }) => {
         <input
           id="mega-search"
           type="text"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && onClose()}
           placeholder="Search"
           className="w-full bg-transparent text-white placeholder-gray-400 text-3xl outline-none pb-3 border-b-2 border-gray-600 focus:border-yellow-400 transition-colors"
@@ -621,6 +621,7 @@ const Header = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [showTopBar, setShowTopBar] = useState(true);
+  const { searchQuery, setSearchQuery } = useSearch();
   
   const [mobileMenuState, setMobileMenuState] = useState({
     isOpen: false,
@@ -793,11 +794,12 @@ const Header = () => {
                       <input
                           type="search"
                           placeholder="Search"
+                          value={searchQuery}
+                          onChange={(e) => setSearchQuery(e.target.value)}
                           className="w-full bg-gray-900 text-white placeholder-gray-400 pl-10 pr-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
                           onKeyDown={(e) => {
                               if (e.key === 'Enter') {
                                   toggleMobileMenu();
-                                  setIsSearchOpen(true);
                               }
                           }}
                       />

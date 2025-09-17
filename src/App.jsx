@@ -44,6 +44,7 @@ import JobsAtJIU_Page from './pages/JobsAtJIU_Page';
 import PresidentPage from './pages/PresidentPage';
 import Affiliations_Page from './pages/Affiliations_Page';
 import Reviews_Page from './pages/Reviews_Page';
+import { SearchProvider } from './context/SearchContext';
 
 
 
@@ -139,7 +140,9 @@ function AppInner() {
 export default function App() {
   return (
     <Router>
-      <AppInner />
+      <SearchProvider>
+        <AppInner />
+      </SearchProvider>
     </Router>
   );
 }

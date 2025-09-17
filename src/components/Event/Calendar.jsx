@@ -39,7 +39,13 @@ const ChevronRightIcon = () => (
   </svg>
 );
 
-export default function Calendar({ date, view }) {
+const hasEvent = (day, events) => {
+  if (!day || !events || events.length === 0) return false;
+  const dayString = day.toISOString().slice(0, 10); // Format YYYY-MM-DD
+  return events.some(event => event.date === dayString);
+};
+
+export default function Calendar({ date, view, events = [], onDateClick }) {
   const [month, setMonth] = useState(date.getMonth());
   const [year, setYear]   = useState(date.getFullYear());
 
@@ -69,11 +75,19 @@ export default function Calendar({ date, view }) {
                 {['S','M','T','W','T','F','S'].map(d => <div key={d}>{d}</div>)}
               </div>
               <div className="grid grid-cols-7 gap-1 text-center mt-2">
-                {mdays.map((d, idx) => (
-                  <div key={idx} className={`p-1 rounded ${d ? 'hover:bg-blue-100' : ''}`}>
-                    {d ? d.getDate() : ''}
-                  </div>
-                ))}
+                {mdays.map((d, idx) => {
+                  const isEventDay = hasEvent(d, events);
+                  const dayClasses = `p-1  ${d ? 'hover:bg-blue-500 ' : ''} ${isEventDay ? 'bg-red-500 text-white  font-bold' : ''}`;
+                  return (
+                    <div
+                      key={idx}
+                      className={dayClasses}
+                      onClick={() => d && onDateClick && onDateClick(d.toISOString().slice(0, 10))}
+                    >
+                      {d ? d.getDate() : ''}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           );
@@ -97,12 +111,21 @@ export default function Calendar({ date, view }) {
         {['S','M','T','W','T','F','S'].map(d => <div key={d}>{d}</div>)}
       </div>
       <div className="grid grid-cols-7 gap-2 text-center mt-2">
-        {days.map((d, idx) => (
-          <div key={idx} className={`p-2 rounded-full cursor-pointer ${d ? 'hover:bg-blue-100' : ''}`}>
-            {d ? d.getDate() : ''}
-          </div>
-        ))}
+        {days.map((d, idx) => {
+          const isEventDay = hasEvent(d, events);
+          const dayClasses = `p-2  cursor-pointer ${d ? 'hover:bg-blue-500' : ''} ${isEventDay ? 'bg-red-500 text-white font-bold' : ''}`;
+          return (
+            <div
+              key={idx}
+              className={dayClasses}
+              onClick={() => d && onDateClick && onDateClick(d.toISOString().slice(0, 10))}
+            >
+              {d ? d.getDate() : ''}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
 }
+
