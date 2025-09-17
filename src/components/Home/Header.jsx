@@ -523,64 +523,89 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
 };
 
 const MobileMegaMenu = ({ config, accent, open }) => {
-  if (!config) return null;
+    if (!config) return null;
 
-  const { eventBox, ...linkSections } = config;
+    const { eventBox, ...linkSections } = config;
 
-  return (
-    <div className={`overflow-hidden transition-all duration-500 ${open ? 'max-h-[2500px]' : 'max-h-0'}`}>
-      <div className="py-2 pl-4 border-l-2" style={{ borderColor: accent }}>
-        {Object.entries(linkSections).map(([section, items]) => (
-          <div key={section} className="mb-4">
-            <h3
-              className="uppercase mb-2 pb-1 font-semibold tracking-tight text-gray-300 flex items-center"
-              style={{ fontSize: "var(--size-mega-heading)" }}
-            >
-              <span>{section.replace(" Coming Soon", "")}</span>
-              {section.includes("Coming Soon") && (
-                <span
-                  className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white "
-                >
-                  Coming Soon
-                </span>
-              )}
-            </h3>
-            <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
-              {items.map((item) => (
-                <li key={item.text}>
-                  <a
-                    href={item.href}
-                    className="block text-gray-300 hover:text-white transition-colors"
-                    style={{ fontSize: "var(--size-mega-item)" }}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  >
-                    {item.text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    return (
+        <div
+            className={`transform origin-top transition-all duration-300 ease-in-out ${
+                open
+                    ? "scale-100 opacity-100"
+                    : "scale-95 opacity-0 pointer-events-none h-0"
+            }`}
+        >
+            <div className="py-2 pl-4 border-l-2" style={{ borderColor: accent }}>
+                {Object.entries(linkSections).map(([section, items]) => (
+                    <div key={section} className="mb-4">
+                        <h3
+                            className="uppercase mb-2 pb-1 font-semibold tracking-tight text-gray-300 flex items-center"
+                            style={{ fontSize: "var(--size-mega-heading)" }}
+                        >
+                            <span>{section.replace(" Coming Soon", "")}</span>
+                            {section.includes("Coming Soon") && (
+                                <span className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white ">
+                                    Coming Soon
+                                </span>
+                            )}
+                        </h3>
+                        <ul
+                            className={`space-y-5 ${
+                                section === "AREAS OF STUDY" ? "columns-2" : ""
+                            }`}
+                        >
+                            {items.map((item) => (
+                                <li key={item.text}>
+                                    <a
+                                        href={item.href}
+                                        className="block text-gray-300 hover:text-white transition-colors"
+                                        style={{ fontSize: "var(--size-mega-item)" }}
+                                        target={item.href.startsWith("http") ? "_blank" : undefined}
+                                        rel={
+                                            item.href.startsWith("http")
+                                                ? "noopener noreferrer"
+                                                : undefined
+                                        }
+                                    >
+                                        {item.text}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
 
-        {eventBox && (
-          <div className="mt-6 pr-4">
-            <div className="border-2 flex flex-col" style={{ borderColor: accent }}>
-              <div className="h-40">
-                <img src={eventBox.image} alt={eventBox.title} className="w-full h-full object-cover" />
-              </div>
-              <div className="bg-white text-black p-4 flex flex-col justify-center items-center text-center">
-                <h4 className="font-semibold uppercase text-base leading-tight">{eventBox.title}</h4>
-                <a href={eventBox.href} className="text-sm font-bold mt-3 inline-block tracking-wider" style={{ color: accent }}>
-                  {eventBox.linkText} &gt;
-                </a>
-              </div>
+                {eventBox && (
+                    <div className="mt-6 pr-4">
+                        <div
+                            className="border-2 flex flex-col"
+                            style={{ borderColor: accent }}
+                        >
+                            <div className="h-40">
+                                <img
+                                    src={eventBox.image}
+                                    alt={eventBox.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="bg-white text-black p-4 flex flex-col justify-center items-center text-center">
+                                <h4 className="font-semibold uppercase text-base leading-tight">
+                                    {eventBox.title}
+                                </h4>
+                                <a
+                                    href={eventBox.href}
+                                    className="text-sm font-bold mt-3 inline-block tracking-wider"
+                                    style={{ color: accent }}
+                                >
+                                    {eventBox.linkText} &gt;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 const DesktopNavItem = ({ children, active, color, onClick, to, controlsId }) => {
