@@ -44,6 +44,7 @@ import JobsAtJIU_Page from './pages/JobsAtJIU_Page';
 import PresidentPage from './pages/PresidentPage';
 import Affiliations_Page from './pages/Affiliations_Page';
 import Reviews_Page from './pages/Reviews_Page';
+import SearchResultsPage from './pages/SearchResultsPage';
 import { SearchProvider } from './context/SearchContext';
 
 
@@ -129,6 +130,7 @@ function AppInner() {
             <Route path="/presidents-page/"       element={<PresidentPage />} />
             <Route path="/affiliations//*"       element={<Affiliations_Page />} />
             <Route path="/reviews/page/*"       element={<Reviews_Page />} />
+            <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
       </main>

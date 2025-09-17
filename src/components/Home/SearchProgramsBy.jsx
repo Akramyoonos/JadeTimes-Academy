@@ -135,7 +135,7 @@ const SearchProgramsBy = () => {
           {/* Right group (pinned to right edge) */}
           <div className="flex flex-col items-center lg:flex-row w-full lg:w-auto">
             {/* Each control has its own left divider and a min width so it feels like the reference */}
-            <div className="w-60 border-t hidden sm:block lg:border-l border-gray-200">
+            <div className="w-60  hidden sm:block ">
               <Dropdown
                 id={dropdowns[0].id}
                 title={dropdowns[0].title}
@@ -148,7 +148,7 @@ const SearchProgramsBy = () => {
               />
             </div>
 
-            <div className="w-60 border-t hidden sm:block lg:border-l border-gray-200">
+            <div className="w-60  hidden sm:block l">
               <Dropdown
                 id={dropdowns[1].id}
                 title={dropdowns[1].title}
@@ -161,7 +161,7 @@ const SearchProgramsBy = () => {
               />
             </div>
 
-            <div className="w-60 border-t hidden sm:block lg:border-l border-gray-200">
+            <div className="w-60  hidden sm:block ">
               <Dropdown
                 id={dropdowns[2].id}
                 title={dropdowns[2].title}
@@ -179,7 +179,7 @@ const SearchProgramsBy = () => {
               <button
                 onClick={clear}
                 title="Clear filters"
-                className="inline-flex items-center px-5 text-gray-500 hover:text-red-500 border-t lg:border-t-0 lg:border-l border-gray-200"
+                className="inline-flex items-center px-5 text-gray-500 hover:text-red-500  "
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
@@ -187,7 +187,7 @@ const SearchProgramsBy = () => {
 
             <Link
               to="/programfinder"
-              className="w-full px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 border-t lg:border-l border-gray-200 text-center lg:w-auto"
+              className="w-full px-12 py-5 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600  text-center lg:w-auto"
               aria-label="Search Programs"
             >
               <span>Search</span>

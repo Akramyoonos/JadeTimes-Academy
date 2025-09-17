@@ -62,12 +62,12 @@ const ChevronRightIcon = () => (
  * It's now more accessible and uses more descriptive class names.
  */
 const FacultyCard = ({ department, imageUrl, altText, color, icon }) => (
-  <div className="relative group w-full overflow-hidden shadow-xl transform-gpu transition-transform duration-500 hover:scale-105 focus-within:scale-105">
+  <div className="relative group w-full overflow-hidden shadow-xl transform-gpu transition-transform duration-300 hover:scale-100 focus-within:scale-100">
     <a href="/faculty-directory/" className="absolute inset-0 z-10" aria-label={`Learn more about the ${department} department`}>
       <span className="sr-only">Learn more about the {department} department</span>
     </a>
     <img alt={altText} className="w-full h-full object-cover" src={imageUrl} />
-    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300"></div>
+    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-70 transition-opacity duration-300"></div>
     <div
       className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-4 transition-all duration-300 transform-gpu translate-y-0 group-hover:-translate-y-2"
     >
@@ -94,10 +94,10 @@ const OurFaculty = () => {
     <div className="OurfacultyFont">
       <div className="bg-white">
         <section className="bg-[#0a0a0a] text-white" aria-labelledby="faculty-heading">
-          <div className="max-w-7xl px-8 md:px-12 py-16 md:py-24">
+          <div className="max-w-7xl px-8 md:px-12 pt-8 md:pt-6 lg:pt-0">
             <div className="flex flex-col md:flex-row items-center md:items-start md:justify-start gap-8">
               <div className="flex flex-col justify-center md:justify-start md:items-start gap-8 md:gap-12 w-full md:w-1/4">
-                <div className="flex items-center gap-6">
+                <div className="flex items-center pt-6 gap-6">
                   <div className="w-1.5 h-20 bg-[#b61f9f]"></div>
                   <h2 id="faculty-heading" className="text-5xl md:text-5xl font-medium leading-tight text-white">
                     OUR
