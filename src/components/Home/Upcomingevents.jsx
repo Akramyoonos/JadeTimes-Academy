@@ -42,7 +42,7 @@ const Upcomingevents = () => {
 
   return (
     <section className="EventsFont bg-gray-50 min-h-screen">
-      <div className=" px-4 sm:px-10 lg:px-12 py-12">
+      <div className=" px-4 sm:px-10 lg:px-12 pt-12 lg:pt-12 ">
 
         {/* ---------- Tabs header + See events link ---------- */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">

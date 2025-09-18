@@ -1,24 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useSearch } from '../context/SearchContext';
 
-const allResults = [
-    { id: 1, title: "Filmmaking Program", description: "Learn the art of visual storytelling.", category: "Programs" },
-    { id: 2, title: "Acting for Film Workshop", description: "Develop your acting skills for the camera.", category: "Programs" },
-    { id: 3, title: "Summer Teen Filmmaking Camp", description: "An intensive camp for young filmmakers.", category: "Youth Programs" },
-    { id: 4, title: "Student Housing Guide", description: "Information on accommodation options.", category: "Student Resources" },
-    { id: 5, title: "Blog: Interview with Director Jane Doe", description: "Insights from a renowned director.", category: "NYFA Academy Blog" },
-    { id: 6, title: "New York City Campus Tour", description: "Explore our campus in the heart of NYC.", category: "Locations" },
-    { id: 7, title: "Guest Speaker: John Smith, Cinematographer", description: "A session with award-winning cinematographer.", category: "Guests" },
-    { id: 8, title: "Alumni Success Story: Award-Winning Producer", description: "Read about our successful alumni.", category: "Alumni" },
-    { id: 9, title: "Photography Program", description: "Master the techniques of digital photography.", category: "Programs" },
-    { id: 10, title: "Kids Animation Workshop", description: "Fun and creative animation for kids.", category: "Youth Programs" },
-    { id: 11, title: "Financial Aid Resources", description: "Guidance on scholarships and grants.", category: "Student Resources" },
-    { id: 12, title: "Blog: Top 5 Film Festivals", description: "Discover the best festivals for aspiring filmmakers.", category: "NYFA Academy Blog" },
-    { id: 13, title: "Los Angeles Campus Facilities", description: "A look at our state-of-the-art facilities in LA.", category: "Locations" },
-    { id: 14, title: "Guest Speaker: Mary Johnson, Screenwriter", description: "Tips and tricks from a professional screenwriter.", category: "Guests" },
-    { id: 15, title: "Alumni Network Events", description: "Connect with fellow alumni at our exclusive events.", category: "Alumni" },
-];
+import { allPagesContent } from '../utils/pageContent';
 
 const SearchResultsPage = () => {
     const { searchQuery, setSearchQuery } = useSearch();
@@ -39,7 +23,7 @@ const SearchResultsPage = () => {
         setLoading(true);
         const lowerCaseQuery = searchQuery.toLowerCase();
 
-        const filteredByQuery = allResults.filter(result => 
+        const filteredByQuery = allPagesContent.filter(result => 
             result.title.toLowerCase().includes(lowerCaseQuery) ||
             result.description.toLowerCase().includes(lowerCaseQuery)
         );
@@ -48,15 +32,13 @@ const SearchResultsPage = () => {
             ? filteredByQuery
             : filteredByQuery.filter(result => result.category === selectedCategory);
 
-        setTimeout(() => {
-            setDisplayedResults(filteredByCategory);
-            setLoading(false);
-        }, 500);
+        setDisplayedResults(filteredByCategory);
+        setLoading(false);
     }, [searchQuery, selectedCategory]);
 
     const getCategoryCount = (category) => {
         const lowerCaseQuery = searchQuery.toLowerCase();
-        const filteredByQuery = allResults.filter(result => 
+        const filteredByQuery = allPagesContent.filter(result => 
             result.title.toLowerCase().includes(lowerCaseQuery) ||
             result.description.toLowerCase().includes(lowerCaseQuery)
         );
@@ -69,8 +51,7 @@ const SearchResultsPage = () => {
     };
 
     const categories = [
-        "View all", "Programs", "Youth Programs", "Student Resources", 
-        "NYFA Academy Blog", "Locations", "Guests", "Alumni"
+        "View all", "Page"
     ];
 
     return (
@@ -111,7 +92,7 @@ const SearchResultsPage = () => {
                         {displayedResults.length > 0 ? (
                             displayedResults.map(result => (
                                 <div key={result.id} className="border-b border-gray-200 pb-4">
-                                    <h3 className="text-xl font-semibold text-blue-700"><a href="#">{result.title}</a></h3>
+                                    <h3 className="text-xl font-semibold text-blue-700"><Link to={result.url}>{result.title}</Link></h3>
                                     <p className="text-gray-700">{result.description}</p>
                                 </div>
                             ))
@@ -119,11 +100,6 @@ const SearchResultsPage = () => {
                             !loading && <p className="text-gray-800 text-lg">No results found for "<span className="font-semibold">{searchQuery}</span>"</p>
                         )}
                     </div>
-
-                    {/* Manage Consent Button (Example) */}
-                    <button className="mt-8 px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400">
-                        Manage consent
-                    </button>
                 </div>
 
                 {/* Right Sidebar Section */}
