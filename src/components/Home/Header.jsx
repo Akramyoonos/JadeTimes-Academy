@@ -459,7 +459,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
         <div className="w-full bg-[#141414]">
           <div className="py-10 px-8">
             <div
-              className="grid gap-x-8 gap-y-6 items-start"
+              className="grid gap-x-8 gap-y-6 md:gap-x-10 md:gap-y-8 items-start"
               style={{ gridTemplateColumns: gridCols }}
             >
               {sections.map(([section, items]) => (
@@ -773,7 +773,7 @@ const Header = () => {
                 <img alt="JadeTimes Academy Logo" className="h-12 sm:h-16 w-auto" src={logo} />
               </a>
 
-              <div className="hidden md:flex items-center gap-x-8">
+              <div className="hidden xl:flex items-center gap-x-6 lg:gap-x-8">
                 <ul className="flex items-center gap-x-6">
                     {navLinks.map((link) => (
                       <li key={link.key}>
@@ -810,7 +810,7 @@ const Header = () => {
                   </div>
               </div>
 
-              <div className="md:hidden flex items-center">
+              <div className="xl:hidden flex items-center">
                   <button onClick={toggleMobileMenu} aria-label="Open main menu" aria-expanded={mobileMenuState.isOpen}>
                       {mobileMenuState.isOpen ? <TimesIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
                   </button>
@@ -819,7 +819,7 @@ const Header = () => {
           </div>
 
           <div 
-            className={`md:hidden ${mobileMenuState.isOpen ? 'block' : 'hidden'} absolute top-full left-0 w-full bg-black z-50 max-h-[calc(100vh-80px)] overflow-y-auto`}
+            className={`xl:hidden ${mobileMenuState.isOpen ? 'block' : 'hidden'} absolute top-full left-0 w-full bg-black z-50 max-h-[calc(100vh-80px)] overflow-y-auto`}
           >
               <div className="p-4 border-b border-gray-800">
                   <div className="relative">
@@ -914,7 +914,7 @@ const Header = () => {
               </div>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden xl:block">
             {navLinks.map((link) =>
                 link.menu && (
                   <MegaMenu
