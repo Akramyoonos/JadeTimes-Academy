@@ -9,6 +9,7 @@ import VideoHeading from '../components/Home/VideoHeading.jsx';
 import WeareDifferent from '../components/Home/WeareDifferent.jsx';
 import CampusesAndLocations from '../components/Home/CampusesAndLocations.jsx';
 import IntroAfterSearch from '../components/Home/IntroAfterSearch.jsx';
+import JIUExperience from '../components/Home/JIUExperience.jsx';
 
 const Home_page = () => {
   return (
@@ -24,6 +25,8 @@ const Home_page = () => {
         <IntroAfterSearch />
       
         <CampusesAndLocations />
+
+        <JIUExperience />
 
         <Spotlight />
 

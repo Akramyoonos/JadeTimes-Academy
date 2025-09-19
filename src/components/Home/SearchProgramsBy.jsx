@@ -187,7 +187,7 @@ const SearchProgramsBy = () => {
 
             <Link
               to="/programfinder"
-              className="w-full px-6 py-6 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600  text-center lg:w-full md:w-full md:px-10 md:py-6 xl:w-auto"
+              className="w-full px-6 py-6 text-black uppercase tracking-wider text-sm font-bold bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600  text-center lg:w-full md:w-full md:px-14 md:py-6 xl:w-auto"
               aria-label="Search Programs"
             >
               <span>Search</span>

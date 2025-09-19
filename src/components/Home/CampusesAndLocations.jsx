@@ -64,9 +64,17 @@ export default function CampusesAndLocations() {
 
         {/* Regions */}
         {/* On mobile, regions stack vertically. On medium screens and up, they scroll horizontally. */}
-        <div className="flex flex-col md:flex-row md:overflow-x-auto gap-12 pb-4">
-          {REGIONS.map((region) => (
-            <div key={region.title} className="flex-shrink-0 w-full md:w-80 pr-4">
+        <div className="flex flex-col md:flex-row md:flex-wrap gap-12 pb-4  lg:flex-nowrap lg:justify-start lg:overflow-x-auto">
+          {REGIONS.map((region, index) => (
+            <div
+              key={region.title}
+              className={`flex-shrink-0 w-full md:w-1/2 lg:w-80 lg:pr-4 ${
+                                index === 0 ? 'md:order-1' : // NORTH AMERICA (first in tablet)
+                index === 1 ? 'md:order-2' : // EUROPE (second in tablet)
+                index === 2 ? 'md:order-3' : // Asia-Pacific (third in tablet)
+                index === 3 ? 'md:order-4' : '' // Middle East & Africa (fourth in tablet)
+              }`}
+            >
               <h3 className="text-lg sm:text-xl tracking-widest uppercase text-black/90 font-semibold mb-6">
                 {region.title}
               </h3>

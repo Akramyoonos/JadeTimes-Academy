@@ -97,12 +97,12 @@ const megaMenus = {
       { text: "VIRTUAL REALITY", href: "/academics/areas-of-study/virtual-reality" },
       { text: "JIU'S PATHWAY TRACK", href: "/academics/areas-of-study/jius-pathway-track" },
     ],
-    "DEGREE PROGRAMS Coming Soon": [
-      { text: "BACHELOR OF FINE ARTS", href: "/academics/degree-programs/bachelor-of-fine-arts" },
-      { text: "BACHELOR OF ARTS", href: "/academics/degree-programs/bachelor-of-arts" },
-      { text: "MASTER OF FINE ARTS", href: "/academics/degree-programs/master-of-fine-arts" },
-      { text: "MASTER OF ARTS", href: "/academics/degree-programs/master-of-arts" },
-      { text: "ASSOCIATE OF FINE ARTS", href: "/academics/degree-programs/associate-of-fine-arts" },
+    "DEGREE PROGRAMS ": [
+      { text: "BACHELOR OF FINE ARTS", href: "", comingSoon: true },
+      { text: "BACHELOR OF ARTS", href: "", comingSoon: true },
+      { text: "MASTER OF FINE ARTS", href: "", comingSoon: true },
+      { text: "MASTER OF ARTS", href: "", comingSoon: true },
+      { text: "ASSOCIATE OF FINE ARTS", href: "", comingSoon: true },
       { text: "ONLINE DEGREES", href: "/online-programs/" },
     ],
     "CERTIFICATE PROGRAMS": [
@@ -144,23 +144,31 @@ const megaMenus = {
       linkText: "EVENT DATES",
       href: "/events/list/",
       image: Campus03Image
-    }
+    },
   },
   campusesMenu: {
     "CAMPUSES": [
-      { text: "New Mexico", href: "/campuses/campuses/new-york-city" },
-      { text: "Australia", href: "/campuses/campuses/australia" },
-      { text: "India", href: "/campuses/campuses/india" },
-      { text: "Spain", href: "/campuses/campuses/spain" },
-      { text: "Sri Lanka", href: "/campuses/campuses/sri-lanka" },
+      { text: "New Mexico", href: "/campuses/campuses/new-york-city", noHover: true },
+      { text: "Australia", href: "/campuses/campuses/australia", noHover: true },
+      { text: "India", href: "/campuses/campuses/india", noHover: true },
+      { text: "Spain", href: "/campuses/campuses/spain", noHover: true },
+      { text: "Sri Lanka", href: "/campuses/campuses/sri-lanka", noHover: true },
       { text: "Online", href: "/campuses/campuses/online" },
     ],
-    "LOCATIONS": [
-      { text: "JIU Kazakhstan", href: "/campuses/locations/JIU-kazakhstan" },
-      { text: "JIU at Harvard University", href: "/campuses/locations/JIU-at-harvard-university" },
-      { text: "Paris, France", href: "/campuses/locations/paris-france" },
-      { text: "Beijing and Greater China", href: "/campuses/locations/beijing-and-greater-china" },
-    ],
+    "eventBoxes": [
+      {
+        title: "OPEN HOUSE & LIVE ONLINE EVENTS",
+        linkText: "EVENT DATES",
+        href: "/events/list/",
+        image: Campus03Image
+      },
+      {
+        title: "VIRTUAL TOURS",
+        linkText: "EXPLORE NOW",
+        href: "/events/list/",
+        image: AcadamicImage
+      }
+    ]
   },
   discoverMenu: {
     "WHO WE ARE": [
@@ -263,10 +271,9 @@ const useClickOutside = (ref, handler) => {
 };
 
 const getSectionHref = (section) => {
-    const sectionName = section.replace(" Coming Soon", "");
     const hrefMap = {
         "AREAS OF STUDY": "/academics",
-        "DEGREE PROGRAMS": "/DegreeProgramsPage",
+        "DEGREE PROGRAMS": "",
         "CERTIFICATE PROGRAMS": "/academics/certificate-programs",
         "ADMISSIONS": "/admissions",
         "FINANCES": "/admissions/finances",
@@ -279,7 +286,7 @@ const getSectionHref = (section) => {
         "KIDS CAMPS AND WORKSHOPS": "/youth/kids-camps-and-workshops",
         "YOUTH ADMISSIONS": "/youth/youth-admissions",
     };
-    return hrefMap[sectionName] || "#";
+    return hrefMap[section] || "#";
 };
 
 // ---------------- PARTS ----------------
@@ -383,8 +390,9 @@ const SearchDropdown = ({ open, onClose }) => {
 const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
     if (!config) return null;
 
-    const { eventBox, ...linkSections } = config;
+    const { eventBox, eventBoxes, ...linkSections } = config;
     const sections = Object.entries(linkSections);
+    const boxes = eventBoxes || (eventBox ? [eventBox] : []);
     
     // START: Custom layout for the Campuses Menu
     if (id === 'megamenu-campuses') {
@@ -398,23 +406,15 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
         >
             <div className="w-full bg-[#141414]">
                 <div className="py-10 px-8">
-                    <div className="grid grid-cols-2 gap-x-12">
+                    <div className="grid grid-cols-8 gap-x-12">
                         {sections.map(([section, items]) => (
-                            <div key={section}>
-                                <a href={getSectionHref(section)} className={`no-underline ${!section.includes("Coming Soon") ? "hover:underline" : ""}`}>
+                            <div key={section} className="col-span-2">
+                                <a href={getSectionHref(section)} className="no-underline hover:underline">
                                 <h3
                                     className="uppercase mb-2 font-normal tracking-tight text-white flex items-center group"
                                     style={{ fontSize: "var(--size-mega-heading)" }}
                                 >
-                                    <span>{section.replace(" Coming Soon", "")}</span>
-                                    {section.includes("Coming Soon") && (
-                                        <a
-                                        href="#"
-                                        className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                        >
-                                        Coming Soon
-                                        </a>
-                                    )}
+                                    <span>{section}</span>
                                 </h3>
                                 </a>
                                 <div
@@ -423,20 +423,40 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                                 ></div>
                                 <ul className="space-y-3">
                                     {items.map((item) => (
-                                        <li key={item.text}>
+                                        <li key={item.text} className="flex items-center justify-between">
                                             <a
                                                 href={item.href}
-                                                className="block text-white hover:underline transition-colors"
+                                                className={`block text-white ${item.noHover ? 'cursor-default' : 'hover:underline'} transition-colors`}
                                                 style={{ fontSize: "var(--size-mega-item)" }}
                                                 title={item.text}
-                                                onClick={closeMenu} // Added onClick
+                                                onClick={item.noHover ? (e) => e.preventDefault() : closeMenu}
                                             >
                                                 {item.text}
                                             </a>
+                                            {item.comingSoon && (
+                                                <span className="ml-2 px-2 py-1 text-xs font-medium text-black uppercase bg-white  ">
+                                                    Coming Soon
+                                                </span>
+                                            )}
                                         </li>
                                     ))}
                                 </ul>
                             </div>
+                        ))}
+                        {boxes.map((box, index) => (
+                          <div key={index} className="col-span-3  flex justify-center h-full">
+                            <div className="border-2 flex flex-col" style={{ borderColor: accent, width: '100%' }}>
+                              <div className="flex-grow h-48">
+                                <img src={box.image} alt={box.title} className="w-full h-full object-cover" />
+                              </div>
+                              <div className="bg-white text-black p-6 flex flex-col justify-center items-center text-center">
+                                <h4 className="font-semibold uppercase text-base leading-tight">{box.title}</h4>
+                                <a href={box.href} className="text-sm font-bold mt-4 inline-block tracking-wider" style={{ color: accent }} onClick={closeMenu}>
+                                  {box.linkText} &gt;
+                                </a>
+                              </div>
+                            </div>
+                          </div>
                         ))}
                     </div>
                 </div>
@@ -446,7 +466,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
     }
     // END: Custom layout for the Campuses Menu
 
-    const gridCols = sections.map(() => 'minmax(0, 1fr)').join(' ') + (eventBox ? ' minmax(350px, 400px)' : '');
+    const gridCols = sections.map(() => 'minmax(0, 1fr)').join(' ') + boxes.map(() => ' minmax(350px, 400px)').join(' ');
   
     return (
       <div
@@ -464,7 +484,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
             >
               {sections.map(([section, items]) => (
                 <div key={section} className="pl-5">
-                  <a href={getSectionHref(section)} className={`no-underline ${!section.includes("Coming Soon") ? "hover:underline" : ""}`}>
+                  <a href={getSectionHref(section)} className="no-underline hover:underline">
                     <h3
                       className="uppercase mb-4 pb-2 font-normal tracking-tight flex items-center group"
                       style={{
@@ -474,14 +494,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                         lineHeight: 1.25,
                       }}
                     >
-                      <span>{section.replace(" Coming Soon", "")}</span>
-                      {section.includes("Coming Soon") && (
-                        <span
-                          className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                        >
-                          Coming Soon
-                        </span>
-                      )}
+                      <span>{section}</span>
                     </h3>
                   </a>
                   <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
@@ -491,18 +504,23 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                           ? "max-w-[300px] whitespace-normal leading-tight"
                           : "whitespace-normal leading-tight";
                       return (
-                        <li key={item.text}>
+                        <li key={item.text} className="flex items-center justify-between">
                           <a
                             href={item.href}
-                            className={`block hover:underline transition-colors ${wrapClass} ${section.startsWith("DEGREE PROGRAMS") ? "text-gray-300" : "text-white"}`}
+                            className={`block ${!item.comingSoon ? 'hover:underline' : 'cursor-default'} transition-colors ${wrapClass} ${section.startsWith("DEGREE PROGRAMS") ? "" : "text-white"}`}
                             style={{ fontSize: "var(--size-mega-item)" }}
                             title={item.text}
-                            onClick={closeMenu} // Added onClick
+                            onClick={!item.comingSoon ? closeMenu : (e) => e.preventDefault()}
                             target={item.href.startsWith("http") ? "_blank" : undefined}
                             rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                           >
                             {item.text}
                           </a>
+                          {item.comingSoon && (
+                                <span className="ml-2 px-2 py-1 text-xs font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                    Coming Soon
+                                </span>
+                            )}
                         </li>
                       );
                     })}
@@ -510,20 +528,20 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                 </div>
               ))}
   
-              {eventBox && (
-                <div className="flex justify-center h-full">
+              {boxes.map((box, index) => (
+                <div key={index} className="flex justify-center h-full">
                   <div className="border-2 flex flex-col" style={{ borderColor: accent, width: '100%' }}>
                     <div className="flex-grow h-48">
-                      <img src={eventBox.image} alt={eventBox.title} className="w-full h-full object-cover" />
+                      <img src={box.image} alt={box.title} className="w-full h-full object-cover" />
                     </div>
                     <div className="bg-white text-black p-6 flex flex-col justify-center items-center text-center">
-                      <h4 className="font-semibold uppercase text-base leading-tight">{eventBox.title}</h4>
-                      <a href={eventBox.href} className="text-sm font-bold mt-4 inline-block tracking-wider" style={{ color: accent }} onClick={closeMenu}> {/* Added onClick */}                        {eventBox.linkText} &gt;
+                      <h4 className="font-semibold uppercase text-base leading-tight">{box.title}</h4>
+                      <a href={box.href} className="text-sm font-bold mt-4 inline-block tracking-wider" style={{ color: accent }} onClick={closeMenu}> {/* Added onClick */}                        {box.linkText} &gt;
                       </a>
                     </div>
                   </div>
                 </div>
-              )}
+              ))}
             </div>
           </div>
         </div>
@@ -534,7 +552,8 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
 const MobileMegaMenu = ({ config, accent, open }) => {
     if (!config) return null;
 
-    const { eventBox, ...linkSections } = config;
+    const { eventBox, eventBoxes, ...linkSections } = config;
+    const boxes = eventBoxes || (eventBox ? [eventBox] : []);
 
     return (
         <div
@@ -548,15 +567,10 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                 {Object.entries(linkSections).map(([section, items]) => (
                     <div key={section} className="mb-4">
                         <h3
-                            className="uppercase mb-2 pb-1 font-semibold tracking-tight text-gray-300 flex items-center"
+                            className="uppercase mb-2 pb-1 font-semibold tracking-tight flex items-center"
                             style={{ fontSize: "var(--size-mega-heading)" }}
                         >
-                            <span>{section.replace(" Coming Soon", "")}</span>
-                            {section.includes("Coming Soon") && (
-                                <span className="ml-4 px-2 py-1 text-xs font-bold text-black uppercase bg-white ">
-                                    Coming Soon
-                                </span>
-                            )}
+                            <span>{section}</span>
                         </h3>
                         <ul
                             className={`space-y-5 ${
@@ -564,10 +578,10 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                             }`}
                         >
                             {items.map((item) => (
-                                <li key={item.text}>
+                                <li key={item.text} className="flex items-center justify-between">
                                     <a
                                         href={item.href}
-                                        className="block text-gray-300 hover:text-white transition-colors"
+                                        className={`block  ${(!item.comingSoon && !item.noHover) ? 'hover:text-white' : ''} transition-colors`}
                                         style={{ fontSize: "var(--size-mega-item)" }}
                                         target={item.href.startsWith("http") ? "_blank" : undefined}
                                         rel={
@@ -578,40 +592,45 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                                     >
                                         {item.text}
                                     </a>
+                                    {item.comingSoon && (
+                                        <span className="ml-2 px-2 py-1 text-xs font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                            Coming Soon
+                                        </span>
+                                    )}
                                 </li>
                             ))}
                         </ul>
                     </div>
                 ))}
 
-                {eventBox && (
-                    <div className="mt-6 pr-4">
+                {boxes.map((box, index) => (
+                    <div key={index} className="mt-6 pr-4">
                         <div
                             className="border-2 flex flex-col"
                             style={{ borderColor: accent }}
                         >
                             <div className="h-40">
                                 <img
-                                    src={eventBox.image}
-                                    alt={eventBox.title}
+                                    src={box.image}
+                                    alt={box.title}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
                             <div className="bg-white text-black p-4 flex flex-col justify-center items-center text-center">
                                 <h4 className="font-semibold uppercase text-base leading-tight">
-                                    {eventBox.title}
+                                    {box.title}
                                 </h4>
                                 <a
-                                    href={eventBox.href}
+                                    href={box.href}
                                     className="text-sm font-bold mt-3 inline-block tracking-wider"
                                     style={{ color: accent }}
                                 >
-                                    {eventBox.linkText} &gt;
+                                    {box.linkText} &gt;
                                 </a>
                             </div>
                         </div>
                     </div>
-                )}
+                ))}
             </div>
         </div>
     );
