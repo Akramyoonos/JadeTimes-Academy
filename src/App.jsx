@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
 
@@ -46,8 +46,7 @@ import Affiliations_Page from './pages/Affiliations_Page';
 import Reviews_Page from './pages/Reviews_Page';
 import SearchResultsPage from './pages/SearchResultsPage';
 import { SearchProvider } from './context/SearchContext';
-
-
+import JIUSpeakerEventArticle_Page from './pages/JIUSpeakerEventArticle_Page';
 
 
 
@@ -130,6 +129,7 @@ function AppInner() {
             <Route path="/presidents-page/"       element={<PresidentPage />} />
             <Route path="/affiliations//*"       element={<Affiliations_Page />} />
             <Route path="/reviews/page/*"       element={<Reviews_Page />} />
+            <Route path="/JIUSpeakerEventArticle/" element={<JIUSpeakerEventArticle_Page />} />
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>

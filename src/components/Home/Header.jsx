@@ -148,12 +148,13 @@ const megaMenus = {
   },
   campusesMenu: {
     "CAMPUSES": [
+      { text: "Online", href: "/campuses/campuses/online" },
       { text: "New Mexico", href: "/campuses/campuses/new-york-city", noHover: true },
       { text: "Australia", href: "/campuses/campuses/australia", noHover: true },
       { text: "India", href: "/campuses/campuses/india", noHover: true },
       { text: "Spain", href: "/campuses/campuses/spain", noHover: true },
       { text: "Sri Lanka", href: "/campuses/campuses/sri-lanka", noHover: true },
-      { text: "Online", href: "/campuses/campuses/online" },
+
     ],
     "eventBoxes": [
       {
@@ -426,7 +427,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                                         <li key={item.text} className="flex items-center justify-between">
                                             <a
                                                 href={item.href}
-                                                className={`block text-white ${item.noHover ? 'cursor-default' : 'hover:underline'} transition-colors`}
+                                                className={`block ${item.noHover ? 'cursor-default  text-gray-400' : 'hover:underline text-white'} transition-colors`}
                                                 style={{ fontSize: "var(--size-mega-item)" }}
                                                 title={item.text}
                                                 onClick={item.noHover ? (e) => e.preventDefault() : closeMenu}
@@ -434,7 +435,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                                                 {item.text}
                                             </a>
                                             {item.comingSoon && (
-                                                <span className="ml-2 px-2 py-1 text-xs font-medium text-black uppercase bg-white  ">
+                                                <span className="ml-1 px-2 py-1 text-xs font-medium text-black uppercase bg-white  ">
                                                     Coming Soon
                                                 </span>
                                             )}
@@ -568,12 +569,16 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                     <div key={section} className="mb-4">
                         <h3
                             className="uppercase mb-2 pb-1 font-semibold tracking-tight flex items-center"
-                            style={{ fontSize: "var(--size-mega-heading)" }}
+                            style={{
+                                fontSize: "var(--size-mega-heading)",
+                                borderBottom: `2px solid ${accent}`,
+                                color: "white",
+                            }}
                         >
                             <span>{section}</span>
                         </h3>
                         <ul
-                            className={`space-y-5 ${
+                            className={`space-y-3 ${
                                 section === "AREAS OF STUDY" ? "columns-2" : ""
                             }`}
                         >
@@ -581,7 +586,7 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                                 <li key={item.text} className="flex items-center justify-between">
                                     <a
                                         href={item.href}
-                                        className={`block  ${(!item.comingSoon && !item.noHover) ? 'hover:text-white' : ''} transition-colors`}
+                                        className={`block transition-colors ${section === 'CAMPUSES' && item.noHover ? 'cursor-default bg-gray-200 text-gray-400' : (!item.comingSoon ? 'text-white hover:text-white' : 'text-white')}`}
                                         style={{ fontSize: "var(--size-mega-item)" }}
                                         target={item.href.startsWith("http") ? "_blank" : undefined}
                                         rel={
@@ -593,7 +598,7 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                                         {item.text}
                                     </a>
                                     {item.comingSoon && (
-                                        <span className="ml-2 px-2 py-1 text-xs font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                        <span className="ml-1 px-2 py-1 text-xs font-medium text-black uppercase bg-white hover:bg-blue-500 ">
                                             Coming Soon
                                         </span>
                                     )}
@@ -604,10 +609,10 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                 ))}
 
                 {boxes.map((box, index) => (
-                    <div key={index} className="mt-6 pr-4">
+                    <div key={index} className="mt-6 pr-4 flex justify-center h-full">
                         <div
                             className="border-2 flex flex-col"
-                            style={{ borderColor: accent }}
+                            style={{ borderColor: accent, width: '100%' }}
                         >
                             <div className="h-40">
                                 <img

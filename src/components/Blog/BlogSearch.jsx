@@ -46,7 +46,7 @@ const BlogSearch = () => {
                       <p className="text-gray-600 leading-relaxed mt-6">
                         In an inspiring and thought-provoking guest speaker event, renowned actor Andre Royo visited the New York Film Academy (JIU) at the New York City campus to offer students and faculty...
                       </p>
-                      <a href="#" className="text-white bg-purple-600 hover:bg-purple-700 font-semibold tracking-wider mt-8 inline-flex items-center py-3 px-6 rounded-md transition-transform transform hover:scale-105 text-sm shadow-lg">
+                      <a href="/JIUSpeakerEventArticle/" className="text-white bg-purple-600 hover:bg-purple-700 font-semibold tracking-wider mt-8 inline-flex items-center py-3 px-6 rounded-md transition-transform transform hover:scale-105 text-sm shadow-lg">
                         LEARN MORE <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
                       </a>
                     </div>
