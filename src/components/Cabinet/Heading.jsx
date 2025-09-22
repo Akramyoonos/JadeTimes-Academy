@@ -16,13 +16,11 @@ const Heading = () => {
       <nav className="absolute top-8 left-8 z-20 flex items-center space-x-3 text-white text-sm sm:text-base font-sans  bg-opacity-30 px-4 py-2 rounded-full">
         <span className="font-semibold">JIU</span>
         <span className="text-gray-300">/</span>
-        <span className="font-semibold">WHO WE ARE</span>
-        <span className="text-gray-300">/</span>
-        <span className="font-semibold">ACCREDITATION, LICENSING, AND APPROVALS</span>
+        <span className="font-semibold uppercase">JIU Cabinet</span>
         
       </nav>
-      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-semibold tracking-wide text-shadow-lg">
-       ACCREDITATION, LICENSING, AND APPROVALS
+      <h1 className="absolute uppercase top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-semibold tracking-wide text-shadow-lg">
+       jiu Cabinet
       </h1>
     </div>
   );

@@ -27,7 +27,7 @@ const ExploreNetwork = () => {
               <p className="mt-6">
                 Visit the{" "}
                 <a
-                  href="#"
+                  href="/alumni"
                   className="text-purple-600 font-semibold hover:text-purple-800 transition-colors duration-300 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-purple-600 after:transform after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300"
                 >
                   portal here.

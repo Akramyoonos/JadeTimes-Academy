@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import JiuCABINET01 from '../../assets/Images/JiuCABINET01.jpeg';
-import JiuCABINET02 from '../../assets/Images/JiuCABINET02.jpeg';
-import JiuCABINET03 from '../../assets/Images/JiuCABINET03.jpeg';
-import JiuCABINET04 from '../../assets/Images/JiuCABINET04.jpeg';
-import JiuCABINET05 from '../../assets/Images/JiuCABINET05.jpeg';
-import JiuCABINET06 from '../../assets/Images/JiuCABINET06.jpeg';
-import JiuCABINET07 from '../../assets/Images/JiuCABINET07.jpeg';
+import JiuCABINET01 from '../../assets/Images/CabinetPageImages01.jpg';
+import JiuCABINET02 from '../../assets/Images/CabinetPageImages02.jpg';
+import JiuCABINET03 from '../../assets/Images/CabinetPageImages03.jpg';
+import JiuCABINET04 from '../../assets/Images/CabinetPageImages04.jpg';
+import JiuCABINET05 from '../../assets/Images/CabinetPageImages05.jpg';
+import JiuCABINET06 from '../../assets/Images/CabinetPageImages06.jpg';
+import JiuCABINET07 from '../../assets/Images/CabinetPageImages07.jpg';
 import JiuCABINET08 from '../../assets/Images/JiuCABINET08.jpeg';
 import JiuCABINET09 from '../../assets/Images/JiuCABINET09.jpeg';
 import JiuCABINET10 from '../../assets/Images/JiuCABINET10.jpeg';
@@ -16,45 +16,45 @@ import JiuCABINET12 from '../../assets/Images/JiuCABINET12.jpeg';
 // NOTE: Replace the `imageUrl` placeholders with your actual image paths.
 const cabinetMembers = [
     {
-        name: 'Michael J. Young',
+        name: 'Geeth L. Roman',
         title: 'President/CEO',
         imageUrl: JiuCABINET01,
         showConsent: true,
         description: 'Michael J. Young is the President and Chief Executive Officer at the New York Film Academy...',
     },
     {
-        name: 'David Klein',
-        title: 'Senior Executive Vice President/COO',
+        name: 'Dr. jaime Geronimo Vela',
+        title: 'Pro-Vice Chancellor',
         imageUrl: JiuCABINET02,
         description: "Klein is the Senior Executive Vice President at the New York Film Academy. Klein received his Master of Fine Arts in Film Directing at New York University's Graduate School of Film and Television in 1995. He has worked closely with NBC News, the Guggenheim Museum, the Brooklyn Museum, The Metropolitan Museum of Art and New York City public schools to create innovative media arts programs. In his current position at the Academy, he oversees the operations, development, and delivery of programs in the various disciplines taught, including Acting for Film, Filmmaking, Musical Theatre, Broadcast Journalism, and Cinematography, at the Academy's locations across the globe. As a film director and producer, Klein is a...",
     },
     {
-        name: 'Dan Mackler',
-        title: 'Senior Vice President/CSO/Dean of NYFA Los Angeles',
+        name: 'Dr. Tornike Shurgulaia',
+        title: 'Vice President & Head of Student Affairs',
         imageUrl: JiuCABINET03,
         description: 'Dan Mackler oversees the Los Angeles campus, ensuring the highest standards of education and student satisfaction...',
     },
     {
-        name: 'Sonny Calderon',
-        title: 'VP Academic Affairs/CAO',
+        name: 'Prof.Cesar Dubor',
+        title: 'Dean of JIU Online Programs',
         imageUrl: JiuCABINET04,
         description: 'Sonny Calderon is responsible for all academic affairs and curriculum development at the academy...',
     },
     {
-        name: 'Elli Ventouras',
-        title: 'Dean of NYFA New York',
+        name: 'Dr. Keith Nester A. Lavin',
+        title: 'Vice President of Institutional Research and Effectiveness',
         imageUrl: JiuCABINET05,
         description: 'Elli Ventouras leads the New York campus with a focus on student growth and program excellence...',
     },
     {
-        name: 'Dr. Susan Ashe',
-        title: 'Dean of Students, NYFA Los Angeles',
+        name: 'Prof. Simranjit Singh',
+        title: 'Chair of Film Arts',
         imageUrl: JiuCABINET06,
         description: 'Dr. Susan Ashe is dedicated to student welfare and success at the Los Angeles campus...',
     },
     {
-        name: 'Rosa Belerique',
-        title: 'Vice President of Institutional Research and Effectiveness',
+        name: 'Dr. Ehi Iden',
+        title: 'Chair of Liberal Arts & Sciences',
         imageUrl: JiuCABINET07,
         description: 'Rosa Belerique leads the academy\'s efforts in research and institutional effectiveness...',
     },
@@ -87,12 +87,6 @@ const cabinetMembers = [
         title: 'Senior Directing Instructor',
         imageUrl: JiuCABINET12,
         description: 'Nick Sivakumaran is a seasoned director and a senior instructor at the academy...',
-    },
-    {
-        name: 'Andrea Swift',
-        title: 'Chair of Documentary Filmmaking',
-        imageUrl: JiuCABINET06,
-        description: 'Andrea Swift leads the documentary filmmaking department with extensive industry experience...',
     },
 ];
 
@@ -128,29 +122,35 @@ const styles = {
         position: 'relative',
         cursor: 'pointer',
         overflow: 'hidden',
+        borderRadius: '8px', // Add rounded corners
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
         transition: 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
     },
     memberImage: {
         width: '100%',
-        height: 'auto',
+        height: '400px', // A fixed height for uniform cards
         display: 'block',
+        objectFit: 'cover', // Ensures the image covers the area without distortion
+        objectPosition: 'center', // Center the image within the frame
     },
     memberInfo: {
         position: 'absolute',
         bottom: 0,
         left: 0,
         right: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        background: 'linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0) 100%)',
         color: 'white',
-        padding: '1rem',
+        padding: '2.5rem 1rem 1rem 1rem',
     },
     memberName: {
-        fontSize: '1.125rem',
-        fontWeight: 600,
+        fontSize: '1.25rem',
+        fontWeight: 'bold',
+        textShadow: '1px 1px 3px rgba(0,0,0,0.7)',
     },
     memberTitle: {
-        fontSize: '0.875rem',
+        fontSize: '0.9rem',
+        textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
+        opacity: 0.9,
     },
 
     // Modal styles
@@ -292,7 +292,7 @@ const JIUCabinet = () => {
 
   const getGridStyle = () => {
     if (windowWidth >= 1024) {
-      return { ...styles.grid, gridTemplateColumns: 'repeat(4, 1fr)' };
+      return { ...styles.grid, gridTemplateColumns: 'repeat(3, 1fr)' };
     }
     if (windowWidth >= 640) {
       return { ...styles.grid, gridTemplateColumns: 'repeat(2, 1fr)' };

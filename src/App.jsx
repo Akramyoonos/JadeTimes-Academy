@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './index.css';
 
@@ -47,6 +47,7 @@ import Reviews_Page from './pages/Reviews_Page';
 import SearchResultsPage from './pages/SearchResultsPage';
 import { SearchProvider } from './context/SearchContext';
 import JIUSpeakerEventArticle_Page from './pages/JIUSpeakerEventArticle_Page';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -56,6 +57,7 @@ import JIUSpeakerEventArticle_Page from './pages/JIUSpeakerEventArticle_Page';
 // Global click interceptor so ANY <a href="/..."> in header/footer/body routes via SPA
 function AppInner() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const onClick = (e) => {
@@ -88,7 +90,7 @@ function AppInner() {
   return (
     <>
       <Header />
-      <main className="min-h-[80vh]">
+      <main key={location.pathname} className="min-h-[80vh] animate-advanced-fade-in">
         <Routes>
           <Route path="/"                              element={<Home_page />} />
           <Route path="/about"                         element={<About_page />} />
@@ -142,7 +144,8 @@ function AppInner() {
 export default function App() {
   return (
     <Router>
-      <SearchProvider>
+            <SearchProvider>
+        <ScrollToTop />
         <AppInner />
       </SearchProvider>
     </Router>

@@ -81,21 +81,19 @@ const navLinks = [
 const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
-      { text: "FILMMAKING", href: "/" },
-      { text: "ACTING FOR FILM", href: "/academics/areas-of-study/acting-for-film" },
-      { text: "PHOTOGRAPHY", href: "/academics/areas-of-study/photography" },
-      { text: "PRODUCING", href: "/academics/areas-of-study/producing" },
-      { text: "SCREENWRITING", href: "/academics/areas-of-study/screenwriting" },
-      { text: "CINEMATOGRAPHY", href: "/academics/areas-of-study/cinematography" },
-      { text: "DOCUMENTARY FILMMAKING", href: "/academics/areas-of-study/documentary-filmmaking" },
-      { text: "DIGITAL EDITING", href: "/academics/areas-of-study/digital-editing" },
-      { text: "3D ANIMATION & VISUAL EFFECTS", href: "/Faq" },
-      { text: "BROADCAST JOURNALISM", href: "/academics/areas-of-study/broadcast-journalism" },
-      { text: "MUSICAL THEATRE", href: "/academics/areas-of-study/musical-theatre" },
-      { text: "GAME DESIGN", href: "/academics/areas-of-study/game-design" },
-      { text: "ENTERTAINMENT MEDIA", href: "/academics/areas-of-study/entertainment-media" },
-      { text: "VIRTUAL REALITY", href: "/academics/areas-of-study/virtual-reality" },
-      { text: "JIU'S PATHWAY TRACK", href: "/academics/areas-of-study/jius-pathway-track" },
+      { text: "FILM", href: "/" },
+      { text: "MEDIA ARTS", href: "/academics/areas-of-study/acting-for-film" },
+      { text: "PERFORMING ARTS", href: "/academics/areas-of-study/photography" },
+      { text: "CREATIVE EXPRESSION", href: "/academics/areas-of-study/producing" },
+      { text: "JOURNALISM", href: "/academics/areas-of-study/screenwriting" },
+      { text: "COMMUNIVATION", href: "/academics/areas-of-study/cinematography" },
+      { text: "DIGITAL MEDIA", href: "/academics/areas-of-study/documentary-filmmaking" },
+      { text: "TECHNOLOGY", href: "/academics/areas-of-study/digital-editing" },
+      { text: "INTERACTIVE MEDIA", href: "/Faq" },
+      { text: "ENTERTAINMENT MEDIA", href: "/academics/areas-of-study/broadcast-journalism" },
+      { text: "PSYCHOLOGY", href: "/academics/areas-of-study/musical-theatre" },
+      { text: "HUMAN BEHAVIOR", href: "/academics/areas-of-study/game-design" },
+      { text: "MARKETING", href: "/academics/areas-of-study/entertainment-media" },
     ],
     "DEGREE PROGRAMS ": [
       { text: "BACHELOR OF FINE ARTS", href: "", comingSoon: true },
@@ -103,7 +101,7 @@ const megaMenus = {
       { text: "MASTER OF FINE ARTS", href: "", comingSoon: true },
       { text: "MASTER OF ARTS", href: "", comingSoon: true },
       { text: "ASSOCIATE OF FINE ARTS", href: "", comingSoon: true },
-      { text: "ONLINE DEGREES", href: "/online-programs/" },
+      { text: "ONLINE DEGREES", href: "/online-programs/", AvailableNow: true },
     ],
     "CERTIFICATE PROGRAMS": [
       { text: "1 & 2-YEAR PROGRAMS", href: "/academics/certificate-programs/1-2-year-programs" },
@@ -148,12 +146,12 @@ const megaMenus = {
   },
   campusesMenu: {
     "CAMPUSES": [
-      { text: "Online", href: "/campuses/campuses/online" },
-      { text: "New Mexico", href: "/campuses/campuses/new-york-city", noHover: true },
-      { text: "Australia", href: "/campuses/campuses/australia", noHover: true },
-      { text: "India", href: "/campuses/campuses/india", noHover: true },
-      { text: "Spain", href: "/campuses/campuses/spain", noHover: true },
-      { text: "Sri Lanka", href: "/campuses/campuses/sri-lanka", noHover: true },
+      { text: "ONLINE", href: "/campuses/campuses/online", AvailableNow: true },
+      { text: "NEW MEXICO", href: "/campuses/campuses/new-york-city", noHover: true },
+      { text: "AUSTRALIA", href: "/campuses/campuses/australia", noHover: true },
+      { text: "INDIA", href: "/campuses/campuses/india", noHover: true },
+      { text: "SPAIN", href: "/campuses/campuses/spain", noHover: true },
+      { text: "SRI LANKA", href: "/campuses/campuses/sri-lanka", noHover: true },
 
     ],
     "eventBoxes": [
@@ -183,11 +181,10 @@ const megaMenus = {
       { text: "JIU REVIEWS", href: "/reviews/page/" },
       { text: "FAQ", href: "/faq/" },
       { text: "JIU CATALOGS", href: "/discover/who-we-are/JIU-catalogs" },
-      { text: "AWARDS & RANKINGS", href: "/discover/who-we-are/awards-rankings" },
     ],
     "ON CAMPUS": [
       { text: "VISIT US", href: "/on-campus/visit-us/" },
-      { text: "OPEN HOUSE & LIVE ONLINE EVENTS", href: "/discover/on-campus/open-house-live-online-events" },
+      { text: "OPEN HOUSE & LIVE ONLINE EVENTS", href: "/events/list/" },
       { text: "ACADEMIC CALENDAR", href: "/discover/on-campus/academic-calendar" },
       { text: "CAMPUS SAFETY & CLERY ACT", href: "/discover/on-campus/campus-safety-clery-act" },
       { text: "STUDENT LIFE", href: "/student-life/" },
@@ -195,16 +192,12 @@ const megaMenus = {
       { text: "ACCESSIBILITY SERVICES", href: "/discover/on-campus/accessibility-services" },
     ],
     "NEWS AND CULTURE": [
-      { text: "GUEST SPEAKERS", href: "/discover/news-and-culture/guest-speakers" },
       { text: "JIU IN THE NEWS", href: "/JIU-in-the-news/" },
       { text: "BLOG", href: "/blog/" },
       { text: "JIU YOUTUBE CHANNEL", href: "https://www.youtube.com/@Jadetimes-University" },
-      { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },
-      { text: "STUDENT RESOURCES", href: "/student-resources/" },
-      { text: "JIU STORE", href: "/discover/news-and-culture/JIU-store" },
-      { text: "10 ARTS FOUNDATION", href: "/discover/news-and-culture/10-arts-foundation" },
-      { text: "COMMUNITY PARTNERSHIPS & COLLABORATIONS", href: "/discover/news-and-culture/community-partnerships-collaborations" },
-      { text: "INDUSTRY LAB", href: "/discover/news-and-culture/industry-lab" },
+      { text: "PODCASTS", href: "/student-resources/" },  //discover/news-and-culture/podcasts//
+      { text: "STUDENT RESOURCES", href: "/student-resources/", noHover: true },
+      { text: "JIU STORE", href: "/discover/news-and-culture/JIU-store", noHover: true },
     ],
   },
   youthMenu: {
@@ -435,8 +428,13 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                                                 {item.text}
                                             </a>
                                             {item.comingSoon && (
-                                                <span className="ml-1 px-2 py-1 text-xs font-medium text-black uppercase bg-white  ">
+                                                <span className="ml-2 px-[6px] py-[2px] text-[11px] font-medium text-black uppercase bg-white  ">
                                                     Coming Soon
+                                                </span>
+                                            )}
+                                            {item.AvailableNow && (
+                                                <span className="ml-2 px-[6px] py-[2px] text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                                    Available Now
                                                 </span>
                                             )}
                                         </li>
@@ -504,22 +502,28 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                         section === "AREAS OF STUDY"
                           ? "max-w-[300px] whitespace-normal leading-tight"
                           : "whitespace-normal leading-tight";
+                      const isInteractive = !item.comingSoon && !item.noHover;
                       return (
                         <li key={item.text} className="flex items-center justify-between">
                           <a
                             href={item.href}
-                            className={`block ${!item.comingSoon ? 'hover:underline' : 'cursor-default'} transition-colors ${wrapClass} ${section.startsWith("DEGREE PROGRAMS") ? "" : "text-white"}`}
+                            className={`block ${isInteractive ? 'hover:underline' : 'cursor-default'} transition-colors ${wrapClass} ${section.startsWith("DEGREE PROGRAMS") ? "" : (isInteractive ? "text-white" : "text-gray-400")}`}
                             style={{ fontSize: "var(--size-mega-item)" }}
                             title={item.text}
-                            onClick={!item.comingSoon ? closeMenu : (e) => e.preventDefault()}
+                            onClick={isInteractive ? closeMenu : (e) => e.preventDefault()}
                             target={item.href.startsWith("http") ? "_blank" : undefined}
                             rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                           >
                             {item.text}
                           </a>
                           {item.comingSoon && (
-                                <span className="ml-2 px-2 py-1 text-xs font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                <span className="ml-2 px-[2px] py-[1px] text-[9px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
                                     Coming Soon
+                                </span>
+                            )}
+                          {item.AvailableNow && (
+                                <span className="ml-2 px-[2px] py-[1px] text-[9px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                    Available Now
                                 </span>
                             )}
                         </li>
@@ -582,11 +586,13 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                                 section === "AREAS OF STUDY" ? "columns-2" : ""
                             }`}
                         >
-                            {items.map((item) => (
+                            {items.map((item) => {
+                                const isInteractive = !item.comingSoon && !item.noHover;
+                                return (
                                 <li key={item.text} className="flex items-center justify-between">
                                     <a
                                         href={item.href}
-                                        className={`block transition-colors ${section === 'CAMPUSES' && item.noHover ? 'cursor-default bg-gray-200 text-gray-400' : (!item.comingSoon ? 'text-white hover:text-white' : 'text-white')}`}
+                                        className={`block transition-colors ${isInteractive ? 'text-white hover:text-white' : 'cursor-default text-gray-400'}`}
                                         style={{ fontSize: "var(--size-mega-item)" }}
                                         target={item.href.startsWith("http") ? "_blank" : undefined}
                                         rel={
@@ -594,16 +600,22 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                                                 ? "noopener noreferrer"
                                                 : undefined
                                         }
+                                        onClick={isInteractive ? undefined : (e) => e.preventDefault()}
                                     >
                                         {item.text}
                                     </a>
                                     {item.comingSoon && (
-                                        <span className="ml-1 px-2 py-1 text-xs font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                        <span className="ml-2 px-[6px] py-[2px] text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
                                             Coming Soon
                                         </span>
                                     )}
+                                    {item.AvailableNow && (
+                                        <span className="ml-2 px-[6px] py-[2px] text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500">
+                                            Available Now
+                                        </span>
+                                    )}
                                 </li>
-                            ))}
+                            )})}
                         </ul>
                     </div>
                 ))}
@@ -825,8 +837,8 @@ const Header = () => {
                       REQUEST INFO
                     </a>
                     <a
-                      href="/apply-now/"
-                      className="px-3 py-2 border-2 border-white font-semibold text-white transition-transform hover:scale-105"
+                      href="/apply-now/" //request-info//
+                      className="px-3 py-2 border-2 border-white font-semibold text-white transition-transform  hover:scale-105"
                       style={{ fontSize: "var(--size-cta)" }}
                     >
                       APPLY NOW

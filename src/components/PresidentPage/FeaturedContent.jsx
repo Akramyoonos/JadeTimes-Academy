@@ -24,13 +24,13 @@ const FeaturedContent = () => {
   };
 
   return (
-    <div className="bg-gray-50 font-sans text-gray-900 py-16 sm:py-24">
-        <div className="px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between mb-12">
+    <div className="font-sans text-gray-900 py-16 sm:py-24 md:pt-0 md:pb-12">
+        <div className="px-4 sm:px-12 lg:px-36">
+        <div className="flex flex-col sm:flex-row pl-2 justify-between mb-12">
           <div className="flex items-center gap-6 mb-6 sm:mb-0">
-            <div className="w-2 h-25 bg-yellow-500 "></div>
+            <div className="w-2 h-15 bg-yellow-500 "></div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-tight">
-              FEATURED<br /> CONTENT
+              FEATURED CONTENT
             </h2>
           </div>
           <div className="flex space-x-4">
