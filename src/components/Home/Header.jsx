@@ -189,7 +189,7 @@ const megaMenus = {
       { text: "CAMPUS SAFETY & CLERY ACT", href: "/discover/on-campus/campus-safety-clery-act" },
       { text: "STUDENT LIFE", href: "/student-life/" },
       { text: "CAREER AND ALUMNI SERVICES", href: "/career-and-alumni-services/" },
-      { text: "ACCESSIBILITY SERVICES", href: "/discover/on-campus/accessibility-services" },
+      { text: "ACCESSIBILITY SERVICES", href: "/disability-and-accessibility/" },
     ],
     "NEWS AND CULTURE": [
       { text: "JIU IN THE NEWS", href: "/JIU-in-the-news/" },

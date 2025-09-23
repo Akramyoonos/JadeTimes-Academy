@@ -52,6 +52,7 @@ import AcademicProgramsPosts_Page from './pages/AcademicProgramsPosts_Page';
 import JIUCommunityPosts_Page from './pages/JIUCommunityPosts_Page';
 import HeadlinesPosts_Page from './pages/HeadlinesPosts_Page';
 import StudentHighlightsPosts_Page from './pages/StudentHighlightsPosts_Page';
+import Disability_Page from './pages/Disability_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -142,6 +143,7 @@ function AppInner() {
             <Route path="/JIU-COMMUNITY/" element={<JIUCommunityPosts_Page />} />
             <Route path="/HEADLINES/" element={<HeadlinesPosts_Page />} />
             <Route path="/Student-Highlights/" element={<StudentHighlightsPosts_Page />} />
+            <Route path="/disability-and-accessibility/" element={<Disability_Page />} />
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
