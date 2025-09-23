@@ -195,7 +195,7 @@ const megaMenus = {
       { text: "JIU IN THE NEWS", href: "/JIU-in-the-news/" },
       { text: "BLOG", href: "/blog/" },
       { text: "JIU YOUTUBE CHANNEL", href: "https://www.youtube.com/@Jadetimes-University" },
-      { text: "PODCASTS", href: "/student-resources/" },  //discover/news-and-culture/podcasts//
+      { text: "PODCASTS", href: "/discover/news-and-culture/podcasts" },  
       { text: "STUDENT RESOURCES", href: "/student-resources/", noHover: true },
       { text: "JIU STORE", href: "/discover/news-and-culture/JIU-store", noHover: true },
     ],

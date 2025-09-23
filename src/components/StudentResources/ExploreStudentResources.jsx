@@ -23,7 +23,7 @@ import {  faArrowRight } from '@fortawesome/free-solid-svg-icons';
     </div>
   );
 
-const BlogSearch = () => {
+const ExploreStudentResources = () => {
  
 
 
@@ -66,4 +66,4 @@ const BlogSearch = () => {
           );
 }
 
-export default BlogSearch;
+export default ExploreStudentResources;

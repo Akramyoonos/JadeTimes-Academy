@@ -11,7 +11,7 @@ const Success = () => {
           {/* Left Column: JIU Partnerships */}
           <div className="relative bg-gradient-to-br from-pink-700 to-indigo-700 p-8 rounded-lg shadow-2xl min-h-[500px] flex flex-col justify-between text-white transform hover:scale-105 transition-transform duration-300">
             <div>
-              <h2 className="text-2xl font-bold tracking-widest">JIU PARTNERSHIPS</h2>
+              <h2 className="text-2xl font-bold uppercase tracking-widest">Student Highlights</h2>
               <p className="mt-4 text-indigo-200">Explore our collaborations with industry leaders and institutions.</p>
             </div>
             <div className="flex justify-end items-center">
