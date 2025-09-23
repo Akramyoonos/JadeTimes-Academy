@@ -9,13 +9,13 @@ const GuestSpeackers = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           
           {/* Left Column: JIU Partnerships */}
-          <div className="relative bg-gradient-to-br from-black to-indigo-700 p-8 rounded-lg shadow-2xl min-h-[500px] flex flex-col justify-between text-white transform hover:scale-105 transition-transform duration-300">
+          <div className="relative p-8 rounded-lg shadow-2xl min-h-[500px] flex flex-col justify-between text-white transform hover:scale-105 transition-transform duration-300" style={{ background: 'linear-gradient(0deg, #142266 0%, #2472a3 100%)' }}>
             <div>
               <h2 className="text-2xl font-bold uppercase tracking-widest">Headlines</h2>
               <p className="mt-4 text-indigo-200">Explore our collaborations with industry leaders and institutions.</p>
             </div>
             <div className="flex justify-end items-center">
-              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-indigo-700 transition-colors duration-300">
+              <a href="/HEADLINES/" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-indigo-700 transition-colors duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>

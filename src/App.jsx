@@ -47,6 +47,11 @@ import Reviews_Page from './pages/Reviews_Page';
 import SearchResultsPage from './pages/SearchResultsPage';
 import { SearchProvider } from './context/SearchContext';
 import JIUSpeakerEventArticle_Page from './pages/JIUSpeakerEventArticle_Page';
+import JIUPARTNERSHIPSPOSTS_Page from './pages/JIUPARTNERSHIPSPOSTS_Page';
+import AcademicProgramsPosts_Page from './pages/AcademicProgramsPosts_Page';
+import JIUCommunityPosts_Page from './pages/JIUCommunityPosts_Page';
+import HeadlinesPosts_Page from './pages/HeadlinesPosts_Page';
+import StudentHighlightsPosts_Page from './pages/StudentHighlightsPosts_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -132,6 +137,11 @@ function AppInner() {
             <Route path="/affiliations//*"       element={<Affiliations_Page />} />
             <Route path="/reviews/page/*"       element={<Reviews_Page />} />
             <Route path="/JIUSpeakerEventArticle/" element={<JIUSpeakerEventArticle_Page />} />
+            <Route path="/JIU-PARTNERSHIPS/" element={<JIUPARTNERSHIPSPOSTS_Page />} />
+            <Route path="/Academic-Programs/" element={<AcademicProgramsPosts_Page />} />
+            <Route path="/JIU-COMMUNITY/" element={<JIUCommunityPosts_Page />} />
+            <Route path="/HEADLINES/" element={<HeadlinesPosts_Page />} />
+            <Route path="/Student-Highlights/" element={<StudentHighlightsPosts_Page />} />
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>

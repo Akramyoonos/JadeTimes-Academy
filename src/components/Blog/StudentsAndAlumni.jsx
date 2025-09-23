@@ -15,7 +15,7 @@ const StudentsAndAlumni = () => {
               <p className="mt-4 text-indigo-200">Explore our collaborations with industry leaders and institutions.</p>
             </div>
             <div className="flex justify-end items-center">
-              <a href="#" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-indigo-700 transition-colors duration-300">
+              <a href="/JIU-COMMUNITY/" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-indigo-700 transition-colors duration-300">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
