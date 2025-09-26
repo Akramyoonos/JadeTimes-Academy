@@ -72,7 +72,7 @@ export default function Calendar({ date, view, events = [], onDateClick }) {
             <div key={i} className="bg-white p-4 rounded-lg shadow">
               <h4 className="font-bold text-center mb-2">{name} {year}</h4>
               <div className="grid grid-cols-7 gap-1 text-center text-xs text-gray-500">
-                {['S','M','T','W','T','F','S'].map(d => <div key={d}>{d}</div>)}
+                {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => <div key={i}>{d}</div>)}
               </div>
               <div className="grid grid-cols-7 gap-1 text-center mt-2">
                 {mdays.map((d, idx) => {
@@ -108,7 +108,7 @@ export default function Calendar({ date, view, events = [], onDateClick }) {
         </button>
       </div>
       <div className="grid grid-cols-7 gap-2 text-center text-sm text-gray-500">
-        {['S','M','T','W','T','F','S'].map(d => <div key={d}>{d}</div>)}
+        {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((d, i) => <div key={i}>{d}</div>)}
       </div>
       <div className="grid grid-cols-7 gap-2 text-center mt-2">
         {days.map((d, idx) => {
