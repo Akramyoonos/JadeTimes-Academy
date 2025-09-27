@@ -53,6 +53,8 @@ import JIUCommunityPosts_Page from './pages/JIUCommunityPosts_Page';
 import HeadlinesPosts_Page from './pages/HeadlinesPosts_Page';
 import StudentHighlightsPosts_Page from './pages/StudentHighlightsPosts_Page';
 import Disability_Page from './pages/Disability_Page';
+import CampusSafety_Page from './pages/CampusSafety_Page';
+import ProgramDatesAndTuition_Page from './pages/ProgramDatesAndTuition_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -144,6 +146,8 @@ function AppInner() {
             <Route path="/HEADLINES/" element={<HeadlinesPosts_Page />} />
             <Route path="/Student-Highlights/" element={<StudentHighlightsPosts_Page />} />
             <Route path="/disability-and-accessibility/" element={<Disability_Page />} />
+            <Route path="/on-campus/campus-safety/" element={<CampusSafety_Page />} />
+            <Route path="/program-dates-and-tuition/" element={<ProgramDatesAndTuition_Page />} />
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>

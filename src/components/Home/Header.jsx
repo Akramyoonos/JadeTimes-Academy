@@ -186,7 +186,7 @@ const megaMenus = {
       { text: "VISIT US", href: "/on-campus/visit-us/" },
       { text: "OPEN HOUSE & LIVE ONLINE EVENTS", href: "/events/list/" },
       { text: "ACADEMIC CALENDAR", href: "/discover/on-campus/academic-calendar" },
-      { text: "CAMPUS SAFETY & CLERY ACT", href: "/discover/on-campus/campus-safety-clery-act" },
+      { text: "CAMPUS SAFETY & CLERY ACT", href: "/on-campus/campus-safety/" },
       { text: "STUDENT LIFE", href: "/student-life/" },
       { text: "CAREER AND ALUMNI SERVICES", href: "/career-and-alumni-services/" },
       { text: "ACCESSIBILITY SERVICES", href: "/disability-and-accessibility/" },
@@ -507,7 +507,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                         <li key={item.text} className="flex items-center justify-between">
                           <a
                             href={item.href}
-                            className={`block ${isInteractive ? 'hover:underline' : 'cursor-default'} transition-colors ${wrapClass} ${section.startsWith("DEGREE PROGRAMS") ? "" : (isInteractive ? "text-white" : "text-gray-400")}`}
+                            className={`block ${isInteractive ? 'hover:underline' : 'cursor-default'} transition-colors ${wrapClass} ${section.startsWith("DEGREE PROGRAMS") ? (item.comingSoon ? "text-gray-400" : "text-white") : (isInteractive ? "text-white" : "text-gray-400")}`}
                             style={{ fontSize: "var(--size-mega-item)" }}
                             title={item.text}
                             onClick={isInteractive ? closeMenu : (e) => e.preventDefault()}
