@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import ProgramDisplay from "./ProgramDisplay";
-import BlogHeadingImg1 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg2 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg3 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg4 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg5 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg6 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg7 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg8 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg9 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg10 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg11 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg12 from "../../assets/Images/BlogHeadingImg.jpeg";
-import BlogHeadingImg13 from "../../assets/Images/BlogHeadingImg.jpeg";
+import BlogHeadingImg1 from "../../assets/Images/FileImg.Webp";
+import BlogHeadingImg2 from "../../assets/Images/MEDIAARTS.Webp";
+import BlogHeadingImg3 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg4 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg5 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg6 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg7 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg8 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg9 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg10 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg11 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg12 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg13 from "../../assets/Images/BlogHeadingImg.Webp";
 
 const programs = [
   { name: "FILM", imageUrl: BlogHeadingImg1 },
@@ -30,31 +30,152 @@ const programs = [
   { name: "MARKETING", imageUrl: BlogHeadingImg13 },
 ];
 
+// Helper function to create a URL-friendly slug
+const createSlug = (text) => {
+  return text
+    .toString()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-");
+};
+
 const programCourses = {
   "FILM": [
-    "Master of Fine Arts in 3D Animation & VFX",
-    "Bachelor of Fine Arts in 3D Animation & VFX",
-    "1-Year 3D Animation & VFX Program",
+    { name: "Master of Fine Arts in 3D Animation & VFX", href: `/programs/film/${createSlug("Master of Fine Arts in 3D Animation & VFX")}` },
+    { name: "Bachelor of Fine Arts in 3D Animation & VFX", href: `/programs/film/${createSlug("Bachelor of Fine Arts in 3D Animation & VFX")}` },
+    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
+    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
+    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
+    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
+    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
+    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
+    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
   ],
   "MEDIA ARTS": [
-    "Master of Fine Arts in Media Arts",
-    "Bachelor of Fine Arts in Media Arts",
-    "1-Year Media Arts Program",
+    { name: "Master of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Master of Fine Arts in Media Arts")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
   ],
   "PERFORMING ARTS": [
-    "Master of Fine Arts in Performing Arts",
-    "Bachelor of Fine Arts in Performing Arts",
+    { name: "Master of Fine Arts in Performing Arts", href: `/programs/performing-arts/${createSlug("Master of Fine Arts in Performing Arts")}` },
+    { name: "Bachelor of Fine Arts in Performing Arts", href: `/programs/performing-arts/${createSlug("Bachelor of Fine Arts in Performing Arts")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
   ],
-  "CREATIVE EXPRESSION": ["Bachelor of Fine Arts in Creative Expression"],
-  "JOURNALISM": ["Bachelor of Arts in Journalism"],
-  "COMMUNICATION": ["Bachelor of Arts in Communication"],
-  "DIGITAL MEDIA": ["Master of Arts in Digital Media"],
-  "TECHNOLOGY": ["Bachelor of Science in Technology"],
-  "INTERACTIVE MEDIA": ["Bachelor of Science in Interactive Media"],
-  "ENTERTAINMENT MEDIA": ["Master of Arts in Entertainment Media"],
-  "PSYCHOLOGY": ["Bachelor of Science in Psychology"],
-  "HUMAN BEHAVIOR": ["Bachelor of Science in Human Behavior"],
-  "MARKETING": ["Bachelor of Business Administration in Marketing"],
+  "CREATIVE EXPRESSION": [
+    { name: "Bachelor of Fine Arts in Creative Expression", href: `/programs/creative-expression/${createSlug("Bachelor of Fine Arts in Creative Expression")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "JOURNALISM": [
+    { name: "Bachelor of Arts in Journalism", href: `/programs/journalism/${createSlug("Bachelor of Arts in Journalism")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "COMMUNICATION": [
+    { name: "Bachelor of Arts in Communication", href: `/programs/communication/${createSlug("Bachelor of Arts in Communication")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "DIGITAL MEDIA": [
+    { name: "Master of Arts in Digital Media", href: `/programs/digital-media/${createSlug("Master of Arts in Digital Media")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "TECHNOLOGY": [
+    { name: "Bachelor of Science in Technology", href: `/programs/technology/${createSlug("Bachelor of Science in Technology")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "INTERACTIVE MEDIA": [
+    { name: "Bachelor of Science in Interactive Media", href: `/programs/interactive-media/${createSlug("Bachelor of Science in Interactive Media")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "ENTERTAINMENT MEDIA": [
+    { name: "Master of Arts in Entertainment Media", href: `/programs/entertainment-media/${createSlug("Master of Arts in Entertainment Media")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "PSYCHOLOGY": [
+    { name: "Bachelor of Science in Psychology", href: `/programs/psychology/${createSlug("Bachelor of Science in Psychology")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "HUMAN BEHAVIOR": [
+    { name: "Bachelor of Science in Human Behavior", href: `/programs/human-behavior/${createSlug("Bachelor of Science in Human Behavior")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
+  "MARKETING": [
+    { name: "Bachelor of Business Administration in Marketing", href: `/programs/marketing/${createSlug("Bachelor of Business Administration in Marketing")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+    { name: "Bachelor of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Bachelor of Fine Arts in Media Arts")}` },
+    { name: "1-Year Media Arts Program", href: `/programs/media-arts/${createSlug("1-Year Media Arts Program")}` },
+  ],
 };
 
 const ProgramsSection = () => {

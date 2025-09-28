@@ -2,17 +2,17 @@ import React from 'react';
 
 const FilmPrograms = () => {
     const courses = [
-        "Master of Fine Arts in 3D Animation & VFX",
-        "Bachelor of Fine Arts in 3D Animation & VFX",
-        "Bachelor of Fine Arts in Entertainment Media (Concentration in 3D Animation & VFX)",
-        "1-Year 3D Animation & VFX Program",
-        "12-Weekend Evening 3D Animation & VFX Workshop",
-        "12-Week Evening Adobe After Effects Workshop",
-        "3-Week 3D Animation & VFX Workshop",
-        "4-Week 3D Animation & VFX Workshop",
-        "4-Week Adobe After Effects Workshop",
-        "1-Week Visual Effects Workshop",
-        "4-Week Online 3D Animation & VFX Workshop"
+        { name: "Master of Fine Arts in 3D Animation & VFX", href: "/programs/mfa-3d-animation-vfx" },
+        { name: "Bachelor of Fine Arts in 3D Animation & VFX", href: "/programs/bfa-3d-animation-vfx" },
+        { name: "Bachelor of Fine Arts in Entertainment Media (Concentration in 3D Animation & VFX)", href: "/programs/bfa-entertainment-media-3d-animation-vfx" },
+        { name: "1-Year 3D Animation & VFX Program", href: "/programs/1-year-3d-animation-vfx" },
+        { name: "12-Weekend Evening 3D Animation & VFX Workshop", href: "/programs/12-weekend-3d-animation-vfx-workshop" },
+        { name: "12-Week Evening Adobe After Effects Workshop", href: "/programs/12-week-adobe-after-effects-workshop" },
+        { name: "3-Week 3D Animation & VFX Workshop", href: "/programs/3-week-3d-animation-vfx-workshop" },
+        { name: "4-Week 3D Animation & VFX Workshop", href: "/programs/4-week-3d-animation-vfx-workshop" },
+        { name: "4-Week Adobe After Effects Workshop", href: "/programs/4-week-adobe-after-effects-workshop" },
+        { name: "1-Week Visual Effects Workshop", href: "/programs/1-week-visual-effects-workshop" },
+        { name: "4-Week Online 3D Animation & VFX Workshop", href: "/programs/4-week-online-3d-animation-vfx-workshop" }
     ];
 
     return (
@@ -26,7 +26,7 @@ const FilmPrograms = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                         {courses.map((course, index) => (
                             <div key={index} className="border-b border-gray-200 pb-6 group">
-                                <p className="text-gray-800 text-lg group-hover:text-purple-600 transition-colors duration-300 cursor-pointer">{course}</p>
+                                <a href={course.href} className="text-gray-800 text-lg group-hover:text-purple-600 transition-colors duration-300 cursor-pointer">{course.name}</a>
                             </div>
                         ))}
                     </div>

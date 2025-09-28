@@ -13,7 +13,7 @@ const ProgramDisplay = ({ programName, courses }) => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                         {courses.map((course, index) => (
                             <div key={index} className="border-b border-gray-200 pb-6 group">
-                                <p className="text-gray-800 text-lg group-hover:text-purple-600 transition-colors duration-300 cursor-pointer">{course}</p>
+                                <a href={course.href} className="text-gray-800 text-lg group-hover:text-purple-600 transition-colors duration-300 cursor-pointer">{course.name}</a>
                             </div>
                         ))}
                     </div>

@@ -10,7 +10,7 @@ import AboutWelcome from '../../assets/Images/AboutWelcome.jpeg';
 import AlumniExplore01 from '../../assets/Images/AlumniExplore01.jpeg';
 import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
 import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
-import BlogHeadingImg from '../../assets/Images/BlogHeadingImg.jpeg';
+import BlogHeadingImg from '../../assets/Images/BlogHeadingImg.Webp';
 import BlogSearchImg from '../../assets/Images/BlogSearchImg.jpeg';
 import Campus01 from '../../assets/Images/Campus01.jpeg';
 import Campus02 from '../../assets/Images/Campus02.jpeg';

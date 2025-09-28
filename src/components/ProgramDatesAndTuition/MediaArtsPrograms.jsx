@@ -2,11 +2,11 @@ import React from 'react';
 
 const MediaArtsPrograms = () => {
     const courses = [
-        "Master of Fine Arts in Media Arts",
-        "Bachelor of Fine Arts in Media Arts",
-        "1-Year Media Arts Program",
-        "12-Weekend Evening Media Arts Workshop",
-        "4-Week Online Media Arts Workshop"
+        { name: "Master of Fine Arts in Media Arts", href: "/media-arts-programs/mfa-media-arts" },
+        { name: "Bachelor of Fine Arts in Media Arts", href: "/media-arts-programs/bfa-media-arts" },
+        { name: "1-Year Media Arts Program", href: "/media-arts-programs/1-year-media-arts-program" },
+        { name: "12-Weekend Evening Media Arts Workshop", href: "/media-arts-programs/12-weekend-media-arts-workshop" },
+        { name: "4-Week Online Media Arts Workshop", href: "/media-arts-programs/4-week-online-media-arts-workshop" }
     ];
 
     return (
@@ -20,7 +20,7 @@ const MediaArtsPrograms = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                         {courses.map((course, index) => (
                             <div key={index} className="border-b border-gray-200 pb-6 group">
-                                <p className="text-gray-800 text-lg group-hover:text-purple-600 transition-colors duration-300 cursor-pointer">{course}</p>
+                                <a href={course.href} className="text-gray-800 text-lg group-hover:text-purple-600 transition-colors duration-300 cursor-pointer">{course.name}</a>
                             </div>
                         ))}
                     </div>
