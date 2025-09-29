@@ -35,7 +35,7 @@ const OnlineDegrees = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-300 group"
+            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2000 group"
             style={{ backgroundImage: `url(${OnlineDegrees01})` }}
           >
             <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
@@ -59,7 +59,7 @@ const OnlineDegrees = () => {
           </div>
 
           <div
-            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-300 group"
+            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2000 group"
             style={{ backgroundImage: `url(${OnlineDegrees02})` }}
           >
             <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
@@ -83,7 +83,7 @@ const OnlineDegrees = () => {
           </div>
 
           <div
-            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-300 group"
+            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2000 group"
             style={{ backgroundImage: `url(${OnlineDegrees03})` }}
           >
             <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>

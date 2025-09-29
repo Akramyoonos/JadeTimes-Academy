@@ -10,76 +10,90 @@ import WorkShopsForAdults08 from '../../assets/Images/WorkShopsForAdultsImages08
 import WorkShopsForAdults09 from '../../assets/Images/WorkShopsForAdultsImages09.jpeg';
 import WorkShopsForAdults10 from '../../assets/Images/WorkShopsForAdultsImages10.jpeg';
 import WorkShopsForAdults11 from '../../assets/Images/WorkShopsForAdultsImages11.jpeg';
+import WorkShopsForAdults12 from '../../assets/Images/WorkShopsForAdultsImages10.jpeg';
+import WorkShopsForAdults13 from '../../assets/Images/WorkShopsForAdultsImages11.jpeg';
 
 // Data for all workshops is now in a single array.
 // This makes it easy to add, remove, or edit workshops without changing the component's structure.
 // The `gridSpan` property controls how many columns each card takes up on medium screens and larger.
 const workshopsData = [
   {
-    title: "Online Filmmaking\nWorkshops",
+    title: "FILM",
     imageUrl:WorkShopsForAdults01 ,
     alt: "Filmmaking",
     gridSpan: "md:col-span-2",
   },
   {
-    title: "Online Acting For Film\nWorkshops",
+    title: "MEDIA ARTS",
     imageUrl:WorkShopsForAdults02 ,
     alt: "Acting for Film",
     gridSpan: "md:col-span-2",
   },
   {
-    title: "Online Producing\nWorkshops",
+    title: "PERFORMING ARTS",
     imageUrl: WorkShopsForAdults03,
     alt: "Producing",
     gridSpan: "md:col-span-2",
   },
   {
-    title: "Online Musical Theatre\nWorkshops",
+    title: "CREATIVE EXPRESSION",
     imageUrl: WorkShopsForAdults04,
     alt: "Musical Theatre",
     gridSpan: "md:col-span-3",
   },
   {
-    title: "Online Screenwriting\nWorkshops",
+    title: "JOURNALISM",
     imageUrl: WorkShopsForAdults05,
     alt: "Screenwriting",
     gridSpan: "md:col-span-3",
   },
   {
-    title: "Online Photography\nWorkshops",
+    title: "COMMUNIVATION",
     imageUrl: WorkShopsForAdults06,
     alt: "Photography",
     gridSpan: "md:col-span-2",
   },
   {
-    title: "Online 3D Animation & VFX\nWorkshops",
+    title: "DIGITAL MEDIA",
     imageUrl: WorkShopsForAdults07,
     alt: "3D Animation & VFX",
     gridSpan: "md:col-span-2",
   },
   {
-    title: "Online Documentary\nFilmmaking Workshops",
+    title: "TECHNOLOGY",
     imageUrl: WorkShopsForAdults08,
     alt: "Documentary Filmmaking",
     gridSpan: "md:col-span-2",
   },
   {
-    title: "Online Digital Editing\nWorkshops",
+    title: "INTERACTIVE MEDIA",
     imageUrl: WorkShopsForAdults09,
     alt: "Digital Editing",
     gridSpan: "md:col-span-3",
   },
   {
-    title: "Online Broadcast Journalism\nWorkshops",
+    title: "ENTERTAINMENT MEDIA",
     imageUrl: WorkShopsForAdults10,
     alt: "Broadcast Journalism",
     gridSpan: "md:col-span-3",
   },
   {
-    title: "Online Cinematography\nWorkshops",
+    title: "PSYCHOLOGY",
     imageUrl: WorkShopsForAdults11,
     alt: "Cinematography",
     gridSpan: "md:col-span-6",
+  },
+  {
+    title: "HUMAN BEHAVIOR",
+    imageUrl: WorkShopsForAdults12,
+    alt: "Broadcast Journalism",
+    gridSpan: "md:col-span-3",
+  },
+  {
+    title: "MARKETING",
+    imageUrl: WorkShopsForAdults13,
+    alt: "Cinematography",
+    gridSpan: "md:col-span-3",
   },
 ];
 
@@ -93,7 +107,7 @@ const WorkshopCard = ({ title, image, alt, gridSpan, href = "#" }) => {
       <img 
         src={image} 
         alt={alt} 
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-2500 ease-in-out group-hover:scale-130"
       />
       <div className="absolute inset-0 bg-black/60"></div>
       <div className="relative flex justify-between items-end h-full p-6 text-white">

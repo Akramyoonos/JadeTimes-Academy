@@ -81,7 +81,7 @@ const navLinks = [
 const megaMenus = {
   academicsMenu: {
     "AREAS OF STUDY": [
-      { text: "FILM", href: "/contact_us" },
+      { text: "FILM", href: "/film/" },
       { text: "MEDIA ARTS", href: "/academics/areas-of-study/acting-for-film" },
       { text: "PERFORMING ARTS", href: "/academics/areas-of-study/photography" },
       { text: "CREATIVE EXPRESSION", href: "/academics/areas-of-study/producing" },
@@ -95,19 +95,19 @@ const megaMenus = {
       { text: "HUMAN BEHAVIOR", href: "/academics/areas-of-study/game-design" },
       { text: "MARKETING", href: "/academics/areas-of-study/entertainment-media" },
     ],
-    "DEGREE PROGRAMS ": [
+    "OUR PROGRAMS ": [
+      { text: "ONLINE COURSES", href: "/online-programs/"},
       { text: "BACHELOR OF FINE ARTS", href: "", comingSoon: true },
       { text: "BACHELOR OF ARTS", href: "", comingSoon: true },
       { text: "MASTER OF FINE ARTS", href: "", comingSoon: true },
       { text: "MASTER OF ARTS", href: "", comingSoon: true },
       { text: "ASSOCIATE OF FINE ARTS", href: "", comingSoon: true },
-      { text: "ONLINE DEGREES", href: "/online-programs/", AvailableNow: true },
+
     ],
     "CERTIFICATE PROGRAMS": [
-      { text: "1 & 2-YEAR PROGRAMS", href: "/academics/certificate-programs/1-2-year-programs" },
-      { text: "SHORT-TERM WORKSHOPS", href: "/academics/certificate-programs/short-term-workshops" },
-      { text: "ONLINE PROGRAMS", href: "/online-programs/" },
-      { text: "CORPORATE TRAINING", href: "/academics/certificate-programs/corporate-training" },
+      { text: "2 HOUR WORKSHOPS", href: "/academics/certificate-programs/short-term-workshops" },
+      { text: "ONLINE COURSES", href: "/online-programs/" },
+      { text: "CORPORATE INTERNSHIP/TRAINING", href: "/academics/certificate-programs/corporate-training" },
     ],
         "eventBox": {
       title: "OPEN HOUSE & LIVE ONLINE EVENTS",
@@ -181,6 +181,7 @@ const megaMenus = {
       { text: "JIU REVIEWS", href: "/reviews/page/" },
       { text: "FAQ", href: "/faq/" },
       { text: "JIU CATALOGS", href: "/discover/who-we-are/JIU-catalogs" },
+      { text: "CONTACT US", href: "/contact_us" },
     ],
     "ON CAMPUS": [
       { text: "VISIT US", href: "/on-campus/visit-us/" },
@@ -266,8 +267,8 @@ const useClickOutside = (ref, handler) => {
 
 const getSectionHref = (section) => {
     const hrefMap = {
-        "AREAS OF STUDY": "/academics",
-        "DEGREE PROGRAMS": "",
+        "AREAS OF STUDY": "/dates-tuition/",
+        "OUR PROGRAMS": "",
         "CERTIFICATE PROGRAMS": "/academics/certificate-programs",
         "ADMISSIONS": "/admissions",
         "FINANCES": "/admissions/finances",
@@ -507,7 +508,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                         <li key={item.text} className="flex items-center justify-between">
                           <a
                             href={item.href}
-                            className={`block ${isInteractive ? 'hover:underline' : 'cursor-default'} transition-colors ${wrapClass} ${section.startsWith("DEGREE PROGRAMS") ? (item.comingSoon ? "text-gray-400" : "text-white") : (isInteractive ? "text-white" : "text-gray-400")}`}
+                            className={`block ${isInteractive ? 'hover:underline' : 'cursor-default'} transition-colors ${wrapClass} ${section.startsWith("OUR PROGRAMS") ? (item.comingSoon ? "text-gray-400" : "text-white") : (isInteractive ? "text-white" : "text-gray-400")}`}
                             style={{ fontSize: "var(--size-mega-item)" }}
                             title={item.text}
                             onClick={isInteractive ? closeMenu : (e) => e.preventDefault()}

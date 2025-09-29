@@ -209,7 +209,7 @@ const ProgramsSection = () => {
       <div ref={programsSectionRef} className="bg-gray-50 font-sans py-16 px-6 sm:px-12 lg:px-10 shadow-inner">
         <button
           onClick={() => setSelectedProgram(null)}
-          className="mb-8 bg-purple-600 text-white px-6 py-2 rounded text-sm font-semibold hover:bg-purple-700 transition-colors duration-200 shadow-md hover:shadow-lg"
+          className="mb-8 bg-purple-600 text-white px-6 py-2 rounded text-sm font-semibold hover:bg-purple-700 "
         >
           &larr; Back to Programs
         </button>
@@ -219,7 +219,7 @@ const ProgramsSection = () => {
   }
 
   return (
-    <div ref={programsSectionRef} className="bg-gray-50 font-sans py-16 px-6 sm:px-12 lg:px-10  shadow-inner">
+    <div ref={programsSectionRef} className="bg-gray-50 font-sans py-16 px-6 sm:px-12 lg:px-30  shadow-inner">
       {/* Heading */}
       <div className="flex items-center mb-12">
         <div className="w-2 h-24 bg-purple-600 mr-6  shadow-md"></div>
@@ -230,19 +230,19 @@ const ProgramsSection = () => {
         </h1>
       </div>
 
-      <div className="bg-white p-8  shadow-2xl">
+      <div className="bg-white p-8 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
           {programs.map((program, index) => (
             <div
               key={index}
-              className="bg-white  shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+              className="bg-white  shadow-md overflow-hidden transform transition-all duration-300 cursor-pointer"
               onClick={() => handleProgramClick(program.name)}
             >
               <div className="w-full h-64 bg-gray-200  overflow-hidden">
                 <img
                   src={program.imageUrl}
                   alt={program.name}
-                  className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                  className="w-full h-full object-cover transform transition-transform duration-2500 hover:scale-130"
                 />
               </div>
               <div className="p-6">

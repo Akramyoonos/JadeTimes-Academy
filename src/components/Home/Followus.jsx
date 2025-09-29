@@ -60,7 +60,7 @@ const FollowUs = () => {
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover block transition-transform duration-300 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover block transition-transform duration-2100 ease-in-out group-hover:scale-115"
             />
 
             {/* Gradient Overlay */}

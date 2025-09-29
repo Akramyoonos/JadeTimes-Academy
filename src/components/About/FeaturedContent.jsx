@@ -46,7 +46,7 @@ const FeaturedContent = () => {
           <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px] overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
-              className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover transform transition-transform duration-2100 ease-in-out group-hover:scale-115"
               src={FeaturedContentImage1} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
@@ -70,7 +70,7 @@ const FeaturedContent = () => {
           <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
-              className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover transform transition-transform duration-2100 ease-in-out group-hover:scale-115"
               src={FeaturedContentImage2} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
@@ -94,7 +94,7 @@ const FeaturedContent = () => {
           <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
-              className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover transform transition-transform duration-2100 ease-in-out group-hover:scale-115"
               src={FeaturedContentImage3} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
@@ -118,7 +118,7 @@ const FeaturedContent = () => {
           <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
-              className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover transform transition-transform duration-2100 ease-in-out group-hover:scale-115"
               src={FeaturedContentImage4} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
@@ -142,7 +142,7 @@ const FeaturedContent = () => {
           <article className="relative flex-shrink-0 w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-7xl h-[500px] sm:h-[450px] md:h-[500px]  overflow-hidden shadow-xl group" role="listitem">
             <img
               alt="Three people dressed in period clothing at a ball, two facing the camera smiling, one with back turned"
-              className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-105"
+              className="w-full h-full object-cover transform transition-transform duration-2100 ease-in-out group-hover:scale-115"
               src={FeaturedContentImage5} 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>

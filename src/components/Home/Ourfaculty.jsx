@@ -94,8 +94,8 @@ const OurFaculty = () => {
     <div className="OurfacultyFont">
       <div className="bg-white">
         <section className="bg-[#0a0a0a] text-white" aria-labelledby="faculty-heading">
-          <div className="max-w-7xl px-8 md:px-12 pt-8 md:pt-6 lg:pt-8 mt-12 ">
-            <div className="flex flex-col md:flex-row items-center md:items-start md:justify-start gap-22">
+          <div className="max-w-8xl px-8 md:px-12 pt-8 md:pt-6 lg:pt-8  ">
+            <div className="flex flex-col md:flex-row items-center md:items-start md:justify-start ">
               <div className="flex flex-col justify-center md:justify-start md:items-start gap-8 md:gap-12 w-full md:w-1/4">
                 <div className="flex items-center pt-6 gap-6">
                   <div className="w-1.5 h-20 bg-[#b61f9f]"></div>

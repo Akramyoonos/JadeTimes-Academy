@@ -55,6 +55,7 @@ import StudentHighlightsPosts_Page from './pages/StudentHighlightsPosts_Page';
 import Disability_Page from './pages/Disability_Page';
 import CampusSafety_Page from './pages/CampusSafety_Page';
 import ProgramDatesAndTuition_Page from './pages/ProgramDatesAndTuition_Page';
+import Film_Page from './pages/Film_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -148,6 +149,7 @@ function AppInner() {
             <Route path="/disability-and-accessibility/" element={<Disability_Page />} />
             <Route path="/on-campus/campus-safety/" element={<CampusSafety_Page />} />
             <Route path="/program-dates-and-tuition/" element={<ProgramDatesAndTuition_Page />} />
+            <Route path="/film/*" element={<Film_Page />} />
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
