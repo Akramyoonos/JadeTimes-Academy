@@ -75,7 +75,7 @@ const Degrees = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                     <div className="space-y-6 text-black">
                         <p>
-                            The filmmaking degrees at NYFA's Film School provide students with a well-rounded education that fully supports their development as directors and filmmakers. In our hands-on programs, students create a number of original films and content, gaining hands-on training and experience on a film set.
+                            The filmmaking degrees at JIU's Film School provide students with a well-rounded education that fully supports their development as directors and filmmakers. In our hands-on programs, students create a number of original films and content, gaining hands-on training and experience on a film set.
                         </p>
                     </div>
                     <div className="space-y-6 text-black">
