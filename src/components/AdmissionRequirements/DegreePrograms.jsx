@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 
-import mfaImg from "../../assets/Images/AboutHeading.png";
-import maImg from "../../assets/Images/AboutHeading.png";
-import baImg from "../../assets/Images/AboutHeading.png";
-import bfaImg from "../../assets/Images/AboutHeading.png";
-import aasImg from "../../assets/Images/AboutHeading.png";
+import mfaImg from "../../assets/Images/AboutHeading.Webp";
+import maImg from "../../assets/Images/AboutHeading.Webp";
+import baImg from "../../assets/Images/AboutHeading.Webp";
+import bfaImg from "../../assets/Images/AboutHeading.Webp";
+import aasImg from "../../assets/Images/AboutHeading.Webp";
 
 const degreePrograms = [
   {

@@ -1,12 +1,26 @@
 import React from 'react';
+import ourfaculty1 from '../../assets/Images/ourfaculty1.png';
+import ourfaculty2 from '../../assets/Images/ourfaculty2.png';
 
 const Faculty = () => {
-    // It's often better to move these styles to a separate CSS file
-    // and import it, but for a self-contained component, this works.
+    const facultyData = [
+        {
+            name: "Andrea Swift",
+            title: "",
+            imgSrc: ourfaculty1,
+        },
+        {
+            name: "Edward Timpe",
+            title: "Co-Chair of Film Arts Department",
+            imgSrc: ourfaculty2,
+        },
+    ];
+
     const styles = `
         .faculty-card {
             position: relative;
             overflow: hidden;
+            border: 2px solid #00adee;
         }
         .faculty-info {
             position: absolute;
@@ -16,13 +30,16 @@ const Faculty = () => {
             background-color: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 1rem;
+            border-top: 2px solid #00adee;
         }
         .faculty-info .name {
             font-weight: bold;
             font-size: 1.125rem;
+            text-align: center;
         }
         .faculty-info .title {
             font-size: 0.875rem;
+            text-align: center;
         }
         .star {
             position: absolute;
@@ -39,6 +56,15 @@ const Faculty = () => {
             justify-content: center;
             align-items: center;
             height: 100%;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .more-card:hover {
+            background-color: #00adee;
+            color: white;
+        }
+        .more-card:hover .arrow-icon {
+            border-color: white;
+            color: white;
         }
         .arrow-icon {
             border: 2px solid #00adee;
@@ -51,15 +77,16 @@ const Faculty = () => {
             color: #00adee;
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
+            transition: border-color 0.3s, color 0.3s;
         }
     `;
 
     return (
         <>
             <style>{styles}</style>
-            <div className="bg-white font-sans">
-                <div className="container mx-auto p-8">
-                    <div className="max-w-4xl">
+            <div className="bg-white font-sans py-8">
+                <div className="container mx-auto px-4 sm:px-8">
+                    <div className="max-w-4xl mb-8">
                         <h1 className="text-4xl font-light text-gray-800 relative pl-4">
                             <span className="absolute left-0 top-0 bottom-0 w-1 bg-blue-400"></span>
                             FILM <br /> SCHOOL FACULTY
@@ -69,36 +96,26 @@ const Faculty = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                        {/* Andrea Swift */}
-                        <div className="faculty-card border-2 border-blue-400">
-                            <img src="https://i.imgur.com/K91nL3z.png" alt="Andrea Swift" className="w-full h-full object-cover" />
-                            <div className="faculty-info border-t-2 border-blue-400">
-                                <div className="star">&#9733;</div>
-                                <p className="name text-center">Andrea Swift</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {facultyData.map((faculty, index) => (
+                            <div key={index} className="faculty-card">
+                                <img src={faculty.imgSrc} alt={faculty.name} className="w-full h-full object-cover" />
+                                <div className="faculty-info">
+                                    <div className="star">&#9733;</div>
+                                    <p className="name">{faculty.name}</p>
+                                    {faculty.title && <p className="title">{faculty.title}</p>}
+                                </div>
                             </div>
-                        </div>
+                        ))}
 
-                        {/* Edward Timpe */}
-                        <div className="faculty-card border-2 border-blue-400">
-                            <img src="https://i.imgur.com/kSMCGjY.png" alt="Edward Timpe" className="w-full h-full object-cover" />
-                            <div className="faculty-info border-t-2 border-blue-400">
-                                <div className="star">&#9733;</div>
-                                <p className="name text-center">Edward Timpe</p>
-                                <p className="title text-center">Co-Chair of Film Arts Department</p>
-                            </div>
-                        </div>
-
-                        {/* More */}
                         <div className="more-card">
                             <div className="arrow-icon">
                                 <span>&#x2197;</span>
                             </div>
-                            <p className="text-gray-800 text-lg">More</p>
+                            <p className="text-lg">More</p>
                         </div>
                     </div>
                 </div>
-                
             </div>
         </>
     );

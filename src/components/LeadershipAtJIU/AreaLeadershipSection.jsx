@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AlumniExplore01 from '../../assets/Images/AlumniExplore01.jpeg';
+import AlumniExplore01 from '../../assets/Images/AlumniExplore01.Webp';
 import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
 import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
 import AlumniExplore04 from '../../assets/Images/AlumniExplore03.jpeg';

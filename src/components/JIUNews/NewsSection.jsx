@@ -1,8 +1,8 @@
 import React from "react";
-import image1 from "../../assets/Images/AboutHeading.png";
-import image2 from "../../assets/Images/AboutHeading.png";  
-import image3 from "../../assets/Images/AboutHeading.png"; 
-import image4 from "../../assets/Images/AboutHeading.png"; 
+import image1 from "../../assets/Images/AboutHeading.Webp";
+import image2 from "../../assets/Images/AboutHeading.Webp";  
+import image3 from "../../assets/Images/AboutHeading.Webp"; 
+import image4 from "../../assets/Images/AboutHeading.Webp"; 
 
 const articles = [
   {

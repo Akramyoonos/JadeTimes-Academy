@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AboutWelcome from '../../assets/Images/AboutWelcome.jpeg';
+import AboutWelcome from '../../assets/Images/AboutWelcome.Webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faQuoteLeft, faChevronDown, faBullseye, faGraduationCap, faClipboardList } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';

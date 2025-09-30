@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutHeading from "../../assets/Images/AboutHeading.png";
+import AboutHeading from "../../assets/Images/AboutHeading.Webp";
 
 
 const Heading = () => {

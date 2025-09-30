@@ -1,9 +1,20 @@
 import React from 'react';
+import Icon1 from '../../assets/Images/Icon1.webp';
+import Icon2 from '../../assets/Images/Icon2.webp';
+import Icon3 from '../../assets/Images/Icon3.webp';
+import Icon4 from '../../assets/Images/Icon4.webp';
+import Icon5 from '../../assets/Images/Icon5.webp';
+import Icon6 from '../../assets/Images/Icon6.webp';
+import Icon7 from '../../assets/Images/Icon7.webp';
+import Icon8 from '../../assets/Images/Icon8.webp';
+import Icon9 from '../../assets/Images/Icon9.webp';
+import Icon10 from '../../assets/Images/Icon10.webp';
+import AboutHeading from '../../assets/Images/AboutHeading.webp';
 
 const Spotlight = () => {
   return (
     <div className="bg-white font-sans">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-34 py-12">
         <div className="flex items-center mb-8">
           <div className="w-1 bg-cyan-400 h-16 mr-4"></div>
           <h1 className="text-4xl font-light text-gray-800 tracking-wider">
@@ -16,22 +27,22 @@ const Spotlight = () => {
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center mb-16">
-          <img src="https://i.imgur.com/rS25a5B.png" alt="Nickelodeon" className="grayscale" />
-          <img src="https://i.imgur.com/v2xN8sH.png" alt="ABC" className="grayscale" />
-          <img src="https://i.imgur.com/uI9vC5P.png" alt="AMC" className="grayscale" />
-          <img src="https://i.imgur.com/cQ0X6x0.png" alt="OCBS" className="grayscale" />
-          <img src="https://i.imgur.com/2Y4zX1M.png" alt="Disney" className="grayscale" />
-          <img src="https://i.imgur.com/rN9zQ2D.png" alt="HBO" className="grayscale" />
-          <img src="https://i.imgur.com/J8b0y3t.png" alt="Magnolia Pictures" className="grayscale" />
-          <img src="https://i.imgur.com/h5T2e6F.png" alt="NBC" className="grayscale" />
-          <img src="https://i.imgur.com/u1w5o4N.png" alt="New Line Cinema" className="grayscale" />
-          <img src="https://i.imgur.com/4S9E9pP.png" alt="Syfy" className="grayscale" />
+          <img src={Icon1} alt="Nickelodeon" className="grayscale" />
+          <img src={Icon2} alt="ABC" className="grayscale" />
+          <img src={Icon3} alt="AMC" className="grayscale" />
+          <img src={Icon4} alt="OCBS" className="grayscale" />
+          <img src={Icon5} alt="Disney" className="grayscale" />
+          <img src={Icon6} alt="HBO" className="grayscale" />
+          <img src={Icon7} alt="Magnolia Pictures" className="grayscale" />
+          <img src={Icon8} alt="NBC" className="grayscale" />
+          <img src={Icon9} alt="New Line Cinema" className="grayscale" />
+          <img src={Icon10} alt="Syfy" className="grayscale" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="relative overflow-hidden">
-            <img src="https://i.imgur.com/5uR3F3k.png" alt="Documentary still" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-8 text-white">
+            <img src={AboutHeading} alt="Documentary still" className="w-full h-full object-cover" />
+            <div className="absolute inset-0  bg-opacity-50 flex flex-col justify-end p-8 text-white">
               <p className="text-xs tracking-widest">
                 FILMMAKING, FILM, FILM FESTIVAL HIGHLIGHTS, STUDENT & ALUMNI SPOTLIGHTS, FILM FESTIVALS
               </p>
@@ -52,8 +63,8 @@ const Spotlight = () => {
             </div>
           </div>
           <div className="relative overflow-hidden">
-            <img src="https://i.imgur.com/8Q9r8gK.png" alt="Filmmaker with camera" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-end p-8 text-white">
+            <img src={AboutHeading} alt="Filmmaker with camera" className="w-full h-full object-cover" />
+            <div className="absolute inset-0  bg-opacity-50 flex flex-col justify-end p-8 text-white">
               <p className="text-xs tracking-widest">FILMMAKING</p>
               <h2 className="text-2xl font-semibold mt-2">Student Showcase</h2>
               <div className="absolute bottom-8 right-8 w-12 h-12 border-2 border-cyan-400 rounded-full flex items-center justify-center">

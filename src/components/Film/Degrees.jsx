@@ -1,42 +1,48 @@
 import React from 'react';
+import GraduateDegree01 from '../../assets/Images/GraduateDegree01.jpeg';
+import GraduateDegree02 from '../../assets/Images/GraduateDegree02.jpeg';
+import undergraduateDegree01 from '../../assets/Images/undergraduateDegree01.jpeg';
+import undergraduateDegree02 from '../../assets/Images/undergraduateDegree02.jpeg';
+import undergraduateDegree03 from '../../assets/Images/undergraduateDegree03.jpeg';
+import onlineDegreeImage from '../../assets/Images/onlineDegreeImage.jpeg';
 
 // Data for the degree programs
 const degreePrograms = [
     {
         title: "MASTER OF FINE ARTS (MFA) IN FILMMAKING",
-        imageUrl: "../",
+        imageUrl: GraduateDegree01,
         altText: "A woman operating a large film camera."
     },
     {
         title: "MASTER OF ARTS (MA) IN FILMMAKING AND MEDIA PRODUCTION",
-        imageUrl: "https://i.imgur.com/kS9h1pD.jpeg",
+        imageUrl: GraduateDegree02,
         altText: "A man in a denim jacket operating a film camera on a tripod in a smoky room."
     },
     {
         title: "BACHELOR OF FINE ARTS (BFA) IN FILMMAKING",
-        imageUrl: "https://i.imgur.com/xO4sU3R.jpeg",
+        imageUrl: undergraduateDegree01,
         altText: "A person with two-tone hair wearing a striped shirt operating a camera."
     },
     {
         title: "BACHELOR OF FINE ARTS (BFA) IN ENTERTAINMENT MEDIA",
-        imageUrl: "https://i.imgur.com/qE29a2l.jpeg",
+        imageUrl: undergraduateDegree02,
         altText: "Silhouettes of a film crew in a dimly lit room with a boom mic."
     },
     {
         title: "BACHELOR OF ARTS (BA) IN MEDIA STUDIES",
-        imageUrl: "https://i.imgur.com/9C0F1g5.jpeg",
+        imageUrl: undergraduateDegree03,
         altText: "A man in a white t-shirt looking intently at the viewfinder of a RED camera."
     },
     {
         title: "ASSOCIATE OF FINE ARTS (AFA) IN FILMMAKING",
-        imageUrl: "https://i.imgur.com/P086p0h.jpeg",
+        imageUrl: undergraduateDegree01,
         altText: "A smiling blonde woman holding a camera rig with colorful lights in the background."
     },
 ];
 
 const onlineDegreeProgram = {
     title: "ONLINE BACHELOR OF FINE ARTS DEGREE IN FILM AND CONTENT CREATION",
-    imageUrl: "https://i.imgur.com/3Z7wV3g.jpeg",
+    imageUrl: onlineDegreeImage,
     altText: "A person from behind operating a camera with green lighting."
 };
 
@@ -59,7 +65,7 @@ const DegreeCard = ({ title, imageUrl, altText }) => (
 const Degrees = () => {
     return (
         <div className=" text-white">
-            <div className="container mx-auto px-4 py-12">
+            <div className="container mx-auto px-34 py-12">
 
                 <div className="flex items-center mb-8">
                     <div className="w-1.5 h-16 bg-yellow-400 mr-4"></div>
@@ -81,7 +87,7 @@ const Degrees = () => {
                         </p>
                     </div>
                 </div>
-
+            </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0.5">
                     {degreePrograms.map((degree) => (
                         <DegreeCard
@@ -102,7 +108,7 @@ const Degrees = () => {
                 </div>
 
             </div>
-        </div>
+        
     );
 };
 

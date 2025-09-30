@@ -1,9 +1,12 @@
 import React from 'react';
+import AlumniExplore01 from '../../assets/Images/AlumniExplore01.webp';
+import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
+import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
 
 const Alumni = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-34 py-8">
         <div className="flex items-center mb-8">
           <div className="w-1.5 h-16 bg-purple-600 mr-4"></div>
           <h1 className="text-4xl font-light tracking-widest text-gray-800">
@@ -24,11 +27,11 @@ const Alumni = () => {
           {/* Damon Wayans Card */}
           <div className="relative group">
             <img
-              src="https://www.themoviedb.org/t/p/w500/A1dFzHe3N0dJ8R8ihF9L3EwDvtS.jpg"
+              src={AlumniExplore01}
               alt="Damon Wayans"
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end">
+            <div className="absolute inset-0  bg-opacity-50 flex items-end">
               <div className="text-white p-4 w-full">
                 <div className="relative border-2 border-blue-400 p-4">
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 px-2">
@@ -50,11 +53,11 @@ const Alumni = () => {
           {/* Bill Hader Card */}
           <div className="relative group">
             <img
-              src="https://www.themoviedb.org/t/p/w500/f30T8a9wUnd2vBNsU4i8a1p2pL.jpg"
+              src={AlumniExplore02}
               alt="Bill Hader"
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end">
+            <div className="absolute inset-0  bg-opacity-50 flex items-end">
               <div className="text-white p-4 w-full">
                 <div className="relative border-2 border-blue-400 p-4">
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 px-2">
@@ -76,11 +79,11 @@ const Alumni = () => {
           {/* Issa Rae Card */}
           <div className="relative group">
             <img
-              src="https://www.themoviedb.org/t/p/w500/y4flDzzu2EVLQg4Ihij8iIuxO3g.jpg"
+              src={AlumniExplore03}
               alt="Issa Rae"
               className="w-full h-auto"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-end">
+            <div className="absolute inset-0  bg-opacity-50 flex items-end">
               <div className="text-white p-4 w-full">
                 <div className="relative border-2 border-blue-400 p-4">
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 px-2">

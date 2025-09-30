@@ -1,25 +1,29 @@
 import React from 'react';
+import Campus01 from '../../assets/Images/Campus01.jpeg';
+import Campus02 from '../../assets/Images/Campus02.jpeg';
+import Campus03 from '../../assets/Images/Campus03.jpeg';
+import LocationMobile from '../../assets/Images/Location-mobile.jpg';
 
 // Data for the satellite locations. This makes the component cleaner and easier to update.
 const locations = [
   {
     name: 'NYFA Kazakhstan',
-    imageSrc: 'https://storage.googleapis.com/gemini-prod/images/40551c5f-3ec2-4d2d-a197-e85dfba6019a',
+    imageSrc: Campus01,
     altText: 'The entrance to the NYFA Kazakhstan campus building.'
   },
   {
     name: 'NYFA at Harvard University',
-    imageSrc: 'https://storage.googleapis.com/gemini-prod/images/49339e08-9993-41bb-a558-8b965f33f00f',
+    imageSrc: Campus02,
     altText: 'Students walking on the Harvard University campus near a brick building.'
   },
   {
     name: 'Paris, France',
-    imageSrc: 'https://storage.googleapis.com/gemini-prod/images/d31dd3b2-601e-4581-9b6d-495e9ff0eb0b',
+    imageSrc: Campus03,
     altText: 'A group of people taking a picture with the Eiffel Tower in the background.'
   },
   {
     name: 'Beijing and Greater China',
-    imageSrc: 'https://storage.googleapis.com/gemini-prod/images/4090b4d4-53c8-4eb4-b6c8-f86a0149bbd5',
+    imageSrc: LocationMobile,
     altText: 'A film crew recording a group of people in traditional clothing in a park in Beijing.'
   }
 ];
@@ -27,7 +31,7 @@ const locations = [
 // The React component
 const Locations = () => {
   return (
-    <div className="bg-white p-8">
+    <div className="bg-white px-34 p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center mb-8">
           <div className="w-1 h-12 bg-purple-600 mr-4"></div>

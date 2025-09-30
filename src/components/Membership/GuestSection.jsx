@@ -2,7 +2,7 @@ import React from "react";
 import MicIcon from "../../assets/Images/icon-guest-speakers-m.png";
 import AdamDriver from "../../assets/Images/AlumniExplore02.jpeg";
 import AubreyPlaza from "../../assets/Images/AlumniExplore03.jpeg";
-import BillHaider from "../../assets/Images/AlumniExplore01.jpeg";
+import BillHaider from "../../assets/Images/AlumniExplore01.Webp";
 import StevenSpielberg from "../../assets/Images/AlumniHeadingImage.jpeg";
 
 const GuestSection = () => {

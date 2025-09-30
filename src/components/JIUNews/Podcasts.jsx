@@ -1,10 +1,10 @@
 
 import React from "react";
 
-import Podcast1 from "../../assets/Images/AboutHeading.png";
-import Podcast2 from "../../assets/Images/AboutHeading.png";
-import Podcast3  from "../../assets/Images/AboutHeading.png";
-import Podcast4  from "../../assets/Images/AboutHeading.png";
+import Podcast1 from "../../assets/Images/AboutHeading.Webp";
+import Podcast2 from "../../assets/Images/AboutHeading.Webp";
+import Podcast3  from "../../assets/Images/AboutHeading.Webp";
+import Podcast4  from "../../assets/Images/AboutHeading.Webp";
 
 const podcasts = [
   {

@@ -1,9 +1,9 @@
 
 import React from "react";
-import video1 from "../../assets/Images/AboutHeading.png";
-import video2 from "../../assets/Images/AboutHeading.png";
-import video3 from "../../assets/Images/AboutHeading.png";
-import video4 from "../../assets/Images/AboutHeading.png";
+import video1 from "../../assets/Images/AboutHeading.Webp";
+import video2 from "../../assets/Images/AboutHeading.Webp";
+import video3 from "../../assets/Images/AboutHeading.Webp";
+import video4 from "../../assets/Images/AboutHeading.Webp";
 
 const videos = [
   {

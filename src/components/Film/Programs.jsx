@@ -1,9 +1,11 @@
 import React from 'react';
+import undergraduateDegree01 from '../../assets/Images/undergraduateDegree01.jpeg';
+import undergraduateDegree02 from '../../assets/Images/undergraduateDegree02.jpeg';
 
 const Programs = () => {
     return (
         <div className="bg-white">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-34 py-12">
                 <div className="flex items-center mb-8">
                     <div className="w-1 bg-blue-500 h-16 mr-4"></div>
                     <h1 className="text-4xl font-bold text-gray-800 tracking-wider">
@@ -19,11 +21,11 @@ const Programs = () => {
                         Designed for aspiring filmmakers who wish to apply their learned and developed skills as soon as possible, these full-time programs offer students the opportunity to create a variety of original films, gain experience on-set in various roles, and build fundamental knowledge in the craft of filmmaking.
                     </p>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="relative group">
-                        <img src="https://images.unsplash.com/photo-1578652939228-26f54b2b0a9d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Man operating a camera with dramatic lighting" className="w-full h-auto object-cover" />
-                        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end p-8">
+                        <img src={undergraduateDegree01} alt="Man operating a camera with dramatic lighting" className="w-full h-auto object-cover" />
+                        <div className="absolute inset-0  bg-opacity-40 flex items-end p-8">
                             <h2 className="text-white text-2xl font-semibold">2-YEAR FILMMAKING PROGRAM</h2>
                         </div>
                         <a href="#" className="absolute bottom-8 right-8 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl transform transition-transform duration-300 group-hover:scale-110">
@@ -33,8 +35,8 @@ const Programs = () => {
                         </a>
                     </div>
                     <div className="relative group">
-                        <img src="https://images.unsplash.com/photo-1604900984852-251f28746c10?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Filming a scene with a professional camera and colorful smoke" className="w-full h-auto object-cover" />
-                        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end p-8">
+                        <img src={undergraduateDegree02} alt="Filming a scene with a professional camera and colorful smoke" className="w-full h-auto object-cover" />
+                        <div className="absolute inset-0  bg-opacity-40 flex items-end p-8">
                             <h2 className="text-white text-2xl font-semibold">1-YEAR FILMMAKING PROGRAM</h2>
                         </div>
                         <a href="#" className="absolute bottom-8 right-8 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl transform transition-transform duration-300 group-hover:scale-110">
@@ -44,7 +46,7 @@ const Programs = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            
         </div>
     );
 };

@@ -1,25 +1,29 @@
 import React from 'react';
+import Campus01 from '../../assets/Images/Campus01.jpeg';
+import Campus02 from '../../assets/Images/Campus02.jpeg';
+import Campus03 from '../../assets/Images/Campus03.jpeg';
+import onlineDegreeImage from '../../assets/Images/onlineDegreeImage.jpeg';
 
 // Data for the campuses
 const campusData = [
   {
     name: 'NYFA New York',
-    imageUrl: 'https://s3.amazonaws.com/uploads.static.wearejh.com/uploads/2021/08/04104250/NYFA-New-York-1.jpg',
+    imageUrl: Campus01,
     altText: 'NYFA New York Campus',
   },
   {
     name: 'NYFA Los Angeles',
-    imageUrl: 'https://www.nyfa.edu/student-resources/wp-content/uploads/2015/05/St.-Ideal-Apartments.jpg',
+    imageUrl: Campus02,
     altText: 'NYFA Los Angeles Campus',
   },
   {
     name: 'NYFA Florence',
-    imageUrl: 'https://www.nyfa.edu/study-abroad/images/florence-hero-1920x1080.jpg',
+    imageUrl: Campus03,
     altText: 'NYFA Florence Campus',
   },
   {
     name: 'Online',
-    imageUrl: 'https://www.nyfa.edu/online-learning/images/nyfa-online-courses.jpg',
+    imageUrl: onlineDegreeImage,
     altText: 'Online Learning with a laptop and a drawing tablet',
   },
 ];
@@ -41,7 +45,7 @@ const CampusCard = ({ name, imageUrl, altText }) => (
 const Campuses = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-34 py-12">
         <div className="flex items-center mb-8">
           <div className="w-1 h-10 bg-yellow-400 mr-4"></div>
           <h2 className="text-3xl font-light tracking-widest text-gray-800">

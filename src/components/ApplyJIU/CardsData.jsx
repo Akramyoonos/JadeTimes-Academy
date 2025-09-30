@@ -3,12 +3,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-import programImg1 from "../../assets/Images/AboutHeading.png";
-import programImg2 from "../../assets/Images/AboutHeading.png";
-import programImg3 from "../../assets/Images/AboutHeading.png";
-import programImg4 from "../../assets/Images/AboutHeading.png";
-import programImg5 from "../../assets/Images/AboutHeading.png";
-import programImg6 from "../../assets/Images/AboutHeading.png";
+import programImg1 from "../../assets/Images/AboutHeading.Webp";
+import programImg2 from "../../assets/Images/AboutHeading.Webp";
+import programImg3 from "../../assets/Images/AboutHeading.Webp";
+import programImg4 from "../../assets/Images/AboutHeading.Webp";
+import programImg5 from "../../assets/Images/AboutHeading.Webp";
+import programImg6 from "../../assets/Images/AboutHeading.Webp";
 
 
 // ✅ Array of card content

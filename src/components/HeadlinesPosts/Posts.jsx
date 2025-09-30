@@ -5,9 +5,9 @@ import { faFacebookF, faTwitter, faYoutube, faInstagram, faLinkedinIn, faPintere
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 // Import local images
-import AboutHeading from '../../assets/Images/AboutHeading.png';
-import AboutWelcome from '../../assets/Images/AboutWelcome.jpeg';
-import AlumniExplore01 from '../../assets/Images/AlumniExplore01.jpeg';
+import AboutHeading from '../../assets/Images/AboutHeading.Webp';
+import AboutWelcome from '../../assets/Images/AboutWelcome.Webp';
+import AlumniExplore01 from '../../assets/Images/AlumniExplore01.Webp';
 import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
 import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
 import BlogHeadingImg from '../../assets/Images/BlogHeadingImg.Webp';

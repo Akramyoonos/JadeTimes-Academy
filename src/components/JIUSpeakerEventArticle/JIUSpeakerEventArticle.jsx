@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutHeading from '../../assets/Images/AboutHeading.png';
+import aboutHeading from '../../assets/Images/AboutHeading.Webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faLink } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faSnapchatGhost, faPinterest } from '@fortawesome/free-brands-svg-icons';
