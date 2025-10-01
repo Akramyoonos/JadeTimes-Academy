@@ -15,8 +15,8 @@ import Spotlight10 from '../../assets/Images/Spotlight 06.jpeg';
 
 // CHANGE 1: Created a new Card component to match the style in the image.
 // ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
-const InfoCard = ({ src, title, description }) => (
-  <div className="w-[90vw] max-w-xs md:w-96 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
+const InfoCard = ({ src, title, description, href }) => (
+  <a href={href} className="w-[90vw] max-w-xs md:w-96 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
     <div className="overflow-hidden">
       <img
         src={src}
@@ -28,7 +28,7 @@ const InfoCard = ({ src, title, description }) => (
       <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
     </div>
-  </div>
+  </a>
 );
 
 
@@ -106,42 +106,50 @@ const Spotlight = () => {
     {
       src: NycImage,
       title: "JOIN OUR SEPTEMBER 20 OPEN HOUSE IN NYC",
-      description: "Experience JIU in the heart of NYC! Join us for an unforgettable day at the New York Film Academy Open House in New York City, located at our stunning NYC campus!"
+      description: "Experience JIU in the heart of NYC! Join us for an unforgettable day at the New York Film Academy Open House in New York City, located at our stunning NYC campus!",
+      href: "/cards-data1/"
     },
     {
       src: LaImage,
       title: "JOIN OUR SEPTEMBER 20 OPEN HOUSE IN LA",
-      description: "Join us in person for an unforgettable day at the JIU Los Angeles Open House. The LA campus is located in the entertainment capital of world, in the heart of the historic media district of Burbank."
+      description: "Join us in person for an unforgettable day at the JIU Los Angeles Open House. The LA campus is located in the entertainment capital of world, in the heart of the historic media district of Burbank.",
+      href: "/cards-data2/"
     },
     {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!",
+      href: "/cards-data3/"
     },
     {
       src: VirtualImage,
       title: "OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS",
-      description: "JIU holds monthly open houses as well as a number of online virtual info sessions and events."
+      description: "JIU holds monthly open houses as well as a number of online virtual info sessions and events.",
+      href: "/cards-data4/"
     },
         {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!",
+      href: "/cards-data5/"
     },
         {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!",
+      href: "/cards-data6/"
     },
         {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!",
+      href: "/cards-data7/"
     },
         {
       src: YouthImage,
       title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!"
+      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!",
+      href: "/cards-data8/"
     },
   ];
 
@@ -224,7 +232,7 @@ const Spotlight = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
-                <h3 className="text-white text-lg font-semibold tracking-wider">JADETIMES JOURNALS</h3>
+                <h3 className="text-white text-lg font-semibold tracking-wider">JADE TIMES JOURNALS</h3>
               </div>
             </div>
             <div className="absolute bottom-6 right-6 text-white text-2xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -240,7 +248,7 @@ const Spotlight = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
-                <h3 className="text-white text-lg font-semibold tracking-wider">JADETIMES CONFERENCES</h3>
+                <h3 className="text-white text-lg font-semibold tracking-wider">JADE TIMES CONFERENCES</h3>
               </div>
             </div>
             <div className="absolute bottom-6 right-6 text-white text-2xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">

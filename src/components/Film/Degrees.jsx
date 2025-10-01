@@ -5,6 +5,8 @@ import undergraduateDegree01 from '../../assets/Images/undergraduateDegree01.jpe
 import undergraduateDegree02 from '../../assets/Images/undergraduateDegree02.jpeg';
 import undergraduateDegree03 from '../../assets/Images/undergraduateDegree03.jpeg';
 import onlineDegreeImage from '../../assets/Images/onlineDegreeImage.jpeg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 // Data for the degree programs
 const degreePrograms = [
@@ -48,13 +50,13 @@ const onlineDegreeProgram = {
 
 // Reusable component for each degree card
 const DegreeCard = ({ title, imageUrl, altText }) => (
-    <div className="relative group">
-        <img src={imageUrl} alt={altText} className="w-full h-full object-cover" />
+    <div className="relative group overflow-hidden">
+        <img src={imageUrl} alt={altText} className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
         <div className="absolute inset-0  bg-opacity-50 flex items-end p-6">
             <div>
                 <h2 className="text-xl font-semibold">{title}</h2>
                 <div className="absolute top-4 right-4 w-10 h-10 border-2 border-cyan-400 rounded-full flex items-center justify-center text-cyan-400 text-2xl font-thin">
-                    <span>&#x2197;</span>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </div>
             </div>
         </div>

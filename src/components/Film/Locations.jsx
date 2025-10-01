@@ -42,12 +42,12 @@ const Locations = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {locations.map((location, index) => (
-            <div key={index} className="text-center">
-              <div className="relative">
-                <img 
-                  src={location.imageSrc} 
-                  alt={location.altText} 
-                  className="w-full h-48 object-cover" 
+            <div key={index} className="text-center group">
+              <div className="relative overflow-hidden">
+                <img
+                  src={location.imageSrc}
+                  alt={location.altText}
+                  className="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                 />
                 <div className="absolute top-2 left-2 bg-black bg-opacity-75 text-white text-xs font-semibold px-2 py-1 tracking-wider">
                   SATELLITE LOCATION

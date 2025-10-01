@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import AlumniExplore01 from '../../assets/Images/AlumniExplore01.webp';
 import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
 import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
@@ -25,102 +27,76 @@ const Alumni = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Damon Wayans Card */}
-          <div className="relative group">
+          <a href="#" className="relative group overflow-hidden h-96 block">
             <img
               src={AlumniExplore01}
               alt="Damon Wayans"
-              className="w-full h-auto"
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
-            <div className="absolute inset-0  bg-opacity-50 flex items-end">
+            <div className="absolute inset-0  bg-opacity-50 group-hover:bg-opacity-75 transition-all duration-300 flex items-end">
               <div className="text-white p-4 w-full">
                 <div className="relative border-2 border-blue-400 p-4">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 px-2">
-                    <svg
-                      className="w-6 h-6 text-blue-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 px-2">
+                    <FontAwesomeIcon icon={faStar} className="w-6 h-6 text-blue-400" />
                   </div>
                   <p className="text-xl font-bold">Damon Wayans</p>
                   <p className="text-sm">Writer | Actor | Producer</p>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
           {/* Bill Hader Card */}
-          <div className="relative group">
+          <a href="#" className="relative group overflow-hidden h-96 block">
             <img
               src={AlumniExplore02}
               alt="Bill Hader"
-              className="w-full h-auto"
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
-            <div className="absolute inset-0  bg-opacity-50 flex items-end">
+            <div className="absolute inset-0 bg-opacity-50 group-hover:bg-opacity-75 transition-all duration-300 flex items-end">
               <div className="text-white p-4 w-full">
                 <div className="relative border-2 border-blue-400 p-4">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 px-2">
-                    <svg
-                      className="w-6 h-6 text-blue-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2  px-2">
+                    <FontAwesomeIcon icon={faStar} className="w-6 h-6 text-blue-400" />
                   </div>
                   <p className="text-xl font-bold">Bill Hader</p>
                   <p className="text-sm">Actor | Comedian | Writer</p>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
           {/* Issa Rae Card */}
-          <div className="relative group">
+          <a href="#" className="relative group overflow-hidden h-96 block">
             <img
               src={AlumniExplore03}
               alt="Issa Rae"
-              className="w-full h-auto"
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
-            <div className="absolute inset-0  bg-opacity-50 flex items-end">
+            <div className="absolute inset-0  bg-opacity-50 group-hover:bg-opacity-75 transition-all duration-300 flex items-end">
               <div className="text-white p-4 w-full">
                 <div className="relative border-2 border-blue-400 p-4">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-800 px-2">
-                    <svg
-                      className="w-6 h-6 text-blue-400"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                    </svg>
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2  px-2">
+                    <FontAwesomeIcon icon={faStar} className="w-6 h-6 text-blue-400" />
                   </div>
                   <p className="text-xl font-bold">Issa Rae</p>
                   <p className="text-sm">Actor | Producer</p>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
           {/* More Card */}
-          <div className="relative group border-2 border-blue-400 flex flex-col items-center justify-center min-h-[280px]">
-            <div className="w-12 h-12 border-2 border-blue-400 rounded-full flex items-center justify-center mb-4">
-              <svg
-                className="w-6 h-6 text-blue-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </div>
-            <p className="text-lg text-gray-700">More</p>
-          </div>
+          <a href="" className="block w-70 h-96">
+                                  <div className="relative w-full h-full border-2 border-blue-500 flex items-center justify-center group">
+                                      <div className="text-center">
+                                          <div className="w-12 h-12 rounded-full border-2 border-blue-500 flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110">
+                                              <FontAwesomeIcon icon={faArrowRight} className="text-blue-500 text-2xl" />
+                                          </div>
+                                          <p className="text-lg font-semibold text-gray-800">More</p>
+                                      </div>
+                                  </div>
+                              </a>
         </div>
       </div>
     </div>

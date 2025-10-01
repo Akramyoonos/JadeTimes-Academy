@@ -28,11 +28,15 @@ const campusData = [
   },
 ];
 
-// Campus Card Component for reusability
+// Campus Card Component for reusability with zooming hover effect
 const CampusCard = ({ name, imageUrl, altText }) => (
-  <div className="campus-card">
-    <div className="relative">
-      <img src={imageUrl} alt={altText} className="w-full h-48 object-cover" />
+  <div className="campus-card group">
+    <div className="relative overflow-hidden">
+      <img
+        src={imageUrl}
+        alt={altText}
+        className="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+      />
       <div className="absolute top-2 left-2 bg-black text-white text-xs font-bold px-2 py-1 tracking-wider">
         CAMPUS
       </div>

@@ -56,6 +56,14 @@ import Disability_Page from './pages/Disability_Page';
 import CampusSafety_Page from './pages/CampusSafety_Page';
 import ProgramDatesAndTuition_Page from './pages/ProgramDatesAndTuition_Page';
 import Film_Page from './pages/Film_Page';
+import CardsData1_Page from './pages/CardsData1_Page';
+import CardsData2_Page from './pages/CardsData2_Page';
+import CardsData3_Page from './pages/CardsData3_Page';
+import CardsData4_Page from './pages/CardsData4_Page';
+import CardsData5_Page from './pages/CardsData5_Page';
+import CardsData6_Page from './pages/CardsData6_Page';
+import CardsData7_Page from './pages/CardsData7_Page';
+import CardsData8_Page from './pages/CardsData8_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -138,7 +146,7 @@ function AppInner() {
             <Route path="/JIU-in-the-news/*"       element={<JIUNews_Page />} />
             <Route path="/jobs-at-nyfa/*"       element={<JobsAtJIU_Page />} />
             <Route path="/presidents-page/"       element={<PresidentPage />} />
-            <Route path="/affiliations//*"       element={<Affiliations_Page />} />
+            <Route path="/affiliations/*"       element={<Affiliations_Page />} />
             <Route path="/reviews/page/*"       element={<Reviews_Page />} />
             <Route path="/JIUSpeakerEventArticle/" element={<JIUSpeakerEventArticle_Page />} />
             <Route path="/JIU-PARTNERSHIPS/" element={<JIUPARTNERSHIPSPOSTS_Page />} />
@@ -150,6 +158,15 @@ function AppInner() {
             <Route path="/on-campus/campus-safety/" element={<CampusSafety_Page />} />
             <Route path="/program-dates-and-tuition/" element={<ProgramDatesAndTuition_Page />} />
             <Route path="/film/*" element={<Film_Page />} />
+            <Route path="/cards-data1/*" element={<CardsData1_Page />} />
+            <Route path="/cards-data2/*" element={<CardsData2_Page />} />
+            <Route path="/cards-data3/*" element={<CardsData3_Page />} />
+            <Route path="/cards-data4/*" element={<CardsData4_Page />} />
+            <Route path="/cards-data5/*" element={<CardsData5_Page />} />
+            <Route path="/cards-data6/*" element={<CardsData6_Page />} />
+            <Route path="/cards-data7/*" element={<CardsData7_Page />} />
+            <Route path="/cards-data8/*" element={<CardsData8_Page />} />
+            
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
         </Routes>
