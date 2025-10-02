@@ -103,13 +103,13 @@ const workshopsData = [
  */
 const WorkshopCard = ({ title, image, alt, gridSpan, href = "#" }) => {
   return (
-    <a href={href} className={`group h-64 block relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${gridSpan}`}>
+    <a href={href} className={`group h-64 block relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${gridSpan}`}>
       <img 
         src={image} 
         alt={alt} 
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-2500 ease-in-out group-hover:scale-130"
       />
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
       <div className="relative flex justify-between items-end h-full p-6 text-white">
         <h3 className="text-xl font-light uppercase tracking-wide whitespace-pre-line">{title}</h3>
         <div className="w-10 h-10 rounded-full border-2 border-cyan-400 flex items-center justify-center flex-shrink-0 ml-4">

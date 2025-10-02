@@ -35,11 +35,11 @@ const OnlineDegrees = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2000 group"
+            className="relative h-64 bg-cover bg-center  overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2500 group"
             style={{ backgroundImage: `url(${OnlineDegrees01})` }}
           >
-            <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white bg-opacity-10 backdrop-filter  border border-white border-opacity-20 rounded-lg">
+            <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white bg-opacity-10 backdrop-filter  border border-white border-opacity-20 ">
               <h2 className="text-xl font-bold">BACHELOR OF FINE ARTS DEGREE (BFA)</h2>
               <a
                 href="#"
@@ -59,11 +59,11 @@ const OnlineDegrees = () => {
           </div>
 
           <div
-            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2000 group"
+            className="relative h-64 bg-cover bg-center  overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2000 group"
             style={{ backgroundImage: `url(${OnlineDegrees02})` }}
           >
-            <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white bg-opacity-10 backdrop-filter  border border-white border-opacity-20 rounded-lg">
+            <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white bg-opacity-10 backdrop-filter  border border-white border-opacity-20 ">
               <h2 className="text-xl font-bold">BACHELOR OF ARTS DEGREE (BA)</h2>
               <a
                 href="#"
@@ -83,11 +83,11 @@ const OnlineDegrees = () => {
           </div>
 
           <div
-            className="relative h-64 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2000 group"
+            className="relative h-64 bg-cover bg-center  overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2000 group"
             style={{ backgroundImage: `url(${OnlineDegrees03})` }}
           >
-            <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white  bg-opacity-10 backdrop-filter  border border-white border-opacity-20 rounded-lg">
+            <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
+            <div className="absolute inset-0 flex flex-col justify-end p-6 text-white  bg-opacity-10 backdrop-filter  border border-white border-opacity-20 ">
               <h2 className="text-xl font-bold">ASSOCIATE OF FINE ARTS (AFA)</h2>
               <a
                 href="#"

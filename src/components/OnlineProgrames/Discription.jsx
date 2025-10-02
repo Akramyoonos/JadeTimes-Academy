@@ -30,24 +30,26 @@ const Discription = () => {
           </div>
 
           {/* Right Sidebar */}
-          <div className="w-full lg:w-1/3">
-            <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-200">
-              <h2 className="text-xl font-bold text-gray-900 pb-4 border-b-2 border-gray-100 tracking-wide">
+          <aside className="w-full lg:w-80 flex-shrink-0  mt-6 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="bg-gray-200 p-4 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold uppercase text-black">
                 RELATED LINKS
               </h2>
-              <div className="mt-6 space-y-4">
-                <a href="#" className="block text-gray-600 font-semibold transition-colors duration-300 hover:text-[#9b7f00] hover:underline">
-                  OPEN HOUSE
-                </a>
-                <a href="#" className="block text-gray-600 font-semibold transition-colors duration-300 hover:text-[#9b7f00] hover:underline">
-                  ACADEMIC CALENDAR
-                </a>
-                <a href="#" className="block text-gray-600 font-semibold transition-colors duration-300 hover:text-[#9b7f00] hover:underline">
-                  TUITION
-                </a>
-              </div>
             </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                Program Dates & Tuition
+              </a>
+            </nav>
           </div>
+        </aside>
 
         </div>
       </div>
