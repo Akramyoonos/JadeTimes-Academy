@@ -62,7 +62,7 @@ const FollowUs = () => {
               alt={image.alt}
               className="w-full h-full object-cover block transition-transform duration-2100 ease-in-out group-hover:scale-115"
             />
-
+            <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-700"></div>
             {/* Gradient Overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
 
