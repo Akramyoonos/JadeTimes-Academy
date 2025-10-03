@@ -1,81 +1,75 @@
 import React from 'react';
-import aboutHeading from '../../../assets/Images/AboutHeading.Webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faLink } from '@fortawesome/free-solid-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faSnapchatGhost, faPinterest } from '@fortawesome/free-brands-svg-icons';
 
 
 const CardsData2Article = () => {
-  const videoUrl = 'https://www.youtube.com/watch?v=FKz0Fnk_TRM';
-  const videoThumbnail = 'https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg';
-
-  const handlePlayClick = () => {
-    window.open(videoUrl, '_blank', 'noopener,noreferrer');
-  };
-
 
     return (
-        <div className=" font-sans ">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 ">
-                <article className= "">
-                    <figure className="mb-20 relative  overflow-hidden shadow-2xl group">
-              <img
-                alt="JadeTimes Academy"
-                className="w-full h-auto object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
-                src={videoThumbnail}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-all duration-300"></div>
-              <button
-                aria-label="Play video"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24  border-4 border-white flex items-center justify-center text-white text-4xl cursor-pointer bg-black/60 hover:bg-blue-600/80 transition-all duration-300 transform group-hover:scale-110 shadow-lg"
-                onClick={handlePlayClick}
-              >
-                <FontAwesomeIcon icon={faPlay} />
-              </button>
-            </figure>
-                    <div className="p-2 sm:p-2">
+        <div className="font-sans">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
+                <article className="">
 
+                    <div className="p-2 sm:p-2">
+                           {/* Articale */}
                         <main className="prose max-w-none text-gray-800 text-xl leading-relaxed">
-                            <p>
-                                In an inspiring and thought-provoking guest speaker event, renowned actor Andre Royo visited the New York Film Academy (NYFA) at the New York City campus to offer students and faculty insight into the world of acting, storytelling, and the entertainment industry. Best known for his compelling portrayal of Bubbles in the critically acclaimed HBO series <i>The Wire</i>, Royo's career spans a wide array of television and film roles including shows like <i>Empire</i>, <i>The Path</i>, and <i>How to Make It in America</i>. He is currently venturing into directing and producing.
-                            </p>
-                             <br />
-                            <p>
-                                During his visit, Royo discussed his journey in Hollywood and the experiences that have shaped his career with moderator Darren Dean, NYFA instructor and award-winning Producer, Writer, and Director. Royo talked candidly about his iconic role as Bubbles in <i>The Wire</i>, a character that has left an indelible mark on television history. Royo spoke passionately about the importance of portraying characters with depth, authenticity, and empathy, especially those who are often marginalized or overlooked in mainstream media.
-                            </p>
-                             <br />
-                            <p>
-                                <i>The Wire</i> became a show that helped break through stereotypes and reach a broader audience due to the empathetic and humanizing portrayals of the characters. Royo said that "It became a social message – if you care about your community, you care about politics, you care about the disenfranchised, then you had to watch <i>The Wire</i>… It became a social political show that was a must see for everybody.”
-                            </p>
-                             <br />
-                            <figure className="my-8">
-                                <img src={aboutHeading} alt="Andre Royo speaking at NYFA" className="w-full h-auto  shadow-md" />
-                                <figcaption className="text-center text-sm text-gray-500 mt-2">Andre Royo Q&A with faculty member Darren Dean</figcaption>
-                            </figure>
-                             <br />
-                            <p>
-                                NYFA students were able to ask questions and Royo took the time to offer invaluable advice to the next generation of aspiring filmmakers, actors, and storytellers. Royo encouraged students to take risks and step outside of their comfort zone. “The only way you learn is to not be afraid to fall. Go out there and leap and take chances,” he urged. He advised students that trusting your team, trusting the collaborative process, and being humble will lead you to become a great filmmaker. “You have to allow magic to happen and to trust your fellow artists.”
-                            </p>
-                             <br />
-                            <p>
-                                Andre Royo's guest speaker event at the New York Film Academy was a powerful reminder of the importance of authenticity, persistence, and passion in the world of entertainment. For NYFA students, it was an important opportunity to learn from one of the most respected actors of his generation.
-                            </p>
+                           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">The Story of Jadetimes: Empowering Research and Innovation</h1>
+    
+                            <p className="mt-8">Jadetimes began as a bold vision—to create a global platform where creativity, knowledge, and innovation could come together to shape the future. From its roots as a media and publishing initiative, Jadetimes has grown into a dynamic ecosystem that supports research, education, and international collaboration. Today, it stands not only as a media company but also as a trusted partner for scholars and professionals worldwide.</p>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Building Academic Foundations: Jadetimes Universal Journal</h2>
+                            <p>A major milestone in Jadetimes’ journey was the establishment of the Jadetimes Journal of Universal Studies (JJUS). Designed as an inclusive academic outlet, JJUS provides a transparent, peer-reviewed space for researchers across disciplines to share their findings with the world. The journal is committed to high ethical standards, diverse perspectives, and open access, ensuring that knowledge is not limited by borders.</p>
+                            <p>Through JJUS, researchers gain:</p>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li>A global platform to publish their work and reach international audiences.</li>
+                                <li>Credibility and recognition, backed by rigorous review processes.</li>
+                                <li>Support for interdisciplinary work, bridging fields such as media, communication, technology, social sciences, and the arts.</li>
+                            </ul>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Jadetimes International Conference 2025</h2>
+                            <p>Another landmark in Jadetimes’ history is the Jadetimes International Research Conference 2025, which became a hub for knowledge exchange and collaboration. The conference welcomed 65+ researchers from around the globe, each presenting original papers and engaging in dialogue with peers and industry leaders.</p>
+                            <p>The conference provided:</p>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li>Opportunities for networking among scholars, academics, and professionals.</li>
+                                <li>Exposure for emerging voices, especially young researchers aiming to make their mark.</li>
+                                <li>A stage for innovation, where new ideas and solutions were shared across disciplines.</li>
+                            </ul>
+                            <p>This event was not only about presentations—it was about building an international community that thrives on shared learning and collaborative growth.</p>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">A Continuing Journey</h2>
+                            <p>From publishing journals to organizing global conferences, Jadetimes has become a catalyst for academic and professional progress. By investing in platforms that nurture research, Jadetimes continues to strengthen its role as a bridge between academia, media, and industry.</p>
+                            <p>Looking ahead, Jadetimes remains committed to empowering researchers, educators, and learners through its expanding initiatives—be it journals, conferences, or the educational programs offered under Jadetimes International University (JIU).</p>
                         </main>
 
                     </div>
                 </article>
             </div>
-            <footer className="mb-22 ">
-                <div className="px-4 sm:px-6 lg:px-34">
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center space-x-8">
+
+            {/* UPDATED FOOTER SECTION */}
+            <footer className="mb-22 pb-8 mt-8 pt-8">
+                {/* Added max-w-5xl and mx-auto to align with article, fixed lg padding */}
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    {/* 
+                      Mobile: flex-col (stack), items-center (center stack), gap-y-6 (space between stack)
+                      Desktop (sm+): sm:flex-row (side by side), sm:justify-between, sm:gap-y-0
+                    */}
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-y-6 sm:gap-y-0">
+                        
+                        {/* SHARE and Icons Group */}
+                        {/* Mobile: space-x-4 (tighter spacing), w-full justify-center (ensure centering) */}
+                        {/* Desktop: sm:space-x-8 (original spacing), sm:w-auto sm:justify-start */}
+                        <div className="flex items-center space-x-4 sm:space-x-8 w-full justify-center sm:w-auto sm:justify-start">
                             <span className="text-xl font-semibold text-gray-600">SHARE</span>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faPinterest} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faLink} /></a>
+                            <a href="#" aria-label="Facebook" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
+                            <a href="#" aria-label="Twitter" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
+                            <a href="#" aria-label="Snapchat" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
+                            <a href="#" aria-label="Pinterest" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faPinterest} /></a>
+                            <a href="#" aria-label="Copy Link" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faLink} /></a>
                         </div>
+
+                        {/* BY NYFA Section */}
                         <div>
                             <span className="text-sm font-bold text-gray-600">BY NYFA</span>
                         </div>

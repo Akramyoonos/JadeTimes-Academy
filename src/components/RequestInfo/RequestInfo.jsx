@@ -27,13 +27,16 @@ const NyfaRequestInfo = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Left Side */}
             <div className="flex flex-col">
+              {/* Image Container */}
               <div className="h-1/2">
                 <img 
                   src={studentImage} 
                   alt="JIU student working with lighting equipment" 
-                  className=" h-full min-w-7xl  "
+                  className="w-full h-full object-cover" // --- FIX APPLIED HERE ---
                 />
               </div>
+              
+              {/* Text Content */}
               <div className="bg-white p-8 md:p-16 flex-grow flex items-center">
                 <div>
                   <div className="flex items-start">

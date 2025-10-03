@@ -7,7 +7,7 @@ const ApplicationDeadlines = () => {
     switch (activeTab) {
       case "deadlines":
         return (
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto ">
             <table className="min-w-full border border-gray-200">
               <thead>
                 <tr className="bg-black text-white text-left text-sm md:text-base">
@@ -210,7 +210,7 @@ const ApplicationDeadlines = () => {
   };
 
   return (
-    <div className="w-full px-4 md:px-12 lg:px-24 py-10">
+    <div className="w-full px-4 md:px-12 lg:px-34 py-10">
       {/* Page Title */}
       <div className="flex items-center mb-6">
         <div className="w-1 h-20 bg-yellow-400 mr-3" />

@@ -1,12 +1,14 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 // Placeholder images - replace with your actual image imports
-import NycImage from '../../assets/Images/Spotlight 01.jpeg';
-import LaImage from '../../assets/Images/Spotlight 02.png';
-import YouthImage from '../../assets/Images/Spotlight 03.png';
-import VirtualImage from '../../assets/Images/Spotlight 04.jpeg';
+import NycImage from '../../assets/Images/Spotlight 01.webp';
+import LaImage from '../../assets/Images/Spotlight 02.Webp';
+import YouthImage from '../../assets/Images/Spotlight 03.Webp';
+import VirtualImage from '../../assets/Images/Spotlight 04.Webp';
+import YouthImage1 from '../../assets/Images/Spotlight 05.Webp';
+import YouthImage2 from '../../assets/Images/Spotlight 06.Webp';
 import Spotlight7 from '../../assets/Images/Spotlight 07.jpeg';
 import Spotlight8 from '../../assets/Images/Spotlight 09.jpeg';
 import Spotlight9 from '../../assets/Images/Spotlight 05.jpeg';
@@ -16,12 +18,12 @@ import Spotlight10 from '../../assets/Images/Spotlight 06.jpeg';
 // CHANGE 1: Created a new Card component to match the style in the image.
 // ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
 const InfoCard = ({ src, title, description, href }) => (
-  <a href={href} className="w-[90vw] max-w-xs md:w-96 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
+  <a href={href} className="w-[80vw] md:w-96 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
     <div className="overflow-hidden relative">
       <img
         src={src}
         alt={title}
-        className="w-full h-96 object-cover pointer-events-none transition-transform duration-2500 ease-in-out group-hover:scale-115"
+        className="w-full h-96 object-cover pointer-events-none transition-transform duration-2000 ease-in-out group-hover:scale-115"
       />
       <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300"></div>
     </div>
@@ -38,12 +40,13 @@ const Spotlight = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState('forward'); // 'forward' or 'backward'
+  const [dragStartTime, setDragStartTime] = useState(0);
 
   const onMouseDown = (e) => {
     setIsDragging(true);
     setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
     setScrollLeft(scrollContainerRef.current.scrollLeft);
+    setDragStartTime(Date.now());
   };
 
   const onMouseLeave = () => {
@@ -59,85 +62,50 @@ const Spotlight = () => {
     e.preventDefault();
     const x = e.pageX - scrollContainerRef.current.offsetLeft;
     const walk = (x - startX) * 2; //scroll-fast
-    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+
+    const dragDuration = Date.now() - dragStartTime;
+    // Adjust scrolling speed based on the duration of the drag
+    const scrollSpeed = Math.min(5, 1 + dragDuration / 100);
+
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk * scrollSpeed;
   };
-
-  // Auto-scrolling effect
-  useEffect(() => {
-    if (!scrollContainerRef.current) return;
-
-    let scrollInterval;
-    const startScrolling = () => {
-      scrollInterval = setInterval(() => {
-        if (scrollContainerRef.current) {
-          const { scrollWidth, clientWidth, scrollLeft } = scrollContainerRef.current;
-          const maxScrollLeft = scrollWidth - clientWidth;
-          const scrollSpeed = 1; // Adjust scroll speed here
-
-          if (scrollDirection === 'forward') {
-            if (scrollLeft >= maxScrollLeft) {
-              setScrollDirection('backward');
-              scrollContainerRef.current.scrollLeft -= scrollSpeed;
-            } else {
-              scrollContainerRef.current.scrollLeft += scrollSpeed;
-            }
-          } else { // scrollDirection === 'backward'
-            if (scrollLeft <= 0) {
-              setScrollDirection('forward');
-              scrollContainerRef.current.scrollLeft += scrollSpeed;
-            } else {
-              scrollContainerRef.current.scrollLeft -= scrollSpeed;
-            }
-          }
-        }
-      }, 20); // Adjust interval for smoother/faster scroll
-    };
-
-    if (!isDragging) {
-      startScrolling();
-    }
-
-    return () => {
-      clearInterval(scrollInterval);
-    };
-  }, [isDragging, scrollDirection]);
 
   // CHANGE 2: Updated the card data to match the content from the image.
   const cardsData = [
     {
       src: NycImage,
-      title: "JOIN OUR SEPTEMBER 20 OPEN HOUSE IN NYC",
-      description: "Experience JIU in the heart of NYC! Join us for an unforgettable day at the New York Film Academy Open House in New York City, located at our stunning NYC campus!",
+      title: "Shaping the Future of Online Education",
+      description: "Jadetimes International University (JIU) is built on a clear mission: to provide world-class education to students across the globe through accessible, flexible, and innovative online learning. ",
       href: "/cards-data1/"
     },
     {
       src: LaImage,
-      title: "JOIN OUR SEPTEMBER 20 OPEN HOUSE IN LA",
-      description: "Join us in person for an unforgettable day at the JIU Los Angeles Open House. The LA campus is located in the entertainment capital of world, in the heart of the historic media district of Burbank.",
+      title: "Empowering Research and Innovation",
+      description: "Jadetimes began as a bold vision—to create a global platform where creativity, knowledge, and innovation could come together to shape the future. ",
       href: "/cards-data2/"
     },
     {
       src: YouthImage,
-      title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!",
+      title: "Advancing Knowledge Across Borders",
+      description: "The Jadetimes Journal of Universal Studies (JJUS) is a peer-reviewed, multidisciplinary academic platform dedicated to advancing knowledge across a wide spectrum of disciplines. Founded.",
       href: "/cards-data3/"
     },
     {
       src: VirtualImage,
-      title: "OPEN HOUSE & LIVE ONLINE VIRTUAL EVENTS",
-      description: "JIU holds monthly open houses as well as a number of online virtual info sessions and events.",
+      title: "Partners with Special Graphics LLC for Advanced Graphic Design Education",
+      description: "The partnership comes shortly after Geeth Roman, President of JIU, increased his shareholding in Special Graphics to 74%, becoming the new Chairman of the company.",
       href: "/cards-data4/"
     },
         {
-      src: YouthImage,
-      title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!",
+      src: YouthImage1,
+      title: "Jadetimes International Research Conference 2025",
+      description: "The Jadetimes International Research Conference 2025 is a global forum for scholars, professionals, and students to present original research, build collaborations, and gain international visibility.",
       href: "/cards-data5/"
     },
         {
-      src: YouthImage,
-      title: "SIGN UP FOR SATURDAY / WEEKEND YOUTH WORKSHOPS THIS FALL!",
-      description: "JIU offers in-person (NY & LA) and online Saturday workshops for teens (14-17) and kids (10-13). Sign up your aspiring youth filmmaker, performer, or visual storyteller today!",
+      src: YouthImage2,
+      title: "How Jadetimes University Launches Students Into Industry",
+      description: "Jadetimes International University (JIU) was built to do one thing exceptionally well: take motivated learners and make them industry-ready. ",
       href: "/cards-data6/"
     },
         {
@@ -154,6 +122,18 @@ const Spotlight = () => {
     },
   ];
 
+  const handleScrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-white font-sans text-gray-800">
       <div className="py-16">
@@ -166,9 +146,10 @@ const Spotlight = () => {
         </div>
 
         <div className="relative overflow-hidden">
+          <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>
           <div
             ref={scrollContainerRef}
-            className={`grid grid-flow-col auto-cols-max gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
+            className={`grid grid-flow-col  gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
               isDragging ? 'cursor-grabbing' : 'cursor-grab'
             }`}
             style={{ scrollBehavior: 'smooth' }}
@@ -182,10 +163,7 @@ const Spotlight = () => {
               <InfoCard key={index} {...card} />
             ))}
           </div>
-          {/* Left gradient overlay */}
-          <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-gray-50 to-transparent pointer-events-none hidden md:block"></div>
-          {/* Right gradient overlay */}
-          <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-gray-50 to-transparent pointer-events-none hidden md:block"></div>
+          <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>
         </div>
       </div>
 

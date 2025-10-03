@@ -64,8 +64,7 @@ const FONT_SIZES = {
 
 const topBarLinks = [
   { href: "/current-student-resources/", text: "Current Students" },
-  { href: "#", text: "Parents" },
-  { href: "#", text: "Online Info Sessions", style: { color: ACCENTS.campuses } },
+  { href: "/events/list/", text: "Online Info Sessions", style: { color: ACCENTS.campuses } },
   { href: "/JIU-membership/", text: "Become a JadeTimes Member", style: { color: ACCENTS.academics } },
 ];
 
@@ -123,19 +122,12 @@ const megaMenus = {
       { text: "ADMISSIONS REQUIREMENTS", href: "/admissions-requirements/" },
       { text: "INTERNATIONAL STUDENTS", href: "/admissions/international-students/" },
       { text: "VETERANS & MILITARY DEPENDENT STUDENTS", href: "/admissions/veterans-military-dependent-students/" },
-      { text: "TRANSFER STUDENTS", href: "/" },
-      { text: "CROSS-CAMPUS STUDIES", href: "/admissions/admissions/cross-campus-studies" },
-      { text: "ADVANCED STANDING AND TUITION CREDIT", href: "/admissions/admissions/advanced-standing-and-tuition-credit" },
       { text: "MEET JIU NEAR YOU", href: "/events/list/" },
-      { text: "HEALTH REQUIREMENTS", href: "/admissions/admissions/health-requirements" },
     ],
     "FINANCES": [
       { text: "TUITION", href: "/dates-tuition/" },
-      { text: "FEDERAL FINANCIAL AID", href: "/admissions/finances/federal-financial-aid" },
       { text: "SCHOLARSHIPS & GRANTS", href: "/student-finances/scholarships-and-grants/" },
-      { text: "PRIVATE STUDENT LOANS", href: "/admissions/finances/private-student-loans" },
-      { text: "GI BILL & YELLOW RIBBON PROGRAM", href: "/admissions/finances/gi-bill-yellow-ribbon-program" },
-      { text: "HOUSING INFORMATION", href: "/admissions/finances/housing-information" },
+
     ],
     "eventBox": {
       title: "OPEN HOUSE & LIVE ONLINE EVENTS",
@@ -202,45 +194,36 @@ const megaMenus = {
     ],
   },
   youthMenu: {
-    "TEEN CAMPS AND WORKSHOPS": [
-      { text: "FILMMAKING", href: "/youth/teen-camps-and-workshops/filmmaking" },
-      { text: "ACTING FOR FILM", href: "/youth/teen-camps-and-workshops/acting-for-film" },
-      { text: "PHOTOGRAPHY", href: "/youth/teen-camps-and-workshops/photography" },
-      { text: "SCREENWRITING", href: "/youth/teen-camps-and-workshops/screenwriting" },
-      { text: "DOCUMENTARY FILMMAKING", href: "/youth/teen-camps-and-workshops/documentary-filmmaking" },
-      { text: "3D ANIMATION", href: "/youth/teen-camps-and-workshops/3d-animation" },
-      { text: "MUSICAL THEATRE", href: "/youth/teen-camps-and-workshops/musical-theatre" },
-      { text: "GAME DESIGN", href: "/youth/teen-camps-and-workshops/game-design" },
-      { text: "ONLINE PROGRAMS FOR TEENS", href: "/youth/teen-camps-and-workshops/online-programs-for-teens" },
-      { text: "TEEN AND KIDS 2-DAY HOLIDAY WORKSHOPS", href: "/youth/teen-camps-and-workshops/teen-and-kids-2-day-holiday-workshops" },
-    ],
-    "KIDS CAMPS AND WORKSHOPS": [
-      { text: "FILMMAKING", href: "/youth/kids-camps-and-workshops/filmmaking" },
-      { text: "ACTING FOR FILM", href: "/youth/kids-camps-and-workshops/acting-for-film" },
-      { text: "PHOTOGRAPHY", href: "/youth/kids-camps-and-workshops/photography" },
-      { text: "3D ANIMATION", href: "/youth/kids-camps-and-workshops/3d-animation" },
-      { text: "MUSICAL THEATRE", href: "/youth/kids-camps-and-workshops/musical-theatre" },
-      { text: "GAME DESIGN", href: "/youth/kids-camps-and-workshops/game-design" },
-      { text: "ONLINE PROGRAMS FOR KIDS", href: "/youth/kids-camps-and-workshops/online-programs-for-kids" },
-      { text: "TEEN AND KIDS 2-DAY HOLIDAY WORKSHOPS", href: "/youth/kids-camps-and-workshops/teen-and-kids-2-day-holiday-workshops" },
+    "WORKSHOPS": [
+      { text: "FILM", href: "/film/" },
+      { text: "MEDIA ARTS", href: "/academics/areas-of-study/acting-for-film" },
+      { text: "PERFORMING ARTS", href: "/academics/areas-of-study/photography" },
+      { text: "CREATIVE EXPRESSION", href: "/academics/areas-of-study/producing" },
+      { text: "JOURNALISM", href: "/academics/areas-of-study/screenwriting" },
+      { text: "COMMUNIVATION", href: "/academics/areas-of-study/cinematography" },
+      { text: "DIGITAL MEDIA", href: "/academics/areas-of-study/documentary-filmmaking" },
+      { text: "TECHNOLOGY", href: "/academics/areas-of-study/digital-editing" },
+      { text: "INTERACTIVE MEDIA", href: "/Faq" },
     ],
     "YOUTH ADMISSIONS": [
       { text: "PROGRAM DATES", href: "/youth/youth-admissions/program-dates" },
       { text: "TUITION", href: "/youth/youth-admissions/tuition" },
-      { text: "HOUSING", href: "/youth/youth-admissions/housing" },
-      { text: "INSURANCE", href: "/youth/youth-admissions/insurance" },
-      { text: "SUPERVISION", href: "/youth/youth-admissions/supervision" },
-      { text: "INTERNATIONAL STUDENTS", href: "/youth/youth-admissions/international-students" },
-      { text: "ALL PROGRAMS AT A GLANCE", href: "/youth/youth-admissions/all-programs-at-a-glance" },
-      { text: "YOUTH OPEN HOUSES", href: "/youth/youth-admissions/youth-open-houses" },
+      { text: "International Contests", href: "/youth/youth-admissions/youth-open-houses" },
     ],
     "LOCATIONS": [
-      { text: "NEW YORK CITY", href: "/youth/locations/new-york-city" },
-      { text: "LOS ANGELES", href: "/youth/locations/los-angeles" },
-      { text: "FLORENCE, ITALY", href: "/youth/locations/florence-italy" },
-      { text: "HARVARD UNIVERSITY", href: "/youth/locations/harvard-university" },
-      { text: "PARIS, FRANCE", href: "/youth/locations/paris-france" },
+      { text: "ONLINE", href: "/campuses/campuses/online",  },
+      { text: "NEW MEXICO", href: "/campuses/campuses/new-york-city", noHover: true },
+      { text: "AUSTRALIA", href: "/campuses/campuses/australia", noHover: true },
+      { text: "INDIA", href: "/campuses/campuses/india", noHover: true },
+      { text: "SPAIN", href: "/campuses/campuses/spain", noHover: true },
+      { text: "SRI LANKA", href: "/campuses/campuses/sri-lanka", noHover: true },
     ],
+    "eventBox": {
+      title: "YOUTH OPEN HOUSE & EVENTS",
+      linkText: "VIEW DATES",
+      href: "/events/list/",
+      image: AcadamicImage
+    }
   },
 };
 
@@ -784,9 +767,9 @@ const Header = () => {
                 ))}
               </div>
               <div className="flex items-center gap-5 ml-auto">
-                <span className="text-white font-light" style={{ fontSize: "var(--size-phone)" }}>
-                  1-800-JADETIMES
-                </span>
+                <a href="tel:+15054406468" className="text-white font-light hover:text-gray-300 transition-colors" style={{ fontSize: "var(--size-phone)" }}>
+                  +1 (505) 440-6468
+                </a>
                 <button
                   aria-label="Search"
                   onClick={() => setIsSearchOpen(prev => !prev)}
@@ -926,8 +909,8 @@ const Header = () => {
                 </ul>
               
                 <div className="flex flex-col items-center gap-y-4">
-                    <a href="tel:1-800-JADETIMES" className="text-white font-light" style={{ fontSize: "var(--size-phone)" }}>
-                      1-800-JADETIMES
+                    <a href="tel:+15054406468" className="text-white font-light" style={{ fontSize: "var(--size-phone)" }}>
+                      +1 (505) 440-6468
                     </a>
                     <LanguageSelector isOpen={isLangOpen} onToggle={setIsLangOpen} />
                 </div>

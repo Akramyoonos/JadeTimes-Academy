@@ -1,13 +1,13 @@
 import React from 'react';
-import aboutHeading from '../../../assets/Images/AboutHeading.Webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faLink } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faSnapchatGhost, faPinterest } from '@fortawesome/free-brands-svg-icons';
 
 
 const CardsData5Article = () => {
-  const videoUrl = 'https://www.youtube.com/watch?v=FKz0Fnk_TRM';
-  const videoThumbnail = 'https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg';
+  const videoUrl = 'https://www.youtube.com/watch?v=qGe2zDnTsDk';
+  // Used the direct URL for the YouTube video's thumbnail image.
+  const videoThumbnail = 'https://img.youtube.com/vi/qGe2zDnTsDk/maxresdefault.jpg';
 
   const handlePlayClick = () => {
     window.open(videoUrl, '_blank', 'noopener,noreferrer');
@@ -15,10 +15,10 @@ const CardsData5Article = () => {
 
 
     return (
-        <div className=" font-sans ">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 ">
-                <article className= "">
-                    <figure className="mb-20 relative  overflow-hidden shadow-2xl group">
+        <div className="font-sans">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-8">
+                <article>
+                    <figure className="mb-12 md:mb-20 relative overflow-hidden shadow-2xl group">
               <img
                 alt="JadeTimes Academy"
                 className="w-full h-auto object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
@@ -27,56 +27,133 @@ const CardsData5Article = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-all duration-300"></div>
               <button
                 aria-label="Play video"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24  border-4 border-white flex items-center justify-center text-white text-4xl cursor-pointer bg-black/60 hover:bg-blue-600/80 transition-all duration-300 transform group-hover:scale-110 shadow-lg"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-24 md:h-24 border-4 border-white flex items-center justify-center text-white text-3xl md:text-4xl cursor-pointer bg-black/60 hover:bg-blue-600/80 transition-all duration-300 transform group-hover:scale-110 shadow-lg"
                 onClick={handlePlayClick}
               >
                 <FontAwesomeIcon icon={faPlay} />
               </button>
             </figure>
-                    <div className="p-2 sm:p-2">
+                    <div className="p-2">
+                        {/* Article */}
+                        <main className="prose max-w-none text-gray-800 text-lg md:text-xl leading-relaxed">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center">Jadetimes International Research Conference 2025</h1>
+                            <p className="text-center text-base md:text-lg font-semibold text-gray-600">Locations: India · New Mexico · London · Spain · Australia · Sri Lanka</p>
+                            <p className="text-center text-base md:text-lg font-semibold text-gray-600 mb-8">Helpline: +1 (505) 385-9745</p>
 
-                        <main className="prose max-w-none text-gray-800 text-xl leading-relaxed">
-                            <p>
-                                In an inspiring and thought-provoking guest speaker event, renowned actor Andre Royo visited the New York Film Academy (NYFA) at the New York City campus to offer students and faculty insight into the world of acting, storytelling, and the entertainment industry. Best known for his compelling portrayal of Bubbles in the critically acclaimed HBO series <i>The Wire</i>, Royo's career spans a wide array of television and film roles including shows like <i>Empire</i>, <i>The Path</i>, and <i>How to Make It in America</i>. He is currently venturing into directing and producing.
-                            </p>
-                             <br />
-                            <p>
-                                During his visit, Royo discussed his journey in Hollywood and the experiences that have shaped his career with moderator Darren Dean, NYFA instructor and award-winning Producer, Writer, and Director. Royo talked candidly about his iconic role as Bubbles in <i>The Wire</i>, a character that has left an indelible mark on television history. Royo spoke passionately about the importance of portraying characters with depth, authenticity, and empathy, especially those who are often marginalized or overlooked in mainstream media.
-                            </p>
-                             <br />
-                            <p>
-                                <i>The Wire</i> became a show that helped break through stereotypes and reach a broader audience due to the empathetic and humanizing portrayals of the characters. Royo said that "It became a social message – if you care about your community, you care about politics, you care about the disenfranchised, then you had to watch <i>The Wire</i>… It became a social political show that was a must see for everybody.”
-                            </p>
-                             <br />
-                            <figure className="my-8">
-                                <img src={aboutHeading} alt="Andre Royo speaking at NYFA" className="w-full h-auto  shadow-md" />
-                                <figcaption className="text-center text-sm text-gray-500 mt-2">Andre Royo Q&A with faculty member Darren Dean</figcaption>
-                            </figure>
-                             <br />
-                            <p>
-                                NYFA students were able to ask questions and Royo took the time to offer invaluable advice to the next generation of aspiring filmmakers, actors, and storytellers. Royo encouraged students to take risks and step outside of their comfort zone. “The only way you learn is to not be afraid to fall. Go out there and leap and take chances,” he urged. He advised students that trusting your team, trusting the collaborative process, and being humble will lead you to become a great filmmaker. “You have to allow magic to happen and to trust your fellow artists.”
-                            </p>
-                             <br />
-                            <p>
-                                Andre Royo's guest speaker event at the New York Film Academy was a powerful reminder of the importance of authenticity, persistence, and passion in the world of entertainment. For NYFA students, it was an important opportunity to learn from one of the most respected actors of his generation.
-                            </p>
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">Overview</h2>
+                            <p>The Jadetimes International Research Conference 2025 is a global forum for scholars, professionals, and students to present original research, build collaborations, and gain international visibility. Originally scheduled to begin June 1, 2025, the conference has been rescheduled to <strong>July 12, 2025 at 11:00 AM (Indian Time)</strong> due to an overwhelming volume of high-quality submissions. The event runs in Online and Hybrid modes to maximize access for participants worldwide.</p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">Why Participate</h2>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li>Global Advisory Panel & Keynote Faculty (featured across our promos and posters)</li>
+                                <li>Best Research Paper Awards with cash prizes (see Awards below)</li>
+                                <li>Free publication for winning papers in the Jadetimes Journal of Universal Studies</li>
+                                <li>Official Conference Certificates for all presenters</li>
+                                <li>Live expert feedback and Q&A after each talk</li>
+                                <li>Budget-friendly registration for Students & PhD scholars</li>
+                                <li>Group (20%) and Academic Partner (70%) discounts</li>
+                                <li>Flexible attendance: Online or designated Hybrid venues</li>
+                            </ul>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">Conference Tracks</h2>
+                            <p>Illustrative, not exhaustive:</p>
+                            <p>Business & Economics · Education & Social Sciences · Technology & Innovation · Health Sciences · Arts & Humanities · Media, Communication & Journalism · AI & Machine Learning · Climate & Environment · Law & International Relations · Agriculture & Food Sciences · IT & Cybersecurity · Architecture & Urban Planning · Data Science & Big Data · Disaster Management · Library & Information Science · Sports Science · Gender Studies & Social Justice · Entrepreneurship & Start-ups · Philosophy & Ethics …and more.</p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">Submission & Participation</h2>
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">Call for Papers — Submit Your Work Now</h3>
+                            
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">Key deadlines</h3>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Abstract:</strong> 20 June 2025</li>
+                                <li><strong>Full Paper:</strong> 25 June 2025</li>
+                            </ul>
+
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">Presentation format</h3>
+                             <ul className="list-disc list-inside space-y-2">
+                                <li>10 minutes presentation + 5 minutes Q&A</li>
+                                <li><strong>Language:</strong> English</li>
+                                <li><strong>Modes:</strong>
+                                    <ul className="list-disc list-inside ml-6 mt-2">
+                                        <li><strong>Online:</strong> Zoom/Google Meet (live or pre-recorded accepted)</li>
+                                        <li><strong>Hybrid:</strong> In-person delivery at select partner venues in India, New Mexico, London, Spain, Australia, Sri Lanka</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">Paper Quality & Structure</h3>
+                            <p>All submissions undergo rigorous peer review for originality, relevance, and integrity. Mandatory sections: Title · Authors & Affiliations · Abstract (≤120 words) · Keywords (≤6) · Introduction · Literature Review · Methodology · Results & Discussion · Conclusion · References (APA – latest edition).</p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">Registration Fees</h2>
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">Online Mode</h3>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Individual Presenter:</strong> $300</li>
+                                <li><strong>PhD Scholar:</strong> $200</li>
+                                <li><strong>Co-author (two presenters):</strong> $250</li>
+                                <li><strong>Student (Valid ID):</strong> $150</li>
+                                <li><strong>Additional paper:</strong> $40 each</li>
+                            </ul>
+
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">Hybrid Mode</h3>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Individual Presenter:</strong> $500</li>
+                                <li><strong>PhD Scholar:</strong> $300</li>
+                                <li><strong>Co-author (two presenters):</strong> $350</li>
+                                <li><strong>Student (Valid ID):</strong> $250</li>
+                                <li><strong>Additional paper:</strong> $100 each</li>
+                            </ul>
+                            <p className="mt-4">All participants receive official certificates, session access, conference materials, and recordings. Group discounts (20%) for 5+ registrations; academic partner institutions receive up to 70% discounts.</p>
+                            
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">Awards & Recognition</h2>
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">1st Place – Best Research Paper</h3>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong>$2,000 USD</strong> cash prize</li>
+                                <li>Official trophy & digital certificate</li>
+                                <li>Feature articles in 50+ online global media</li>
+                                <li>Free publication in the Jadetimes Journal of Universal Studies</li>
+                                <li>Exclusive interview & global promotion</li>
+                                <li>Invitation to future Jadetimes events</li>
+                            </ul>
+                            
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">2nd Place – Best Research Paper</h3>
+                             <p><strong>$500 USD</strong> cash prize + all recognitions above</p>
+
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">3rd Place – Best Research Paper</h3>
+                            <p><strong>$200 USD</strong> cash prize + all recognitions above</p>
+
+                            <h3 className="text-xl md:text-2xl font-semibold mt-6 mb-3">Conference Presentation & Participation Award</h3>
+                            <p>Trophy (where applicable), digital certificate, journal recognition opportunities, interview feature, and invitations to future events for all active presenters.</p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">Featured Voices</h2>
+                            <p>Promotional spotlights include Dr. Manvendra Singh, Avneet Gulati, Dr. Sumit Kumar Pandey, Prof. Ceasar Dubor, Dr. Jaime Geronimo Vela, and Dr. Tornike Shurgulaia, representing diverse expertise across social sciences, media, health, security studies, and the arts.</p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">Who We Are</h2>
+                            <p>Jadetimes Media LLC is a global media and publishing company operating across 30+ news and knowledge categories. Our academic arm includes the peer-reviewed Jadetimes Journal of Universal Studies, and our business verticals include flagship magazines that explore markets, innovation, and leadership. Our mission is to connect thinkers, creators, and change-makers through credible, accessible, and impactful content.</p>
+
+                            <h2 className="text-2xl md:text-3xl font-bold mt-10 md:mt-12 mb-4">How to Join</h2>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Submit your abstract/paper:</strong> via the JJUS/Jadetimes portals or QR submission on the conference page</li>
+                                <li><strong>Conference page:</strong> jadetimes.com/international-research-conference-2025</li>
+                                <li><strong>Journal info:</strong> jadetimes.com/jadetimes-journal-of-universal-studies</li>
+                                <li><strong>General inquiries & partnerships:</strong> info@jadetimes.com</li>
+                                <li><strong>Helpline:</strong> +1 (505) 385-9745</li>
+                            </ul>
                         </main>
 
                     </div>
                 </article>
             </div>
-            <footer className="mb-22 ">
-                <div className="px-4 sm:px-6 lg:px-34">
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center space-x-8">
-                            <span className="text-xl font-semibold text-gray-600">SHARE</span>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faPinterest} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faLink} /></a>
+            <footer className="mb-16 md:mb-22">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-4">
+                        <div className="flex items-center space-x-6">
+                            <span className="text-lg md:text-xl font-semibold text-gray-600">SHARE</span>
+                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faFacebookF} /></a>
+                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faTwitter} /></a>
+                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
+                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faPinterest} /></a>
+                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faLink} /></a>
                         </div>
-                        <div>
+                        <div className="self-start sm:self-center">
                             <span className="text-sm font-bold text-gray-600">BY NYFA</span>
                         </div>
                     </div>

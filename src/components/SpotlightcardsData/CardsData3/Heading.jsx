@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogHeadingImage from '../../../assets/Images/JIUSpeakerEventArticleHeadingImage.jpeg' // Assuming the image has been updated to match
+import BlogHeadingImage from '../../../assets/Images/Spotlight 03.webp' // Assuming the image has been updated to match
 
 const Heading = () => {
   return (
@@ -19,11 +19,11 @@ const Heading = () => {
                    <a href="/jiu-speaker-event-article" className="hover:underline">Recent</a>
                  </nav>
              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4">
-                <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide text-shadow-lg max-w-5xl">
-                    ANDRE ROYO INSPIRES JIU STUDENTS AT NEW YORK FILM ACADEMY GUEST SPEAKER EVENT
+                <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide uppercase text-shadow-lg max-w-5xl">
+                   Jadetimes Journal of Universal Studies (JJUS): Advancing Knowledge Across Borders
                 </h1>
-                <p className="mt-6 text-xs sm:text-sm md:text-base font-medium tracking-widest">
-                    FEBRUARY 27, 2025
+                <p className="mt-6 text-xs sm:text-sm md:text-base uppercase font-medium tracking-widest">
+                    October 22, 2025
                 </p>
              </div>
            </div>

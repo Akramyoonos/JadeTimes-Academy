@@ -1,81 +1,131 @@
 import React from 'react';
-import aboutHeading from '../../../assets/Images/AboutHeading.Webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faLink } from '@fortawesome/free-solid-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faSnapchatGhost, faPinterest } from '@fortawesome/free-brands-svg-icons';
 
 
 const CardsData3Article = () => {
-  const videoUrl = 'https://www.youtube.com/watch?v=FKz0Fnk_TRM';
-  const videoThumbnail = 'https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg';
-
-  const handlePlayClick = () => {
-    window.open(videoUrl, '_blank', 'noopener,noreferrer');
-  };
-
 
     return (
-        <div className=" font-sans ">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8 ">
-                <article className= "">
-                    <figure className="mb-20 relative  overflow-hidden shadow-2xl group">
-              <img
-                alt="JadeTimes Academy"
-                className="w-full h-auto object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
-                src={videoThumbnail}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-all duration-300"></div>
-              <button
-                aria-label="Play video"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24  border-4 border-white flex items-center justify-center text-white text-4xl cursor-pointer bg-black/60 hover:bg-blue-600/80 transition-all duration-300 transform group-hover:scale-110 shadow-lg"
-                onClick={handlePlayClick}
-              >
-                <FontAwesomeIcon icon={faPlay} />
-              </button>
-            </figure>
-                    <div className="p-2 sm:p-2">
+        <div className="font-sans">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
+                <article className="">
 
+                    <div className="p-2 sm:p-2">
+                           {/* Articale */}
                         <main className="prose max-w-none text-gray-800 text-xl leading-relaxed">
-                            <p>
-                                In an inspiring and thought-provoking guest speaker event, renowned actor Andre Royo visited the New York Film Academy (NYFA) at the New York City campus to offer students and faculty insight into the world of acting, storytelling, and the entertainment industry. Best known for his compelling portrayal of Bubbles in the critically acclaimed HBO series <i>The Wire</i>, Royo's career spans a wide array of television and film roles including shows like <i>Empire</i>, <i>The Path</i>, and <i>How to Make It in America</i>. He is currently venturing into directing and producing.
+                            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">Jadetimes Journal of Universal Studies (JJUS): Advancing Knowledge Across Borders</h1>
+                            <p className="text-center text-lg text-gray-600">Volume 1, Issue 2 | E-ISSN 3066-9421</p>
+                            <p className="text-center">
+                                <a href="https://portal.issn.org/resource/ISSN/3066-9421" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                    Verify our ISSN on the ISSN Portal
+                                </a>
                             </p>
-                             <br />
-                            <p>
-                                During his visit, Royo discussed his journey in Hollywood and the experiences that have shaped his career with moderator Darren Dean, NYFA instructor and award-winning Producer, Writer, and Director. Royo talked candidly about his iconic role as Bubbles in <i>The Wire</i>, a character that has left an indelible mark on television history. Royo spoke passionately about the importance of portraying characters with depth, authenticity, and empathy, especially those who are often marginalized or overlooked in mainstream media.
-                            </p>
-                             <br />
-                            <p>
-                                <i>The Wire</i> became a show that helped break through stereotypes and reach a broader audience due to the empathetic and humanizing portrayals of the characters. Royo said that "It became a social message – if you care about your community, you care about politics, you care about the disenfranchised, then you had to watch <i>The Wire</i>… It became a social political show that was a must see for everybody.”
-                            </p>
-                             <br />
-                            <figure className="my-8">
-                                <img src={aboutHeading} alt="Andre Royo speaking at NYFA" className="w-full h-auto  shadow-md" />
-                                <figcaption className="text-center text-sm text-gray-500 mt-2">Andre Royo Q&A with faculty member Darren Dean</figcaption>
-                            </figure>
-                             <br />
-                            <p>
-                                NYFA students were able to ask questions and Royo took the time to offer invaluable advice to the next generation of aspiring filmmakers, actors, and storytellers. Royo encouraged students to take risks and step outside of their comfort zone. “The only way you learn is to not be afraid to fall. Go out there and leap and take chances,” he urged. He advised students that trusting your team, trusting the collaborative process, and being humble will lead you to become a great filmmaker. “You have to allow magic to happen and to trust your fellow artists.”
-                            </p>
-                             <br />
-                            <p>
-                                Andre Royo's guest speaker event at the New York Film Academy was a powerful reminder of the importance of authenticity, persistence, and passion in the world of entertainment. For NYFA students, it was an important opportunity to learn from one of the most respected actors of his generation.
+                            
+                            <p className="mt-8">The Jadetimes Journal of Universal Studies (JJUS) is a peer-reviewed, multidisciplinary academic platform dedicated to advancing knowledge across a wide spectrum of disciplines. Founded under the vision of Jadetimes Media LLC (USA), the journal is committed to creating an open, inclusive, and credible environment for researchers, educators, and professionals to share their work with global audiences.</p>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Our Mission</h2>
+                            <p>At JJUS, our mission is to foster the global dissemination of high-quality research by offering a platform that supports intellectual innovation and cross-disciplinary dialogue. We aim to:</p>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li>Inspire groundbreaking discoveries and solutions.</li>
+                                <li>Promote collaboration between diverse academic fields.</li>
+                                <li>Contribute to the professional growth of scholars and practitioners worldwide.</li>
+                            </ul>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Scope of Research</h2>
+                            <p>JJUS publishes original research, case studies, surveys, reviews, and academic discourse across a broad set of fields, including but not limited to:</p>
+                             <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Business and Economics</strong> – Entrepreneurship, market trends, global business practices.</li>
+                                <li><strong>Education</strong> – Pedagogical innovations, e-learning, curriculum design.</li>
+                                <li><strong>Health and Medicine</strong> – Public health, preventive medicine, healthcare management.</li>
+                                <li><strong>Journalism and Media Studies</strong> – Media ethics, communication strategies, digital journalism.</li>
+                                <li><strong>Social Sciences</strong> – Sociology, anthropology, policy, and cultural studies.</li>
+                                <li><strong>Technology and Engineering</strong> – Artificial intelligence, sustainable engineering, software development.</li>
+                                <li><strong>Arts and Humanities</strong> – Literature, history, philosophy, performing arts, and cultural studies.</li>
+                            </ul>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Publication Process</h2>
+                             <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Quarterly Issues</strong> – JJUS releases four issues annually (March, June, September, December).</li>
+                                <li><strong>Rigorous Peer Review</strong> – Submissions are reviewed by distinguished academics and professionals from the global editorial board.</li>
+                                <li><strong>Constructive Feedback</strong> – Authors receive guidance aimed at improving and enhancing the quality of their work.</li>
+                                <li><strong>Global Reach</strong> – Online accessibility ensures that published works are widely available to international researchers and institutions.</li>
+                            </ul>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Editorial Board Excellence</h2>
+                            <p>The strength of JJUS lies in its diverse and highly qualified editorial board, comprised of distinguished researchers, professors, and professionals from the USA, India, Nigeria, Kenya, and the Philippines. Notable members include:</p>
+                             <ul className="list-disc list-inside space-y-2">
+                                <li>Dr. Jaime Geronimo Vela, Senior Researcher, USA</li>
+                                <li>Dr. Ehi Iden, Senior Researcher, Nigeria</li>
+                                <li>Dr. Antony Mbithi, Senior Researcher, Kenya</li>
+                                <li>Dr. Keith Nester A. Lavin, Senior Researcher, Philippines</li>
+                                <li>Dr. Francois Phopho, Senior Researcher, USA</li>
+                                <li>Dr. Rachel Wolford, Senior Researcher, USA</li>
+                                <li>Dr. Roderick Mann, Assistant Professor, USA</li>
+                                <li>Dr. Akash Deep Muni, Dean & Assistant Professor, India</li>
+                                <li>Dr. Amresh Kumar Gauda, Assistant Professor, India</li>
+                                <li>Dr. Anand Joshi, Professor, India</li>
+                                <li>Dr. Rekha, HOD & Professor, India</li>
+                                <li>Dr. Rajan Miglani, HOD & Professor, India</li>
+                                <li>Dr. Sugandha Shekhar, Assistant Professor, India</li>
+                            </ul>
+                            <p className="mt-4">Together, this board ensures editorial excellence, intellectual diversity, and global credibility.</p>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Opportunities for Authors</h2>
+                            <p>JJUS invites scholars, practitioners, and emerging researchers to contribute their work and join a thriving academic community. The journal offers:</p>
+                             <ul className="list-disc list-inside space-y-2">
+                                <li>Recognition and credibility by publishing in a reputed international outlet.</li>
+                                <li>Interdisciplinary collaboration by encouraging diverse perspectives.</li>
+                                <li>Copyright protection ensuring contributors retain the integrity of their intellectual property.</li>
+                                <li>Global visibility through online access and planned indexing in renowned academic databases.</li>
+                            </ul>
+
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Announcements & Upcoming Initiatives</h2>
+                            <ul className="list-disc list-inside space-y-2">
+                                <li><strong>Call for Papers</strong> – Submissions for the next issue are currently open. Deadline: March 25.</li>
+                                <li><strong>Upcoming Issue Release</strong> – The next edition will be published in June.</li>
+                                <li><strong>Workshops for Authors</strong> – Online sessions on research writing and manuscript preparation are regularly organized to support contributors.</li>
+                                <li><strong>Indexing Progress</strong> – JJUS is actively pursuing indexing in leading academic databases for enhanced global reach.</li>
+                            </ul>
+
+                            <hr className="my-8 border-gray-300" />
+                            
+                            <h2 className="text-3xl font-bold mt-12 mb-4">Conclusion</h2>
+                            <p>The Jadetimes Journal of Universal Studies (JJUS) is more than a publication, it is a global academic community that values innovation, credibility, and excellence. With a strong editorial foundation, multidisciplinary approach, and a commitment to fostering collaboration, JJUS is poised to become a hub of scholarly exchange for years to come.</p>
+                            
+                            <p className="mt-8 font-semibold">
+                                🔗 To learn more or submit your manuscript, visit <a href="mailto:info@jadetimes.com" className="text-blue-600 hover:underline">info@jadetimes.com</a>.
                             </p>
                         </main>
 
                     </div>
                 </article>
             </div>
-            <footer className="mb-22 ">
-                <div className="px-4 sm:px-6 lg:px-34">
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center space-x-8">
+
+            {/* UPDATED FOOTER SECTION */}
+            <footer className="mb-22 pb-8 mt-8 pt-8">
+                {/* Added max-w-5xl and mx-auto to align with article, fixed lg padding */}
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    
+                    {/* 
+                      Mobile: flex-col (stack), items-center (center stack), gap-y-6 (space between stack)
+                      Desktop (sm+): sm:flex-row (side by side), sm:justify-between, sm:gap-y-0
+                    */}
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-y-6 sm:gap-y-0">
+                        
+                        {/* SHARE and Icons Group */}
+                        {/* Mobile: space-x-4 (tighter spacing), w-full justify-center (ensure centering) */}
+                        {/* Desktop: sm:space-x-8 (original spacing), sm:w-auto sm:justify-start */}
+                        <div className="flex items-center space-x-4 sm:space-x-8 w-full justify-center sm:w-auto sm:justify-start">
                             <span className="text-xl font-semibold text-gray-600">SHARE</span>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faPinterest} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faLink} /></a>
+                            <a href="#" aria-label="Facebook" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
+                            <a href="#" aria-label="Twitter" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
+                            <a href="#" aria-label="Snapchat" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
+                            <a href="#" aria-label="Pinterest" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faPinterest} /></a>
+                            <a href="#" aria-label="Copy Link" className="text-pink-400 hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faLink} /></a>
                         </div>
+
+                        {/* BY NYFA Section */}
                         <div>
                             <span className="text-sm font-bold text-gray-600">BY NYFA</span>
                         </div>

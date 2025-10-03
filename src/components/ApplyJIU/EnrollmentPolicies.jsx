@@ -2,7 +2,7 @@ import React from "react";
 
 const EnrollmentPolicies = () => {
   return (
-    <div className="w-full px-4 md:px-12 lg:px-24 py-10">
+    <div className="w-full px-4 md:px-12 lg:px-34 py-10">
       {/* Page Title */}
       <div className="flex items-center mb-6">
         <div className="w-1 h-20 bg-yellow-400 mr-3" />
@@ -12,7 +12,7 @@ const EnrollmentPolicies = () => {
       </div>
 
       {/* Policies */}
-      <ul className="list-none space-y-4 text-gray-700 leading-relaxed">
+      <ul className="list-none space-y-4 text-gray-700 text-xl leading-relaxed">
         <li className="flex">
           <span className="w-2 h-2 bg-gray-500 rounded-full mt-2 mr-3 flex-shrink-0" />
           <span>
