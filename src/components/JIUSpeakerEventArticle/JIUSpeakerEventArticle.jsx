@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import aboutHeading from '../../assets/Images/AboutHeading.Webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faLink } from '@fortawesome/free-solid-svg-icons';
@@ -6,11 +6,16 @@ import { faFacebookF, faTwitter, faSnapchatGhost, faPinterest } from '@fortaweso
 
 
 const JIUSpeakerEventArticle = () => {
-  const videoUrl = 'https://www.youtube.com/watch?v=FKz0Fnk_TRM';
+  const videoUrl = 'https://www.youtube.com/embed/FKz0Fnk_TRM';
   const videoThumbnail = 'https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg';
+  const [showVideo, setShowVideo] = useState(false);
 
   const handlePlayClick = () => {
-    window.open(videoUrl, '_blank', 'noopener,noreferrer');
+    setShowVideo(true);
+  };
+
+  const handleCloseVideo = () => {
+    setShowVideo(false);
   };
 
 
@@ -65,6 +70,27 @@ const JIUSpeakerEventArticle = () => {
                     </div>
                 </article>
             </div>
+            {showVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="relative w-full max-w-4xl">
+            <button
+              onClick={handleCloseVideo}
+              className="absolute -top-1 -right-1 m-4 text-white text-4xl z-10"
+            >
+              &times;
+            </button>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe
+                src={videoUrl}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
             <footer className="mb-22 ">
                 <div className="px-4 sm:px-6 lg:px-34">
                     <div className="flex justify-between items-center">

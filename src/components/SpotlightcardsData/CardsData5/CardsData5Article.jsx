@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faLink } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faSnapchatGhost, faPinterest } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faSnapchatGhost, faPinterest, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 const CardsData5Article = () => {
-  const videoUrl = 'https://www.youtube.com/watch?v=qGe2zDnTsDk';
+  const [isCopied, setIsCopied] = useState(false);
+  
+      const handleCopyLink = () => {
+          navigator.clipboard.writeText(window.location.href);
+          setIsCopied(true);
+          setTimeout(() => {
+              setIsCopied(false);
+          }, 2000); // Reset the copied state after 2 seconds
+      };
+
+  const videoUrl = 'https://www.youtube.com/embed/qGe2zDnTsDk';
   // Used the direct URL for the YouTube video's thumbnail image.
   const videoThumbnail = 'https://img.youtube.com/vi/qGe2zDnTsDk/maxresdefault.jpg';
+  const [showVideo, setShowVideo] = useState(false);
 
   const handlePlayClick = () => {
-    window.open(videoUrl, '_blank', 'noopener,noreferrer');
+    setShowVideo(true);
+  };
+
+  const handleCloseVideo = () => {
+    setShowVideo(false);
   };
 
 
@@ -142,19 +157,48 @@ const CardsData5Article = () => {
                     </div>
                 </article>
             </div>
+            {showVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="relative w-full max-w-4xl">
+            <button
+              onClick={handleCloseVideo}
+              className="absolute -top-1 -right-1 m-4 text-white text-4xl z-10"
+            >
+              &times;
+            </button>
+            <div className="aspect-w-16 aspect-h-9">
+              <iframe
+                src={videoUrl}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-150"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
             <footer className="mb-16 md:mb-22">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-y-4">
-                        <div className="flex items-center space-x-6">
-                            <span className="text-lg md:text-xl font-semibold text-gray-600">SHARE</span>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faFacebookF} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faTwitter} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faPinterest} /></a>
-                            <a href="#" className="text-pink-400 hover:text-black transition-colors duration-300 text-lg"><FontAwesomeIcon icon={faLink} /></a>
+                        <div className="flex items-center space-x-4 sm:space-x-8 w-full justify-center sm:w-auto sm:justify-start">
+                            <span className="text-2xl font-semibold text-gray-600">SHARE</span>
+                            <a href="#" aria-label="Facebook" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
+                            <a href="#" aria-label="Twitter" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
+                            <a href="#" aria-label="Snapchat" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
+                            <a href="#" aria-label="Pinterest" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faPinterest} /></a>
+                            <a href={`https://api.whatsapp.com/send?text=${window.location.href}`} data-action="share/whatsapp/share" aria-label="WhatsApp" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faWhatsapp} /></a>
+                            <button onClick={handleCopyLink} aria-label="Copy Link" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300 relative">
+                                <FontAwesomeIcon icon={faLink} />
+                                {isCopied && (
+                                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-2xl  px-2 py-1 rounded">
+                                        Copied!
+                                    </span>
+                                )}
+                            </button>
                         </div>
                         <div className="self-start sm:self-center">
-                            <span className="text-sm font-bold text-gray-600">BY NYFA</span>
+                            <span className="text-xl font-bold text-gray-600">BY JIU</span>
                         </div>
                     </div>
                 </div>

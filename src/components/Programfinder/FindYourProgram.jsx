@@ -45,19 +45,19 @@ const programsData = [
 ];
 
 const disciplines = [
-  'Digital Journalism', 'Broadcast Journalism', 'News Reporting & Anchoring', 'Media Ethics & Law',
-  'Digital Media Production', 'Investigative Journalism', 'Multimedia Storytelling', 'Social Media Management',
-  'Photojournalism', 'Public Relations & Media Strategy'
+  'FILM', 'MEDIA ARTS', 'PERFORMING ARTS', 'CREATIVE EXPRESSION',
+  'JOURNALISM', 'COMMUNIVATION', 'DIGITAL MEDIA', 'TECHNOLOGY',
+  'INTERACTIVE MEDIA', 'ENTERTAINMENT MEDIA','PSYCHOLOGY','HUMAN BEHAVIOR','MARKETING'
 ];
 
 const programTypes = [
-  'Master of Journalism', 'Master of Media & Communication', 'Master of Digital Media (Online)',
+  'One Month Courses','Master of Journalism', 'Master of Media & Communication', 'Master of Digital Media (Online)',
   'Bachelor of Journalism', 'Bachelor of Media Studies', 'Associate Degree in Journalism',
   '2-Year Diploma in Media & Journalism', '1-Year Professional Certificate in Journalism',
   'Short-Term Media Workshop', 'Online Short-Term Workshop in Journalism'
 ];
 
-const locations = ['New York City', 'Los Angeles', 'Florence,Italy', 'Online', 'Harvard University', 'Paris,France', 'Bejing,China'];
+const locations = ['Online','New York City', 'Los Angeles', 'Florence,Italy',  'Harvard University', 'Paris,France', 'Bejing,China'];
 const startDates = ['2025', '2026'];
 
 
@@ -226,7 +226,7 @@ const FindYourProgram = () => {
                 <legend className="font-bold uppercase text-xs mb-4 border-b-2 border-gray-200 pb-2 text-gray-800">
                   DISCIPLINE
                 </legend>
-                <div className="flex flex-col gap-2 max-h-68 overflow-y-auto">
+                <div className="flex flex-col gap-2 max-h-90 overflow-y-auto">
                   {disciplines.map(item => (
                     <label key={item} className="flex items-start gap-3 cursor-pointer group">
                       <input type="checkbox" className="form-checkbox h-5 w-5 accent-blue-600 rounded focus:ring-blue-500 border-gray-300" onChange={() => handleFilterChange('discipline', item)} checked={filters.discipline.includes(item)} />
@@ -242,9 +242,15 @@ const FindYourProgram = () => {
   </legend>
   <div className="flex flex-col gap-2 max-h-100 overflow-y-auto">
     {programTypes.map(item => (
-      <label key={item} className="flex items-center gap-3 cursor-pointer group">
-        <input type="checkbox" className="form-checkbox h-5 w-5 accent-blue-600 rounded focus:ring-blue-500 border-gray-300" onChange={() => handleFilterChange('programType', item)} checked={filters.programType.includes(item)} />
-        <span className="text-black group-hover:text-black transition-colors duration-200">{item}</span>
+      <label key={item} className={`flex items-center gap-3 ${item !== 'One Month Courses' ? 'cursor-not-allowed' : 'cursor-pointer group'}`}>
+        <input 
+          type="checkbox" 
+          className="form-checkbox h-5 w-5 accent-blue-600 rounded focus:ring-blue-500 border-gray-300" 
+          onChange={() => handleFilterChange('programType', item)} 
+          checked={filters.programType.includes(item)} 
+          disabled={item !== 'One Month Courses'} 
+        />
+        <span className={`text-black ${item !== 'One Month Courses' ? 'text-gray-400' : 'group-hover:text-black'} transition-colors duration-200`}>{item}</span>
       </label>
     ))}
   </div>
@@ -255,9 +261,15 @@ const FindYourProgram = () => {
                 </legend>
                 <div className="flex flex-col gap-2 max-h-80 overflow-y-auto">
                   {locations.map(item => (
-                    <label key={item} className="flex items-center gap-3 cursor-pointer group">
-                      <input type="checkbox" className="form-checkbox h-5 w-5 accent-blue-600 rounded focus:ring-blue-500 border-gray-300" onChange={() => handleFilterChange('location', item)} checked={filters.location.includes(item)} />
-                      <span className="text-black group-hover:text-blue-600 transition-colors duration-200">{item}</span>
+                    <label key={item} className={`flex items-center gap-3 ${item !== 'Online' ? 'cursor-not-allowed' : 'cursor-pointer group'}`}>
+                      <input 
+                        type="checkbox" 
+                        className="form-checkbox h-5 w-5 accent-blue-600 rounded focus:ring-blue-500 border-gray-300" 
+                        onChange={() => handleFilterChange('location', item)} 
+                        checked={filters.location.includes(item)} 
+                        disabled={item !== 'Online'}
+                      />
+                      <span className={`text-black ${item !== 'Online' ? 'text-gray-400' : 'group-hover:text-blue-600'} transition-colors duration-200`}>{item}</span>
                     </label>
                   ))}
                 </div>

@@ -76,37 +76,37 @@ const Spotlight = () => {
       src: NycImage,
       title: "Shaping the Future of Online Education",
       description: "Jadetimes International University (JIU) is built on a clear mission: to provide world-class education to students across the globe through accessible, flexible, and innovative online learning. ",
-      href: "/cards-data1/"
+      href: "/Jadetimes-International-University-(JIU):Shaping-the-Future-of-Online-Education/"
     },
     {
       src: LaImage,
       title: "Empowering Research and Innovation",
       description: "Jadetimes began as a bold vision—to create a global platform where creativity, knowledge, and innovation could come together to shape the future. ",
-      href: "/cards-data2/"
+      href: "/The-Story-of-Jadetimes:Empowering-Research-and-Innovation/"
     },
     {
       src: YouthImage,
       title: "Advancing Knowledge Across Borders",
       description: "The Jadetimes Journal of Universal Studies (JJUS) is a peer-reviewed, multidisciplinary academic platform dedicated to advancing knowledge across a wide spectrum of disciplines. Founded.",
-      href: "/cards-data3/"
+      href: "/Jadetimes-Journal-of-Universal-Studies-(JJUS):Advancing-Knowledge-Across-Borders/"
     },
     {
       src: VirtualImage,
       title: "Partners with Special Graphics LLC for Advanced Graphic Design Education",
       description: "The partnership comes shortly after Geeth Roman, President of JIU, increased his shareholding in Special Graphics to 74%, becoming the new Chairman of the company.",
-      href: "/cards-data4/"
+      href: "/Jadetimes-International-University-Partners-with-Special-Graphics-LLC-for-Advanced-Graphic-Design-Education/"
     },
         {
       src: YouthImage1,
       title: "Jadetimes International Research Conference 2025",
       description: "The Jadetimes International Research Conference 2025 is a global forum for scholars, professionals, and students to present original research, build collaborations, and gain international visibility.",
-      href: "/cards-data5/"
+      href: "/Jadetimes-International-Research-Conference-2025/"
     },
         {
       src: YouthImage2,
       title: "How Jadetimes University Launches Students Into Industry",
       description: "Jadetimes International University (JIU) was built to do one thing exceptionally well: take motivated learners and make them industry-ready. ",
-      href: "/cards-data6/"
+      href: "/How-Jadetimes-University-Launches-Students-Into-Industry/"
     },
         {
       src: YouthImage,

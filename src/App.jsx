@@ -158,12 +158,12 @@ function AppInner() {
             <Route path="/on-campus/campus-safety/" element={<CampusSafety_Page />} />
             <Route path="/program-dates-and-tuition/" element={<ProgramDatesAndTuition_Page />} />
             <Route path="/film/*" element={<Film_Page />} />
-            <Route path="/cards-data1/*" element={<CardsData1_Page />} />
-            <Route path="/cards-data2/*" element={<CardsData2_Page />} />
-            <Route path="/cards-data3/*" element={<CardsData3_Page />} />
-            <Route path="/cards-data4/*" element={<CardsData4_Page />} />
-            <Route path="/cards-data5/*" element={<CardsData5_Page />} />
-            <Route path="/cards-data6/*" element={<CardsData6_Page />} />
+            <Route path="/Jadetimes-International-University-(JIU):Shaping-the-Future-of-Online-Education/*" element={<CardsData1_Page />} />
+            <Route path="/The-Story-of-Jadetimes:Empowering-Research-and-Innovation/*" element={<CardsData2_Page />} />
+            <Route path="/Jadetimes-Journal-of-Universal-Studies-(JJUS):Advancing-Knowledge-Across-Borders/*" element={<CardsData3_Page />} />
+            <Route path="/Jadetimes-International-University-Partners-with-Special-Graphics-LLC-for-Advanced-Graphic-Design-Education/*" element={<CardsData4_Page />} />
+            <Route path="/Jadetimes-International-Research-Conference-2025/*" element={<CardsData5_Page />} />
+            <Route path="/How-Jadetimes-University-Launches-Students-Into-Industry/*" element={<CardsData6_Page />} />
             <Route path="/cards-data7/*" element={<CardsData7_Page />} />
             <Route path="/cards-data8/*" element={<CardsData8_Page />} />
             
