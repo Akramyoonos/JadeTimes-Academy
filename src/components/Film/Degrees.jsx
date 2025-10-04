@@ -39,11 +39,12 @@ const degreePrograms = [
 // Reusable component for each degree card
 const DegreeCard = ({ title, imageUrl, altText }) => (
     <div className="relative group overflow-hidden">
-        <img src={imageUrl} alt={altText} className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-115" />
-        <div className="absolute inset-0  bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900 flex items-end p-6">
+        <img src={imageUrl} alt={altText} className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
+        {/* Added bg-black for better text visibility */}
+        <div className="absolute inset-0  bg-opacity-50 flex items-end p-6">
             <div>
                 <h2 className="text-xl uppercase font-semibold">{title}</h2>
-                <div className="absolute top-4 right-4 w-10 h-10 border-2 border-cyan-400 rounded-full flex items-center justify-center text-cyan-400 text-2xl font-thin opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                <div className="absolute top-4 right-4 w-10 h-10 border-2 border-cyan-400 rounded-full flex items-center justify-center text-cyan-400 text-2xl font-thin">
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </div>
             </div>
