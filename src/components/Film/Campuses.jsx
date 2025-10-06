@@ -35,8 +35,9 @@ const CampusCard = ({ name, imageUrl, altText }) => (
       <img
         src={imageUrl}
         alt={altText}
-        className="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+        className="w-full h-48 object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115"
       />
+      <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-700"></div>
       <div className="absolute top-2 left-2 bg-black text-white text-xs font-bold px-2 py-1 tracking-wider">
         CAMPUS
       </div>
@@ -49,7 +50,7 @@ const CampusCard = ({ name, imageUrl, altText }) => (
 const Campuses = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto px-34 py-12">
+      <div className="container mx-auto px-6 sm:px-6 md:px-6 lg:px-34 py-12">
         <div className="flex items-center mb-8">
           <div className="w-1 h-10 bg-yellow-400 mr-4"></div>
           <h2 className="text-3xl font-light tracking-widest text-gray-800">

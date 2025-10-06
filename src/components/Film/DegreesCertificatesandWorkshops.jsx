@@ -46,7 +46,7 @@ export const VideoModal = ({ videoId, onClose }) => (
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    className="w-full h-120 object-contain"
+                    className="w-full h-full"
                     title="YouTube video player"
                 ></iframe>
             </div>
@@ -66,14 +66,14 @@ const DegreesCertificatesandWorkshops = () => {
     return (
         <>
             <div className="bg-white">
-                <div className="container  px-34 py-12">
+                <div className="container mx-auto px-4 sm:px-8 md:px-6 lg:px-34 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 lg:gap-16">
 
                         {/* --- Main Content Section (2/3 width) --- */}
                         <div className="md:col-span-2">
                             <div className="flex items-start">
                                 <div className="w-1 bg-purple-600 h-24 mr-6 flex-shrink-0" />
-                                <h1 className="text-4xl font-light text-gray-800 tracking-wider">
+                                <h1 className="text-3xl sm:text-4xl font-light text-gray-800 tracking-wider">
                                     HANDS-ON FILMMAKING DEGREES, CERTIFICATES, AND WORKSHOPS
                                 </h1>
                             </div>
@@ -88,60 +88,77 @@ const DegreesCertificatesandWorkshops = () => {
                                 </button>
                             </div>
 
-                            <div className="grid grid-cols-5 gap-72 mt-20">
-                                {/* Video Thumbnail Card (3/5 width) */}
-                                <div className="relative col-span-5 sm:col-span-3 w-210 h-120 cursor-pointer group overflow-hidden" onClick={openVideoModal}>
-                                    <img
-                                        src="https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg"
-                                        alt="Filmmaking students on a beach at sunset"
-                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 flex items-center justify-center  bg-opacity-30 transition-opacity group-hover:bg-opacity-10">
-                                        <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center transition-transform group-hover:scale-110">
-                                             <PlayIcon />
+                            {/* --- Video Thumbnail Card --- */}
+                            <div className="relative mt-20 h-80 sm:h-96 md:h-120 cursor-pointer group overflow-hidden rounded-lg" onClick={openVideoModal}>
+                                {/* Background Image with Hover Effect */}
+                                <img
+                                    src="https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg"
+                                    alt="Filmmaking students on a beach at sunset"
+                                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                                />
+                                {/* Gradient Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                                {/* Content: Centered Play Button and Bottom Text */}
+                                <div className="absolute inset-0 flex flex-col justify-between p-6">
+                                    {/* Top spacer */}
+                                    <div></div>
+                                    
+                                    {/* Centered Play Button */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="bg-white/20 rounded-full p-3 backdrop-blur-sm border border-white/30 transition-all duration-300 group-hover:bg-white/40 group-hover:scale-110">
+                                            <PlayIcon />
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* Student Showcase Card (2/5 width) */}
-                                <div className="relative col-span-5 sm:col-span-2 w-100 h-120 group hover:shadow-xl overflow-hidden">
-                                    <img
-                                        src={ourStudents01}
-                                        alt="Filmmaker with a professional camera"
-                                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                    />
-                                    <div className="absolute bottom-0 left-0 p-5 text-white bg-black bg-opacity-50 w-full">
-                                        <p className="text-xs font-semibold tracking-wider">FILMMAKING</p>
-                                        <p className="text-lg font-bold">Student Showcase</p>
+                                    {/* Bottom Text */}
+                                    <div>
+                                        <h3 className="text-white text-xl font-bold">NYFA Filmmaking</h3>
+                                        <p className="text-white/80 text-sm mt-1">Watch our students in action.</p>
                                     </div>
-                                     <a href="#" className="absolute bottom-5 right-5 bg-cyan-500 text-white rounded-full h-10 w-10 flex items-center justify-center hover:bg-cyan-600 transition-colors">
-                                        <ArrowRightIcon />
-                                    </a>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Right Sidebar */}
-        <aside className="w-full lg:w-80 flex-shrink-0  mt-6 lg:mt-0">
-          <div className="border border-gray-200">
-            <div className="bg-gray-100 p-4 ">
-              <h2 id="related-links-heading" className="text-2xl font-medium uppercase text-black">
-                RELATED LINKS
-              </h2>
-            </div>
-            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500  transition-colors">
-                Open House
-              </a>
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500  transition-colors">
-                Degree Programs
-              </a>
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500  transition-colors">
-                Program Dates & Tuition
-              </a>
-            </nav>
-          </div>
-        </aside>
+                        {/* --- Right Sidebar --- */}
+                        {/* --- UPDATED: Changed lg:mt-0 to md:mt-0 for proper alignment on tablets --- */}
+                        <aside className="w-full lg:w-80 flex flex-col mt-12 md:mt-0">
+                          {/* --- UPDATED: Changed order and margin classes to start from md breakpoint --- */}
+                          <div className="border border-gray-200 order-2 md:order-1 mt-8 md:mt-0">
+                            <div className="bg-gray-100 p-4 ">
+                              <h2 id="related-links-heading" className="text-2xl font-medium uppercase text-black">
+                                RELATED LINKS
+                              </h2>
+                            </div>
+                            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+                              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500 transition-colors">
+                                Open House
+                              </a>
+                              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500 transition-colors">
+                                Degree Programs
+                              </a>
+                              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500 transition-colors">
+                                Program Dates & Tuition
+                              </a>
+                            </nav>
+                          </div>
+                          
+                          {/* --- UPDATED: Changed order and margin classes to start from md breakpoint --- */}
+                          <div className="relative h-80 sm:h-96 md:h-120 md:w-66 group hover:shadow-xl overflow-hidden order-1 md:order-2 md:mt-10">
+                                <img
+                                    src={ourStudents01}
+                                    alt="Filmmaker with a professional camera"
+                                    className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-115"
+                                />
+                                <div className="absolute bottom-0 left-0 p-5 text-white bg-black bg-opacity-50 w-full">
+                                    <p className="text-xs font-semibold tracking-wider">FILMMAKING</p>
+                                    <p className="text-lg font-bold">Student Showcase</p>
+                                </div>
+                                 <a href="#" className="absolute bottom-5 right-5 bg-cyan-500 text-white rounded-full h-10 w-10 flex items-center justify-center hover:bg-cyan-600 transition-colors">
+                                    <ArrowRightIcon />
+                                </a>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>

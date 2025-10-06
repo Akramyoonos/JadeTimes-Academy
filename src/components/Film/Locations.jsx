@@ -31,7 +31,7 @@ const locations = [
 // The React component
 const Locations = () => {
   return (
-    <div className="bg-white px-34 p-8">
+    <div className="bg-white px-6 sm:px-6 md:px-12 lg:px-34 p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center mb-8">
           <div className="w-1 h-12 bg-purple-600 mr-4"></div>
@@ -40,15 +40,16 @@ const Locations = () => {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-4 gap-8">
           {locations.map((location, index) => (
             <div key={index} className="text-center group">
               <div className="relative overflow-hidden">
                 <img
                   src={location.imageSrc}
                   alt={location.altText}
-                  className="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                  className="w-full h-48 object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115"
                 />
+                <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-700"></div>
                 <div className="absolute top-2 left-2 bg-black bg-opacity-75 text-white text-xs font-semibold px-2 py-1 tracking-wider">
                   SATELLITE LOCATION
                 </div>

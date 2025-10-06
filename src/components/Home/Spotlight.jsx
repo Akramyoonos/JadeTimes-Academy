@@ -25,7 +25,7 @@ const InfoCard = ({ src, title, description, href }) => (
         alt={title}
         className="w-full h-96 object-cover pointer-events-none transition-transform duration-2000 ease-in-out group-hover:scale-115"
       />
-      <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
     </div>
     <div className="p-4">
       <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700">{title}</h3>
@@ -175,10 +175,10 @@ const Spotlight = () => {
             <div className="overflow-hidden relative">
               <img
                 alt="Smiling young people posing for a photo"
-                className="w-full h-full object-cover transform transition-transform duration-2500 group-hover:scale-115"
+                className="w-full h-full object-cover transform transition-transform duration-2000 group-hover:scale-115"
                 src={Spotlight7}
               />
-              <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
@@ -193,10 +193,10 @@ const Spotlight = () => {
           <a href="/online-programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Woman filming in front of a cathedral"
-              className="w-full h-full object-cover transform transition-transform duration-2500 group-hover:scale-115"
+              className="w-full h-full object-cover transform transition-transform duration-2000 group-hover:scale-115"
               src={Spotlight8}
             />
-            <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
                 <h3 className="text-white text-lg font-semibold tracking-wider">ONLINE PROGRAMS</h3>
@@ -210,10 +210,10 @@ const Spotlight = () => {
           <a href="/Degree-Programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"
-              className="w-full h-full object-cover transform transition-transform duration-2500 group-hover:scale-115"
+              className="w-full h-full object-cover transform transition-transform duration-2000 group-hover:scale-115"
               src={Spotlight9}
             />
-            <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/0 to-transparent flex items-end p-6">
               <div>
                 <h3 className="text-white text-lg font-semibold tracking-wider">JADE TIMES JOURNALS</h3>
@@ -227,10 +227,10 @@ const Spotlight = () => {
           <a href="/online-programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Woman filming in front of a cathedral"
-              className="w-full h-full object-cover transform transition-transform duration-2500 group-hover:scale-130"
+              className="w-full h-full object-cover transform transition-transform duration-2000 group-hover:scale-115"
               src={Spotlight10}
             />
-            <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
                 <h3 className="text-white text-lg font-semibold tracking-wider">JADE TIMES CONFERENCES</h3>

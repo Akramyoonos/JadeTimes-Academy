@@ -40,6 +40,7 @@ const degreePrograms = [
 const DegreeCard = ({ title, imageUrl, altText }) => (
     <div className="relative group overflow-hidden">
         <img src={imageUrl} alt={altText} className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
+        <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
         {/* Added bg-black for better text visibility */}
         <div className="absolute inset-0  bg-opacity-50 flex items-end p-6">
             <div>
@@ -61,7 +62,7 @@ const Degrees = () => {
     return (
         <div className="text-white">
             {/* Using responsive padding for better layout on different screen sizes */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-34 py-12">
 
                 <div className="flex items-center mb-8">
                     <div className="w-1.5 h-16 bg-yellow-400 mr-4"></div>

@@ -24,7 +24,8 @@ const Programs = () => {
             </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     <div className="relative group h-96 overflow-hidden">
-                        <img src={undergraduateDegree01} alt="Man operating a camera with dramatic lighting" className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                        <img src={undergraduateDegree01} alt="Man operating a camera with dramatic lighting" className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
+                        <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
                         <div className="absolute inset-0  bg-opacity-40 flex items-end p-8">
                             <h2 className="text-white text-2xl font-semibold">2-YEAR FILMMAKING PROGRAM</h2>
                         </div>
@@ -35,7 +36,8 @@ const Programs = () => {
                         </a>
                     </div>
                     <div className="relative group h-96 overflow-hidden">
-                        <img src={undergraduateDegree02} alt="Filming a scene with a professional camera and colorful smoke" className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                        <img src={undergraduateDegree02} alt="Filming a scene with a professional camera and colorful smoke" className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
+                        <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
                         <div className="absolute inset-0  bg-opacity-40 flex items-end p-8">
                             <h2 className="text-white text-2xl font-semibold">1-YEAR FILMMAKING PROGRAM</h2>
                         </div>

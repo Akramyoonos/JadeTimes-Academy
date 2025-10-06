@@ -1,5 +1,6 @@
 // src/components/CampusesAndLocations.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import worldMap from "../../assets/Images/campuses-map.jpg"; // your map image
 
 const BRAND_PINK = "#B52E8C";
@@ -8,31 +9,31 @@ const REGIONS = [
   {
     title: "NORTH AMERICA",
     items: [
-      { city: "New York City", tag: "JIU Agent Office" },
-      { city: "New Mexico", tag: "JIU Agent Office" },
+      { city: "New York City", tag: "JIU Agent Office", href: "/request-info/" },
+      { city: "New Mexico", tag: "JIU Agent Office", href: "/request-info/" },
     ],
   },
   {
     title: "EUROPE",
     items: [
-      { city: "Florence, Italy", tag: "JIU Agent Office" },
-      { city: "Paris, France", tag: "JIU Agent Office" },
-      { city: "Madrid, Spain", tag: "JIU Agent Office" },
+      { city: "Florence, Italy", tag: "JIU Agent Office", href: "/request-info/" },
+      { city: "Paris, France", tag: "JIU Agent Office", href: "/request-info/" },
+      { city: "Madrid, Spain", tag: "JIU Agent Office", href: "/request-info/" },
     ],
   },
   {
     title: "Asia-Pacific",
     items: [
-      { city: "Beijing, China", tag: "JIU Agent Office" },
-      { city: "Colombo, Sri Lanka", tag: "JIU Agent Office" },
-      { city: "Delhi, India", tag: "JIU Agent Office" },
+      { city: "Beijing, China", tag: "JIU Agent Office", href: "/request-info/" },
+      { city: "Colombo, Sri Lanka", tag: "JIU Agent Office", href: "/request-info/" },
+      { city: "Delhi, India", tag: "JIU Agent Office", href: "/request-info/" },
     ],
   },
   {
     title: "Middle East & Africa",
     items: [
-      { city: "Dubai, UAE", tag: "JIU Agent Office" },
-      { city: "Nairobi, Kenya", tag: "JIU Agent Office" },
+      { city: "Dubai, UAE", tag: "JIU Agent Office", href: "/request-info/" },
+      { city: "Nairobi, Kenya", tag: "JIU Agent Office", href: "/request-info/" },
     ],
   },
 ];
@@ -86,12 +87,12 @@ export default function CampusesAndLocations() {
                     className="group flex items-center justify-between py-4"
                   >
                     {/* City name changes to pink on hover (no underline) */}
-                    <a
-                      href="#"
+                    <Link
+                      to={item.href}
                       className="text-base sm:text-lg text-black transition-colors duration-200 group-hover:text-[#B52E8C] hover:text-[#B52E8C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B52E8C]"
                     >
                       {item.city}
-                    </a>
+                    </Link>
 
                     {/* Tag stays the same color */}
                     <span className="text-sm uppercase tracking-wide text-black/50">

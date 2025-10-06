@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faSnapchatGhost, faPinterest, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faPinterest, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 const CardsData4Article = () => {
     const [isCopied, setIsCopied] = useState(false);
-    
-        const handleCopyLink = () => {
-            navigator.clipboard.writeText(window.location.href);
+        
+            const handleCopyLink = () => {
+                 navigator.clipboard.writeText(window.location.href);
             setIsCopied(true);
             setTimeout(() => {
                 setIsCopied(false);
             }, 2000); // Reset the copied state after 2 seconds
-        };
+        }
 
     return (
         <div className="font-sans">
@@ -64,43 +64,42 @@ const CardsData4Article = () => {
             </div>
 
             {/* UPDATED FOOTER SECTION */}
-            <footer className="mb-22 pb-8 mt-8 pt-8">
-                {/* Added max-w-5xl and mx-auto to align with article, fixed lg padding */}
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    
-                    {/* 
-                      Mobile: flex-col (stack), items-center (center stack), gap-y-6 (space between stack)
-                      Desktop (sm+): sm:flex-row (side by side), sm:justify-between, sm:gap-y-0
-                    */}
-                    <div className="flex flex-col sm:flex-row justify-between items-center gap-y-6 sm:gap-y-0">
+                                <footer className="mb-22 pb-10 mt-8 pt-8">
+                                    {/* Added max-w-5xl and mx-auto to align with article, fixed lg padding */}
+                                    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                                        
+                                        {/* 
+                                          Mobile: flex-col (stack), items-center (center stack), gap-y-6 (space between stack)
+                                          Desktop (sm+): sm:flex-row (side by side), sm:justify-between, sm:gap-y-0
+                                        */}
+                                        <div className="flex flex-col sm:flex-row justify-between items-center gap-y-6 sm:gap-y-0">
+                                            
+                                            {/* SHARE and Icons Group */}
+                                            {/* Mobile: space-x-4 (tighter spacing), w-full justify-center (ensure centering) */}
+                                            {/* Desktop: sm:space-x-8 (original spacing), sm:w-auto sm:justify-start */}
+                                            <div className="flex items-center space-x-4 sm:space-x-8 w-full justify-center sm:w-auto sm:justify-start">
+                                                <span className="text-2xl font-semibold text-gray-600">SHARE</span>
+                                                <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
+                                                <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
+                                                <a href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faPinterest} /></a>
+                                                <a href={`https://api.whatsapp.com/send?text=${window.location.href}`} data-action="share/whatsapp/share" aria-label="WhatsApp" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faWhatsapp} /></a>
+                                                <button onClick={handleCopyLink} aria-label="Copy Link" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300 relative">
+                                                    <FontAwesomeIcon icon={faLink} />
+                                                    {isCopied && (
+                                                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-2xl  px-2 py-1 rounded">
+                                                            Copied!
+                                                        </span>
+                                                    )}
+                                                </button>
+                                            </div>
                         
-                        {/* SHARE and Icons Group */}
-                        {/* Mobile: space-x-4 (tighter spacing), w-full justify-center (ensure centering) */}
-                        {/* Desktop: sm:space-x-8 (original spacing), sm:w-auto sm:justify-start */}
-                        <div className="flex items-center space-x-4 sm:space-x-8 w-full justify-center sm:w-auto sm:justify-start">
-                                                    <span className="text-2xl font-semibold text-gray-600">SHARE</span>
-                                                    <a href="#" aria-label="Facebook" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
-                                                    <a href="#" aria-label="Twitter" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
-                                                    <a href="#" aria-label="Snapchat" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faSnapchatGhost} /></a>
-                                                    <a href="#" aria-label="Pinterest" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faPinterest} /></a>
-                                                    <a href={`https://api.whatsapp.com/send?text=${window.location.href}`} data-action="share/whatsapp/share" aria-label="WhatsApp" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faWhatsapp} /></a>
-                                                    <button onClick={handleCopyLink} aria-label="Copy Link" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300 relative">
-                                                        <FontAwesomeIcon icon={faLink} />
-                                                        {isCopied && (
-                                                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-2xl  px-2 py-1 rounded">
-                                                                Copied!
-                                                            </span>
-                                                        )}
-                                                    </button>
-                                                </div>
-
-                        {/* BY JIU Section */}
-                        <div>
-                            <span className="text-xl font-bold text-gray-600">BY JIU</span>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+                                            {/* BY JIU Section */}
+                                            <div>
+                                                <span className="text-2xl font-bold text-gray-600">BY JIU</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </footer>
         </div>
     );
 };
