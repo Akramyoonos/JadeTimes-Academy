@@ -140,12 +140,13 @@ const Footer = () => {
       <div className=" py-10 px-4 sm:px-10 lg:px-12 flex flex-col-reverse md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
         {/* Left text */}
         <div className="md:w-2/3">
-          <p>
-            <span className="text-gray-600">Copyright © 2024 Jadetimes International University(JIU) •</span>{" "}
-            <a href="/policy/" className="hover:text-blue-400 text-gray-400">
-              Privacy Policy
-            </a>
-          </p>
+          <div>
+            <span>Copyright © 2024 Jadetimes International University (JIU)</span>
+            <span className="mx-2">•</span>
+            <a href="/policy/" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+            <span className="mx-2">•</span>
+            <a href="/Terms-Conditions/" className="hover:text-blue-400 transition-colors">Terms & Conditions</a>
+          </div>
 
           <p className="mt-4 text-gray-600">
 

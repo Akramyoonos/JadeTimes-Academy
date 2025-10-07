@@ -69,6 +69,9 @@ import Degree2_Page from './pages/Degree2_Page';
 import Degree3_Page from './pages/Degree3_Page';
 import Degree4_Page from './pages/Degree4_Page';
 import Degree5_Page from './pages/Degree5_Page';
+import TermsConditions_Page from './pages/TermsConditions_Page';
+import CourseCatalogs_Page from './pages/CourseCatalogs_Page';
+import AcademicCalendar_Page from './pages/AcademicCalendar_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -176,6 +179,9 @@ function AppInner() {
             <Route path="/Advance-Scriptwriting/*" element={<Degree3_Page />} />
             <Route path="/Color-Grading-&-Correction/*" element={<Degree4_Page />} />
             <Route path="/Producing-&-Financing-Films/*" element={<Degree5_Page />} />
+            <Route path="/Terms-Conditions/*" element={<TermsConditions_Page />} />
+            <Route path="/Course-Catalogs/*" element={<CourseCatalogs_Page />} />
+            <Route path="/Academic-Calendar/*" element={<AcademicCalendar_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />

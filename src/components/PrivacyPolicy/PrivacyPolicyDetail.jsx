@@ -7,75 +7,115 @@ const PrivacyPolicyDetail = () => {
                 <div className="md:w-3/4 pr-8">
                     <div className="flex items-center mb-8">
                         <span className="w-1.5 h-16 bg-purple-600 mr-4"></span>
-                        <h1 className="text-3xl font-light">JIU AND FERPA</h1>
+                        <h1 className="text-3xl font-light">Privacy Policy</h1>
                     </div>
 
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-2xl font-light mb-4">Digital Privacy Statement of the New York Film Academy</h2>
-                            <h3 className="text-xl font-semibold mb-2">Digital Web and Mobile Privacy Statement</h3>
-                            <p className="text-gray-700">New York Film Academy (JIU) is committed to the right to privacy, including the digital privacy through web and mobile services. This privacy statement concerns the collection and use of information collected through official JIU websites and other digital channels.</p>
+                            <h2 className="text-2xl font-light mb-4">Privacy Policy – Jadetimes International University (JIU)</h2>
+                            <h3 className="text-xl font-semibold mb-2">Introduction</h3>
+                            <p className="text-gray-700">Jadetimes International University (JIU) values the privacy of all students, applicants, instructors, and website visitors. This Privacy Policy explains how we collect, use, and protect your personal information when you engage with our online learning platform, register for courses, or communicate with JIU. By using our website and enrolling in our programs, you consent to the terms of this Privacy Policy.</p>
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Gathering and Use of Information</h3>
-                            <h4 className="font-semibold text-gray-800 mb-1">Personally Identifiable Information</h4>
-                            <p className="text-gray-700 mb-4">Personally identifiable information (PII) will not be collected while you visit websites or other digital channels of the New York Film Academy unless voluntarily provided by you. You may be requested to provide personally identifiable information when accessing academic records, password-protected websites, joining mailing lists, or engaging in payment transactions with the Academy. This information may be used for related purposes, including responding to requests for information or services, or communicating information that may be of value or interest to you. Your information will not be shared by JIU with third parties.</p>
-
-                            <h4 className="font-semibold text-gray-800 mb-1">Non-Personally Identifiable Information</h4>
-                            <p className="text-gray-700">Depending on the type and use of your web browser, information may be given by your web browser and collected into server logs by the Academy while you visit JIU websites and other digital properties, including IP addresses. Standard information about your computer, including the type of web browser and operating system in use, may also be collected. Your usage of JIU websites and digital properties, such as pages visited, search queries, and length of visits, may also be collected. This information is non-personally identifiable information and can be used to help diagnose technical issues and suggest digital solutions for improving JIU websites and other digital channels.</p>
+                            <h3 className="text-xl font-semibold mb-2">Information We Collect</h3>
+                            <p className="text-gray-700">When you register for a course or interact with JIU, we may collect the following types of information:</p>
+                            <ul className="list-disc list-inside text-gray-700">
+                                <li>Personal details such as your name, email address, phone number, and country of residence.</li>
+                                <li>Academic or professional background details voluntarily provided during registration.</li>
+                                <li>Payment and billing details required for processing course fees.</li>
+                                <li>Technical information such as your IP address, browser type, and usage data when visiting our website.</li>
+                            </ul>
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Cookies</h3>
-                            <p className="text-gray-700 mb-4">Portions of JIU websites and digital properties may use "cookies," or the text files sometimes transferred to your digital device through your web browser. Cookies are used to save your preferences as well as to track statistics on usage of certain parts of JIU websites and other digital channels. The Academy's use of cookies does not involve the collection of personally identifiable information.</p>
-                            <p className="text-gray-700 mb-4">By changing the selection settings of your particular web browser, you have the option not to accept cookies and can block or restrict the use of cookies. Cookies already saved can also be deleted through your browser preferences & settings.</p>
-                            <p className="text-gray-700">You can choose not to accept cookies by selection settings on your web browser that block or restrict the use of cookies. You can also delete cookies that have been placed on your computer or device.</p>
+                            <h3 className="text-xl font-semibold mb-2">How We Use Your Information</h3>
+                            <p className="text-gray-700">The information we collect is used for the following purposes:</p>
+                            <ul className="list-disc list-inside text-gray-700">
+                                <li>To process your enrollment and provide access to course materials.</li>
+                                <li>To issue certificates upon successful course completion.</li>
+                                <li>To manage payments, billing, and financial records.</li>
+                                <li>To communicate important course updates, schedules, and announcements.</li>
+                                <li>To improve our website, online platforms, and overall learning experience.</li>
+                                <li>To comply with applicable business, legal, and regulatory requirements.</li>
+                            </ul>
                         </div>
                         
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Sharing Your Information</h3>
-                            <p className="text-gray-700 mb-4">Any personally identifiable information collected by JIU will not be shared, sold, or rented out to third parties and will be treated in compliance with federal and state laws and regulations concerning PII and digital privacy. JIU does not share any personal information, including SMS opt-in consent, with any third-party organizations.</p>
-                            <p className="text-gray-700">In cases when JIU has personally identifiable information (PII) about you, we will not sell, rent, or share that PII and will treat it in compliance with federal and state laws and regulations.</p>
+                            <h3 className="text-xl font-semibold mb-2">Sharing of Information</h3>
+                            <p className="text-gray-700 mb-4">JIU does not sell, rent, or trade your personal information to third parties. We may share your information only under the following circumstances:</p>
+                            <ul className="list-disc list-inside text-gray-700">
+                                <li>With authorized JIU agents who assist with student guidance and enrollment support.</li>
+                                <li>With payment service providers for secure fee processing.</li>
+                                <li>When required by law or to comply with a legal process.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2">Data Security</h3>
+                            <p className="text-gray-700">JIU takes reasonable measures to safeguard your personal data from unauthorized access, disclosure, or misuse. All sensitive payment information is handled through secure, third-party payment gateways such as PayPal or equivalent providers. While we make every effort to ensure the security of your data, no system is completely foolproof, and JIU cannot guarantee absolute protection against cyber risks.</p>
                         </div>
                         
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Advertising</h3>
-                            <p className="text-gray-700">JIU may work with third party vendors to show our advertisements on non-JIU websites and digital properties. JIU and third party vendors with whom we contract may use cookies and web beacons to serve our ads based on your prior visit(s) to JIU websites and digital properties and to assess the effectiveness of our ads. This is also called Targeted Advertising or Interest-Based Advertising.</p>
+                            <h3 className="text-xl font-semibold mb-2">Cookies and Website Usage</h3>
+                            <p className="text-gray-700">Our website may use cookies to enhance user experience, track engagement, and improve services. Cookies are small files stored on your device that help us understand how visitors use our site. You may disable cookies in your browser settings, but this may affect site functionality.</p>
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Security</h3>
-                            <p className="text-gray-700">JIU takes digital privacy very seriously and is committed to maintaining reasonable physical, technical and administrative procedures to secure and safeguard all information collected by the Academy, including from loss, misuse, or alteration of the information. This includes the use of encryption when collecting or transferring sensitive data such as credit card information. Please be aware that despite our best care and efforts, JIU cannot provide an absolute guarantee as to the security of any information transmitted and collected through JIU digital services, and any information shared will be done so at your own risk.</p>
+                            <h3 className="text-xl font-semibold mb-2">Student Rights</h3>
+                            <p className="text-gray-700">Students have the right to:</p>
+                            <ul className="list-disc list-inside text-gray-700">
+                                <li>Request access to the personal information we hold about them.</li>
+                                <li>Request corrections or updates to their information.</li>
+                                <li>Request deletion of their information, subject to legal and operational requirements.</li>
+                                <li>Opt out of marketing or promotional communications at any time.</li>
+                            </ul>
                         </div>
 
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Changes to this Privacy Statement</h3>
-                            <p className="text-gray-700">JIU reserves the right to alter or modify this privacy statement in whole or in part at any time. A modified policy would be posted on this page with an accurate and updated effective date.</p>
+                            <h3 className="text-xl font-semibold mb-2">Third-Party Links</h3>
+                            <p className="text-gray-700">Our website may contain links to external websites or services. JIU is not responsible for the privacy practices or content of third-party sites. We encourage students to review the privacy policies of those websites before providing any personal information.</p>
                         </div>
 
                         <div>
-                            <h3 className="text-lg sm:text-xl font-semibold mb-2">Questions</h3>
-                            <p className="text-gray-700">Any questions regarding the digital web and mobile privacy practices of the New York Film Academy can be made to <a href="mailto:support@JIU.edu" className="text-purple-600">support@JIU.edu</a>.</p>
+                            <h3 className="text-xl font-semibold mb-2">Retention of Data</h3>
+                            <p className="text-gray-700">JIU will retain student and enrollment data for as long as necessary to fulfill academic, financial, and legal obligations. Data may be securely archived after course completion but will not be used for purposes beyond those described in this Privacy Policy.</p>
                         </div>
 
-                        <div className="pt-4">
-                            <p className="text-gray-700 font-semibold">Effective Date: May 21, 2018</p>
+                        <div>
+                            <h3 className="text-xl font-semibold mb-2">Updates to Privacy Policy</h3>
+                            <p className="text-gray-700">JIU reserves the right to update or modify this Privacy Policy at any time. Changes will be posted on our official website, and continued use of JIU services will constitute acceptance of the revised policy.</p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-lg sm:text-xl font-semibold mb-2">Contact Information</h3>
+                            <p className="text-gray-700">If you have any questions or concerns regarding this Privacy Policy or the handling of your personal data, you may contact us directly at:</p>
+                            <p className="text-gray-700"><a href="mailto:info@jadetimesuniversity.com" className="text-purple-600">📧 info@jadetimesuniversity.com</a></p>
                         </div>
                     </div>
                 </div>
-                <div className="md:w-1/4 mt-8 md:mt-0">
-                    <div className="bg-gray-100 p-6">
-                        <h3 className="font-semibold mb-4">RELATED LINKS</h3>
-                        <ul className="space-y-3">
-                            <li><a href="#" className="text-gray-700 hover:text-black">ABOUT US</a></li>
-                            <li><hr className="border-gray-300" /></li>
-                            <li><a href="#" className="text-gray-700 hover:text-black">CONTACT US</a></li>
-                            <li><hr className="border-gray-300" /></li>
-                            <li><a href="#" className="text-gray-700 hover:text-black">EXPLORE OUR PROGRAMS</a></li>
-                        </ul>
-                    </div>
-                </div>
+                {/* Right Sidebar */}
+          <aside className="w-full lg:w-80 flex-shrink-0  mt-6 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="bg-gray-200 p-4 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold uppercase text-black">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                ABOUT US
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                CONTACT US
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                EXPLORE OUR PROGRAMS
+              </a>
+            </nav>
+          </div>
+        </aside>
+
             </div>
         </div>
     );
