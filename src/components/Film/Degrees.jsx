@@ -7,42 +7,47 @@ import undergraduateDegree03 from '../../assets/Images/undergraduateDegree03.jpe
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-// Data for the degree programs
+// --- CHANGE: Added href property to each degree program ---
 const degreePrograms = [
     {
         title: "The Art of Visual Storytelling",
         imageUrl: GraduateDegree01,
-        altText: "A woman operating a large film camera."
+        altText: "A woman operating a large film camera.",
+        href: "/The-Art-of-Visual-Storytelling/"
     },
     {
         title: "History of Cinema",
         imageUrl: GraduateDegree02,
-        altText: "A man in a denim jacket operating a film camera on a tripod in a smoky room."
+        altText: "A man in a denim jacket operating a film camera on a tripod in a smoky room.",
+        href: "/History-of-Cinema/"
     },
     {
         title: "Advance Scriptwriting ",
         imageUrl: undergraduateDegree01,
-        altText: "A person with two-tone hair wearing a striped shirt operating a camera."
+        altText: "A person with two-tone hair wearing a striped shirt operating a camera.",
+        href: "/Advance-Scriptwriting/"
     },
     {
         title: "Color Grading & Correction",
         imageUrl: undergraduateDegree02,
-        altText: "Silhouettes of a film crew in a dimly lit room with a boom mic."
+        altText: "Silhouettes of a film crew in a dimly lit room with a boom mic.",
+        href: "/Color-Grading-&-Correction/"
     },
     {
         title: "Producing & Financing Films",
         imageUrl: undergraduateDegree03,
-        altText: "A man in a white t-shirt looking intently at the viewfinder of a RED camera."
+        altText: "A man in a white t-shirt looking intently at the viewfinder of a RED camera.",
+        href: "/Producing-&-Financing-Films/"
     },
 ];
 
-// Reusable component for each degree card
-const DegreeCard = ({ title, imageUrl, altText }) => (
-    <div className="relative group overflow-hidden">
+// --- CHANGE: Updated DegreeCard to be a clickable link ---
+// It now accepts an `href` prop and is wrapped in an anchor `<a>` tag.
+const DegreeCard = ({ title, imageUrl, altText, href }) => (
+    <a href={href} className="relative group overflow-hidden block">
         <img src={imageUrl} alt={altText} className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
         <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
-        {/* Added bg-black for better text visibility */}
-        <div className="absolute inset-0  bg-opacity-50 flex items-end p-6">
+        <div className="absolute inset-0 bg-opacity-50 flex items-end p-6">
             <div>
                 <h2 className="text-xl uppercase font-semibold">{title}</h2>
                 <div className="absolute top-4 right-4 w-10 h-10 border-2 border-cyan-400 rounded-full flex items-center justify-center text-cyan-400 text-2xl font-thin">
@@ -50,18 +55,16 @@ const DegreeCard = ({ title, imageUrl, altText }) => (
                 </div>
             </div>
         </div>
-    </div>
+    </a>
 );
 
 
 const Degrees = () => {
-    // --- CHANGE: Split the array into two parts for a 3x2 layout ---
     const firstRowDegrees = degreePrograms.slice(0, 3);
     const secondRowDegrees = degreePrograms.slice(3, 5);
 
     return (
         <div className="text-white">
-            {/* Using responsive padding for better layout on different screen sizes */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-34 py-12">
 
                 <div className="flex items-center mb-8">
@@ -86,28 +89,29 @@ const Degrees = () => {
                 </div>
             </div>
 
-            {/* --- CHANGE: Using two separate grid containers for each row --- */}
             <div>
                 {/* First row with 3 items */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-2">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-2 h-140 sm:h-80 md:h-80">
                     {firstRowDegrees.map((degree) => (
                         <DegreeCard
                             key={degree.title}
                             title={degree.title}
                             imageUrl={degree.imageUrl}
                             altText={degree.altText}
+                            href={degree.href} // --- CHANGE: Passed href prop ---
                         />
                     ))}
                 </div>
 
                 {/* Second row with 2 items */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 h-80">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 h-120 sm:h-100 md:h-100">
                     {secondRowDegrees.map((degree) => (
                         <DegreeCard
                             key={degree.title}
                             title={degree.title}
                             imageUrl={degree.imageUrl}
                             altText={degree.altText}
+                            href={degree.href} // --- CHANGE: Passed href prop ---
                         />
                     ))}
                 </div>

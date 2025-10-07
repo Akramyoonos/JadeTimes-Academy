@@ -102,7 +102,7 @@ const Faculty = () => {
             <div
               key={faculty.id}
               // --- UPDATED: Removed fixed width (w-86) ---
-              className="group bg-white shadow-lg overflow-hidden transform transition-transform duration-300 "
+              className="group bg-white shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl  "
             >
               <div className="relative h-80">
                 <img
@@ -130,7 +130,7 @@ const Faculty = () => {
           {/* --- UPDATED: Removed fixed width/height and added classes to align with other cards --- */}
           <a
             href="/faculty-directory/"
-            className="bg-gray-50 flex flex-col items-center justify-center text-center p-6 transition-transform duration-300 hover:shadow-xl border rounded-lg min-h-[450px]"
+            className="bg-gray-50 flex flex-col items-center justify-center text-center p-6 transition-transform duration-300 hover:shadow-xl  min-h-[450px]"
           >
             <div className="text-center">
               <div className="w-16 h-16 rounded-full border-2 border-blue-500 flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110">

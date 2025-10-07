@@ -134,7 +134,7 @@ const DegreesCertificatesandWorkshops = () => {
                               <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500 transition-colors">
                                 Open House
                               </a>
-                              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500 transition-colors">
+                              <a href="/degree-programs" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500 transition-colors">
                                 Degree Programs
                               </a>
                               <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500 transition-colors">
@@ -144,7 +144,7 @@ const DegreesCertificatesandWorkshops = () => {
                           </div>
                           
                           {/* --- UPDATED: Changed order and margin classes to start from md breakpoint --- */}
-                          <div className="relative h-80 sm:h-96 md:h-120 md:w-66 group hover:shadow-xl overflow-hidden order-1 md:order-2 md:mt-10">
+                          <div className="relative h-80 sm:h-96 md:h-120 md:w-66 lg:w-80 group hover:shadow-xl overflow-hidden order-1 md:order-2 md:mt-10">
                                 <img
                                     src={ourStudents01}
                                     alt="Filmmaker with a professional camera"

@@ -64,6 +64,11 @@ import CardsData5_Page from './pages/CardsData5_Page';
 import CardsData6_Page from './pages/CardsData6_Page';
 import CardsData7_Page from './pages/CardsData7_Page';
 import CardsData8_Page from './pages/CardsData8_Page';
+import Degree1_Page from './pages/Degree1_Page';
+import Degree2_Page from './pages/Degree2_Page';
+import Degree3_Page from './pages/Degree3_Page';
+import Degree4_Page from './pages/Degree4_Page';
+import Degree5_Page from './pages/Degree5_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -166,6 +171,11 @@ function AppInner() {
             <Route path="/How-Jadetimes-University-Launches-Students-Into-Industry/*" element={<CardsData6_Page />} />
             <Route path="/cards-data7/*" element={<CardsData7_Page />} />
             <Route path="/cards-data8/*" element={<CardsData8_Page />} />
+            <Route path="/The-Art-of-Visual-Storytelling/*" element={<Degree1_Page />} />
+            <Route path="/History-of-Cinema/*" element={<Degree2_Page />} />
+            <Route path="/Advance-Scriptwriting/*" element={<Degree3_Page />} />
+            <Route path="/Color-Grading-&-Correction/*" element={<Degree4_Page />} />
+            <Route path="/Producing-&-Financing-Films/*" element={<Degree5_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
