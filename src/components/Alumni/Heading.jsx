@@ -1,5 +1,5 @@
 import React from 'react';
-import AlumniHeadingImage from '../../assets/Images/AlumniHeadingImage.jpeg'; // Assuming this is the correct image
+import AlumniHeadingImage from '../../assets/Images/AlumniHeadingImage.webp'; // Assuming this is the correct image
 
 const Heading = () => {
     return (

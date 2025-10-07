@@ -1,8 +1,8 @@
 
 import React from 'react';
-import Campus01 from '../../assets/Images/Campus01.jpeg';
-import Campus02 from '../../assets/Images/Campus02.jpeg';
-import Campus03 from '../../assets/Images/Campus03.jpeg';
+import Campus01 from '../../assets/Images/Campus01.webp';
+import Campus02 from '../../assets/Images/Campus02.webp';
+import Campus03 from '../../assets/Images/Campus03.webp';
 
 const CampusSection = () => {
   return (

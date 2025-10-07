@@ -72,6 +72,7 @@ import Degree5_Page from './pages/Degree5_Page';
 import TermsConditions_Page from './pages/TermsConditions_Page';
 import CourseCatalogs_Page from './pages/CourseCatalogs_Page';
 import AcademicCalendar_Page from './pages/AcademicCalendar_Page';
+import JobPositions_Page from './pages/JobPositions_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -182,6 +183,7 @@ function AppInner() {
             <Route path="/Terms-Conditions/*" element={<TermsConditions_Page />} />
             <Route path="/Course-Catalogs/*" element={<CourseCatalogs_Page />} />
             <Route path="/Academic-Calendar/*" element={<AcademicCalendar_Page />} />
+            <Route path="/Job-Positions/*" element={<JobPositions_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />

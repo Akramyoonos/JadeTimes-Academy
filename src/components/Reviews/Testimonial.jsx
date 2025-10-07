@@ -1,8 +1,8 @@
 // src/components/Testimonial.jsx
 import React, { useState } from "react";
-import testimonialImage1 from "../../assets/Images/Testimonial01.png";
-import testimonialImage2 from "../../assets/Images/Testimonial02.png";
-import testimonialImage3 from "../../assets/Images/Testimonial03.png";
+import testimonialImage1 from "../../assets/Images/Testimonial01.webp";
+import testimonialImage2 from "../../assets/Images/Testimonial02.webp";
+import testimonialImage3 from "../../assets/Images/Testimonial03.webp";
 
 const Testimonial = () => {
   const testimonials = [

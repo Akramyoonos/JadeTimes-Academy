@@ -1,5 +1,5 @@
 import React from 'react'
-import FacultyDirectoryHeadingImage from '../../assets/Images/FacultyDirectory01.jpeg'; // Assuming this is the correct image
+import FacultyDirectoryHeadingImage from '../../assets/Images/FacultyDirectory01.webp'; // Assuming this is the correct image
 
 const Heading = () => {
   return (

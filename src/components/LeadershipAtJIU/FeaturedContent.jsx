@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import FeaturedContentImage1 from "../../assets/Images/FeaturedContent.jpeg"; 
-import FeaturedContentImage2 from "../../assets/Images/AlumniExplore01.jpeg"; 
-import FeaturedContentImage3 from "../../assets/Images/AlumniExplore03.jpeg"; 
-import FeaturedContentImage4 from "../../assets/Images/AlumniExplore02.jpeg";
-import FeaturedContentImage5 from "../../assets/Images/Campus01.jpeg";
+import FeaturedContentImage1 from "../../assets/Images/FeaturedContent.webp"; 
+import FeaturedContentImage2 from "../../assets/Images/AlumniExplore01.webp"; 
+import FeaturedContentImage3 from "../../assets/Images/AlumniExplore03.webp"; 
+import FeaturedContentImage4 from "../../assets/Images/AlumniExplore02.webp";
+import FeaturedContentImage5 from "../../assets/Images/Campus01.webp";
 
 const FeaturedContent = () => {
   const scrollContainer = useRef(null);

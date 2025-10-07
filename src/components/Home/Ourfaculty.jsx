@@ -1,7 +1,7 @@
 import React from 'react';
-import ourfaculty1 from '../../assets/Images/ourfaculty1.png';
-import ourfaculty2 from '../../assets/Images/ourfaculty2.png';
-import ourfaculty3 from '../../assets/Images/ourfaculty3.png';
+import ourfaculty1 from '../../assets/Images/ourfaculty1.webp';
+import ourfaculty2 from '../../assets/Images/ourfaculty2.webp';
+import ourfaculty3 from '../../assets/Images/ourfaculty3.webp';
 
 // --- Data ---
 // In a real application, this data would likely be fetched from an API.

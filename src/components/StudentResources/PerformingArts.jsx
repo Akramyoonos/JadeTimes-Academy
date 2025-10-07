@@ -1,6 +1,6 @@
 import React from 'react'
-import PartnershipImg01 from '../../assets/Images/PaetnershipImg01.jpeg';
-import PartnershipImg02 from '../../assets/Images/PaetnershipImg02.jpeg';
+import PartnershipImg01 from '../../assets/Images/PaetnershipImg01.webp';
+import PartnershipImg02 from '../../assets/Images/PaetnershipImg02.webp';
 
 const PerformingArts = () => {
   return (

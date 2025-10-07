@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { useSearch } from "../../context/SearchContext";
 import { useNavigate } from "react-router-dom";
 
-import logo from "../../assets/Images/Logo.png";
-import Campus03Image from "../../assets/Images/Campus03.jpeg";
-import AcadamicImage from "../../assets/Images/Resources and Information02.jpeg";
+import logo from "../../assets/Images/Logo.webp";
+import Campus03Image from "../../assets/Images/Campus03.webp";
+import AcadamicImage from "../../assets/Images/Resources and Information02.webp";
 
 // ---------------- ICONS ----------------
 // Inlined SVG icons to replace the FontAwesome package which was causing errors.
@@ -209,6 +209,7 @@ const megaMenus = {
       { text: "PROGRAM DATES", href: "/youth/youth-admissions/program-dates" },
       { text: "TUITION", href: "/youth/youth-admissions/tuition" },
       { text: "International Contests", href: "/youth/youth-admissions/youth-open-houses" },
+      { text: "JOBS", href: "/Job-Positions/" },
     ],
     "LOCATIONS": [
       { text: "ONLINE", href: "/campuses/campuses/online",  },

@@ -1,9 +1,9 @@
 import React from 'react';
-import GraduateDegree01 from '../../assets/Images/GraduateDegree01.jpeg';
-import GraduateDegree02 from '../../assets/Images/GraduateDegree02.jpeg';
-import undergraduateDegree01 from '../../assets/Images/undergraduateDegree01.jpeg';
-import undergraduateDegree02 from '../../assets/Images/undergraduateDegree02.jpeg';
-import undergraduateDegree03 from '../../assets/Images/undergraduateDegree03.jpeg';
+import GraduateDegree01 from '../../assets/Images/GraduateDegree01.webp';
+import GraduateDegree02 from '../../assets/Images/GraduateDegree02.webp';
+import undergraduateDegree01 from '../../assets/Images/undergraduateDegree01.webp';
+import undergraduateDegree02 from '../../assets/Images/undergraduateDegree02.webp';
+import undergraduateDegree03 from '../../assets/Images/undergraduateDegree03.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 

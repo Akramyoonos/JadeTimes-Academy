@@ -1,5 +1,5 @@
 import React from 'react';
-import backgroundImageUrl from '../../assets/Images/StudentResourceHeading.jpeg';
+import backgroundImageUrl from '../../assets/Images/StudentResourceHeading.webp';
 
 const Heading = () => {
 

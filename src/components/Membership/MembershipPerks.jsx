@@ -1,7 +1,7 @@
 import React from "react";
-import icon1 from "../../assets/Images/facultyDataImages04.png";
-import icon2 from "../../assets/Images/facultyDataImages04.png";
-import icon3 from "../../assets/Images/facultyDataImages04.png";
+import icon1 from "../../assets/Images/facultyDataImages04.webp";
+import icon2 from "../../assets/Images/facultyDataImages04.webp";
+import icon3 from "../../assets/Images/facultyDataImages04.webp";
 
 const MembershipPerks = () => {
   return (

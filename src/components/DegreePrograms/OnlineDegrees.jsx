@@ -1,5 +1,5 @@
 import React from 'react';
-import onlineDegreeImage from '../../assets/Images/onlineDegreeImage.jpeg';
+import onlineDegreeImage from '../../assets/Images/onlineDegreeImage.webp';
 
 const OnlineDegrees = () => {
   return (

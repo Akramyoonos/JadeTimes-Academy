@@ -1,19 +1,19 @@
 import React from "react";
 import Card from "./Card";
 
-import undergraduateDegree01 from "../../assets/Images/undergraduateDegree01.jpeg";
-import undergraduateDegree02 from "../../assets/Images/undergraduateDegree02.jpeg";
-import undergraduateDegree03 from "../../assets/Images/undergraduateDegree03.jpeg";
-import GraduateDegree01 from "../../assets/Images/GraduateDegree01.jpeg";
-import GraduateDegree02 from "../../assets/Images/GraduateDegree02.jpeg";
-import Campus01 from "../../assets/Images/Campus01.jpeg";
-import Campus02 from "../../assets/Images/Campus02.jpeg";
-import Campus03 from "../../assets/Images/Campus03.jpeg";
-import onlineDegreeImage from "../../assets/Images/onlineDegreeImage.jpeg";
-import events01 from "../../assets/Images/events01.jpeg";
-import Spotlight01 from "../../assets/Images/Spotlight 01.jpeg";
-import Spotlight02 from "../../assets/Images/Spotlight 02.png";
-import Spotlight03 from "../../assets/Images/Spotlight 03.png";
+import undergraduateDegree01 from "../../assets/Images/undergraduateDegree01.webp";
+import undergraduateDegree02 from "../../assets/Images/undergraduateDegree02.webp";
+import undergraduateDegree03 from "../../assets/Images/undergraduateDegree03.webp";
+import GraduateDegree01 from "../../assets/Images/GraduateDegree01.webp";
+import GraduateDegree02 from "../../assets/Images/GraduateDegree02.webp";
+import Campus01 from "../../assets/Images/Campus01.webp";
+import Campus02 from "../../assets/Images/Campus02.webp";
+import Campus03 from "../../assets/Images/Campus03.webp";
+import onlineDegreeImage from "../../assets/Images/onlineDegreeImage.webp";
+import events01 from "../../assets/Images/events01.webp";
+import Spotlight01 from "../../assets/Images/Spotlight 01.webp";
+import Spotlight02 from "../../assets/Images/Spotlight 02.webp";
+import Spotlight03 from "../../assets/Images/Spotlight 03.webp";
 
 const TrainingSection = () => {
   const programs = [

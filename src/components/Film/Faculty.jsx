@@ -6,8 +6,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // Hint: Make sure to import your images correctly
-import facultyDataImages01 from "../../assets/Images/facultyDataImages01.jpeg";
-import facultyDataImages02 from "../../assets/Images/facultyDataImages02.jpeg";
+import facultyDataImages01 from "../../assets/Images/facultyDataImages01.webp";
+import facultyDataImages02 from "../../assets/Images/facultyDataImages02.webp";
 
 // --- Reusable Modal Component ---
 const FacultyModal = ({ faculty, onClose }) => {

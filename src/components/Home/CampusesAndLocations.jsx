@@ -1,7 +1,7 @@
 // src/components/CampusesAndLocations.jsx
 import React from "react";
 import { Link } from "react-router-dom";
-import worldMap from "../../assets/Images/campuses-map.jpg"; // your map image
+import worldMap from "../../assets/Images/campuses-map.webp"; // your map image
 
 const BRAND_PINK = "#B52E8C";
 

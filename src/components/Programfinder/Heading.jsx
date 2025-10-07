@@ -1,5 +1,5 @@
 import React from 'react';
-import headingImage from '../../assets/Images/ProgramFinderHeading.jpg';
+import headingImage from '../../assets/Images/ProgramFinderHeading.webp';
 
 const Heading = () => {
   return (

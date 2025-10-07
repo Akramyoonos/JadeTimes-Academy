@@ -9,10 +9,10 @@ import YouthImage from '../../assets/Images/Spotlight 03.Webp';
 import VirtualImage from '../../assets/Images/Spotlight 04.Webp';
 import YouthImage1 from '../../assets/Images/Spotlight 05.Webp';
 import YouthImage2 from '../../assets/Images/Spotlight 06.Webp';
-import Spotlight7 from '../../assets/Images/Spotlight 07.jpeg';
-import Spotlight8 from '../../assets/Images/Spotlight 09.jpeg';
-import Spotlight9 from '../../assets/Images/Spotlight 05.jpeg';
-import Spotlight10 from '../../assets/Images/Spotlight 06.jpeg';
+import Spotlight7 from '../../assets/Images/Spotlight 07.webp';
+import Spotlight8 from '../../assets/Images/Spotlight 09.webp';
+import Spotlight9 from '../../assets/Images/Spotlight 05.webp';
+import Spotlight10 from '../../assets/Images/Spotlight 06.webp';
 
 
 // CHANGE 1: Created a new Card component to match the style in the image.

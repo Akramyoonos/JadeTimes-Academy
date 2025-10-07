@@ -8,12 +8,12 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import AboutHeading from '../../assets/Images/AboutHeading.Webp';
 import AboutWelcome from '../../assets/Images/AboutWelcome.Webp';
 import AlumniExplore01 from '../../assets/Images/AlumniExplore01.Webp';
-import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
-import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
+import AlumniExplore02 from '../../assets/Images/AlumniExplore02.webp';
+import AlumniExplore03 from '../../assets/Images/AlumniExplore03.webp';
 import BlogHeadingImg from '../../assets/Images/BlogHeadingImg.Webp';
-import BlogSearchImg from '../../assets/Images/BlogSearchImg.jpeg';
-import Campus01 from '../../assets/Images/Campus01.jpeg';
-import Campus02 from '../../assets/Images/Campus02.jpeg';
+import BlogSearchImg from '../../assets/Images/BlogSearchImg.webp';
+import Campus01 from '../../assets/Images/Campus01.webp';
+import Campus02 from '../../assets/Images/Campus02.webp';
 
 // Create a map from image names to imported images
 const imageMap = {

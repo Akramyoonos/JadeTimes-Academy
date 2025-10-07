@@ -1,7 +1,7 @@
 import React from 'react';
-import campusImages01 from '../../assets/Images/Campus01.jpeg';
-import campusImages02 from '../../assets/Images/Campus02.jpeg';
-import campusImages03 from '../../assets/Images/Campus03.jpeg';
+import campusImages01 from '../../assets/Images/Campus01.webp';
+import campusImages02 from '../../assets/Images/Campus02.webp';
+import campusImages03 from '../../assets/Images/Campus03.webp';
 
 // Data for the campus cards
 const campusData = [

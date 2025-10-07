@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-import facultyDataImages01 from '../../assets/Images/facultyDataImages01.jpeg';
-import facultyDataImages02 from '../../assets/Images/facultyDataImages02.jpeg';
-import facultyDataImages03 from '../../assets/Images/facultyDataImages03.jpeg';
-import facultyDataImages04 from '../../assets/Images/facultyDataImages04.png';
-import facultyDataImages05 from '../../assets/Images/facultyDataImages05.png';
-import facultyDataImages06 from '../../assets/Images/facultyDataImages06.jpeg';
-import facultyDataImages07 from '../../assets/Images/facultyDataImages07.png';
-import facultyDataImages08 from '../../assets/Images/facultyDataImages08.jpeg';
-import facultyDataImages09 from '../../assets/Images/facultyDataImages09.jpeg';
-import facultyDataImages10 from '../../assets/Images/facultyDataImages10.jpeg';
-import facultyDataImages11 from '../../assets/Images/facultyDataImages11.jpeg';
-import facultyDataImages12 from '../../assets/Images/facultyDataImages12.jpeg';
-import facultyDataImages13 from '../../assets/Images/facultyDataImages13.jpeg';
-import facultyDataImages14 from '../../assets/Images/facultyDataImages14.jpeg';
-import facultyDataImages15 from '../../assets/Images/facultyDataImages15.png';
-import facultyDataImages16 from '../../assets/Images/facultyDataImages16.jpeg';
+import facultyDataImages01 from '../../assets/Images/facultyDataImages01.webp';
+import facultyDataImages02 from '../../assets/Images/facultyDataImages02.webp';
+import facultyDataImages03 from '../../assets/Images/facultyDataImages03.webp';
+import facultyDataImages04 from '../../assets/Images/facultyDataImages04.webp';
+import facultyDataImages05 from '../../assets/Images/facultyDataImages05.webp';
+import facultyDataImages06 from '../../assets/Images/facultyDataImages06.webp';
+import facultyDataImages07 from '../../assets/Images/facultyDataImages07.webp';
+import facultyDataImages08 from '../../assets/Images/facultyDataImages08.webp';
+import facultyDataImages09 from '../../assets/Images/facultyDataImages09.webp';
+import facultyDataImages10 from '../../assets/Images/facultyDataImages10.webp';
+import facultyDataImages11 from '../../assets/Images/facultyDataImages11.webp';
+import facultyDataImages12 from '../../assets/Images/facultyDataImages12.webp';
+import facultyDataImages13 from '../../assets/Images/facultyDataImages13.webp';
+import facultyDataImages14 from '../../assets/Images/facultyDataImages14.webp';
+import facultyDataImages15 from '../../assets/Images/facultyDataImages15.webp';
+import facultyDataImages16 from '../../assets/Images/facultyDataImages16.webp';
 
 const initialFacultyData = [
     { id: 1, name: 'Michael J. Young', title: 'President/CEO', imageUrl: facultyDataImages01, areaOfStudy: 'Administration', link: '/blog' },

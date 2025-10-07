@@ -1,5 +1,5 @@
 import React from 'react'
-import CareerAndAlumniServicesHeadingImage from '../../assets/Images/CareerAndAlumniServicesHeadingImage.jpeg'
+import CareerAndAlumniServicesHeadingImage from '../../assets/Images/CareerAndAlumniServicesHeadingImage.webp'
 
 const Heading = () => {
   return (

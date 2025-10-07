@@ -11,8 +11,8 @@ import Icon9 from '../../assets/Images/Icon9.webp';
 import Icon10 from '../../assets/Images/Icon10.webp';
 import AboutHeading1 from '../../assets/Images/AboutHeading.webp';
 import AboutHeading2 from '../../assets/Images/AboutHeading.webp';
-import AboutHeading3 from '../../assets/Images/Campus01.jpeg';
-import AboutHeading4 from '../../assets/Images/Campus03.jpeg';
+import AboutHeading3 from '../../assets/Images/Campus01.webp';
+import AboutHeading4 from '../../assets/Images/Campus03.webp';
 
 const Spotlight = () => {
     const slides = [

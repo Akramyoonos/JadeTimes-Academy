@@ -15,18 +15,16 @@ const Home_page = () => {
   return (
     <div className="flex flex-col">
       
-        <VideoHeading
-          subtitle={<></>}
-          altText="People working on film editing software on multiple monitors in a dimly lit room"
-        />
+        <VideoHeading/>
       
         <SearchProgramsBy />
       
         <IntroAfterSearch />
-      
-        <CampusesAndLocations />
 
         <JIUExperience />
+              
+        <CampusesAndLocations />
+
 
         <Spotlight />
 

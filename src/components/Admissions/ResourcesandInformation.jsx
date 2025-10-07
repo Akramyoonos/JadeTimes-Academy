@@ -2,13 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-import resourceImg1 from '../../assets/Images/Resources and Information01.jpeg';
-import resourceImg2 from '../../assets/Images/Resources and Information02.jpeg';
-import resourceImg3 from '../../assets/Images/Resources and Information03.jpeg';
-import resourceImg4 from '../../assets/Images/Resources and Information04.jpeg';
-import resourceImg5 from '../../assets/Images/Resources and Information05.jpeg';
-import resourceImg6 from '../../assets/Images/Resources and Information06.jpeg';
-import resourceImg7 from '../../assets/Images/Resources and Information07.jpeg';
+import resourceImg1 from '../../assets/Images/Resources and Information01.webp';
+import resourceImg2 from '../../assets/Images/Resources and Information02.webp';
+import resourceImg3 from '../../assets/Images/Resources and Information03.webp';
+import resourceImg4 from '../../assets/Images/Resources and Information04.webp';
+import resourceImg5 from '../../assets/Images/Resources and Information05.webp';
+import resourceImg6 from '../../assets/Images/Resources and Information06.webp';
+import resourceImg7 from '../../assets/Images/Resources and Information07.webp';
 
 const resourceData = [
     {

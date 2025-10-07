@@ -1,5 +1,5 @@
 import React from 'react'
-import AboutHeading from "../../assets/Images/membership-banner-1920x425-1.jpeg";
+import AboutHeading from "../../assets/Images/membership-banner-1920x425-1.webp";
 
 const Heading = () => {
   return (

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import AboutHeading1 from '../../../assets/Images/AboutHeading.webp';
 import AboutHeading2 from '../../../assets/Images/AboutHeading.webp';
-import AboutHeading3 from '../../../assets/Images/Campus01.jpeg';
-import AboutHeading4 from '../../../assets/Images/Campus03.jpeg';
+import AboutHeading3 from '../../../assets/Images/Campus01.webp';
+import AboutHeading4 from '../../../assets/Images/Campus03.webp';
 
 const DegreeFeaturedContent = () => {
     const slides = [

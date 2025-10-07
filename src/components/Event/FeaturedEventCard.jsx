@@ -1,5 +1,5 @@
 import React from 'react';
-import eventImage01 from '../../assets/Images/events01.jpeg';
+import eventImage01 from '../../assets/Images/events01.webp';
 
 const CalendarIcon = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={className}

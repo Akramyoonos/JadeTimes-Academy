@@ -1,9 +1,9 @@
 import React from "react";
-import MicIcon from "../../assets/Images/icon-guest-speakers-m.png";
-import AdamDriver from "../../assets/Images/AlumniExplore02.jpeg";
-import AubreyPlaza from "../../assets/Images/AlumniExplore03.jpeg";
+import MicIcon from "../../assets/Images/icon-guest-speakers-m.webp";
+import AdamDriver from "../../assets/Images/AlumniExplore02.webp";
+import AubreyPlaza from "../../assets/Images/AlumniExplore03.webp";
 import BillHaider from "../../assets/Images/AlumniExplore01.Webp";
-import StevenSpielberg from "../../assets/Images/AlumniHeadingImage.jpeg";
+import StevenSpielberg from "../../assets/Images/AlumniHeadingImage.webp";
 
 const GuestSection = () => {
   return (

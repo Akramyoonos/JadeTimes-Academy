@@ -1,6 +1,6 @@
 import React from 'react';
-import graduateDegree01 from '../../assets/Images/GraduateDegree01.jpeg';
-import graduateDegree02 from '../../assets/Images/GraduateDegree02.jpeg';
+import graduateDegree01 from '../../assets/Images/GraduateDegree01.webp';
+import graduateDegree02 from '../../assets/Images/GraduateDegree02.webp';
 
 const GraduateDegree = () => {
   return (

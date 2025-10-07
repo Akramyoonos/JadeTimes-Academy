@@ -1,7 +1,7 @@
 
-import BlogSearchImg from '../assets/Images/BlogSearchImg.jpeg';
+import BlogSearchImg from '../assets/Images/BlogSearchImg.webp';
 import BlogHeadingImg from '../assets/Images/BlogHeadingImg.Webp';
-import JIUSpeakerEventArticleHeadingImage from '../assets/Images/JIUSpeakerEventArticleHeadingImage.jpeg';
+import JIUSpeakerEventArticleHeadingImage from '../assets/Images/JIUSpeakerEventArticleHeadingImage.webp';
 
 export const blogPosts = [
   {

@@ -1,5 +1,5 @@
 import React from "react";
-import ResourcesAndInformation01 from '../../assets/Images/Resources and Information01.jpeg';
+import ResourcesAndInformation01 from '../../assets/Images/Resources and Information01.webp';
 
 const JIUSection = () => {
   return (

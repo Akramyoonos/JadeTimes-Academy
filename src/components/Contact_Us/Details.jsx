@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import ContactUsDetails01 from '../../assets/images/ContactUsDetails01.jpeg';
-import ContactUsDetails02 from '../../assets/images/ContactUsDetails02.jpeg';
-import ContactUsDetails03 from '../../assets/images/ContactUsDetails03.jpeg';
-import ContactUsDetails04 from '../../assets/images/ContactUsDetails04.jpeg';
-import ContactUsDetails05 from '../../assets/images/ContactUsDetails05.jpeg';
-import ContactUsDetails06 from '../../assets/images/ContactUsDetails06.jpeg';
+import ContactUsDetails01 from '../../assets/images/ContactUsDetails01.webp';
+import ContactUsDetails02 from '../../assets/images/ContactUsDetails02.webp';
+import ContactUsDetails03 from '../../assets/images/ContactUsDetails03.webp';
+import ContactUsDetails04 from '../../assets/images/ContactUsDetails04.webp';
+import ContactUsDetails05 from '../../assets/images/ContactUsDetails05.webp';
+import ContactUsDetails06 from '../../assets/images/ContactUsDetails06.webp';
 
 const locations = [
     {

@@ -1,5 +1,5 @@
 import React from 'react'
-import DegreeProgramsHeadingImage from '../../assets/Images/DegreeProgramsHeadingImage.jpeg'
+import DegreeProgramsHeadingImage from '../../assets/Images/DegreeProgramsHeadingImage.webp'
 
 const Heading = () => {
   return (

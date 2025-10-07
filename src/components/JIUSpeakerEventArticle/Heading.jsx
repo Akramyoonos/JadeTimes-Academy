@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogHeadingImage from '../../assets/Images/JIUSpeakerEventArticleHeadingImage.jpeg' // Assuming the image has been updated to match
+import BlogHeadingImage from '../../assets/Images/JIUSpeakerEventArticleHeadingImage.webp' // Assuming the image has been updated to match
 
 const Heading = () => {
   return (

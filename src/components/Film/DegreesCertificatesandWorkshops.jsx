@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ourStudents01 from '../../assets/Images/our-students-01-948x815-1-768x660.jpeg';
+import ourStudents01 from '../../assets/Images/our-students-01-948x815-1-768x660.webp';
 
 // --- Icon Components ---
 export const ChevronDownIcon = () => (

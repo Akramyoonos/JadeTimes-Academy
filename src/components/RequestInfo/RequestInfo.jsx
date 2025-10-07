@@ -2,7 +2,7 @@ import React from 'react';
 
 // --- IMPORTANT ---
 // Update this path to where you have saved the image in your project.
-import studentImage from '../../assets/Images/request-info-1920x857-1.jpeg'; 
+import studentImage from '../../assets/Images/request-info-1920x857-1.webp'; 
 
 const NyfaRequestInfo = () => {
   // CSS for custom dropdown arrows is included directly using a <style> tag.

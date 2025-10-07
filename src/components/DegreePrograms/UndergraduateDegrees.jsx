@@ -1,7 +1,7 @@
 import React from 'react';
-import undergraduateDegree01 from '../../assets/Images/undergraduateDegree01.jpeg';
-import undergraduateDegree02 from '../../assets/Images/undergraduateDegree02.jpeg';
-import undergraduateDegree03 from '../../assets/Images/undergraduateDegree03.jpeg';
+import undergraduateDegree01 from '../../assets/Images/undergraduateDegree01.webp';
+import undergraduateDegree02 from '../../assets/Images/undergraduateDegree02.webp';
+import undergraduateDegree03 from '../../assets/Images/undergraduateDegree03.webp';
 
 const UndergraduateDegrees = () => {
   return (

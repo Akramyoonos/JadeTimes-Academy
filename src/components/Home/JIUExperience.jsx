@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import campusImage from '../../assets/Images/Campus01.jpeg';
+import campusImage from '../../assets/Images/Campus01.webp';
 
 const JIUExperience = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,8 +22,8 @@ const JIUExperience = () => {
         <div className="flex flex-col">
           <div className="pl-6 mb-10 ml-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
             <h2 className="jt-heading">
-              <span className="jt-line">The JIU </span>
-              <span className="jt-line">Experience</span>
+              <span className="jt-line">WHO  </span>
+              <span className="jt-line"> WE ARE</span>
             </h2>
           </div>
         </div>

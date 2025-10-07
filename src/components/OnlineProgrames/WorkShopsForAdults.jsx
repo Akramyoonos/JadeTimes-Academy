@@ -1,17 +1,17 @@
 import React from 'react';
-import WorkShopsForAdults01 from '../../assets/Images/WorkShopsForAdultsImages01.jpeg';
-import WorkShopsForAdults02 from '../../assets/Images/WorkShopsForAdultsImages02.jpeg';
-import WorkShopsForAdults03 from '../../assets/Images/WorkShopsForAdultsImages03.jpeg';
-import WorkShopsForAdults04 from '../../assets/Images/WorkShopsForAdultsImages04.jpeg';
-import WorkShopsForAdults05 from '../../assets/Images/WorkShopsForAdultsImages05.jpeg';
-import WorkShopsForAdults06 from '../../assets/Images/WorkShopsForAdultsImages06.jpeg';
-import WorkShopsForAdults07 from '../../assets/Images/WorkShopsForAdultsImages07.jpeg';
-import WorkShopsForAdults08 from '../../assets/Images/WorkShopsForAdultsImages08.jpeg';
-import WorkShopsForAdults09 from '../../assets/Images/WorkShopsForAdultsImages09.jpeg';
-import WorkShopsForAdults10 from '../../assets/Images/WorkShopsForAdultsImages10.jpeg';
-import WorkShopsForAdults11 from '../../assets/Images/WorkShopsForAdultsImages11.jpeg';
-import WorkShopsForAdults12 from '../../assets/Images/WorkShopsForAdultsImages10.jpeg';
-import WorkShopsForAdults13 from '../../assets/Images/WorkShopsForAdultsImages11.jpeg';
+import WorkShopsForAdults01 from '../../assets/Images/WorkShopsForAdultsImages01.webp';
+import WorkShopsForAdults02 from '../../assets/Images/WorkShopsForAdultsImages02.webp';
+import WorkShopsForAdults03 from '../../assets/Images/WorkShopsForAdultsImages03.webp';
+import WorkShopsForAdults04 from '../../assets/Images/WorkShopsForAdultsImages04.webp';
+import WorkShopsForAdults05 from '../../assets/Images/WorkShopsForAdultsImages05.webp';
+import WorkShopsForAdults06 from '../../assets/Images/WorkShopsForAdultsImages06.webp';
+import WorkShopsForAdults07 from '../../assets/Images/WorkShopsForAdultsImages07.webp';
+import WorkShopsForAdults08 from '../../assets/Images/WorkShopsForAdultsImages08.webp';
+import WorkShopsForAdults09 from '../../assets/Images/WorkShopsForAdultsImages09.webp';
+import WorkShopsForAdults10 from '../../assets/Images/WorkShopsForAdultsImages10.webp';
+import WorkShopsForAdults11 from '../../assets/Images/WorkShopsForAdultsImages11.webp';
+import WorkShopsForAdults12 from '../../assets/Images/WorkShopsForAdultsImages10.webp';
+import WorkShopsForAdults13 from '../../assets/Images/WorkShopsForAdultsImages11.webp';
 
 // Data for all workshops is now in a single array.
 // This makes it easy to add, remove, or edit workshops without changing the component's structure.

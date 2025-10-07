@@ -1,5 +1,5 @@
 import React from "react";
-import MemberImage from "../../assets/Images/nyfa-membership-card-m.png";
+import MemberImage from "../../assets/Images/nyfa-membership-card-m.webp";
 
 const MembershipSection = () => {
   return (

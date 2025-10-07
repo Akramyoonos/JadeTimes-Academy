@@ -5,27 +5,27 @@ import { faFacebookF, faTwitter, faYoutube, faInstagram, faLinkedinIn, faPintere
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 // Import local images
-import AboutHeading from '../../assets/Images/AboutHeading.Webp';
-import AboutWelcome from '../../assets/Images/AboutWelcome.Webp';
-import AlumniExplore01 from '../../assets/Images/AlumniExplore01.Webp';
-import AlumniExplore02 from '../../assets/Images/AlumniExplore02.jpeg';
-import AlumniExplore03 from '../../assets/Images/AlumniExplore03.jpeg';
-import BlogHeadingImg from '../../assets/Images/BlogHeadingImg.Webp';
-import BlogSearchImg from '../../assets/Images/BlogSearchImg.jpeg';
-import Campus01 from '../../assets/Images/Campus01.jpeg';
-import Campus02 from '../../assets/Images/Campus02.jpeg';
+import AboutHeading from '../../assets/Images/AboutHeading.webp';
+import AboutWelcome from '../../assets/Images/AboutWelcome.webp';
+import AlumniExplore01 from '../../assets/Images/AlumniExplore01.webp';
+import AlumniExplore02 from '../../assets/Images/AlumniExplore02.webp';
+import AlumniExplore03 from '../../assets/Images/AlumniExplore03.webp';
+import BlogHeadingImg from '../../assets/Images/BlogHeadingImg.webp';
+import BlogSearchImg from '../../assets/Images/BlogSearchImg.webp';
+import Campus01 from '../../assets/Images/Campus01.webp';
+import Campus02 from '../../assets/Images/Campus02.webp';
 
 // Create a map from image names to imported images
 const imageMap = {
-    'AboutHeading.png': AboutHeading,
-    'AboutWelcome.jpeg': AboutWelcome,
-    'AlumniExplore01.jpeg': AlumniExplore01,
-    'AlumniExplore02.jpeg': AlumniExplore02,
-    'AlumniExplore03.jpeg': AlumniExplore03,
-    'BlogHeadingImg.jpeg': BlogHeadingImg,
-    'BlogSearchImg.jpeg': BlogSearchImg,
-    'Campus01.jpeg': Campus01,
-    'Campus02.jpeg': Campus02,
+    'AboutHeading.webp': AboutHeading,
+    'AboutWelcome.webp': AboutWelcome,
+    'AlumniExplore01.webp': AlumniExplore01,
+    'AlumniExplore02.webp': AlumniExplore02,
+    'AlumniExplore03.webp': AlumniExplore03,
+    'BlogHeadingImg.webp': BlogHeadingImg,
+    'BlogSearchImg.webp': BlogSearchImg,
+    'Campus01.webp': Campus01,
+    'Campus02.webp': Campus02,
 };
 
 // Reusable Components

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/images/Logo.png";
+import Logo from "../../assets/images/Logo.webp";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import {

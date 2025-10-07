@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import JiuCABINET01 from '../../assets/Images/JiuCABINET01.jpeg';
-import JiuCABINET02 from '../../assets/Images/JiuCABINET02.jpeg';
-import JiuCABINET03 from '../../assets/Images/JiuCABINET03.jpeg';
-import JiuCABINET04 from '../../assets/Images/JiuCABINET04.jpeg';
-import JiuCABINET05 from '../../assets/Images/JiuCABINET05.jpeg';
-import JiuCABINET06 from '../../assets/Images/JiuCABINET06.jpeg';
-import JiuCABINET07 from '../../assets/Images/JiuCABINET07.jpeg';
-import JiuCABINET08 from '../../assets/Images/JiuCABINET08.jpeg';
-import JiuCABINET09 from '../../assets/Images/JiuCABINET09.jpeg';
-import JiuCABINET10 from '../../assets/Images/JiuCABINET10.jpeg';
-import JiuCABINET11 from '../../assets/Images/JiuCABINET11.png';
-import JiuCABINET12 from '../../assets/Images/JiuCABINET12.jpeg';
+import JiuCABINET01 from '../../assets/Images/JiuCABINET01.webp';
+import JiuCABINET02 from '../../assets/Images/JiuCABINET02.webp';
+import JiuCABINET03 from '../../assets/Images/JiuCABINET03.webp';
+import JiuCABINET04 from '../../assets/Images/JiuCABINET04.webp';
+import JiuCABINET05 from '../../assets/Images/JiuCABINET05.webp';
+import JiuCABINET06 from '../../assets/Images/JiuCABINET06.webp';
+import JiuCABINET07 from '../../assets/Images/JiuCABINET07.webp';
+import JiuCABINET08 from '../../assets/Images/JiuCABINET08.webp';
+import JiuCABINET09 from '../../assets/Images/JiuCABINET09.webp';
+import JiuCABINET10 from '../../assets/Images/JiuCABINET10.webp';
+import JiuCABINET11 from '../../assets/Images/JiuCABINET11.webp';
+import JiuCABINET12 from '../../assets/Images/JiuCABINET12.webp';
 
 // --- DATA FOR THE CABINET MEMBERS ---
 // NOTE: Replace the `imageUrl` placeholders with your actual image paths.

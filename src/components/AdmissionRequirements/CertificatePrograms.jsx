@@ -1,6 +1,6 @@
 import React from 'react';
-import certificateImg1 from '../../assets/Images/WorkShopsForAdultsImages01.jpeg';
-import certificateImg2 from '../../assets/Images/WorkShopsForAdultsImages02.jpeg';
+import certificateImg1 from '../../assets/Images/WorkShopsForAdultsImages01.webp';
+import certificateImg2 from '../../assets/Images/WorkShopsForAdultsImages02.webp';
 
 const certificateData = [
   {

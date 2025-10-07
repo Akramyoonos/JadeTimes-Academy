@@ -1,7 +1,7 @@
 import React from 'react';
-import HeadlinesImg from '../../assets/Images/HeadlinesImg.png';
-import TrendingImg from '../../assets/Images/HeadlinesImg01.jpeg';
-import CannesImg from '../../assets/Images/HeadlinesImg02.jpeg';
+import HeadlinesImg from '../../assets/Images/HeadlinesImg.webp';
+import TrendingImg from '../../assets/Images/HeadlinesImg01.webp';
+import CannesImg from '../../assets/Images/HeadlinesImg02.webp';
 
 const HEADLINES = () => {
   return (

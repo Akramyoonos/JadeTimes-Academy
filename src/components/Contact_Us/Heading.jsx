@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactUsHeadingImage from '../../assets/Images/ContactUsHeading.jpeg'; // Assuming this is the correct image
+import ContactUsHeadingImage from '../../assets/Images/ContactUsHeading.webp'; // Assuming this is the correct image
 
 const Heading = () => {
   return (

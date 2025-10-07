@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogSearchImg from '../../assets/Images/BlogSearchImg.jpeg';
+import BlogSearchImg from '../../assets/Images/BlogSearchImg.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faArrowRight } from '@fortawesome/free-solid-svg-icons';
 

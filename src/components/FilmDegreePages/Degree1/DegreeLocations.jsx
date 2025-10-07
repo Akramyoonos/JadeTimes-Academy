@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp, faStar, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 // Import images
-import Campus01 from '../../../assets/Images/Campus01.jpeg';
+import Campus01 from '../../../assets/Images/Campus01.webp';
 import AlumniExplore01 from '../../../assets/Images/AlumniExplore01.webp';
-import AlumniExplore02 from '../../../assets/Images/AlumniExplore02.jpeg';
-import AlumniExplore03 from '../../../assets/Images/AlumniExplore03.jpeg';
+import AlumniExplore02 from '../../../assets/Images/AlumniExplore02.webp';
+import AlumniExplore03 from '../../../assets/Images/AlumniExplore03.webp';
 
 const staffData = [
     {
