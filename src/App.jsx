@@ -73,6 +73,18 @@ import TermsConditions_Page from './pages/TermsConditions_Page';
 import CourseCatalogs_Page from './pages/CourseCatalogs_Page';
 import AcademicCalendar_Page from './pages/AcademicCalendar_Page';
 import JobPositions_Page from './pages/JobPositions_Page';
+import MediaArts_Page from './pages/MediaArts_Page';
+import PerformingArts_Page from './pages/PerformingArts_Page';
+import CreatieExpression_Page from './pages/CreatieExpression_Page';
+import Journalism_Page from './pages/Journalism_Page';
+import Comunivation_Page from './pages/Comunivation_Page';
+import DigitalMedia_Page from './pages/DigitalMedia_Page';
+import Technology_Page from './pages/Technology_Page';
+import IntrractiveMedia_Page from './pages/IntrractiveMedia_Page';
+import EntertainmentMedia_Page from './pages/EntertainmentMedia_Page';
+import Psychology_Page from './pages/Psychology_Page';
+import HumanBehavior_Page from './pages/HumanBehavior_Page';
+import Marketing_Page from './pages/Marketing_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -184,6 +196,18 @@ function AppInner() {
             <Route path="/Course-Catalogs/*" element={<CourseCatalogs_Page />} />
             <Route path="/Academic-Calendar/*" element={<AcademicCalendar_Page />} />
             <Route path="/Job-Positions/*" element={<JobPositions_Page />} />
+            <Route path="/Media-Arts/*" element={<MediaArts_Page />} />
+            <Route path="/Performing-Arts/*" element={<PerformingArts_Page />} />
+            <Route path="/Creatie-Expression/*" element={<CreatieExpression_Page />} />
+            <Route path="/Journalism/*" element={<Journalism_Page />} />
+            <Route path="/Comunivation/" element={<Comunivation_Page />} />
+            <Route path="/Digital-Media/*" element={<DigitalMedia_Page />} />
+            <Route path="/Technology/*" element={<Technology_Page />} />
+            <Route path="/Intrractive-Media/*" element={<IntrractiveMedia_Page />} />
+            <Route path="/Entertainment-Media/*" element={<EntertainmentMedia_Page />} />
+            <Route path="/Psychology/*" element={<Psychology_Page />} />
+            <Route path="/Human-Behavior/*" element={<HumanBehavior_Page />} />
+            <Route path="/Marketing/*" element={<Marketing_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />

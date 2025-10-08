@@ -1,0 +1,32 @@
+import React from 'react'
+import Heading from '../components/EntertainmentMedia/Heading'
+import DegreesCertificatesandWorkshops from '../components/EntertainmentMedia/DegreesCertificatesandWorkshops'
+import Drgrees from '../components/EntertainmentMedia/Degrees'
+import Programs from '../components/EntertainmentMedia/Programs'
+import Workshops from '../components/EntertainmentMedia/Workshops'
+import OnlineWorkshops from '../components/EntertainmentMedia/OnlineWorkshops'
+import Faculty from '../components/EntertainmentMedia/Faculty'
+import Alumni from '../components/EntertainmentMedia/Alumni'
+import Campuses from '../components/EntertainmentMedia/Campuses'
+import Locations from '../components/EntertainmentMedia/Locations'
+import Spotlight from '../components/EntertainmentMedia/Spotlight'
+
+const EntertainmentMedia_Page = () => {
+  return (
+    <div>
+        <Heading />   
+     <DegreesCertificatesandWorkshops />        
+     <Drgrees />   
+     <Programs />  
+     <Workshops />
+     <OnlineWorkshops />
+     <Faculty />  
+     <Alumni />  
+     <Campuses /> 
+     <Locations />  
+     <Spotlight />
+    </div>
+  )
+}
+
+export default EntertainmentMedia_Page
