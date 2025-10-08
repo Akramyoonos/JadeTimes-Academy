@@ -163,7 +163,7 @@ const megaMenus = {
   },
   discoverMenu: {
     "WHO WE ARE": [
-      { text: "ABOUT US", href: "/about" },
+      { text: "ABOUT US", href: "/About-Us/" },
       { text: "HISTORY", href: "JIU-history/" },
       { text: "MISSION & PURPOSE", href: "/mission-and-purpose/" },
       { text: "ACCREDITATION, LICENSING, AND APPROVALS", href: "/Accreditation" },

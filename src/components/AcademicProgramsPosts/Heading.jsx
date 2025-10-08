@@ -16,7 +16,7 @@ const Heading = () => {
                    <a href="/" className="nohover:underline">Academic Programs</a>
                  </nav>
              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide text-shadow-lg max-w-5xl">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold uppercase tracking-wide text-shadow-lg max-w-5xl">
                    Academic Programs
                 </h1>
              </div>

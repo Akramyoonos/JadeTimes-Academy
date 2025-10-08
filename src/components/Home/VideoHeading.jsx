@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import Campus01 from '../../assets/Images/Campus01.webp';
-import Campus02 from '../../assets/Images/Campus02.webp';
-import Campus03 from '../../assets/Images/Campus03.webp';
-import AboutWelcome from '../../assets/Images/AboutWelcome.webp';
+import SlideImg01 from '../../assets/Images/SlideImg01.webp';
+import SlideImg02 from '../../assets/Images/SlideImg02.webp';
+import SlideImg03 from '../../assets/Images/SlideImg03.webp';
+import SlideImg04 from '../../assets/Images/SlideImg04.webp';
 
-const images = [Campus01, Campus02, Campus03, AboutWelcome];
+const images = [SlideImg01, SlideImg02, SlideImg03, SlideImg04];
 
 const VideoHeading = ({ title, subtitle }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
