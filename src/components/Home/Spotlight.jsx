@@ -207,7 +207,7 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/Degree-Programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
+          <a href="/Jadetimes-Journals/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"
               className="w-full h-full object-cover transform transition-transform duration-2000 group-hover:scale-115"
@@ -224,7 +224,7 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/online-programs/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
+          <a href="/Jadetimes-Conferences/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Woman filming in front of a cathedral"
               className="w-full h-full object-cover transform transition-transform duration-2000 group-hover:scale-115"

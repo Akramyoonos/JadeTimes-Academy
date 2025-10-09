@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import image1 from "../../assets/Images/AboutHeading.Webp";
 import image2 from "../../assets/Images/AboutHeading.Webp";  
 import image3 from "../../assets/Images/AboutHeading.Webp"; 
@@ -50,9 +51,11 @@ const NewsSection = () => {
               NYFA IN THE PRESS – ARTICLES AND NEWS CLIPS
             </h3>
           </div>
-          <button className="mt-4 sm:mt-0 bg-sky-500 hover:bg-sky-600 text-black px-5 py-2 ">
-            VIEW ALL ARTICLES
-          </button>
+          <Link to="/All-JIU-News/">
+            <button className="mt-4 sm:mt-0 bg-sky-500 hover:bg-sky-600 text-black px-5 py-2 ">
+              VIEW ALL ARTICLES
+            </button>
+          </Link>
         </div>
       </div>
 

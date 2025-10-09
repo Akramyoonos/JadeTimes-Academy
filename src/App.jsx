@@ -85,6 +85,9 @@ import EntertainmentMedia_Page from './pages/EntertainmentMedia_Page';
 import Psychology_Page from './pages/Psychology_Page';
 import HumanBehavior_Page from './pages/HumanBehavior_Page';
 import Marketing_Page from './pages/Marketing_Page';
+import JadeTimesJournals_Page from './pages/JadeTimesJournals_Page';
+import JadeTimesConferences_Page from './pages/JadeTimesConferences_Page';
+import AllJIUNews_Page from './pages/AllJIUNews_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -208,6 +211,9 @@ function AppInner() {
             <Route path="/Psychology/*" element={<Psychology_Page />} />
             <Route path="/Human-Behavior/*" element={<HumanBehavior_Page />} />
             <Route path="/Marketing/*" element={<Marketing_Page />} />
+            <Route path="/Jadetimes-Journals/*" element={<JadeTimesJournals_Page />} />
+            <Route path="/Jadetimes-Conferences/*" element={<JadeTimesConferences_Page />} />
+            <Route path="/All-JIU-News/*" element={<AllJIUNews_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
