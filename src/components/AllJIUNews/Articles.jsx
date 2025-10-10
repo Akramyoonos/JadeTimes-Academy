@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarDays } from '@fortawesome/free-solid-svg-icons';
-import Image1 from '../../assets/Images/AboutHeading.webp';
-import Image2 from '../../assets/Images/AboutHeading.webp';
-import Image3 from '../../assets/Images/AboutHeading.webp';
-import Image4 from '../../assets/Images/AboutHeading.webp';
-import Image5 from '../../assets/Images/AboutHeading.webp';
-import Image6 from '../../assets/Images/AboutHeading.webp';
-import Image7 from '../../assets/Images/AboutHeading.webp';
-import Image8 from '../../assets/Images/AboutHeading.webp';
-import Image9 from '../../assets/Images/AboutHeading.webp';
-import Image10 from '../../assets/Images/AboutHeading.webp';
-import Image11 from '../../assets/Images/AboutHeading.webp';
-import Image12 from '../../assets/Images/AboutHeading.webp';
-import Image13 from '../../assets/Images/AboutHeading.webp';
-import Image14 from '../../assets/Images/AboutHeading.webp';
-import Image15 from '../../assets/Images/AboutHeading.webp';
-import Image16 from '../../assets/Images/AboutHeading.webp';
-import Image17 from '../../assets/Images/AboutHeading.webp';
-import Image18 from '../../assets/Images/AboutHeading.webp';
-import Image19 from '../../assets/Images/AboutHeading.webp';
-import Image20 from '../../assets/Images/AboutHeading.webp';
-import Image21 from '../../assets/Images/AboutHeading.webp';
-import Image22 from '../../assets/Images/AboutHeading.webp';
-import Image23 from '../../assets/Images/AboutHeading.webp';
-import Image24 from '../../assets/Images/AboutHeading.webp';
-import Image25 from '../../assets/Images/AboutHeading.webp';
+import Image1 from '../../assets/Images/AllJiuNewsImg01.webp';
+import Image2 from '../../assets/Images/AllJiuNewsImg02.webp';
+import Image3 from '../../assets/Images/AllJiuNewsImg03.webp';
+import Image4 from '../../assets/Images/AllJiuNewsImg04.webp';
+import Image5 from '../../assets/Images/AllJiuNewsImg05.webp';
+import Image6 from '../../assets/Images/AllJiuNewsImg06.webp';
+import Image7 from '../../assets/Images/AllJiuNewsImg07.webp';
+import Image8 from '../../assets/Images/AllJiuNewsImg08.webp';
+import Image9 from '../../assets/Images/AllJiuNewsImg09.webp';
+import Image10 from '../../assets/Images/AllJiuNewsImg10.webp';
+import Image11 from '../../assets/Images/AllJiuNewsImg11.webp';
+import Image12 from '../../assets/Images/AllJiuNewsImg12.webp';
+import Image13 from '../../assets/Images/AllJiuNewsImg13.webp';
+import Image14 from '../../assets/Images/AllJiuNewsImg14.webp';
+import Image15 from '../../assets/Images/AllJiuNewsImg15.webp';
+import Image16 from '../../assets/Images/AllJiuNewsImg16.webp';
+import Image17 from '../../assets/Images/AllJiuNewsImg17.webp';
+import Image18 from '../../assets/Images/AllJiuNewsImg18.webp';
+import Image19 from '../../assets/Images/AllJiuNewsImg19.webp';
+import Image20 from '../../assets/Images/AllJiuNewsImg20.webp';
+import Image21 from '../../assets/Images/AllJiuNewsImg21.webp';
+import Image22 from '../../assets/Images/AllJiuNewsImg22.webp';
+import Image23 from '../../assets/Images/AllJiuNewsImg23.webp';
+import Image24 from '../../assets/Images/AllJiuNewsImg24.webp';
+import Image25 from '../../assets/Images/AllJiuNewsImg25.webp';
 
 const ArticleCard = ({ date, title, excerpt, image, imageAlt }) => {
     return (
-        <div className="flex flex-col md:flex-row items-start py-6 border-b border-gray-200 last:border-b-0">
-            <div className="flex-shrink-0 w-full md:w-72 h-40 mb-4 md:mb-0 md:mr-6 overflow-hidden bg-gray-100">
+        <div className="flex flex-col items-start py-6 border-b border-gray-200 md:flex-row last:border-b-0">
+            <div className="flex-shrink-0 w-full h-40 mb-4 overflow-hidden bg-gray-100 md:w-72 md:mb-0 md:mr-6">
                 <img
                     src={image}
                     alt={imageAlt}
@@ -286,12 +286,12 @@ const Articles = () => {
     return (
         <div className="container px-4 mx-auto max-w-7xl">
             {/* Breadcrumbs and Blog Link with href */}
-            <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between py-4 mt-5 text-sm sm:text-md font-semibold text-gray-500 uppercase">
+            <header className="flex flex-col items-start justify-between py-4 mt-5 text-sm font-semibold text-gray-500 uppercase sm:flex-row sm:items-center sm:text-md">
                 <p className="mb-2 sm:mb-0">
-                    <a href="/" className="text-black hover:underline cursor-pointer transition duration-150">
+                    <a href="/" className="text-black transition duration-150 cursor-pointer hover:underline">
                         JIU /
                     </a>
-                    <a href={JIUINTHENEWS} className="text-black hover:underline cursor-pointer transition duration-150">
+                    <a href={JIUINTHENEWS} className="text-black transition duration-150 cursor-pointer hover:underline">
                         JIU IN THE NEWS /
                     </a>
                     <span className="text-gray-400 cursor-default">
@@ -301,16 +301,16 @@ const Articles = () => {
             </header>
 
             {/* Navigation Tabs and JIU Blogs Link */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end relative border-b border-gray-300 mt-10 md:mt-20">
+            <div className="relative flex flex-col items-start justify-between mt-10 border-b border-gray-300 md:flex-row md:items-end md:mt-20">
                 {/* Navigation Tabs List */}
-                <ul className="flex flex-wrap space-x-8 sm:space-x-10 md:space-x-20 lg:space-x-40 text-base sm:text-lg font-semibold mt-6 mb-2">
+                <ul className="flex flex-wrap mt-6 mb-2 space-x-8 text-base font-semibold sm:space-x-10 md:space-x-20 lg:space-x-40 sm:text-lg">
                     {/* ARTICLES TAB */}
                     <li className="relative pb-4" onClick={() => setActiveTab('articles')}>
                         <a href="#" onClick={(e) => e.preventDefault()} className={getTabClasses('articles')}>
                             ARTICLES
                         </a>
                         {activeTab === 'articles' && (
-                            <div className="absolute inset-x-0 bottom-0 h-1 mb-3  bg-blue-400"></div>
+                            <div className="absolute inset-x-0 bottom-0 h-1 mb-3 bg-blue-400"></div>
                         )}
                     </li>
 
@@ -343,14 +343,14 @@ const Articles = () => {
                 </ul>
 
                 {/* JIU Blogs Link with href */}
-                <a href={blogUrl} className="flex items-center text-black-600 cursor-pointer mt-4 md:mt-0 mb-2 text-lg font-semibold">
+                <a href={blogUrl} className="flex items-center mt-4 mb-2 text-lg font-semibold cursor-pointer text-black-600 md:mt-0">
                     <FontAwesomeIcon icon={faCalendarDays} className="mr-1" />
                     <span className="hover:underline">JIU Blogs</span>
                 </a>
             </div>
 
             {/* Articles List */}
-            <main className="max-w-7xl mx-auto mt-8">
+            <main className="mx-auto mt-8 max-w-7xl">
                 {displayedArticles.map((article, index) => (
                     <ArticleCard
                         key={index}
