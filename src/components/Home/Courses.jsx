@@ -38,7 +38,7 @@ const coursesData = [
 const CourseCard = ({ imageUrl, altText, title, price }) => {
     return (
         // WARNING: The fixed width and height (w-90, h-160) might cause layout issues on smaller screens.
-        <div className="w-90 h-160 max-w-sm text-left bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+        <div className="w-90 h-160 max-w-sm text-left bg-white  shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
             <a href="#" className="block">
                 <img src={imageUrl} alt={altText} className="w-full h-120 object-cover" />
             </a>
@@ -93,7 +93,7 @@ const Courses = () => {
 
                 {/* "More Courses" Button Section */}
                 <div className="text-center mt-20">
-                    <a href="/Degree-Programs/" className="inline-block bg-black text-white font-semibold uppercase tracking-wider px-10 py-4 rounded-md hover:bg-gray-800 transition-colors duration-300 text-lg">
+                    <a href="/Degree-Programs/" className="inline-block bg-black text-white font-semibold uppercase tracking-wider px-10 py-4  hover:bg-gray-800 transition-colors duration-300 text-lg">
                         More Courses
                     </a>
                 </div>
