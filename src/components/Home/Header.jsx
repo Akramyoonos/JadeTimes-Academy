@@ -164,7 +164,7 @@ const megaMenus = {
   discoverMenu: {
     "WHO WE ARE": [
       { text: "ABOUT US", href: "/About-Us/" },
-      { text: "HISTORY", href: "JIU-history/" },
+      { text: "HISTORY", href: "/JIU-history/" },
       { text: "MISSION & PURPOSE", href: "/mission-and-purpose/" },
       { text: "ACCREDITATION, LICENSING, AND APPROVALS", href: "/Accreditation" },
       { text: "AFFILIATIONS", href: "/affiliations/" },
@@ -539,7 +539,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
     );
 };
 
-const MobileMegaMenu = ({ config, accent, open }) => {
+const MobileMegaMenu = ({ config, accent, open, closeMenu }) => {
     if (!config) return null;
 
     const { eventBox, eventBoxes, ...linkSections } = config;
@@ -585,7 +585,7 @@ const MobileMegaMenu = ({ config, accent, open }) => {
                                                 ? "noopener noreferrer"
                                                 : undefined
                                         }
-                                        onClick={isInteractive ? undefined : (e) => e.preventDefault()}
+                                        onClick={isInteractive ? closeMenu : (e) => e.preventDefault()}
                                     >
                                         {item.text}
                                     </a>

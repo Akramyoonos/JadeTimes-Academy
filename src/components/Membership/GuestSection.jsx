@@ -7,13 +7,12 @@ import StevenSpielberg from "../../assets/Images/AlumniHeadingImage.webp";
 
 const GuestSection = () => {
   return (
-    <div className="flex justify-end w-full pr-160 "> 
-      <div className="relative bg-sky-100 p-8 rounded-2xl shadow-md max-w-3xl">
-       
+    <div className="flex justify-center md:justify-end w-full px-4 sm:px-6 md:pr-16 lg:pr-24 xl:pr-32 py-8">
+      <div className="relative bg-sky-100 p-6 sm:p-8 rounded-2xl shadow-md w-full max-w-3xl">
         <img
           src={MicIcon}
           alt="Mic Icon"
-          className="absolute -top-8 right-10 w-20 h-22 transform -translate-y-6"
+          className="absolute -top-12 right-4 sm:right-8 w-16 h-auto sm:w-20"
         />
 
         {/* Title */}
@@ -34,12 +33,12 @@ const GuestSection = () => {
         </p>
 
         {/* Speakers */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
           <div>
             <img
               src={AdamDriver}
               alt="Adam Driver"
-              className="w-28 h-28 mx-auto rounded-full object-cover"
+              className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full object-cover"
             />
             <p className="mt-2 font-semibold text-gray-800">Adam Driver</p>
           </div>
@@ -47,7 +46,7 @@ const GuestSection = () => {
             <img
               src={AubreyPlaza}
               alt="Aubrey Plaza"
-              className="w-28 h-28 mx-auto rounded-full object-cover"
+              className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full object-cover"
             />
             <p className="mt-2 font-semibold text-gray-800">Aubrey Plaza</p>
           </div>
@@ -55,7 +54,7 @@ const GuestSection = () => {
             <img
               src={BillHaider}
               alt="Bill Haider"
-              className="w-28 h-28 mx-auto rounded-full object-cover"
+              className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full object-cover"
             />
             <p className="mt-2 font-semibold text-gray-800">Bill Haider</p>
           </div>
@@ -63,7 +62,7 @@ const GuestSection = () => {
             <img
               src={StevenSpielberg}
               alt="Steven Spielberg"
-              className="w-28 h-28 mx-auto rounded-full object-cover"
+              className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full object-cover"
             />
             <p className="mt-2 font-semibold text-gray-800">Steven Spielberg</p>
           </div>

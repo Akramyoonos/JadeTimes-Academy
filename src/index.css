@@ -40,12 +40,6 @@ html {
       height: auto;
       padding: 4rem 2rem;
     }
-.bg-location{
-  background-image: url('../dist/assets/bg-location-p39YHSun-p39YHSun.jpg'); /* adjust path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 .StudentFont {
   font-family: 'Open Sans', sans-serif;
@@ -209,7 +203,7 @@ html {
   left: 0;
   top: 0.18em;                     /* nudge down so it lines up with cap height */
   width: 6px;
-  height: 5em;                   /* ~one line tall */
+  height: 100%;                   /* ~one line tall */
   background: var(--primary-pink, #B52E8C);
 }
 
@@ -283,4 +277,18 @@ html {
 
 .image-shadow:hover {
   box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .fixed-btn {
+    top: 100px;
+    right: -15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fixed-btn {
+    top: 80px;
+    right: -20px;
+  }
 }

@@ -29,15 +29,15 @@ import Image25 from '../../assets/Images/AboutHeading.webp';
 
 const ArticleCard = ({ date, title, excerpt, image, imageAlt }) => {
     return (
-        <div className="flex items-start py-6 border-b border-gray-200 last:border-b-0">
-            <div className="flex-shrink-0 w-72 h-40 mr-6 overflow-hidden bg-gray-100">
+        <div className="flex flex-col md:flex-row items-start py-6 border-b border-gray-200 last:border-b-0">
+            <div className="flex-shrink-0 w-full md:w-72 h-40 mb-4 md:mb-0 md:mr-6 overflow-hidden bg-gray-100">
                 <img
                     src={image}
                     alt={imageAlt}
                     className="object-cover w-full h-full"
                 />
             </div>
-            <div className="flex-grow -ml-3">
+            <div className="flex-grow w-full">
                 <p className="mb-1 text-xs font-medium text-gray-500">{date}</p>
                 <h2 className="mb-2 text-lg font-semibold text-gray-600 transition duration-150 cursor-pointer">
                     {title}
@@ -286,8 +286,8 @@ const Articles = () => {
     return (
         <div className="container px-4 mx-auto max-w-7xl">
             {/* Breadcrumbs and Blog Link with href */}
-            <header className="flex items-center justify-between py-4 mt-5 text-md font-semibold text-gray-500 uppercase">
-                <p>
+            <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between py-4 mt-5 text-sm sm:text-md font-semibold text-gray-500 uppercase">
+                <p className="mb-2 sm:mb-0">
                     <a href="/" className="text-black hover:underline cursor-pointer transition duration-150">
                         JIU /
                     </a>
@@ -301,36 +301,36 @@ const Articles = () => {
             </header>
 
             {/* Navigation Tabs and JIU Blogs Link */}
-            <div className="flex justify-between items-end relative border-b border-gray-300 mt-20">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end relative border-b border-gray-300 mt-10 md:mt-20">
                 {/* Navigation Tabs List */}
-                <ul className="flex space-x-40 text-lg font-semibold mt-6 mb-2">
+                <ul className="flex flex-wrap space-x-8 sm:space-x-10 md:space-x-20 lg:space-x-40 text-base sm:text-lg font-semibold mt-6 mb-2">
                     {/* ARTICLES TAB */}
-                    <li className="relative" onClick={() => setActiveTab('articles')}>
+                    <li className="relative pb-4" onClick={() => setActiveTab('articles')}>
                         <a href="#" onClick={(e) => e.preventDefault()} className={getTabClasses('articles')}>
                             ARTICLES
                         </a>
                         {activeTab === 'articles' && (
-                            <div className="absolute inset-x-0 bottom-0 h-1 -mb-2 bg-blue-400"></div>
+                            <div className="absolute inset-x-0 bottom-0 h-1 mb-3  bg-blue-400"></div>
                         )}
                     </li>
 
                     {/* VIDEO CONTENT TAB */}
-                    <li className="relative" onClick={() => setActiveTab('videos')}>
+                    <li className="relative pb-4" onClick={() => setActiveTab('videos')}>
                         <a href="#" onClick={(e) => e.preventDefault()} className={getTabClasses('videos')}>
                             VIDEO CONTENT
                         </a>
                         {activeTab === 'videos' && (
-                            <div className="absolute inset-x-0 bottom-0 h-1 -mb-2 bg-blue-400"></div>
+                            <div className="absolute inset-x-0 bottom-0 h-1 mb-3 bg-blue-400"></div>
                         )}
                     </li>
 
                     {/* AUDIO CONTENT TAB */}
-                    <li className="relative" onClick={() => setActiveTab('audio')}>
+                    <li className="relative pb-4" onClick={() => setActiveTab('audio')}>
                         <a href="#" onClick={(e) => e.preventDefault()} className={getTabClasses('audio')}>
                             AUDIO CONTENT
                         </a>
                         {activeTab === 'audio' && (
-                            <div className="absolute inset-x-0 bottom-0 h-1 -mb-2 bg-blue-400"></div>
+                            <div className="absolute inset-x-0 bottom-0 h-1 mb-3 bg-blue-400"></div>
                         )}
                     </li>
 
@@ -343,7 +343,7 @@ const Articles = () => {
                 </ul>
 
                 {/* JIU Blogs Link with href */}
-                <a href={blogUrl} className="flex items-center text-black-600 cursor-pointer mb-2 text-lg font-semibold">
+                <a href={blogUrl} className="flex items-center text-black-600 cursor-pointer mt-4 md:mt-0 mb-2 text-lg font-semibold">
                     <FontAwesomeIcon icon={faCalendarDays} className="mr-1" />
                     <span className="hover:underline">JIU Blogs</span>
                 </a>

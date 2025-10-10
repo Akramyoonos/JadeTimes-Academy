@@ -1,29 +1,36 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import { defineConfig, globalIgnores } from 'eslint/config'
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
+import reactRefresh from "eslint-plugin-react-refresh";
 
-export default defineConfig([
-  globalIgnores(['dist']),
+export default [
+  { ignores: ["dist"] },
   {
-    files: ['**/*.{js,jsx}'],
-    extends: [
-      js.configs.recommended,
-      reactHooks.configs['recommended-latest'],
-      reactRefresh.configs.vite,
-    ],
-    languageOptions: {
-      ecmaVersion: 2020,
+    files: ["**/*.{js,jsx}"],
+    languageOptions: { 
       globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
-      },
+      parserOptions: { ecmaFeatures: { jsx: true } }
+    },
+    settings: { react: { version: "detect" } },
+  },
+  pluginJs.configs.recommended,
+  {
+    ...pluginReactConfig,
+    rules: {
+      ...pluginReactConfig.rules,
+      "react/prop-types": "off",
+      "no-unused-vars": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/no-unescaped-entities": "off"
+    }
+  },
+  { 
+    plugins: {
+      "react-refresh": reactRefresh
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
-    },
-  },
-])
+      "react-refresh/only-export-components": "warn"
+    }
+  }
+];
+

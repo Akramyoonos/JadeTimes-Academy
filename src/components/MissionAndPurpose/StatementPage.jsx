@@ -2,7 +2,7 @@ import React from "react";
 
 const StatementPage = () => {
   return (
-    <div className="flex flex-col lg:flex-row max-w-6xl mx-auto p-6 gap-8 mt-8 ml-40">
+    <div className="flex flex-col lg:flex-row max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 gap-8 mt-8">
       {/* Left Content */}
       <div className="flex-1">
         
@@ -50,24 +50,27 @@ const StatementPage = () => {
         </p>
       </div>
 
-
-      {/* Sidebar */}
-      <aside className="w-full lg:w-80 flex-shrink-0 bg-white p-4 rounded-lg shadow-xl max-h-64 mt-4">
-        <h2 id="related-links-heading" className="text-lg font-extrabold uppercase tracking-wider text-gray-800 mb-4">
-          RELATED LINKS
-        </h2>
-        <nav aria-labelledby="related-links-heading" className="flex flex-col text-base font-medium text-gray-700 space-y-2">
-          <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-            ABOUT US
-          </a>
-          <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-            DEGREE PROGRAMS
-          </a>
-          <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-            EXPLORE OUR PROGRAMS
-          </a>
-        </nav>
-      </aside>
+{/* Right Sidebar */}
+          <aside className="w-full lg:w-80 flex-shrink-0  mt-6 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="bg-gray-200 p-4 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold uppercase text-black">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                Program Dates & Tuition
+              </a>
+            </nav>
+          </div>
+        </aside>
     </div>
   );
 };

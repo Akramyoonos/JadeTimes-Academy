@@ -20,7 +20,7 @@ const Heading = () => {
       </nav>
 
       {/* Page Title */}
-      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-extrabold tracking-wide">
+      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold tracking-wide">
         JIU MEMBERSHIP
       </h1>
     </div>

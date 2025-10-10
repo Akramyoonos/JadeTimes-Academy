@@ -28,10 +28,10 @@ const PromoVideo = () => {
   }, [isPlaying]);
 
   return (
-    <div className="w-full flex ml-40 my-12">
+    <div className="w-full flex  my-12 px-4 sm:px-0 md:px-38">
       {/* Thumbnail */}
       {!isPlaying && (
-        <figure className="relative overflow-hidden shadow-2xl group w-full max-w-4xl ml-4">
+        <figure className="relative overflow-hidden shadow-2xl group w-full max-w-4xl">
           <img
             alt="New York Film Academy"
             src={videoThumbnail}
