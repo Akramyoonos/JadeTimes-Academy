@@ -10,6 +10,7 @@ import WeareDifferent from '../components/Home/WeareDifferent.jsx';
 import CampusesAndLocations from '../components/Home/CampusesAndLocations.jsx';
 import IntroAfterSearch from '../components/Home/IntroAfterSearch.jsx';
 import JIUExperience from '../components/Home/JIUExperience.jsx';
+import Courses from '../components/Home/Courses.jsx';
 
 const Home_page = () => {
   return (
@@ -20,6 +21,8 @@ const Home_page = () => {
         <SearchProgramsBy />
       
         <IntroAfterSearch />
+
+        <Courses /> 
 
         <JIUExperience />
               

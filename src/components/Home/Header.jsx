@@ -208,8 +208,8 @@ const megaMenus = {
     "YOUTH ADMISSIONS": [
       { text: "PROGRAM DATES", href: "/youth/youth-admissions/program-dates" },
       { text: "TUITION", href: "/youth/youth-admissions/tuition" },
-      { text: "International Contests", href: "/youth/youth-admissions/youth-open-houses" },
-      { text: "JOBS", href: "/Job-Positions/" },
+      { text: "INTERNATIONAL CONTESTS", href: "/youth/youth-admissions/youth-open-houses" },
+      { text: "CAREER WITH JIU", href: "/Job-Positions/" },
     ],
     "LOCATIONS": [
       { text: "ONLINE", href: "/campuses/campuses/online",  },
