@@ -3,17 +3,17 @@ import React from "react";
 
 const VeteransPage = () => {
   return (
-    <div className="bg-white font-sans text-gray-900 py-10 px-6 md:px-12 lg:px-20">
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <div className="px-6 py-10 font-sans text-gray-900 bg-white md:px-12 lg:px-20">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
         {/* Left Content */}
         <div className="lg:col-span-3">
           {/* Heading */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug mb-6 border-l-4 border-yellow-400 pl-4">
+          <h1 className="pl-4 mb-6 text-2xl font-semibold leading-snug border-l-4 border-yellow-400 sm:text-3xl md:text-4xl">
             VETERANS & MILITARY DEPENDENT <br /> EDUCATION BENEFITS AT NYFA
           </h1>
 
           {/* Paragraphs */}
-          <div className="space-y-6 text-gray-700 leading-relaxed">
+          <div className="space-y-6 leading-relaxed text-gray-700">
             <p>
               The New York Film Academy (NYFA) has been privileged to enroll
               approximately 3,000 veteran and military-dependent students at our
@@ -69,7 +69,7 @@ const VeteransPage = () => {
 
             <div>
               <p>Additional information about NYFA’s Veterans Services on these pages:</p>
-              <ul className="list-disc list-inside ml-4 space-y-1">
+              <ul className="ml-4 space-y-1 list-disc list-inside">
                 <li><a href="URL_for_Admissions_&_Programs" className="text-pink-600 hover:underline">Admissions & Programs</a></li>
                 <li><a href="URL_for_Military_Benefits" className="text-pink-600 hover:underline">Military Benefits</a></li>
                 <li><a href="URL_for_Veteran_Alum" className="text-pink-600 hover:underline">Veteran Alum</a></li>
@@ -83,37 +83,28 @@ const VeteransPage = () => {
         </div>
 
         {/* Right Sidebar */}
-        <aside className="w-full lg:w-80 flex-shrink-0 bg-white p-4 rounded-lg shadow-xl max-h-108">
-          <h2 id="related-links-heading" className="text-lg font-extrabold uppercase tracking-wider text-gray-800 mb-4">
-            RELATED LINKS
-          </h2>
-          <nav aria-labelledby="related-links-heading" className="flex flex-col text-base font-medium text-gray-700 space-y-2">
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              ADMISSIONS & PROGRAMS
-            </a>
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              MILITARY BENEFITS
-            </a>
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              VETERAN ALUM
-            </a>
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              TEAM
-            </a>
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              NEWS
-            </a>
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              COLLABORATIONS
-            </a>
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              RESOURCES
-            </a>
-          </nav>
-
+          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="p-4 bg-gray-200 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Program Dates & Tuition
+              </a>
+            </nav>
+          </div>
           {/* Veterans' Services Office */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <h3 className="text-lg font-extrabold uppercase tracking-wider text-gray-800 mb-2">Veterans' Services Office</h3>
+          <div className="pt-6 mt-8 border-t border-gray-200">
+            <h3 className="mb-2 text-lg font-extrabold tracking-wider text-gray-800 uppercase">Veterans' Services Office</h3>
             <p className="text-base text-gray-700">
               NYFA is proud to have a Veteran Services office fully staffed by veterans
               who also actively work in film, media, and entertainment. For additional
@@ -123,6 +114,7 @@ const VeteransPage = () => {
             </p>
           </div>
         </aside>
+
       </div>
     </div>
   );

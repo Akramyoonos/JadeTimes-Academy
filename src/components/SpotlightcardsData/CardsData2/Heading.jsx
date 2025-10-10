@@ -3,26 +3,26 @@ import BlogHeadingImage from '../../../assets/Images/Spotlight 02.webp' // Assum
 
 const Heading = () => {
   return (
-    <div className="relative w-full h-[240px] sm:h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden">
+    <div className="relative w-full h-[350px] sm:h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden">
              <img
                alt="JIU students at a speaker event" // Updated alt text
-               className="w-full h-full object-cover absolute inset-0 z-0"              
+               className="absolute inset-0 z-0 object-cover w-full h-full"              
                src={BlogHeadingImage}
 
              />
-             <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-              <nav className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20 flex flex-wrap items-center space-x-2 uppercase text-white text-xs sm:text-sm font-sans bg-opacity-30 px-3 sm:px-4 py-2 rounded-full">
+             <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
+              <nav className="absolute z-20 flex flex-wrap items-center px-3 py-2 space-x-2 font-sans text-xs text-white uppercase rounded-full top-4 left-4 sm:top-8 sm:left-8 sm:text-sm bg-opacity-30 sm:px-4">
                    <a href="/" className="font-semibold hover:underline">JIU</a>
                    <span className="text-gray-300">/</span>
                    <a href="/blog/" className="font-semibold hover:underline">JIU Blogs</a>
                    <span className="text-gray-300">/</span>
                    <a href="/jiu-speaker-event-article" className="hover:underline">Recent</a>
                  </nav>
-             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-4">
-                <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl tracking-wide uppercase text-shadow-lg max-w-5xl">
+             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center text-white">
+                <h1 className="max-w-5xl font-sans text-3xl font-semibold tracking-wide sm:text-4xl md:text-5xl lg:text-6xl text-shadow-lg">
                     The Story of Jadetimes: Empowering Research and Innovation
                 </h1>
-                <p className="mt-6 text-xs sm:text-sm md:text-base uppercase font-medium tracking-widest">
+                <p className="mt-6 text-xs font-medium tracking-widest uppercase sm:text-sm md:text-base">
                     October 17, 2025
                 </p>
              </div>

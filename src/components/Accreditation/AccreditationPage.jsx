@@ -2,21 +2,21 @@ import React from 'react';
 
 const AccreditationPage = () => {
   return (
-    <div className="font-sans min-h-screen bg-white text-gray-800">
-      <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row lg:space-x-8 space-y-8 lg:space-y-0">
+    <div className="min-h-screen font-sans text-gray-800 bg-white">
+      <div className="container flex flex-col px-4 py-8 mx-auto space-y-8 lg:flex-row lg:space-x-8 lg:space-y-0">
 
         {/* Main Content Section */}
-        <div className="lg:w-3/4 space-y-8">
+        <div className="space-y-8 lg:w-3/4">
 
           {/* Main Title Block */}
           <div className="flex items-start space-x-4">
-            <div className="w-1 bg-fuchsia-600 h-20 sm:h-24"></div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium text-gray-900 leading-snug">
+            <div className="w-1 h-20 bg-fuchsia-600 sm:h-24"></div>
+            <h1 className="text-2xl font-medium leading-snug text-gray-900 sm:text-3xl md:text-4xl">
             ACCREDITATION, LICENSING, AND <br /> APPROVALS
             </h1>
           </div>
 
-          <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+          <p className="text-base leading-relaxed text-gray-600 sm:text-lg">
             New York Film Academy is a regionally accredited college that is licensed to operate in several
             locations.
           </p>
@@ -24,37 +24,37 @@ const AccreditationPage = () => {
           {/* Accreditation Section */}
           <div className="space-y-4">
             <div className="flex items-start space-x-4">
-              <div className="w-1 bg-cyan-400 h-12 sm:h-16"></div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
+              <div className="w-1 h-12 bg-cyan-400 sm:h-16"></div>
+              <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl md:text-4xl">
                 ACCREDITATION
               </h2>
             </div>
 
             <div className="space-y-3">
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 New York Film Academy is accredited by the{" "}
-                <span className="text-fuchsia-600 font-medium">
+                <span className="font-medium text-fuchsia-600">
                   WASC Senior College and University Commission<br /> (WSCUC)
                 </span>
                 , 985 Atlantic Avenue, Suite 100, Alameda, CA 94501, 510.748.9001.
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 JIU's accreditation listing can be found on the{" "}
-                <span className="text-fuchsia-600 font-medium">
+                <span className="font-medium text-fuchsia-600">
                   Council for Higher Education website
                 </span>
                 .
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 Click{" "}
-                <a href="#" className="text-fuchsia-600 font-medium  hover:text-fuchsia-700">
+                <a href="#" className="font-medium text-fuchsia-600 hover:text-fuchsia-700">
                   here
                 </a>{" "}
                 for JIU's most recent WSCUC Commission Action Letter
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 Click{" "}
-                <a href="#" className="text-fuchsia-600 font-medium  hover:text-fuchsia-700">
+                <a href="#" className="font-medium text-fuchsia-600 hover:text-fuchsia-700">
                   here
                 </a>{" "}
                 for the most recent WSCUC Visiting Team Report
@@ -65,8 +65,8 @@ const AccreditationPage = () => {
           {/* Licensing and Approvals Section */}
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
-              <div className="w-1 bg-yellow-400 h-12 sm:h-16"></div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
+              <div className="w-1 h-12 bg-yellow-400 sm:h-16"></div>
+              <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl md:text-4xl">
                 LICENSING AND APPROVALS
               </h2>
             </div>
@@ -76,7 +76,7 @@ const AccreditationPage = () => {
               <p className="text-lg font-medium text-gray-800">
                 New York Film Academy - Los Angeles:
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 The New York Film Academy has received “approval” from the Bureau for Private Postsecondary <br />
                 Education (BPPE) to operate as a degree-granting institution in the state of California. “Approval” or <br />
                 “approval to operate” means that the Bureau has determined and certified that an institution meets<br />
@@ -84,7 +84,7 @@ const AccreditationPage = () => {
                  Postsecondary Education Act of 2009.
               </p>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 2535 Capital Oaks Drive, Ste 400 <br />
                 Sacramento, CA 95833 <br />
                 P.O. Box 980818 West Sacramento, CA <br />
@@ -100,7 +100,7 @@ const AccreditationPage = () => {
                 New York Film Academy - New York:
               </p>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 New York Film Academy is registered by the New York State Education Department to confer the<br /> 
                 degree of Bachelor of Fine Arts on graduates of programs in Acting for Film, Filmmaking,<br /> 
                 Entertainment Media and Musical Theatre; to confer certificates of completion on graduates of one-<br />
@@ -112,7 +112,7 @@ const AccreditationPage = () => {
                 Producing, and Screenwriting.
               </p>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 Office of College and University Evaluation <br />
                 New York State Education Department <br />
                 89 Washington Avenue Room 960 <br />
@@ -126,10 +126,10 @@ const AccreditationPage = () => {
               <p className="text-lg font-medium text-gray-800">
                 New York Film Academy – Miami (South Beach):
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 New York Film Academy’s Miami Campus closed operations on Aug 31, 2025. For information on the
                 Miami Campus accreditation, licensing, program curriculum and student records. Please click{" "}
-                <a href="#" className="text-fuchsia-600 font-medium  hover:text-fuchsia-700">
+                <a href="#" className="font-medium text-fuchsia-600 hover:text-fuchsia-700">
                   here
                 </a>
                 .
@@ -141,7 +141,7 @@ const AccreditationPage = () => {
               <p className="text-lg font-medium text-gray-800">
                 New York Film Academy – Gold Coast Australia:
               </p>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 Accepted by the Australian Commonwealth Register of Institutions and Courses for Overseas
                 Students (CRICOS).
               </p>
@@ -153,7 +153,7 @@ const AccreditationPage = () => {
                 New York Film Academy – Gold Coast Australia:
               </p>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="leading-relaxed text-gray-600">
                 Approved and accredited by the Australian Skills Quality Authority (ASQA).
               </p>
 
@@ -163,23 +163,27 @@ const AccreditationPage = () => {
 
 
 
-        {/* Related Links Section */}
-        <aside className="w-full lg:w-80 flex-shrink-0 bg-white p-4 rounded-lg shadow-xl max-h-64">
-  <h2 id="related-links-heading" className="text-lg font-extrabold uppercase tracking-wider text-gray-800 mb-4">
-    RELATED LINKS
-  </h2>
-  <nav aria-labelledby="related-links-heading" className="flex flex-col text-base font-medium text-gray-700 space-y-2">
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-      ABOUT US
-    </a>
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-  AFFILIATIONS
-    </a>
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-  ARTICULATION
-    </a>
-  </nav>
-</aside>
+       {/* Right Sidebar */}
+          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="p-4 bg-gray-200 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Program Dates & Tuition
+              </a>
+            </nav>
+          </div>
+        </aside>
       </div>
     </div>
   );

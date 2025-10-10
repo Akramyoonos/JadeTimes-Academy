@@ -41,10 +41,10 @@ const topLinks = [
 
 const Footer = () => {
   return (
-     <div className="FooterFont bg-black from-gray-900 to-black text-white">
+     <div className="text-white bg-black FooterFont from-gray-900 to-black">
       {/* Top CTA strip (centered text + icon, color on hover) */}
-      <div className="bg-black bg-opacity-20 border-b border-gray-800">
-        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-3">
+      <div className="bg-black border-b border-gray-800 bg-opacity-20">
+        <div className="grid max-w-screen-xl grid-cols-1 mx-auto sm:grid-cols-3">
           {topLinks.map((l, i) => (
             <a
               key={i}
@@ -79,7 +79,7 @@ const Footer = () => {
 
       {/* ───────── Middle Section ───────── */}
       {/* ───────── Middle Section ───────── */}
-      <div className="py-10  bg-black bg-opacity-20 border-b-2 border-gray-800 mx-12">
+      <div className="py-10 mx-12 bg-black border-b-2 border-gray-800 bg-opacity-20">
         <div className="flex flex-col items-start">
             {/* Logo */}
             <div className="mb-6">
@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
             
             {/* Links */}
-            <div className="flex flex-wrap gap-6 text-sm font-sans">
+            <div className="flex flex-wrap gap-6 font-sans text-sm">
               <a href="#" className="hover:text-gray-400">
                 COURSES
               </a>
@@ -104,7 +104,7 @@ const Footer = () => {
               <a href="#" className="hover:text-gray-400">
                 CAMPUS LIFE
               </a>
-              <a href="jobs-at-nyfa/" className="hover:text-gray-400">
+              <a href="/jobs-at-nyfa/" className="hover:text-gray-400">
                 JOBS
               </a>
               <a href="#" className="hover:text-gray-400">
@@ -113,7 +113,7 @@ const Footer = () => {
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-5 text-xl mt-8 text-gray-400">
+            <div className="flex gap-5 mt-8 text-xl text-gray-400">
               <a href="https://www.instagram.com/jadetimes_university/" target="_blank" rel="noopener noreferrer" className="hover:text-white">
                 <FaInstagram />
               </a>
@@ -137,15 +137,15 @@ const Footer = () => {
       </div>
 
       {/* ───────── Bottom Section ───────── */}
-      <div className=" py-10 px-4 sm:px-10 lg:px-12 flex flex-col-reverse md:flex-row md:justify-between gap-6 text-gray-200 text-xs">
+      <div className="flex flex-col-reverse gap-6 px-4 py-10 text-xs text-gray-200  sm:px-10 lg:px-12 md:flex-row md:justify-between">
         {/* Left text */}
         <div className="md:w-2/3">
           <div>
             <span>Copyright © 2024 Jadetimes International University (JIU)</span>
             <span className="mx-2">•</span>
-            <a href="/policy/" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+            <a href="/policy/" className="transition-colors hover:text-blue-400">Privacy Policy</a>
             <span className="mx-2">•</span>
-            <a href="/Terms-Conditions/" className="hover:text-blue-400 transition-colors">Terms & Conditions</a>
+            <a href="/Terms-Conditions/" className="transition-colors hover:text-blue-400">Terms & Conditions</a>
           </div>
 
           <p className="mt-4 text-gray-600">
@@ -159,7 +159,7 @@ All programs and workshops are owned and operated by Jadetimes International Uni
           </p>
 
           <p className="mt-4">
-            <a href="#" className="text-gray-400  hover:text-blue-400">
+            <a href="#" className="text-gray-400 hover:text-blue-400">
               Click here
             </a>{" "}
             <span className="text-gray-700">to learn more about JIU’s programs.  </span>
@@ -179,44 +179,44 @@ All programs and workshops are owned and operated by Jadetimes International Uni
         </div>
 
         {/* Right language list */}
-        <ul className="grid grid-cols-4 sm:grid-cols-8 gap-4 md:gap-6 text-lg pr-6 text-right">
+        <ul className="grid grid-cols-4 gap-4 pr-6 text-lg text-right sm:grid-cols-8 md:gap-6">
           <li>
-            <a href="#" className="hover:text-white text-gray-400">
+            <a href="#" className="text-gray-400 hover:text-white">
               RU
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-gray-400">
+            <a href="#" className="text-gray-400 hover:text-white">
               ES
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-gray-400">
+            <a href="#" className="text-gray-400 hover:text-white">
               AR
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-gray-400">
+            <a href="#" className="text-gray-400 hover:text-white">
               IT
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-gray-400">
+            <a href="#" className="text-gray-400 hover:text-white">
               PT
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-gray-400">
+            <a href="#" className="text-gray-400 hover:text-white">
               JP
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-gray-400">
+            <a href="#" className="text-gray-400 hover:text-white">
               KR
             </a>
           </li>
           <li>
-            <a href="#" className="hover:text-white text-gray-400">
+            <a href="#" className="text-gray-400 hover:text-white">
               CN
             </a>
           </li>

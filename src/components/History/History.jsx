@@ -2,16 +2,16 @@ import React from 'react'
 
 const History = () => {
     return (
-        <div className="bg-gray-50 font-sans text-gray-900 pt-24">
-            <div className="max-w-full sm:max-w-xl md:max-w-3xl lg:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12">
+        <div className="pt-24 font-sans text-gray-900 bg-gray-50">
+            <div className="flex flex-col max-w-full gap-12 px-4 mx-auto sm:max-w-xl md:max-w-3xl lg:max-w-7xl sm:px-6 lg:px-8 lg:flex-row">
                 <main className="flex-1">
                     <div className="flex items-center gap-6 mb-10">
                         <span aria-hidden="true" className="block w-2 h-16 bg-yellow-300 rounded-full"></span>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extralight leading-tight">
+                        <h1 className="text-3xl leading-tight sm:text-4xl md:text-5xl font-extralight">
                             JIU'S HISTORY: A TIMELINE
                         </h1>
                     </div>
-                    <p className="text-lg text-gray-700 max-w-3xl leading-relaxed mb-12">
+                    <p className="max-w-3xl mb-12 text-lg leading-relaxed text-gray-700">
                        In 1992, Jerry Sherlock, executive producer of The Hunt for Red October (1990), set out to create a 
                        school for filmmakers by filmmakers, establishing our total immersion filmmaking school, New York
                        Film Academy. Sherlock envisioned a school that would provide a collaborative creative
@@ -31,22 +31,27 @@ const History = () => {
                        television, media, and entertainment.
                     </p>
                 </main>
-               <aside className="w-full lg:w-80 flex-shrink-0 bg-white p-4 rounded-lg shadow-xl max-h-64">
-  <h2 id="related-links-heading" className="text-lg font-extrabold uppercase tracking-wider text-gray-800 mb-4">
-    RELATED LINKS
-  </h2>
-  <nav aria-labelledby="related-links-heading" className="flex flex-col text-base font-medium text-gray-700 space-y-2">
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-      ABOUT US
-    </a>
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-    MISSION AND PURPOSE
-    </a>
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-      EXPLORE OUR PROGRAMS
-    </a>
-  </nav>
-</aside>
+               {/* Right Sidebar */}
+          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="p-4 bg-gray-200 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Program Dates & Tuition
+              </a>
+            </nav>
+          </div>
+        </aside>
             </div>
         </div>
     )

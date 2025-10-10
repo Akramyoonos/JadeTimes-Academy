@@ -7,20 +7,20 @@ const Heading = () => {
       {/* Background Image */}
       <img
         alt="JIU Membership Background"
-        className="w-full h-full object-cover absolute inset-0 z-0"
+        className="absolute inset-0 z-0 object-cover w-full h-full"
         src={AboutHeading}
       />
 
-         <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+         <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
     
-      <nav className="absolute top-8 left-8 z-20 flex items-center space-x-3 text-white text-sm sm:text-base font-sans">
+      <nav className="absolute z-20 flex items-center space-x-3 font-sans text-sm text-white top-8 left-8 sm:text-base">
         <span className="font-semibold">JIU</span>
         <span className="text-gray-300">/</span>
         <span className="uppercase">JIU Membership</span>
       </nav>
 
       {/* Page Title */}
-      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold tracking-wide">
+      <h1 className="absolute z-20 font-sans text-2xl font-semibold tracking-wide text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl md:text-4xl lg:text-5xl">
         JIU MEMBERSHIP
       </h1>
     </div>

@@ -94,11 +94,11 @@ const TestimonialPage = () => {
 
   return (
 
-    <div className="bg-white text-gray-900 min-h-screen px-6 md:px-20 py-10">
+    <div className="min-h-screen px-6 py-10 text-gray-900 bg-white md:px-20">
       {/* Top Filter Section */}
-      <div className="flex flex-col md:flex-row items-center gap-4 mb-10 p-4 bg-gray-50 rounded-lg shadow-md">
+      <div className="flex flex-col items-center gap-4 p-4 mb-10 rounded-lg shadow-md md:flex-row bg-gray-50">
         <select
-          className="w-full md:w-1/3 border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-transparent transition duration-200 ease-in-out"
+          className="w-full p-3 transition duration-200 ease-in-out border border-gray-300 rounded-md md:w-1/3 focus:ring-2 focus:ring-sky-500 focus:border-transparent"
           value={selectedArea}
           onChange={(e) => setSelectedArea(e.target.value)}
         >
@@ -123,7 +123,7 @@ const TestimonialPage = () => {
         </select>
 
         <select
-          className="w-full md:w-1/3 border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-transparent transition duration-200 ease-in-out"
+          className="w-full p-3 transition duration-200 ease-in-out border border-gray-300 rounded-md md:w-1/3 focus:ring-2 focus:ring-sky-500 focus:border-transparent"
           value={selectedLocation}
           onChange={(e) => setSelectedLocation(e.target.value)}
         >
@@ -140,21 +140,21 @@ const TestimonialPage = () => {
 
         </select>
 
-        <button type="button" className="w-full md:w-1/3 bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 rounded-md transition duration-200 ease-in-out shadow-md hover:shadow-lg">
+        <button type="button" className="w-full py-3 font-semibold text-white transition duration-200 ease-in-out rounded-md shadow-md md:w-1/3 bg-sky-600 hover:bg-sky-700 hover:shadow-lg">
           Search
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
         {/* Left - Testimonials */}
-        <div className="md:col-span-2 space-y-8">
+        <div className="space-y-8 md:col-span-2">
           {/* Mayté expandable testimonial */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+          <div className="p-6 transition-shadow duration-300 ease-in-out bg-white rounded-lg shadow-lg hover:shadow-xl">
             <div className="flex items-center justify-between mb-2">
               <h2 className="text-2xl font-bold text-gray-800">Mayté Losada</h2>
               <button
                 onClick={() => setExpanded(!expanded)}
-                className="text-sky-600 hover:text-sky-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-full p-2"
+                className="p-2 transition-colors duration-200 rounded-full text-sky-600 hover:text-sky-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
                 aria-expanded={expanded}
                 aria-controls="mayte-testimonial-content"
               >
@@ -162,7 +162,7 @@ const TestimonialPage = () => {
               </button>
             </div>
 
-            <p className="text-gray-600 text-sm mb-4">
+            <p className="mb-4 text-sm text-gray-600">
               Bachelor of Fine Arts Acting for Film
             </p>
 
@@ -171,7 +171,7 @@ const TestimonialPage = () => {
               className="overflow-hidden transition-all duration-500 ease-in-out"
               style={{ maxHeight: expanded ? "1000px" : "100px" }}
             >
-              <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+              <p className="leading-relaxed text-gray-700 whitespace-pre-line">
                 {expanded ? <>{baseText}{fullTextContent}</> : baseText}
               </p>
             </div>
@@ -179,27 +179,27 @@ const TestimonialPage = () => {
 
           
           {visibleTestimonials.map((item, idx) => (
-            <div key={start + idx} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+            <div key={start + idx} className="p-6 transition-shadow duration-300 ease-in-out bg-white rounded-lg shadow-lg hover:shadow-xl">
               <div className="flex items-center justify-between mb-2">
                 <h2 className="text-xl font-bold text-gray-800">{item.name}</h2>
                 <button
                   onClick={() => toggleIndex(start + idx)}
-                  className="text-sky-600 hover:text-sky-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-full p-2"
+                  className="p-2 transition-colors duration-200 rounded-full text-sky-600 hover:text-sky-800 focus:outline-none focus:ring-2 focus:ring-sky-500"
                   aria-expanded={openIndex === start + idx}
                   aria-controls={`testimonial-content-${start + idx}`}
                 >
                   {openIndex === start + idx ? <FaChevronUp size={20} /> : <FaChevronDown size={20} />}
                 </button>
               </div>
-              <p className="text-gray-600 text-sm mb-4">{item.program}</p>
+              <p className="mb-4 text-sm text-gray-600">{item.program}</p>
               {openIndex === start + idx && (
-                <p id={`testimonial-content-${start + idx}`} className="text-gray-700 leading-relaxed mt-4">{item.text}</p>
+                <p id={`testimonial-content-${start + idx}`} className="mt-4 leading-relaxed text-gray-700">{item.text}</p>
               )}
             </div>
           ))}
 
           {/* Page numbers */}
-          <div className="flex justify-center space-x-2 mt-6">
+          <div className="flex justify-center mt-6 space-x-2">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((num) => (
               <button
                 key={num}
@@ -221,28 +221,26 @@ const TestimonialPage = () => {
         </div>
 
 
-        {/* Right - Related Links */}
-        <aside className="w-full lg:w-80 flex-shrink-0 bg-white p-4 rounded-lg shadow-xl max-h-64">
-          <h2
-            id="related-links-heading"
-            className="text-lg font-extrabold uppercase tracking-wider text-gray-800 mb-4"
-          >
-            RELATED LINKS
-          </h2>
-          <nav
-            aria-labelledby="related-links-heading"
-            className="flex flex-col text-base font-medium text-gray-700 space-y-2"
-          >
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              WHO WE ARE
-            </a>
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              NYFA ALUMNI
-            </a>
-            <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-              EXPLORE OUR PROGRAMS
-            </a>
-          </nav>
+        {/* Right Sidebar */}
+          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="p-4 bg-gray-200 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Program Dates & Tuition
+              </a>
+            </nav>
+          </div>
         </aside>
       </div>
     </div>

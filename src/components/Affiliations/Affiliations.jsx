@@ -3,17 +3,17 @@ import React from "react";
 
 const Affiliations = () => {
   return (
-    <div className="bg-white font-sans text-gray-900 py-12 px-6 md:px-16 lg:px-24 flex flex-col lg:flex-row gap-12">
+    <div className="flex flex-col gap-12 px-6 py-12 font-sans text-gray-900 bg-white md:px-16 lg:px-24 lg:flex-row">
       {/* Left Content */}
-      <div className="lg:w-3/4 space-y-8">
+      <div className="space-y-8 lg:w-3/4">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-semibold relative">
+        <h2 className="relative text-3xl font-semibold md:text-4xl">
           <span className="absolute left-[-12px] top-0 h-full w-1 bg-sky-500"></span>
           <span className="pl-4">AFFILIATIONS AND PARTNERSHIPS</span>
         </h2>
 
         {/* Intro Paragraph */}
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="text-lg leading-relaxed text-gray-700">
           NYFA is a leading international film, media, and performing arts college with campuses across the<br />
           world. NYFA’s international community has welcomed students from all over the globe, many{" "}<br />
        
@@ -26,7 +26,7 @@ const Affiliations = () => {
         </p>
 
         {/* Bullet Points */}
-        <ul className="list-disc pl-6 space-y-4 text-gray-700">
+        <ul className="pl-6 space-y-4 text-gray-700 list-disc">
           <li>
             NYFA is accredited by the WASC Senior College and University Commission (WSCUC).
           </li>
@@ -56,22 +56,27 @@ const Affiliations = () => {
 
 
 
-  <aside className="w-full lg:w-80 flex-shrink-0 bg-white p-4 rounded-lg shadow-xl max-h-64">
-  <h2 id="related-links-heading" className="text-lg font-extrabold uppercase tracking-wider text-gray-800 mb-4">
-    RELATED LINKS
-  </h2>
-  <nav aria-labelledby="related-links-heading" className="flex flex-col text-base font-medium text-gray-700 space-y-2">
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-      ABOUT US
-    </a>
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-    ACCREDITATION, LICENSING, AND APPROVALS
-    </a>
-    <a href="#" className="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
-      ARTICULATIION
-    </a>
-  </nav>
-</aside>
+  {/* Right Sidebar */}
+          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="p-4 bg-gray-200 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Program Dates & Tuition
+              </a>
+            </nav>
+          </div>
+        </aside>
 
     </div>
   );

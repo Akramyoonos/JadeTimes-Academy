@@ -3,16 +3,16 @@ import React from 'react';
 const JIUInternationalCommunity = () => {
   return (
     <div className="font-sans">
-      <div className="container mx-auto p-8">
+      <div className="container p-8 mx-auto">
         <div className="flex flex-col md:flex-row">
-          <div className="md:w-3/4 pr-8">
+          <div className="pr-8 md:w-3/4">
             <div className="flex items-center mb-6">
-              <div className="w-1 bg-purple-600 h-12 mr-4"></div>
+              <div className="w-1 h-12 mr-4 bg-purple-600"></div>
               <h1 className="text-3xl font-light text-gray-800">
                 THE NYFA INTERNATIONAL COMMUNITY
               </h1>
             </div>
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="mb-6 leading-relaxed text-gray-600">
               NYFA strives to make education in the visual arts accessible to the most diverse, international, and
               broadest spectrum of students. With students from over 160 countries and a student body that is almost 50%
               international, NYFA students make up a unique, close-knit global community of aspiring visual storytellers.
@@ -21,38 +21,27 @@ const JIUInternationalCommunity = () => {
               visas and getting an I-20, please visit these resources or request more information today.
             </p>
           </div>
-          <div className="md:w-1/4 mt-8 md:mt-0">
-            <div className="bg-gray-100 p-6">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">RELATED LINKS</h2>
-              <ul>
-                <li className="border-b border-gray-200 py-3">
-                  <a href="#" className="text-gray-700 hover:text-gray-900">
-                    STUDENT VISAS
-                  </a>
-                </li>
-                <li className="border-b border-gray-200 py-3">
-                  <a href="#" className="text-gray-700 hover:text-gray-900">
-                    FAQS
-                  </a>
-                </li>
-                <li className="border-b border-gray-200 py-3">
-                  <a href="#" className="text-gray-700 hover:text-gray-900">
-                    FULBRIGHT
-                  </a>
-                </li>
-                <li className="border-b border-gray-200 py-3">
-                  <a href="#" className="text-gray-700 hover:text-gray-900">
-                    INTERNATIONAL FINANCIAL AID
-                  </a>
-                </li>
-                <li className="py-3">
-                  <a href="#" className="text-gray-700 hover:text-gray-900">
-                    PATHWAY TRACK
-                  </a>
-                </li>
-              </ul>
+          {/* Right Sidebar */}
+          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="p-4 bg-gray-200 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
+                RELATED LINKS
+              </h2>
             </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Program Dates & Tuition
+              </a>
+            </nav>
           </div>
+        </aside>
         </div>
       </div>
     </div>

@@ -2,22 +2,22 @@ import React from 'react';
 
 const Description = () => {
     return (
-        <div className="bg-white font-sans text-gray-800">
-            <div className="container mx-auto p-8 md:p-16 relative">
-                <div className="flex flex-col lg:flex-row gap-16">
+        <div className="font-sans text-gray-800 bg-white">
+            <div className="container relative p-8 mx-auto md:p-16">
+                <div className="flex flex-col gap-16 lg:flex-row">
 
                     {/* Main Content Section */}
-                    <div className="lg:w-2/3 relative">
+                    <div className="relative lg:w-2/3">
 
                         {/* Heading */}
                         <div className="flex items-center mb-8">
-                            <span className="w-1 h-12 bg-purple-600 mr-5"></span>
+                            <span className="w-1 h-12 mr-5 bg-purple-600"></span>
                             <h1 className="text-4xl font-light tracking-wider">VISIT A JIU CAMPUS</h1>
                         </div>
 
                         {/* Text Content */}
                         {/* CORRECTED LINE: Removed conflicting "text-base" class */}
-                        <div className="text-gray-600 text-lg leading-relaxed space-y-6">
+                        <div className="space-y-6 text-lg leading-relaxed text-gray-600">
                             <p>
                                 Prospective students and their families can tour the facilities, meet faculty, and connect with the
                                 student community at JIU New York, Los Angeles, or Florence, Italy. These are not the only times
@@ -36,20 +36,27 @@ const Description = () => {
 
                     </div>
 
-                    {/* Sidebar Section */}
-                    <div className="lg:w-1/3">
-                        <div className="bg-gray-50 p-8">
-                            <h2 className="text-sm font-bold tracking-widest text-gray-600 mb-6">RELATED LINKS</h2>
-                            <nav>
-                                <ul>
-                                    <li className="border-b border-gray-200"><a href="/campuses" className="block py-4 text-sm tracking-wider hover:text-purple-600 transition-colors">JIU CAMPUSES</a></li>
-                                    <li className="border-b border-gray-200"><a href="/events" className="block py-4 text-sm tracking-wider hover:text-purple-600 transition-colors">OPEN HOUSE & ONLINE EVENTS</a></li>
-                                    <li className="border-b border-gray-200"><a href="/admissions" className="block py-4 text-sm tracking-wider hover:text-purple-600 transition-colors">MEET JIU NEAR YOU</a></li>
-                                    <li><a href="/programs" className="block pt-4 text-sm tracking-wider hover:text-purple-600 transition-colors">EXPLORE OUR PROGRAMS</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
+                    {/* Right Sidebar */}
+          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="p-4 bg-gray-200 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Program Dates & Tuition
+              </a>
+            </nav>
+          </div>
+        </aside>
 
                 </div>
             </div>
