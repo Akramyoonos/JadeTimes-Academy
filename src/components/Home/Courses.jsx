@@ -1,109 +1,164 @@
-import React from 'react';
-import courseImage1 from '../../assets/Images/CoursesImg01.webp';
-import courseImage2 from '../../assets/Images/CoursesImg02.webp';
+import React, { useRef, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-// Data for the courses - easy to add, remove, or update courses here
-const coursesData = [
-    {
-        id: 1,
-        title: 'Basics of Journalism Course',
-        price: '100 USD',
-        imageUrl: courseImage1,
-        altText: 'Basics of Journalism Course Image',
-    },
-    {
-        id: 2,
-        title: 'Advance Level Journalism',
-        price: '120 USD',
-        imageUrl: courseImage2,
-        altText: 'Advance Level Journalism Course Image',
-    },
-    {
-        id: 3,
-        title: 'Photojournalism Essentials',
-        price: '110 USD',
-        imageUrl: courseImage1, // Placeholder image
-        altText: 'Photojournalism Course Image',
-    },
-    {
-        id: 4,
-        title: 'Broadcast Masterclass',
-        price: '150 USD',
-        imageUrl: courseImage2, // Placeholder image
-        altText: 'Broadcast Journalism Course Image',
-    },
-];
-
-// Reusable Course Card Component
-const CourseCard = ({ imageUrl, altText, title, price }) => {
-    return (
-        // WARNING: The fixed width and height (w-90, h-160) might cause layout issues on smaller screens.
-        <div className="w-90 h-160 max-w-sm text-left bg-white  shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
-            <a href="#" className="block">
-                <img src={imageUrl} alt={altText} className="w-full h-120 object-cover" />
-            </a>
-            <div className="p-6">
-                <h2 className="text-xl font-bold tracking-wide uppercase text-gray-800">{title}</h2>
-                <p className="mt-2 text-base text-gray-600">Course Fee : {price}</p>
-            </div>
-        </div>
-    );
-};
-
-// Reusable Floating Logo Component
-const FloatingLogo = () => {
-    return (
-        <div className="fixed bottom-8 right-8 z-50">
-            <div className="bg-black text-white p-4 rounded-full w-16 h-16 flex items-center justify-center shadow-lg cursor-pointer hover:bg-gray-900 transition-colors">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-                    <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M2 7L12 12M22 7L12 12M12 22V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            </div>
-        </div>
-    );
-};
+// Placeholder images - replace with your actual image imports
+import NycImage from '../../assets/Images/CoursesImg01.webp';
+import LaImage from '../../assets/Images/CoursesImg02.webp';
+import YouthImage from '../../assets/Images/CoursesImg01.webp';
+import VirtualImage from '../../assets/Images/CoursesImg02.webp';
+import YouthImage1 from '../../assets/Images/CoursesImg01.webp';
+import YouthImage2 from '../../assets/Images/CoursesImg02.webp';
 
 
-// Main Page Component
+// CHANGE 1: Created a new Card component to match the style in the image.
+// ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
+const InfoCard = ({ src, title, description, href }) => (
+  <a href={href} className="w-[85vw] md:w-85  flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
+    <div className="overflow-hidden relative">
+      <img
+        src={src}
+        alt={title}
+        className="w-100 h-110 object-contain pointer-events-none transition-transform duration-2000 ease-in-out group-hover:scale-115"
+      />
+      <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
+    </div>
+    <div className="p-4">
+      <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700">{title}</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+    </div>
+  </a>
+);
+
+
 const Courses = () => {
-    return (
-        <div className="bg-gray-50 font-sans">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
-                <div className="flex items-center px-4 sm:px-6 lg:px-4 pt-6 pb-12 gap-4">
-                    <div className="w-2 h-12 bg-[#b61f9f]"></div>
-                    <h2 id="faculty-heading" className="text-4xl md:text-5xl font-medium leading-tight text-black">
-                        COURSES
-                    </h2>
-                </div>
-                
-                {/* Grid Layout for the cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-items-center px-2 gap-8">
-                    {/* We map over the data array to render a card for each course */}
-                    {coursesData.map(course => (
-                        <CourseCard
-                            key={course.id}
-                            imageUrl={course.imageUrl}
-                            altText={course.altText}
-                            title={course.title}
-                            price={course.price}
-                        />
-                    ))}
-                </div>
+  const scrollContainerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const [dragStartTime, setDragStartTime] = useState(0);
 
-                {/* "More Courses" Button Section */}
-                <div className="text-center mt-20">
-                    <a href="/Degree-Programs/" className="inline-block bg-black text-white font-semibold uppercase tracking-wider px-10 py-4  hover:bg-gray-800 transition-colors duration-300 text-lg">
-                        More Courses
-                    </a>
-                </div>
-                
-            </div>
+  const onMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+    setDragStartTime(Date.now());
+  };
 
-            {/* Floating Logo */}
-            <FloatingLogo />
+  const onMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const onMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const onMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; //scroll-fast
+
+    const dragDuration = Date.now() - dragStartTime;
+    // Adjust scrolling speed based on the duration of the drag
+    const scrollSpeed = Math.min(5, 1 + dragDuration / 100);
+
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk * scrollSpeed;
+  };
+
+  // CHANGE 2: Updated the card data to match the content from the image.
+  const cardsData = [
+    {
+      src: NycImage,
+      title: "Shaping the Future of Online Education",
+      description: "Jadetimes International University (JIU) is built on a clear mission: to provide world-class education to students across the globe through accessible, flexible, and innovative online learning. ",
+      href: "/Jadetimes-International-University-(JIU):Shaping-the-Future-of-Online-Education/"
+    },
+    {
+      src: LaImage,
+      title: "Empowering Research and Innovation",
+      description: "Jadetimes began as a bold vision—to create a global platform where creativity, knowledge, and innovation could come together to shape the future. ",
+      href: "/The-Story-of-Jadetimes:Empowering-Research-and-Innovation/"
+    },
+    {
+      src: YouthImage,
+      title: "Advancing Knowledge Across Borders",
+      description: "The Jadetimes Journal of Universal Studies (JJUS) is a peer-reviewed, multidisciplinary academic platform dedicated to advancing knowledge across a wide spectrum of disciplines. Founded.",
+      href: "/Jadetimes-Journal-of-Universal-Studies-(JJUS):Advancing-Knowledge-Across-Borders/"
+    },
+    {
+      src: VirtualImage,
+      title: "Partners with Special Graphics LLC for Advanced Graphic Design Education",
+      description: "The partnership comes shortly after Geeth Roman, President of JIU, increased his shareholding in Special Graphics to 74%, becoming the new Chairman of the company.",
+      href: "/Jadetimes-International-University-Partners-with-Special-Graphics-LLC-for-Advanced-Graphic-Design-Education/"
+    },
+        {
+      src: YouthImage1,
+      title: "Jadetimes International Research Conference 2025",
+      description: "The Jadetimes International Research Conference 2025 is a global forum for scholars, professionals, and students to present original research, build collaborations, and gain international visibility.",
+      href: "/Jadetimes-International-Research-Conference-2025/"
+    },
+        {
+      src: YouthImage2,
+      title: "How Jadetimes University Launches Students Into Industry",
+      description: "Jadetimes International University (JIU) was built to do one thing exceptionally well: take motivated learners and make them industry-ready. ",
+      href: "/How-Jadetimes-University-Launches-Students-Into-Industry/"
+    },
+  ];
+
+  const handleScrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="bg-white font-sans text-gray-800">
+      <div className="py-8">
+        {/* This is the heading from your original code */}
+        <div className="max-w-7xl px-8 sm:px-10 lg:px-12 mb-12 md:mb-10">
+          <h2 className="jt-heading">
+            <span className="jt-line">AVAILABLE</span>
+            <span className="jt-line">COURSES</span>
+          </h2>
         </div>
-    );
+
+        <div className="relative overflow-hidden">
+          <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>
+          <div
+            ref={scrollContainerRef}
+            className={`grid grid-flow-col  gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
+              isDragging ? 'cursor-grabbing' : 'cursor-grab'
+            }`}
+            style={{ scrollBehavior: 'smooth' }} 
+            onMouseDown={onMouseDown}
+            onMouseUp={onMouseUp}
+            onMouseLeave={onMouseLeave}
+            onMouseMove={onMouseMove}
+          >
+            {/* CHANGE 3: Using the new InfoCard component and updated data. */}
+            {cardsData.map((card, index) => (
+              <InfoCard key={index} {...card} />
+            ))}
+          </div>
+          <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>
+        </div>
+        <div className="text-center mt-8">
+          <a href="/Degree-Programs/" className="inline-block bg-purple-600 text-white font-semibold px-8 py-3  hover:bg-purple-700 transition-colors duration-300">
+            More Courses
+          </a>
+        </div>
+      </div>
+
+    </div>
+  );
 };
+
 
 export default Courses;
