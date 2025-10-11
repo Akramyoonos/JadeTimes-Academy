@@ -94,22 +94,22 @@ const OurFaculty = () => {
     <div className="OurfacultyFont">
       <div className="bg-white">
         <section className="bg-[#0a0a0a] text-white" aria-labelledby="faculty-heading">
-          <div className="max-w-8xl px-8 md:px-12 pt-8 sm:pt-0 md:pt-6 lg:pt-8  ">
-            <div className="flex flex-col md:flex-row items-center md:items-start md:justify-start ">
-              <div className="flex flex-col justify-center md:justify-start md:items-start gap-8 md:gap-12 w-full md:w-1/4">
-                <div className="flex items-center pt-6 gap-6">
+          <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
+              <div className="lg:col-span-1 flex flex-col items-start gap-8">
+                <div className="flex items-center gap-6">
                   <div className="w-1.5 h-20 bg-[#b61f9f]"></div>
-                  <h2 id="faculty-heading" className="text-5xl md:text-5xl font-medium leading-tight text-white">
+                  <h2 id="faculty-heading" className="text-4xl md:text-5xl font-medium leading-tight text-white">
                     OUR
                     <br />
                     FACULTY
                   </h2>
                 </div>
-                <a href="/faculty-directory/" className="bg-purple-600 text-white font-medium text-base uppercase  px-8 py-4 shadow-lg hover:bg-purple-700 focus:outline-none  focus:ring-purple-300 transition-colors duration-300 inline-block text-center">
+                <a href="/faculty-directory/" className="bg-purple-600 text-white font-medium text-base uppercase px-8 py-4 shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-purple-300 transition-colors duration-300 inline-block text-center">
                   MEET OUR FACULTY
                 </a>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full md:w-3/4 lg:w-3/4">
+              <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
                 {facultyData.map((faculty) => (
                   <FacultyCard key={faculty.department} {...faculty} />
                 ))}
