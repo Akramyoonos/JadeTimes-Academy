@@ -7,7 +7,7 @@ import StevenSpielberg from "../../assets/Images/AlumniHeadingImage.webp";
 
 const GuestSection = () => {
   return (
-    <div className="flex justify-center md:justify-end w-full px-4 sm:px-6 md:pr-16 lg:pr-24 xl:pr-32 py-8">
+    <div className="flex w-full px-6 sm:px-6 md:px-6 lg:px-35 md:pr-16 lg:pr-24 xl:pr-32 py-8">
       <div className="relative bg-sky-100 p-6 sm:p-8 rounded-2xl shadow-md w-full max-w-3xl">
         <img
           src={MicIcon}

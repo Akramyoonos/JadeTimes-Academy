@@ -3,13 +3,13 @@ import React from 'react';
 const JIUInternationalCommunity = () => {
   return (
     <div className="font-sans">
-      <div className="container p-8 mx-auto">
+      <div className="container px-6 sm:px-6 md:px-6 lg:px-35 py-12 mx-auto">
         <div className="flex flex-col md:flex-row">
           <div className="pr-8 md:w-3/4">
             <div className="flex items-center mb-6">
               <div className="w-1 h-12 mr-4 bg-purple-600"></div>
               <h1 className="text-3xl font-light text-gray-800">
-                THE NYFA INTERNATIONAL COMMUNITY
+                THE JIU INTERNATIONAL COMMUNITY
               </h1>
             </div>
             <p className="mb-6 leading-relaxed text-gray-600">

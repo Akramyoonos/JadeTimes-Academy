@@ -32,8 +32,8 @@ const VideoSection = () => {
   return (
     <div className="bg-white py-12">
       {/* Heading */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="flex items-center justify-center mb-10">
+      <div className="px-6 sm:px-6 md:px-6 lg:px-35 text-center">
+        <div className="flex items-center  mb-10">
           <div className="w-1 h-10 bg-pink-500 mr-3"></div>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900">
             VIDEO – TIPS, TRICKS, INTERVIEWS, AND INSIDER STORIES
@@ -42,7 +42,7 @@ const VideoSection = () => {
       </div>
 
       {/* Videos Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {videos.map((video, idx) => (
           <div key={idx} className="text-center">
             <img

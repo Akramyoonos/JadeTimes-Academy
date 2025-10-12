@@ -47,7 +47,7 @@ const Explore = () => {
   return (
     <div className="ExploreFont">
       <div className="bg-white text-gray-900">
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="max-w-screen-2xl mx-auto px-6 sm:px-6 md:px-6 lg:px-35 py-16">
           <div className="relative mb-12">
             <div className="relative inline-block pl-6">
               <span className="absolute left-0 top-0 h-full w-1.5 bg-purple-600"></span>

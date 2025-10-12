@@ -2,11 +2,11 @@ import React from 'react'
 
 const Admissions = () => {
     return (
-        <div className="py-16 font-sans text-gray-900 bg-gray-50 sm:py-24">
-            <div className="flex flex-col gap-12 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:flex-row">
+        <div className="py-6 font-sans text-gray-900 bg-gray-50 sm:py-12">
+            <div className="flex flex-col gap-12  mx-auto max-w-7xl px-6 sm:px-6 md:px-6 lg:px-4 lg:flex-row">
                 <main className="flex-1">
                     <div className="flex items-center gap-6 mb-10">
-                        <span aria-hidden="true" className="block w-2 h-16 bg-blue-600 rounded-full"></span>
+                        <span aria-hidden="true" className="block w-1.5 h-16 bg-blue-600 "></span>
                         <h1 className="text-3xl leading-tight sm:text-4xl md:text-5xl font-extralight">
                             JIU ADMISSIONS
                         </h1>

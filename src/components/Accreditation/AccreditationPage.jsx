@@ -3,7 +3,7 @@ import React from 'react';
 const AccreditationPage = () => {
   return (
     <div className="min-h-screen font-sans text-gray-800 bg-white">
-      <div className="container flex flex-col px-4 py-8 mx-auto space-y-8 lg:flex-row lg:space-x-8 lg:space-y-0">
+      <div className="container flex flex-col px-6 sm:px-6 md:px-6 lg:px-35 py-8 mx-auto space-y-8 lg:flex-row lg:space-x-8 lg:space-y-0">
 
         {/* Main Content Section */}
         <div className="space-y-8 lg:w-3/4">

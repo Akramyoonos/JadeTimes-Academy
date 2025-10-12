@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <div className="max-w-5xl px-4 sm:px-6 py-16">
+    <div className="max-w-7xl px-6 sm:px-6 md:px-6 lg:px-15 py-16">
 
       <p className="text-sm text-gray-600 mb-8 px-4 sm:px-8 md:px-20">
         *Online events are free to JIU members. JIU will make access to online

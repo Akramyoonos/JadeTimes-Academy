@@ -165,7 +165,7 @@ Launch of the Online MA in Entrepreneurial Producing and Innovation.`,
 
   return (
     <section className="w-full py-8 sm:py-10 lg:py-16">
-      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16 px-6 sm:px-6 md:px-12 lg:px-4">
         {items.map((item, index) => (
           <div key={index} className="space-y-4 flex flex-col items-start">
           

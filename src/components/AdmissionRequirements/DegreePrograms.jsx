@@ -72,12 +72,14 @@ const DegreePrograms = () => {
   const secondRowPrograms = degreePrograms.slice(2, 5);
 
   return (
-    <div className="bg-white font-sans text-gray-900 py-16 sm:py-20">
+    <div className="bg-white font-sans text-gray-900 px-1 sm:px-1 md:px-1 lg:px-1 py-16 sm:py-20">
       <section>
         <div className="flex-1">
+          <div className="flex-1 mb-12 px-6 sm:px-6 md:px-6 lg:px-35">
           <h1 className="text-3xl md:text-4xl font-semibold border-l-4 border-pink-400 pl-4 mb-6">
             REQUIREMENTS BY DEGREE PROGRAM
           </h1>
+          </div>
           <div className="flex flex-col gap-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {firstRowPrograms.map((program) => (

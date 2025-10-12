@@ -2,7 +2,7 @@ import React from "react";
 
 const GiBillPage = () => {
   return (
-    <div className="bg-white min-h-screen font-sans px-6 lg:px-24 py-12">
+    <div className="bg-white min-h-screen font-sans px-6 sm:px-6 md:px-6 lg:px-35 py-12">
       {/* Heading */}
       <div className="flex items-center mb-8">
         <div className="w-1 h-20 bg-pink-600 mr-4"></div>

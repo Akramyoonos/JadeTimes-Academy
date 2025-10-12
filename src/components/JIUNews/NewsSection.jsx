@@ -39,12 +39,12 @@ const NewsSection = () => {
     <div className="bg-white py-12">
 
       {/* Top Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
           NYFA IN THE NEWS
         </h2>
 
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-10">
+        <div className="flex flex-col sm:flex-row justify-between items-center pr-12 mb-10">
           <div className="flex items-center space-x-2">
             <div className="w-1 h-10 bg-sky-500"></div>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium text-gray-900">
@@ -60,7 +60,7 @@ const NewsSection = () => {
       </div>
 
       {/* Articles */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {articles.map((article, idx) => (
           <div key={idx} className="text-center">
             <img

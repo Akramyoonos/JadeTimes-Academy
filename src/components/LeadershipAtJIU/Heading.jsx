@@ -21,7 +21,7 @@ const Heading = () => {
         <span className="font-semibold">Leadership </span>
         
       </nav>
-      <h1 className="absolute z-20 font-sans text-2xl text-white uppercase -translate-x-1/2 -translate-y-1/2 sm:text-3xl md:text-4xl lg:text-5xl font-semiboldtracking-wide top-1/2 left-1/2 text-shadow-lg">
+      <h1 className="absolute z-20 font-sans text-xl text-white uppercase -translate-x-1/2 -translate-y-1/2 sm:text-3xl md:text-4xl lg:text-5xl font-semiboldtracking-wide top-1/2 left-1/2 text-shadow-lg">
        Leadership at JIU
       </h1>
     </div>

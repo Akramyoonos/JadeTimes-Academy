@@ -119,7 +119,7 @@ const BrowsebyDiscipline = () => {
   return (
     <div className="text-white">
       <div className="py-12">
-        <div className="relative mb-8 px-4 sm:px-6 lg:px-8">
+        <div className="relative mb-8 px-2 sm:px-2 md:px-2 lg:px-29.5">
           <div className="relative pl-6">
             <span className="absolute left-5 top-0 h-full w-1 bg-cyan-400"></span>
             <h1 className="ml-4 text-5xl md:text-6xl font-light tracking-wider text-black uppercase">

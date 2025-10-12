@@ -167,7 +167,7 @@ const FindYourProgram = () => {
 
   return (
     <div className="bg-gray-50 text-gray-900 py-16 sm:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 md:px-6 lg:px-3">
         <div className="flex flex-col lg:flex-row gap-12">
           <main className="flex-1">
             <section className="mb-12">

@@ -22,12 +22,12 @@ const Welcome = () => {
 
   return (
     <div className="bg-slate-50 text-gray-800 py-20 sm:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20">
           <main className="flex-1">
             <div className="flex items-center gap-4 mb-12">
-              <span className="inline-block w-3 h-14 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full"></span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl text-gray-900 font-extrabold leading-tight tracking-tighter">
+              <span className="inline-block w-3 h-24 bg-gradient-to-r from-blue-500 to-purple-600 "></span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl text-gray-900 font-bold leading-tight tracking-tighter">
                 WELCOME TO <span className="text-blue-600">Jadetimes</span> Professional Academy
               </h1>
             </div>

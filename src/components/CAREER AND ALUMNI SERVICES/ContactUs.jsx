@@ -4,7 +4,7 @@ import { FiSend, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 const ContactUs = () => {
   return (
     <div className="bg-white font-sans">
-      <main className="py-24 px-4 sm:px-6 lg:px-8">
+      <main className="py-24 px-6 sm:px-6 md:px-6 lg:px-35">
         <div className="relative">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8">
             <div className="pl-10 sm:pl-16 lg:pl-0">

@@ -3,7 +3,7 @@ import React from "react";
 
 const Affiliations = () => {
   return (
-    <div className="flex flex-col gap-12 px-6 py-12 font-sans text-gray-900 bg-white md:px-16 lg:px-24 lg:flex-row">
+    <div className="flex flex-col gap-12 px-6 sm:px-6 md:px-6 lg:px-37 py-12 font-sans text-gray-900 bg-white  lg:flex-row">
       {/* Left Content */}
       <div className="space-y-8 lg:w-3/4">
         {/* Heading */}

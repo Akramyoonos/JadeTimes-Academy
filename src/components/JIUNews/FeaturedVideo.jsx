@@ -5,9 +5,9 @@ const FeaturedVideo = () => {
   return (
     <div className="w-full bg-white py-10 px-6 md:px-12 lg:px-20">
       {/* Heading */}
-      <div className="mb-6">
+      <div className="mb-6 px-6 sm:px-6 md:px-6 lg:px-15">
         <h2 className="text-2xl md:text-3xl font-semibold flex items-center">
-          <span className="w-1 h-6 bg-purple-500 mr-3"></span>
+          <span className="w-1 h-10 bg-purple-500 mr-3"></span>
           FEATURED NYFA YOUTUBE VIDEO
         </h2>
         <p className="text-gray-600 mt-2">

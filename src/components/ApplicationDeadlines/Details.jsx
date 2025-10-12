@@ -3,7 +3,7 @@ import React from 'react';
 const Details = () => {
     return (
         <div className="bg-white">
-            <div className="container px-4 py-16 mx-auto sm:px-6 lg:px-8">
+            <div className="container px-6 sm:px-6 md:px-6 lg:px-35 py-16 mx-auto ">
                 <div className="flex flex-col gap-12 lg:flex-row">
 
                     {/* Left Section */}

@@ -36,7 +36,7 @@ const LeadershipSection = () => {
     return (
         <div className="bg-white">
             <div className="py-12">
-                <div className="flex items-center mb-8 px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center mb-8 px-6 sm:px-6 md:px-6 lg:px-35">
                     <div className="w-1 h-10 bg-purple-600 mr-4"></div>
                     <h1 className="text-4xl font-light text-gray-800 tracking-wider">
                         AREAS OF LEADERSHIP

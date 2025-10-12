@@ -2,10 +2,10 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div className="bg-white p-8 md:p-12 lg:p-16 rounded-lg shadow-lg">
+    <div className="bg-white px-6 sm:px-6 md:px-6 lg:px-35 ">
       
         <div className="flex items-center mb-8">
-          <div className="w-2 h-20 bg-purple-600 mr-4"></div>
+          <div className="w-1.25 h-14 bg-purple-600 mr-4"></div>
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-9s00 tracking-tight">
             BENEFITS, SUPPORT, AND FACILITIES FOR VETERANS
           </h1>

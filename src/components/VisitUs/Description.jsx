@@ -3,7 +3,7 @@ import React from 'react';
 const Description = () => {
     return (
         <div className="font-sans text-gray-800 bg-white">
-            <div className="container relative p-8 mx-auto md:p-16">
+            <div className="container relative px-6 sm:px-6 md:px-6 lg:px-35 mx-auto md:p-16">
                 <div className="flex flex-col gap-16 lg:flex-row">
 
                     {/* Main Content Section */}

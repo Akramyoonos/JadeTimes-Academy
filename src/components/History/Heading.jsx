@@ -20,7 +20,7 @@ const Heading = () => {
         <span className="text-gray-300">/</span>
         <span>JIU HISTORY</span>
       </nav>
-      <h1 className="absolute z-20 font-sans text-2xl font-semibold tracking-wide text-center text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl md:text-4xl lg:text-5xl text-shadow-lg">
+      <h1 className="absolute z-20 font-sans text-xl font-semibold tracking-wide text-center text-white -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl md:text-4xl lg:text-5xl text-shadow-lg">
        THE HISTORY OF JIU
        </h1>
 

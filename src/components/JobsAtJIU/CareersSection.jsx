@@ -3,7 +3,7 @@ import React from "react";
 const CareersSection = () => {
   return (
     <div className="bg-white font-sans text-gray-900 py-16 sm:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-9xl  px-6 sm:px-6 md:px-6 lg:px-35">
         {/* Left Side - Now Hiring */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-8">
           {/* Heading */}

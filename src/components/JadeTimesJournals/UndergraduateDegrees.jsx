@@ -25,10 +25,10 @@ const UndergraduateDegrees = () => {
           }
         `}
       </style>
-      <div className="container mx-auto px-4 py-12">
-        <div className="flex items-center justify-center mb-12">
-          <span className="w-1.5 h-12 bg-blue-400 mr-6"></span>
-          <h1 className="headingFont text-4xl lg:text-5xl font-bold tracking-wider uppercase bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
+      <div className="container mx-auto px-8 py-12">
+        <div className="flex items-center px-6 sm:px-6 md:px-6 lg:px-27 mb-12">
+          <span className="w-1.25 h-12 bg-blue-400 mr-6"></span>
+          <h1 className="text-4xl lg:text-5xl font-bold tracking-wider uppercase text-black" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
             Undergraduate Degrees
           </h1>
         </div>

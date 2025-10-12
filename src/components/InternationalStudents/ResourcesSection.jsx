@@ -50,7 +50,7 @@ const ResourcesSection = () => {
         <div className="container  py-8 md:py-12  bg-white">
             {/* Header Section */}
             <header className="mb-8">
-                <div className="flex items-center">
+                <div className="flex items-center px-6 sm:px-6 md:px-6 lg:px-35">
                     <span className="inline-block w-1 h-10 bg-cyan-400 mr-4"></span>
                     <h1 className="text-2xl md:text-4xl font-light text-gray-700 tracking-wider">
                         RESOURCES AND INFORMATION

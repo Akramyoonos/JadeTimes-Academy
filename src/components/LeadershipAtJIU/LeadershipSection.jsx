@@ -5,7 +5,7 @@ const LeadershipSection = () => {
     return (
         // Main Component Container
         // Added some padding for standalone viewing; adjust as needed within your app.
-        <div className="relative bg-white font-sans w-full  py-24 px-8 sm:px-12 lg:px-16">
+        <div className="relative bg-white font-sans w-full  py-24 px-6 sm:px-6 md:px-6 lg:px-35">
 
 
 

@@ -3,7 +3,7 @@ import React from 'react';
 const Discription = () => {
   return (
     <div className="py-12 DiscriptionFont bg-gray-50 sm:py-16 lg:py-20">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className=" mx-auto max-w-7xl px-6 sm:px-6 md:px-6 lg:px-4">
         <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
 
           {/* Left Content */}

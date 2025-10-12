@@ -25,9 +25,9 @@ const OnlineDegrees = () => {
       </style>
       <div className=" container mx-auto  sm:px-6 lg:px-8 px-4 py-12">
         {/* Header Section */}
-         <div className="flex items-center justify-center mb-12">
-          <span className="w-1.5 h-12 bg-purple-600 mr-6"></span>
-          <h1 className="headingFont text-4xl lg:text-5xl font-bold tracking-wider uppercase text-gray-800">
+         <div className="flex items-center px-6 sm:px-6 md:px-6 lg:px-27 mb-12">
+          <span className="w-1.25 h-12 bg-blue-400 mr-6"></span>
+          <h1 className="text-4xl lg:text-5xl font-bold tracking-wider uppercase text-black" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
             Online Degrees
           </h1>
         </div>

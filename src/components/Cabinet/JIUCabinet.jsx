@@ -103,12 +103,23 @@ const styles = {
         margin: '0 auto',
         padding: '3rem 1rem',
     },
-    mainHeading: {
-        fontSize: '1.875rem',
-        fontWeight: 600,
-        color: '#2d3748',
+     headingContainer: {
+        display: 'flex',
+        alignItems: 'center',
         marginBottom: '2rem',
-        letterSpacing: '0.05em',
+    },
+    headingLine: {
+        width: '4px',
+        height: '40px',
+        backgroundColor: '#25A9E0', // A nice light blue
+        marginRight: '1rem',
+    },
+    mainHeading: {
+        fontSize: '2.5rem',
+        fontWeight: 'normal',
+        color: '#000000',
+        letterSpacing: '0.1em',
+        margin: 0, // Remove default margin from h1
     },
     grid: {
         display: 'grid',
@@ -303,7 +314,10 @@ const JIUCabinet = () => {
   return (
     <div style={styles.pageContainer}>
         <div style={styles.container}>
-            <h1 style={styles.mainHeading}>JIU CABINET</h1>
+            <div style={styles.headingContainer}>
+                <div style={styles.headingLine}></div>
+                <h1 style={styles.mainHeading}>CABINET MEMBERS</h1>
+            </div>
             
             <div style={getGridStyle()}>
                 {cabinetMembers.map((member) => (

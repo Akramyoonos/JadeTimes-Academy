@@ -3,10 +3,10 @@ import React from 'react';
 const JIUEnrollmentPolicies = () => {
   return (
     <div className="bg-white font-sans">
-      <div className="container p-8 ">
+      <div className="container px-14 sm:px-6 md:px-6 lg:px-44 py-6 mx-auto">
         <div className="relative">
           <div className="absolute top-0 left-[-2rem]">
-            <div className="w-1.5 h-12 bg-cyan-400"></div>
+            <div className="w-1 h-12 bg-cyan-400"></div>
           </div>
           <h1 className="text-4xl font-light text-gray-800 tracking-wider">
             NYFA ENROLLMENT AND DEFERRAL POLICIES

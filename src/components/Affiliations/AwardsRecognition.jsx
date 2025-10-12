@@ -3,7 +3,7 @@ import React from "react";
 
 const AwardsRecognition = () => {
   return (
-    <div className="bg-white font-sans text-gray-900 py-12 px-6 md:px-16 lg:px-24 space-y-16">
+    <div className="bg-white font-sans text-gray-900 py-12 px-6 sm:px-6 md:px-6 lg:px-38 space-y-16">
 
       {/* Awards Section */}
       <div className="space-y-8">

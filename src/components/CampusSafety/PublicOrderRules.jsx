@@ -2,7 +2,7 @@ import React from 'react';
 
 const PublicOrderRules = () => {
   return (
-<div className="max-w-7xl ml-12  py-8">
+<div className="max-w-7xl px-6 sm:px-6 md:px-6 lg:px-35 py-8">
       <div className="flex items-start">
         <div className="border-l-4 border-blue-500 pl-4 mb-8">
           <h1 className="text-4xl font-semibold text-gray-800">RULES FOR THE MAINTENANCE OF PUBLIC ORDER</h1>

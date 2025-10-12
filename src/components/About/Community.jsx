@@ -3,9 +3,9 @@ import React from 'react'
 const Community = () => {
   return (
     <div className="bg-gray-100 py-16 sm:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
         <div className="flex items-center gap-6 mb-12">
-          <span className="block w-2 h-16 bg-yellow-500 rounded-full"></span>
+          <span className="block w-2 h-16 bg-yellow-500 "></span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl  text-gray-800 leading-tight">
             THE JIU COMMUNITY
           </h2>

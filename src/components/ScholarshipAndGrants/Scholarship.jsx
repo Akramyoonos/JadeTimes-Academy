@@ -3,7 +3,7 @@ import React from 'react';
 const Scholarship = () => {
   return (
     <div className="text-gray-800 bg-white">
-      <div className="container px-4 py-12 mx-auto">
+      <div className="container px-6 sm:px-6 md:px-6 lg:px-35 py-12 mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-3/4 lg:pr-8">
             <div className="flex items-start mb-8">

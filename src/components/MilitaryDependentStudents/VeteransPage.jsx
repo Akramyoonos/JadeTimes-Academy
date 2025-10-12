@@ -3,7 +3,7 @@ import React from "react";
 
 const VeteransPage = () => {
   return (
-    <div className="px-6 py-10 font-sans text-gray-900 bg-white md:px-12 lg:px-20">
+    <div className="px-6 sm:px-6 md:px-6 lg:px-35 py-10 font-sans text-gray-900 bg-white ">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
         {/* Left Content */}
         <div className="lg:col-span-3">

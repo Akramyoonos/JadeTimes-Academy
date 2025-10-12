@@ -17,15 +17,15 @@ import Campus02 from '../../assets/Images/Campus02.webp';
 
 // Create a map from image names to imported images
 const imageMap = {
-    'AboutHeading.png': AboutHeading,
-    'AboutWelcome.jpeg': AboutWelcome,
-    'AlumniExplore01.jpeg': AlumniExplore01,
-    'AlumniExplore02.jpeg': AlumniExplore02,
-    'AlumniExplore03.jpeg': AlumniExplore03,
-    'BlogHeadingImg.jpeg': BlogHeadingImg,
-    'BlogSearchImg.jpeg': BlogSearchImg,
-    'Campus01.jpeg': Campus01,
-    'Campus02.jpeg': Campus02,
+    'AboutHeading.webp': AboutHeading,
+    'AboutWelcome.webp': AboutWelcome,
+    'AlumniExplore01.webp': AlumniExplore01,
+    'AlumniExplore02.webp': AlumniExplore02,
+    'AlumniExplore03.webp': AlumniExplore03,
+    'BlogHeadingImg.webp': BlogHeadingImg,
+    'BlogSearchImg.webp': BlogSearchImg,
+    'Campus01.webp': Campus01,
+    'Campus02.webp': Campus02,
 };
 
 // Reusable Components

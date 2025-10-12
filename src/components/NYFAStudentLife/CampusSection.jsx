@@ -6,9 +6,9 @@ import Campus03 from '../../assets/Images/Campus03.webp';
 
 const CampusSection = () => {
   return (
-    <div className="p-8 md:p-12 lg:p-16">
+    <div className="p-8 md:p-12 lg:p-2">
       {/* Heading for Campus Selection */}
-      <div className="flex items-center mb-8">
+      <div className="flex items-center px-6 sm:px-6 md:px-6 lg:px-32 mb-8">
         <div className="w-1.5 h-12 bg-fuchsia-600 mr-4 md:mr-6"></div>
         <h2 className="text-xl md:text-2xl lg:text-3xl font-normal leading-tight">
           CHOOSE A CAMPUS BELOW TO EXPLORE OUR STUDENT LIFE:
@@ -16,7 +16,7 @@ const CampusSection = () => {
       </div>
 
       {/* Campus Cards (Los Angeles & New York City) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-4 mb-6">
         {/* Los Angeles Card */}
         <div className="relative overflow-hidden group">
           <img
@@ -79,7 +79,7 @@ const CampusSection = () => {
       </div>
 
       {/* Student Life News Section */}
-      <div className="relative overflow-hidden w-full max-w-5xl mx-auto shadow-lg group">
+      <div className="relative overflow-hidden w-full max-w-7xl mx-auto mb-4 shadow-lg group">
         <img
           src={Campus03}
           alt="Students playing basketball"

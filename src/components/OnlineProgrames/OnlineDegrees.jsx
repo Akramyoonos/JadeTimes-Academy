@@ -25,15 +25,15 @@ const OnlineDegrees = () => {
           }
         `}
       </style>
-      <div className="container mx-auto px-4 py-12">
-        <div className="flex items-center justify-center mb-12">
+      <div className="container px-1 py-12">
+        <div className="flex items-center px-6 sm:px-6 md:px-6 lg:px-33 mb-12">
           <span className="w-1.5 h-12 bg-blue-400 mr-6"></span>
-          <h1 className="headingFont text-4xl lg:text-5xl font-bold tracking-wider uppercase bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
+          <h1 className=" text-4xl lg:text-5xl font-bold tracking-wider uppercase text-black" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
             Online Degrees
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           <div
             className="relative h-64 bg-cover bg-center  overflow-hidden shadow-lg transform hover:scale-105 transition-all duration-2500 group"
             style={{ backgroundImage: `url(${OnlineDegrees01})` }}

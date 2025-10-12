@@ -3,7 +3,7 @@ import React from 'react';
 const ExploreNetwork = () => {
   return (
     <div className="bg-gray-50 font-sans animate-fade-in">
-      <main className="py-24 px-4 sm:px-6 lg:px-8">
+      <main className="py-24 px-6 sm:px-6 md:px-6 lg:px-35">
         <div className="relative">
           {/* Main Content: Headline and Paragraph */}
           <div className="pl-10 sm:pl-16">

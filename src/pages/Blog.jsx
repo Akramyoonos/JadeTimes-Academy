@@ -6,7 +6,6 @@ import Festival from '../components/Blog/Festival'
 import StudentsAndAlumni from '../components/Blog/StudentsAndAlumni.JSX'
 import GuestSpeackers from '../components/Blog/GuestSpeackers'
 import Success from '../components/Blog/Success'
-import HEADLINES from '../components/Blog/HEADLINES'
 
 
 const Blog = () => {
@@ -19,7 +18,6 @@ const Blog = () => {
     <StudentsAndAlumni/>
     <GuestSpeackers/>
     <Success/>
-    <HEADLINES/>
     </>
   )
 }

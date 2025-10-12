@@ -39,10 +39,12 @@ const CertificatePrograms = () => {
   return (
     <div className="bg-white font-sans text-gray-800 py-16 sm:py-20">
       <div>
-        <div className="flex-1 mb-8 px-4 sm:px-6 lg:px-8">
+        <div className="flex-1 mb-12 px-6 sm:px-6 md:px-6 lg:px-35">
+        <div className="flex-1 ">
           <h1 className="text-3xl md:text-4xl font-semibold border-l-4 border-yellow-400 pl-4">
             REQUIREMENTS BY CERTIFICATE PROGRAM
           </h1>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

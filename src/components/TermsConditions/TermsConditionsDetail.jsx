@@ -2,7 +2,7 @@ import React from 'react';
 
 const TermsConditionsDetail = () => {
     return (
-        <div className="container mx-auto px-4 sm:px-6 lg:px-24 py-18 lg:py-18">
+        <div className="container mx-auto px-6 sm:px-6 md:px-6 lg:px-35 py-18 lg:py-18">
             <div className="flex flex-col md:flex-row">
                 <div className="md:w-3/4 pr-8">
                     <div className="flex items-center mb-8">

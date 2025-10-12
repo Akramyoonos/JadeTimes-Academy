@@ -94,9 +94,9 @@ const TestimonialPage = () => {
 
   return (
 
-    <div className="min-h-screen px-6 py-10 text-gray-900 bg-white md:px-20">
+    <div className="min-h-screen  py-10 text-gray-900 bg-white px-6 sm:px-6 md:px-6 lg:px-32">
       {/* Top Filter Section */}
-      <div className="flex flex-col items-center gap-4 p-4 mb-10 rounded-lg shadow-md md:flex-row bg-gray-50">
+      <div className="flex flex-col items-center gap-4 p-4 mb-10  md:flex-row bg-gray-50">
         <select
           className="w-full p-3 transition duration-200 ease-in-out border border-gray-300 rounded-md md:w-1/3 focus:ring-2 focus:ring-sky-500 focus:border-transparent"
           value={selectedArea}

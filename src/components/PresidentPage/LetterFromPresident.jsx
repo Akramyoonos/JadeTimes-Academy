@@ -3,7 +3,7 @@ import React from "react";
 
 const LetterFromPresident = () => {
   return (
-    <div className="bg-white font-sans text-gray-900 py-30 px-6 md:pl-18 lg:pl-36">
+    <div className="bg-white font-sans text-gray-900 py-30 px-6 sm:px-6 md:px-6 lg:px-35">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         
         {/* Left Content */}

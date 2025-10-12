@@ -2,12 +2,12 @@ import React from "react";
 
 const AdmissionRequirements = () => {
   return (
-    <div className="flex flex-col w-full gap-10 px-6 py-16 font-sans text-gray-800 bg-white lg:flex-row lg:px-16 sm:py-20">
+    <div className="flex flex-col w-full gap-10 px-6 sm:px-6 md:px-6 lg:px-35 py-16 font-sans text-gray-800 bg-white lg:flex-row  sm:py-20">
       
       {/* Left Content */}
       <div className="flex-1">
         <h1 className="pl-4 mb-6 text-3xl font-semibold border-l-4 border-blue-400 md:text-4xl">
-          NYFA ADMISSIONS REQUIREMENTS
+          JIU ADMISSIONS REQUIREMENTS
         </h1>
 
         <p className="mb-6 leading-relaxed">

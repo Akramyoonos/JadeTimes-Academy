@@ -85,9 +85,9 @@ const TrainingSection = () => {
   ];
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full  py-12">
       {/* Heading */}
-      <div className="mb-10 pl-22">
+      <div className="mb-10 px-6 sm:px-6 md:px-6 lg:px-35 ">
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight border-l-4 border-pink-500 pl-4">
           TRAINING FOR A FUTURE IN FILM, TELEVISION, MEDIA, AND <br /> ENTERTAINMENT
         </h2>
@@ -98,37 +98,37 @@ const TrainingSection = () => {
       </div>
 
       {/* Image Grid */}
-      <div className="grid gap-6">
+      <div className="grid gap-2">
         {/* Row 1 - 3 items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           {programs.slice(0, 3).map((program, index) => (
             <Card key={index} title={program.title} imageUrl={program.imageUrl} href={program.href} />
           ))}
         </div>
 
         {/* Row 2 - 2 items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {programs.slice(3, 5).map((program, index) => (
             <Card key={index} title={program.title} imageUrl={program.imageUrl} href={program.href} />
           ))}
         </div>
 
         {/* Row 3 - 3 items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           {programs.slice(5, 8).map((program, index) => (
             <Card key={index} title={program.title} imageUrl={program.imageUrl} href={program.href} />
           ))}
         </div>
 
         {/* Row 4 - 2 items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {programs.slice(8, 10).map((program, index) => (
             <Card key={index} title={program.title} imageUrl={program.imageUrl} href={program.href} />
           ))}
         </div>
 
         {/* Row 5 - 3 items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           {programs.slice(10, 13).map((program, index) => (
             <Card key={index} title={program.title} imageUrl={program.imageUrl} href={program.href} />
           ))}

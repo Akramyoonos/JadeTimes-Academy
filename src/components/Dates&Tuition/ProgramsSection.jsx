@@ -219,10 +219,10 @@ const ProgramsSection = () => {
   }
 
   return (
-    <div ref={programsSectionRef} className="bg-gray-50 font-sans py-16 px-6 sm:px-12 lg:px-30  shadow-inner">
+    <div ref={programsSectionRef} className="bg-gray-50 font-sans py-16 px-6 sm:px-6 md:px-6 lg:px-34 shadow-inner">
       {/* Heading */}
       <div className="flex items-center mb-12">
-        <div className="w-2 h-24 bg-purple-600 mr-6  shadow-md"></div>
+        <div className="w-1.5 h-24 bg-purple-600 mr-6  shadow-md"></div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium text-gray-900 leading-tight tracking-tight">
           DEGREE PROGRAMS, CONSERVATORY PROGRAMS, SHORT-
           <br />

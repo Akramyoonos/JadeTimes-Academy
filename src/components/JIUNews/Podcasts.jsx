@@ -35,9 +35,9 @@ const podcasts = [
 
 const Podcasts = () => {
   return (
-    <div className="w-full bg-white py-10 px-6 md:px-12 lg:px-20">
+    <div className="w-full bg-white px-4 py-10 ">
       {/* Section Heading */}
-      <h2 className="text-2xl md:text-3xl font-semibold mb-10 flex items-center">
+      <h2 className="text-2xl md:text-3xl px-6 sm:px-6 md:px-6 lg:px-30 font-semibold mb-10 flex items-center">
         <span className="w-1 h-8 bg-yellow-500 mr-3"></span>
         PODCASTS AND AUDIO INTERVIEWS
       </h2>

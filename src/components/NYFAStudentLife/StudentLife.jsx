@@ -3,7 +3,7 @@ import React from 'react';
 
 const StudentLife = () => {
   return (
-    <div className="flex flex-col p-8 md:p-12 lg:p-16">
+    <div className="flex flex-col px-6 sm:px-6 md:px-6 lg:px-35 py-12">
       <div className="flex items-center">
         <div className="w-1.5 h-16 bg-fuchsia-600 mr-4 md:mr-6 lg:mr-8"></div>
         <h2 className="text-xl md:text-2xl lg:text-3xl font-normal leading-tight">

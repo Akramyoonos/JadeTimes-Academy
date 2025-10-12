@@ -3,14 +3,14 @@ import React from 'react';
 const ContactUs = () => {
   return (
     <div className="bg-gray-50 flex ">
-      <div className="bg-white p-4 md:p-10  w-full relative">
+      <div className="bg-white px-6 sm:px-6 md:px-6 lg:px-35 w-full relative">
 
 
 
         <div className="relative">
           {/* Heading Section */}
           <div className="flex items-center mb-12">
-            <div className="w-1.5 h-12 bg-yellow-400 mr-6"></div>
+            <div className="w-1.5 h-12 bg-yellow-400 mr-3"></div>
             <h1 className="text-4xl font-sans text-gray-800 tracking-widest">CONTACT US</h1>
           </div>
         </div>

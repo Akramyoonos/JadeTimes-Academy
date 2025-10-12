@@ -85,11 +85,11 @@ const ResourceCard = ({ href, imgSrc, imgAlt, label, gridClass }) => (
 
 const ResourcesandInformation = () => {
     return (
-        <div className="bg-gray-100 font-sans text-gray-900 py-16 sm:py-24">
+        <div className="bg-gray-100 font-sans text-gray-900 py-6 sm:py-12">
             <section>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-6 sm:px-6 md:px-6 lg:px-4">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-extralight flex items-center gap-6 mb-12">
-                        <span aria-hidden="true" className="block w-2 h-16 bg-yellow-500 rounded-full"></span>
+                        <span aria-hidden="true" className="block w-1.5 h-16 bg-yellow-500 "></span>
                         RESOURCES AND INFORMATION
                     </h2>
                 </div>

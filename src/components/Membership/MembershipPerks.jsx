@@ -5,7 +5,7 @@ import icon3 from "../../assets/Images/facultyDataImages04.webp";
 
 const MembershipPerks = () => {
   return (
-    <div className="flex flex-col gap-8 p-8 pt-10 lg:flex-row">
+    <div className="flex flex-col gap-8 px-0 pr-14 sm:px-6 md:px-6 lg:px-5 pt-10 lg:flex-row">
     
       <div className="flex-1">
        
@@ -66,7 +66,7 @@ const MembershipPerks = () => {
 
 
       {/* Right Sidebar */}
-          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <aside className="flex-shrink-0 pl-6 pb-4 w-80 mt-6 lg:w-80 lg:mt-0">
           <div className="border border-gray-200">
             <div className="p-4 bg-gray-200 ">
               <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">

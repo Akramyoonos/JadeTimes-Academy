@@ -2,14 +2,14 @@ import React from 'react'
 
 const OnlineWeekendCamps = () => {
   return (
-    <div className="bg-gradient-to-br from-gray-100 to-gray-200 p-4 sm:p-6 lg:p-8 font-sans pt-12">
+    <div className="bg-gradient-to-br from-gray-100 to-gray-200 px-0 sm:px-2 md:px-2 lg:px-18 font-sans pt-6">
 
 
 
         {/* <!-- Main Content Card --> */}
         <div className="p-8 sm:p-12 lg:p-16">
             <div className="relative pl-8 sm:pl-10 mb-8">
-                <div className="absolute left-0 top-0 bottom-0 w-2 bg-yellow-500 rounded-full"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-1.25 bg-yellow-500 "></div>
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
                     ONLINE WEEKEND CAMPS FOR TEENS AND KIDS
                 </h1>

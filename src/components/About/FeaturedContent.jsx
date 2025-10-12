@@ -24,16 +24,16 @@ const FeaturedContent = () => {
   };
 
   return (
-    <div className="bg-gray-50 font-sans text-gray-900 py-16 sm:py-24">
+    <div className="bg-gray-50 font-sans text-gray-900 ">
         <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between mb-12">
-          <div className="flex items-center gap-6 mb-6 sm:mb-0">
-            <div className="w-2 h-25 bg-yellow-500 "></div>
+          <div className="flex items-center lg:px-27 gap-6 mb-6 sm:mb-0">
+            <div className="w-1.5 h-25 bg-yellow-500 "></div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-tight">
               FEATURED<br /> CONTENT
             </h2>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 lg:pr-48">
             <button onClick={() => scroll('left')} aria-label="Previous" className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center text-gray-600 hover:bg-.200 hover:border-gray-400 transition-all duration-300 shadow-md">
               <FontAwesomeIcon icon={faChevronLeft} size="lg" />
             </button>

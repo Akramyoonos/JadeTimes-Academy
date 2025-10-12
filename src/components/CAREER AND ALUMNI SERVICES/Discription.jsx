@@ -6,7 +6,7 @@ const Description = () => {
       {/* Top bar */}
       <div className="h-10 bg-black" />
 
-      <main className="py-20 px-4 sm:px-6 lg:px-8">
+      <main className="py-20 px-6 sm:px-6 md:px-6 lg:px-35">
         <div className="relative">
           {/* Blackbox Icon */}
           <div className="absolute top-8 right-0 sm:right-4 transform transition-transform duration-500 hover:scale-110">

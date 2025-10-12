@@ -10,7 +10,7 @@ const PromoVideo = ({ videoUrl, thumbnailUrl }) => {
   const finalThumbnailUrl = thumbnailUrl || "https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg";
 
   return (
-    <div className="bg-white font-sans flex flex-col items-center justify-center p-4 lg:p-12">
+    <div className="bg-white font-sans flex flex-col items-center justify-center p-4 lg:p-26">
       {/* Main Video Section */}
       <main className="w-full flex flex-col pl-6">
         {/* Thumbnail */}

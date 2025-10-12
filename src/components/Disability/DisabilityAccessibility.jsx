@@ -5,7 +5,7 @@ const DisabilityAccessibility = () => {
   const [showDefinitions, setShowDefinitions] = useState(false);
 
   return (
-    <div className="flex flex-col md:flex-row justify-between  px-6 md:px-12 py-12 font-sans">
+    <div className="flex flex-col md:flex-row justify-between px-6 sm:px-6 md:px-6 lg:px-35 py-12 font-sans">
       {/* Left content */}
       <div className="md:w-2/3">
         {/* Top heading */}
@@ -162,7 +162,7 @@ const DisabilityAccessibility = () => {
       </div>
 
       {/* Right Sidebar */}
-        <aside className="w-full lg:w-80 flex-shrink-0 lg:-ml-22 mt-6 lg:mt-0">
+        <aside className="w-70 lg:w-80 flex-shrink-0 lg:-ml-22 mt-6 lg:mt-0">
           <div className="border border-gray-200">
             <div className="bg-gray-100 p-4 ">
               <h2 id="related-links-heading" className="text-2xl font-medium uppercase text-black">

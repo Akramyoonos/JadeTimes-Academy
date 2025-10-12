@@ -7,15 +7,15 @@ const GraduateDegree = () => {
     <div className="font-sans">
       <div className="container mx-auto px-10 py-10 lg:py-10">
         {/* Header */}
-        <div className="flex items-center mb-10">
-          <span className="w-1.5 h-12 bg-blue-400 mr-6"></span>
-          <h1 className="headingFont text-4xl lg:text-5xl font-bold tracking-wider uppercase bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
+        <div className="flex items-center px-6 sm:px-6 md:px-6 lg:px-25 mb-10">
+          <span className="w-1.25 h-12 bg-blue-400 mr-6"></span>
+          <h1 className="text-black text-4xl lg:text-5xl font-bold tracking-wider uppercase  " style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.1)' }}>
             Graduate Degrees
           </h1>
         </div>
 
         {/* Grid Container */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
           {/* Card 1: MFA */}
           <div

@@ -28,7 +28,7 @@ const ApplicationMaterials = () => {
   return (
     <div className="bg-white font-sans text-gray-900 py-16 sm:py-20">
       <section>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
           {/* Heading with yellow bar */}
           <div className="flex items-center mb-8">
             <div className="w-1 h-12 bg-yellow-400 mr-4"></div>

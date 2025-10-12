@@ -3,7 +3,7 @@ import React from 'react';
 
 const CleryAct = () => {
   return (
-    <div className="flex flex-col pb-8 pl-8 font-sans bg-white lg:flex-row lg:pb-12 lg:pl-12 lg:pt-24 max-w-7xl">
+    <div className="flex flex-col pb-8 px-6 sm:px-6 md:px-6 lg:px-35 font-sans bg-white lg:flex-row lg:pb-12 py-6 lg:pt-24 max-w-7xl">
       <main className="flex-1 lg:pr-12">
         <div className="pl-4 mb-8 border-l-4 border-blue-500">
           <h1 className="text-4xl font-semibold text-gray-800">CLERY ACT INFORMATION</h1>

@@ -128,16 +128,16 @@ const WorkshopCard = ({ title, image, alt, gridSpan, href = "#" }) => {
  */
 const WorkShopsForAdults = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5 text-black">
+    <div className="container mx-auto px-1 sm:px-1 lg:px-1 py-5 text-black">
       {/* Header Section */}
       <header className="relative mb-10 md:mb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div>
-            <h1 className="text-4xl lg:text-5xl font-light text-black flex items-start">
-              <span className="block w-1 h-20 bg-yellow-400 mr-6 flex-shrink-0"></span>
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-1">
+          <div className='px-6 sm:px-6 md:px-6 lg:px-33'>
+            <h1 className="text-4xl lg:text-4xl font-light text-black flex items-start">
+              <span className="block w-1 h-14 bg-yellow-400 mr-6 flex-shrink-0"></span>
               <span>ONLINE SHORT-TERM AND EVENING WORKSHOPS FOR ADULTS</span>
             </h1>
-            <p className="mt-6 text-black leading-relaxed max-w-md">
+            <p className="mt-6 text-black leading-relaxed ">
               Unlike other online courses, in JIU’s Hands-Online workshops, you will meet your professors and your classmates in the virtual classroom, share your ideas and collaborate on your projects.
             </p>
           </div>
@@ -145,7 +145,7 @@ const WorkShopsForAdults = () => {
       </header>
 
       {/* Workshops Grid - Now dynamically generated */}
-      <main className="grid grid-cols-1 md:grid-cols-6 gap-4">
+      <main className="grid grid-cols-1 md:grid-cols-6 gap-1">
         {workshopsData.map((workshop, index) => (
           <WorkshopCard
             key={index}
