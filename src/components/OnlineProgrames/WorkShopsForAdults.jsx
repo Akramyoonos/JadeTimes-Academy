@@ -22,78 +22,91 @@ const workshopsData = [
     imageUrl:WorkShopsForAdults01 ,
     alt: "Filmmaking",
     gridSpan: "md:col-span-2",
+    href: "/film"
   },
   {
     title: "MEDIA ARTS",
     imageUrl:WorkShopsForAdults02 ,
     alt: "Acting for Film",
     gridSpan: "md:col-span-2",
+    href: "/media-arts"
   },
   {
     title: "PERFORMING ARTS",
     imageUrl: WorkShopsForAdults03,
     alt: "Producing",
     gridSpan: "md:col-span-2",
+    href: "/performing-arts"
   },
   {
     title: "CREATIVE EXPRESSION",
     imageUrl: WorkShopsForAdults04,
     alt: "Musical Theatre",
     gridSpan: "md:col-span-3",
+    href: "/creative-expression"
   },
   {
     title: "JOURNALISM",
     imageUrl: WorkShopsForAdults05,
     alt: "Screenwriting",
     gridSpan: "md:col-span-3",
+    href: "/journalism"
   },
   {
     title: "COMMUNIVATION",
     imageUrl: WorkShopsForAdults06,
     alt: "Photography",
     gridSpan: "md:col-span-2",
+    href: "/communication"
   },
   {
     title: "DIGITAL MEDIA",
     imageUrl: WorkShopsForAdults07,
     alt: "3D Animation & VFX",
     gridSpan: "md:col-span-2",
+    href: "/digital-media"
   },
   {
     title: "TECHNOLOGY",
     imageUrl: WorkShopsForAdults08,
     alt: "Documentary Filmmaking",
     gridSpan: "md:col-span-2",
+    href: "/technology"
   },
   {
     title: "INTERACTIVE MEDIA",
     imageUrl: WorkShopsForAdults09,
     alt: "Digital Editing",
     gridSpan: "md:col-span-3",
+    href: "/interactive-media"
   },
   {
     title: "ENTERTAINMENT MEDIA",
     imageUrl: WorkShopsForAdults10,
     alt: "Broadcast Journalism",
     gridSpan: "md:col-span-3",
+    href: "/entertainment-media"
   },
   {
     title: "PSYCHOLOGY",
     imageUrl: WorkShopsForAdults11,
     alt: "Cinematography",
     gridSpan: "md:col-span-6",
+    href: "/psychology"
   },
   {
     title: "HUMAN BEHAVIOR",
     imageUrl: WorkShopsForAdults12,
     alt: "Broadcast Journalism",
     gridSpan: "md:col-span-3",
+    href: "/human-behavior"
   },
   {
     title: "MARKETING",
     imageUrl: WorkShopsForAdults13,
     alt: "Cinematography",
     gridSpan: "md:col-span-3",
+    href: "/marketing"
   },
 ];
 
@@ -133,12 +146,12 @@ const WorkShopsForAdults = () => {
       <header className="relative mb-10 md:mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-1">
           <div className='px-6 sm:px-6 md:px-6 lg:px-33'>
-            <h1 className="text-4xl lg:text-4xl font-light text-black flex items-start">
-              <span className="block w-1 h-14 bg-yellow-400 mr-6 flex-shrink-0"></span>
-              <span>ONLINE SHORT-TERM AND EVENING WORKSHOPS FOR ADULTS</span>
+            <h1 className="text-4xl lg:text-4xl font-semibold tracking-wide ext-black flex items-start">
+              <span className="block w-1.25 h-14 bg-yellow-400 mr-6 flex-shrink-0"></span>
+              <span>Select Your Interested Area of Study</span>
             </h1>
-            <p className="mt-6 text-black leading-relaxed ">
-              Unlike other online courses, in JIU’s Hands-Online workshops, you will meet your professors and your classmates in the virtual classroom, share your ideas and collaborate on your projects.
+            <p className="mt-6 text-xl lg:text-xl text-black leading-relaxed ">
+              At Jadetimes International University (JIU), we offer a wide range of online professional certificate courses designed to match your interests and career goals.
             </p>
           </div>
         </div>
@@ -153,6 +166,7 @@ const WorkShopsForAdults = () => {
             image={workshop.imageUrl}
             alt={workshop.alt}
             gridSpan={workshop.gridSpan}
+            href={workshop.href}
           />
         ))}
       </main>

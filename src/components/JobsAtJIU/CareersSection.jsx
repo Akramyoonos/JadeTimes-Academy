@@ -27,7 +27,7 @@ const CareersSection = () => {
             View Open Positions and Become a Part of Our Team
           </h3>
           <a
-            href="#"
+            href="/Job-Positions/"
             className="inline-block bg-sky-400 hover:bg-sky-500 text-black px-8 py-3 text-sm font-bold tracking-wider"
           >
             VIEW JOB OPENINGS

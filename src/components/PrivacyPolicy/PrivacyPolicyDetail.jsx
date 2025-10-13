@@ -103,14 +103,17 @@ const PrivacyPolicyDetail = () => {
               </h2>
             </div>
             <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+              <a href="/About-Us/" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
                 ABOUT US
               </a>
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+              <a href="/contact_us" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
                 CONTACT US
               </a>
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+              <a href="/programfinder/" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
                 EXPLORE OUR PROGRAMS
+              </a>
+              <a href="/Terms-Conditions/" className="p-4 mt-4 ml-3 text-lg font-semibold uppercase text-gray-700 hover:text-pink-500  transition-colors">
+                Terms & Conditions
               </a>
             </nav>
           </div>

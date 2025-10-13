@@ -9,61 +9,56 @@ const JIUEnrollmentPolicies = () => {
             <div className="w-1 h-12 bg-cyan-400"></div>
           </div>
           <h1 className="text-4xl font-light text-gray-800 tracking-wider">
-            NYFA ENROLLMENT AND DEFERRAL POLICIES
+            JIU ENROLLMENT AND DEFERRAL POLICIES
           </h1>
         </div>
 
+        <div className="mt-8 space-y-4 text-gray-700 text-base">
+          <h2 className="text-2xl font-semibold text-gray-800">1. Course Format and Duration</h2>
+          <p>
+            All JIU programs are short-term online professional certificate courses delivered entirely through virtual learning sessions. Each course runs for 1 month, consisting of 8 live instructor-led sessions. Course fees start from USD 100, depending on the subject and specialization.
+          </p>
 
-        <ul className="mt-8 space-y-4 text-gray-700 text-base">
-          <li className="flex items-start">
-            <span className="text-pink-500 mr-3 mt-1">&#8226;</span>
-            <p>
-              Applicants who are not accepted by the application deadline of their program, their <span className="font-bold">application</span> will be rescinded and they must reapply for a later start date and pay a new application fee.
-            </p>
-          </li>
-          <li className="flex items-start">
-            <span className="text-pink-500 mr-3 mt-1">&#8226;</span>
-            <p>
-              Students who are accepted by the deadline and cannot attend but want to defer their program start may defer up to one year (365 days) by paying the $500 deposit fee and an additional $500 deferral fee. Both the deposit and deferral fee will be credited toward their first semester at NYFA.
-            </p>
-          </li>
-          <li className="flex items-start">
-            <span className="text-pink-500 mr-3 mt-1">&#8226;</span>
-            <p>
-              The deposit and deferral fee must be paid no less than 30 days prior to the application deadline for the start date to which the application is being deferred or the acceptance will be rescinded and the applicant will have to reapply.
-            </p>
-          </li>
-          <li className="flex items-start">
-            <span className="text-pink-500 mr-3 mt-1">&#8226;</span>
-            <p>
-              NYFA considers students who are deferring their enrollment to have committed to attending NYFA. As a result, students will be expected to meet all of <span className="text-pink-500">NYFA application deadlines</span> and must confirm their commitment to their new program start date.
-            </p>
-          </li>
-          <li className="flex items-start">
-            <span className="text-pink-500 mr-3 mt-1">&#8226;</span>
-            <p>
-              If after a year, the student still cannot make their deferred program start date, they may defer again by paying an additional $500 deferral fee. This will also be credited toward the first semester tuition.
-            </p>
-          </li>
-          <li className="flex items-start">
-            <span className="text-pink-500 mr-3 mt-1">&#8226;</span>
-            <p>
-              Students may only defer their deferral once before their acceptance is rescinded and they will receive a refund less the non-refundable application fee, $100 processing fee, credit card convenience fees per the NYFA Refund Policy.
-            </p>
-          </li>
-          <li className="flex items-start">
-            <span className="text-pink-500 mr-3 mt-1">&#8226;</span>
-            <p>
-              At any time if a student wishes to withdraw their commitment from attending NYFA, they must notify the NYFA Admissions Department.
-            </p>
-          </li>
-          <li className="flex items-start">
-            <span className="text-pink-500 mr-3 mt-1">&#8226;</span>
-            <p>
-              Additionally international students who plan to study at NYFA on an F-1 visa must inform the NYFA International Office of their plan to defer as it may impact their visa. Likewise, students using Financial Aid or Veterans benefits to study at NYFA must notify the Financial Aid department and/or the Veterans Department of their plan to defer, as it may impact their aid package.
-            </p>
-          </li>
-        </ul>
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6">2. Application Validity</h2>
+          <p>
+            Applicants who do not complete their registration or payment by the published course start deadline will have their application automatically canceled. They may reapply for a future batch by submitting a new application form and paying the application fee again.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6">3. Deferral of Course Start Date</h2>
+          <p>
+            Students who are accepted but cannot attend their scheduled batch may defer their start date for up to one year (365 days) by paying a USD 100 course deposit and a USD 50 deferral fee. Both payments will be credited toward the course fee when the student begins the deferred course.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6">4. Payment Deadline for Deferral</h2>
+          <p>
+            The deposit and deferral fee must be paid no later than 15 days before the new course start date. Failure to make payment within this period will result in cancellation of acceptance, and the student must reapply for a later batch.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6">5. Course Commitment</h2>
+          <p>
+            Students who defer are considered to have committed to completing the course online with JIU. They must confirm their participation in writing and complete all updated course requirements before joining their deferred batch.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6">6. Second Deferral Option</h2>
+          <p>
+            If a student cannot begin even after their first deferral, they may request one additional deferral by paying another USD 50 deferral fee, which will also be credited toward their tuition. After this, if they still cannot attend, their admission will be canceled and they will receive a refund minus the following:
+          </p>
+          <ul className="list-disc list-inside ml-4">
+            <li>Non-refundable application fee</li>
+            <li>USD 25 administrative charge</li>
+            <li>Any applicable card or transaction fees (per JIU Refund Policy)</li>
+          </ul>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6">7. Withdrawal Policy</h2>
+          <p>
+            Students wishing to withdraw from their course must notify the JIU Admissions Office by email before the course begins. Refunds, if applicable, will be processed according to the JIU Refund Policy.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-800 mt-6">8. International and Sponsored Students</h2>
+          <p>
+            International learners or those studying under scholarship or sponsorship must notify the JIU International Office or Financial Aid Department of any deferral or withdrawal, as it may affect their enrollment status or funding eligibility.
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ const OnlineDegrees = () => {
           >
             <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white bg-opacity-10 backdrop-filter  border border-white border-opacity-20 ">
-              <h2 className="text-xl font-bold">BACHELOR OF FINE ARTS DEGREE (BFA)</h2>
+              <h2 className="text-xl uppercase font-bold">Online Courses </h2>
               <a
                 href="#"
                 className="absolute bottom-6 right-6 border-2 border-white rounded-full h-10 w-10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300 transform group-hover:rotate-45"
@@ -64,7 +64,7 @@ const OnlineDegrees = () => {
           >
             <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white bg-opacity-10 backdrop-filter  border border-white border-opacity-20 ">
-              <h2 className="text-xl font-bold">BACHELOR OF ARTS DEGREE (BA)</h2>
+              <h2 className="text-xl uppercase font-bold">Online Degrees (Coming Soon) </h2>
               <a
                 href="#"
                 className="absolute bottom-6 right-6 border-2 border-white rounded-full h-10 w-10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300 transform group-hover:rotate-45"
@@ -88,7 +88,7 @@ const OnlineDegrees = () => {
           >
             <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white  bg-opacity-10 backdrop-filter  border border-white border-opacity-20 ">
-              <h2 className="text-xl font-bold">ASSOCIATE OF FINE ARTS (AFA)</h2>
+              <h2 className="text-xl uppercase font-bold">Online Workshops</h2>
               <a
                 href="#"
                 className="absolute bottom-6 right-6 border-2 border-white rounded-full h-10 w-10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300 transform group-hover:rotate-45"

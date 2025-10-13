@@ -1,5 +1,5 @@
 import React from "react";
-import ResourcesAndInformation01 from '../../assets/Images/Resources and Information01.webp';
+import ResourcesAndInformation01 from '../../assets/Images/BlogImg.webp';
 
 const JIUSection = () => {
   return (
@@ -27,9 +27,11 @@ const JIUSection = () => {
             <h3 className="text-lg font-semibold mb-4">
               View Open Positions and Become a Part of Our Team
             </h3>
+            <a href="/job-positions">
             <button className="bg-sky-400 hover:bg-sky-500 text-black font-semibold px-6 py-3 rounded w-full transition-colors duration-300">
               VIEW JOB OPENINGS
             </button>
+            </a>
           </div>
 
 {/* Annual Report Card with Placeholder */}
@@ -42,7 +44,7 @@ const JIUSection = () => {
       the reported crimes that<br /> occurred on campus
     </p>
     <a
-      href="#"
+      href="/Blog/"
       className="text-pink-600 text-sm font-semibold hover:underline inline-flex items-center"
     >
       LEARN MORE <span className="ml-1">›</span>

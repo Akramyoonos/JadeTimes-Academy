@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import ProgramDisplay from "./ProgramDisplay";
-import BlogHeadingImg1 from "../../assets/Images/FileImg.Webp";
-import BlogHeadingImg2 from "../../assets/Images/MEDIAARTS.Webp";
-import BlogHeadingImg3 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg4 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg5 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg6 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg7 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg8 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg9 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg10 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg11 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg12 from "../../assets/Images/BlogHeadingImg.Webp";
-import BlogHeadingImg13 from "../../assets/Images/BlogHeadingImg.Webp";
+import BlogHeadingImg1 from "../../assets/Images/FilmImg.webp";
+import BlogHeadingImg2 from "../../assets/Images/MediaArtsImg.webp";
+import BlogHeadingImg3 from "../../assets/Images/PerformingArtsImg.webp";
+import BlogHeadingImg4 from "../../assets/Images/CreativeExpressionImg.webp";
+import BlogHeadingImg5 from "../../assets/Images/JournalismImg.webp";
+import BlogHeadingImg6 from "../../assets/Images/CommunivationImg.webp";
+import BlogHeadingImg7 from "../../assets/Images/DigitalMediaImg.webp";
+import BlogHeadingImg8 from "../../assets/Images/TechnologyImg.webp";
+import BlogHeadingImg9 from "../../assets/Images/InteractiveMediaImg.webp";
+import BlogHeadingImg10 from "../../assets/Images/EntertainmentMediaImg.webp";
+import BlogHeadingImg11 from "../../assets/Images/PsychologyImg.webp";
+import BlogHeadingImg12 from "../../assets/Images/HumanBehaviorImg.webp";
+import BlogHeadingImg13 from "../../assets/Images/MarketingImg.webp";
 
 const programs = [
   { name: "FILM", imageUrl: BlogHeadingImg1 },
@@ -45,15 +45,11 @@ const createSlug = (text) => {
 
 const programCourses = {
   "FILM": [
-    { name: "Master of Fine Arts in 3D Animation & VFX", href: `/programs/film/${createSlug("Master of Fine Arts in 3D Animation & VFX")}` },
-    { name: "Bachelor of Fine Arts in 3D Animation & VFX", href: `/programs/film/${createSlug("Bachelor of Fine Arts in 3D Animation & VFX")}` },
-    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
-    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
-    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
-    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
-    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
-    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
-    { name: "1-Year 3D Animation & VFX Program", href: `/programs/film/${createSlug("1-Year 3D Animation & VFX Program")}` },
+    { name: "The Art of Visual Storytelling", href: `/The-Art-of-Visual-Storytelling/${createSlug("")}` },
+    { name: "History of Cinema", href: `/History-of-Cinema/${createSlug("")}` },
+    { name: "Advance Scriptwriting", href: `/Advance-Scriptwriting/${createSlug("")}` },
+    { name: "Color Grading & Correction", href: `/Color-Grading-&-Correction/${createSlug("")}` },
+    { name: "Producing & Financing Films", href: `/Producing-&-Financing-Films/${createSlug("")}` },
   ],
   "MEDIA ARTS": [
     { name: "Master of Fine Arts in Media Arts", href: `/programs/media-arts/${createSlug("Master of Fine Arts in Media Arts")}` },

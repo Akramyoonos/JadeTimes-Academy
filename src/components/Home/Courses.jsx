@@ -19,9 +19,9 @@ const InfoCard = ({ src, title, description, href }) => (
       <img
         src={src}
         alt={title}
-        className="w-100 h-110 object-contain pointer-events-none transition-transform duration-2000 ease-in-out group-hover:scale-115"
+        className="w-100 h-110 object-contain pointer-events-none transition-transform ease-in-out "
       />
-      <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300"></div>
     </div>
     <div className="p-4">
       <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700">{title}</h3>

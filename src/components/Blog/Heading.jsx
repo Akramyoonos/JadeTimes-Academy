@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogHeadingImage from '../../assets/Images/BlogHeadingImg.Webp'
+import BlogHeadingImage from '../../assets/Images/BlogImg.webp'
 
 const Heading = () => {
   return (
