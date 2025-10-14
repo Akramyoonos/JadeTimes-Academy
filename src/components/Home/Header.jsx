@@ -257,13 +257,12 @@ const getSectionHref = (section) => {
         "ADMISSIONS": "/admissions",
         "FINANCES": "/admissions/finances",
         "CAMPUSES": "/campuses",
-        "LOCATIONS": "/campuses/locations",
         "WHO WE ARE": "/about",
         "ON CAMPUS": "/discover/on-campus",
         "NEWS AND CULTURE": "/discover/news-and-culture",
-        "TEEN CAMPS AND WORKSHOPS": "/youth/teen-camps-and-workshops",
-        "KIDS CAMPS AND WORKSHOPS": "/youth/kids-camps-and-workshops",
-        "YOUTH ADMISSIONS": "/youth/youth-admissions",
+        "WORKSHOPS": "/Work-Shops/",
+        "YOUTH ADMISSIONS": "/youth/kids-camps-and-workshops",
+        "LOCATIONS": "/youth/youth-admissions",
     };
     return hrefMap[section] || "#";
 };

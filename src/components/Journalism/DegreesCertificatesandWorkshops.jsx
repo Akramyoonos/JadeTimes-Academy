@@ -1,44 +1,14 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp, faPlay, faArrowRight, faTimes } from '@fortawesome/free-solid-svg-icons';
 import ourStudents01 from '../../assets/Images/our-students-01-948x815-1-768x660.webp';
-
-// --- Icon Components ---
-export const ChevronDownIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 inline-block ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-  </svg>
-);
-
-export const ChevronUpIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 inline-block ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-    </svg>
-);
-
-export const PlayIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" viewBox="0 0 20 20" fill="currentColor">
-    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8.002v3.996a1 1 0 001.555.832l3.197-2.002a1 1 0 000-1.664l-3.197-1.996z" clipRule="evenodd" />
-  </svg>
-);
-
-export const ArrowRightIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-    </svg>
-);
-
-export const CloseIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-    </svg>
-);
-
 
 // --- Video Modal Component ---
 export const VideoModal = ({ videoId, onClose }) => (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4" onClick={onClose}>
         <div className="relative w-full max-w-4xl" onClick={(e) => e.stopPropagation()}>
             <button onClick={onClose} className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors">
-                <CloseIcon />
+                <FontAwesomeIcon icon={faTimes} className="h-8 w-8" />
             </button>
             <div className="aspect-w-16 aspect-h-9">
                 <iframe
@@ -84,7 +54,7 @@ const DegreesCertificatesandWorkshops = () => {
                             </div>
                             <div className="mt-6">
                                 <button onClick={() => setIsExpanded(!isExpanded)} className="text-purple-600 font-semibold text-sm tracking-wider flex items-center hover:text-purple-800 hover:underline">
-                                    {isExpanded ? "READ LESS" : "READ MORE"} {isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                                    {isExpanded ? "READ LESS" : "READ MORE"} {isExpanded ? <FontAwesomeIcon icon={faChevronUp} className="h-3 w-3 inline-block ml-2" /> : <FontAwesomeIcon icon={faChevronDown} className="h-3 w-3 inline-block ml-2" />}
                                 </button>
                             </div>
 
@@ -107,7 +77,7 @@ const DegreesCertificatesandWorkshops = () => {
                                     {/* Centered Play Button */}
                                     <div className="flex items-center justify-center">
                                         <div className="bg-white/20 rounded-full p-3 backdrop-blur-sm border border-white/30 transition-all duration-300 group-hover:bg-white/40 group-hover:scale-110">
-                                            <PlayIcon />
+                                            <FontAwesomeIcon icon={faPlay} className="h-8 w-8 text-white" />
                                         </div>
                                     </div>
 
@@ -155,7 +125,7 @@ const DegreesCertificatesandWorkshops = () => {
                                     <p className="text-lg font-bold">Student Showcase</p>
                                 </div>
                                  <a href="#" className="absolute bottom-5 right-5 bg-cyan-500 text-white rounded-full h-10 w-10 flex items-center justify-center hover:bg-cyan-600 transition-colors">
-                                    <ArrowRightIcon />
+                                    <FontAwesomeIcon icon={faArrowRight} className="h-6 w-6" />
                                 </a>
                             </div>
                         </aside>

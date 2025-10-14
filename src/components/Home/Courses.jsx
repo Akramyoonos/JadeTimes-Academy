@@ -14,7 +14,7 @@ import YouthImage2 from '../../assets/Images/CoursesImg02.webp';
 // CHANGE 1: Created a new Card component to match the style in the image.
 // ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
 const InfoCard = ({ src, title, description, href }) => (
-  <a href={href} className="w-[85vw] md:w-85  flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
+  <a href={href} className="w-[85vw] md:w-85 h-160 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
     <div className="overflow-hidden relative">
       <img
         src={src}
@@ -25,7 +25,7 @@ const InfoCard = ({ src, title, description, href }) => (
     </div>
     <div className="p-4">
       <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700">{title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+      <p className="text-black font-semibold text-xl leading-relaxed">{description}</p>
     </div>
   </a>
 );
@@ -71,37 +71,37 @@ const Courses = () => {
     {
       src: NycImage,
       title: "Shaping the Future of Online Education",
-      description: "Jadetimes International University (JIU) is built on a clear mission: to provide world-class education to students across the globe through accessible, flexible, and innovative online learning. ",
+      description: " $ 100 ",
       href: "/Jadetimes-International-University-(JIU):Shaping-the-Future-of-Online-Education/"
     },
     {
       src: LaImage,
       title: "Empowering Research and Innovation",
-      description: "Jadetimes began as a bold vision—to create a global platform where creativity, knowledge, and innovation could come together to shape the future. ",
+      description: " $ 100  ",
       href: "/The-Story-of-Jadetimes:Empowering-Research-and-Innovation/"
     },
     {
       src: YouthImage,
       title: "Advancing Knowledge Across Borders",
-      description: "The Jadetimes Journal of Universal Studies (JJUS) is a peer-reviewed, multidisciplinary academic platform dedicated to advancing knowledge across a wide spectrum of disciplines. Founded.",
+      description: " $ 100  ",
       href: "/Jadetimes-Journal-of-Universal-Studies-(JJUS):Advancing-Knowledge-Across-Borders/"
     },
     {
       src: VirtualImage,
       title: "Partners with Special Graphics LLC for Advanced Graphic Design Education",
-      description: "The partnership comes shortly after Geeth Roman, President of JIU, increased his shareholding in Special Graphics to 74%, becoming the new Chairman of the company.",
+      description: " $ 100  ",
       href: "/Jadetimes-International-University-Partners-with-Special-Graphics-LLC-for-Advanced-Graphic-Design-Education/"
     },
         {
       src: YouthImage1,
       title: "Jadetimes International Research Conference 2025",
-      description: "The Jadetimes International Research Conference 2025 is a global forum for scholars, professionals, and students to present original research, build collaborations, and gain international visibility.",
+      description: " $ 100  ",
       href: "/Jadetimes-International-Research-Conference-2025/"
     },
         {
       src: YouthImage2,
       title: "How Jadetimes University Launches Students Into Industry",
-      description: "Jadetimes International University (JIU) was built to do one thing exceptionally well: take motivated learners and make them industry-ready. ",
+      description: " $ 100  ",
       href: "/How-Jadetimes-University-Launches-Students-Into-Industry/"
     },
   ];
@@ -149,7 +149,7 @@ const Courses = () => {
           </div>
           <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>
         </div>
-        <div className="text-center mt-8">
+        <div className="text-center ">
           <a href="/Degree-Programs/" className="inline-block bg-purple-600 text-white font-semibold px-8 py-3  hover:bg-purple-700 transition-colors duration-300">
             More Courses
           </a>
