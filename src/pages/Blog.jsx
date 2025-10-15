@@ -6,6 +6,7 @@ import Festival from '../components/Blog/Festival'
 import StudentsAndAlumni from '../components/Blog/StudentsAndAlumni.JSX'
 import GuestSpeackers from '../components/Blog/GuestSpeackers'
 import Success from '../components/Blog/Success'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 
 const Blog = () => {
@@ -22,4 +23,5 @@ const Blog = () => {
   )
 }
 
-export default Blog
+const FadedBlog = withFadeIn(Blog);
+export default FadedBlog;

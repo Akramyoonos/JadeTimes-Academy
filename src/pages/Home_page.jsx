@@ -11,6 +11,7 @@ import CampusesAndLocations from '../components/Home/CampusesAndLocations.jsx';
 import IntroAfterSearch from '../components/Home/IntroAfterSearch.jsx';
 import JIUExperience from '../components/Home/JIUExperience.jsx';
 import Courses from '../components/Home/Courses.jsx';
+import withFadeIn from '../components/HOC/withFadeIn';
 
 const Home_page = () => {
   return (
@@ -44,4 +45,5 @@ const Home_page = () => {
   );
 };
 
-export default Home_page;
+const FadedHome_page = withFadeIn(Home_page);
+export default FadedHome_page;

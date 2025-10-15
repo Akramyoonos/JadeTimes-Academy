@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const dropdowns = [
   {
@@ -70,7 +71,7 @@ const Dropdown = ({ id, title, items, isOpen, onToggle, onSelect, selectedItem, 
   };
 
   return (
-    <div ref={ref} className={`relative ${className}`}>
+    <motion.div ref={ref} className={`relative ${className}`} initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
       <button
         type="button"
         id={`dd-${id}`}
@@ -87,10 +88,13 @@ const Dropdown = ({ id, title, items, isOpen, onToggle, onSelect, selectedItem, 
       </button>
 
       {isOpen && (
-        <div
+        <motion.div
           role="menu"
           aria-labelledby={`dd-${id}`}
           className="absolute z-20 mt-1 w-full bg-white border border-gray-200 rounded-none overflow-y-auto max-h-60"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
         >
           {items.map((item, i) => (
             <Link
@@ -103,9 +107,9 @@ const Dropdown = ({ id, title, items, isOpen, onToggle, onSelect, selectedItem, 
               {item.name}
             </Link>
           ))}
-        </div>
+        </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
@@ -122,23 +126,38 @@ const SearchProgramsBy = () => {
   };
 
   return (
-    <section className="bg-white">
+    <motion.section 
+      className="bg-white"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
 
       {/* full-width strip; label on far left, controls on far right */}
       <div className="border-b border-gray-200">
         <div className="w-full flex flex-col items-start lg:flex-row lg:items-stretch">
           {/* Left label (flush to edge) */}
-          <div className="hidden xl:block w-full md:w-auto lg:w-auto lg:text-left text-black px-8 lg:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center md:text-left">
+          <motion.div 
+            className="hidden xl:block w-full md:w-auto lg:w-auto lg:text-left text-black px-8 lg:px-10 py-4 text-[18px] whitespace-nowrap font-semibold text-center md:text-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             Search Programs by
-          </div>
+          </motion.div>
 
           {/* Flexible spacer to create big gap */}
           <div className="flex-1 hidden xl:block" />
 
           {/* Right group (pinned to right edge) */}
-          <div className="flex flex-col items-center lg:flex-row w-full lg:w-auto md:flex-row md:flex-wrap md:justify-end">
+          <motion.div 
+            className="flex flex-col items-center lg:flex-row w-full lg:w-auto md:flex-row md:flex-wrap md:justify-end"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ staggerChildren: 0.1, delayChildren: 0.4 }}
+          >
             {/* Each control has its own left divider and a min width so it feels like the reference */}
-            <div className="hidden xl:block w-full lg:w-60 md:w-1/2 md:min-w-[200px] lg:min-w-[240px]">
+            <motion.div className="hidden xl:block w-full lg:w-60 md:w-1/2 md:min-w-[200px] lg:min-w-[240px]">
               <Dropdown
                 id={dropdowns[0].id}
                 title={dropdowns[0].title}
@@ -149,9 +168,9 @@ const SearchProgramsBy = () => {
                 selectedItem={selected[dropdowns[0].id]}
                 className="w-full lg:w-auto lg:min-w-[240px]"
               />
-            </div>
+            </motion.div>
 
-            <div className="hidden xl:block w-full lg:w-60 md:w-1/2 md:min-w-[200px] lg:min-w-[240px]">
+            <motion.div className="hidden xl:block w-full lg:w-60 md:w-1/2 md:min-w-[200px] lg:min-w-[240px]">
               <Dropdown
                 id={dropdowns[1].id}
                 title={dropdowns[1].title}
@@ -162,9 +181,9 @@ const SearchProgramsBy = () => {
                 selectedItem={selected[dropdowns[1].id]}
                 className="w-full lg:w-auto lg:min-w-[240px]"
               />
-            </div>
+            </motion.div>
 
-            <div className="hidden xl:block w-full lg:w-60 md:w-1/2 md:min-w-[200px] lg:min-w-[240px]">
+            <motion.div className="hidden xl:block w-full lg:w-60 md:w-1/2 md:min-w-[200px] lg:min-w-[240px]">
               <Dropdown
                 id={dropdowns[2].id}
                 title={dropdowns[2].title}
@@ -175,17 +194,20 @@ const SearchProgramsBy = () => {
                 selectedItem={selected[dropdowns[2].id]}
                 className="w-full lg:w-auto lg:min-w-[240px]"
               />
-            </div>
+            </motion.div>
 
             {/* Clear (optional) + Search button on the far right */}
             {Object.keys(selected).length > 0 && (
-              <button
+              <motion.button
                 onClick={clear}
                 title="Clear filters"
                 className="hidden xl:inline-flex items-center px-5 text-gray-500 hover:text-red-500 md:order-last"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}
               >
                 <FontAwesomeIcon icon={faTimes} />
-              </button>
+              </motion.button>
             )}
 
             <Link
@@ -195,10 +217,10 @@ const SearchProgramsBy = () => {
             >
               <span>Search</span>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

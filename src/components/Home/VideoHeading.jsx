@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 import SlideImg01 from '../../assets/Images/SlideImg01.webp';
 import SlideImg02 from '../../assets/Images/SlideImg02.webp';
@@ -22,27 +23,39 @@ const VideoHeading = ({ title, subtitle }) => {
     <div className="font-sans relative">
       <div className="relative w-full min-h-[220px] sm:min-h-[300px] md:min-h-[320px] lg:min-h-[400px] overflow-hidden">
         {images.map((image, index) => (
-          <div
+          <motion.div
             key={index}
-            className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000"
+            className="absolute inset-0 w-full h-full bg-cover bg-center"
             style={{
               backgroundImage: `url(${image})`,
-              opacity: index === currentImageIndex ? 1 : 0,
             }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
+            transition={{ duration: 1 }}
           />
         ))}
 
         <div className="absolute inset-0 bg-opacity-50 sm:bg-opacity-60"></div>
 
         <div className="relative h-full flex flex-col items-center justify-center text-center text-white p-4 z-10">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-4xl text-balance">
+          <motion.h1 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight max-w-4xl text-balance"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             {title}
-          </h1>
-          <div className="mt-4 sm:mt-6 max-w-3xl mx-auto">
+          </motion.h1>
+          <motion.div 
+            className="mt-4 sm:mt-6 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
             <p className="text-lg sm:text-xl md:text-2xl font-medium tracking-wide text-gray-200 text-balance">
               {subtitle}
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

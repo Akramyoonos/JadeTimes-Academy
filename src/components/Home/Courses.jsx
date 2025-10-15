@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,20 +15,27 @@ import YouthImage2 from '../../assets/Images/CoursesImg02.webp';
 // CHANGE 1: Created a new Card component to match the style in the image.
 // ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
 const InfoCard = ({ src, title, description, href }) => (
-  <a href={href} className="w-[85vw] md:w-85 h-160 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
+  <motion.a
+    href={href}
+    className="w-[85vw] md:w-85 h-160 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+  >
     <div className="overflow-hidden relative">
       <img
         src={src}
         alt={title}
         className="w-100 h-110 object-contain pointer-events-none transition-transform ease-in-out "
       />
-      <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 group-active:opacity-0 transition-opacity duration-300"></div>
     </div>
     <div className="p-4">
-      <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700">{title}</h3>
+      <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700 group-active:text-purple-700">{title}</h3>
       <p className="text-black font-semibold text-xl leading-relaxed">{description}</p>
     </div>
-  </a>
+  </motion.a>
 );
 
 
