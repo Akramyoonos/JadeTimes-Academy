@@ -5,4 +5,7 @@ import tailwind from '@tailwindcss/vite'
 export default defineConfig({
   base: '/',   // 🔑 important
   plugins: [react(), tailwind()],
+  server: {
+    port: 8000,
+  }
 })
