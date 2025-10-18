@@ -142,15 +142,19 @@ export default function OurStudents() {
         <footer className="relative border-t mt-0 z-0" style={{  borderColor: "rgba(255,255,255,0.2)" }}>
           <div className="container mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 text-center">
-              {/* First three items */}
-              {["Testimonials", "Diversity", "Showcase"].map((label) => (
+              {[
+                { label: "Testimonials", href: "/reviews/page/" },
+                { label: "Diversity", href: "/alumni" },
+                { label: "Showcase", href: "/alumni" },
+                { label: "Success Stories", href: "/reviews/page/" },
+              ].map((link) => (
                 <div
-                  key={label}
+                  key={link.label}
                   className="relative border-r"
                   style={{ borderColor: "rgba(255,255,255,0.2)" }}
                 >
                   <a
-                    href="#"
+                    href={link.href}
                     className="group relative block py-6 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300"
                   >
                     {/* Hover blue line: TOP, left -> right, above white border */}
@@ -158,28 +162,10 @@ export default function OurStudents() {
                       className="pointer-events-none absolute top-0 left-0 h-[2px] w-0 bg-sky-400 transition-all duration-300 group-hover:w-full z-10"
                       aria-hidden="true"
                     />
-                    {label}
+                    {link.label}
                   </a>
                 </div>
               ))}
-
-              {/* Success Stories cell + DOTS above it */}
-              <div className="relative">
-                {/* Dots ABOVE (not too close) */}
-                <div className="relative">
-                <a
-                  href="#"
-                  className="group relative block py-6 text-sm md:text-base font-medium tracking-wider text-white transition-colors duration-300"
-                >
-                  {/* Hover blue line: TOP, left -> right, above white border */}
-                  <span
-                    className="pointer-events-none absolute top-0 left-0 h-[2px] w-0 bg-sky-400 transition-all duration-300 group-hover:w-full z-10"
-                    aria-hidden="true"
-                  />
-                  Success Stories
-                </a>
-              </div>
-              </div>
             </div>
           </div>
         </footer>

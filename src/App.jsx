@@ -89,6 +89,7 @@ import JadeTimesJournals_Page from './pages/JadeTimesJournals_Page';
 import JadeTimesConferences_Page from './pages/JadeTimesConferences_Page';
 import AllJIUNews_Page from './pages/AllJIUNews_Page';
 import WorkShops_Page from './pages/WorkShops_Page'
+import JIUStore_Page from './pages/JIUStore_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -216,6 +217,7 @@ function AppInner() {
             <Route path="/Jadetimes-Conferences/*" element={<JadeTimesConferences_Page />} />
             <Route path="/All-JIU-News/*" element={<AllJIUNews_Page />} />
             <Route path="/Work-Shops/*" element={<WorkShops_Page />} />
+            <Route path="/JIU-Store/*" element={<JIUStore_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
