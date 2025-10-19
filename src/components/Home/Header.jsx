@@ -104,9 +104,9 @@ const megaMenus = {
 
     ],
     "CERTIFICATE PROGRAMS": [
-      { text: "2 HOUR WORKSHOPS", href: "/academics/certificate-programs/short-term-workshops" },
+      { text: "2 HOUR WORKSHOPS", href: "/2-hour-workshops/" },
       { text: "ONLINE COURSES", href: "/online-programs/" },
-      { text: "CORPORATE INTERNSHIP/TRAINING", href: "/academics/certificate-programs/corporate-training" },
+      { text: "CORPORATE INTERNSHIP/TRAINING", href: "/Corporate-Internship-Training/" },
     ],
         "eventBox": {
       title: "OPEN HOUSE & LIVE ONLINE EVENTS",

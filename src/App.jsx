@@ -90,6 +90,8 @@ import JadeTimesConferences_Page from './pages/JadeTimesConferences_Page';
 import AllJIUNews_Page from './pages/AllJIUNews_Page';
 import WorkShops_Page from './pages/WorkShops_Page'
 import JIUStore_Page from './pages/JIUStore_Page';
+import TwoHourWorkShops_Page from './pages/TwoHourWorkShops_Page';
+import CorporateInternshipTraining_Page from './pages/CorporateInternshipTraining_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -218,6 +220,8 @@ function AppInner() {
             <Route path="/All-JIU-News/*" element={<AllJIUNews_Page />} />
             <Route path="/Work-Shops/*" element={<WorkShops_Page />} />
             <Route path="/JIU-Store/*" element={<JIUStore_Page />} />
+            <Route path="/2-hour-workshops/*" element={<TwoHourWorkShops_Page />} />
+            <Route path="/Corporate-Internship-Training/*" element={<CorporateInternshipTraining_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />
