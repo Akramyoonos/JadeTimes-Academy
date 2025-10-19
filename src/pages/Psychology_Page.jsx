@@ -10,6 +10,7 @@ import Alumni from '../components/Psychology/Alumni'
 import Campuses from '../components/Psychology/Campuses'
 import Locations from '../components/Psychology/Locations'
 import Spotlight from '../components/Psychology/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const Psychology_Page = () => {
   return (
@@ -29,4 +30,5 @@ const Psychology_Page = () => {
   )
 }
 
-export default Psychology_Page
+const FadedPsychology_Page = withFadeIn(Psychology_Page);
+export default FadedPsychology_Page;

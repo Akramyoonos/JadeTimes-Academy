@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 import { useSearch } from '../context/SearchContext';
 import { allPagesContent } from '../utils/pageContent';
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const SearchResultsPage = () => {
     const { searchQuery, setSearchQuery } = useSearch();
@@ -161,4 +162,5 @@ const SearchResultsPage = () => {
     );
 };
 
-export default SearchResultsPage;
+const FadedSearchResultsPage = withFadeIn(SearchResultsPage);
+export default FadedSearchResultsPage;

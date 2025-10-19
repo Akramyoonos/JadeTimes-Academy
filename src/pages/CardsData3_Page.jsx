@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../components/SpotlightcardsData/CardsData3/Heading'
 import CardsData3Article from '../components/SpotlightcardsData/CardsData3/CardsData3Article'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 
 const CardsData3_Page = () => {
@@ -12,4 +13,5 @@ const CardsData3_Page = () => {
   )
 }
 
-export default CardsData3_Page
+const FadedCardsData3_Page = withFadeIn(CardsData3_Page);
+export default FadedCardsData3_Page;

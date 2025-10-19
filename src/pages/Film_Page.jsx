@@ -10,6 +10,7 @@ import Alumni from '../components/Film/Alumni'
 import Campuses from '../components/Film/Campuses'
 import Locations from '../components/Film/Locations'
 import Spotlight from '../components/Film/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const Film_Page = () => {
   return (
@@ -29,4 +30,5 @@ const Film_Page = () => {
   )
 }
 
-export default Film_Page
+const FadedFilm_Page = withFadeIn(Film_Page);
+export default FadedFilm_Page;

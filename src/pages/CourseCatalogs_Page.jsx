@@ -1,5 +1,6 @@
 import React from 'react'
 import Catalogs from '../components/CourseCatalogs/Catalogs'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 
 const CourseCatalogs_Page = () => {
@@ -10,4 +11,5 @@ const CourseCatalogs_Page = () => {
   )
 }
 
-export default CourseCatalogs_Page
+const FadedCourseCatalogs_Page = withFadeIn(CourseCatalogs_Page);
+export default FadedCourseCatalogs_Page;

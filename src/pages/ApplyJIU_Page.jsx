@@ -4,6 +4,7 @@ import ApplyNYFA from '../components/ApplyJIU/ApplyNYFA'
 import ApplicationDeadlines from '../components/ApplyJIU/ApplicationDeadlines'
 import EnrollmentPolicies from '../components/ApplyJIU/EnrollmentPolicies'
 import ContactAdmissions from '../components/ApplyJIU/ContactAdmissions'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const ApplyJIU_Page = () => {
   return (
@@ -17,4 +18,6 @@ const ApplyJIU_Page = () => {
   )
 }
 
-export default ApplyJIU_Page
+
+const FadedApplyJIU_Page = withFadeIn(ApplyJIU_Page);
+export default FadedApplyJIU_Page;

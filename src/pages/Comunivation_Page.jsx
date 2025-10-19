@@ -10,6 +10,7 @@ import Alumni from '../components/Comunivation/Alumni'
 import Campuses from '../components/Comunivation/Campuses'
 import Locations from '../components/Comunivation/Locations'
 import Spotlight from '../components/Comunivation/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const Comunivation_Page = () => {
   return (
@@ -29,4 +30,5 @@ const Comunivation_Page = () => {
   )
 }
 
-export default Comunivation_Page
+const FadedComunivation_Page = withFadeIn(Comunivation_Page);
+export default FadedComunivation_Page;

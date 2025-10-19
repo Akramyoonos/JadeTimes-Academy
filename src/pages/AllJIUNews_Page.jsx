@@ -1,5 +1,6 @@
 import React from 'react'
 import Articles from '../components/AllJIUNews/Articles'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const AllJIUNews_Page = () => {
   return (
@@ -9,4 +10,6 @@ const AllJIUNews_Page = () => {
   )
 }
 
-export default AllJIUNews_Page
+
+const FadedAllJIUNews_Page = withFadeIn(AllJIUNews_Page);
+export default FadedAllJIUNews_Page;

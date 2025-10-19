@@ -10,6 +10,7 @@ import Alumni from '../components/EntertainmentMedia/Alumni'
 import Campuses from '../components/EntertainmentMedia/Campuses'
 import Locations from '../components/EntertainmentMedia/Locations'
 import Spotlight from '../components/EntertainmentMedia/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const EntertainmentMedia_Page = () => {
   return (
@@ -29,4 +30,5 @@ const EntertainmentMedia_Page = () => {
   )
 }
 
-export default EntertainmentMedia_Page
+const FadedEntertainmentMedia_Page = withFadeIn(EntertainmentMedia_Page);
+export default FadedEntertainmentMedia_Page;

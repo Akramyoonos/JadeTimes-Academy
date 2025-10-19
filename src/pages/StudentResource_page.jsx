@@ -1,6 +1,7 @@
 import React from 'react'
 import ForStudents from '../components/StudentResource/ForStudents'
 import Heading from '../components/StudentResource/Heading'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const StudentResource_page = () => {
   return (
@@ -11,4 +12,5 @@ const StudentResource_page = () => {
   )
 }
 
-export default StudentResource_page
+const FadedStudentResource_page = withFadeIn(StudentResource_page);
+export default FadedStudentResource_page;

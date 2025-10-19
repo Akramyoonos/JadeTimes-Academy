@@ -10,6 +10,7 @@ import Alumni from '../components/HumanBehavior/Alumni'
 import Campuses from '../components/HumanBehavior/Campuses'
 import Locations from '../components/HumanBehavior/Locations'
 import Spotlight from '../components/HumanBehavior/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const HumanBehavior_Page = () => {
   return (
@@ -29,4 +30,5 @@ const HumanBehavior_Page = () => {
   )
 }
 
-export default HumanBehavior_Page
+const FadedHumanBehavior_Page = withFadeIn(HumanBehavior_Page);
+export default FadedHumanBehavior_Page;

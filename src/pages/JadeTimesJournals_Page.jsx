@@ -5,6 +5,7 @@ import GeaduateDegree from '../components/JadeTimesJournals/GraduateDegree'
 import UndergraduateDegrees from '../components/JadeTimesJournals/UndergraduateDegrees'
 import OnlineDegrees from '../components/JadeTimesJournals/OnlineDegrees'
 import Campuses from '../components/JadeTimesJournals/Campuses'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const JadeTimesJournals_Page = () => {
   return (
@@ -19,4 +20,5 @@ const JadeTimesJournals_Page = () => {
   )
 }
 
-export default JadeTimesJournals_Page
+const FadedJadeTimesJournals_Page = withFadeIn(JadeTimesJournals_Page);
+export default FadedJadeTimesJournals_Page;

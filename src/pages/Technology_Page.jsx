@@ -10,6 +10,7 @@ import Alumni from '../components/Technology/Alumni'
 import Campuses from '../components/Technology/Campuses'
 import Locations from '../components/Technology/Locations'
 import Spotlight from '../components/Technology/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const Technology_Page = () => {
   return (
@@ -29,4 +30,5 @@ const Technology_Page = () => {
   )
 }
 
-export default Technology_Page
+const FadedTechnology_Page = withFadeIn(Technology_Page);
+export default FadedTechnology_Page;

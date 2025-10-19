@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../components/TermsConditions/Heading'
 import TermsConditionsDetail from '../components/TermsConditions/TermsConditionsDetail'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const TermsConditions_Page = () => {
   return (
@@ -11,4 +12,5 @@ const TermsConditions_Page = () => {
   )
 }
 
-export default TermsConditions_Page
+const FadedTermsConditions_Page = withFadeIn(TermsConditions_Page);
+export default FadedTermsConditions_Page;

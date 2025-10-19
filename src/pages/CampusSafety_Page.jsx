@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from '../components/CampusSafety/Heading'
 import CleryAct from '../components/CampusSafety/CleryAct'
 import PublicOrderRules from '../components/CampusSafety/PublicOrderRules'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const CampusSafety_Page = () => {
   return (
@@ -13,4 +14,5 @@ const CampusSafety_Page = () => {
   )
 }
 
-export default CampusSafety_Page
+const FadedCampusSafety_Page = withFadeIn(CampusSafety_Page);
+export default FadedCampusSafety_Page;

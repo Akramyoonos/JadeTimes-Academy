@@ -7,6 +7,7 @@ import Locations from '../components/TwoHourWorkShops/Locations'
 import Curriculum from '../components/TwoHourWorkShops/Curriculum'
 import TwoHourProgramApplications from '../components/TwoHourWorkShops/TwoHourProgramApplications'
 import Content from '../components/TwoHourWorkShops/Content'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const TwoHourWorkShops_Page = () => {
   return (
@@ -23,4 +24,5 @@ const TwoHourWorkShops_Page = () => {
   )
 }
 
-export default TwoHourWorkShops_Page
+const FadedTwoHourWorkShops_Page = withFadeIn(TwoHourWorkShops_Page);
+export default FadedTwoHourWorkShops_Page;

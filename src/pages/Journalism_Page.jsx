@@ -10,6 +10,7 @@ import Alumni from '../components/Journalism/Alumni'
 import Campuses from '../components/Journalism/Campuses'
 import Locations from '../components/Journalism/Locations'
 import Spotlight from '../components/Journalism/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 
 const Journalism_Page = () => {
@@ -30,4 +31,5 @@ const Journalism_Page = () => {
   )
 }
 
-export default Journalism_Page
+const FadedJournalism_Page = withFadeIn(Journalism_Page);
+export default FadedJournalism_Page;

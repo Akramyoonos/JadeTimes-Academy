@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../components/AcademicProgramsPosts/Heading'
 import Posts from '../components/AcademicProgramsPosts/Posts'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const AcademicProgramsPosts_Page = () => {
   return (
@@ -11,4 +12,7 @@ const AcademicProgramsPosts_Page = () => {
   )
 }
 
-export default AcademicProgramsPosts_Page
+const FadedAcademicProgramsPosts_Page = withFadeIn(AcademicProgramsPosts_Page);
+export default FadedAcademicProgramsPosts_Page; 
+
+

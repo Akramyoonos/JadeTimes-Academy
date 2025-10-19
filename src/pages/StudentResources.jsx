@@ -9,7 +9,7 @@ import InternationalFlimMaking from '../components/StudentResources/Internationa
 import MediaArts from '../components/StudentResources/MediaArts'
 import PerformingArts from '../components/StudentResources/PerformingArts'
 import YouthCamps from '../components/StudentResources/YouthCamps'
-
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const StudentResources = () => {
   return (
@@ -28,4 +28,5 @@ const StudentResources = () => {
   )
 }
 
-export default StudentResources
+const FadedStudentResources = withFadeIn(StudentResources);
+export default FadedStudentResources;

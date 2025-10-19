@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../components/Cabinet/Heading'
 import JIUCabinet from '../components/Cabinet/JIUCabinet'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const Cabinet_Page = () => {
   return (
@@ -11,4 +12,5 @@ const Cabinet_Page = () => {
   )
 }
 
-export default Cabinet_Page
+const FadedCabinet_Page = withFadeIn(Cabinet_Page);
+export default FadedCabinet_Page;

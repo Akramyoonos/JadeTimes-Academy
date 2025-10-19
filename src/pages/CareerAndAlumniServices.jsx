@@ -4,6 +4,7 @@ import Discription from '../components/CAREER AND ALUMNI SERVICES/Discription'
 import CareerServices from '../components/CAREER AND ALUMNI SERVICES/CareerServices'
 import ExploreNetwork from '../components/CAREER AND ALUMNI SERVICES/ExploreNetwork'
 import ContactUs from '../components/CAREER AND ALUMNI SERVICES/ContactUs'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const CareerAndAlumniServices = () => {
   return (
@@ -17,4 +18,5 @@ const CareerAndAlumniServices = () => {
   )
 }
 
-export default CareerAndAlumniServices
+const FadedCareerAndAlumniServices = withFadeIn(CareerAndAlumniServices);
+export default FadedCareerAndAlumniServices;

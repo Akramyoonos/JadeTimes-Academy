@@ -10,6 +10,7 @@ import Alumni from '../components/PerformingArts/Alumni'
 import Campuses from '../components/PerformingArts/Campuses'
 import Locations from '../components/PerformingArts/Locations'
 import Spotlight from '../components/PerformingArts/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const PerformingArts_Page = () => {
   return (
@@ -29,4 +30,5 @@ const PerformingArts_Page = () => {
   )
 }
 
-export default PerformingArts_Page
+const FadedPerformingArts_Page = withFadeIn(PerformingArts_Page);
+export default FadedPerformingArts_Page;

@@ -4,6 +4,7 @@ import StatementPage from '../components/MissionAndPurpose/StatementPage'
 import PromoVideo from '../components/MissionAndPurpose/PromoVideo'
 import CoreValues from '../components/MissionAndPurpose/CoreValues'
 import FeaturedContent from '../components/About/FeaturedContent'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 
 const MissionAndPurpose_Page = () => {
@@ -18,4 +19,5 @@ const MissionAndPurpose_Page = () => {
   )
 }
 
-export default MissionAndPurpose_Page
+const FadedMissionAndPurpose_Page = withFadeIn(MissionAndPurpose_Page);
+export default FadedMissionAndPurpose_Page;

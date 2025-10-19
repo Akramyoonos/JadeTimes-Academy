@@ -5,6 +5,7 @@ import DegreePrograms from '../components/AdmissionRequirements/DegreePrograms'
 import CertificatePrograms from '../components/AdmissionRequirements/CertificatePrograms'
 import ApplicationMaterials from '../components/AdmissionRequirements/ApplicationMaterials'
 import FeaturedContent from '../components/AdmissionRequirements/FeaturedContent'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 
 const AdmissionRequirements_Page = () => {
@@ -20,4 +21,5 @@ const AdmissionRequirements_Page = () => {
   )
 }
 
-export default AdmissionRequirements_Page
+const FadedAdmissionRequirements_Page = withFadeIn(AdmissionRequirements_Page);
+export default FadedAdmissionRequirements_Page;

@@ -3,6 +3,7 @@ import NewsSection from '../components/JIUNews/NewsSection'
 import VideoSection from '../components/JIUNews/VideoSection'
 import Podcasts from '../components/JIUNews/Podcasts'
 import FeaturedVideo from '../components/JIUNews/FeaturedVideo'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 
 const JIUNews_Page = () => {
@@ -16,4 +17,5 @@ const JIUNews_Page = () => {
   )
 }
 
-export default JIUNews_Page
+const FadedJIUNews_Page = withFadeIn(JIUNews_Page);
+export default FadedJIUNews_Page;

@@ -10,6 +10,7 @@ import Alumni from '../components/DigitalMedia/Alumni'
 import Campuses from '../components/DigitalMedia/Campuses'
 import Locations from '../components/DigitalMedia/Locations'
 import Spotlight from '../components/DigitalMedia/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const DigitalMedia_Page = () => {
   return (
@@ -29,4 +30,5 @@ const DigitalMedia_Page = () => {
   )
 }
 
-export default DigitalMedia_Page
+const FadedDigitalMedia_Page = withFadeIn(DigitalMedia_Page);
+export default FadedDigitalMedia_Page;

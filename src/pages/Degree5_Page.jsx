@@ -8,6 +8,7 @@ import Alumni from '../components/FilmDegreePages/Degree5/Alumni'
 import MasterofFineArts from '../components/FilmDegreePages/Degree5/MasterofFineArts'
 import DegreeLocations from '../components/FilmDegreePages/Degree5/DegreeLocations'
 import DegreeFeaturedContent from '../components/FilmDegreePages/Degree5/DegreeFeaturedContent'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const Degree5_Page = () => {
   return (
@@ -25,4 +26,5 @@ const Degree5_Page = () => {
   )
 }
 
-export default Degree5_Page
+const FadedDegree5_Page = withFadeIn(Degree5_Page);
+export default FadedDegree5_Page;

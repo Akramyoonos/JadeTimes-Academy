@@ -5,6 +5,7 @@ import GeaduateDegree from '../components/DegreePrograms/GraduateDegree'
 import UndergraduateDegrees from '../components/DegreePrograms/UndergraduateDegrees'
 import OnlineDegrees from '../components/DegreePrograms/OnlineDegrees'
 import Campuses from '../components/DegreePrograms/Campuses'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const DegreeProgramsPage = () => {
   return (
@@ -19,4 +20,5 @@ const DegreeProgramsPage = () => {
   )
 }
 
-export default DegreeProgramsPage
+const FadedDegreeProgramsPage = withFadeIn(DegreeProgramsPage);
+export default FadedDegreeProgramsPage;

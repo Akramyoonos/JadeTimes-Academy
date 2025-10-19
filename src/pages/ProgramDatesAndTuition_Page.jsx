@@ -12,6 +12,7 @@ import EntertainmentMediaPrograms from '../components/ProgramDatesAndTuition/Ent
 import PsychologyPrograms from '../components/ProgramDatesAndTuition/PsychologyPrograms'
 import HumanBehaviorPrograms from '../components/ProgramDatesAndTuition/HumanBehaviorPrograms'
 import MarketingPrograms from '../components/ProgramDatesAndTuition/MarketingPrograms'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const ProgramDatesAndTuition_Page = () => {
   return (
@@ -33,4 +34,5 @@ const ProgramDatesAndTuition_Page = () => {
   )
 }
 
-export default ProgramDatesAndTuition_Page
+const FadedProgramDatesAndTuition_Page = withFadeIn(ProgramDatesAndTuition_Page);
+export default FadedProgramDatesAndTuition_Page;

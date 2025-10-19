@@ -17,7 +17,7 @@ import YouthImage2 from '../../assets/Images/CoursesImg02.webp';
 const InfoCard = ({ src, title, description, href }) => (
   <motion.a
     href={href}
-    className="w-[85vw] md:w-85 h-160 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden"
+    className="w-[85vw] md:w-85 h-160 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden "
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
@@ -33,7 +33,7 @@ const InfoCard = ({ src, title, description, href }) => (
     </div>
     <div className="p-4">
       <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700 group-active:text-purple-700">{title}</h3>
-      <p className="text-black font-semibold text-xl leading-relaxed">{description}</p>
+      <p className="text-black font-bold text-2xl leading-relaxed">{description}</p>
     </div>
   </motion.a>
 );
@@ -127,8 +127,8 @@ const Courses = () => {
   };
 
   return (
-    <div className="bg-white font-sans text-gray-800">
-      <div className="py-8">
+    <div className="bg-gray-100 font-sans text-gray-800">
+      <div className="py-12">
         {/* This is the heading from your original code */}
         <div className="max-w-7xl px-8 sm:px-10 lg:px-12 mb-12 md:mb-10">
           <h2 className="jt-heading">
@@ -138,10 +138,10 @@ const Courses = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>
+          <button onClick={handleScrollLeft} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110"><FontAwesomeIcon icon={faChevronLeft} size="lg" /></button>
           <div
             ref={scrollContainerRef}
-            className={`grid grid-flow-col  gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
+            className={`grid grid-flow-col gap-8 mb-5 overflow-x-auto pb-4 no-scrollbar flex-initial px-4 select-none ${
               isDragging ? 'cursor-grabbing' : 'cursor-grab'
             }`}
             style={{ scrollBehavior: 'smooth' }} 
@@ -155,10 +155,10 @@ const Courses = () => {
               <InfoCard key={index} {...card} />
             ))}
           </div>
-          <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>
+          <button onClick={handleScrollRight} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110"><FontAwesomeIcon icon={faChevronRight} size="lg" /></button>
         </div>
-        <div className="text-center ">
-          <a href="/Degree-Programs/" className="inline-block bg-purple-600 text-white font-semibold px-8 py-3  hover:bg-purple-700 transition-colors duration-300">
+        <div className="text-center mt-8">
+          <a href="/Degree-Programs/" className="inline-block bg-purple-600 text-white font-semibold px-10 py-4 rounded-lg hover:bg-purple-700 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
             More Courses
           </a>
         </div>

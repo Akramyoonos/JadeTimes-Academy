@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../components/JIUCommunityPosts/Heading'
 import Posts from '../components/JIUCommunityPosts/Posts'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const JIUCommunityPosts_Page = () => {
   return (
@@ -11,4 +12,5 @@ const JIUCommunityPosts_Page = () => {
   )
 }
 
-export default JIUCommunityPosts_Page
+const FadedJIUCommunityPosts_Page = withFadeIn(JIUCommunityPosts_Page);
+export default FadedJIUCommunityPosts_Page;

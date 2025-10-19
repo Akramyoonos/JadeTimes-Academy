@@ -6,6 +6,7 @@ import GiBillPage from '../components/MilitaryDependentStudents/GiBillPage'
 import TrainingSection from '../components/MilitaryDependentStudents/TrainingSection'
 import VeteransBenefits from '../components/MilitaryDependentStudents/VeteransBenefits'
 import FeaturedContent from '../components/MilitaryDependentStudents/FeaturedContent'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const MilitaryDependentStudents_Page = () => {
   return (
@@ -24,4 +25,5 @@ const MilitaryDependentStudents_Page = () => {
     );
 };
 
-export default MilitaryDependentStudents_Page;
+const FadedMilitaryDependentStudents_Page = withFadeIn(MilitaryDependentStudents_Page);
+export default FadedMilitaryDependentStudents_Page;

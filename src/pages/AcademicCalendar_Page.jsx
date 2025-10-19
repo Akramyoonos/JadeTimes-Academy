@@ -4,6 +4,7 @@ import ViewAcademicCalendar from '../components/AcademicCalendar/ViewAcademicCal
 import AcademicCalendarSimple from '../components/AcademicCalendar/AcademicCalendarSimple'
 import NationalHolidays from '../components/AcademicCalendar/NationalHolidays'
 import GraduationTable from '../components/AcademicCalendar/GraduationTable'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 
 const AcademicCalendar_Page = () => {
@@ -19,4 +20,6 @@ const AcademicCalendar_Page = () => {
   )
 }
 
-export default AcademicCalendar_Page
+const FadedAcademicCalendar_Page = withFadeIn(AcademicCalendar_Page);
+export default FadedAcademicCalendar_Page;
+

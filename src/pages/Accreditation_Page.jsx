@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../components/Accreditation/Heading';
 import AccreditationPage from '../components/Accreditation/AccreditationPage';
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const Accreditation_Page = () => {
   return (
@@ -11,4 +12,5 @@ const Accreditation_Page = () => {
   )
 }
 
-export default Accreditation_Page;
+const FadedAccreditation_Page = withFadeIn(Accreditation_Page);
+export default FadedAccreditation_Page;

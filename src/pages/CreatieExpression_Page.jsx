@@ -10,6 +10,7 @@ import Alumni from '../components/CreatieExpression/Alumni'
 import Campuses from '../components/CreatieExpression/Campuses'
 import Locations from '../components/CreatieExpression/Locations'
 import Spotlight from '../components/CreatieExpression/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const CreatieExpression_Page = () => {
   return (
@@ -29,4 +30,5 @@ const CreatieExpression_Page = () => {
   )
 }
 
-export default CreatieExpression_Page
+const FadedCreatieExpression_Page = withFadeIn(CreatieExpression_Page);
+export default FadedCreatieExpression_Page;

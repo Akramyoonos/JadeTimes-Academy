@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from '../components/WorkShops/Heading'
 import AcademicSkillsWorkshops from '../components/WorkShops/AcademicSkillsWorkshops'
 import UpcomingAcademicLearningPrograms from '../components/WorkShops/UpcomingAcademicLearningPrograms'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const WorkShops_Page = () => {
   return (
@@ -13,4 +14,5 @@ const WorkShops_Page = () => {
   )
 }
 
-export default WorkShops_Page
+const FadedWorkShops_Page = withFadeIn(WorkShops_Page);
+export default FadedWorkShops_Page;

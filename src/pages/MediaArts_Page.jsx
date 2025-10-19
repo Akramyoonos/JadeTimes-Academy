@@ -10,6 +10,7 @@ import Alumni from '../components/MediaArts/Alumni'
 import Campuses from '../components/MediaArts/Campuses'
 import Locations from '../components/MediaArts/Locations'
 import Spotlight from '../components/MediaArts/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const MediaArts_Page = () => {
   return (
@@ -29,4 +30,5 @@ const MediaArts_Page = () => {
   )
 }
 
-export default MediaArts_Page
+const FadedMediaArts_Page = withFadeIn(MediaArts_Page);
+export default FadedMediaArts_Page;

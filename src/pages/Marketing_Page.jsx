@@ -10,6 +10,7 @@ import Alumni from '../components/Marketing/Alumni'
 import Campuses from '../components/Marketing/Campuses'
 import Locations from '../components/Marketing/Locations'
 import Spotlight from '../components/Marketing/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const Marketing_Page = () => {
   return (
@@ -29,4 +30,5 @@ const Marketing_Page = () => {
   )
 }
 
-export default Marketing_Page
+const FadedMarketing_Page = withFadeIn(Marketing_Page);
+export default FadedMarketing_Page;

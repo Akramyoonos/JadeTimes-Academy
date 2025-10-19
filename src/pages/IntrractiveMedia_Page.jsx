@@ -10,6 +10,7 @@ import Alumni from '../components/IntrractiveMedia/Alumni'
 import Campuses from '../components/IntrractiveMedia/Campuses'
 import Locations from '../components/IntrractiveMedia/Locations'
 import Spotlight from '../components/IntrractiveMedia/Spotlight'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const IntrractiveMedia_Page = () => {
   return (
@@ -29,4 +30,5 @@ const IntrractiveMedia_Page = () => {
   )
 }
 
-export default IntrractiveMedia_Page
+const FadedIntrractiveMedia_Page = withFadeIn(IntrractiveMedia_Page);
+export default FadedIntrractiveMedia_Page;

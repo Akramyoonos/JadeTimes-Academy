@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from '../components/PresidentPage/Heading'
 import LetterFromPresident from '../components/PresidentPage/LetterFromPresident'
 import FeaturedContent from '../components/PresidentPage/FeaturedContent'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const PresidentPage = () => {
   return (
@@ -13,4 +14,5 @@ const PresidentPage = () => {
   )
 }
 
-export default PresidentPage;
+const FadedPresidentPage = withFadeIn(PresidentPage);
+export default FadedPresidentPage;

@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '../components/StudentHighlightsPosts/Heading.jsx'
 import Posts from '../components/StudentHighlightsPosts/Posts.jsx'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const StudentHighlightsPosts_Page = () => {
   return (
@@ -11,4 +12,5 @@ const StudentHighlightsPosts_Page = () => {
   )
 }
 
-export default StudentHighlightsPosts_Page
+const FadedStudentHighlightsPosts_Page = withFadeIn(StudentHighlightsPosts_Page);
+export default FadedStudentHighlightsPosts_Page;

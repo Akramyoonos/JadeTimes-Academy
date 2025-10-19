@@ -3,6 +3,7 @@ import Heading from '../components/LeadershipAtJIU/Heading'
 import LeadershipSection from '../components/LeadershipAtJIU/LeadershipSection'
 import AreaLeadershipSection from '../components/LeadershipAtJIU/AreaLeadershipSection'
 import FeaturedContent from '../components/About/FeaturedContent'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const LeadershipAtJIU_Page = () => {
   return (
@@ -15,4 +16,5 @@ const LeadershipAtJIU_Page = () => {
   )
 }
 
-export default LeadershipAtJIU_Page
+const FadedLeadershipAtJIU_Page = withFadeIn(LeadershipAtJIU_Page);
+export default FadedLeadershipAtJIU_Page;

@@ -4,6 +4,7 @@ import Description from '../components/VisitUs/Description'
 import City1 from '../components/VisitUs/City1'
 import City2 from '../components/VisitUs/City2'
 import City3 from '../components/VisitUs/City3'
+import withFadeIn from '../components/HOC/withFadeIn'
 
 const VisitUs_Page = () => {
   return (
@@ -17,4 +18,5 @@ const VisitUs_Page = () => {
   )
 }
 
-export default VisitUs_Page
+const FadedVisitUs_Page = withFadeIn(VisitUs_Page);
+export default FadedVisitUs_Page;
