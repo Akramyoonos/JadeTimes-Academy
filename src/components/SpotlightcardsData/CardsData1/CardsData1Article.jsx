@@ -17,10 +17,10 @@ const CardsData1Article = () => {
     const pageDescription = "JIU provides world-class education through accessible, flexible, and innovative online learning, with internship opportunities at Jadetimes Media LLC.";
 
     // --- IMPROVEMENT 1: Absolute Image URL for SEO ---
-    // Social media crawlers need an absolute URL (e.g., "../../../../public/Thumbail.webp")
-    // This assumes 'Thumbail.webp' is in your /public folder and served from the root.
+    // Social media crawlers need an absolute URL (e.g., "../../../assets/Images/Thumbnail.webp")
+    // This assumes 'Thumbnail.webp' is in your /public folder and served from the root.
     const baseUrl = window.location.origin; 
-    const imagePath = '../../../../public/Thumbnail.webp'; 
+    const imagePath = '../../../assets/Images/Thumbnail.webp'; 
     const imageUrl = `${baseUrl}${imagePath}`;
 
     const handleCopyLink = () => {
