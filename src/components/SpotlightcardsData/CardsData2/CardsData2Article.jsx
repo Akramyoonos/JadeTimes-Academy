@@ -1,21 +1,53 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter,  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import Thumbnail from '../../../assets/Images/Thumbnail.webp';
 
 const CardsData2Article = () => {
     const [isCopied, setIsCopied] = useState(false);
 
+    // --- Social Media and SEO Data ---
+    
+    // NOTE: Accessing 'window' directly assumes this component only runs on the client.
+    // This is fine for Create React App, but would need a check (e.g., typeof window !== 'undefined') in an SSR setup.
+    const pageUrl = window.location.href;
+    const pageTitle = "Jadetimes International University (JIU): Empowering Research and Innovation";
+    const pageDescription = "Jadetimes started as a vision to unite creativity and knowledge. Explore how it evolved into a global ecosystem for research, education, and collaboration.";
+
+    // --- IMPROVEMENT 1: Absolute Image URL for SEO ---
+    const imageUrl = new URL(Thumbnail, window.location.origin).href;
+
     const handleCopyLink = () => {
-         navigator.clipboard.writeText(window.location.href);
-    setIsCopied(true);
-    setTimeout(() => {
-        setIsCopied(false);
-    }, 2000); // Reset the copied state after 2 seconds
-};
+        navigator.clipboard.writeText(pageUrl);
+        setIsCopied(true);
+        setTimeout(() => {
+            setIsCopied(false);
+        }, 2000); // Reset the copied state after 2 seconds
+    };
 
     return (
         <div className="font-sans">
+             {/* --- Add Helmet for SEO and Social Media Previews --- */}
+                        <Helmet>
+                            <title>{pageTitle}</title>
+                            <meta name="description" content={pageDescription} />
+            
+                            {/* Open Graph / Facebook */}
+                            <meta property="og:type" content="article" />
+                            <meta property="og:url" content={pageUrl} />
+                            <meta property="og:title" content={pageTitle} />
+                            <meta property="og:description" content={pageDescription} />
+                            <meta property="og:image" content={imageUrl} /> {/* Uses the new absolute URL */}
+            
+                            {/* Twitter */}
+                            <meta name="twitter:card" content="summary_large_image" />
+                            <meta name="twitter:url" content={pageUrl} />
+                            <meta name="twitter:title" content={pageTitle} />
+                            <meta name="twitter:description" content={pageDescription} />
+                            <meta name="twitter:image" content={imageUrl} /> {/* Uses the new absolute URL */}
+                        </Helmet>
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
                 <article>
                     <div className="p-2 sm:p-2">
@@ -51,42 +83,46 @@ const CardsData2Article = () => {
                     </div>
                 </article>
             </div>
-{/* UPDATED FOOTER SECTION */}
-        <footer className="mb-22 pb-10 mt-8 pt-8">
-            {/* Added max-w-5xl and mx-auto to align with article, fixed lg padding */}
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                {/* 
-                  Mobile: flex-col (stack), items-center (center stack), gap-y-6 (space between stack)
-                  Desktop (sm+): sm:flex-row (side by side), sm:justify-between, sm:gap-y-0
-                */}
-                <div className="flex flex-col sm:flex-row justify-between items-center gap-y-6 sm:gap-y-0">
-                    
-                    {/* SHARE and Icons Group */}
-                    {/* Mobile: space-x-4 (tighter spacing), w-full justify-center (ensure centering) */}
-                    {/* Desktop: sm:space-x-8 (original spacing), sm:w-auto sm:justify-start */}
-                    <div className="flex items-center space-x-4 sm:space-x-8 w-full justify-center sm:w-auto sm:justify-start">
-                        <span className="text-2xl font-semibold text-gray-600">SHARE</span>
-                        <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
-                        <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
-                        <a href={`https://api.whatsapp.com/send?text=${window.location.href}`} data-action="share/whatsapp/share" aria-label="WhatsApp" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300"><FontAwesomeIcon icon={faWhatsapp} /></a>
-                        <button onClick={handleCopyLink} aria-label="Copy Link" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300 relative">
-                            <FontAwesomeIcon icon={faLink} />
-                            {isCopied && (
-                                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-2xl  px-2 py-1 rounded">
-                                    Copied!
-                                </span>
-                            )}
-                        </button>
-                    </div>
+ {/* UPDATED FOOTER SECTION */}
+            <footer className="mb-22 pb-8 mt-8 pt-8">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-y-6 sm:gap-y-0">
+                        
+                        {/* SHARE and Icons Group */}
+                        <div className="flex items-center space-x-4 sm:space-x-8 w-full justify-center sm:w-auto sm:justify-start">
+                            <span className="text-2xl font-semibold text-gray-600">SHARE</span>
+                            <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faFacebookF} /></a>
+                            <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}`} target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-pink-400 hover:text-black text-2xl transition-colors duration-300"><FontAwesomeIcon icon={faTwitter} /></a>
+                            
+                            {/* --- IMPROVEMENT 2: Enhanced WhatsApp Link --- */}
+                            <a 
+                                href={`https://api.whatsapp.com/send?text=${encodeURIComponent(pageTitle)} - ${encodeURIComponent(pageUrl)}`} 
+                                data-action="share/whatsapp/share" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                aria-label="WhatsApp" 
+                                className="text-pink-400 text-2xl hover:text-black transition-colors duration-300"
+                            >
+                                <FontAwesomeIcon icon={faWhatsapp} />
+                            </a>
+                            
+                            <button onClick={handleCopyLink} aria-label="Copy Link" className="text-pink-400 text-2xl hover:text-black transition-colors duration-300 relative">
+                                <FontAwesomeIcon icon={faLink} />
+                                {isCopied && (
+                                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-sm px-2 py-1 rounded">
+                                        Copied!
+                                    </span>
+                                )}
+                            </button>
+                        </div>
 
-                    {/* BY JIU Section */}
-                    <div>
-                        <span className="text-2xl font-bold text-gray-600">BY JIU</span>
+                        {/* BY JIU Section */}
+                        <div>
+                            <span className="text-2xl font-bold text-gray-600">BY JIU</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
         </div>
     );
 };

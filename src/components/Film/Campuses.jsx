@@ -54,7 +54,7 @@ const Campuses = () => {
         <div className="flex items-center mb-8">
           <div className="w-1 h-10 bg-yellow-400 mr-4"></div>
           <h2 className="text-3xl font-light tracking-widest text-gray-800">
-            CAMPUSES
+            Campuses available
           </h2>
         </div>
 

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-// No need to import the image, as we will use its public path
+import Thumbnail from '../../../assets/Images/Thumbnail.webp';
 
 const CardsData1Article = () => {
     const [isCopied, setIsCopied] = useState(false);
@@ -17,11 +17,7 @@ const CardsData1Article = () => {
     const pageDescription = "JIU provides world-class education through accessible, flexible, and innovative online learning, with internship opportunities at Jadetimes Media LLC.";
 
     // --- IMPROVEMENT 1: Absolute Image URL for SEO ---
-    // Social media crawlers need an absolute URL (e.g., "../../../assets/Images/Thumbnail.webp")
-    // This assumes 'Thumbnail.webp' is in your /public folder and served from the root.
-    const baseUrl = window.location.origin; 
-    const imagePath = '../../../assets/Images/Thumbnail.webp'; 
-    const imageUrl = `${baseUrl}${imagePath}`;
+        const imageUrl = new URL(Thumbnail, window.location.origin).href;
 
     const handleCopyLink = () => {
         navigator.clipboard.writeText(pageUrl);

@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter,  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import Thumbnail from '../../../assets/Images/Thumbnail.webp';
 
 
 const CardsData3Article = () => {
 
     const [isCopied, setIsCopied] = useState(false);
+
+    // --- Social Media and SEO Data ---
+    const pageUrl = window.location.href;
+    const pageTitle = "Jadetimes Journal of Universal Studies (JJUS): Advancing Knowledge Across Borders";
+    const pageDescription = "The Jadetimes Journal of Universal Studies (JJUS) is a peer-reviewed, multidisciplinary academic platform dedicated to advancing knowledge across a wide spectrum of disciplines.";
+        const imageUrl = new URL(Thumbnail, window.location.origin).href;
     
         const handleCopyLink = () => {
              navigator.clipboard.writeText(window.location.href);
@@ -18,6 +26,24 @@ const CardsData3Article = () => {
 
     return (
         <div className="font-sans">
+            <Helmet>
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDescription} />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="article" />
+                <meta property="og:url" content={pageUrl} />
+                <meta property="og:title" content={pageTitle} />
+                <meta property="og:description" content={pageDescription} />
+                <meta property="og:image" content={imageUrl} />
+
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content={pageUrl} />
+                <meta name="twitter:title" content={pageTitle} />
+                <meta name="twitter:description" content={pageDescription} />
+                <meta name="twitter:image" content={imageUrl} />
+            </Helmet>
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
                 <article className="">
 
@@ -121,7 +147,7 @@ const CardsData3Article = () => {
                               Mobile: flex-col (stack), items-center (center stack), gap-y-6 (space between stack)
                               Desktop (sm+): sm:flex-row (side by side), sm:justify-between, sm:gap-y-0
                             */}
-                            <div className="flex flex-col sm:flex-row justify-between items-center gap-y-6 sm:gap-y-0">
+                            <div className="flex flex-col sm:flex-row justify-between items-center gap-y-6 sm:-y-0">
                                 
                                 {/* SHARE and Icons Group */}
                                 {/* Mobile: space-x-4 (tighter spacing), w-full justify-center (ensure centering) */}
