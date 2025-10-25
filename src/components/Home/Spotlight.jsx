@@ -41,6 +41,16 @@ const Spotlight = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [dragStartTime, setDragStartTime] = useState(0);
+  const [showLeftChevron, setShowLeftChevron] = useState(false);
+  const [showRightChevron, setShowRightChevron] = useState(true);
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setShowLeftChevron(scrollLeft > 0);
+      setShowRightChevron(scrollLeft < scrollWidth - clientWidth);
+    }
+  };
 
   const onMouseDown = (e) => {
     setIsDragging(true);
@@ -146,7 +156,7 @@ const Spotlight = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>
+          {showLeftChevron && <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>}
           <div
             ref={scrollContainerRef}
             className={`grid grid-flow-col  gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
@@ -157,13 +167,14 @@ const Spotlight = () => {
             onMouseUp={onMouseUp}
             onMouseLeave={onMouseLeave}
             onMouseMove={onMouseMove}
+            onScroll={handleScroll}
           >
             {/* CHANGE 3: Using the new InfoCard component and updated data. */}
             {cardsData.map((card, index) => (
               <InfoCard key={index} {...card} />
             ))}
           </div>
-          <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>
+          {showRightChevron && <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>}
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-        import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 // Data for the workshops, separated into two columns
 const leftColumnWorkshops = [
@@ -107,7 +107,7 @@ function Workshops() {
                     </h1>
                 </div>
                 <p className="mb-12 text-lg text-gray-600">
-                    NYFA offers a range of in-person full-time and part-time filmmaking workshops at our campuses and satellite locations. To learn more about the curriculum and projects in each workshop, please visit the individual pages below. Explore examples of projects NYFA filmmaking students may complete on the <a href="#" className="text-purple-600 hover:underline">filmmaking projects page</a>.
+                    JIU offers a range of in-person full-time and part-time filmmaking workshops at our campuses and satellite locations. To learn more about the curriculum and projects in each workshop, please visit the individual pages below. Explore examples of projects JIU filmmaking students may complete on the <a href="#" className="text-purple-600 hover:underline">filmmaking projects page</a>.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16">

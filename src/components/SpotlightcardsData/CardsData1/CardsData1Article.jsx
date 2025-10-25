@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'; // Import Helmet
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import Thumbnail from '../../../assets/Images/Thumbnail.webp';
+import Thumbnail from '../../../../public/iconImg.webp';
 
 const CardsData1Article = () => {
     const [isCopied, setIsCopied] = useState(false);

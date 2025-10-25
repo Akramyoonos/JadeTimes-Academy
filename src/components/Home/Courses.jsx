@@ -45,6 +45,16 @@ const Courses = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [dragStartTime, setDragStartTime] = useState(0);
+  const [showLeftChevron, setShowLeftChevron] = useState(false);
+  const [showRightChevron, setShowRightChevron] = useState(true);
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setShowLeftChevron(scrollLeft > 0);
+      setShowRightChevron(scrollLeft < scrollWidth - clientWidth);
+    }
+  };
 
   const onMouseDown = (e) => {
     setIsDragging(true);
@@ -138,30 +148,26 @@ const Courses = () => {
         </div>
 
         <div className="relative overflow-hidden">
-          <button onClick={handleScrollLeft} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110"><FontAwesomeIcon icon={faChevronLeft} size="lg" /></button>
-          <div
-            ref={scrollContainerRef}
-            className={`grid grid-flow-col gap-8 mb-5 overflow-x-auto pb-4 no-scrollbar flex-initial px-4 select-none ${
-              isDragging ? 'cursor-grabbing' : 'cursor-grab'
-            }`}
-            style={{ scrollBehavior: 'smooth' }} 
-            onMouseDown={onMouseDown}
-            onMouseUp={onMouseUp}
-            onMouseLeave={onMouseLeave}
-            onMouseMove={onMouseMove}
-          >
-            {/* CHANGE 3: Using the new InfoCard component and updated data. */}
-            {cardsData.map((card, index) => (
-              <InfoCard key={index} {...card} />
-            ))}
-          </div>
-          <button onClick={handleScrollRight} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-110"><FontAwesomeIcon icon={faChevronRight} size="lg" /></button>
-        </div>
-        <div className="text-center mt-8">
-          <a href="/Degree-Programs/" className="inline-block bg-purple-600 text-white font-semibold px-10 py-4 rounded-lg hover:bg-purple-700 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
-            More Courses
-          </a>
-        </div>
+                  {showLeftChevron && <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>}
+                  <div
+                    ref={scrollContainerRef}
+                    className={`grid grid-flow-col  gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
+                      isDragging ? 'cursor-grabbing' : 'cursor-grab'
+                    }`}
+                    style={{ scrollBehavior: 'smooth' }}
+                    onMouseDown={onMouseDown}
+                    onMouseUp={onMouseUp}
+                    onMouseLeave={onMouseLeave}
+                    onMouseMove={onMouseMove}
+                    onScroll={handleScroll}
+                  >
+                    {/* CHANGE 3: Using the new InfoCard component and updated data. */}
+                    {cardsData.map((card, index) => (
+                      <InfoCard key={index} {...card} />
+                    ))}
+                  </div>
+                  {showRightChevron && <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>}
+                </div>
       </div>
 
     </div>

@@ -1,26 +1,8 @@
 import React from 'react';
-import Campus01 from '../../assets/Images/Campus01.webp';
-import Campus02 from '../../assets/Images/Campus02.webp';
-import Campus03 from '../../assets/Images/Campus03.webp';
 import onlineDegreeImage from '../../assets/Images/onlineDegreeImage.webp';
 
 // Data for the campuses
 const campusData = [
-  {
-    name: 'NYFA New York',
-    imageUrl: Campus01,
-    altText: 'NYFA New York Campus',
-  },
-  {
-    name: 'NYFA Los Angeles',
-    imageUrl: Campus02,
-    altText: 'NYFA Los Angeles Campus',
-  },
-  {
-    name: 'NYFA Florence',
-    imageUrl: Campus03,
-    altText: 'NYFA Florence Campus',
-  },
   {
     name: 'Online',
     imageUrl: onlineDegreeImage,
@@ -38,11 +20,11 @@ const CampusCard = ({ name, imageUrl, altText }) => (
         className="w-full h-48 object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115"
       />
       <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-700"></div>
-      <div className="absolute top-2 left-2 bg-black text-white text-xs font-bold px-2 py-1 tracking-wider">
-        CAMPUS
+      <div className="absolute top-2 left-2 bg-black text-white uppercase text-xs font-bold px-2 py-1 tracking-wider">
+        available
       </div>
     </div>
-    <h3 className="mt-4 text-lg text-gray-700">{name}</h3>
+    <h3 className="mt-4 text-lg font-semibold text-gray-700 uppercase">{name}</h3>
   </div>
 );
 
@@ -53,7 +35,7 @@ const Campuses = () => {
       <div className="container mx-auto px-6 sm:px-6 md:px-6 lg:px-34 py-12">
         <div className="flex items-center mb-8">
           <div className="w-1 h-10 bg-yellow-400 mr-4"></div>
-          <h2 className="text-3xl font-light tracking-widest text-gray-800">
+          <h2 className="text-3xl font-light uppercase tracking-widest text-gray-800">
             Campuses available
           </h2>
         </div>

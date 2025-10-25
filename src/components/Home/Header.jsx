@@ -105,7 +105,7 @@ const megaMenus = {
     ],
     "CERTIFICATE PROGRAMS": [
       { text: "2 HOUR WORKSHOPS", href: "/2-hour-workshops/" },
-      { text: "ONLINE COURSES", href: "/online-programs/" },
+      { text: "ONLINE PROGRAMS", href: "/online-programs/" },
       { text: "CORPORATE INTERNSHIP/TRAINING", href: "/Corporate-Internship-Training/" },
     ],
         "eventBox": {
@@ -138,7 +138,7 @@ const megaMenus = {
   },
   campusesMenu: {
     "CAMPUSES": [
-      { text: "ONLINE", href: "/campuses/campuses/online", AvailableNow: true },
+      { text: "ONLINE", href: "/online-programs/", AvailableNow: true },
       { text: "NEW MEXICO", href: "/campuses/campuses/new-york-city", noHover: true },
       { text: "AUSTRALIA", href: "/campuses/campuses/australia", noHover: true },
       { text: "INDIA", href: "/campuses/campuses/india", noHover: true },
@@ -212,7 +212,7 @@ const megaMenus = {
       { text: "CAREER WITH JIU", href: "/Job-Positions/" },
     ],
     "LOCATIONS": [
-      { text: "ONLINE", href: "/campuses/campuses/online",  },
+      { text: "ONLINE", href: "/online-programs/",  },
       { text: "NEW MEXICO", href: "/campuses/campuses/new-york-city", noHover: true },
       { text: "AUSTRALIA", href: "/campuses/campuses/australia", noHover: true },
       { text: "INDIA", href: "/campuses/campuses/india", noHover: true },

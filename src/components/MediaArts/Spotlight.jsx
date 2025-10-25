@@ -50,11 +50,11 @@ const Spotlight = () => {
                 <div className="flex items-center mb-8">
                     <div className="w-1 bg-cyan-400 h-12 sm:h-16 mr-4"></div>
                     <h1 className="text-3xl sm:text-4xl font-light text-gray-800 tracking-wider">
-                        SPOTLIGHT NYFA
+                        SPOTLIGHT JIU
                     </h1>
                 </div>
 
-                <p className="text-gray-600 mb-12 max-w-4xl text-sm sm:text-base">
+                <p className="text-gray-600 mb-12 max-w-6xl text-sm sm:text-base">
                     At the New York Film Academy's film school, faculty members and curriculum are focused on providing students with the real world know-how to help them achieve their goals. These achievements are the result of their hard work, perseverance, talent and circumstances. Below are some of the positions and networks in which our alumni have worked:
                 </p>
 
