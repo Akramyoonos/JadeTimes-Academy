@@ -41,8 +41,8 @@ const Upcomingevents = () => {
   const [activeTab, setActiveTab] = useState("deadlines");
 
   return (
-    <section className="EventsFont bg-gray-50 min-h-screen">
-      <div className=" px-4 sm:px-10 lg:px-12 pt-12 md:pt-10 sm:pt-10 lg:pt-12 py-12 md:py-0 sm:py-0 lg:py-0 ">
+    <section className="EventsFont bg-gray-50 ">
+      <div className=" px-4 sm:px-10 lg:px-12 pt-12 md:pt-10 sm:pt-10 lg:pt-12 py-6 md:py-12 sm:py-12 lg:py-6 ">
 
         {/* ---------- Tabs header + See events link ---------- */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">

@@ -59,7 +59,7 @@ const DegreesCertificatesandWorkshops = () => {
                             </div>
 
                             {/* --- Video Thumbnail Card --- */}
-                            <div className="relative mt-20 h-80 sm:h-96 md:h-120 cursor-pointer group overflow-hidden rounded-lg" onClick={openVideoModal}>
+                            <div className="relative mt-20 h-80 sm:h-96 md:h-120 cursor-pointer group overflow-hidden" onClick={openVideoModal}>
                                 {/* Background Image with Hover Effect */}
                                 <img
                                     src="https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg"

@@ -15,7 +15,7 @@ const Alumni = () => {
             FILM SCHOOL ALUMNI
           </h1>
         </div>
-        <p className="text-gray-600 mb-12 max-w-4xl">
+        <p className="text-gray-600 mb-12 max-w-6xl">
           NYFA's Film School strives to offer an intensive and focused education
           with hands-on experience and practical training. The achievements of
           any NYFA alumni are the result of their hard work, perseverance,

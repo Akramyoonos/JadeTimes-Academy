@@ -84,8 +84,9 @@ const Faculty = () => {
               SCHOOL FACULTY
             </h1>
           </div>
+        </div>
 
-          <p className="mt-6 text-gray-600 leading-relaxed">
+          <p className="mt-6 text-gray-600 leading-relaxed max-w-6xl ">
             The award-winning faculty at JIU's Film School actively work in the
             film, television, and entertainment industries, possessing a wealth
             of experience in directing, screenwriting, acting for film and
@@ -94,7 +95,7 @@ const Faculty = () => {
             providing the guidance and expertise necessary for students to hone
             their craft and build their confidence as visual storytellers.
           </p>
-        </div>
+        
 
         {/* --- UPDATED: Grid and gap classes for better responsiveness --- */}
         <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
