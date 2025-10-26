@@ -72,21 +72,6 @@ const Degrees = () => {
                     <h1 className="text-4xl font-semibold text-black tracking-wider">FILMMAKING DEGREES</h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                    <div className="space-y-6 text-black">
-                        <p>
-                            The filmmaking degrees at JIU's Film School provide students with a well-rounded education that fully supports their development as directors and filmmakers. In our hands-on programs, students create a number of original films and content, gaining hands-on training and experience on a film set.
-                        </p>
-                    </div>
-                    <div className="space-y-6 text-black">
-                        <p>
-                            Through large-scale production workshops and rigorous coursework, degree students develop a practical skill set that incorporates all major aspects of the filmmaking craft, as well as emerging storytelling mediums such as web series, podcasts, virtual reality, commercials, and music videos. Students also take liberal arts courses closely related to filmmaking, preparing them to develop their unique stories and express themselves cinematically.
-                        </p>
-                        <p>
-                            Our degree students fully explore and gain mastery of filmmaking and visual content, developing their individual style and artistic voice. Students who fully commit to their program emerge with a wealth of experience and expertise in filmmaking, as well as a reel with their own films and video content.
-                        </p>
-                    </div>
-                </div>
             </div>
 
             <div>

@@ -3,7 +3,6 @@ import Heading from '../components/Film/Heading'
 import DegreesCertificatesandWorkshops from '../components/Film/DegreesCertificatesandWorkshops'
 import Drgrees from '../components/Film/Degrees'
 import Programs from '../components/Film/Programs'
-import Workshops from '../components/Film/Workshops'
 import OnlineWorkshops from '../components/Film/OnlineWorkshops'
 import Faculty from '../components/Film/Faculty'
 import Alumni from '../components/Film/Alumni'
@@ -19,7 +18,6 @@ const Film_Page = () => {
      <DegreesCertificatesandWorkshops />        
      <Drgrees />   
      <Programs />  
-     <Workshops />
      <OnlineWorkshops />
      <Faculty />  
      <Alumni />  

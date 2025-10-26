@@ -1,56 +1,178 @@
-import React from 'react';
-import undergraduateDegree01 from '../../assets/Images/undergraduateDegree01.webp';
-import undergraduateDegree02 from '../../assets/Images/undergraduateDegree02.webp';
+import React, { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+
+// Placeholder images - replace with your actual image imports
+import NycImage from '../../assets/Images/CoursesImg01.webp';
+import LaImage from '../../assets/Images/CoursesImg02.webp';
+import YouthImage from '../../assets/Images/CoursesImg01.webp';
+import VirtualImage from '../../assets/Images/CoursesImg02.webp';
+import YouthImage1 from '../../assets/Images/CoursesImg01.webp';
+import YouthImage2 from '../../assets/Images/CoursesImg02.webp';
+
+
+// CHANGE 1: Created a new Card component to match the style in the image.
+// ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
+const InfoCard = ({ src, title, description, href }) => (
+  <motion.a
+    href={href}
+    className="w-[85vw] md:w-85 h-160 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden "
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+  >
+    <div className="overflow-hidden relative">
+      <img
+        src={src}
+        alt={title}
+        className="w-100 h-110 object-contain pointer-events-none transition-transform ease-in-out "
+      />
+      <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 group-active:opacity-0 transition-opacity duration-300"></div>
+    </div>
+    <div className="p-4">
+      <h3 className="text-gray-800 text-lg font-semibold uppercase mb-2 tracking-wide transition-colors duration-300 group-hover:text-purple-700 group-active:text-purple-700">{title}</h3>
+      <p className="text-black font-bold text-2xl leading-relaxed">{description}</p>
+    </div>
+  </motion.a>
+);
+
 
 const Programs = () => {
-    return (
-        <div className="bg-white">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-34 py-12">
-                <div className="flex items-center mb-8">
-                    <div className="w-1 bg-blue-500 h-16 mr-4"></div>
-                    <h1 className="text-4xl font-bold text-gray-800 tracking-wider">
-                        FILMMAKING<br />PROGRAMS
-                    </h1>
-                </div>
+  const scrollContainerRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  const [dragStartTime, setDragStartTime] = useState(0);
+  const [showLeftChevron, setShowLeftChevron] = useState(false);
+  const [showRightChevron, setShowRightChevron] = useState(true);
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-600 mb-12">
-                    <p className="leading-relaxed">
-                        The 1-Year and 2-Year Filmmaking Certificates are conservatory-style programs where students learn essential creative and technical skills in filmmaking, cinematography, directing, screenwriting, producing, and editing.
-                    </p>
-                    <p className="leading-relaxed">
-                        Designed for aspiring filmmakers who wish to apply their learned and developed skills as soon as possible, these full-time programs offer students the opportunity to create a variety of original films, gain experience on-set in various roles, and build fundamental knowledge in the craft of filmmaking.
-                    </p>
-                </div>
-            </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div className="relative group h-96 overflow-hidden">
-                        <img src={undergraduateDegree01} alt="Man operating a camera with dramatic lighting" className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
-                        <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
-                        <div className="absolute inset-0  bg-opacity-40 flex items-end p-8">
-                            <h2 className="text-white text-2xl font-semibold">2-YEAR FILMMAKING PROGRAM</h2>
-                        </div>
-                        <a href="#" className="absolute bottom-8 right-8 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl transform transition-transform duration-300 group-hover:scale-110">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
-                        </a>
-                    </div>
-                    <div className="relative group h-96 overflow-hidden">
-                        <img src={undergraduateDegree02} alt="Filming a scene with a professional camera and colorful smoke" className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
-                        <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
-                        <div className="absolute inset-0  bg-opacity-40 flex items-end p-8">
-                            <h2 className="text-white text-2xl font-semibold">1-YEAR FILMMAKING PROGRAM</h2>
-                        </div>
-                        <a href="#" className="absolute bottom-8 right-8 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl transform transition-transform duration-300 group-hover:scale-110">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
+      setShowLeftChevron(scrollLeft > 0);
+      setShowRightChevron(scrollLeft < scrollWidth - clientWidth);
+    }
+  };
+
+  const onMouseDown = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+    setScrollLeft(scrollContainerRef.current.scrollLeft);
+    setDragStartTime(Date.now());
+  };
+
+  const onMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const onMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const onMouseMove = (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; //scroll-fast
+
+    const dragDuration = Date.now() - dragStartTime;
+    // Adjust scrolling speed based on the duration of the drag
+    const scrollSpeed = Math.min(5, 1 + dragDuration / 100);
+
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk * scrollSpeed;
+  };
+
+  // CHANGE 2: Updated the card data to match the content from the image.
+  const cardsData = [
+    {
+      src: NycImage,
+      title: "Shaping the Future of Online Education",
+      description: " $ 100 ",
+      href: "/Jadetimes-International-University-(JIU):Shaping-the-Future-of-Online-Education/"
+    },
+    {
+      src: LaImage,
+      title: "Empowering Research and Innovation",
+      description: " $ 100  ",
+      href: "/The-Story-of-Jadetimes:Empowering-Research-and-Innovation/"
+    },
+    {
+      src: YouthImage,
+      title: "Advancing Knowledge Across Borders",
+      description: " $ 100  ",
+      href: "/Jadetimes-Journal-of-Universal-Studies-(JJUS):Advancing-Knowledge-Across-Borders/"
+    },
+    {
+      src: VirtualImage,
+      title: "Partners with Special Graphics LLC for Advanced Graphic Design Education",
+      description: " $ 100  ",
+      href: "/Jadetimes-International-University-Partners-with-Special-Graphics-LLC-for-Advanced-Graphic-Design-Education/"
+    },
+        {
+      src: YouthImage1,
+      title: "Jadetimes International Research Conference 2025",
+      description: " $ 100  ",
+      href: "/Jadetimes-International-Research-Conference-2025/"
+    },
+        {
+      src: YouthImage2,
+      title: "How Jadetimes University Launches Students Into Industry",
+      description: " $ 100  ",
+      href: "/How-Jadetimes-University-Launches-Students-Into-Industry/"
+    },
+  ];
+
+  const handleScrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="bg-gray-100 font-sans text-gray-800">
+      <div className="py-12">
+        {/* This is the heading from your original code */}
+        <div className="max-w-7xl px-8 sm:px-10 lg:px-12 mb-12 md:mb-10">
+          <h2 className="jt-heading">
+            <span className="jt-line uppercase">film making</span>
+            <span className="jt-line">COURSES</span>
+          </h2>
         </div>
-    );
+
+        <div className="relative overflow-hidden">
+                  {showLeftChevron && <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>}
+                  <div
+                    ref={scrollContainerRef}
+                    className={`grid grid-flow-col  gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
+                      isDragging ? 'cursor-grabbing' : 'cursor-grab'
+                    }`}
+                    style={{ scrollBehavior: 'smooth' }}
+                    onMouseDown={onMouseDown}
+                    onMouseUp={onMouseUp}
+                    onMouseLeave={onMouseLeave}
+                    onMouseMove={onMouseMove}
+                    onScroll={handleScroll}
+                  >
+                    {/* CHANGE 3: Using the new InfoCard component and updated data. */}
+                    {cardsData.map((card, index) => (
+                      <InfoCard key={index} {...card} />
+                    ))}
+                  </div>
+                  {showRightChevron && <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>}
+                </div>
+      </div>
+
+    </div>
+  );
 };
+
 
 export default Programs;

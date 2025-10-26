@@ -1,49 +1,8 @@
-import React, { useState } from 'react';
-import Icon1 from '../../assets/Images/Icon1.webp';
-import Icon2 from '../../assets/Images/Icon2.webp';
-import Icon3 from '../../assets/Images/Icon3.webp';
-import Icon4 from '../../assets/Images/Icon4.webp';
-import Icon5 from '../../assets/Images/Icon5.webp';
-import Icon6 from '../../assets/Images/Icon6.webp';
-import Icon7 from '../../assets/Images/Icon7.webp';
-import Icon8 from '../../assets/Images/Icon8.webp';
-import Icon9 from '../../assets/Images/Icon9.webp';
-import Icon10 from '../../assets/Images/Icon10.webp';
-import AboutHeading1 from '../../assets/Images/AboutHeading.webp';
-import AboutHeading2 from '../../assets/Images/AboutHeading.webp';
-import AboutHeading3 from '../../assets/Images/Campus01.webp';
-import AboutHeading4 from '../../assets/Images/Campus03.webp';
+import React from 'react';
+import PartnershipImg01 from '../../assets/Images/PaetnershipImg01.webp';
+import PartnershipImg02 from '../../assets/Images/PaetnershipImg02.webp';
 
 const Spotlight = () => {
-    const slides = [
-        {
-            image: AboutHeading1,
-            category: 'FILMMAKING, FILM, FILM FESTIVAL HIGHLIGHTS, STUDENT & ALUMNI SPOTLIGHTS, FILM FESTIVALS',
-            title: "FESTIVAL DOCUMENTARY HEADED TO 2023 SUNDANCE FILM FESTIVAL"
-        },
-        {
-            image: AboutHeading3,
-            category: 'ACTING, STUDENT SPOTLIGHT',
-            title: 'JIU ACTING ALUM LANDS ROLE IN A MAJOR MOTION PICTURE'
-        },
-        {
-            image: AboutHeading4,
-            category: 'ANIMATION, ALUMNI SPOTLIGHT',
-            title: 'GRADUATE WORKS ON AWARD-WINNING ANIMATED SHORT'
-        }
-    ];
-
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const slidesLength = slides.length;
-
-    const nextSlide = () => {
-        setCurrentSlide(currentSlide === slidesLength - 1 ? 0 : currentSlide + 1);
-    };
-
-    const prevSlide = () => {
-        setCurrentSlide(currentSlide === 0 ? slidesLength - 1 : currentSlide - 1);
-    };
-
     return (
         <div className="bg-white font-sans">
             <div className="container mx-auto px-4 sm:px-6 lg:px-34 py-12">
@@ -54,85 +13,54 @@ const Spotlight = () => {
                     </h1>
                 </div>
 
-                <p className="text-gray-600 mb-12 max-w-6xl text-sm sm:text-base">
-                    At the New York Film Academy's film school, faculty members and curriculum are focused on providing students with the real world know-how to help them achieve their goals. These achievements are the result of their hard work, perseverance, talent and circumstances. Below are some of the positions and networks in which our alumni have worked:
-                </p>
-
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center mb-16">
-                    <img src={Icon1} alt="Nickelodeon" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon2} alt="ABC" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon3} alt="AMC" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon4} alt="OCBS" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon5} alt="Disney" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon6} alt="HBO" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon7} alt="Magnolia Pictures" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon8} alt="NBC" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon9} alt="New Line Cinema" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                    <img src={Icon10} alt="Syfy" className="grayscale transform hover:scale-110 transition-transform duration-300" />
-                </div>
-
-                {/* Updated section for mobile responsiveness */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-8 mb-12">
-                    {/* Left Block with Slider Arrows */}
-                    <div className="md:col-span-2 relative overflow-hidden group h-96 md:h-auto">
-                        <img src={slides[currentSlide].image} alt="Documentary still" className="w-full h-full object-cover block transition-transform duration-2000 ease-in-out group-hover:scale-115" />
-                        <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-700"></div>
-
-                        {/* Content for larger screens */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex-col justify-end p-6 sm:p-8 text-white hidden md:flex">
-                            <p className="text-xs tracking-widest uppercase">
-                                {slides[currentSlide].category}
-                            </p>
-                            <h2 className="text-xl sm:text-2xl font-semibold mt-2">
-                                {slides[currentSlide].title}
-                            </h2>
-                            <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 w-12 h-12 border-2 border-cyan-400 rounded-full flex items-center justify-center cursor-pointer">
-                                <i className="fas fa-arrow-right text-cyan-400"></i>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                          
+                          {/* Left Column: JIU Partnerships */}
+                          <div className="relative p-8 rounded-lg shadow-2xl min-h-[500px] flex flex-col justify-between text-white transform hover:scale-105 transition-transform duration-300" style={{ background: 'linear-gradient(0deg, #ff0000 0%, #1f33c7 100%)' }}>
+                            <div>
+                              <h2 className="text-2xl font-bold tracking-widest">JIU PARTNERSHIPS</h2>
+                              <p className="mt-4 text-indigo-200">Explore our collaborations with industry leaders and institutions.</p>
                             </div>
-                        </div>
-
-                        {/* Slider Navigation Arrows */}
-                        <div
-                            className="absolute top-1/2 left-4 transform -translate-y-1/2 w-10 h-10 bg-black bg-opacity-40 rounded-full flex items-center justify-center text-white text-2xl cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity"
-                            onClick={prevSlide}
-                        >
-                            <i className="fas fa-chevron-left"></i>
-                        </div>
-                        <div
-                            className="absolute top-1/2 right-4 transform -translate-y-1/2 w-10 h-10 bg-black bg-opacity-40 rounded-full flex items-center justify-center text-white text-2xl cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity"
-                            onClick={nextSlide}
-                        >
-                            <i className="fas fa-chevron-right"></i>
-                        </div>
-                    </div>
-
-                    {/* Content for mobile screens */}
-                    <div className="md:hidden bg-gray-100 p-6 rounded-lg">
-                        <p className="text-xs tracking-widest uppercase text-gray-500">
-                            {slides[currentSlide].category}
-                        </p>
-                        <h2 className="text-xl font-semibold mt-2 text-gray-800">
-                            {slides[currentSlide].title}
-                        </h2>
-                    </div>
-
-                    {/* Right Block */}
-                    <div className="relative overflow-hidden group h-96 md:h-auto">
-                        <img src={AboutHeading2} alt="Filmmaker with camera" className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
-                        <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-700"></div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
-                            <p className="text-xs tracking-widest uppercase">FILMMAKING</p>
-                            <h2 className="text-xl sm:text-2xl font-semibold mt-2">Student Showcase</h2>
-                            <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 w-12 h-12 border-2 border-cyan-400 rounded-full flex items-center justify-center cursor-pointer">
-                                <i className="fas fa-arrow-right text-cyan-400"></i>
+                            <div className="flex justify-end items-center">
+                              <a href="/JIU-PARTNERSHIPS/" className="w-12 h-12 border-2 border-white rounded-full flex items-center justify-center cursor-pointer hover:bg-white hover:text-indigo-700 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                              </a>
                             </div>
+                          </div>
+                
+                          {/* Middle Column: Trending Article */}
+                          <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <div className="relative">
+                              <img src={PartnershipImg01} alt="Saheem Ali Q&A Session" className="w-full h-64 object-cover"/>
+                              <div className="absolute top-4 left-4 bg-yellow-400 text-black text-xs font-bold tracking-widest px-3 py-1 rounded-full">TRENDING</div>
+                            </div>
+                            <div className="p-6">
+                              <p className="text-gray-500 text-xs font-semibold tracking-widest">MAY 7, 2025</p>
+                              <h3 className="text-xl font-bold text-gray-800 leading-tight mt-2">Buena Vista Social Club Documentary Screening and Q&A with Saheem Ali</h3>
+                              <p className="text-gray-600 text-base mt-4">
+                                A special screening and Q&A with Broadway Director Saheem Ali, in partnership with Carnegie Hall’s Nuestro Sonidos Season.
+                              </p>
+                              <a href="#" className="text-purple-600 hover:text-purple-800 font-bold text-sm tracking-wider mt-6 inline-block">LEARN MORE &rarr;</a>
+                            </div>
+                          </div>
+                
+                          {/* Right Column: Tribeca Article */}
+                          <div className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src={PartnershipImg02} alt="JIU group at Tribeca" className="w-full h-64 object-cover"/>
+                            <div className="p-6">
+                              <p className="text-gray-500 text-xs font-semibold tracking-widest">JULY 16, 2025</p>
+                              <h3 className="text-xl font-bold text-gray-800 leading-tight mt-2">History Made at Tribeca: JIU Alum Mohamed Diab and Sarah Goher's Film Sweeps Awards</h3>
+                              <p className="text-gray-600 text-base mt-4">
+                                JIU alum and board member Mohamad Diab's film makes history at the Tribeca Film Festival, and the JIU community had a front-row seat.
+                              </p>
+                              <a href="#" className="text-purple-600 hover:text-purple-800 font-bold text-sm tracking-wider mt-6 inline-block">LEARN MORE &rarr;</a>
+                            </div>
+                          </div>
+                
                         </div>
-                    </div>
-                </div>
 
-                <p className="text-gray-500 text-sm italic">
-                    Please note: Equipment, curriculum, and projects are subject to change and may vary depending on location. Students should consult the most recently published campus catalog for the most up-to-date curriculum.
-                </p>
             </div>
         </div>
     );
