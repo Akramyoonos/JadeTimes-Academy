@@ -92,6 +92,7 @@ import WorkShops_Page from './pages/WorkShops_Page'
 import JIUStore_Page from './pages/JIUStore_Page';
 import TwoHourWorkShops_Page from './pages/TwoHourWorkShops_Page';
 import CorporateInternshipTraining_Page from './pages/CorporateInternshipTraining_Page';
+import Admin_Page from './pages/Admin_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -222,6 +223,7 @@ function AppInner() {
             <Route path="/JIU-Store/*" element={<JIUStore_Page />} />
             <Route path="/2-hour-workshops/*" element={<TwoHourWorkShops_Page />} />
             <Route path="/Corporate-Internship-Training/*" element={<CorporateInternshipTraining_Page />} />
+            <Route path="/Admin-Login/" element={<Admin_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />

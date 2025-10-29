@@ -92,6 +92,9 @@ const Footer = () => {
             
             {/* Links */}
             <div className="flex flex-wrap gap-6 font-sans text-sm">
+              <a href="/Admin-Login/" className="hover:text-gray-400">
+                ADMIN
+              </a>
               <a href="#" className="hover:text-gray-400">
                 COURSES
               </a>
