@@ -217,7 +217,7 @@ const ConferencesForm = () => {
         {/* Video Section */}
         <section className="mt-24">
           <div className="aspect-w-16 ">
-            {/* IMPORTANT: Replace 'VIDEO_ID_HERE' with your YouTube video ID */}
+            {/* IMPORTANT: Replace the src with your YouTube video embed URL */}
             <iframe 
               src="https://www.youtube.com/embed/FKz0Fnk_TRM" 
               title="Jadetimes International Research Conference 2025"
