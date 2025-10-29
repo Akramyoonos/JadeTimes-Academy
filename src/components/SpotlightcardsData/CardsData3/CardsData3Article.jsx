@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async'; // Import Helmet
+import { Helmet } from '@dr.pogodin/react-helmet'; // Import Helmet
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter,  faWhatsapp } from '@fortawesome/free-brands-svg-icons';
