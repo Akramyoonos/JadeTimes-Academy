@@ -8,7 +8,7 @@ const Discription = () => {
 
           {/* Left Content */}
           <div className="w-full lg:w-2/3">
-            <div className="relative">
+            {/* <div className="relative">
               <div className="absolute top-0 left-0 h-full w-1 bg-[#9b7f00]"></div>
               <div className="pl-8">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight headingFont">
@@ -26,7 +26,7 @@ const Discription = () => {
               <p>
                 This full-immersion method aims to keep students focused and committed, allowing them to continuously challenge themselves and build upon their natural talents. Throughout the programs, students learn through practical training and receive mentorship from our faculty of working industry experts, giving them the framework to develop a strong body of work while learning fundamental knowledge in their craft.
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Sidebar */}

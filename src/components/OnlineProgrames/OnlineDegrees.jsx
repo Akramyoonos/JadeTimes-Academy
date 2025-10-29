@@ -90,7 +90,7 @@ const OnlineDegrees = () => {
             <div className="absolute inset-0 flex flex-col justify-end p-6 text-white  bg-opacity-10 backdrop-filter  border border-white border-opacity-20 ">
               <h2 className="text-xl uppercase font-bold">Online Workshops</h2>
               <a
-                href="#"
+                href="/Work-Shops/"
                 className="absolute bottom-6 right-6 border-2 border-white rounded-full h-10 w-10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all duration-300 transform group-hover:rotate-45"
               >
                 <svg

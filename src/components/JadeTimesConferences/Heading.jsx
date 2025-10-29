@@ -1,26 +1,29 @@
 import React from 'react'
-import DegreeProgramsHeadingImage from '../../assets/Images/JADETIMESCONFERENCESImg.webp'
+import BlogHeadingImage from '../../assets/Images/JadetimeConferencesHeadingImg.webp' // Assuming the image has been updated to match
 
 const Heading = () => {
   return (
-     <div className="relative w-full  h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px] overflow-hidden">
-                 <img
-                   alt="Person wearing JIU shirt holding a camera with a blurred woman in the background"
-                   className="w-full h-full object-cover absolute inset-0 z-0"
-                   height="400"
-                   src={DegreeProgramsHeadingImage}
-                   width="1920"
-                 />
-                 <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
-                 <nav className="absolute top-8 left-8 z-20 flex items-center space-x-3 text-white text-sm sm:text-base font-sans  bg-opacity-30 px-4 py-2 rounded-full">
-                   <span className="font-semibold">JIU</span>
+    <div className="relative w-full h-[350px] sm:h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden">
+             <img
+               alt="JIU students at a speaker event" // Updated alt text
+               className="absolute inset-0 z-0 object-cover w-full h-full"              
+               src={BlogHeadingImage}
+
+             />
+             <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
+              <nav className="absolute z-20 flex flex-wrap items-center px-3 py-2 space-x-2 font-sans text-xs text-white uppercase rounded-full top-4 left-4 sm:top-8 sm:left-8 sm:text-sm bg-opacity-30 sm:px-4">
+                   <a href="/" className="font-semibold hover:underline">JIU</a>
                    <span className="text-gray-300">/</span>
-                   <span>JADE TIMES CONFERENCES</span>
+                   <a href="/" className="font-semibold hover:underline">ACADEMY SPOTLIGHT</a>
+                   <span className="text-gray-300">/</span>
+                   <a className="">JADE TIMES Conferences</a>
                  </nav>
+             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center text-white uppercase">
                  <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold tracking-wide text-shadow-lg">
-                   JADE TIMES CONFERENCES
+                   JADE TIMES Conferences
                  </h1>
-               </div>
+             </div>
+           </div>
   )
 }
 

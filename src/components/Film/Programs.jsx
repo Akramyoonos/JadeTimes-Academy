@@ -140,7 +140,7 @@ const Programs = () => {
     <div className="bg-gray-100 font-sans text-gray-800">
       <div className="py-12">
         {/* This is the heading from your original code */}
-        <div className="max-w-7xl px-8 sm:px-10 lg:px-12 mb-12 md:mb-10">
+        <div className="max-w-7xl px-4 sm:px-8 md:px-6 lg:px-34 mb-12 md:mb-10">
           <h2 className="jt-heading">
             <span className="jt-line uppercase">film making</span>
             <span className="jt-line">COURSES</span>

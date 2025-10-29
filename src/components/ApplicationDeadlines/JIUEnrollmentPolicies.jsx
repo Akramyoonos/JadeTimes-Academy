@@ -3,7 +3,7 @@ import React from 'react';
 const JIUEnrollmentPolicies = () => {
   return (
     <div className="bg-white font-sans">
-      <div className="container px-14 sm:px-6 md:px-6 lg:px-44 py-6 mx-auto">
+      <div className="container px-14 sm:px-6 md:px-6 lg:px-44 pb-12 mx-auto">
         <div className="relative">
           <div className="absolute top-0 left-[-2rem]">
             <div className="w-1 h-12 bg-cyan-400"></div>

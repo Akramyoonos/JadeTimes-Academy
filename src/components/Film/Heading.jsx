@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import AboutHeading from '../../assets/Images/FilmImg.webp';
 
 const Heading = () => {
@@ -13,11 +14,11 @@ const Heading = () => {
       />
       <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
       <nav className="absolute z-20 flex items-center px-1 pr-1 py-2 space-x-3 font-sans text-sm text-white uppercase rounded-full top-8 left-8 sm:text-base bg-opacity-30">
-        <span className="font-semibold">JIU</span>
+        <Link to="/"><span className="font-semibold hover:underline">JIU</span></Link>
         <span className="text-gray-300">/</span>
-        <span className="font-semibold">JIU  ACADEMICS</span>
+        <Link to="/academics"><span className="font-semibold hover:underline">ACADEMICS</span></Link>
         <span className="text-gray-300">/</span>
-        <span className="font-semibold">AREAS OF STUDY</span>
+        <Link to="/dates-tuition/"><span className="font-semibold hover:underline">AREAS OF STUDY</span></Link>
         <span className="text-gray-300">/</span>
         <span>Film </span>
       </nav>

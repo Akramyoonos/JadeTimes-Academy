@@ -1,21 +1,23 @@
 import React from 'react'
 import Heading from '../components/JadeTimesConferences/Heading'
-import Discription from '../components/JadeTimesConferences/Discription'
-import GeaduateDegree from '../components/JadeTimesConferences/GraduateDegree'
-import UndergraduateDegrees from '../components/JadeTimesConferences/UndergraduateDegrees'
-import OnlineDegrees from '../components/JadeTimesConferences/OnlineDegrees'
-import Campuses from '../components/JadeTimesConferences/Campuses'
+import ConferencesForm from '../components/JadeTimesConferences/ConferencesForm'
+import ConferencesSlides from '../components/JadeTimesConferences/ConferencesSlides'
+import SpecialAnnouncements from '../components/JadeTimesConferences/SpecialAnnouncements'
+import OrganizingCommitteeMembers from '../components/JadeTimesConferences/OrganizingCommitteeMembers'
+import JIUAdvisoryBoard from '../components/JadeTimesConferences/JIUAdvisoryBoard'
+import Contact from '../components/JadeTimesConferences/Contact'
 import withFadeIn from '../components/HOC/withFadeIn'
 
 const JadeTimesConferences_Page = () => {
   return (
     <div>
       <Heading/>
-      <Discription/>
-      <GeaduateDegree/>
-      <UndergraduateDegrees/>
-      <OnlineDegrees />
-      <Campuses />
+      <ConferencesForm/>
+      <ConferencesSlides/>
+      <SpecialAnnouncements />  
+      <OrganizingCommitteeMembers />  
+      <JIUAdvisoryBoard />  
+      <Contact />  
     </div>
   )
 }

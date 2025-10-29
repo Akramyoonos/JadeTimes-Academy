@@ -16,8 +16,8 @@ const Film_Page = () => {
     <>
      <Heading />   
      <DegreesCertificatesandWorkshops />        
-     <Drgrees />   
      <Programs />  
+     <Drgrees />   
      <OnlineWorkshops />
      <Faculty />  
      <Alumni />  

@@ -1,10 +1,95 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // --- IMPORTANT ---
 // Update this path to where you have saved the image in your project.
 import studentImage from '../../assets/Images/request-info-1920x857-1.webp'; 
 
 const NyfaRequestInfo = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    country: '',
+    educationLevel: '',
+    program: '',
+    major: '',
+    campus: '',
+  });
+
+  const [errors, setErrors] = useState({});
+  const [submitMessage, setSubmitMessage] = useState(null);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value,
+    }));
+    // Clear error for the field being changed
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [id]: null,
+    }));
+    setSubmitMessage(null); // Clear submit message on change
+  };
+
+  const validateForm = () => {
+    let newErrors = {};
+    let isValid = true;
+
+    // Required fields
+    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'country', 'educationLevel', 'program', 'major', 'campus'];
+    requiredFields.forEach(field => {
+      if (!formData[field]) {
+        newErrors[field] = 'This field is required';
+        isValid = false;
+      }
+    });
+
+    // Email format validation
+    if (formData.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)) {
+      newErrors.email = 'Invalid email address';
+      isValid = false;
+    }
+
+    // Phone format validation (simple check for numbers only)
+    if (formData.phone && !/^\d+$/.test(formData.phone)) {
+      newErrors.phone = 'Phone number must contain only digits';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitMessage(null); // Clear previous messages
+
+    if (validateForm()) {
+      console.log('Form Data Submitted:', formData);
+      // Simulate API call
+      setTimeout(() => {
+        setSubmitMessage({ type: 'success', message: 'Request submitted successfully! We will contact you shortly.' });
+        // Optionally reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          country: '',
+          educationLevel: '',
+          program: '',
+          major: '',
+          campus: '',
+        });
+      }, 1000);
+    } else {
+      setSubmitMessage({ type: 'error', message: 'Please correct the errors in the form.' });
+    }
+  };
+
   // CSS for custom dropdown arrows is included directly using a <style> tag.
   const customStyles = `
     .custom-select {
@@ -32,7 +117,7 @@ const NyfaRequestInfo = () => {
                 <img 
                   src={studentImage} 
                   alt="JIU student working with lighting equipment" 
-                  className="w-full h-full object-cover" // --- FIX APPLIED HERE ---
+                  className="w-full h-full object-cover" 
                 />
               </div>
               
@@ -59,68 +144,82 @@ const NyfaRequestInfo = () => {
                 <h2 className="text-4xl font-semibold tracking-widest">REQUEST INFO</h2>
               </div>
             
-              <form className="mt-8 space-y-6">
+              <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+                {submitMessage && (
+                  <div className={`p-3 rounded-md text-center ${submitMessage.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                    {submitMessage.message}
+                  </div>
+                )}
                 <div>
                   <label htmlFor="first-name" className="text-xs font-bold tracking-widest">FIRST NAME *</label>
-                  <input type="text" id="first-name" className="w-full mt-2 p-3 bg-white border-0 text-black" />
+                  <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.firstName ? 'border-b-2 border-red-500' : ''}`} />
+                  {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
                 </div>
                 <div>
                   <label htmlFor="last-name" className="text-xs font-bold tracking-widest">LAST NAME *</label>
-                  <input type="text" id="last-name" className="w-full mt-2 p-3 bg-white border-0 text-black" />
+                  <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.lastName ? 'border-b-2 border-red-500' : ''}`} />
+                  {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
                 </div>
                 <div>
                   <label htmlFor="email" className="text-xs font-bold tracking-widest">EMAIL *</label>
-                  <input type="email" id="email" className="w-full mt-2 p-3 bg-white border-0 text-black" />
+                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.email ? 'border-b-2 border-red-500' : ''}`} />
+                  {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
                 <div>
                   <label htmlFor="phone" className="text-xs font-bold tracking-widest">PHONE (NUMBER ONLY) *</label>
-                  <input type="tel" id="phone" className="w-full mt-2 p-3 bg-white border-0 text-black" />
+                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.phone ? 'border-b-2 border-red-500' : ''}`} />
+                  {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
                 <div>
                   <label htmlFor="country" className="text-xs font-bold tracking-widest">COUNTRY *</label>
-                  <select id="country" defaultValue="" className="custom-select w-full mt-2 p-3 bg-white border-0 text-black">
-                    <option value="" disabled></option>
+                  <select id="country" name="country" value={formData.country} onChange={handleChange} className={`custom-select w-full mt-2 p-3 bg-white border-0 text-black ${errors.country ? 'border-b-2 border-red-500' : ''}`}>
+                    <option value="" disabled>Select your country</option>
                     <option>United States</option>
                     <option>Canada</option>
                     <option>Mexico</option>
                   </select>
+                  {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
                 </div>
                 <div>
                   <label htmlFor="education-level" className="text-xs font-bold tracking-widest">HIGHEST EDUCATION LEVEL COMPLETED *</label>
-                  <select id="education-level" defaultValue="" className="custom-select w-full mt-2 p-3 bg-white border-0 text-black">
-                    <option value="" disabled></option>
+                  <select id="educationLevel" name="educationLevel" value={formData.educationLevel} onChange={handleChange} className={`custom-select w-full mt-2 p-3 bg-white border-0 text-black ${errors.educationLevel ? 'border-b-2 border-red-500' : ''}`}>
+                    <option value="" disabled>Select education level</option>
                     <option>High School</option>
                     <option>Associate's Degree</option>
                     <option>Bachelor's Degree</option>
                     <option>Master's Degree</option>
                   </select>
+                  {errors.educationLevel && <p className="text-red-500 text-xs mt-1">{errors.educationLevel}</p>}
                 </div>
                 <div>
                   <label htmlFor="program" className="text-xs font-bold tracking-widest">DEGREE/PROGRAM INQUIRING ABOUT *</label>
-                  <select id="program" defaultValue="" className="custom-select w-full mt-2 p-3 bg-white border-0 text-black">
-                    <option value="" disabled></option>
+                  <select id="program" name="program" value={formData.program} onChange={handleChange} className={`custom-select w-full mt-2 p-3 bg-white border-0 text-black ${errors.program ? 'border-b-2 border-red-500' : ''}`}>
+                    <option value="" disabled>Select a program</option>
                     <option>Filmmaking</option>
                     <option>Acting for Film</option>
                     <option>Photography</option>
                   </select>
+                  {errors.program && <p className="text-red-500 text-xs mt-1">{errors.program}</p>}
                 </div>
                 <div>
                   <label htmlFor="major" className="text-xs font-bold tracking-widest">MAJOR/DISCIPLINE *</label>
-                  <select id="major" defaultValue="" className="custom-select w-full mt-2 p-3 bg-white border-0 text-black">
-                    <option value="" disabled></option>
+                  <select id="major" name="major" value={formData.major} onChange={handleChange} className={`custom-select w-full mt-2 p-3 bg-white border-0 text-black ${errors.major ? 'border-b-2 border-red-500' : ''}`}>
+                    <option value="" disabled>Select a major</option>
                     <option>Directing</option>
                     <option>Cinematography</option>
                     <option>Screenwriting</option>
                   </select>
+                  {errors.major && <p className="text-red-500 text-xs mt-1">{errors.major}</p>}
                 </div>
                 <div>
                   <label htmlFor="campus" className="text-xs font-bold tracking-widest">CAMPUS/LOCATION *</label>
-                  <select id="campus" defaultValue="" className="custom-select w-full mt-2 p-3 bg-white border-0 text-black">
-                    <option value="" disabled></option>
+                  <select id="campus" name="campus" value={formData.campus} onChange={handleChange} className={`custom-select w-full mt-2 p-3 bg-white border-0 text-black ${errors.campus ? 'border-b-2 border-red-500' : ''}`}>
+                    <option value="" disabled>Select a campus</option>
                     <option>New York</option>
                     <option>Los Angeles</option>
                     <option>Miami</option>
                   </select>
+                  {errors.campus && <p className="text-red-500 text-xs mt-1">{errors.campus}</p>}
                 </div>
                 
                 <button type="submit" className="w-full bg-cyan-400 text-black font-bold py-4 tracking-widest hover:bg-cyan-500 transition-colors">SUBMIT</button>

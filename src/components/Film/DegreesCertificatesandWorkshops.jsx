@@ -43,7 +43,7 @@ const DegreesCertificatesandWorkshops = () => {
                         <div className="md:col-span-2">
                             <div className="flex items-start">
                                 <div className="w-1 bg-purple-600 h-24 mr-6 flex-shrink-0" />
-                                <h1 className="text-3xl sm:text-4xl font-light text-gray-800 tracking-wider">
+                                <h1 className="jt-line text-3xl sm:text-4xl tracking-wider">
                                     HANDS-ON FILMMAKING DEGREES, CERTIFICATES, AND WORKSHOPS
                                 </h1>
                             </div>

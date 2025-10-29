@@ -98,7 +98,7 @@ const WorkshopItem = ({ title, description, initiallyOpen = false }) => {
 // Main Component
 function OnlineWorkshops() {
     return (
-        <div className="bg-white text-gray-800 font-sans">
+        <div className="bg-white text-gray-800 font-sans pt-12">
             <div className="container mx-auto px-4 sm:px-6 md:px-14 lg:px-4 py-4 max-w-7xl">
                 <div className="relative mb-8">
                     <h1 className="text-4xl font-extrabold tracking-tight relative pl-6">
