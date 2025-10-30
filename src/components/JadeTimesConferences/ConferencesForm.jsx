@@ -218,14 +218,7 @@ const ConferencesForm = () => {
         <section className="mt-24">
           <div className="aspect-w-16 ">
             {/* IMPORTANT: Replace the src with your YouTube video embed URL */}
-            <iframe 
-              src="https://www.youtube.com/embed/FKz0Fnk_TRM" 
-              title="Jadetimes International Research Conference 2025"
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen 
-              className="w-full h-144 shadow-xl ">
-            </iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
           </div>
         </section>
 

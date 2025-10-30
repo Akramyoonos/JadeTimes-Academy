@@ -152,7 +152,7 @@ const ConferenceModal = ({ conference, allConferences, onClose, onSelectNext }) 
             aria-labelledby="conference-modal-title"
         >
             {/* Header */}
-            <header className="flex justify-between items-center w-full px-6 py-3 flex-shrink-0">
+            <header className="flex justify-between items-center w-full px-6 py-3 shrink-0">
                 <h2 className="text-xl font-semibold">Jadetimes Conference</h2>
                 <div className="flex items-center space-x-6">
                     <button onClick={onClose} className="hover:text-gray-300" aria-label="Close modal">
@@ -195,7 +195,7 @@ const ConferenceModal = ({ conference, allConferences, onClose, onSelectNext }) 
 
                 {/* Right Side: Details & Up Next Queue */}
                 <div className="w-full lg:w-1/3 flex flex-col p-4 lg:p-6 overflow-y-auto">
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                         <h3 id="conference-modal-title" className="text-xl lg:text-2xl font-bold">{conference.title}</h3>
                         <p className="text-sm text-gray-400 mt-2">Jadetimes • {conference.videoDuration}</p>
                         <p className="text-base text-gray-300 mt-4 font-light">
@@ -213,7 +213,7 @@ const ConferenceModal = ({ conference, allConferences, onClose, onSelectNext }) 
                         <p className="text-lg font-bold mb-2">Up Next</p>
                         {upNextConferences.map(item => (
                             <div key={item.id} className="flex items-center cursor-pointer group" onClick={() => onSelectNext(item)} role="button" tabIndex={0}>
-                                <div className="relative w-40 h-24 flex-shrink-0 mr-4">
+                                <div className="relative w-40 h-24 shrink-0 mr-4">
                                     <img src={getYoutubeThumbnail(item.videoUrl)} alt={item.altText} className="w-full h-full object-cover rounded-lg" />
                                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                                         <FaPlay className="w-6 h-6 text-white" />
