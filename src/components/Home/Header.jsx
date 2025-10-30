@@ -284,7 +284,7 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
         aria-controls="language-dropdown"
       >
         <GlobeIcon className="w-5 h-5" />
-        <span className="font-normal text-[length:var(--size-topbar)]">ENGLISH</span>
+        <span className="font-normal" style={{ fontSize: "var(--size-topbar)" }}>ENGLISH</span>
         <ChevronDownIcon
           className={`w-3 h-3 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           style={{ color: isOpen ? ACCENTS.youth : "" }}
@@ -302,7 +302,8 @@ const LanguageSelector = ({ isOpen, onToggle }) => {
           <a
             key={lang}
             href="/"
-            className="block px-4 py-2 text-[length:var(--size-topbar)] text-gray-200 hover:bg-gray-700 transition-colors duration-300"
+            className="block px-4 py-2 text-gray-200 hover:bg-gray-700 transition-colors duration-300"
+            style={{ fontSize: "var(--size-topbar)" }}
           >
             {lang}
           </a>
@@ -412,12 +413,12 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                                                 {item.text}
                                             </a>
                                             {item.comingSoon && (
-                                                <span className="ml-2 px-[6px] py-[2px] text-[11px] font-medium text-black uppercase bg-white  ">
+                                                <span className="ml-2 px-1.5 py-0.5 text-[11px] font-medium text-black uppercase bg-white  ">
                                                     Coming Soon
                                                 </span>
                                             )}
                                             {item.AvailableNow && (
-                                                <span className="ml-2 px-[6px] py-[2px] text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                                <span className="ml-2 px-1.5 py-0.5 text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
                                                     Available Now
                                                 </span>
                                             )}
@@ -429,7 +430,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                         {boxes.map((box, index) => (
                           <div key={index} className="col-span-3  flex justify-center h-full">
                             <div className="border-2 flex flex-col" style={{ borderColor: accent, width: '100%' }}>
-                              <div className="flex-grow h-48">
+                              <div className="grow h-48">
                                 <img src={box.image} alt={box.title} className="w-full h-full object-cover" />
                               </div>
                               <div className="bg-white text-black p-6 flex flex-col justify-center items-center text-center">
@@ -501,12 +502,12 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                             {item.text}
                           </a>
                           {item.comingSoon && (
-                                <span className="ml-2 px-[2px] py-[1px] text-[9px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                <span className="ml-2 px-0.5 py-px text-[9px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
                                     Coming Soon
                                 </span>
                             )}
                           {item.AvailableNow && (
-                                <span className="ml-2 px-[2px] py-[1px] text-[9px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                <span className="ml-2 px-0.5 py-px text-[9px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
                                     Available Now
                                 </span>
                             )}
@@ -520,7 +521,7 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
               {boxes.map((box, index) => (
                 <div key={index} className="flex justify-center h-full">
                   <div className="border-2 flex flex-col" style={{ borderColor: accent, width: '100%' }}>
-                    <div className="flex-grow h-48">
+                    <div className="grow h-48">
                       <img src={box.image} alt={box.title} className="w-full h-full object-cover" />
                     </div>
                     <div className="bg-white text-black p-6 flex flex-col justify-center items-center text-center">
@@ -589,12 +590,12 @@ const MobileMegaMenu = ({ config, accent, open, closeMenu }) => {
                                         {item.text}
                                     </a>
                                     {item.comingSoon && (
-                                        <span className="ml-2 px-[6px] py-[2px] text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
+                                        <span className="ml-2 px-1.5 py-0.5 text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500 ">
                                             Coming Soon
                                         </span>
                                     )}
                                     {item.AvailableNow && (
-                                        <span className="ml-2 px-[6px] py-[2px] text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500">
+                                        <span className="ml-2 px-1.5 py-0.5 text-[11px] font-medium text-black uppercase bg-white hover:bg-blue-500">
                                             Available Now
                                         </span>
                                     )}
@@ -652,7 +653,7 @@ const DesktopNavItem = ({ children, active, color, onClick, to, controlsId }) =>
     <>
       <span>{children}</span>
       <span
-        className={`pointer-events-none absolute left-0 -bottom-[2px] h-[2px] w-0 group-hover:w-full transition-[width] duration-300 ${active ? "w-full" : ""}`}
+        className={`pointer-events-none absolute left-0 -bottom-0.5 h-0.5 w-0 group-hover:w-full transition-[width] duration-300 ${active ? "w-full" : ""}`}
         style={underlineStyle}
       />
     </>
@@ -789,7 +790,7 @@ const Header = () => {
         <nav className="z-30 bg-black w-full" ref={navRef}>
           <div className={`w-full ${gutters}`}>
             <div className="flex items-center justify-between py-2">
-              <a href="/" className="flex-shrink-0">
+              <a href="/" className="shrink-0">
                 <img alt="JadeTimes Academy Logo" className="h-12 sm:h-16 w-auto" src={logo} />
               </a>
 

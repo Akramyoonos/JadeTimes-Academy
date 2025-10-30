@@ -17,7 +17,7 @@ import YouthImage2 from '../../assets/Images/CoursesImg02.webp';
 const InfoCard = ({ src, title, description, href }) => (
   <motion.a
     href={href}
-    className="w-[85vw] md:w-85 h-160 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden "
+    className="w-[85vw] md:w-85 h-160 shrink-0 bg-white font-sans text-left select-none group overflow-hidden "
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
@@ -168,6 +168,11 @@ const Courses = () => {
                   </div>
                   {showRightChevron && <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>}
                 </div>
+        <div className="text-center mt-8">
+          <a href="/courses" className="bg-linear-to-r from-purple-600 to-indigo-600 text-white font-bold rounded-full py-4 px-10 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 ease-in-out inline-block">
+            More Courses
+          </a>
+        </div>
       </div>
 
     </div>

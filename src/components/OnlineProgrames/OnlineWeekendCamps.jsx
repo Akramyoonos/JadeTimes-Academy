@@ -2,7 +2,7 @@ import React from 'react'
 
 const OnlineWeekendCamps = () => {
   return (
-    <div className="bg-gradient-to-br from-gray-100 to-gray-200 px-0 sm:px-2 md:px-2 lg:px-18 font-sans pt-6">
+    <div className="bg-linear-to-br from-gray-100 to-gray-200 px-0 sm:px-2 md:px-2 lg:px-18 font-sans pt-6">
 
 
 

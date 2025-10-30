@@ -33,7 +33,7 @@ const Alumni = () => {
               alt="Damon Wayans"
               className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex items-end">
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent flex items-end">
               <div className="text-white p-8 w-full transform translate-y-4  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
                 <h3 className="text-2xl font-bold">Damon Wayans</h3>
                 <p className="text-sm tracking-wider">Writer | Actor | Producer</p>
@@ -48,7 +48,7 @@ const Alumni = () => {
               alt="Bill Hader"
               className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex items-end">
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent flex items-end">
               <div className="text-white p-8 w-full transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
                 <h3 className="text-2xl font-bold">Bill Hader</h3>
                 <p className="text-sm tracking-wider">Actor | Comedian | Writer</p>
@@ -63,7 +63,7 @@ const Alumni = () => {
               alt="Issa Rae"
               className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex items-end">
+            <div className="absolute inset-0 bg-linear-to-t from-black/90 to-transparent flex items-end">
               <div className="text-white p-8 w-full transform translate-y-4  group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
                 <h3 className="text-2xl font-bold">Issa Rae</h3>
                 <p className="text-sm tracking-wider">Actor | Producer</p>

@@ -42,7 +42,7 @@ const DegreesCertificatesandWorkshops = () => {
                         {/* --- Main Content Section (2/3 width) --- */}
                         <div className="md:col-span-2">
                             <div className="flex items-start">
-                                <div className="w-1 bg-purple-600 h-24 mr-6 flex-shrink-0" />
+                                <div className="w-1 bg-purple-600 h-24 mr-6 shrink-0" />
                                 <h1 className="jt-line text-3xl sm:text-4xl tracking-wider">
                                     HANDS-ON FILMMAKING DEGREES, CERTIFICATES, AND WORKSHOPS
                                 </h1>
@@ -67,7 +67,7 @@ const DegreesCertificatesandWorkshops = () => {
                                     className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                                 />
                                 {/* Gradient Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                                <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent"></div>
 
                                 {/* Content: Centered Play Button and Bottom Text */}
                                 <div className="absolute inset-0 flex flex-col justify-between p-6">
