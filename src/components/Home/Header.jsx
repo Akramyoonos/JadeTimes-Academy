@@ -196,14 +196,18 @@ const megaMenus = {
   youthMenu: {
     "WORKSHOPS": [
       { text: "FILM", href: "/film/" },
-      { text: "MEDIA ARTS", href: "/academics/areas-of-study/acting-for-film" },
-      { text: "PERFORMING ARTS", href: "/academics/areas-of-study/photography" },
-      { text: "CREATIVE EXPRESSION", href: "/academics/areas-of-study/producing" },
-      { text: "JOURNALISM", href: "/academics/areas-of-study/screenwriting" },
-      { text: "COMMUNIVATION", href: "/academics/areas-of-study/cinematography" },
-      { text: "DIGITAL MEDIA", href: "/academics/areas-of-study/documentary-filmmaking" },
-      { text: "TECHNOLOGY", href: "/academics/areas-of-study/digital-editing" },
-      { text: "INTERACTIVE MEDIA", href: "/Faq" },
+      { text: "MEDIA ARTS", href: "/Media-Arts/" },
+      { text: "PERFORMING ARTS", href: "/Performing-Arts/" },
+      { text: "CREATIVE EXPRESSION", href: "/Creatie-Expression/" },
+      { text: "JOURNALISM", href: "/Journalism/" },
+      { text: "COMMUNIVATION", href: "/Comunivation/" },
+      { text: "DIGITAL MEDIA", href: "/Digital-Media/" },
+      { text: "TECHNOLOGY", href: "/Technology/" },
+      { text: "INTERACTIVE MEDIA", href: "/Intrractive-Media/" },
+      { text: "ENTERTAINMENT MEDIA", href: "/Entertainment-Media/" },
+      { text: "PSYCHOLOGY", href: "/Psychology/" },
+      { text: "HUMAN BEHAVIOR", href: "/Human-Behavior/" },
+      { text: "MARKETING", href: "/Marketing/" },
     ],
     "YOUTH ADMISSIONS": [
       { text: "PROGRAM DATES", href: "/youth/youth-admissions/program-dates" },
@@ -481,10 +485,10 @@ const MegaMenu = ({ open, config, accent, id, closeMenu }) => {
                       <span>{section}</span>
                     </h3>
                   </a>
-                  <ul className={`space-y-5 ${section === "AREAS OF STUDY" ? "columns-2" : ""}`}>
+                  <ul className={`space-y-5 ${section === "AREAS OF STUDY" || section === "WORKSHOPS" ? "columns-2" : ""}`}>
                     {items.map((item) => {
                       const wrapClass =
-                        section === "AREAS OF STUDY"
+                        section === "AREAS OF STUDY" || section === "WORKSHOPS"
                           ? "max-w-[300px] whitespace-normal leading-tight"
                           : "whitespace-normal leading-tight";
                       const isInteractive = !item.comingSoon && !item.noHover;
@@ -568,7 +572,7 @@ const MobileMegaMenu = ({ config, accent, open, closeMenu }) => {
                         </h3>
                         <ul
                             className={`space-y-3 ${
-                                section === "AREAS OF STUDY" ? "columns-2" : ""
+                                section === "AREAS OF STUDY" || section === "WORKSHOPS" ? "columns-2" : ""
                             }`}
                         >
                             {items.map((item) => {
