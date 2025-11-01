@@ -27,7 +27,7 @@ const getYouTubeEmbedUrl = (videoUrl) => {
 const conferenceData = [
     {
         id: 1,
-        videoUrl: "https://www.youtube.com/embed/Omuv_gtIV3I?si=CG-hskvFCYCCinuP",
+        videoUrl: "https://www.youtube.com/embed/Omuv_gtIV3I?si=z5y2pVY94t0-fE-V",
         altText: "Dr. Manvendra Singh",
         videoDuration: "03:42",
         title: "Jadetimes International Research Conference 2025 | Dr. Manvendra Singh",
@@ -39,7 +39,7 @@ const conferenceData = [
     },
     {
         id: 2,
-        videoUrl: "https://www.youtube.com/embed/eWMewIaxjWo?si=DxlIqe93As0gz3lN",
+        videoUrl: "https://www.youtube.com/embed/eWMewIaxjWo?si=F07dnwEPTOAdBvQ4",
         altText: "Avneet Gulati",
         videoDuration: "02:32",
         title: "Why I applied Jadetimes Research Conference?",
@@ -51,7 +51,7 @@ const conferenceData = [
     },
     {
         id: 3,
-        videoUrl: "https://www.youtube.com/embed/SPM2mNJH-IU?si=jIlxbqTeTfFdTfaa",
+        videoUrl: "https://www.youtube.com/embed/SPM2mNJH-IU?si=AD8rfoz68wsKCN-Z",
         altText: "Dr. Sumit Kumar Pandey",
         videoDuration: "01:13",
         title: "Jadetimes International Research Conference 2025 | Dr. Sumit Kumar Pandey",
@@ -63,7 +63,7 @@ const conferenceData = [
     },
     {
         id: 4,
-        videoUrl: "https://www.youtube.com/embed/ZMN_rJLlif0?si=4c2F5yNWOaHlzwt6",
+        videoUrl: "https://www.youtube.com/embed/ZMN_rJLlif0?si=7CjdiLtMFHGJsfeE",
         altText: "Prof. Ceasar Dubor",
         videoDuration: '04:50',
         title: "Jadetimes International Research Conference 2025 | Prof. Ceasar Dubor",
@@ -75,7 +75,7 @@ const conferenceData = [
     },
     {
         id: 5,
-        videoUrl: "https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g",
+        videoUrl: "https://www.youtube.com/embed/FKz0Fnk_TRM?si=n4_HFITQcYk7zzlm",
         altText: "Extra Speaker 1",
         videoDuration: '03:15',
         title: "Jadetimes International Research Conference 2025 | Extra Speaker 1",
@@ -88,7 +88,7 @@ const conferenceData = [
     },
     {
         id: 6,
-        videoUrl: "https://www.youtube.com/embed/dgDbQ65d0CE?si=viaopV9HPDTZXNld",
+        videoUrl: "https://www.youtube.com/embed/dgDbQ65d0CE?si=OzPhi2M0N3nLvDaX",
         altText: "Extra Speaker 2",
         videoDuration: '05:22',
         title: "Jadetimes International Research Conference 2025 | Extra Speaker 2",
@@ -101,7 +101,7 @@ const conferenceData = [
     },
     {
         id: 7,
-        videoUrl: "https://www.youtube.com/embed/sXjSgIS4iu4?si=3D4gUE8Lp8O4WGWv",
+        videoUrl: "https://www.youtube.com/embed/sXjSgIS4iu4?si=DM5Xmmdzy_X4ImZu",
         altText: "Extra Speaker 3",
         videoDuration: '02:48',
         title: "Jadetimes International Research Conference 2025 | Extra Speaker 3",
@@ -114,7 +114,7 @@ const conferenceData = [
     },
     {
         id: 8,
-        videoUrl: "https://www.youtube.com/embed/UJKvoP-pgWU?si=BdItvRCwlUg9ZjVa",
+        videoUrl: "https://www.youtube.com/embed/UJKvoP-pgWU?si=PvDZJGTUCVlI4PJq",
         altText: "Extra Speaker 4",
         videoDuration: '06:00',
         title: "Jadetimes International Research Conference 2025 | Extra Speaker 4",

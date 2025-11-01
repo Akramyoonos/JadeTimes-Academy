@@ -11,14 +11,15 @@ export const VideoModal = ({ videoId, onClose }) => (
                 <FontAwesomeIcon icon={faTimes} className="h-8 w-8" />
             </button>
             <div className="aspect-w-16 aspect-h-12">
-                <iframe
-                    src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-126"
-                    title="YouTube video player"
-                ></iframe>
+            <iframe 
+            width="960" height="515" 
+            src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=n4_HFITQcYk7zzlm" 
+            title="YouTube video player" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerPolicy="strict-origin-when-cross-origin" 
+            allowFullScreen>
+            </iframe>
             </div>
         </div>
     </div>
@@ -118,7 +119,7 @@ const DegreesCertificatesandWorkshops = () => {
                                 <img
                                     src={ourStudents01}
                                     alt="Filmmaker with a professional camera"
-                                    className="w-full h-full object-cover transition-transform duration-2000 group-hover:scale-115"
+                                    className="w-full h-full mt-2 object-cover transition-transform duration-2000 group-hover:scale-115"
                                 />
                                 <div className="absolute bottom-0 left-0 p-5 text-white bg-black bg-opacity-50 w-full">
                                     <p className="text-xs font-semibold tracking-wider">FILMMAKING</p>
