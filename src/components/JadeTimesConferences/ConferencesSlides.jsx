@@ -16,6 +16,13 @@ const getYoutubeThumbnail = (videoUrl) => {
     return videoIdMatch ? `https://img.youtube.com/vi/${videoIdMatch[1]}/maxresdefault.jpg` : 'https://placehold.co/1280x720/000000/FFFFFF/png?text=Video';
 };
 
+const getYouTubeEmbedUrl = (videoUrl) => {
+    if (typeof videoUrl !== 'string') return null;
+    // Universal regex for YouTube URLs
+    const videoIdMatch = videoUrl.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|v\/|shorts\/|live\/)?([a-zA-Z0-9_-]{11})/);
+    return videoIdMatch ? `https://www.youtube.com/embed/${videoIdMatch[1]}?autoplay=1&rel=0` : null;
+};
+
 // --- Static Data for Conferences ---
 const conferenceData = [
     {
@@ -118,7 +125,10 @@ const conferenceData = [
         speakerTitle: "SPEAKER",
         speakerSubtitle: "SPEAKER"
     }
-];
+].map(conference => ({
+    ...conference,
+    embedUrl: getYouTubeEmbedUrl(conference.videoUrl)
+}));
 
 // --- Modal Component ---
 const ConferenceModal = ({ conference, allConferences, onClose, onSelectNext }) => {
@@ -133,16 +143,6 @@ const ConferenceModal = ({ conference, allConferences, onClose, onSelectNext }) 
     // Find the index of the current conference to create the "Up Next" list
     const currentIndex = allConferences.findIndex(c => c.id === conference.id);
     const upNextConferences = [...allConferences.slice(currentIndex + 1), ...allConferences.slice(0, currentIndex)];
-
-    // --- FIX: Replaced custom YouTube URL parser with a robust one ---
-    const getYouTubeEmbedUrl = (videoUrl) => {
-        if (typeof videoUrl !== 'string') return null;
-        // Universal regex for YouTube URLs
-        const videoIdMatch = videoUrl.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|v\/|shorts\/|live\/)?([a-zA-Z0-9_-]{11})/);
-        return videoIdMatch ? `https://www.youtube.com/embed/${videoIdMatch[1]}?autoplay=1&rel=0` : null;
-    };
-
-    const embedUrl = getYouTubeEmbedUrl(conference.videoUrl);
 
     return (
         <div
@@ -167,9 +167,9 @@ const ConferenceModal = ({ conference, allConferences, onClose, onSelectNext }) 
                 {/* Left Side: Video Player */}
                 <div className="w-full lg:w-2/3 flex flex-col justify-center px-4 lg:px-6">
                     <div className="relative aspect-video bg-black rounded-lg flex items-center justify-center">
-                        {isPlaying && embedUrl ? (
+                        {isPlaying && conference.embedUrl ? (
                             <iframe
-                                src={embedUrl}
+                                src={conference.embedUrl}
                                 title={conference.title}
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
