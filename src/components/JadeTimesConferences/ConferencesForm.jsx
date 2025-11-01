@@ -6,6 +6,32 @@ import { faGlobe, faUpload } from '@fortawesome/free-solid-svg-icons';
 import awardImage from '../../assets/Images/ConferencesFormImg.webp'; // Example path
 
 const ConferencesForm = () => {
+  const countries = [
+  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
+  "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi",
+  "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Republic of the)", "Congo (Democratic Republic of the)", "Costa Rica", "Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia",
+  "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+  "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia",
+  "Fiji", "Finland", "France",
+  "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana",
+  "Haiti", "Honduras", "Hungary",
+  "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Israel", "Italy",
+  "Jamaica", "Japan", "Jordan",
+  "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan",
+  "Lao People's Democratic Republic", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
+  "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia (Federated States of)", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar",
+  "Namibia", "Nauru", "Nepal", "Netherlands (Kingdom of the)", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway",
+  "Oman",
+  "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
+  "Qatar",
+  "Republic of Korea", "Republic of Moldova", "Romania", "Russian Federation", "Rwanda",
+  "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syrian Arab Republic",
+  "Tajikistan", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu",
+  "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom of Great Britain and Northern Ireland", "United Republic of Tanzania", "United States of America", "Uruguay", "Uzbekistan",
+  "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam",
+  "Yemen",
+  "Zambia", "Zimbabwe"
+];
   const [formData, setFormData] = useState({
     yourName: '',
     country: '',
@@ -137,7 +163,12 @@ const ConferencesForm = () => {
                 
                 <div>
                   <label htmlFor="country" className="block text-sm font-medium text-gray-700">Country *</label>
-                  <input type="text" name="country" id="country" value={formData.country} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.country ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`} />
+                  <select name="country" id="country" value={formData.country} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.country ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`}>
+                    <option value="">Select a country</option>
+                    {countries.map((country) => (
+                      <option key={country} value={country}>{country}</option>
+                    ))}
+                  </select>
                   {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
                 </div>
 
@@ -183,7 +214,6 @@ const ConferencesForm = () => {
                     <option value="">Select an option</option>
                     <option value="Student">Student</option>
                     <option value="Professional">Professional</option>
-                    <option value="Academia">Academia</option>
                   </select>
                   {errors.entryType && <p className="text-red-500 text-xs mt-1">{errors.entryType}</p>}
                 </div>

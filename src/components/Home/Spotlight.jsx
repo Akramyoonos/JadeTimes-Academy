@@ -18,7 +18,7 @@ import Spotlight10 from '../../assets/Images/JADETIMESCONFERENCESImg.webp';
 // CHANGE 1: Created a new Card component to match the style in the image.
 // ADDED ZOOM EFFECT: Added `group-hover:scale-110` to the image tag for the zoom effect on hover.
 const InfoCard = ({ src, title, description, href }) => (
-  <a href={href} className="w-[80vw] md:w-96 flex-shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
+  <a href={href} className="w-[80vw] md:w-96 shrink-0 bg-white font-sans text-left select-none group overflow-hidden">
     <div className="overflow-hidden relative">
       <img
         src={src}
@@ -191,7 +191,7 @@ const Spotlight = () => {
               />
               <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
                 <h3 className="text-white text-lg font-semibold tracking-wider">CERTIFICATE PROGRAMS</h3>
               </div>
@@ -208,7 +208,7 @@ const Spotlight = () => {
               src={Spotlight8}
             />
             <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
                 <h3 className="text-white text-lg font-semibold tracking-wider">ONLINE PROGRAMS</h3>
               </div>
@@ -218,16 +218,16 @@ const Spotlight = () => {
             </div>
           </a>
 
-          <a href="/Jadetimes-Journals/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
+          <a href="http://jadetimesjournals.com/" className="relative group cursor-pointer overflow-hidden h-64 md:h-80 block">
             <img
               alt="Smiling young people posing for a photo"
               className="w-full h-full object-cover transform transition-transform duration-2000 group-hover:scale-115"
               src={Spotlight9}
             />
             <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/0 to-transparent flex items-end p-6">
+            <div className="absolute inset-0 bg-linear-to-t from-black/0 to-transparent flex items-end p-6">
               <div>
-                <h3 className="text-white text-lg font-semibold tracking-wider">JADE TIMES JOURNALS</h3>
+                <h3 className="text-white text-lg font-semibold tracking-wider">JADETIMES JOURNALS</h3>
               </div>
             </div>
             <div className="absolute bottom-6 right-6 text-white text-2xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -242,9 +242,9 @@ const Spotlight = () => {
               src={Spotlight10}
             />
             <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-300"></div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+            <div className="absolute inset-0 bg-linear-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
-                <h3 className="text-white text-lg font-semibold tracking-wider">JADE TIMES CONFERENCES</h3>
+                <h3 className="text-white text-lg font-semibold tracking-wider">JADETIMES CONFERENCES</h3>
               </div>
             </div>
             <div className="absolute bottom-6 right-6 text-white text-2xl opacity-0 transform translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">

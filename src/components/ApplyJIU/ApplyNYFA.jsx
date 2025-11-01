@@ -21,14 +21,14 @@ const ApplyNYFA = () => {
 
           <p className="mt-4 text-lg md:text-xl text-gray-700 leading-relaxed">
             Please see{" "}
-            <a href="#" className="text-pink-600 hover:text-pink-700">
+            <a href="/important-dates/" className="text-pink-600 hover:text-pink-700">
               deadlines
             </a>{" "}
             and links to the NYFA application below. You can also view Important
             Dates and Deadlines on this webpage:{" "}
             <a
               href="https://www.nyfa.edu/important-dates/"
-              className="text-pink-600 break-words hover:text-pink-700"
+              className="text-pink-600 wrap-break-word hover:text-pink-700"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -37,65 +37,30 @@ const ApplyNYFA = () => {
           </p>
         </div>
 
-        <div className="w-full md:w-1/2 p-8 ">
-          <h2 className="text-2xl font-semibold mb-6 text-gray-800">Request Information</h2>
-          <form>
-            <div className="mb-4">
-              <label htmlFor="firstName" className="block text-gray-700 font-medium mb-2">
-                First Name
-              </label>
-              <input
-                type="text"
-                id="firstName"
-                name="firstName"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                required
-              />
+        <div className="w-full md:w-1/2 p-8  rounded-lg shadow-md">
+          <h2 className="text-3xl font-semibold mb-8 text-center">Request Information</h2>
+          <form action="#" method="POST" className="space-y-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+                <input type="text" name="firstName" id="firstName" required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500 sm:text-sm h-10 px-3" />
+              </div>
+              <div>
+                <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+                <input type="text" name="lastName" id="lastName" required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500 sm:text-sm h-10 px-3" />
+              </div>
             </div>
-            <div className="mb-4">
-              <label htmlFor="lastName" className="block text-gray-700 font-medium mb-2">
-                Last Name
-              </label>
-              <input
-                type="text"
-                id="lastName"
-                name="lastName"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                required
-              />
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+              <input type="email" name="email" id="email" required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500 sm:text-sm h-10 px-3" />
             </div>
-            <div className="mb-4">
-              <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-                required
-              />
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+              <input type="tel" name="phone" id="phone" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500 sm:text-sm h-10 px-3" />
             </div>
-            <div className="mb-4">
-              <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-              />
-            </div>
-            <div className="mb-6">
-              <label htmlFor="program" className="block text-gray-700 font-medium mb-2">
-                Program of Interest
-              </label>
-              <select
-                id="program"
-                name="program"
-                className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"
-              >
+            <div>
+              <label htmlFor="program" className="block text-sm font-medium text-gray-700 mb-1">Program of Interest *</label>
+              <select id="program" name="program" required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-pink-500 focus:border-pink-500 sm:text-sm h-10 px-3">
                 <option>Filmmaking</option>
                 <option>Acting for Film</option>
                 <option>Producing</option>
@@ -108,12 +73,11 @@ const ApplyNYFA = () => {
                 <option>Documentary Filmmaking</option>
               </select>
             </div>
-            <button
-              type="submit"
-              className="w-full bg-pink-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-pink-700 transition duration-300"
-            >
-              Submit
-            </button>
+            <div className="pt-4">
+              <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500">
+                Submit
+              </button>
+            </div>
           </form>
         </div>
       </div>

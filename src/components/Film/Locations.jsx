@@ -1,17 +1,12 @@
 import React from 'react';
-import Campus01 from '../../assets/Images/Campus01.webp';
-import Campus02 from '../../assets/Images/Campus02.webp';
-import Campus03 from '../../assets/Images/Campus03.webp';
-import Campus04 from '../../assets/Images/Campus03.webp';
-import LocationMobile from '../../assets/Images/Location-mobile.webp';
+import Campus01 from '../../assets/Images/NEWMEXICO.webp';
+import Campus02 from '../../assets/Images/AUSTRALIA.webp';
+import Campus03 from '../../assets/Images/INDIA.webp';
+import Campus04 from '../../assets/Images/SRILANKA.webp';
+import LocationMobile from '../../assets/Images/SPAIN.webp';
 
 // Data for the satellite locations. This makes the component cleaner and easier to update.
 const locations = [
-  {
-    name: 'NEW MEXICO',
-    imageSrc: Campus01,
-    altText: 'The entrance to the JIU Kazakhstan campus building.'
-  },
   {
     name: 'AUSTRALIA',
     imageSrc: Campus02,
@@ -21,6 +16,11 @@ const locations = [
     name: 'INDIA',
     imageSrc: Campus03,
     altText: 'A group of people taking a picture with the Eiffel Tower in the background.'
+  },
+  {
+    name: 'NEW MEXICO',
+    imageSrc: Campus01,
+    altText: 'The entrance to the JIU Kazakhstan campus building.'
   },
   {
     name: 'SPAIN',

@@ -1,5 +1,5 @@
 import React from 'react';
-import onlineDegreeImage from '../../assets/Images/onlineDegreeImage.webp';
+import onlineDegreeImage from '../../assets/Images/Campus03.webp';
 
 // Data for the campuses
 const campusData = [

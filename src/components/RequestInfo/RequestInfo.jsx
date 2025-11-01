@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { country_list } from '../../data/countries';
 
 // --- IMPORTANT ---
 // Update this path to where you have saved the image in your project.
@@ -108,7 +109,7 @@ const NyfaRequestInfo = () => {
     <>
       <style>{customStyles}</style>
       <div className="flex flex-col min-h-screen">
-        <main className="flex-grow">
+        <main className="grow">
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Left Side */}
             <div className="flex flex-col">
@@ -122,7 +123,7 @@ const NyfaRequestInfo = () => {
               </div>
               
               {/* Text Content */}
-              <div className="bg-white p-8 md:p-16 flex-grow flex items-center">
+              <div className="bg-white p-8 md:p-16 grow flex items-center">
                 <div>
                   <div className="flex items-start">
                     <span className="w-1 h-20 bg-fuchsia-600 mr-6"></span>
@@ -174,9 +175,9 @@ const NyfaRequestInfo = () => {
                   <label htmlFor="country" className="text-xs font-bold tracking-widest">COUNTRY *</label>
                   <select id="country" name="country" value={formData.country} onChange={handleChange} className={`custom-select w-full mt-2 p-3 bg-white border-0 text-black ${errors.country ? 'border-b-2 border-red-500' : ''}`}>
                     <option value="" disabled>Select your country</option>
-                    <option>United States</option>
-                    <option>Canada</option>
-                    <option>Mexico</option>
+                    {country_list.map((country, index) => (
+                      <option key={index} value={country}>{country}</option>
+                    ))}
                   </select>
                   {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
                 </div>
@@ -215,9 +216,7 @@ const NyfaRequestInfo = () => {
                   <label htmlFor="campus" className="text-xs font-bold tracking-widest">CAMPUS/LOCATION *</label>
                   <select id="campus" name="campus" value={formData.campus} onChange={handleChange} className={`custom-select w-full mt-2 p-3 bg-white border-0 text-black ${errors.campus ? 'border-b-2 border-red-500' : ''}`}>
                     <option value="" disabled>Select a campus</option>
-                    <option>New York</option>
-                    <option>Los Angeles</option>
-                    <option>Miami</option>
+                    <option>Online</option>
                   </select>
                   {errors.campus && <p className="text-red-500 text-xs mt-1">{errors.campus}</p>}
                 </div>
@@ -225,7 +224,7 @@ const NyfaRequestInfo = () => {
                 <button type="submit" className="w-full bg-cyan-400 text-black font-bold py-4 tracking-widest hover:bg-cyan-500 transition-colors">SUBMIT</button>
               </form>
               <p className="text-xs text-gray-400 mt-4">
-                By submitting this form, you give New York Film Academy your consent to contact you regarding our educational services using email, text or telephone. Msg. & data rates may apply. Please note, you are not required to provide this consent to learn more about JIU or to enroll in our programs. we invite you to contact us directly at: +1-212-674-4300 and speak with a representative.
+              By submitting this form, you give Jadetimes International University your consent to contact you regarding our educational services using email, text or telephone. Msg. & data rates may apply. Please note, you are not required to provide this consent to learn more about JIU or to enroll in our programs. we invite you to contact us directly at: +15054406468 and speak with a representative.
               </p>
             </div>
           </div>

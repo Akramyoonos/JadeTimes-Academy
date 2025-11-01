@@ -5,7 +5,7 @@ import undergraduateDegree01 from '../../assets/Images/AdvanceScriptwritingImg.w
 import undergraduateDegree02 from '../../assets/Images/ColorGradingCorrectionImg.webp';
 import undergraduateDegree03 from '../../assets/Images/ProducingFinancingFilmsImg.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
 
 // --- CHANGE: Added href property to each degree program ---
 const degreePrograms = [
@@ -13,49 +13,50 @@ const degreePrograms = [
         title: "The Art of Visual Storytelling",
         imageUrl: GraduateDegree01,
         altText: "A woman operating a large film camera.",
-        href: "/The-Art-of-Visual-Storytelling/"
     },
     {
         title: "History of Cinema",
         imageUrl: GraduateDegree02,
         altText: "A man in a denim jacket operating a film camera on a tripod in a smoky room.",
-        href: "/History-of-Cinema/"
     },
     {
         title: "Advance Scriptwriting ",
         imageUrl: undergraduateDegree01,
         altText: "A person with two-tone hair wearing a striped shirt operating a camera.",
-        href: "/Advance-Scriptwriting/"
     },
     {
         title: "Color Grading & Correction",
         imageUrl: undergraduateDegree02,
         altText: "Silhouettes of a film crew in a dimly lit room with a boom mic.",
-        href: "/Color-Grading-&-Correction/"
     },
     {
         title: "Producing & Financing Films",
         imageUrl: undergraduateDegree03,
         altText: "A man in a white t-shirt looking intently at the viewfinder of a RED camera.",
-        href: "/Producing-&-Financing-Films/"
     },
 ];
 
 // --- CHANGE: Updated DegreeCard to be a clickable link ---
 // It now accepts an `href` prop and is wrapped in an anchor `<a>` tag.
-const DegreeCard = ({ title, imageUrl, altText, href }) => (
-    <a href={href} className="relative group overflow-hidden block">
+const DegreeCard = ({ title, imageUrl, altText }) => (
+    <div className="relative group overflow-hidden block cursor-not-allowed">
         <img src={imageUrl} alt={altText} className="w-full h-full object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115" />
-        <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-700"></div>
-        <div className="absolute inset-0 bg-opacity-50 flex items-end p-6">
-            <div>
-                <h2 className="text-xl uppercase font-semibold">{title}</h2>
-                <div className="absolute top-4 right-4 w-10 h-10 border-2 border-cyan-400 rounded-full flex items-center justify-center text-cyan-400 text-2xl font-thin">
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+        <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+            <div className="relative group">
+                <FontAwesomeIcon icon={faLock} className="text-white text-6xl transition-transform duration-300 group-hover:scale-110" />
+                <div className="absolute bottom-full mb-3 w-max left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+                    <span className="bg-gray-800 text-white text-sm px-3 py-2 rounded-md shadow-lg">Coming soon</span>
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"></div>
                 </div>
             </div>
         </div>
-    </a>
+        <div className="absolute inset-0 bg-opacity-50 flex items-end p-6 opacity-100 group-hover:opacity-0 transition-opacity duration-700">
+            <div>
+                <h2 className="text-xl uppercase font-semibold">{title}</h2>
+            </div>
+        </div>
+    </div>
 );
 
 
@@ -83,7 +84,6 @@ const Degrees = () => {
                             title={degree.title}
                             imageUrl={degree.imageUrl}
                             altText={degree.altText}
-                            href={degree.href} // --- CHANGE: Passed href prop ---
                         />
                     ))}
                 </div>
@@ -96,7 +96,6 @@ const Degrees = () => {
                             title={degree.title}
                             imageUrl={degree.imageUrl}
                             altText={degree.altText}
-                            href={degree.href} // --- CHANGE: Passed href prop ---
                         />
                     ))}
                 </div>
