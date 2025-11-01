@@ -12,7 +12,7 @@ const getYoutubeThumbnail = (videoUrl) => {
     if (typeof videoUrl !== 'string') {
         return 'https://placehold.co/1280x720/000000/FFFFFF/png?text=Video';
     }
-    const videoIdMatch = videoUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([^&?#]+)/);
+    const videoIdMatch = videoUrl.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=|embed\/|v\/|shorts\/|live\/)?([a-zA-Z0-9_-]{11})/);
     return videoIdMatch ? `https://img.youtube.com/vi/${videoIdMatch[1]}/maxresdefault.jpg` : 'https://placehold.co/1280x720/000000/FFFFFF/png?text=Video';
 };
 
@@ -250,7 +250,7 @@ const ConferenceCard = ({ conference, onClick }) => (
                 </button>
             </div>
             {conference.videoDuration && (
-                <span className="absolute bottom-2 right-2  bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                <span className="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
                     {conference.videoDuration}
                 </span>
             )}
