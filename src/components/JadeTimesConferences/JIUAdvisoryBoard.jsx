@@ -1,19 +1,19 @@
 import React from 'react';
 
 // Import images from assets
-import Member1 from '../../assets/Images/Organizing Committee Members01.webp';
-import Member2 from '../../assets/Images/Organizing Committee Members02.webp';
-import Member3 from '../../assets/Images/Organizing Committee Members03.webp';
-import Member4 from '../../assets/Images/Organizing Committee Members04.webp';
-import Member5 from '../../assets/Images/Organizing Committee Members05.webp';
-import Member6 from '../../assets/Images/Organizing Committee Members06.webp';
-import Member7 from '../../assets/Images/Organizing Committee Members07.webp';
-import Member8 from '../../assets/Images/Organizing Committee Members08.webp';
-import Member9 from '../../assets/Images/Organizing Committee Members09.webp';
-import Member10 from '../../assets/Images/Organizing Committee Members10.webp';
-import Member11 from '../../assets/Images/Organizing Committee Members11.webp';
-import Member12 from '../../assets/Images/Organizing Committee Members12.webp';
-import Member13 from '../../assets/Images/Organizing Committee Members13.webp';
+import Member1 from '../../assets/Images/JIUAdvisoryBoardImg01.webp';
+import Member2 from '../../assets/Images/JIUAdvisoryBoardImg02.webp';
+import Member3 from '../../assets/Images/JIUAdvisoryBoardImg03.webp';
+import Member4 from '../../assets/Images/JIUAdvisoryBoardImg04.webp';
+import Member5 from '../../assets/Images/JIUAdvisoryBoardImg05.webp';
+import Member6 from '../../assets/Images/JIUAdvisoryBoardImg06.webp';
+import Member7 from '../../assets/Images/JIUAdvisoryBoardImg07.webp';
+import Member8 from '../../assets/Images/JIUAdvisoryBoardImg08.webp';
+import Member9 from '../../assets/Images/JIUAdvisoryBoardImg09.webp';
+import Member10 from '../../assets/Images/JIUAdvisoryBoardImg10.webp';
+import Member11 from '../../assets/Images/JIUAdvisoryBoardImg11.webp';
+import Member12 from '../../assets/Images/JIUAdvisoryBoardImg12.webp';
+import Member13 from '../../assets/Images/JIUAdvisoryBoardImg13.webp';
 
 // Data for the advisory board members with imported images
 const advisoryBoardMembers = [

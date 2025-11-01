@@ -8,7 +8,6 @@ const Welcome = () => {
   const [missionVisible, setMissionVisible] = useState(false);
   const [degreeVisible, setDegreeVisible] = useState(false);
   const [exploreVisible, setExploreVisible] = useState(false);
-  const videoUrl = 'https://www.youtube.com/embed/FKz0Fnk_TRM';
   const videoThumbnail = 'https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg';
   const [showVideo, setShowVideo] = useState(false);
 
@@ -56,7 +55,7 @@ const Welcome = () => {
               </div>
             </article>
 
-            <figure className="mb-20 relative rounded-2xl overflow-hidden shadow-2xl group">
+            <figure className="mb-20 relative  overflow-hidden shadow-2xl group">
               <img
                 alt="JadeTimes Academy"
                 className="w-full h-auto object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
@@ -155,13 +154,15 @@ const Welcome = () => {
               &times;
             </button>
             <div className="aspect-w-16 aspect-h-9">
-              <iframe
-                src={videoUrl}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
+               <iframe
+                  className="w-full h-126 rounded-lg shadow-2xl"
+                  src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
             </div>
           </div>
         </div>

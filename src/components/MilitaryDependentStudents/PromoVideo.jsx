@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const PromoVideo = ({ videoUrl, thumbnailUrl }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -8,6 +10,8 @@ const PromoVideo = ({ videoUrl, thumbnailUrl }) => {
 
   // Default thumbnail if none provided
   const finalThumbnailUrl = thumbnailUrl || "https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg";
+  const finalVideoUrl = videoUrl || "https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g";
+  const autoplaySrc = finalVideoUrl.includes('?') ? `${finalVideoUrl}&autoplay=1` : `${finalVideoUrl}?autoplay=1`;
 
   return (
     <div className="bg-white font-sans flex flex-col items-center justify-center p-4 lg:p-26">
@@ -29,9 +33,7 @@ const PromoVideo = ({ videoUrl, thumbnailUrl }) => {
                 aria-label="Play video"
                 className="w-20 h-20 rounded-full border-4 border-white flex items-center justify-center text-white text-4xl bg-transparent hover:bg-white/20 transition-all duration-300"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3l14 9-14 9V3z" />
-                </svg>
+                <FontAwesomeIcon icon={faPlay} className="h-12 w-12" />
               </button>
             </div>
           </div>
@@ -55,17 +57,16 @@ const PromoVideo = ({ videoUrl, thumbnailUrl }) => {
                 className="absolute -top-12 right-0 text-white text-4xl hover:text-red-500 transition-colors"
                 aria-label="Close video"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <FontAwesomeIcon icon={faTimes} className="h-8 w-8" />
               </button>
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  className="w-full h-full rounded-lg shadow-2xl"
-                  src={`${videoUrl}?autoplay=1`}
-                  title="Promo Video"
+                  className="w-full h-126 rounded-lg shadow-2xl"
+                  src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g"
+                  title="YouTube video player"
                   frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                 />
               </div>

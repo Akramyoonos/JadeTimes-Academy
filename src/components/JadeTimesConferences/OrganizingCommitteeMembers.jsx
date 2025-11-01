@@ -1,17 +1,17 @@
 import React from 'react';
-import memberImage01 from '../../assets/Images/Organizing Committee Members01.webp';
-import memberImage02 from '../../assets/Images/Organizing Committee Members02.webp';
-import memberImage03 from '../../assets/Images/Organizing Committee Members03.webp';
-import memberImage04 from '../../assets/Images/Organizing Committee Members04.webp';
-import memberImage05 from '../../assets/Images/Organizing Committee Members05.webp';
-import memberImage06 from '../../assets/Images/Organizing Committee Members06.webp';
-import memberImage07 from '../../assets/Images/Organizing Committee Members07.webp';
-import memberImage08 from '../../assets/Images/Organizing Committee Members08.webp';
-import memberImage09 from '../../assets/Images/Organizing Committee Members09.webp';
-import memberImage10 from '../../assets/Images/Organizing Committee Members10.webp';
-import memberImage11 from '../../assets/Images/Organizing Committee Members11.webp';
-import memberImage12 from '../../assets/Images/Organizing Committee Members12.webp';
-import memberImage13 from '../../assets/Images/Organizing Committee Members13.webp';
+import memberImage01 from '../../assets/Images/OrganizingCommitteeMembersImg01.webp';
+import memberImage02 from '../../assets/Images/OrganizingCommitteeMembersImg02.webp';
+import memberImage03 from '../../assets/Images/OrganizingCommitteeMembersImg03.webp';
+import memberImage04 from '../../assets/Images/OrganizingCommitteeMembersImg04.webp';
+import memberImage05 from '../../assets/Images//OrganizingCommitteeMembersImg05.webp';
+import memberImage06 from '../../assets/Images/OrganizingCommitteeMembersImg06.webp';
+import memberImage07 from '../../assets/Images/OrganizingCommitteeMembersImg07.webp';
+import memberImage08 from '../../assets/Images/OrganizingCommitteeMembersImg08.webp';
+import memberImage09 from '../../assets/Images/OrganizingCommitteeMembersImg09.webp';
+import memberImage10 from '../../assets/Images/OrganizingCommitteeMembersImg10.webp';
+import memberImage11 from '../../assets/Images/OrganizingCommitteeMembersImg11.webp';
+import memberImage12 from '../../assets/Images/OrganizingCommitteeMembersImg12.webp';
+import memberImage13 from '../../assets/Images/OrganizingCommitteeMembersImg13.webp';
 
 // 1. Data for the committee members
 // It's good practice to keep data separate, but for a single-file example, we'll include it here.

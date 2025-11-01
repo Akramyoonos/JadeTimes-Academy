@@ -1,79 +1,71 @@
+import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faTimes } from "@fortawesome/free-solid-svg-icons";
-
-const PromoVideo = () => {
+const PromoVideo = ({ videoUrl, thumbnailUrl }) => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoId = "FKz0Fnk_TRM";
-  const videoThumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   const handlePlayClick = () => setIsPlaying(true);
   const handleClose = () => setIsPlaying(false);
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        handleClose();
-      }
-    };
-
-    if (isPlaying) {
-      document.addEventListener("keydown", handleKeyDown);
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isPlaying]);
+  // Default thumbnail if none provided
+  const finalThumbnailUrl = thumbnailUrl || "https://img.youtube.com/vi/FKz0Fnk_TRM/maxresdefault.jpg";
+  const finalVideoUrl = videoUrl || "https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g";
+  const autoplaySrc = finalVideoUrl.includes('?') ? `${finalVideoUrl}&autoplay=1` : `${finalVideoUrl}?autoplay=1`;
 
   return (
-    <div className="w-full flex  my-12 px-4 sm:px-0 md:px-38">
-      {/* Thumbnail */}
-      {!isPlaying && (
-        <figure className="relative overflow-hidden shadow-2xl group w-full max-w-4xl">
-          <img
-            alt="New York Film Academy"
-            src={videoThumbnail}
-            className="w-full h-auto object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-all duration-300" />
-
-          <button
-            aria-label="Play video"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                       w-20 h-20 rounded-full border-4 border-white flex items-center 
-                       justify-center text-white text-3xl cursor-pointer 
-                       bg-black/60 hover:bg-blue-600/80 transition-all duration-300 
-                       transform group-hover:scale-110 shadow-lg"
+    <div className="bg-white font-sans flex flex-col items-center justify-center p-4 lg:p-26">
+      {/* Main Video Section */}
+      <main className="w-full flex flex-col pl-6">
+        {/* Thumbnail */}
+        {!isPlaying && (
+          <div 
+            className="relative overflow-hidden shadow-lg  group w-full max-w-4xl cursor-pointer"
             onClick={handlePlayClick}
           >
-            <FontAwesomeIcon icon={faPlay} />
-          </button>
-        </figure>
-      )}
-
-      {/* Video Modal */}
-      {isPlaying && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-          <div className="relative w-full max-w-4xl">
-            <button
-              onClick={handleClose}
-              className="absolute -top-10 right-0 text-white text-3xl hover:text-red-400"
-            >
-              <FontAwesomeIcon icon={faTimes} />
-            </button>
-            <iframe
-              className="w-full aspect-video rounded-lg shadow-2xl"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-              title="Promo Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+            <img
+              alt="Video Thumbnail"
+              src={finalThumbnailUrl}
+              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
             />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <button
+                aria-label="Play video"
+                className="w-20 h-20 rounded-full border-4 border-white flex items-center justify-center text-white text-4xl bg-transparent hover:bg-white/20 transition-all duration-300"
+              >
+                <FontAwesomeIcon icon={faPlay} className="h-12 w-12" />
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+
+
+        {/* Video Modal */}
+        {isPlaying && (
+          <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
+            <div className="relative w-full max-w-5xl">
+              <button
+                onClick={handleClose}
+                className="absolute -top-12 right-0 text-white text-4xl hover:text-red-500 transition-colors"
+                aria-label="Close video"
+              >
+                <FontAwesomeIcon icon={faTimes} className="h-8 w-8" />
+              </button>
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe
+                  className="w-full h-126 rounded-lg shadow-2xl"
+                  src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        )}
+      </main>
     </div>
   );
 };

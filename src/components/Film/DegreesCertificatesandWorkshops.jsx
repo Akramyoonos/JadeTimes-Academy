@@ -10,13 +10,13 @@ export const VideoModal = ({ videoId, onClose }) => (
             <button onClick={onClose} className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors">
                 <FontAwesomeIcon icon={faTimes} className="h-8 w-8" />
             </button>
-            <div className="aspect-w-16 aspect-h-9">
+            <div className="aspect-w-16 aspect-h-12">
                 <iframe
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                    src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    className="w-full h-full"
+                    className="w-full h-126"
                     title="YouTube video player"
                 ></iframe>
             </div>

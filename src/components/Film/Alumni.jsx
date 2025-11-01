@@ -27,7 +27,7 @@ const Alumni = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {/* Card1 */}
-          <a href="#" className="relative group overflow-hidden h-96 block shadow-lg">
+          <a href="/alumni" className="relative group overflow-hidden h-96 block shadow-lg">
             <img
               src={AlumniExplore01}
               alt="Damon Wayans"
@@ -42,7 +42,7 @@ const Alumni = () => {
           </a>
 
           {/*  Card2 */}
-          <a href="#" className="relative group overflow-hidden h-96 block  shadow-lg">
+          <a href="/alumni" className="relative group overflow-hidden h-96 block  shadow-lg">
             <img
               src={AlumniExplore02}
               alt="Bill Hader"
@@ -57,7 +57,7 @@ const Alumni = () => {
           </a>
 
           {/* Card3 */}
-          <a href="#" className="relative group overflow-hidden h-96 block  shadow-lg">
+          <a href="/alumni" className="relative group overflow-hidden h-96 block  shadow-lg">
             <img
               src={AlumniExplore03}
               alt="Issa Rae"
@@ -72,7 +72,7 @@ const Alumni = () => {
           </a>
 
           {/* More Card */}
-          <a href="#" className="relative group overflow-hidden h-96 block  shadow-lg ">
+          <a href="/alumni" className="relative group overflow-hidden h-96 block  shadow-lg ">
             <div className="absolute inset-0  backdrop-blur-sm flex items-center justify-center transition-all duration-300 ">
               <div className="text-center text-blue">
                   <div className="w-16 h-16 rounded-full border-2 border-blue flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:border-blue">
