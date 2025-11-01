@@ -136,6 +136,10 @@ const ConferenceModal = ({ conference, allConferences, onClose, onSelectNext }) 
 
     const [isPlaying, setIsPlaying] = useState(false);
 
+    useEffect(() => {
+        setIsPlaying(false);
+    }, [conference]);
+
     const handlePlay = () => {
         setIsPlaying(true);
     };
