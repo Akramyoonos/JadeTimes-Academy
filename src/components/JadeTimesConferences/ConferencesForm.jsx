@@ -127,24 +127,24 @@ const ConferencesForm = () => {
 
   return (
     <div className="bg-white text-gray-800 font-sans">
-      <div className="container mx-auto max-w-6xl px-4 py-12">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
 
         {/* Header Section */}
-        <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-semibold text-center tracking-wider">INTERNATIONAL RESEARCH</h1>
-          <h2 className="text-4xl md:text-5xl font-semibold text-center tracking-wider mt-2">CONFERENCE 2025</h2>
-          <p className="mt-6 text-xl font-semibold text-center text-gray-700">Hosted By Jadetimes Media LLC, United States</p>
-          <p className="mt-2 text-sm font-semibold text-center text-gray-500">
+        <header className="text-center mb-12 md:mb-16">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wider">INTERNATIONAL RESEARCH</h1>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wider mt-2">CONFERENCE 2025</h2>
+          <p className="mt-6 text-lg sm:text-xl font-semibold text-gray-700">Hosted By Jadetimes Media LLC, United States</p>
+          <p className="mt-2 text-sm text-center text-gray-500">
             held across India, New Mexico, London, Spain, Australia, and Sri Lanka | Call Us : +1 (505) 385-9745
           </p>
         </header>
 
         {/* Main Content: Award Info & Submission Form */}
-        <main className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <main className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
           
           {/* Left Column: Award Information */}
-          <div className="flex justify-center items-start mt-12">
-            <img src={awardImage} alt="1st Place Best Research Paper Award details" className="max-w-sm w-full shadow-lg " />
+          <div className="flex justify-center items-start lg:mt-12">
+            <img src={awardImage} alt="1st Place Best Research Paper Award details" className="w-full max-w-md shadow-lg" />
           </div>
 
           {/* Right Column: Submission Form */}
@@ -152,10 +152,10 @@ const ConferencesForm = () => {
             <h3 className="text-lg font-medium text-gray-600">Submit Your Paper Today for upcoming International Research Conference 2025</h3>
             
             <form action="#" method="POST" className="mt-8" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
                 
                 {/* Form Fields */}
-                <div>
+                <div className="md:col-span-2">
                   <label htmlFor="your-name" className="block text-sm font-medium text-gray-700">Your Name *</label>
                   <input type="text" name="yourName" id="your-name" value={formData.yourName} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.yourName ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`} />
                   {errors.yourName && <p className="text-red-500 text-xs mt-1">{errors.yourName}</p>}
@@ -183,26 +183,28 @@ const ConferencesForm = () => {
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
 
-                <div>
+                <div className="md:col-span-2">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
                   <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`} />
                   {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
 
-                <div className="space-y-4">
+                <div className="md:col-span-2 space-y-4">
                   <label className="block text-sm font-medium text-gray-700">Presentation Modes *</label>
-                  <div className="flex items-center">
-                    <input id="online-mode" name="presentationMode" type="radio" value="Online Mode" checked={formData.presentationMode === "Online Mode"} onChange={handleChange} className="focus:ring-black h-4 w-4 text-black border-gray-300" />
-                    <label htmlFor="online-mode" className="ml-3 block text-sm text-gray-800">Online Mode</label>
-                  </div>
-                  <div className="flex items-center">
-                    <input id="hybrid-mode" name="presentationMode" type="radio" value="Hybrid Mode" checked={formData.presentationMode === "Hybrid Mode"} onChange={handleChange} className="focus:ring-black h-4 w-4 text-black border-gray-300" />
-                    <label htmlFor="hybrid-mode" className="ml-3 block text-sm text-gray-800">Hybrid Mode</label>
+                  <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
+                    <div className="flex items-center">
+                      <input id="online-mode" name="presentationMode" type="radio" value="Online Mode" checked={formData.presentationMode === "Online Mode"} onChange={handleChange} className="focus:ring-black h-4 w-4 text-black border-gray-300" />
+                      <label htmlFor="online-mode" className="ml-3 block text-sm text-gray-800">Online Mode</label>
+                    </div>
+                    <div className="flex items-center">
+                      <input id="hybrid-mode" name="presentationMode" type="radio" value="Hybrid Mode" checked={formData.presentationMode === "Hybrid Mode"} onChange={handleChange} className="focus:ring-black h-4 w-4 text-black border-gray-300" />
+                      <label htmlFor="hybrid-mode" className="ml-3 block text-sm text-gray-800">Hybrid Mode</label>
+                    </div>
                   </div>
                   {errors.presentationMode && <p className="text-red-500 text-xs mt-1">{errors.presentationMode}</p>}
                 </div>
 
-                <div>
+                <div className="md:col-span-2">
                   <label htmlFor="university-name" className="block text-sm font-medium text-gray-700">University Name</label>
                   <input type="text" name="universityName" id="university-name" value={formData.universityName} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.universityName ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`} />
                   {errors.universityName && <p className="text-red-500 text-xs mt-1">{errors.universityName}</p>}
@@ -245,16 +247,17 @@ const ConferencesForm = () => {
         </main>
         
         {/* Video Section */}
-        <section className="mt-24 pl-2 md:pl-26">
-          <div className="aspect-w-16 ">
+        <section className="mt-20 md:mt-24">
+          <div className="aspect-w-16 aspect-h-9">
             {/* IMPORTANT: Replace the src with your YouTube video embed URL */}
             <iframe 
-            width="960" height="515" 
-            src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g" 
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
+              className="w-full h-126"
+              src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g" 
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen>
             </iframe>
           </div>
         </section>
