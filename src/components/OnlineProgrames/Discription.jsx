@@ -12,6 +12,8 @@ import WorkShopsForAdults10 from '../../assets/Images/WorkShopsForAdultsImages10
 import WorkShopsForAdults11 from '../../assets/Images/WorkShopsForAdultsImages11.webp';
 import WorkShopsForAdults12 from '../../assets/Images/WorkShopsForAdultsImages10.webp';
 import WorkShopsForAdults13 from '../../assets/Images/WorkShopsForAdultsImages11.webp';
+import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // Data for all workshops
 const workshopsData = [
@@ -27,106 +29,120 @@ const workshopsData = [
     imageUrl:WorkShopsForAdults02 ,
     alt: "Acting for Film",
     gridSpan: "md:col-span-2",
-    href: "/media-arts"
   },
   {
     title: "PERFORMING ARTS",
     imageUrl: WorkShopsForAdults03,
     alt: "Producing",
     gridSpan: "md:col-span-2",
-    href: "/performing-arts"
   },
   {
     title: "CREATIVE EXPRESSION",
     imageUrl: WorkShopsForAdults04,
     alt: "Musical Theatre",
     gridSpan: "md:col-span-3",
-    href: "/creative-expression"
   },
   {
     title: "JOURNALISM",
     imageUrl: WorkShopsForAdults05,
     alt: "Screenwriting",
     gridSpan: "md:col-span-3",
-    href: "/journalism"
   },
   {
     title: "COMMUNIVATION",
     imageUrl: WorkShopsForAdults06,
     alt: "Photography",
     gridSpan: "md:col-span-2",
-    href: "/communication"
   },
   {
     title: "DIGITAL MEDIA",
     imageUrl: WorkShopsForAdults07,
     alt: "3D Animation & VFX",
     gridSpan: "md:col-span-2",
-    href: "/digital-media"
   },
   {
     title: "TECHNOLOGY",
     imageUrl: WorkShopsForAdults08,
     alt: "Documentary Filmmaking",
     gridSpan: "md:col-span-2",
-    href: "/technology"
   },
   {
     title: "INTERACTIVE MEDIA",
     imageUrl: WorkShopsForAdults09,
     alt: "Digital Editing",
     gridSpan: "md:col-span-3",
-    href: "/interactive-media"
   },
   {
     title: "ENTERTAINMENT MEDIA",
     imageUrl: WorkShopsForAdults10,
     alt: "Broadcast Journalism",
     gridSpan: "md:col-span-3",
-    href: "/entertainment-media"
   },
   {
     title: "PSYCHOLOGY",
     imageUrl: WorkShopsForAdults11,
     alt: "Cinematography",
     gridSpan: "md:col-span-6",
-    href: "/psychology"
   },
   {
     title: "HUMAN BEHAVIOR",
     imageUrl: WorkShopsForAdults12,
     alt: "Broadcast Journalism",
     gridSpan: "md:col-span-3",
-    href: "/human-behavior"
   },
   {
     title: "MARKETING",
     imageUrl: WorkShopsForAdults13,
     alt: "Cinematography",
     gridSpan: "md:col-span-3",
-    href: "/marketing"
   },
 ];
 
 // Reusable WorkshopCard component
-const WorkshopCard = ({ title, image, alt, gridSpan, href = "#" }) => {
+const WorkshopCard = ({ title, image, alt, gridSpan, href }) => {
+  if (href) {
+    return (
+      <a href={href} className={`group h-64 block relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${gridSpan}`}>
+        <img
+          src={image}
+          alt={alt}
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-2500 ease-in-out group-hover:scale-130"
+        />
+        <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
+        <div className="relative flex justify-between items-end h-full p-6 text-white">
+          <h3 className="text-xl font-light uppercase tracking-wide whitespace-pre-line">{title}</h3>
+          <div className="w-10 h-10 rounded-full border-2 border-cyan-400 flex items-center justify-center shrink-0 ml-4">
+            <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+          </div>
+        </div>
+      </a>
+    );
+  }
+
   return (
-    <a href={href} className={`group h-64 block relative overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ${gridSpan}`}>
+    <div className={`group h-64 block relative overflow-hidden shadow-lg cursor-not-allowed ${gridSpan}`}>
       <img
         src={image}
         alt={alt}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-2500 ease-in-out group-hover:scale-130"
       />
-      <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-10 transition-opacity duration-900"></div>
-      <div className="relative flex justify-between items-end h-full p-6 text-white">
-        <h3 className="text-xl font-light uppercase tracking-wide whitespace-pre-line">{title}</h3>
-        <div className="w-10 h-10 rounded-full border-2 border-cyan-400 flex items-center justify-center shrink-0 ml-4">
-          <svg className="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-          </svg>
+      <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-70 transition-opacity duration-900"></div>
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+        <div className="relative group">
+            <div className="bg-white/20 backdrop-blur-sm p-5 rounded-full border-2 border-white/30">
+                <FontAwesomeIcon icon={faLock} className="text-white text-5xl" />
+            </div>
+            <div className="absolute bottom-full mb-3 w-max left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="bg-black text-white text-sm px-3 py-1.5 rounded-lg">Coming soon</span>
+            </div>
         </div>
       </div>
-    </a>
+      <div className="relative flex justify-between items-end h-full p-6 text-white opacity-100 group-hover:opacity-0 transition-opacity duration-700">
+        <h3 className="text-xl font-light uppercase tracking-wide whitespace-pre-line">{title}</h3>
+      </div>
+    </div>
   );
 };
 

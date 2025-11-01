@@ -44,10 +44,12 @@ const DegreeCard = ({ title, imageUrl, altText }) => (
         <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-70 transition-opacity duration-700"></div>
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700">
             <div className="relative group">
-                <FontAwesomeIcon icon={faLock} className="text-white text-6xl transition-transform duration-300 group-hover:scale-110" />
-                <div className="absolute bottom-full mb-3 w-max left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
-                    <span className="bg-gray-800 text-white text-sm px-3 py-2 rounded-md shadow-lg">Coming soon</span>
-                    <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-800"></div>
+                <div className="bg-white/20 backdrop-blur-sm p-4 rounded-full border-2 border-white/30 inline-block">
+                    <FontAwesomeIcon icon={faLock} className="text-white text-4xl" />
+                </div>
+                <div className="absolute bottom-full mb-2 w-max left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <span className="bg-black text-white text-sm px-3 py-1.5 rounded-lg shadow-lg">Coming soon</span>
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-black"></div>
                 </div>
             </div>
         </div>
