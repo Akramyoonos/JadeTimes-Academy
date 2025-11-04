@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-const LeadershipSection = () => {
+const Discription = () => {
     return (
         // Main Component Container
         // Added some padding for standalone viewing; adjust as needed within your app.
-        <div className="relative bg-white font-sans w-full  py-24 px-6 sm:px-6 md:px-6 lg:px-35">
+        <div className="relative bg-white font-sans w-full pb-6 pt-18 px-6 sm:px-6 md:px-6 lg:px-35">
 
 
 
@@ -16,14 +16,14 @@ const LeadershipSection = () => {
                 {/* Heading Section */}
                 <div className="flex items-center mb-8">
                     <span className="w-1 h-12 bg-purple-600 mr-6"></span>
-                    <h1 className="text-3xl sm:text-4xl font-light text-gray-800 tracking-widest">
-                        JIU LEADERSHIP TEAM
+                    <h1 className="text-3xl sm:text-4xl font-light text-gray-800 uppercase tracking-widest">
+                        Administration
                     </h1>
                 </div>
 
                 {/* Paragraph Section */}
                 <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl">
-                    Our experienced leadership allows us to create a welcoming, inclusive space where aspiring visual storytellers and performers can develop and strengthen their creative skills through hands-on experience.
+                   JIU strives to bring a diversity of experiences and voices to its leadership.
                 </p>
 
             </div>
@@ -31,4 +31,4 @@ const LeadershipSection = () => {
     );
 };
 
-export default LeadershipSection;
+export default Discription;

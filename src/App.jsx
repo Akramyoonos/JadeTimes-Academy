@@ -93,6 +93,7 @@ import JIUStore_Page from './pages/JIUStore_Page';
 import TwoHourWorkShops_Page from './pages/TwoHourWorkShops_Page';
 import CorporateInternshipTraining_Page from './pages/CorporateInternshipTraining_Page';
 import Admin_Page from './pages/Admin_Page';
+import Administration_Page from './pages/Administration_Page';
 import ScrollToTop from './components/ScrollToTop';
 
 
@@ -164,7 +165,7 @@ function AppInner() {
           <Route path="/Accreditation/*"          element={<Accreditation_Page />} />
           <Route path="/admissions-requirements/*"  element={<AdmissionRequirements_Page />} />
           <Route path="/admissions/veterans-military-dependent-students/*"  element={<MilitaryDependentStudents_Page />} />
-          <Route path="/dates-tuition/*"           element={<DatesTuition_Page />} />
+          <Route path="/Areas-Of-Study/*"           element={<DatesTuition_Page />} />
           <Route path="/student-life/*"       element={<NYFAStudentLife_Page />} />
           <Route path="/Faq/*"                     element={<Faq_Page />} />
           <Route path="/important-dates/*"    element={<ApplicationDeadlines_Page />} />
@@ -224,6 +225,7 @@ function AppInner() {
             <Route path="/2-hour-workshops/*" element={<TwoHourWorkShops_Page />} />
             <Route path="/Corporate-Internship-Training/*" element={<CorporateInternshipTraining_Page />} />
             <Route path="/Admin-Login/" element={<Admin_Page />} />
+            <Route path="/Administration/" element={<Administration_Page />} />
             
             <Route path="/search" element={<SearchResultsPage />} />
           <Route path="*"                              element={<Home_page />} />

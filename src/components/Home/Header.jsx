@@ -116,7 +116,7 @@ const megaMenus = {
   },
   admissionsFinancesMenu: {
     "ADMISSIONS": [
-      { text: "PROGRAM DATES", href: "/dates-tuition/" },
+      { text: "PROGRAM DATES", href: "/Areas-Of-Study/" },
       { text: "APPLICATION DEADLINES", href: "/important-dates/" },
       { text: "ADMISSIONS REQUIREMENTS", href: "/admissions-requirements/" },
       { text: "INTERNATIONAL STUDENTS", href: "/admissions/international-students/" },
@@ -124,7 +124,7 @@ const megaMenus = {
       { text: "MEET JIU NEAR YOU", href: "/events/list/" },
     ],
     "FINANCES": [
-      { text: "TUITION", href: "/dates-tuition/" },
+      { text: "TUITION", href: "/Areas-Of-Study/" },
       { text: "SCHOLARSHIPS & GRANTS", href: "/student-finances/scholarships-and-grants/" },
 
     ],
@@ -209,8 +209,8 @@ const megaMenus = {
       { text: "MARKETING", href: "/Marketing/", noHover: true },
     ],
     "YOUTH ADMISSIONS": [
-      { text: "PROGRAM DATES", href: "/dates-tuition/" },
-      { text: "TUITION", href: "/dates-tuition/" },
+      { text: "PROGRAM DATES", href: "/Areas-Of-Study/" },
+      { text: "TUITION", href: "/Areas-Of-Study/" },
       { text: "INTERNATIONAL CONTESTS", href: "", comingSoon: true },
       { text: "CAREER WITH JIU", href: "/Job-Positions/" },
     ],
@@ -254,7 +254,7 @@ const useClickOutside = (ref, handler) => {
 
 const getSectionHref = (section) => {
     const hrefMap = {
-        "AREAS OF STUDY": "/dates-tuition/",
+        "AREAS OF STUDY": "/Areas-Of-Study/",
         "OUR PROGRAMS": "",
         "CERTIFICATE PROGRAMS": "/academics/certificate-programs",
         "ADMISSIONS": "/admissions",

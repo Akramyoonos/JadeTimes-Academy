@@ -54,7 +54,7 @@ const LetterFromPresident = () => {
         </div>
 
         {/* Right Sidebar */}
-        <aside className="w-full lg:w-80 flex-shrink-0 lg:-ml-22 mt-6 lg:mt-0">
+        <aside className="w-full lg:w-80 shrink-0 lg:-ml-22 mt-6 lg:mt-0">
           <div className="border border-gray-200">
             <div className="bg-gray-100 p-4 ">
               <h2 id="related-links-heading" className="text-2xl font-medium uppercase text-black">
@@ -62,13 +62,13 @@ const LetterFromPresident = () => {
               </h2>
             </div>
             <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500">
+              <a href="/cabinet/" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500">
                 CABINET
               </a>
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500">
+              <a href="/Administration/" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500">
                 ADMINISTRATION
               </a>
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500">
+              <a href="/who-we-are/leadership/board-of-directors/" className="p-4 mt-4 ml-3 text-lg font-medium uppercase text-gray-700 hover:text-pink-500">
                 BOARD OF DIRECTORS
               </a>
             </nav>

@@ -23,7 +23,7 @@ const LeadershipSection = () => {
             title: "ADMINISTRATION",
             image: AlumniExplore03,
             alt: "An empty theater with red carpeted stairs",
-            href: "/leadership/administration"
+            href: "/Administration/"
         },
         {
             title: "BOARD OF DIRECTORS",
