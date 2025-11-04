@@ -7,7 +7,7 @@ const Community = () => {
         <div className="flex items-center gap-6 mb-12">
           <span className="block w-2 h-16 bg-yellow-500 "></span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl  text-gray-800 leading-tight">
-            THE JIU COMMUNITY 
+            THE JIU COMMUNITY  
           </h2>
         </div>
         <div className="text-gray-700 max-w-4xl leading-relaxed space-y-8 text-lg sm:text-xl">
