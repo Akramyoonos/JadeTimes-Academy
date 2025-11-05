@@ -86,10 +86,10 @@ const Faculty = () => {
           </div>
 
           <p className="mt-6 text-gray-600 leading-relaxed">
-            The award-winning faculty at NYFA's Film School actively work in the
+            The award-winning faculty at JIU's Film School actively work in the
             film, television, and entertainment industries, possessing a wealth
             of experience in directing, screenwriting, acting for film and
-            stage, cinematography, editing, sound design, and producing. NYFA's
+            stage, cinematography, editing, sound design, and producing. JIU's
             faculty are passionate professionals who live and breathe film,
             providing the guidance and expertise necessary for students to hone
             their craft and build their confidence as visual storytellers.

@@ -2,35 +2,29 @@ import React from 'react';
 import Campus01 from '../../assets/Images/Campus01.webp';
 import Campus02 from '../../assets/Images/Campus02.webp';
 import Campus03 from '../../assets/Images/Campus03.webp';
-import Campus04 from '../../assets/Images/Campus03.webp';
 import LocationMobile from '../../assets/Images/Location-mobile.webp';
 
 // Data for the satellite locations. This makes the component cleaner and easier to update.
 const locations = [
   {
-    name: 'NEW MEXICO',
+    name: 'JIU Kazakhstan',
     imageSrc: Campus01,
     altText: 'The entrance to the JIU Kazakhstan campus building.'
   },
   {
-    name: 'AUSTRALIA',
+    name: 'JIU at Harvard University',
     imageSrc: Campus02,
     altText: 'Students walking on the Harvard University campus near a brick building.'
   },
   {
-    name: 'INDIA',
+    name: 'Paris, France',
     imageSrc: Campus03,
     altText: 'A group of people taking a picture with the Eiffel Tower in the background.'
   },
   {
-    name: 'SPAIN',
+    name: 'Beijing and Greater China',
     imageSrc: LocationMobile,
     altText: 'A film crew recording a group of people in traditional clothing in a park in Beijing.'
-  },
-  {
-    name: 'SRI LANKA',
-    imageSrc: Campus04,
-    altText: 'A modern building with a large glass facade, home to the NYFA Australia campus.'
   }
 ];
 
@@ -41,8 +35,8 @@ const Locations = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center mb-8">
           <div className="w-1 h-12 bg-purple-600 mr-4"></div>
-          <h1 className="text-4xl font-light uppercase text-gray-800 tracking-wider">
-           Other Locations
+          <h1 className="text-4xl font-light text-gray-800 tracking-wider">
+            SATELLITE LOCATIONS
           </h1>
         </div>
 
@@ -56,8 +50,8 @@ const Locations = () => {
                   className="w-full h-48 object-cover transition-transform duration-2000 ease-in-out group-hover:scale-115"
                 />
                 <div className="absolute inset-0 bg-black opacity-30 group-hover:opacity-0 transition-opacity duration-700"></div>
-                <div className="absolute top-2 left-2 bg-black bg-opacity-75 uppercase text-white text-xs font-semibold px-2 py-1 tracking-wider">
-                  coming soon
+                <div className="absolute top-2 left-2 bg-black bg-opacity-75 text-white text-xs font-semibold px-2 py-1 tracking-wider">
+                  SATELLITE LOCATION
                 </div>
               </div>
               <p className="mt-4 text-lg font-semibold text-gray-700">

@@ -39,21 +39,21 @@ const ApplicationMaterials = () => {
 
           {/* Description */}
           <p className="text-gray-700 leading-relaxed mb-10 max-w-4xl">
-            Upon completing an application to NYFA, students will be assigned an
+            Upon completing an application to JIU, students will be assigned an
             admissions counselor. Admissions counselors will guide students
             through the admissions process, and provide instructions for
             submitting application materials digitally. Please note that only
             transcripts may be submitted via mail. Email is preferred. Once a
-            graduate student is admitted to NYFA, they must pay a required
+            graduate student is admitted to JIU, they must pay a required
             deposit to secure their place.
           </p>
 
           {/* Address Section */}
           <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-2">NYFA New York</h3>
+            <h3 className="text-xl font-semibold mb-2">JIU New York</h3>
             <p className="text-gray-800 whitespace-pre-line">
-              NYFA New York Mailing Address: <br />
-              NYFA / New York Film Academy
+              JIU New York Mailing Address: <br />
+              JIU / New York Film Academy
               <br />
               Office of Admissions
               <br />
@@ -64,10 +64,10 @@ const ApplicationMaterials = () => {
           </div>
 
           <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-2">NYFA Los Angeles</h3>
+            <h3 className="text-xl font-semibold mb-2">JIU Los Angeles</h3>
             <p className="text-gray-800 whitespace-pre-line">
-              NYFA Los Angeles Mailing Address: <br />
-              NYFA / New York Film Academy
+              JIU Los Angeles Mailing Address: <br />
+              JIU / New York Film Academy
               <br />
               Office of Admissions
               <br />
@@ -82,7 +82,7 @@ const ApplicationMaterials = () => {
               ESL and Non-Native Speakers
             </h3>
             <p className="text-gray-800">
-              The ESL School at NYFA offers English language classes to prepare
+              The ESL School at JIU offers English language classes to prepare
               non-native speakers for their program. To learn more, visit our
               ESL page.
             </p>
@@ -94,7 +94,7 @@ const ApplicationMaterials = () => {
             </h3>
             <p className="text-gray-800">
               If you are a non-native English-speaking student who meets all
-              admissions requirements for a NYFA degree program, except for
+              admissions requirements for a JIU degree program, except for
               English proficiency,
               <br />
               apply to our International Pathway Program.
@@ -107,14 +107,14 @@ const ApplicationMaterials = () => {
               <p>
                Please note that admission to any New York Film Academy program is based upon applicant information received during the admissions process. If,<br /> 
                however, a student, after having been admitted but before starting classes, demonstrates that he or she is not fully prepared to commence studies at<br /> 
-               the Academy, NYFA will meet with the student to determine a proper course of action. This may include additional testing or instruction, deferring<br /> 
+               the Academy, JIU will meet with the student to determine a proper course of action. This may include additional testing or instruction, deferring<br /> 
                enrollment to a later semester, or enrollment in a different program of study better suited to the student.
               </p>
             </AccordionItem>
 
             <AccordionItem title="Health Requirements">
               <p>
-               To learn more about NYFA’s health requirements, please click here.
+               To learn more about JIU’s health requirements, please click here.
               </p>
             </AccordionItem>
           </div>

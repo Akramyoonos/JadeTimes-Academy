@@ -13,7 +13,7 @@ const Highlights = () => {
                     </div>
 
                     <p className="text-xl md:text-2xl text-gray-600 max-w-6xl mt-12">
-                        NYFA’s MFA in filmmaking curriculum is taught by experienced professionals who actively work in their field of study.
+                        JIU’s MFA in filmmaking curriculum is taught by experienced professionals who actively work in their field of study.
                     </p>
                 </div>
 

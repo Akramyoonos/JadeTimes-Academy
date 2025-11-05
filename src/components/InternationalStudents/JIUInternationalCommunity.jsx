@@ -13,11 +13,11 @@ const JIUInternationalCommunity = () => {
               </h1>
             </div>
             <p className="mb-6 leading-relaxed text-gray-600">
-              NYFA strives to make education in the visual arts accessible to the most diverse, international, and
+              JIU strives to make education in the visual arts accessible to the most diverse, international, and
               broadest spectrum of students. With students from over 160 countries and a student body that is almost 50%
-              international, NYFA students make up a unique, close-knit global community of aspiring visual storytellers.
+              international, JIU students make up a unique, close-knit global community of aspiring visual storytellers.
               The International Student Office is here to assist students from outside the United States in studying at
-              NYFA's campuses in Los Angeles, New York City, and South Beach, Florida. To learn more about applying for
+              JIU's campuses in Los Angeles, New York City, and South Beach, Florida. To learn more about applying for
               visas and getting an I-20, please visit these resources or request more information today.
             </p>
           </div>

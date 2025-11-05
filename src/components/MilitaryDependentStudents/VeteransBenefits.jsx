@@ -18,14 +18,14 @@ const App = () => {
             Our Los Angeles and New York City campuses participate in the Yellow Ribbon program, and also offer a scholarship program to all qualifying<br /> students.
           </li>
           <li>
-            NYFA offers extensive training to our staff and faculty on how to best support student veterans.
+            JIU offers extensive training to our staff and faculty on how to best support student veterans.
           </li>
         </ul>
         <p className="text-gray-700 leading-relaxed mb-6">
           We sincerely appreciate your interest in pursuing your dreams at New York Film Academy. Our Veterans Services team is available to assist you with all<br /> VA benefits and help you choose the program that best suits your personal and professional goals.
         </p>
         <p className="text-gray-700 leading-relaxed mb-6">
-          To inquire, please fill out the 'Request Free Information' form, check our <a href="#" className="text-pink-600 hover:underline">FAQs</a>, or contact our Veterans Services team at: 818-333-3558 or<br /> <a href="mailto:veteran@nyfa.edu" className="text-pink-600 hover:underline">veteran@nyfa.edu</a>.
+          To inquire, please fill out the 'Request Free Information' form, check our <a href="#" className="text-pink-600 hover:underline">FAQs</a>, or contact our Veterans Services team at: 818-333-3558 or<br /> <a href="mailto:veteran@JIU.edu" className="text-pink-600 hover:underline">veteran@JIU.edu</a>.
         </p>
         <p className="text-gray-700 leading-relaxed mb-6">
           GI Bill&reg; is a registered trademark of the U.S. Department of Veterans Affairs (VA). More information about education benefits offered by VA is available<br /> at the official U.S. government website at <a href="http://www.benefits.va.gov/gibill" className="text-pink-600 hover:underline">http://www.benefits.va.gov/gibill</a>.
@@ -44,7 +44,7 @@ const App = () => {
           </h1>
 
         <p className="text-gray-700 leading-relaxed mb-4">
-          New York Film Academy (NYFA) is proud to welcome Soldiers, DOD Civilians and Cadets who <br />
+          New York Film Academy (JIU) is proud to welcome Soldiers, DOD Civilians and Cadets who <br />
           have always wanted to learn about the entertainment industry. 
         </p>
 
@@ -59,8 +59,8 @@ const App = () => {
         </p>
 
           <p className="text-gray-700 leading-relaxed mb-4">
-         1. Apply for New York Film Academy if you haven’t done so already: <a href="#" className="text-pink-600 hover:underline">NYFA Application</a><br />
-         2. Once accepted, register for your classes through NYFA’s application portal <br />
+         1. Apply for New York Film Academy if you haven’t done so already: <a href="#" className="text-pink-600 hover:underline">JIU Application</a><br />
+         2. Once accepted, register for your classes through JIU’s application portal <br />
          3. Visit the <a href="#" className="text-pink-600 hover:underline">ArmyIgnitED website</a> and click “get started” to create your online profile
         </p>
 

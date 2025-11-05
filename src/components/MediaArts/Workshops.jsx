@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+        import React, { useState } from 'react';
 
 // Data for the workshops, separated into two columns
 const leftColumnWorkshops = [

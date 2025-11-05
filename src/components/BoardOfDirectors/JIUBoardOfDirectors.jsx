@@ -30,7 +30,7 @@ const cabinetMembers = [
     },
     {
         name: 'Dan Mackler',
-        title: 'Senior Vice President/CSO/Dean of NYFA Los Angeles',
+        title: 'Senior Vice President/CSO/Dean of JIU Los Angeles',
         imageUrl: JiuCABINET03,
         description: 'Dan Mackler oversees the Los Angeles campus, ensuring the highest standards of education and student satisfaction...',
     },
@@ -42,13 +42,13 @@ const cabinetMembers = [
     },
     {
         name: 'Elli Ventouras',
-        title: 'Dean of NYFA New York',
+        title: 'Dean of JIU New York',
         imageUrl: JiuCABINET05,
         description: 'Elli Ventouras leads the New York campus with a focus on student growth and program excellence...',
     },
     {
         name: 'Dr. Susan Ashe',
-        title: 'Dean of Students, NYFA Los Angeles',
+        title: 'Dean of Students, JIU Los Angeles',
         imageUrl: JiuCABINET06,
         description: 'Dr. Susan Ashe is dedicated to student welfare and success at the Los Angeles campus...',
     },

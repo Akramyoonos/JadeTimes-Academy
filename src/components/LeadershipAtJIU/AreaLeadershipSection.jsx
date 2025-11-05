@@ -16,7 +16,7 @@ const LeadershipSection = () => {
         {
             title: "CABINET",
             image: AlumniExplore02,
-            alt: "Two people wearing NYFA hoodies looking over a lake in a city park",
+            alt: "Two people wearing JIU hoodies looking over a lake in a city park",
             href: "/cabinet/"
         },
         {

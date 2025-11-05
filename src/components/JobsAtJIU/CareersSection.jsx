@@ -17,7 +17,7 @@ const CareersSection = () => {
           <p className="text-lg font-semibold md:max-w-xl md:-ml-10">
   Don’t see a current opening for you in our job<br /> listings? 
   Send a cover letter, resume, reel and links <br /> to showcase your work to 
-   jobs@nyfa.edu
+   jobs@JIU.edu
   Please<br /> specify the location you are interested in the<br /> subject line.
 </p>
 </div>
@@ -36,9 +36,9 @@ const CareersSection = () => {
 
        
         <p className="text-gray-500 italic text-sm mt-12 leading-relaxed">
-          In compliance with federal requirements, NYFA provides extensive information 
+          In compliance with federal requirements, JIU provides extensive information 
           on institutional policies concerning campus safety and security, sexual 
-          misconduct, and other matters. This information is contained within NYFA’s 
+          misconduct, and other matters. This information is contained within JIU’s 
           Annual Security Report or Annual Security and Fire Safety Report and{" "}
           <a href="#" className="text-pink-500 hover:underline">can be accessed here.</a>
         </p>

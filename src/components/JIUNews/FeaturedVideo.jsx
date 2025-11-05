@@ -8,10 +8,10 @@ const FeaturedVideo = () => {
       <div className="mb-6 px-6 sm:px-6 md:px-6 lg:px-15">
         <h2 className="text-2xl md:text-3xl font-semibold flex items-center">
           <span className="w-1 h-10 bg-purple-500 mr-3"></span>
-          FEATURED NYFA YOUTUBE VIDEO
+          FEATURED JIU YOUTUBE VIDEO
         </h2>
         <p className="text-gray-600 mt-2">
-          Here are 3 tips for short filmmakers with NYFA’s Senior Director of
+          Here are 3 tips for short filmmakers with JIU’s Senior Director of
           Film Festivals, Crickett Rumley!
         </p>
       </div>
@@ -22,7 +22,7 @@ const FeaturedVideo = () => {
           <iframe
             className="w-full h-full  shadow-lg"
             src="https://www.youtube.com/embed/FKz0Fnk_TRM"
-            title="Featured NYFA YouTube Video"
+            title="Featured JIU YouTube Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

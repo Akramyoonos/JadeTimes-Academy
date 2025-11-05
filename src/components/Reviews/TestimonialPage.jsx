@@ -6,7 +6,7 @@ const ALL_SCREENSHOT_TESTIMONIALS = [
     name: "Pedro Peira",
     program:
       "1-Year Certificate Program Documentary Filmmaking, Los Angeles",
-    text: "At NYFA, I learned that everything is possible in the film world with a certain amount of effort. Believing to be capable is the key to success."
+    text: "At JIU, I learned that everything is possible in the film world with a certain amount of effort. Believing to be capable is the key to success."
   },
   {
     name: "Furaha Bayibsa",
@@ -16,7 +16,7 @@ const ALL_SCREENSHOT_TESTIMONIALS = [
   {
     name: "Nathan Williams",
     program: "Short-Term Workshop Cinematography, Online",
-    text: "Extremely professional. I decided to take NYFA’s Intro to Cinematography workshop and it completely changed how I approach lighting and composition."
+    text: "Extremely professional. I decided to take JIU’s Intro to Cinematography workshop and it completely changed how I approach lighting and composition."
   },
   {
     name: "Rebecca Rajadnya",
@@ -55,7 +55,7 @@ const TestimonialPage = () => {
 
   const baseText = (
     <>
-      Since enrolling in NYFA’s BFA Acting for Film degree, my classes, peers and professors have<br />
+      Since enrolling in JIU’s BFA Acting for Film degree, my classes, peers and professors have<br />
       opened up a whole new world for me that I have come to appreciate and am proud to be<br />
       part of. I cannot wait to use all the techniques and tools I’ve learned to continue my<br />
       journey into the film industry.
@@ -67,7 +67,7 @@ const TestimonialPage = () => {
       <br /><br />
       When I first became interested in films and acting, I had no real idea what either of them<br />
       entailed beyond what I saw on the big screen at the theatre, and since my curiosity never<br />
-      left me, I decided to enroll in the NYFA BFA Acting for Film program. Since then, my classes,<br />
+      left me, I decided to enroll in the JIU BFA Acting for Film program. Since then, my classes,<br />
       peers and professors have opened up a whole new world for me that I have come to<br />
       appreciate and am proud to be part of. I cannot wait to use all the techniques and tools<br />
       that I have learned here to continue my journey into the film industry.

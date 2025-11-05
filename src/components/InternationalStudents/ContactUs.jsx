@@ -18,13 +18,13 @@ const ContactUs = () => {
         {/* Content Section */}
         <div className="text-gray-600 space-y-8">
           <p className="text-base">
-            All inquiries regarding studying at NYFA as an international student should be referred to:
+            All inquiries regarding studying at JIU as an international student should be referred to:
           </p>
 
           <div className="text-base text-gray-800">
             <p className="font-bold">International Student Office</p>
             <p>Phone: 212-966-3488</p>
-            <p>Email: International@nyfa.edu</p>
+            <p>Email: International@JIU.edu</p>
           </div>
 
           <p className="text-base">

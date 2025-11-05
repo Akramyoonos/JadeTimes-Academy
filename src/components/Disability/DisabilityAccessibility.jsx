@@ -12,7 +12,7 @@ const DisabilityAccessibility = () => {
         <div className="flex items-start mb-8">
           <div className="w-1 bg-sky-400 h-20 mr-4 " />
           <h1 className="text-3xl md:text-4xl font-semibold tracking-wide text-black">
-            DISABILITY AND ACCESSIBILITY AT NYFA
+            DISABILITY AND ACCESSIBILITY AT JIU
           </h1>
         </div>
 
@@ -31,7 +31,7 @@ const DisabilityAccessibility = () => {
         <div className="flex items-start mb-8">
           <div className="w-1 bg-yellow-400 h-20 mr-4 " />
           <h2 className="text-3xl md:text-4xl font-semibold tracking-wide text-black">
-            HOW NYFA ACCOMMODATES STUDENTS WITH DISABILITIES
+            HOW JIU ACCOMMODATES STUDENTS WITH DISABILITIES
           </h2>
         </div>
 
@@ -60,23 +60,23 @@ const DisabilityAccessibility = () => {
 
         <p className="text-gray-700 text-lg leading-relaxed mb-8">
           To initiate the accommodation request process, please send an email to the Coordinator of Student
-          Accessibility Services (NYFA NY and LA) soon after you receive your acceptance letter, during
+          Accessibility Services (JIU NY and LA) soon after you receive your acceptance letter, during
           Orientation week, or during the first week of your program, announcing your need to register for
           accessibility services. Students may register with the Accessibilities Office at any time during their
           program. Early registration is advised to best promote academic success and wellness.
         </p>
 
         <div className="mb-4">
-          <h3 className="text-lg font-bold mb-1">NYFA New York</h3>
+          <h3 className="text-lg font-bold mb-1">JIU New York</h3>
           <p className="text-gray-700">
-            Contact: <a href="mailto:sas.ny@nyfa.edu" className="text-purple-600 hover:underline">sas.ny@nyfa.edu</a>
+            Contact: <a href="mailto:sas.ny@JIU.edu" className="text-purple-600 hover:underline">sas.ny@JIU.edu</a>
           </p>
         </div>
 
         <div>
-          <h3 className="text-lg font-bold mb-1">NYFA Los Angeles</h3>
+          <h3 className="text-lg font-bold mb-1">JIU Los Angeles</h3>
           <p className="text-gray-700">
-            Contact: <a href="mailto:SAS@nyfa.edu" className="text-purple-600 hover:underline">SAS@nyfa.edu</a>
+            Contact: <a href="mailto:SAS@JIU.edu" className="text-purple-600 hover:underline">SAS@JIU.edu</a>
           </p>
         </div>
 

@@ -10,7 +10,7 @@ const JIUSection = () => {
         <div className="lg:col-span-2">
           <h2 className="text-3xl md:text-4xl font-bold flex items-center mb-6">
             <span className="w-1 h-10 bg-purple-500 mr-3"></span>
-            WHY WORK AT NYFA?
+            WHY WORK AT JIU?
           </h2>
           <p className="text-gray-600 leading-relaxed">
             New York Film Academy is committed to an inclusive work culture where

@@ -2,9 +2,9 @@ import React from "react";
 
 const GraduationTable = () => {
   const graduations = [
-    { campus: "NYFA New York", date: "TBD" },
-    { campus: "NYFA Los Angeles", date: "TBD" },
-    { campus: "NYFA Miami", date: "TBD" },
+    { campus: "JIU New York", date: "TBD" },
+    { campus: "JIU Los Angeles", date: "TBD" },
+    { campus: "JIU Miami", date: "TBD" },
   ];
 
   return (

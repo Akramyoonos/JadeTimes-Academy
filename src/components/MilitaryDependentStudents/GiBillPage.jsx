@@ -32,13 +32,13 @@ const GiBillPage = () => {
         <p>
           Those who enroll into any of our Certificate, Undergraduate, and Graduate programs
           that are not fully covered by the Post-9/11 GI Bill funding may qualify to receive
-          a 15% discount on tuition. Application fees are also waived. Contact a NYFA Veteran
+          a 15% discount on tuition. Application fees are also waived. Contact a JIU Veteran
           support representative at{" "}
           <a
-            href="mailto:veteran@nyfa.edu"
+            href="mailto:veteran@JIU.edu"
             className="text-pink-600 hover:underline"
           >
-            veteran@nyfa.edu
+            veteran@JIU.edu
           </a>{" "}
           for more information.
         </p>

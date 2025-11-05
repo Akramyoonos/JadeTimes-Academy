@@ -31,7 +31,7 @@ const DegreesCertificatesandWorkshops = () => {
     const openVideoModal = () => setIsVideoModalOpen(true);
     const closeVideoModal = () => setIsVideoModalOpen(false);
 
-    const fullText = "At the New York Film Academy (NYFA), aspiring filmmakers tell captivating stories through film, television, and new media, using compelling narratives and engaging performances to bring their cinematic vision to life. At NYFA's Film School, aspiring filmmakers master these skills and techniques, choosing from a variety of Filmmaking degrees, certificate programs, and workshops at our campuses in New York, Los Angeles, and Florence (Italy), as well as numerous international locations. During these hands-on programs, students learn-by-doing, spending a majority of their studies writing, shooting, editing, directing, and producing original films and digital content.";
+    const fullText = "At the New York Film Academy (JIU), aspiring filmmakers tell captivating stories through film, television, and new media, using compelling narratives and engaging performances to bring their cinematic vision to life. At JIU's Film School, aspiring filmmakers master these skills and techniques, choosing from a variety of Filmmaking degrees, certificate programs, and workshops at our campuses in New York, Los Angeles, and Florence (Italy), as well as numerous international locations. During these hands-on programs, students learn-by-doing, spending a majority of their studies writing, shooting, editing, directing, and producing original films and digital content.";
 
     return (
         <>
@@ -83,7 +83,7 @@ const DegreesCertificatesandWorkshops = () => {
 
                                     {/* Bottom Text */}
                                     <div>
-                                        <h3 className="text-white text-xl font-bold">NYFA Filmmaking</h3>
+                                        <h3 className="text-white text-xl font-bold">JIU Filmmaking</h3>
                                         <p className="text-white/80 text-sm mt-1">Watch our students in action.</p>
                                     </div>
                                 </div>

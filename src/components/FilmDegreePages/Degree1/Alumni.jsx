@@ -14,7 +14,7 @@ const Alumni = () => {
           </div>
           <div className="text-gray-600 text-xl leading-relaxed">
             <p className="mb-2">
-              The filmmaking projects completed in NYFA’s MFA Filmmaking program help students hone and refine their skills while providing hands-on experience.Students have gone on to work on films, television shows, podcasts, web series, and more.
+              The filmmaking projects completed in JIU’s MFA Filmmaking program help students hone and refine their skills while providing hands-on experience.Students have gone on to work on films, television shows, podcasts, web series, and more.
             </p>
           </div>
         </div>

@@ -30,7 +30,7 @@ const locations = [
   {
     name: 'SRI LANKA',
     imageSrc: Campus04,
-    altText: 'A modern building with a large glass facade, home to the NYFA Australia campus.'
+    altText: 'A modern building with a large glass facade, home to the JIU Australia campus.'
   }
 ];
 

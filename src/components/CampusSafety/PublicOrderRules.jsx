@@ -11,48 +11,48 @@ const PublicOrderRules = () => {
       </div>
 
       <p className="text-gray-700 leading-relaxed mb-8">
-        New York Film Academy (NYFA) Board of Directors hereby adopts the following rules for the maintenance of public order on NYFA campus premises
-        and other NYFA property used for educational purposes and a program for the enforcement of these rules, and do hereby authorize the President of
-        NYFA to file a copy with the Regents and the Commissioner of Education as provided in Article 129A section 6430 of the New York Education Law.
+        New York Film Academy (JIU) Board of Directors hereby adopts the following rules for the maintenance of public order on JIU campus premises
+        and other JIU property used for educational purposes and a program for the enforcement of these rules, and do hereby authorize the President of
+        JIU to file a copy with the Regents and the Commissioner of Education as provided in Article 129A section 6430 of the New York Education Law.
       </p>
 
       <div className="mb-4">
         <h2 className="text-2xl font-normal mb-2">I. Rules of Conduct:</h2>
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">A.</span> All members of the NYFA community—students, faculty members, and members of the staff—shall comply with city, state, and federal laws and ordinances affecting the maintenance of order on NYFA premises.
+          <span className="text-blue-500 font-bold">A.</span> All members of the JIU community—students, faculty members, and members of the staff—shall comply with city, state, and federal laws and ordinances affecting the maintenance of order on JIU premises.
         </p>
       </div>
 
       <div className="ml-8 mb-4">
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">01.</span> Conduct that is violative of such laws and ordinances occurring on NYFA premises or when there is a nexus to the campus may be subject to both NYFA discipline and public sanctions as circumstances may warrant or dictate.
+          <span className="text-blue-500 font-bold">01.</span> Conduct that is violative of such laws and ordinances occurring on JIU premises or when there is a nexus to the campus may be subject to both JIU discipline and public sanctions as circumstances may warrant or dictate.
         </p>
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">02.</span> Conduct that is violative of such laws and ordinances that are not governed by Section I.A.01. above will ordinarily not be subject to NYFA discipline, unless such conduct
+          <span className="text-blue-500 font-bold">02.</span> Conduct that is violative of such laws and ordinances that are not governed by Section I.A.01. above will ordinarily not be subject to JIU discipline, unless such conduct
         </p>
 
         <ul className="list-disc text-gray-700 pl-8 space-y-2">
-          <li>seriously affects the interests of the NYFA or the position of the member within the NYFA community, or</li>
-          <li>occurs in close proximity to NYFA premises and is connected to violative conduct on NYFA premises.</li>
+          <li>seriously affects the interests of the JIU or the position of the member within the JIU community, or</li>
+          <li>occurs in close proximity to JIU premises and is connected to violative conduct on JIU premises.</li>
         </ul>
       </div>
 
       <p className="text-gray-700 my-4">
-        <span className="text-blue-500 font-bold">B.</span> All members of the NYFA community are prohibited from engaging in conduct leading to or resulting in any of the following:
+        <span className="text-blue-500 font-bold">B.</span> All members of the JIU community are prohibited from engaging in conduct leading to or resulting in any of the following:
       </p>
 
       <div className="ml-8 mb-4">
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">01.</span> Interference with or disruption of the regular operations and activities of the NYFA.
+          <span className="text-blue-500 font-bold">01.</span> Interference with or disruption of the regular operations and activities of the JIU.
         </p>
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">02.</span> Denial of or unreasonable interference with the rights of others—including persons not members of the NYFA community who are present as invitees or licensees—on NYFA premises. These rights include the right of academic freedom as well as constitutionally protected rights.
+          <span className="text-blue-500 font-bold">02.</span> Denial of or unreasonable interference with the rights of others—including persons not members of the JIU community who are present as invitees or licensees—on JIU premises. These rights include the right of academic freedom as well as constitutionally protected rights.
         </p>
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">03.</span> Injury to NYFA property, real or personal.
+          <span className="text-blue-500 font-bold">03.</span> Injury to JIU property, real or personal.
         </p>
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">04.</span> Unauthorized access to or occupation of nonpublic areas on NYFA premises but not limited to classrooms, seminar rooms, laboratories, libraries, faculty and administrative offices, auditoriums, and recreational facilities.
+          <span className="text-blue-500 font-bold">04.</span> Unauthorized access to or occupation of nonpublic areas on JIU premises but not limited to classrooms, seminar rooms, laboratories, libraries, faculty and administrative offices, auditoriums, and recreational facilities.
         </p>
         <p className="text-gray-700">
           <span className="text-blue-500 font-bold">05.</span> Unauthorized access to or use of personal property, including files and records.
@@ -63,20 +63,20 @@ const PublicOrderRules = () => {
       </div>
 
       <p className="text-gray-700 mt-4">
-        <span className="text-blue-500 font-bold">C.</span> Visitors, including invitees and licensees, shall at all times conduct themselves in a manner that is consistent with the maintenance of order on NYFA premises, and their privilege to remain on NYFA property shall automatically terminate upon breach of this regulation. NYFA, in addition, reserves the right in its discretion to withdraw at any time the privilege of an invitee or licensee to be on NYFA premises. A trespasser has no privilege of any kind to be on NYFA property but is nevertheless subject to these regulations governing the maintenance of order.
+        <span className="text-blue-500 font-bold">C.</span> Visitors, including invitees and licensees, shall at all times conduct themselves in a manner that is consistent with the maintenance of order on JIU premises, and their privilege to remain on JIU property shall automatically terminate upon breach of this regulation. JIU, in addition, reserves the right in its discretion to withdraw at any time the privilege of an invitee or licensee to be on JIU premises. A trespasser has no privilege of any kind to be on JIU property but is nevertheless subject to these regulations governing the maintenance of order.
       </p>
 
       <p className="text-gray-700 mt-4">
-        <span className="text-blue-500 font-bold">D.</span> Authorized Members of the NYFA Community, after properly identifying themselves, may in the course of performing their duties, request identification from members of the NYFA community. Refusal to identify oneself shall be considered prima facie evidence of non-NYFA status.
+        <span className="text-blue-500 font-bold">D.</span> Authorized Members of the JIU Community, after properly identifying themselves, may in the course of performing their duties, request identification from members of the JIU community. Refusal to identify oneself shall be considered prima facie evidence of non-JIU status.
       </p>
 
       <div className="ml-8">
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">01.</span> “Authorized Members of the NYFA Community” shall include
+          <span className="text-blue-500 font-bold">01.</span> “Authorized Members of the JIU Community” shall include
         </p>
         <ul className="list-disc text-gray-700 pl-8 space-y-2">
-          <li>NYFA Faculty, Staff, Student Staff or</li>
-          <li>NYFA Security Officers where situated.</li>
+          <li>JIU Faculty, Staff, Student Staff or</li>
+          <li>JIU Security Officers where situated.</li>
         </ul>
       </div>
 
@@ -99,27 +99,27 @@ const PublicOrderRules = () => {
 
       <div className="ml-8 mb-4">
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">01.</span> When Authorized Members of the NYFA Community in their discretion determine that the privilege of an invitee or licensee to be on NYFA premises should be withdrawn, they shall ask the invitee or licensee to leave the premises, and the invitation or license shall thereby be terminated. If any person, whether initially a trespasser, licensee, or invitee, fails to leave NYFA premises promptly upon request, NYFA will use all reasonable means, including calling for the assistance of the police, to effect the individual's removal.
+          <span className="text-blue-500 font-bold">01.</span> When Authorized Members of the JIU Community in their discretion determine that the privilege of an invitee or licensee to be on JIU premises should be withdrawn, they shall ask the invitee or licensee to leave the premises, and the invitation or license shall thereby be terminated. If any person, whether initially a trespasser, licensee, or invitee, fails to leave JIU premises promptly upon request, JIU will use all reasonable means, including calling for the assistance of the police, to effect the individual's removal.
         </p>
       </div>
 
       <p className="text-gray-700 mt-4">
-        <span className="text-blue-500 font-bold">B.</span> Procedural Hold of Members of the NYFA Community
+        <span className="text-blue-500 font-bold">B.</span> Procedural Hold of Members of the JIU Community
       </p>
 
       <div className="ml-8 mb-4">
         <p className="text-gray-700">
-          <span className="text-blue-500 font-bold">01.</span> Penalties for violation of NYFA rules shall not be imposed upon members of the NYFA community except after compliance with the disciplinary procedures applicable to students or faculty members, or members of NYFA staff (administrative and other employees).
+          <span className="text-blue-500 font-bold">01.</span> Penalties for violation of JIU rules shall not be imposed upon members of the JIU community except after compliance with the disciplinary procedures applicable to students or faculty members, or members of JIU staff (administrative and other employees).
         </p>
 
         <ul className="list-disc text-gray-700 pl-8 space-y-2">
-          <li>procedures applicable to students or faculty members, or members of NYFA staff (administrative and other employees).</li>
+          <li>procedures applicable to students or faculty members, or members of JIU staff (administrative and other employees).</li>
           <li>However, a Procedural Hold pending disciplinary proceedings may be imposed upon students in accordance with the Student Code of Conduct, or upon faculty members or staff in accordance with Faculty and/or Employee Code of Conduct.</li>
         </ul>
       </div>
 
       <p className="text-gray-700 mt-4">
-        <span className="text-blue-500 font-bold">C.</span> Disciplinary Action. A member of the NYFA community found responsible for a violation of NYFA rules set forth in Section I above shall be subject to appropriate disciplinary action as follows:
+        <span className="text-blue-500 font-bold">C.</span> Disciplinary Action. A member of the JIU community found responsible for a violation of JIU rules set forth in Section I above shall be subject to appropriate disciplinary action as follows:
       </p>
 
       <div className="ml-8 mb-4">
@@ -127,29 +127,29 @@ const PublicOrderRules = () => {
           <span className="text-blue-500 font-bold">01.</span> Students:
         </p>
         <ul className="list-disc text-gray-700 pl-8 space-y-2">
-          <li>Discipline shall be governed by the policies and procedures of the NYFA Student Code of Conduct Policy and other applicable and relevant policies.</li>
+          <li>Discipline shall be governed by the policies and procedures of the JIU Student Code of Conduct Policy and other applicable and relevant policies.</li>
         </ul>
         <p className="text-gray-700 mt-4">
           <span className="text-blue-500 font-bold">02.</span> Faculty Members:
         </p>
         <ul className="list-disc text-gray-700 pl-8 space-y-2">
-          <li>Discipline shall be governed by the policies and procedures of the NYFA Faculty and/or Employee Code of Conduct Policies and other applicable and relevant policies.</li>
+          <li>Discipline shall be governed by the policies and procedures of the JIU Faculty and/or Employee Code of Conduct Policies and other applicable and relevant policies.</li>
         </ul>
         <p className="text-gray-700 mt-4">
-          <span className="text-blue-500 font-bold">03.</span> NYFA Staff, Administration:
+          <span className="text-blue-500 font-bold">03.</span> JIU Staff, Administration:
         </p>
         <ul className="list-disc text-gray-700 pl-8 space-y-2">
-          <li>Discipline shall be governed by the policies and procedures of the NYFA Employee Code of Conduct Policy and other applicable and relevant policies.</li>
+          <li>Discipline shall be governed by the policies and procedures of the JIU Employee Code of Conduct Policy and other applicable and relevant policies.</li>
         </ul>
         <p className="text-gray-700 mt-4">
           <span className="text-blue-500 font-bold">04.</span> Organizations:
         </p>
         <ul className="list-disc text-gray-700 pl-8 space-y-2">
-          <li>Any organization which authorizes conduct prohibited under Section I.B.06. shall be subject to having its permission to use the facilities of NYFA and to operate as a NYFA organization rescinded, and shall be subject to any additional penalties pursuant to the penal law or any other applicable provision of law.</li>
+          <li>Any organization which authorizes conduct prohibited under Section I.B.06. shall be subject to having its permission to use the facilities of JIU and to operate as a JIU organization rescinded, and shall be subject to any additional penalties pursuant to the penal law or any other applicable provision of law.</li>
         </ul>
       </div>
       <p className="text-gray-700 mt-4">
-        <span className="text-blue-500 font-bold">D.</span> Penalties. Penalties for violation of NYFA rules that may be imposed upon members of the NYFA community include, but are not limited to, the following:
+        <span className="text-blue-500 font-bold">D.</span> Penalties. Penalties for violation of JIU rules that may be imposed upon members of the JIU community include, but are not limited to, the following:
       </p>
 
       <div className="ml-8 mb-4">

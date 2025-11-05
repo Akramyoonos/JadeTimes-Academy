@@ -42,7 +42,7 @@ const Description = () => {
                   Our Acting Department's industry-leading voice and speech instructors are available to coach corporate sales teams and executives with presentation preparation and execution.
                 </p>
                 <p>
-                  For a consultation and more information on any type of audio/video training from pre-production, production, to post-production, please contact David Klein at <a href="mailto:david@nyfa.edu" className="text-pink-500 hover:underline">david@nyfa.edu</a> or 212-674-4300.
+                  For a consultation and more information on any type of audio/video training from pre-production, production, to post-production, please contact David Klein at <a href="mailto:david@JIU.edu" className="text-pink-500 hover:underline">david@JIU.edu</a> or 212-674-4300.
                 </p>
               </div>
             </div>

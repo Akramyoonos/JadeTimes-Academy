@@ -41,12 +41,12 @@ const DegreeLocations = () => {
                     </div>
                     <div className="w-full md:w-1/4 shadow-lg rounded-lg overflow-hidden group">
                         <div className="relative">
-                            <img src={Campus01} alt="NYFA Los Angeles Campus" className="w-full h-auto object-cover transition-transform duration-2000 ease-in-out group-hover:scale-105" />
+                            <img src={Campus01} alt="JIU Los Angeles Campus" className="w-full h-auto object-cover transition-transform duration-2000 ease-in-out group-hover:scale-105" />
                             <div className="absolute inset-0 bg-black opacity-50 group-hover:opacity-0 transition-opacity duration-900"></div>
                             <span className="absolute top-2 left-2 bg-black text-white text-xs font-bold px-2 py-1 rounded">CAMPUS</span>
                         </div>
                         <div className="p-6">
-                            <h3 className="text-xl font-semibold">NYFA Los Angeles</h3>
+                            <h3 className="text-xl font-semibold">JIU Los Angeles</h3>
                             <button onClick={() => setLocationOpen(!isLocationOpen)} className="text-purple-600 text-sm font-bold mt-2 flex items-center">
                                 SHOW MORE 
                                 <FontAwesomeIcon icon={isLocationOpen ? faChevronUp : faChevronDown} className="ml-2" />

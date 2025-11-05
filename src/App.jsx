@@ -140,7 +140,7 @@ function AppInner() {
       <main key={location.pathname} className="min-h-[80vh] animate-advanced-fade-in">
         <Routes>
           <Route path="/"                              element={<Home_page />} />
-          <Route path="/About-Us/"                         element={<About_page />} />
+          <Route path="/ABOUT-US/"                         element={<About_page />} />
           <Route path="/programfinder/*"               element={<Programfinder_page />} />
           <Route path="/admissions"                    element={<Admissions_page />} />
           <Route path="/blog/*"                        element={<Blog />} />

@@ -7,19 +7,19 @@ import onlineDegreeImage from '../../assets/Images/onlineDegreeImage.webp';
 // Data for the campuses
 const campusData = [
   {
-    name: 'NYFA New York',
+    name: 'JIU New York',
     imageUrl: Campus01,
-    altText: 'NYFA New York Campus',
+    altText: 'JIU New York Campus',
   },
   {
-    name: 'NYFA Los Angeles',
+    name: 'JIU Los Angeles',
     imageUrl: Campus02,
-    altText: 'NYFA Los Angeles Campus',
+    altText: 'JIU Los Angeles Campus',
   },
   {
-    name: 'NYFA Florence',
+    name: 'JIU Florence',
     imageUrl: Campus03,
-    altText: 'NYFA Florence Campus',
+    altText: 'JIU Florence Campus',
   },
   {
     name: 'Online',

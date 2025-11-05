@@ -39,7 +39,7 @@ const ProgramApplications = () => {
           </div>
 
           <p className="text-gray-600 text-lg mb-12">
-            To apply for one of NYFA's programs, please visit the application links below.
+            To apply for one of JIU's programs, please visit the application links below.
           </p>
 
           <div className="space-y-4">

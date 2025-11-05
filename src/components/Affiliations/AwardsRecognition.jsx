@@ -19,7 +19,7 @@ const AwardsRecognition = () => {
           <li>
             Awarded one of Top 50{" "}
             <a
-              href="https://www.nyfa.edu/game-design-school/"
+              href="https://www.JIU.edu/game-design-school/"
               className="text-pink-600 hover:underline"
             >
               Game Design Schools
@@ -177,7 +177,7 @@ const AwardsRecognition = () => {
             <li>A proud partner of the Coca-Cola Refreshing Films program, which is a professional opportunity<br /> 
             for students to create content for the big screen. Program is designed to give student filmmakers<br />
             a real-world experience working with a big brand with the goal being that each participant can<br /> 
-            use this experience to help further their careers in the film industry. NYFA is proud to be one of<br />
+            use this experience to help further their careers in the film industry. JIU is proud to be one of<br />
             the 52 participating schools.</li>
 
             <li>A supporter and partner of an array of film festivals around the world, including the New York<br /> 
@@ -259,7 +259,7 @@ const AwardsRecognition = () => {
               href="#"
               className="text-pink-600 hover:underline"
             >
-           Fulbright Program & NYFA page.
+           Fulbright Program & JIU page.
             </a></li>
          
                   

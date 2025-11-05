@@ -7,12 +7,12 @@ import LocationMobile from '../../assets/Images/Location-mobile.webp';
 // Data for the satellite locations. This makes the component cleaner and easier to update.
 const locations = [
   {
-    name: 'NYFA Kazakhstan',
+    name: 'JIU Kazakhstan',
     imageSrc: Campus01,
-    altText: 'The entrance to the NYFA Kazakhstan campus building.'
+    altText: 'The entrance to the JIU Kazakhstan campus building.'
   },
   {
-    name: 'NYFA at Harvard University',
+    name: 'JIU at Harvard University',
     imageSrc: Campus02,
     altText: 'Students walking on the Harvard University campus near a brick building.'
   },

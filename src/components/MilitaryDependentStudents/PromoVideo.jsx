@@ -42,7 +42,7 @@ const PromoVideo = ({ videoUrl, thumbnailUrl }) => {
         {/* Caption (conditionally rendered) */}
         {!isPlaying && (
           <p className="mt-4 text-lg italic text-gray-600 max-w-4xl text-center">
-            NYFA does not represent that these are typical or guaranteed career outcomes. 
+            JIU does not represent that these are typical or guaranteed career outcomes. 
             The success of our graduates depends on multiple factors, including hard work, 
             perseverance, and talent.
           </p>

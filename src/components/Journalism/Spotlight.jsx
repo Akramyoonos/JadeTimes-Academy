@@ -50,7 +50,7 @@ const Spotlight = () => {
                 <div className="flex items-center mb-8">
                     <div className="w-1 bg-cyan-400 h-12 sm:h-16 mr-4"></div>
                     <h1 className="text-3xl sm:text-4xl font-light text-gray-800 tracking-wider">
-                        SPOTLIGHT NYFA
+                        SPOTLIGHT JIU
                     </h1>
                 </div>
 

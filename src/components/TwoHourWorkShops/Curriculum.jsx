@@ -85,7 +85,7 @@ const Curriculum = () => {
                     {/* Left Column */}
                     <div className="md:col-span-3">
                         <p className="text-lg leading-relaxed text-gray-700">
-                            The 1 & 2-Year programs are designed to provide hands-on, practical training in the creative process through practice and repetition. NYFA’s real-world approach allows students to spend the majority of their time creating content, helping them develop essential creative and technical skills in visual storytelling. For more information, please visit our <a href="#" className="text-purple-600">course catalog</a>.
+                            The 1 & 2-Year programs are designed to provide hands-on, practical training in the creative process through practice and repetition. JIU’s real-world approach allows students to spend the majority of their time creating content, helping them develop essential creative and technical skills in visual storytelling. For more information, please visit our <a href="#" className="text-purple-600">course catalog</a>.
                         </p>
                     </div>
 

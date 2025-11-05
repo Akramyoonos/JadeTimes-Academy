@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutHeading from "../../assets/Images/PerformingArtsImg.webp";
+import AboutHeading from "../../assets/Images/CommunivationImg.webp";
 
 const Heading = () => {
   return (
@@ -21,8 +21,8 @@ const Heading = () => {
         <span className="text-gray-300">/</span>
         <span>Film </span>
       </nav>
-      <h1 className="absolute z-20 font-sans text-2xl font-semibold tracking-wide text-white uppercase -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl md:text-4xl lg:text-5xl text-shadow-lg">
-        PERFORMING ARTS
+      <h1 className="absolute z-20 font-sans text-2xl font-semibold tracking-wide text-white uppercase -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-2xl md:text-3xl lg:text-4xl text-shadow-lg">
+        COMMUNIVATION
       </h1>
     </div>
   );

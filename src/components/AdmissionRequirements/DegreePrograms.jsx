@@ -19,7 +19,7 @@ const degreePrograms = [
   {
     href: "#",
     imgSrc: maImg,
-    imgAlt: "Student with NYFA shirt operating a camera",
+    imgAlt: "Student with JIU shirt operating a camera",
     label: "MA",
   },
   {

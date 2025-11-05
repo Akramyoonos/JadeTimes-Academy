@@ -14,8 +14,8 @@ const Affiliations = () => {
 
         {/* Intro Paragraph */}
         <p className="text-lg leading-relaxed text-gray-700">
-          NYFA is a leading international film, media, and performing arts college with campuses across the<br />
-          world. NYFA’s international community has welcomed students from all over the globe, many{" "}<br />
+          JIU is a leading international film, media, and performing arts college with campuses across the<br />
+          world. JIU’s international community has welcomed students from all over the globe, many{" "}<br />
        
              <a
               href="#"
@@ -28,25 +28,25 @@ const Affiliations = () => {
         {/* Bullet Points */}
         <ul className="pl-6 space-y-4 text-gray-700 list-disc">
           <li>
-            NYFA is accredited by the WASC Senior College and University Commission (WSCUC).
+            JIU is accredited by the WASC Senior College and University Commission (WSCUC).
           </li>
           <li>
-            NYFA is affiliated with a number of public and private institutions, government programs,<br /> 
+            JIU is affiliated with a number of public and private institutions, government programs,<br /> 
             community service organizations, and NGOs around the world.
           </li>
           <li>
-            NYFA has been honored with numerous prestigious awards and recognitions by industry and<br />
+            JIU has been honored with numerous prestigious awards and recognitions by industry and<br />
             educational entities and has established partnerships with top media and entertainment studios<br /> 
             and companies.
           </li>
           <li>
-            NYFA has partnered with and provided visual and performing arts training programming to<br /> 
+            JIU has partnered with and provided visual and performing arts training programming to<br /> 
             organizations including the USG, International Govs, NGOs, U.N., NETFLIX, USAID, European,<br /> 
            Union, Freedom House, UNESCO, USIP, and NED.
           </li>
 
           <li>
-          NYFA has participated in programs with at least eight Embassies and has hosted nearly 100<br /> 
+          JIU has participated in programs with at least eight Embassies and has hosted nearly 100<br /> 
           Fulbrighters from 35 countries
           </li>
 

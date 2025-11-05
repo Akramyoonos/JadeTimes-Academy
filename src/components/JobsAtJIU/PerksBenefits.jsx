@@ -140,7 +140,7 @@ const PerksAndBenefits = () => {
             </h1>
           </div>
           <p className="mt-6 text-base sm:text-lg text-gray-600">
-            NYFA Employees thrive on creativity and diversity. NYFA also brings the following perks along!
+            JIU Employees thrive on creativity and diversity. JIU also brings the following perks along!
           </p>
         </header>
 

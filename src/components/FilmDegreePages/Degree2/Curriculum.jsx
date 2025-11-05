@@ -39,7 +39,7 @@ const Curriculum = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                     <div>
-                        <h2 className="text-xl font-semibold text-gray-800">The curriculum for the MFA in filmmaking at NYFA includes:</h2>
+                        <h2 className="text-xl font-semibold text-gray-800">The curriculum for the MFA in filmmaking at JIU includes:</h2>
                         <ul className="mt-6 space-y-4 text-gray-600">
                             <li className="flex items-start">
                                 <span className="text-purple-500 mr-3 mt-1">•</span>
@@ -60,11 +60,11 @@ const Curriculum = () => {
                         </ul>
 
                         <p className="mt-8 text-gray-600">
-                            To obtain a full breakdown of the courses within the MFA program, refer to <a href="#" className="text-purple-500 font-semibold hover:underline">NYFA's Course Catalog</a> or <a href="#" className="text-purple-500 font-semibold hover:underline">request more information</a>.
+                            To obtain a full breakdown of the courses within the MFA program, refer to <a href="#" className="text-purple-500 font-semibold hover:underline">JIU's Course Catalog</a> or <a href="#" className="text-purple-500 font-semibold hover:underline">request more information</a>.
                         </p>
 
                         <p className="mt-8 text-gray-600">
-                            If you are a <span className="font-bold">non-native English-speaking student</span> who meets all admissions requirements for a NYFA degree program, <span className="font-bold">except for English proficiency,</span> apply to our <a href="#" className="text-purple-500 font-semibold hover:underline">International Pathway Program</a>!
+                            If you are a <span className="font-bold">non-native English-speaking student</span> who meets all admissions requirements for a JIU degree program, <span className="font-bold">except for English proficiency,</span> apply to our <a href="#" className="text-purple-500 font-semibold hover:underline">International Pathway Program</a>!
                         </p>
                     </div>
                     <div className="space-y-4">

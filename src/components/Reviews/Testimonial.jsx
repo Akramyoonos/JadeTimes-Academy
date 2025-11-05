@@ -12,7 +12,7 @@ const Testimonial = () => {
             the camera – a lot! Having that
             experience makes you comfortable
             to be in front of the camera. Once
-            you get out of here [NYFA] you
+            you get out of here [JIU] you
             know everything.`,
       author: "Manuel Garcia-Rulfo",
       title: "Filmmaking",

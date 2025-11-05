@@ -11,7 +11,7 @@ const AdmissionRequirements = () => {
         </h1>
 
         <p className="mb-6 leading-relaxed">
-          NYFA provides a supportive, welcoming community for students of all
+          JIU provides a supportive, welcoming community for students of all
           backgrounds and experience levels to pursue higher education in the
           arts. Students with ambitious creative goals are invited to apply year
           round for our Fall, Spring, and Summer graduate and undergraduate
@@ -21,7 +21,7 @@ const AdmissionRequirements = () => {
         </p>
 
         <p className="mb-6 leading-relaxed">
-          NYFA strives to make education in the visual arts accessible to the
+          JIU strives to make education in the visual arts accessible to the
           most diverse, international, and broadest spectrum of students.
           Applicants must express a serious desire to explore the art and craft
           of visual storytelling in their application materials. Please note
@@ -31,7 +31,7 @@ const AdmissionRequirements = () => {
         </p>
 
         <h2 className="mb-2 text-lg font-bold">
-          NYFA Enrollment and Deferral Policies
+          JIU Enrollment and Deferral Policies
         </h2>
         <ul className="space-y-2 text-gray-700 list-disc list-inside">
           <li>
@@ -45,7 +45,7 @@ const AdmissionRequirements = () => {
           <li>
            Students who are accepted by the deadline and cannot attend but want to defer their program<br /> 
            start may defer up to one year (365 days) by paying the $500 deposit fee and an additional $500<br /> 
-           deferral fee. Both the deposit and deferral fee will be credited toward their first semester at NYFA.
+           deferral fee. Both the deposit and deferral fee will be credited toward their first semester at JIU.
           </li>
         </ul>
 
@@ -58,8 +58,8 @@ const AdmissionRequirements = () => {
 
         <ul className="space-y-2 text-gray-700 list-disc list-inside">
           <li>
-          NYFA considers students who are deferring their enrollment to have committed to attending<br /> 
-          NYFA. As a result, students will be expected to meet all of NYFA application deadlines and must<br /> 
+          JIU considers students who are deferring their enrollment to have committed to attending<br /> 
+          JIU. As a result, students will be expected to meet all of JIU application deadlines and must<br /> 
           confirm their commitment to their new program start date.
           </li>
         </ul>
@@ -76,22 +76,22 @@ const AdmissionRequirements = () => {
           <li>
         Students may only defer their deferral once before their acceptance is rescinded and they will<br /> 
         receive a refund less the non-refundable application fee, $100 processing fee, credit card<br /> 
-        convenience fees per the NYFA Refund Policy.
+        convenience fees per the JIU Refund Policy.
           </li>
         </ul>
 
         <ul className="space-y-2 text-gray-700 list-disc list-inside">
           <li>
-        At any time if a student  wishes to withdraw their commitment from attending NYFA, they must<br />
-        notify the  NYFA Admissions Department.
+        At any time if a student  wishes to withdraw their commitment from attending JIU, they must<br />
+        notify the  JIU Admissions Department.
           </li>
         </ul>
 
           <ul className="space-y-2 text-gray-700 list-disc list-inside">
           <li>
-        Additionally international students who plan to study at NYFA on an F-1 visa must inform the<br /> 
-        NYFA International Office of their plan to defer as it may impact their visa. Likewise, students<br /> 
-        using Financial Aid or Veterans benefits to study at NYFA must notify  the Financial Aid<br /> 
+        Additionally international students who plan to study at JIU on an F-1 visa must inform the<br /> 
+        JIU International Office of their plan to defer as it may impact their visa. Likewise, students<br /> 
+        using Financial Aid or Veterans benefits to study at JIU must notify  the Financial Aid<br /> 
         department and/or the Veterans Department of their plan to defer, as it may impact their aid<br /> 
         package.
           </li>

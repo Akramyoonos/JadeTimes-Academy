@@ -5,7 +5,7 @@ import { country_list } from '../../data/countries';
 // Update this path to where you have saved the image in your project.
 import studentImage from '../../assets/Images/request-info-1920x857-1.webp'; 
 
-const NyfaRequestInfo = () => {
+const RequestInfo = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -239,4 +239,4 @@ const NyfaRequestInfo = () => {
   );
 };
 
-export default NyfaRequestInfo;
+export default RequestInfo;

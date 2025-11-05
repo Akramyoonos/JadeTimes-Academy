@@ -77,7 +77,7 @@ const CleryAct = () => {
           <p className="mb-6">
             The Higher Education Opportunity Act of 2008 requires institutions, with on-campus housing, to publish an
             Annual Fire Safety Report that contains information about fire safety policies and procedures, and
-            statistics for fires occurring in on-campus residential facilities. For the NYFA campuses that have
+            statistics for fires occurring in on-campus residential facilities. For the JIU campuses that have
             on-campus housing, the Annual Fire Safety Report is included in the Annual Security Report.
           </p>
 
@@ -114,7 +114,7 @@ const CleryAct = () => {
           </ul>
 
           <p className="mt-6 italic text-gray-600">
-            NYFA annual crime statistics are submitted to the US Department of Education (ED).
+            JIU annual crime statistics are submitted to the US Department of Education (ED).
             You can view these annual crime statistics on the ED website{' '}
             <a href="#" className="text-fuchsia-700 hover:underline">here</a>.
           </p>
@@ -138,10 +138,10 @@ const CleryAct = () => {
   <div className="mb-10">
     <h2 className="mb-2 text-2xl font-semibold text-black">Drug Free Policy</h2>
     <p className="mb-3">
-      Please review <a href="#" className="text-fuchsia-700 hover:underline">NYFA’s drug free policy here.</a>
+      Please review <a href="#" className="text-fuchsia-700 hover:underline">JIU’s drug free policy here.</a>
     </p>
     <a href="#" className="font-medium text-fuchsia-700 hover:underline">
-      &gt;&gt; Download the NYFA Drug-Free School Policy as PDF
+      &gt;&gt; Download the JIU Drug-Free School Policy as PDF
     </a>
   </div>
 

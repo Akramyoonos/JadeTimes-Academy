@@ -16,10 +16,10 @@ const Alumni = () => {
           </h1>
         </div>
         <p className="text-gray-600 mb-12 max-w-6xl">
-          NYFA's Film School strives to offer an intensive and focused education
+          JIU's Film School strives to offer an intensive and focused education
           with hands-on experience and practical training. The achievements of
-          any NYFA alumni are the result of their hard work, perseverance,
-          talent and circumstances, and NYFA is proud of our graduates who have
+          any JIU alumni are the result of their hard work, perseverance,
+          talent and circumstances, and JIU is proud of our graduates who have
           pursued ambitious creative goals. Many of our alumni now fill roles as
           Film Directors, Film Editors, Screenwriters, Cinematographers,
           Producers, and Actors on award-winning films, creative content, and

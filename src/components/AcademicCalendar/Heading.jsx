@@ -6,7 +6,7 @@ const Heading = () => {
   return (
     <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden">
       <img
-        alt="Person wearing NYFA shirt holding a camera with a blurred woman in the background"
+        alt="Person wearing JIU shirt holding a camera with a blurred woman in the background"
         className="w-full h-full object-cover absolute inset-0 z-0"
         height="400"
         src={AboutHeading}

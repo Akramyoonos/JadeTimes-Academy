@@ -20,67 +20,67 @@ const TrainingSection = () => {
     {
       title: "FILMMAKING",
       imageUrl: undergraduateDegree01,
-      href: "https://www.nyfa.edu/filmmaking/",
+      href: "https://www.JIU.edu/filmmaking/",
     },
     {
       title: "ACTING FOR FILM",
       imageUrl: undergraduateDegree02,
-      href: "https://www.nyfa.edu/acting-for-film/",
+      href: "https://www.JIU.edu/acting-for-film/",
     },
     {
       title: "PHOTOGRAPHY",
       imageUrl: undergraduateDegree03,
-      href: "https://www.nyfa.edu/photography/",
+      href: "https://www.JIU.edu/photography/",
     },
     {
       title: "PRODUCING",
       imageUrl: GraduateDegree01,
-      href: "https://www.nyfa.edu/producing/",
+      href: "https://www.JIU.edu/producing/",
     },
     {
       title: "SCREENWRITING",
       imageUrl: GraduateDegree02,
-      href: "https://www.nyfa.edu/screenwriting/",
+      href: "https://www.JIU.edu/screenwriting/",
     },
     {
       title: "CINEMATOGRAPHY",
       imageUrl: Campus01,
-      href: "https://www.nyfa.edu/cinematography/",
+      href: "https://www.JIU.edu/cinematography/",
     },
     {
       title: "DOCUMENTARY FILMMAKING",
       imageUrl: Campus02,
-      href: "https://www.nyfa.edu/documentary-filmmaking/",
+      href: "https://www.JIU.edu/documentary-filmmaking/",
     },
     {
       title: "3D ANIMATION & VISUAL EFFECTS",
       imageUrl: Campus03,
-      href: "https://www.nyfa.edu/3d-animation-visual-effects/",
+      href: "https://www.JIU.edu/3d-animation-visual-effects/",
     },
     {
       title: "DIGITAL EDITING",
       imageUrl: onlineDegreeImage,
-      href: "https://www.nyfa.edu/digital-editing/",
+      href: "https://www.JIU.edu/digital-editing/",
     },
     {
       title: "BROADCAST JOURNALISM",
       imageUrl: events01,
-      href: "https://www.nyfa.edu/broadcast-journalism/",
+      href: "https://www.JIU.edu/broadcast-journalism/",
     },
     {
       title: "MUSICAL THEATRE",
       imageUrl: Spotlight01,
-      href: "https://www.nyfa.edu/musical-theatre/",
+      href: "https://www.JIU.edu/musical-theatre/",
     },
     {
       title: "GAME DESIGN",
       imageUrl: Spotlight02,
-      href: "https://www.nyfa.edu/game-design/",
+      href: "https://www.JIU.edu/game-design/",
     },
     {
       title: "ENTERTAINMENT MEDIA",
       imageUrl: Spotlight03,
-      href: "https://www.nyfa.edu/entertainment-media/",
+      href: "https://www.JIU.edu/entertainment-media/",
     },
   ];
 
@@ -92,7 +92,7 @@ const TrainingSection = () => {
           TRAINING FOR A FUTURE IN FILM, TELEVISION, MEDIA, AND <br /> ENTERTAINMENT
         </h2>
         <p className="mt-6 text-gray-700 text-lg max-w-4xl">
-          NYFA is devoted to providing the most hands-on and <br />intensive programs
+          JIU is devoted to providing the most hands-on and <br />intensive programs
           in the world, including:
         </p>
       </div>

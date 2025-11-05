@@ -7,7 +7,7 @@ const StudentLife = () => {
       <div className="flex items-center">
         <div className="w-1.5 h-16 bg-fuchsia-600 mr-4 md:mr-6 lg:mr-8"></div>
         <h2 className="text-xl md:text-2xl lg:text-3xl font-normal leading-tight">
-          STUDENT LIFE AT NYFA
+          STUDENT LIFE AT JIU
         </h2>
       </div>
 
@@ -16,7 +16,7 @@ const StudentLife = () => {
       </p>
 
       <p className="mt-4 md:mt-6 lg:mt-8 text-base md:text-lg lg:text-xl font-light leading-relaxed">
-        NYFA students come from every walk of life and from dozens of countries across the globe. We celebrate our multicultural atmosphere and the thrilling<br /> exchange of ideas, perspectives, and activities it inspires.
+        JIU students come from every walk of life and from dozens of countries across the globe. We celebrate our multicultural atmosphere and the thrilling<br /> exchange of ideas, perspectives, and activities it inspires.
       </p>
     </div>
   );
