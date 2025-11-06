@@ -16,11 +16,11 @@ const Heading = () => {
                    <span className="text-gray-300">/</span>
                    <a href="/" className="font-semibold hover:underline">ACADEMY SPOTLIGHT</a>
                    <span className="text-gray-300">/</span>
-                   <a className="">JADE TIMES Conferences</a>
+                   <a className="">JADETIMES Conferences</a>
                  </nav>
              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center text-white uppercase">
                  <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-semibold tracking-wide text-shadow-lg">
-                   JADE TIMES Conferences
+                   JADETIMES Conferences
                  </h1>
              </div>
            </div>

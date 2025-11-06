@@ -140,12 +140,12 @@ function AppInner() {
       <main key={location.pathname} className="min-h-[80vh] animate-advanced-fade-in">
         <Routes>
           <Route path="/"                              element={<Home_page />} />
-          <Route path="/ABOUT-US/"                         element={<About_page />} />
-          <Route path="/programfinder/*"               element={<Programfinder_page />} />
-          <Route path="/admissions"                    element={<Admissions_page />} />
+          <Route path="/About-Us/"                         element={<About_page />} />
+          <Route path="/program-Finder/"               element={<Programfinder_page />} />
+          <Route path="/Admissions/"                    element={<Admissions_page />} />
           <Route path="/blog/*"                        element={<Blog />} />
           <Route path="/events/list/*"                      element={<Events />} />
-          <Route path="/contact_us"                    element={<Contact_Us />} />
+          <Route path="/Contact-Us"                    element={<Contact_Us />} />
           <Route path="/alumni"                        element={<Alumni />} />
           <Route path="/student-resources/"              element={<StudentResources />} />
           <Route path="/Degree-Programs/*"          element={<DegreeProgramsPage />} />
@@ -153,24 +153,24 @@ function AppInner() {
           <Route path="/career-and-alumni-services/*"     element={<CareerAndAlumniServices />} />
           <Route path="/faculty-directory/*"        element={<FacultyDirectoryPage />} />
           <Route path="/current-student-resources/*"        element={<StudentResource_page />} />
-          <Route path="/JIU-history/*"                element={<History_Page />} />
+          <Route path="/The-History-Of-JIU/"                element={<History_Page />} />
           <Route path="/ScholarshipAndGrants_page/*"   element={<ScholarshipAndGrants_page />} />
-          <Route path="/student-finances/scholarships-and-grants/*"   element={<ScholarshipAndGrants_page />} />
+          <Route path="/scholarships-and-grants/*"   element={<ScholarshipAndGrants_page />} />
           <Route path="/policy/*"           element={<PrivacyPolicy_Page />} />
           <Route path="/JIU-membership/*"               element={<Membership_Page />} />
           <Route path="/request-info/*"               element={<RequestInfo_Page />} />
           <Route path="/apply-now/*"               element={<ApplyJIU_Page />} />
           <Route path="/mission-and-purpose/*"      element={<MissionAndPurpose_Page />} />
-          <Route path="/on-campus/visit-us/*"                element={<VisitUs_Page />} />
+          <Route path="/visit-us/*"                element={<VisitUs_Page />} />
           <Route path="/Accreditation/*"          element={<Accreditation_Page />} />
           <Route path="/admissions-requirements/*"  element={<AdmissionRequirements_Page />} />
-          <Route path="/admissions/veterans-military-dependent-students/*"  element={<MilitaryDependentStudents_Page />} />
+          <Route path="/military-dependent-students/*"  element={<MilitaryDependentStudents_Page />} />
           <Route path="/Areas-Of-Study/*"           element={<DatesTuition_Page />} />
           <Route path="/student-life/*"       element={<NYFAStudentLife_Page />} />
           <Route path="/Faq/*"                     element={<Faq_Page />} />
-          <Route path="/important-dates/*"    element={<ApplicationDeadlines_Page />} />
-          <Route path="/admissions/international-students/*"    element={<InternationalStudents_Page />} />
-           <Route path="/who-we-are/leadership/*"       element={<LeadershipAtJIU_Page />} />
+          <Route path="/Application-Deadlines/"    element={<ApplicationDeadlines_Page />} />
+          <Route path="/international-students/*"    element={<InternationalStudents_Page />} />
+           <Route path="/leadership-At-JIU/*"       element={<LeadershipAtJIU_Page />} />
             <Route path="/who-we-are/leadership/board-of-directors/*"       element={<BoardOfDirectors_Page />} />
             <Route path="/cabinet/*"       element={<Cabinet_Page />} />
             <Route path="/JIU-in-the-news/*"       element={<JIUNews_Page />} />
@@ -185,7 +185,7 @@ function AppInner() {
             <Route path="/HEADLINES/" element={<HeadlinesPosts_Page />} />
             <Route path="/Student-Highlights/" element={<StudentHighlightsPosts_Page />} />
             <Route path="/disability-and-accessibility/" element={<Disability_Page />} />
-            <Route path="/on-campus/campus-safety/" element={<CampusSafety_Page />} />
+            <Route path="/campus-safety/" element={<CampusSafety_Page />} />
             <Route path="/program-dates-and-tuition/" element={<ProgramDatesAndTuition_Page />} />
             <Route path="/film/*" element={<Film_Page />} />
             <Route path="/Jadetimes-International-University-(JIU):Shaping-the-Future-of-Online-Education/*" element={<CardsData1_Page />} />
@@ -202,7 +202,7 @@ function AppInner() {
             <Route path="/Color-Grading-&-Correction/*" element={<Degree4_Page />} />
             <Route path="/Producing-&-Financing-Films/*" element={<Degree5_Page />} />
             <Route path="/Terms-Conditions/*" element={<TermsConditions_Page />} />
-            <Route path="/Course-Catalogs/*" element={<CourseCatalogs_Page />} />
+            <Route path="/JIU-Course-Catalogs/*" element={<CourseCatalogs_Page />} />
             <Route path="/Academic-Calendar/*" element={<AcademicCalendar_Page />} />
             <Route path="/Job-Positions/*" element={<JobPositions_Page />} />
             <Route path="/Media-Arts/*" element={<MediaArts_Page />} />

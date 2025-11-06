@@ -19,7 +19,7 @@ const Heading = () => {
               <span className="text-gray-300">/</span>
               <Link to="/discover"><span className="font-semibold hover:underline">WHO WE ARE</span></Link>
               <span className="text-gray-300">/</span>
-              <Link to="/who-we-are/leadership/"><span className="font-semibold hover:underline">LEADERSHIP & ADMINISTRATION</span></Link>
+              <Link to="/leadership-At-JIU/"><span className="font-semibold hover:underline">LEADERSHIP & ADMINISTRATION</span></Link>
               <span className="text-gray-300">/</span>
               <span>Board of Directors</span>
             </nav>
