@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import backgroundImageUrl from '../../assets/Images/StudentResourceHeading.webp';
 
 const Heading = () => {
@@ -8,11 +9,12 @@ const Heading = () => {
             className="relative h-100 bg-cover bg-center" 
             style={{ backgroundImage: `url('${backgroundImageUrl}')` }}
         >
-            <div className="absolute inset-0 bg-black/60"></div>
-            
-            <header className="absolute top-0 left-0 p-8 pl-22">
-                <p className="text-white text-sm tracking-widest ">JIU / STUDENT RESOURCES</p>
-            </header>
+            <div className="absolute inset-0 bg-black opacity-50 z-10"></div>            
+            <nav className="absolute z-20 flex items-center px-1 pr-1 py-2 space-x-3 font-sans text-sm text-white uppercase rounded-full top-8 left-8 sm:text-base bg-opacity-30">
+                    <Link to="/"><span className="font-semibold hover:underline">JIU</span></Link>
+                    <span className="text-gray-300">/</span>
+                    <span>Current Students</span>
+                  </nav>
 
             <main className="relative z-10 h-full flex items-center justify-center text-center text-white">
                 <div>

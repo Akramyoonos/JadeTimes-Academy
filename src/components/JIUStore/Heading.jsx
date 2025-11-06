@@ -14,9 +14,9 @@ const Heading = () => {
               <nav className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20 flex flex-wrap items-center space-x-2 uppercase text-white text-xs sm:text-sm font-sans bg-opacity-30 px-3 sm:px-4 py-2 rounded-full">
                    <a href="/" className="font-semibold hover:underline">JIU</a>
                    <span className="text-gray-300">/</span>
-                   <a href="/blog/" className="font-semibold hover:underline">Discover JIU</a>
+                   <a href="/" className="font-semibold hover:underline">Discover JIU</a>
                    <span className="text-gray-300">/</span>
-                   <a href="/jiu-speaker-event-article" className="hover:underline">NEWS AND CULTURE</a>
+                   <a  className="">NEWS AND CULTURE</a>
                  </nav>
               </div>
   )

@@ -12,8 +12,6 @@ import JiuCABINET10 from '../../assets/Images/JiuCABINET10.webp';
 import JiuCABINET11 from '../../assets/Images/JiuCABINET11.webp';
 import JiuCABINET12 from '../../assets/Images/JiuCABINET12.webp';
 
-// --- DATA FOR THE CABINET MEMBERS ---
-// NOTE: Replace the `imageUrl` placeholders with your actual image paths.
 const cabinetMembers = [
     {
         name: 'Geeth L. Roman',
@@ -54,7 +52,7 @@ const cabinetMembers = [
     },
     {
         name: 'Dr. Ehi Iden',
-        title: 'Chair of Liberal Arts & Sciences',
+        title: 'Chair of Liberal Arts & Sciences',
         imageUrl: JiuCABINET07,
         description: 'Rosa Belerique leads the academy\'s efforts in research and institutional effectiveness...',
     },
@@ -90,196 +88,43 @@ const cabinetMembers = [
     },
 ];
 
-// --- STYLES OBJECT ---
-// All styles are defined here as JavaScript objects for portability.
-const styles = {
-    // Main container and layout
-    pageContainer: {
-        fontFamily: 'sans-serif',
-        backgroundColor: '#ffffff',
-    },
-    container: {
-        maxWidth: '1280px',
-        margin: '0 auto',
-        padding: '3rem 1rem',
-    },
-     headingContainer: {
-        display: 'flex',
-        alignItems: 'center',
-        marginBottom: '2rem',
-    },
-    headingLine: {
-        width: '4px',
-        height: '40px',
-        backgroundColor: '#25A9E0', // A nice light blue
-        marginRight: '1rem',
-    },
-    mainHeading: {
-        fontSize: '2.0rem',
-        fontWeight: 'normal',
-        color: '#000000',
-        letterSpacing: '0.1em',
-        margin: 0, // Remove default margin from h1
-    },
-    grid: {
-        display: 'grid',
-        gap: '2rem',
-    },
-    // Media queries are handled inside the main component for simplicity
-    
-    // MemberCard styles
-    memberCard: {
-        position: 'relative',
-        cursor: 'pointer',
-        overflow: 'hidden',
-        borderRadius: '8px', // Add rounded corners
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-        transition: 'transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out',
-    },
-    memberImage: {
-        width: '100%',
-        height: '400px', // A fixed height for uniform cards
-        display: 'block',
-        objectFit: 'cover', // Ensures the image covers the area without distortion
-        objectPosition: 'center', // Center the image within the frame
-    },
-    memberInfo: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        background: 'linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0) 100%)',
-        color: 'white',
-        padding: '2.5rem 1rem 1rem 1rem',
-    },
-    memberName: {
-        fontSize: '1.25rem',
-        fontWeight: 'bold',
-        textShadow: '1px 1px 3px rgba(0,0,0,0.7)',
-    },
-    memberTitle: {
-        fontSize: '0.9rem',
-        textShadow: '1px 1px 3px rgba(0,0,0,0.5)',
-        opacity: 0.9,
-    },
-
-    // Modal styles
-    modalOverlay: {
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.75)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        zIndex: 1000,
-        padding: '1rem',
-    },
-    modalContent: {
-        backgroundColor: 'white',
-        padding: '30px 40px',
-        borderRadius: '8px',
-        maxWidth: '600px',
-        width: '100%',
-        position: 'relative',
-        boxShadow: '0 5px 15px rgba(0, 0, 0, 0.3)',
-        maxHeight: '90vh',
-        overflowY: 'auto',
-    },
-    modalCloseButton: {
-        position: 'absolute',
-        top: '15px',
-        right: '15px',
-        background: 'none',
-        border: 'none',
-        fontSize: '2rem',
-        fontWeight: 'bold',
-        cursor: 'pointer',
-        color: '#333',
-        lineHeight: 1,
-    },
-    modalBody: {
-        paddingLeft: '25px',
-    },
-    modalTitleBar: {
-        position: 'absolute',
-        left: 0,
-        top: '30px',
-        width: '5px',
-        height: '50px',
-        backgroundColor: '#d80073',
-    },
-    modalName: {
-        fontSize: '2.25rem',
-        fontWeight: 600,
-        margin: 0,
-        color: '#222',
-        lineHeight: 1.2,
-    },
-    modalTitle: {
-        fontSize: '1.1rem',
-        color: '#555',
-        marginTop: '5px',
-        marginBottom: '25px',
-        fontWeight: 500,
-    },
-    modalDescription: {
-        fontSize: '1rem',
-        lineHeight: 1.6,
-        color: '#444',
-    },
-};
-
-// --- REUSABLE MODAL COMPONENT ---
 const Modal = ({ member, onClose }) => {
     if (!member) return null;
 
     return (
-        <div style={styles.modalOverlay} onClick={onClose}>
-            <div style={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-                <button style={styles.modalCloseButton} onClick={onClose}>&times;</button>
-                <div style={styles.modalBody}>
-                    <div style={styles.modalTitleBar}></div>
-                    <h2 style={styles.modalName}>{member.name}</h2>
-                    <h3 style={styles.modalTitle}>{member.title}</h3>
-                    <p style={styles.modalDescription}>{member.description}</p>
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4" onClick={onClose}>
+            <div className="bg-white rounded-lg shadow-lg max-w-2xl w-full relative max-h-[90vh] overflow-y-auto p-8" onClick={(e) => e.stopPropagation()}>
+                <button className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold" onClick={onClose}>&times;</button>
+                <div className="pl-6">
+                    <div className="absolute left-0 top-8 w-1.5 h-12 bg-purple-600"></div>
+                    <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 leading-tight">{member.name}</h2>
+                    <h3 className="text-lg text-gray-600 mt-1 mb-6 font-medium">{member.title}</h3>
+                    <p className="text-base text-gray-700 leading-relaxed">{member.description}</p>
                 </div>
             </div>
         </div>
     );
 };
 
-// --- REUSABLE CARD COMPONENT ---
 const MemberCard = ({ member, onClick }) => {
-    // Add hover effect state
     const [isHovered, setIsHovered] = useState(false);
 
-    const cardStyle = {
-        ...styles.memberCard,
-        transform: isHovered ? 'scale(1.03)' : 'scale(1)',
-        boxShadow: isHovered ? '0 10px 20px rgba(0, 0, 0, 0.2)' : '0 4px 6px rgba(0, 0, 0, 0.1)',
-    };
-    
     return (
         <div 
-            style={cardStyle}
+            className={`relative cursor-pointer overflow-hidden rounded-lg shadow-md transition-transform duration-200 ease-in-out ${isHovered ? 'transform scale-105 shadow-xl' : 'shadow-lg'}`}
             onClick={() => onClick(member)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <img src={member.imageUrl} alt={`Portrait of ${member.name}`} style={styles.memberImage} />
-            <div style={styles.memberInfo}>
-                <h2 style={styles.memberName}>{member.name}</h2>
-                {member.title && <p style={styles.memberTitle}>{member.title}</p>}
+            <img src={member.imageUrl} alt={`Portrait of ${member.name}`} className="w-full h-96 object-cover object-center" />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                <h2 className="text-xl font-bold text-white shadow-md">{member.name}</h2>
+                {member.title && <p className="text-sm text-white opacity-90 shadow-md">{member.title}</p>}
             </div>
         </div>
     );
 };
 
-
-// --- MAIN CABINET COMPONENT ---
 const JIUAdministration = () => {
   const [selectedMember, setSelectedMember] = useState(null);
 
@@ -292,33 +137,14 @@ const JIUAdministration = () => {
   };
 
   return (
-    <div style={styles.pageContainer}>
-      <style>
-        {`
-          .administration-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(1, 1fr);
-          }
-          @media (min-width: 640px) {
-            .administration-grid {
-              grid-template-columns: repeat(2, 1fr);
-            }
-          }
-          @media (min-width: 1024px) {
-            .administration-grid {
-              grid-template-columns: repeat(3, 1fr);
-            }
-          }
-        `}
-      </style>
-      <div style={styles.container}>
-        <div style={styles.headingContainer}>
-          <div style={styles.headingLine}></div>
-          <h1 style={styles.mainHeading}>ADMINISTRATION MEMBERS</h1>
+    <div className="font-sans bg-white">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center mb-8">
+          <div className="w-1 h-10 bg-blue-500 mr-4"></div>
+          <h1 className="text-3xl font-normal text-black tracking-wider m-0">ADMINISTRATION MEMBERS</h1>
         </div>
 
-        <div className="administration-grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {cabinetMembers.map((member) => (
             <MemberCard key={member.name} member={member} onClick={handleCardClick} />
           ))}

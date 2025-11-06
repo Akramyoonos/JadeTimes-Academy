@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 
 const locations = [
   { id: 'los-angeles', name: 'LOS ANGELES', color: 'bg-yellow-400' },
@@ -29,12 +30,14 @@ const Catalogs = () => {
   return (
     <div className="min-h-screen bg-white text-gray-800 p-4 sm:p-8 relative scroll-smooth">
       {/* --- Breadcrumb Navigation --- */}
-      <div className="text-sm font-light uppercase tracking-wider mb-20 md:mb-32 lg:mb-40">
-        <span className="font-medium text-gray-800 cursor-pointer hover:underline">JIU</span>
-        <span className="mx-2 text-gray-400">/</span>
-        <span className="font-medium text-gray-800 cursor-pointer hover:underline">WHO WE ARE</span>
-        <span className="mx-2 text-gray-400">/</span>
-        <span className="text-gray-500 cursor-default">JIU CATALOGS</span>
+      <div className="text-sm  uppercase tracking-wider mb-20 md:mb-32 lg:mb-40">
+        <nav className="absolute z-20 flex items-center px-1 pr-1 py-2 space-x-3 font-sans text-sm text-black uppercase rounded-full top-8 left-8 sm:text-base bg-opacity-30">
+                <Link to="/"><span className="font-semibold hover:underline">JIU</span></Link>
+                <span className="text-black">/</span>
+                <Link to="/discover"><span className="font-semibold hover:underline">WHO WE ARE</span></Link>
+                <span className="text-black">/</span>
+                <span>JIU CATALOGS</span>
+              </nav>
       </div>
 
       {/* --- Main Title --- */}

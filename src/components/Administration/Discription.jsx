@@ -5,7 +5,7 @@ const Discription = () => {
     return (
         // Main Component Container
         // Added some padding for standalone viewing; adjust as needed within your app.
-        <div className="relative bg-white font-sans w-full pb-6 pt-18 px-6 sm:px-6 md:px-6 lg:px-35">
+        <div className="relative bg-white font-sans w-full pb-6 pt-20 px-6 sm:px-6 md:px-6 lg:px-36">
 
 
 

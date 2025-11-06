@@ -108,7 +108,7 @@ const megaMenus = {
       { text: "ONLINE PROGRAMS", href: "/online-programs/" },
       { text: "CORPORATE INTERNSHIP/TRAINING", href: "/Corporate-Internship-Training/" },
     ],
-    "JADETIMES CONFERENCES & JOURNALS": [
+    "CONFERENCES & JOURNALS": [
       { text: "VIEW JADETIMES JOURNALS", href: "http://jadetimesjournals.com/" },
       { text: "JOIN UPCOMING CONFERENCES", href: "/Jadetimes-Conferences/" },
       { text: "SUBMIT RESEARCH PAPERS", href: "/Jadetimes-Conferences/" },
@@ -120,7 +120,7 @@ const megaMenus = {
       { text: "APPLICATION DEADLINES", href: "/important-dates/" },
       { text: "ADMISSIONS REQUIREMENTS", href: "/admissions-requirements/" },
       { text: "INTERNATIONAL STUDENTS", href: "/admissions/international-students/" },
-      { text: "VETERANS & MILITARY DEPENDENT STUDENTS", href: "/admissions/veterans-military-dependent-students/" },
+      { text: "MILITARY DEPENDENT STUDENTS", href: "/admissions/veterans-military-dependent-students/" },
       { text: "MEET JIU NEAR YOU", href: "/events/list/" },
     ],
     "FINANCES": [

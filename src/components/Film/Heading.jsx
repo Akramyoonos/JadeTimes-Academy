@@ -18,8 +18,6 @@ const Heading = () => {
         <span className="text-gray-300">/</span>
         <Link to="/academics"><span className="font-semibold hover:underline">ACADEMICS</span></Link>
         <span className="text-gray-300">/</span>
-        <Link to="/dates-tuition/"><span className="font-semibold hover:underline">AREAS OF STUDY</span></Link>
-        <span className="text-gray-300">/</span>
         <span>Film </span>
       </nav>
       <h1 className="absolute z-20 font-sans text-2xl font-semibold tracking-wide text-white uppercase -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 sm:text-3xl md:text-4xl lg:text-5xl text-shadow-lg">
