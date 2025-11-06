@@ -3,7 +3,7 @@ import BlogHeadingImage from '../../assets/Images/JIUStoreHeadingImg01.webp' // 
 
 const Heading = () => {
   return (
-    <div className="relative w-full h-[240px] sm:h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden">
+    <div className="relative w-full h-60 sm:h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] overflow-hidden">
              <img
                alt="JIU students at a speaker event" // Updated alt text
                className="w-full h-full object-cover absolute inset-0 z-0"              

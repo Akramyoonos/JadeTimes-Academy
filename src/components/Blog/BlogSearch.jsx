@@ -9,11 +9,11 @@ const PostCard = ({ post }) => {
                 <img src={imageUrl} alt={title} className="w-full h-56 object-cover" />
                 <div className="absolute inset-0 bg-black/20"></div>
             </div>
-            <div className="p-6 flex flex-col flex-grow">
+            <div className="p-6 flex flex-col grow">
                 <p className="text-sm font-semibold text-purple-600 tracking-wider uppercase">{category}</p>
                 <p className="text-xs text-gray-500 font-medium mt-1">{date}</p>
                 <h3 className="text-xl font-bold text-gray-900 mt-3">{title}</h3>
-                <p className="text-gray-600 text-sm mt-2 flex-grow">{excerpt}</p>
+                <p className="text-gray-600 text-sm mt-2 grow">{excerpt}</p>
                 <a href={articleUrl} className="text-purple-700 font-bold text-sm mt-4 inline-block group self-start">
                     READ MORE 
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-1.5"> &rarr;</span>
@@ -97,7 +97,7 @@ const BlogSearch = () => {
                                 alt={title}
                                 className="w-full h-[550px] object-cover transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent"></div>
+                            <div className="absolute inset-0 bg-linear-to-t from-black/75 to-transparent"></div>
                         </div>
 
                         <div className="lg:col-span-2">
