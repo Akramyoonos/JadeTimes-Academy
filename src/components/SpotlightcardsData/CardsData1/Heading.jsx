@@ -11,12 +11,12 @@ const Heading = () => {
 
              />
              <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
-              <nav className="absolute z-20 flex flex-wrap items-center px-3 py-2 space-x-2 font-sans text-xs text-white uppercase rounded-full top-4 left-4 sm:top-8 sm:left-8 sm:text-sm bg-opacity-30 sm:px-4">
+              <nav className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20 flex flex-wrap items-center space-x-2 uppercase text-white text-xs sm:text-sm font-sans bg-opacity-30 px-3 sm:px-4 py-2 rounded-full">
                    <a href="/" className="font-semibold hover:underline">JIU</a>
                    <span className="text-gray-300">/</span>
                    <a href="/blog/" className="font-semibold hover:underline">JIU Blogs</a>
                    <span className="text-gray-300">/</span>
-                   <a href="/jiu-speaker-event-article" className="hover:underline">Recent</a>
+                   <a className="">Recent</a>
                  </nav>
              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center text-white uppercase">
                 <h1 className="max-w-5xl font-sans text-3xl font-semibold tracking-wide sm:text-4xl md:text-5xl lg:text-6xl text-shadow-lg">

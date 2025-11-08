@@ -13,7 +13,7 @@ const Heading = () => {
                width="1920"
              />
              <div className="absolute inset-0 z-10 bg-black opacity-50"></div>
-             <nav className="absolute z-20 flex items-center px-1 pr-1 py-2 space-x-3 font-sans text-sm text-white uppercase rounded-full top-8 left-8 sm:text-base bg-opacity-30">
+             <nav className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20 flex flex-wrap items-center space-x-2 uppercase text-white text-xs sm:text-sm font-sans bg-opacity-30 px-3 sm:px-4 py-2 rounded-full">
                      <Link to="/"><span className="font-semibold hover:underline">JIU</span></Link>
                      <span className="text-gray-300">/</span>
                      <Link to="/discover"><span className="font-semibold hover:underline">NEWS AND CULTURE</span></Link>
