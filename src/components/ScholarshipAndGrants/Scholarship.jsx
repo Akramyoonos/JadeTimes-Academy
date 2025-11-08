@@ -7,8 +7,8 @@ const Scholarship = () => {
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-3/4 lg:pr-8">
             <div className="flex items-start mb-8">
-              <div className="w-1 h-12 mr-4 bg-cyan-400"></div>
-              <h1 className="text-5xl font-light text-gray-700">SCHOLARSHIPS</h1>
+              <div className="w-1 h-10 mr-2 bg-cyan-400"></div>
+              <h1 className="text-4xl font-semibold text-gray-700">SCHOLARSHIPS</h1>
             </div>
 
             <div className="mb-12">
@@ -73,29 +73,8 @@ const Scholarship = () => {
 
           </div>
           <div className="w-full mt-8 lg:w-1/4 lg:mt-0">
-            {/* Right Sidebar */}
-          <aside className="flex-shrink-0 w-full mt-6 mb-6 lg:w-80 lg:mt-0">
-          <div className="border border-gray-200">
-            <div className="p-4 bg-gray-200 ">
-              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
-                RELATED LINKS
-              </h2>
-            </div>
-            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
-                Open House
-              </a>
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
-                Degree Programs
-              </a>
-              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
-                Program Dates & Tuition
-              </a>
-            </nav>
-          </div>
-        </aside>
            {/* Right Sidebar */}
-          <aside className="flex-shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
+          <aside className="shrink-0 w-full mt-6 lg:w-80 lg:mt-0">
           <div className="border border-gray-200">
             <div className="p-4 bg-gray-200 ">
               <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
