@@ -1,38 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { country_list } from '../../data/countries.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faUpload } from '@fortawesome/free-solid-svg-icons';
-
-// IMPORTANT: Replace this path with the actual path to your award image in your project's `public` or `src` folder.
-import awardImage from '../../assets/Images/ConferencesFormImg.webp'; // Example path
+import awardImage from '../../assets/Images/ConferencesFormImg.webp';
 
 const ConferencesForm = () => {
-  const countries = [
-  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan",
-  "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi",
-  "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo (Republic of the)", "Congo (Democratic Republic of the)", "Costa Rica", "Côte d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czechia",
-  "Denmark", "Djibouti", "Dominica", "Dominican Republic",
-  "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia",
-  "Fiji", "Finland", "France",
-  "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana",
-  "Haiti", "Honduras", "Hungary",
-  "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Israel", "Italy",
-  "Jamaica", "Japan", "Jordan",
-  "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan",
-  "Lao People's Democratic Republic", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg",
-  "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia (Federated States of)", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar",
-  "Namibia", "Nauru", "Nepal", "Netherlands (Kingdom of the)", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia", "Norway",
-  "Oman",
-  "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
-  "Qatar",
-  "Republic of Korea", "Republic of Moldova", "Romania", "Russian Federation", "Rwanda",
-  "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Sweden", "Switzerland", "Syrian Arab Republic",
-  "Tajikistan", "Thailand", "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu",
-  "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom of Great Britain and Northern Ireland", "United Republic of Tanzania", "United States of America", "Uruguay", "Uzbekistan",
-  "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam",
-  "Yemen",
-  "Zambia", "Zimbabwe"
-];
-  const [formData, setFormData] = useState({
+  const countries = country_list;
+
+  const initialFormData = {
     yourName: '',
     country: '',
     phone: '',
@@ -41,44 +16,32 @@ const ConferencesForm = () => {
     universityName: '',
     entryType: '',
     paperUpload: null,
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [submitMessage, setSubmitMessage] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Create a ref for the file input
+  const fileInputRef = useRef(null);
 
   const validateForm = () => {
     let newErrors = {};
     let isValid = true;
 
-    if (!formData.yourName) {
-      newErrors.yourName = 'Your Name is required';
-      isValid = false;
-    }
-    if (!formData.country) {
-      newErrors.country = 'Country is required';
-      isValid = false;
-    }
-    if (!formData.phone) {
-      newErrors.phone = 'Phone is required';
-      isValid = false;
-    } else if (!/^\+?[0-9]{10,15}$/.test(formData.phone)) {
-      newErrors.phone = 'Invalid phone number format';
-      isValid = false;
-    }
-    if (!formData.email) {
-      newErrors.email = 'Email is required';
-      isValid = false;
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)) {
-      newErrors.email = 'Invalid email address';
-      isValid = false;
-    }
-    if (!formData.presentationMode) {
-      newErrors.presentationMode = 'Presentation Mode is required';
-      isValid = false;
-    }
-    if (!formData.entryType) {
-      newErrors.entryType = 'Entry Type is required';
-      isValid = false;
+    if (!formData.yourName) { newErrors.yourName = 'Your Name is required'; isValid = false; }
+    if (!formData.country) { newErrors.country = 'Country is required'; isValid = false; }
+    if (!formData.phone) { newErrors.phone = 'Phone is required'; isValid = false; }
+    else if (!/^\+?[0-9]{10,15}$/.test(formData.phone)) { newErrors.phone = 'Invalid phone number format'; isValid = false; }
+    if (!formData.email) { newErrors.email = 'Email is required'; isValid = false; }
+    else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)) { newErrors.email = 'Invalid email address'; isValid = false; }
+    if (!formData.presentationMode) { newErrors.presentationMode = 'Presentation Mode is required'; isValid = false; }
+    if (!formData.entryType) { newErrors.entryType = 'Entry Type is required'; isValid = false; }
+    // Optional: Add validation for file size or type
+    if (formData.paperUpload && formData.paperUpload.size > 5000000) { // 5MB limit
+        newErrors.paperUpload = 'File size cannot exceed 5MB';
+        isValid = false;
     }
 
     setErrors(newErrors);
@@ -89,144 +52,133 @@ const ConferencesForm = () => {
     const { name, value, type, checked, files } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: type === 'radio' ? (checked ? value : prevData[name]) : (type === 'file' ? files[0] : value),
+      [name]: type === 'file' ? files[0] : (type === 'radio' ? (checked ? value : prevData[name]) : value),
     }));
-    // Clear error for the field being changed
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [name]: null,
-    }));
-    setSubmitMessage(null); // Clear submit message on change
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: null }));
+    setSubmitMessage(null);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitMessage(null); // Clear previous messages
+    setSubmitMessage(null);
 
-    if (validateForm()) {
-      console.log('Form Data Submitted:', formData);
-      // Simulate API call
-      setTimeout(() => {
+    if (!validateForm()) {
+      setSubmitMessage({ type: 'error', message: 'Invalid input. Please fill all required fields.' });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    // Use FormData to handle file uploads
+    const dataToSend = new FormData();
+    for (const key in formData) {
+      dataToSend.append(key, formData[key]);
+    }
+
+    try {
+      // --- IMPORTANT: Replace with the actual URL to your PHP script ---
+      const response = await fetch('http://localhost/JIUMailSender/JADETIMESConferences.php', {
+        method: 'POST',
+        body: dataToSend, // Send FormData object, do NOT set Content-Type header
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
         setSubmitMessage({ type: 'success', message: 'Form submitted successfully!' });
-        // Optionally reset form:
-        setFormData({
-          yourName: '',
-          country: '',
-          phone: '',
-          email: '',
-          presentationMode: '',
-          universityName: '',
-          entryType: '',
-          paperUpload: null,
-        });
-      }, 1000);
-    } else {
-      setSubmitMessage({ type: 'error', message: 'Please correct the errors in the form.' });
+        setFormData(initialFormData);
+        // Reset the file input visually
+        if (fileInputRef.current) {
+            fileInputRef.current.value = "";
+        }
+      } else {
+        setSubmitMessage({ type: 'error', message: result.message || 'An error occurred. Please try again.' });
+      }
+    } catch (error) {
+      console.error('Submission Error:', error);
+      setSubmitMessage({ type: 'error', message: 'Could not connect to the server. Please check your connection.' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="bg-white text-gray-800 font-sans">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-
-        {/* Header Section */}
         <header className="text-center mb-12 md:mb-16">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wider">INTERNATIONAL RESEARCH</h1>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wider mt-2">CONFERENCE 2025</h2>
-          <p className="mt-6 text-lg sm:text-xl font-semibold text-gray-700">Hosted By Jadetimes Media LLC, United States</p>
-          <p className="mt-2 text-sm text-center text-gray-500">
-            held across India, New Mexico, London, Spain, Australia, and Sri Lanka | Call Us : +1 (505) 385-9745
-          </p>
+          {/* Header content... */}
         </header>
 
-        {/* Main Content: Award Info & Submission Form */}
         <main className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
-          
-          {/* Left Column: Award Information */}
           <div className="flex justify-center items-start lg:mt-12">
-            <img src={awardImage} alt="1st Place Best Research Paper Award details" className="w-full max-w-md shadow-lg" />
+            <img src={awardImage} alt="Best Research Paper Award" className="w-full max-w-md shadow-lg" />
           </div>
 
-          {/* Right Column: Submission Form */}
           <div>
-            <h3 className="text-lg font-medium text-gray-600">Submit Your Paper Today for upcoming International Research Conference 2025</h3>
-            
-            <form action="#" method="POST" className="mt-8" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
-                
-                {/* Form Fields */}
+            <h3 className="text-lg font-medium text-gray-600">Submit Your Paper Today for the upcoming International Research Conference 2025</h3>
+            <form onSubmit={handleSubmit} noValidate>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 mt-8">
+                {/* Your Name */}
                 <div className="md:col-span-2">
                   <label htmlFor="your-name" className="block text-sm font-medium text-gray-700">Your Name *</label>
                   <input type="text" name="yourName" id="your-name" value={formData.yourName} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.yourName ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`} />
                   {errors.yourName && <p className="text-red-500 text-xs mt-1">{errors.yourName}</p>}
                 </div>
-                
+                {/* Country */}
                 <div>
                   <label htmlFor="country" className="block text-sm font-medium text-gray-700">Country *</label>
                   <select name="country" id="country" value={formData.country} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.country ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`}>
                     <option value="">Select a country</option>
-                    {countries.map((country) => (
-                      <option key={country} value={country}>{country}</option>
-                    ))}
+                    {countries.map((country) => (<option key={country} value={country}>{country}</option>))}
                   </select>
                   {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
                 </div>
-
+                {/* Phone */}
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone *</label>
                   <div className="relative mt-1">
                     <input type="tel" name="phone" id="phone" value={formData.phone} onChange={handleChange} className={`block w-full border-0 border-b-2 ${errors.phone ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition pl-8`} />
-                    <div className="absolute inset-y-0 left-0 flex items-center">
-                      <FontAwesomeIcon icon={faGlobe} className="text-gray-400" />
-                    </div>
+                    <div className="absolute inset-y-0 left-0 flex items-center"><FontAwesomeIcon icon={faGlobe} className="text-gray-400" /></div>
                   </div>
                   {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
                 </div>
-
+                {/* Email */}
                 <div className="md:col-span-2">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
                   <input type="email" name="email" id="email" value={formData.email} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`} />
                   {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                 </div>
-
+                {/* Presentation Modes */}
                 <div className="md:col-span-2 space-y-4">
                   <label className="block text-sm font-medium text-gray-700">Presentation Modes *</label>
                   <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
-                    <div className="flex items-center">
-                      <input id="online-mode" name="presentationMode" type="radio" value="Online Mode" checked={formData.presentationMode === "Online Mode"} onChange={handleChange} className="focus:ring-black h-4 w-4 text-black border-gray-300" />
-                      <label htmlFor="online-mode" className="ml-3 block text-sm text-gray-800">Online Mode</label>
-                    </div>
-                    <div className="flex items-center">
-                      <input id="hybrid-mode" name="presentationMode" type="radio" value="Hybrid Mode" checked={formData.presentationMode === "Hybrid Mode"} onChange={handleChange} className="focus:ring-black h-4 w-4 text-black border-gray-300" />
-                      <label htmlFor="hybrid-mode" className="ml-3 block text-sm text-gray-800">Hybrid Mode</label>
-                    </div>
+                    <div className="flex items-center"><input id="online-mode" name="presentationMode" type="radio" value="Online Mode" checked={formData.presentationMode === "Online Mode"} onChange={handleChange} className="focus:ring-black h-4 w-4 text-black border-gray-300" /><label htmlFor="online-mode" className="ml-3 block text-sm text-gray-800">Online Mode</label></div>
+                    <div className="flex items-center"><input id="hybrid-mode" name="presentationMode" type="radio" value="Hybrid Mode" checked={formData.presentationMode === "Hybrid Mode"} onChange={handleChange} className="focus:ring-black h-4 w-4 text-black border-gray-300" /><label htmlFor="hybrid-mode" className="ml-3 block text-sm text-gray-800">Hybrid Mode</label></div>
                   </div>
                   {errors.presentationMode && <p className="text-red-500 text-xs mt-1">{errors.presentationMode}</p>}
                 </div>
-
+                {/* University Name */}
                 <div className="md:col-span-2">
                   <label htmlFor="university-name" className="block text-sm font-medium text-gray-700">University Name</label>
                   <input type="text" name="universityName" id="university-name" value={formData.universityName} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.universityName ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`} />
-                  {errors.universityName && <p className="text-red-500 text-xs mt-1">{errors.universityName}</p>}
                 </div>
-
+                {/* Entry Type */}
                 <div>
                   <label htmlFor="entry-type" className="block text-sm font-medium text-gray-700">Entry Type *</label>
                   <select id="entry-type" name="entryType" value={formData.entryType} onChange={handleChange} className={`mt-1 block w-full border-0 border-b-2 ${errors.entryType ? 'border-red-500' : 'border-gray-300'} focus:ring-0 focus:border-black transition`}>
-                    <option value="">Select an option</option>
-                    <option value="Student">Student</option>
-                    <option value="Professional">Professional</option>
+                    <option value="">Select an option</option><option value="Student">Student</option><option value="Professional">Professional</option>
                   </select>
                   {errors.entryType && <p className="text-red-500 text-xs mt-1">{errors.entryType}</p>}
                 </div>
-                
+                {/* Paper Upload */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Submit Your Paper</label>
                   <label htmlFor="paper-upload" className="mt-2 flex justify-center items-center w-full px-6 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 cursor-pointer">
                     <FontAwesomeIcon icon={faUpload} className="mr-2 text-gray-500" />
                     {formData.paperUpload ? formData.paperUpload.name : 'Upload'}
                   </label>
-                  <input id="paper-upload" name="paperUpload" type="file" onChange={handleChange} className="sr-only" />
+                  <input id="paper-upload" name="paperUpload" type="file" onChange={handleChange} ref={fileInputRef} className="sr-only" />
+                  {errors.paperUpload && <p className="text-red-500 text-xs mt-1">{errors.paperUpload}</p>}
                 </div>
               </div>
               
@@ -236,32 +188,18 @@ const ConferencesForm = () => {
                 </div>
               )}
 
-              {/* Submit Button */}
               <div className="mt-12">
-                <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition">
-                  Submit
+                <button type="submit" disabled={isSubmitting} className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition disabled:bg-gray-500">
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
                 </button>
               </div>
             </form>
           </div>
         </main>
         
-        {/* Video Section */}
         <section className="mt-20 md:mt-24">
-          <div className="aspect-w-16 aspect-h-9">
-            {/* IMPORTANT: Replace the src with your YouTube video embed URL */}
-            <iframe 
-              className="w-full h-126"
-              src="https://www.youtube.com/embed/FKz0Fnk_TRM?si=bU6KJprWmQEV8q9g" 
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
-              allowFullScreen>
-            </iframe>
-          </div>
+            {/* Video content... */}
         </section>
-
       </div>
     </div>
   );

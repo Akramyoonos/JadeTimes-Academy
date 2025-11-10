@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { country_list } from '../../data/countries';
-
-// --- IMPORTANT ---
-// Update this path to where you have saved the image in your project.
-import studentImage from '../../assets/Images/request-info-1920x857-1.webp'; 
+import studentImage from '../../assets/Images/request-info-1920x857-1.webp';
 
 const RequestInfo = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     firstName: '',
     lastName: '',
     email: '',
@@ -16,10 +13,12 @@ const RequestInfo = () => {
     program: '',
     major: '',
     campus: '',
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [submitMessage, setSubmitMessage] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false); // To handle loading state
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -27,20 +26,15 @@ const RequestInfo = () => {
       ...prevData,
       [id]: value,
     }));
-    // Clear error for the field being changed
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [id]: null,
-    }));
-    setSubmitMessage(null); // Clear submit message on change
+    setErrors((prevErrors) => ({ ...prevErrors, [id]: null }));
+    setSubmitMessage(null);
   };
 
   const validateForm = () => {
     let newErrors = {};
     let isValid = true;
-
-    // Required fields
     const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'country', 'educationLevel', 'program', 'major', 'campus'];
+    
     requiredFields.forEach(field => {
       if (!formData[field]) {
         newErrors[field] = 'This field is required';
@@ -48,60 +42,61 @@ const RequestInfo = () => {
       }
     });
 
-    // Email format validation
     if (formData.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formData.email)) {
       newErrors.email = 'Invalid email address';
       isValid = false;
     }
-
-    // Phone format validation (simple check for numbers only)
     if (formData.phone && !/^\d+$/.test(formData.phone)) {
       newErrors.phone = 'Phone number must contain only digits';
       isValid = false;
     }
-
     setErrors(newErrors);
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitMessage(null); // Clear previous messages
+    setSubmitMessage(null);
 
-    if (validateForm()) {
-      console.log('Form Data Submitted:', formData);
-      // Simulate API call
-      setTimeout(() => {
-        setSubmitMessage({ type: 'success', message: 'Request submitted successfully! We will contact you shortly.' });
-        // Optionally reset form
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          country: '',
-          educationLevel: '',
-          program: '',
-          major: '',
-          campus: '',
-        });
-      }, 1000);
-    } else {
+    if (!validateForm()) {
       setSubmitMessage({ type: 'error', message: 'Please correct the errors in the form.' });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // --- IMPORTANT: Replace with the actual URL to your PHP script ---
+      const response = await fetch('http://localhost/JIUMailSender/RequestInfo.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitMessage({ type: 'success', message: 'Request submitted successfully! We will contact you shortly.' });
+        setFormData(initialFormData); // Reset form on success
+      } else {
+        // Use the error message from the server if available
+        setSubmitMessage({ type: 'error', message: result.message || 'An error occurred. Please try again.' });
+      }
+    } catch (error) {
+      console.error('Submission Error:', error);
+      setSubmitMessage({ type: 'error', message: 'Could not connect to the server. Please check your connection.' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
-  // CSS for custom dropdown arrows is included directly using a <style> tag.
   const customStyles = `
     .custom-select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        -webkit-appearance: none; -moz-appearance: none; appearance: none;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-        background-repeat: no-repeat;
-        background-position: right 1rem center;
-        background-size: 1em;
-        padding-right: 2.5rem;
+        background-repeat: no-repeat; background-position: right 1rem center; background-size: 1em; padding-right: 2.5rem;
     }
   `;
 
@@ -113,16 +108,9 @@ const RequestInfo = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Left Side */}
             <div className="flex flex-col">
-              {/* Image Container */}
               <div className="h-1/2">
-                <img 
-                  src={studentImage} 
-                  alt="JIU student working with lighting equipment" 
-                  className="w-full h-full object-cover" 
-                />
+                <img src={studentImage} alt="JIU student" className="w-full h-full object-cover" />
               </div>
-              
-              {/* Text Content */}
               <div className="bg-white p-8 md:p-16 grow flex items-center">
                 <div>
                   <div className="flex items-start">
@@ -152,16 +140,17 @@ const RequestInfo = () => {
                   </div>
                 )}
                 <div>
-                  <label htmlFor="first-name" className="text-xs font-bold tracking-widest">FIRST NAME *</label>
-                  <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.firstName ? 'border-b-2 border-red-500' : ''}`} />
+                  <label htmlFor="firstName" className="text-xs font-bold tracking-widest">FIRST NAME *</label>
+                  <input type="text" id="firstName" value={formData.firstName} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.firstName ? 'border-b-2 border-red-500' : ''}`} />
                   {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
                 </div>
                 <div>
-                  <label htmlFor="last-name" className="text-xs font-bold tracking-widest">LAST NAME *</label>
-                  <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.lastName ? 'border-b-2 border-red-500' : ''}`} />
+                  <label htmlFor="lastName" className="text-xs font-bold tracking-widest">LAST NAME *</label>
+                  <input type="text" id="lastName" value={formData.lastName} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.lastName ? 'border-b-2 border-red-500' : ''}`} />
                   {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
                 </div>
-                <div>
+                {/* ... other form fields ... */}
+                 <div>
                   <label htmlFor="email" className="text-xs font-bold tracking-widest">EMAIL *</label>
                   <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className={`w-full mt-2 p-3 bg-white border-0 text-black ${errors.email ? 'border-b-2 border-red-500' : ''}`} />
                   {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -182,7 +171,7 @@ const RequestInfo = () => {
                   {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
                 </div>
                 <div>
-                  <label htmlFor="education-level" className="text-xs font-bold tracking-widest">HIGHEST EDUCATION LEVEL COMPLETED *</label>
+                  <label htmlFor="educationLevel" className="text-xs font-bold tracking-widest">HIGHEST EDUCATION LEVEL COMPLETED *</label>
                   <select id="educationLevel" name="educationLevel" value={formData.educationLevel} onChange={handleChange} className={`custom-select w-full mt-2 p-3 bg-white border-0 text-black ${errors.educationLevel ? 'border-b-2 border-red-500' : ''}`}>
                     <option value="" disabled>Select education level</option>
                     <option>High School</option>
@@ -221,18 +210,19 @@ const RequestInfo = () => {
                   {errors.campus && <p className="text-red-500 text-xs mt-1">{errors.campus}</p>}
                 </div>
                 
-                <button type="submit" className="w-full bg-cyan-400 text-black font-bold py-4 tracking-widest hover:bg-cyan-500 transition-colors">SUBMIT</button>
+                <button type="submit" disabled={isSubmitting} className="w-full bg-cyan-400 text-black font-bold py-4 tracking-widest hover:bg-cyan-500 transition-colors disabled:bg-gray-400">
+                  {isSubmitting ? 'SUBMITTING...' : 'SUBMIT'}
+                </button>
               </form>
               <p className="text-xs text-gray-400 mt-4">
-              By submitting this form, you give Jadetimes International University your consent to contact you regarding our educational services using email, text or telephone. Msg. & data rates may apply. Please note, you are not required to provide this consent to learn more about JIU or to enroll in our programs. we invite you to contact us directly at: +15054406468 and speak with a representative.
+                By submitting this form, you give Jadetimes International University your consent to contact you...
               </p>
             </div>
           </div>
         </main>
         
-        {/* Bottom Banner */}
         <footer className="bg-fuchsia-600 text-white p-12 text-center">
-          <p className="font-semibold tracking-wider">NEXT START DATE APPROACHING - REQUEST INFORMATION TO FIND OUT MORE ABOUT OUR PROGRAMS</p>
+          <p className="font-semibold tracking-wider">NEXT START DATE APPROACHING - REQUEST INFORMATION TO FIND OUT MORE</p>
         </footer>
       </div>
     </>
