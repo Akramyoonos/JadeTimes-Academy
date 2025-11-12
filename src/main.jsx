@@ -5,6 +5,7 @@ import { HelmetProvider } from '@dr.pogodin/react-helmet';
 import React from 'react'
 import './index.css'
 import App from './App.jsx'
+import './fontawesome';
 
 
 

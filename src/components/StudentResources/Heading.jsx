@@ -13,12 +13,12 @@ const Heading = () => {
                width="1920"
              /> */}
              <div className="absolute inset-0 z-10 bg-white opacity-50"></div>
-                 <nav className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20 flex flex-wrap items-center space-x-2 uppercase text-white text-xs sm:text-sm font-sans bg-opacity-30 px-3 sm:px-4 py-2 rounded-full">
+                 <nav className="absolute top-4 left-4 sm:top-8 sm:left-8 z-20 flex flex-wrap items-center space-x-2 uppercase text-black text-xs sm:text-sm font-sans bg-opacity-30 px-3 sm:px-4 py-2 rounded-full">
                          <Link to="/"><span className="font-semibold hover:underline">JIU</span></Link>
                          <span className="text-black">/</span>
-                         <Link to="/discover"><span className="font-semibold hover:underline">WHO WE ARE</span></Link>
+                         <Link to="/discover"><span className="font-semibold hover:underline">NEWS AND CULTURE</span></Link>
                          <span className="text-black">/</span>
-                         <span>ABOUT US </span>
+                         <span>Student Resources</span>
                        </nav>
              <h1 className="absolute z-20 font-sans text-2xl font-semibold tracking-wide text-black uppercase -translate-x-1/2 -translate-y-1/2 sm:text-3xl md:text-4xl lg:text-5xl top-1/2 left-1/2 text-shadow-lg">
                Student Resources

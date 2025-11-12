@@ -35,15 +35,21 @@ const advisoryBoardMembers = [
 
 // Reusable component for each board member card
 const BoardMemberCard = ({ name, title, imageUrl }) => (
-    <div className="relative overflow-hidden min-h-80 group">
+    <div className="relative min-h-80 overflow-hidden rounded-lg shadow-lg group">
+        {/* Background Image */}
         <img 
             src={imageUrl} 
-            alt={`Portrait of ${name}`} 
-            className="w-full h-auto object-cover " 
+            alt={`Portrait of ${name}`}
+            className="object-cover w-full h-full transition-transform transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-90 text-white p-4">
-            <h3 className="font-bold text-lg">{name}</h3>
-            <p className="text-sm text-red-500">{title}</p>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+
+        {/* Content */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+            <h3 className="text-xl font-bold drop-shadow-md">{name}</h3>
+            <p className="text-md text-red-400 drop-shadow-md">{title}</p>
         </div>
     </div>
 );
@@ -52,10 +58,10 @@ const BoardMemberCard = ({ name, title, imageUrl }) => (
 const JIUAdvisoryBoard = () => {
     return (
         <div className="bg-white">
-            <div className="container mx-auto  px-4 sm:px-8 md:px-6 lg:px-34 py-12">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {/* Header Title */}
                 <div className="text-center mb-12">
-                    <h1 className="text-3xl md:text-4xl font-semibold text-center text-gray-800">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-gray-800">
                         Jadetimes Advisory Board Who Leads the International
                         <br />
                         Research Conference 2025

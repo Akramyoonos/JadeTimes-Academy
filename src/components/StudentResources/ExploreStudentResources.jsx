@@ -29,7 +29,7 @@ const ExploreStudentResources = () => {
 
   return (
     <div className="bg-gray-50 text-gray-800 font-sans">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div className="max-w-full mx-auto px-12">
  
         
               {/* Main Content */}

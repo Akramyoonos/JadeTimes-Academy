@@ -50,7 +50,7 @@ const CampusCard = ({ name, imageUrl, altText }) => (
 const Campuses = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto px-6 sm:px-6 md:px-6 lg:px-34 py-12">
+      <div className="container  px-6 sm:px-6 md:px-6 lg:px-34 py-12">
         <div className="flex items-center mb-8">
           <div className="w-1 h-10 bg-yellow-400 mr-4"></div>
           <h2 className="text-3xl font-light tracking-widest text-gray-800">

@@ -29,7 +29,7 @@ const ProgramApplications = () => {
 
   return (
     <div className="bg-white font-sans">
-      <div className="container mx-auto px-6 sm:px-6 md:px-6 lg:px-34 pb-12">
+      <div className="container  px-6 sm:px-6 md:px-6 lg:px-34 pb-12">
         <div className="max-w-9xl ">
           <div className="flex items-center mb-8">
             <span className="w-1 h-12 bg-purple-600 mr-4"></span>

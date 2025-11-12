@@ -3,33 +3,16 @@ import React from 'react';
 const Contact = () => {
   return (
     <>
-      {/* 
-        Note: For this component to work and look as intended in a React project,
-        you need to have Tailwind CSS configured. The Inter font used in the original
-        design should also be imported, typically in your global CSS file or `index.html`.
-        e.g., in your `public/index.html` head:
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        And in your `tailwind.config.js`:
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-          },
-        },
-      */}
       <div className="bg-white font-sans">
-        <div className="max-w-7xl text-center mx-auto px-4 sm:px-8 md:px-6 lg:px-34 py-12">
+        <div className="max-w-7xl text-center mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900">Contact Us</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">Contact Us</h1>
           </div>
 
           {/* Support Contacts in the America */}
           <div className="mb-16">
-            <h2 className="text-2xl font-semibold text-center text-gray-800 mb-8">Support Contacts in the America</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-center text-gray-800 mb-8">Support Contacts in the America</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="border-t-2 border-gray-100 pt-6">
                 <h3 className="text-lg font-semibold text-gray-900">United States New Mexico Agent</h3>
                 <p className="mt-2 text-gray-600">8206 Louisiana Blvd NE, Ste B<br />#10483, Albuquerque, NM 87113</p>
@@ -57,8 +40,8 @@ const Contact = () => {
 
           {/* Support Contacts in the United Kingdom */}
           <div className="mb-16">
-            <h2 className="text-2xl font-semibold text-center text-gray-800 mb-8">Support Contacts in the United Kingdom</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-center text-gray-800 mb-8">Support Contacts in the United Kingdom</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="border-t-2 border-gray-100 pt-6">
                 <h3 className="text-lg font-semibold text-gray-900">Edinburgh Agent, UK</h3>
                 <p className="mt-2 text-gray-600">21 Labrador Avenue, Livingston,<br />Edinburgh, United Kingdom</p>
@@ -84,7 +67,7 @@ const Contact = () => {
           
           {/* Other International Agents */}
           <div className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">Sweden Agent</h3>
                 <p className="mt-2 text-gray-600">1404, Terapivägen 12B, Huddinge,<br />Stockholm, Sweden, 14156</p>

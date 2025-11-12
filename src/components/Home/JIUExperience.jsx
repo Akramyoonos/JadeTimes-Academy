@@ -11,7 +11,7 @@ const JIUExperience = () => {
 
   return (
     <div className="bg-white font-sans py-16 sm:py-24">
-      <div className="container mx-auto px-4">
+      <div className="container ">
         <div
           className={`transition-all duration-1000 ease-in-out ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
@@ -19,7 +19,7 @@ const JIUExperience = () => {
         >
 
           <div className="flex justify-between items-start ">
-        <div className="flex flex-col">
+        <div className="flex flex-col px-0 sm:px-4 md:px-2 lg:px-4">
           <div className="pl-6 mb-10 ml-1 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
             <h2 className="jt-heading">
               <span className="jt-line">WHO  </span>
@@ -30,10 +30,10 @@ const JIUExperience = () => {
       </div>
 
           {/* Grid container for the two separate cards */}
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 ">
+          <div className="max-w-6xl mx-auto pl-0 sm:pl-0 md:pl-6 lg:pl-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 ">
 
             {/* Image Card */}
-            <div className="bg-white  shadow-xl overflow-hidden">
+            <div className="bg-white shadow-xl overflow-hidden">
               <img
                 src={campusImage}
                 alt="JIU Campus"

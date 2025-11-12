@@ -2,7 +2,7 @@ import React from "react";
 
 const ViewAcademicCalendar = () => {
   return (
-    <div className="min-h-screen bg-white px-6 md:px-16 py-16">
+    <div className="min-h-screen bg-white px-6 md:px-24 py-16">
       {/* --- Title Section --- */}
       
       <div className="max-w-5xl mx-auto ml-10 ">

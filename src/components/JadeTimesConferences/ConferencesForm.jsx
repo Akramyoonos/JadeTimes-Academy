@@ -111,11 +111,11 @@ const ConferencesForm = () => {
 
         <main className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-start">
           <div className="flex justify-center items-start lg:mt-12">
-            <img src={awardImage} alt="Best Research Paper Award" className="w-full max-w-md shadow-lg" />
+            <img src={awardImage} alt="Best Research Paper Award" className="w-full max-w-md shadow-lg rounded-lg" />
           </div>
 
           <div>
-            <h3 className="text-lg font-medium text-gray-600">Submit Your Paper Today for the upcoming International Research Conference 2025</h3>
+            <h3 className="text-lg sm:text-xl font-medium text-gray-600">Submit Your Paper Today for the upcoming International Research Conference 2025</h3>
             <form onSubmit={handleSubmit} noValidate>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 mt-8">
                 {/* Your Name */}

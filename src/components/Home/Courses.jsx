@@ -137,7 +137,7 @@ const Courses = () => {
   };
 
   return (
-    <div className="bg-gray-100 font-sans text-gray-800">
+    <div className="font-sans text-gray-800">
       <div className="py-12">
         {/* This is the heading from your original code */}
         <div className="max-w-7xl px-8 sm:px-10 lg:px-12 mb-12 md:mb-10">

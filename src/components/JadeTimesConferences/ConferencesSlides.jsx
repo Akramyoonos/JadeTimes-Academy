@@ -307,9 +307,9 @@ const ConferencesSlides = () => {
 
     return (
         <div className="bg-gray-50 font-sans">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className=" px-4 sm:px-6 lg:px-8 py-12">
                 <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-3xl font-bold text-gray-900">Jadetimes Conference</h2>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Jadetimes Conference</h2>
                     <div className="flex items-center space-x-2">
                         <button onClick={prevSlide} disabled={currentSlideIndex === 0} className="p-2 rounded-full bg-white text-gray-600 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed shadow" aria-label="Previous slide">
                             <ChevronLeftIcon />

@@ -141,7 +141,7 @@ const WorkshopCard = ({ title, image, alt, gridSpan, href = "#" }) => {
  */
 const TwoHourPrograms = () => {
   return (
-    <div className="container mx-auto px-1 sm:px-1 lg:px-1 py-5 text-black">
+    <div className="py-5 text-black">
       {/* Header Section */}
       <header className="relative mb-10 md:mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-1">

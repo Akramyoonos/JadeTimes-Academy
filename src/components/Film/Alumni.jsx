@@ -8,7 +8,7 @@ import AlumniExplore03 from '../../assets/Images/AlumniExplore03.webp';
 const Alumni = () => {
   return (
     <div className="bg-white">
-      <div className="container mx-auto px-4 sm:px-8 md:px-6 lg:px-34 py-8">
+      <div className="container  px-4 sm:px-8 md:px-6 lg:px-34 py-8">
         <div className="flex items-center mb-8">
           <div className="w-1.5 h-16 bg-purple-600 mr-4"></div>
           <h1 className="text-4xl font-light tracking-widest text-gray-800">

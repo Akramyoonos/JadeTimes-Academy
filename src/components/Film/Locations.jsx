@@ -37,7 +37,7 @@ const locations = [
 // The React component
 const Locations = () => {
   return (
-    <div className="bg-white px-6 sm:px-6 md:px-12 lg:px-34 p-8">
+    <div className="bg-white mx-auto px-6 sm:px-6 md:px-12 lg:px-34 p-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center mb-8">
           <div className="w-1 h-12 bg-purple-600 mr-4"></div>

@@ -146,7 +146,7 @@ const AcademicLearningPrograms = () => {
                 - p-4: Padding on extra-small screens.
                 - md:p-8: Padding on medium screens and up.
                 - lg:pl-64: Adds the large left padding for a sidebar layout only on large screens. */}
-            <div className="max-w-6xl mx-auto p-4 md:p-8 lg:pl-64">
+            <div className="max-w-6x p-4 md:p-8 lg:pl-64">
                 {/* FIX: Made the heading font size responsive */}
                 <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">Upcoming Academic Learning Programs</h1>
                 

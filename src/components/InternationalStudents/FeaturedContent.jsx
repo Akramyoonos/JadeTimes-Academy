@@ -25,7 +25,7 @@ const FeaturedContent = () => {
 
   return (
     <div className="bg-gray-50 font-sans text-gray-900 ">
-        <div className="px-4 sm:px-6 lg:px-8">
+        <div className="px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-col sm:flex-row items-center justify-between mb-12">
           <div className="flex items-center lg:px-27 gap-6 mb-6 sm:mb-0">
             <div className="w-1.5 h-25 bg-yellow-500 "></div>

@@ -55,8 +55,8 @@ const ApplyJIU = () => {
   };
 
   return (
-    <div className="w-full px-4 md:px-8 lg:px-16 pt-12 md:pt-24 pb-12 bg-white">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 items-start justify-center">
+    <div className="w-full px-4 sm:px-6 md:px-8 lg:px-34 pt-12 md:pt-24 pb-12 bg-white">
+      <div className="max-w-7xl  flex flex-col md:flex-row gap-8 md:gap-12 items-start justify-center">
         <div className="w-full md:w-1/2">
           <h1 className="text-3xl md:text-4xl font-semibold flex items-center gap-3">
             <span className="w-1 h-20 bg-pink-500 inline-block"></span>

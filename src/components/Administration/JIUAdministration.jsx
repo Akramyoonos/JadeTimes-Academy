@@ -138,7 +138,7 @@ const JIUAdministration = () => {
 
   return (
     <div className="font-sans bg-white">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:px-4 lg:px-4">
         <div className="flex items-center mb-8">
           <div className="w-1 h-10 bg-blue-500 mr-4"></div>
           <h1 className="text-3xl font-normal text-black tracking-wider m-0">ADMINISTRATION MEMBERS</h1>

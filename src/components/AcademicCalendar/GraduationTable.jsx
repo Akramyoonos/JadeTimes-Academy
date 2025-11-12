@@ -8,7 +8,7 @@ const GraduationTable = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white px-6 md:px-16 py-16">
+    <div className="min-h-screen bg-white px-6 md:px-34 py-16">
       {/* --- Title Section --- */}
       <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 border-l-4 h-15 border-purple-800 pl-6 mb-12">
         2025 GRADUATION

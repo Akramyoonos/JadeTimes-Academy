@@ -151,7 +151,7 @@ const Discription = () => {
   return (
     <>
       <div className="DiscriptionFont bg-gray-50 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
+        <div className="px-4 sm:px-6 lg:px-4">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
 
             {/* Left Content */}
@@ -199,7 +199,7 @@ const Discription = () => {
       </div>
 
       {/* Workshops Grid - Now dynamically generated */}
-      <div className="container mx-auto px-1 sm:px-1 lg:px-1 py-5 text-black">
+      <div className="py-5 text-black">
         <main className="grid grid-cols-1 md:grid-cols-6 gap-1">
           {workshopsData.map((workshop, index) => (
             <WorkshopCard

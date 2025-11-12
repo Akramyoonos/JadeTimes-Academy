@@ -5,11 +5,11 @@ import PartnershipImg02 from '../../assets/Images/PaetnershipImg02.webp';
 const Partnership = () => {
   return (
     <div className="bg-gray-100 font-sans py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-full px-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           
           {/* Left Column: JIU Partnerships */}
-          <div className="relative p-8 rounded-lg shadow-2xl min-h-[500px] flex flex-col justify-between text-white transform hover:scale-105 transition-transform duration-300" style={{ background: 'linear-gradient(0deg, #ff0000 0%, #1f33c7 100%)' }}>
+          <div className="relative p-8 rounded-lg shadow-2xl min-h-[400px] flex flex-col justify-between text-white transform hover:scale-105 transition-transform duration-300" style={{ background: 'linear-gradient(0deg, #ff0000 0%, #1f33c7 100%)' }}>
             <div>
               <h2 className="text-2xl font-bold tracking-widest">JIU PARTNERSHIPS</h2>
               <p className="mt-4 text-indigo-200">Explore our collaborations with industry leaders and institutions.</p>

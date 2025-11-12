@@ -86,15 +86,21 @@ const members = [
 // 2. Reusable Member Card Component
 const MemberCard = ({ name, title, imageUrl }) => {
     return (
-        <div className="relative overflow-hidden min-h-80 shadow-lg group">
+        <div className="relative min-h-80 overflow-hidden rounded-lg shadow-lg group">
+            {/* Background Image */}
             <img 
                 src={imageUrl} 
                 alt={`Portrait of ${name}`}
-                className="object-cover w-full h-full transition-transform transform "
+                className="object-cover w-full h-full transition-transform transform duration-500 group-hover:scale-110"
             />
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-white bg-black bg-opacity-75">
-                <h3 className="text-lg font-bold">{name}</h3>
-                <p className="text-sm text-red-500">{title}</p>
+            
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+
+            {/* Content */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-bold drop-shadow-md">{name}</h3>
+                <p className="text-md text-red-400 drop-shadow-md">{title}</p>
             </div>
         </div>
     );
@@ -104,8 +110,8 @@ const MemberCard = ({ name, title, imageUrl }) => {
 const OrganizingCommittee = () => {
     return (
         <section className="py-12 bg-gray-50">
-            <div className="container px-4 sm:px-8 md:px-6 lg:px-34 mx-auto">
-                <h2 className="mb-12 text-3xl font-semibold text-center text-gray-800 md:text-4xl">
+            <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+                <h2 className="mb-12 text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-gray-800">
                     Organizing Committee Members
                 </h2>
 
@@ -127,12 +133,4 @@ const OrganizingCommittee = () => {
 
 
 // The main App component that renders our committee section
-function App() {
-  return (
-    <div className="App">
-      <OrganizingCommittee />
-    </div>
-  );
-}
-
-export default App;
+export default OrganizingCommittee;

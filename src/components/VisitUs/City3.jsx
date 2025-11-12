@@ -13,7 +13,7 @@ const City3 = () => {
 
   return (
     <div className="bg-white font-sans">
-      <div className="container mx-auto py-12 px-6 sm:px-6 md:px-6 lg:px-35 relative">
+      <div className="container  py-12 px-6 sm:px-6 md:px-6 lg:px-35 relative">
 
         {/* --- TOP SECTION --- */}
         <div className="flex items-center mb-12">

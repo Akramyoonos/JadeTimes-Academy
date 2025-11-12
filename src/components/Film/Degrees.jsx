@@ -68,7 +68,7 @@ const Degrees = () => {
 
     return (
         <div className="text-white">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-34 py-12">
+            <div className="container  px-4 sm:px-6 lg:px-34 py-12">
 
                 <div className="flex items-center mb-8">
                     <div className="w-1.5 h-16 bg-yellow-400 mr-4"></div>

@@ -37,7 +37,7 @@ const DegreesCertificatesandWorkshops = () => {
     return (
         <>
             <div className="bg-white">
-                <div className="container mx-auto px-4 sm:px-8 md:px-6 lg:px-34 py-12">
+                <div className="container  px-4 sm:px-8 md:px-6 lg:px-34 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 lg:gap-16">
 
                         {/* --- Main Content Section (2/3 width) --- */}

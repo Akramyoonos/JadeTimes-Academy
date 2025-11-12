@@ -1,5 +1,4 @@
 import React from "react";
-import MemberImage from "../../assets/Images/Icon4.webp";
 
 const MembershipSection = () => {
   return (
@@ -10,9 +9,9 @@ const MembershipSection = () => {
           {/* Blue Vertical Line */}
           <div className="absolute left-0 top-0 h-16 w-1 bg-sky-400"></div>
 
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug pl-5">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 leading-snug pl-5">
             EXPLORE MORE AS A JIU MEMBER
-            <br />
+           
             JOIN TODAY!
           </h3>
 
@@ -42,14 +41,29 @@ const MembershipSection = () => {
             JIU Membership perks include:
           </p>
         </div>
-        {/* Right Content - Image */}
-        <div className="flex justify-center md:justify-end md:pr-16">
-          <img
-            src={MemberImage}
-            alt="JIU Member Card"
-            className="w-full max-w-[18rem]"
-          />
-        </div>
+
+       {/* Right Sidebar */}
+          <aside className="shrink-0 pl-6 pb-4 w-80 mt-6 lg:w-80 lg:mt-0">
+          <div className="border border-gray-200">
+            <div className="p-4 bg-gray-200 ">
+              <h2 id="related-links-heading" className="text-2xl font-semibold text-black uppercase">
+                RELATED LINKS
+              </h2>
+            </div>
+            <nav aria-labelledby="related-links-heading" className="flex flex-col bg-white">
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Open House
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Degree Programs
+              </a>
+              <a href="#" className="p-4 mt-4 ml-3 text-lg font-semibold text-gray-700 uppercase transition-colors hover:text-pink-500">
+                Program Dates & Tuition
+              </a>
+            </nav>
+          </div>
+        </aside>
+
       </div>
     </section>
   );

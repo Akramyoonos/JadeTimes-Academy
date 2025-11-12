@@ -2,31 +2,42 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
-const Sidebar = () => {
-    const [openSubmenu, setOpenSubmenu] = useState(null);
+// Placeholder content components for each nav item
+const TutoringContent = () => <h1 className="text-3xl sm:text-4xl font-bold mb-6">Tutoring</h1>;
+const LanguagePartnersContent = () => <h1 className="text-3xl sm:text-4xl font-bold mb-6">Language Partners</h1>;
+const AcademicCoachingContent = () => <h1 className="text-3xl sm:text-4xl font-bold mb-6">Academic Coaching</h1>;
+const NeurodiversityContent = () => <h1 className="text-3xl sm:text-4xl font-bold mb-6">Neurodiversity</h1>;
 
-    const toggleSubmenu = (index) => {
-        setOpenSubmenu(openSubmenu === index ? null : index);
+
+const Sidebar = ({ activeContent, setActiveContent }) => {
+    const [openSubmenu, setOpenSubmenu] = useState('Academic Skills Resources');
+
+    const toggleSubmenu = (name) => {
+        setOpenSubmenu(openSubmenu === name ? null : name);
     };
 
     const navItems = [
-        { name: 'Tutoring', href: '#' },
-        { name: 'Language Partners', href: '#' },
-        { name: 'Academic Coaching', href: '#' },
+        { name: 'Tutoring' },
+        { name: 'Language Partners' },
+        { name: 'Academic Coaching' },
         {
             name: 'Academic Skills Resources',
-            href: '#',
             subItems: [
-                { name: 'Tips, Tools, and Resources', href: '#' },
-                { name: 'Academic Skills Workshops', href: '#', active: true },
-                { name: 'Study Halls and Learning Spaces', href: '#' },
-                { name: 'Academic Studios', href: '#' },
-                { name: 'Peer Learning Consultants', href: '#' },
-                { name: 'Academic Skills Self-Assessment', href: '#', external: true },
+                { name: 'Tips, Tools, and Resources' },
+                { name: 'Academic Skills Workshops', active: true },
+                { name: 'Study Halls and Learning Spaces' },
+                { name: 'Academic Studios' },
+                { name: 'Peer Learning Consultants' },
+                { name: 'Academic Skills Self-Assessment', external: true, href: '#' },
             ],
         },
-        { name: 'Neurodiversity', href: '#' },
+        { name: 'Neurodiversity' },
     ];
+
+    const handleNavClick = (e, name) => {
+        e.preventDefault();
+        setActiveContent(name);
+    };
 
     return (
         <aside className="w-full lg:w-1/4 pr-8">
@@ -35,23 +46,28 @@ const Sidebar = () => {
                     {navItems.map((item, index) => (
                         <li className="mb-2" key={index}>
                             <div className="flex justify-between items-center w-full">
-                                <a href={item.href} className="text-gray-700 hover:text-red-700 py-2">
+                                <a
+                                    href="#"
+                                    onClick={(e) => handleNavClick(e, item.name)}
+                                    className={`${activeContent === item.name ? 'text-red-700 font-bold' : 'text-gray-700'} hover:text-red-700 py-2`}
+                                >
                                     {item.name}
                                 </a>
                                 {item.subItems && (
-                                    <button onClick={() => toggleSubmenu(index)} className="text-gray-500 hover:text-red-700 p-2">
-                                        <FontAwesomeIcon icon={faChevronDown} className={`transform transition-transform duration-200 ${ openSubmenu === index ? 'rotate-180' : '' }`} />
+                                    <button onClick={() => toggleSubmenu(item.name)} className="text-gray-500 hover:text-red-700 p-2">
+                                        <FontAwesomeIcon icon={faChevronDown} className={`transform transition-transform duration-200 ${ openSubmenu === item.name ? 'rotate-180' : '' }`} />
                                     </button>
                                 )}
                             </div>
-                            {item.subItems && openSubmenu === index && (
+                            {item.subItems && openSubmenu === item.name && (
                                 <ul className="pl-4 mt-2 border-l border-gray-200">
                                     {item.subItems.map((subItem, subIndex) => (
                                         <li className="py-1" key={subIndex}>
                                             <a
-                                                href={subItem.href}
+                                                href={subItem.href || '#'}
+                                                onClick={(e) => !subItem.external && handleNavClick(e, subItem.name)}
                                                 className={`flex items-center justify-between w-full ${
-                                                    subItem.active
+                                                    activeContent === subItem.name
                                                         ? 'active-link font-bold pl-2 text-red-700'
                                                         : 'text-gray-700'
                                                 } hover:text-red-700`}
@@ -145,23 +161,51 @@ const RequestButton = () => (
     </a>
 );
 
-const MainContent = () => (
-    <main className="w-full lg:w-3/4">
+const AcademicSkillsWorkshopsContent = () => (
+    <>
         <Header />
         <AcademicStudiosInfo />
         <WorkshopRequest />
         <Topics />
         <RequestButton />
-    </main>
+    </>
 );
 
+const MainContent = ({ activeContent }) => {
+    const renderContent = () => {
+        switch (activeContent) {
+            case 'Tutoring':
+                return <TutoringContent />;
+            case 'Language Partners':
+                return <LanguagePartnersContent />;
+            case 'Academic Coaching':
+                return <AcademicCoachingContent />;
+            case 'Academic Skills Workshops':
+                return <AcademicSkillsWorkshopsContent />;
+            case 'Neurodiversity':
+                return <NeurodiversityContent />;
+            default:
+                return <AcademicSkillsWorkshopsContent />;
+        }
+    };
+
+    return (
+        <main className="w-full lg:w-3/4">
+            {renderContent()}
+        </main>
+    );
+};
+
+
 const AcademicSkillsWorkshops = () => {
+    const [activeContent, setActiveContent] = useState('Academic Skills Workshops');
+
     return (
         <div className="bg-white">
-            <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-24 xl:px-34 py-8">
+            <div className="container px-4 sm:px-8 md:px-12 lg:px-24 xl:px-34 py-8">
                 <div className="flex flex-col lg:flex-row ">
-                    <Sidebar />
-                    <MainContent />
+                    <Sidebar activeContent={activeContent} setActiveContent={setActiveContent} />
+                    <MainContent activeContent={activeContent} />
                 </div>
             </div>
         </div>

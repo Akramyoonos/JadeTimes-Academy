@@ -5,15 +5,15 @@ import PartnershipImg02 from '../../assets/Images/PaetnershipImg02.webp';
 const Spotlight = () => {
     return (
         <div className="bg-white font-sans">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-34 py-12">
-                <div className="flex items-center mb-8">
+            <div className="max-w-full px-12 py-12">
+                <div className="flex items-center px-4 sm:px-6 md:px-6 lg:px-24 mb-8">
                     <div className="w-1 bg-cyan-400 h-12 sm:h-16 mr-4"></div>
                     <h1 className="text-3xl sm:text-4xl font-light text-gray-800 tracking-wider">
                         SPOTLIGHT JIU
                     </h1>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           
                           {/* Left Column: JIU Partnerships */}
                           <div className="relative p-8 rounded-lg shadow-2xl min-h-[500px] flex flex-col justify-between text-white transform hover:scale-105 transition-transform duration-300" style={{ background: 'linear-gradient(0deg, #ff0000 0%, #1f33c7 100%)' }}>

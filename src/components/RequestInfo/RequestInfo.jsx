@@ -109,7 +109,7 @@ const RequestInfo = () => {
             {/* Left Side */}
             <div className="flex flex-col">
               <div className="h-1/2">
-                <img src={studentImage} alt="JIU student" className="w-full h-full object-cover" />
+                <img src={studentImage} alt="JIU student" className="w-full h-full object-cover object-center" />
               </div>
               <div className="bg-white p-8 md:p-16 grow flex items-center">
                 <div>

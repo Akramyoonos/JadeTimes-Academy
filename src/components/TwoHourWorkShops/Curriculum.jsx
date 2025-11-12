@@ -71,7 +71,7 @@ const Curriculum = () => {
             
 
 
-            <div className="container mx-auto px-6 sm:px-6 md:px-6 lg:px-34 py-24">
+            <div className="container  px-6 sm:px-6 md:px-6 lg:px-34 py-24">
 
                 {/* Title Section */}
                 <div className="flex items-center mb-16">

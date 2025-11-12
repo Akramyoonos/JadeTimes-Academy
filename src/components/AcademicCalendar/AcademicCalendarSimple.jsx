@@ -2,7 +2,7 @@ import React from "react";
 
 const AcademicCalendarSimple = () => {
   return (
-<div className="min-h-screen bg-white flex flex-col items-start justify-start px-10 md:px-20 py-10 -mt-50">
+<div className="min-h-screen bg-white flex flex-col items-start justify-start px-10 md:px-34 py-10 -mt-50">
 
 
 

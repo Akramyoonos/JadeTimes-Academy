@@ -74,7 +74,7 @@ const Faculty = () => {
 
   return (
     <div className="bg-white font-sans">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-34 py-16">
+      <div className="container  px-4 sm:px-6 lg:px-34 py-16">
         <div className="max-w-4xl">
           <div className="flex items-center space-x-4">
             <div className="w-1 bg-blue-500 h-16"></div>

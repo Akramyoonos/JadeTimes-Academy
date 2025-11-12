@@ -19,7 +19,7 @@ const ForStudents = () => {
     // Here we simulate it on the root div for demonstration.
     return (
         <div style={bodyStyle} className="bg-white">
-            <div className="container mx-auto px-6 sm:px-6 md:px-6 lg:px-35 py-12">
+            <div className="container  px-6 sm:px-6 md:px-6 lg:px-35 py-12">
                 <div className="max-w-7xl mx-auto">
 
                     <div className="flex items-center mb-24">

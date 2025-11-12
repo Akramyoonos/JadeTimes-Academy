@@ -3,7 +3,7 @@ import React from 'react';
 const JIUInternationalCommunity = () => {
   return (
     <div className="font-sans">
-      <div className="container px-6 sm:px-6 md:px-6 lg:px-35 py-12 mx-auto">
+      <div className="container px-6 sm:px-6 md:px-6 lg:px-35 py-12 ">
         <div className="flex flex-col md:flex-row">
           <div className="pr-8 md:w-3/4">
             <div className="flex items-center mb-6">
