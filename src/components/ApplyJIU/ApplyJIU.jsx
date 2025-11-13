@@ -25,7 +25,7 @@ const ApplyJIU = () => {
     setSubmitMessage("");
 
     try {
-      const response = await fetch("http://localhost/JIUMailSender/index.php", { // Replace with your PHP script URL
+      const response = await fetch("https://process.jadetimesuniversity.com/", { // Replace with your PHP script URL
         method: "POST",
         headers: {
           "Content-Type": "application/json",

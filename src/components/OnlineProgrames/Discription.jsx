@@ -151,12 +151,12 @@ const Discription = () => {
   return (
     <>
       <div className="DiscriptionFont bg-gray-50 py-12 sm:py-16 lg:py-20">
-        <div className="px-4 sm:px-6 lg:px-4">
+        <div className="px-4 sm:px-6 md:px-8 lg:px-34">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
 
             {/* Left Content */}
             <div className="w-full lg:w-2/3">
-              <div className="relative">
+              <div className="relative ">
                 <div className="absolute top-0 left-0 h-full w-1 bg-[#9b7f00]"></div>
                 <div className="pl-8">
                   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight headingFont">

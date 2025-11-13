@@ -5,8 +5,11 @@ import SlideImg01 from '../../assets/Images/SlideImg01.webp';
 import SlideImg02 from '../../assets/Images/SlideImg02.webp';
 import SlideImg03 from '../../assets/Images/SlideImg03.webp';
 import SlideImg04 from '../../assets/Images/SlideImg04.webp';
+import SlideImg05 from '../../assets/Images/SlideImg05.webp';
+import SlideImg06 from '../../assets/Images/SlideImg06.webp';
+import SlideImg07 from '../../assets/Images/SlideImg07.webp';
 
-const images = [SlideImg01, SlideImg02, SlideImg03, SlideImg04];
+const images = [SlideImg01, SlideImg02, SlideImg03, SlideImg04, SlideImg05, SlideImg06, SlideImg07];
 
 const VideoHeading = ({ title, subtitle }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -21,7 +24,7 @@ const VideoHeading = ({ title, subtitle }) => {
 
   return (
     <div className="font-sans relative">
-      <div className="relative w-full min-h-[220px] sm:min-h-[300px] md:min-h-[320px] lg:min-h-[400px] overflow-hidden">
+      <div className="relative w-full min-h-[220px] sm:min-h-[300px] md:min-h-[450px] lg:min-h-[500px] overflow-hidden">
         {images.map((image, index) => (
           <motion.div
             key={index}

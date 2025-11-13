@@ -17,7 +17,7 @@ import YouthImage2 from '../../assets/Images/CoursesImg02.webp';
 const InfoCard = ({ src, title, description, href }) => (
   <motion.a
     href={href}
-    className="w-[85vw] md:w-85 h-160 shrink-0 bg-white font-sans text-left select-none group overflow-hidden "
+    className="w-[85vw] md:w-96 h-auto shrink-0 bg-white font-sans text-left select-none group overflow-hidden rounded-lg shadow-lg"
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1 }}
@@ -27,7 +27,7 @@ const InfoCard = ({ src, title, description, href }) => (
       <img
         src={src}
         alt={title}
-        className="w-100 h-110 object-contain pointer-events-none transition-transform ease-in-out "
+        className="w-full h-64 object-cover pointer-events-none transition-transform ease-in-out group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 group-active:opacity-0 transition-opacity duration-300"></div>
     </div>
@@ -148,7 +148,7 @@ const Courses = () => {
         </div>
 
         <div className="relative overflow-hidden">
-                  {showLeftChevron && <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>}
+                  {showLeftChevron && <button onClick={handleScrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-200 hover:bg-gray-300 p-3 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronLeft} /></button>}
                   <div
                     ref={scrollContainerRef}
                     className={`grid grid-flow-col  gap-4 mb-5 overflow-x-auto pb-4 no-scrollbar  flex-initial px-4 select-none ${
@@ -166,7 +166,7 @@ const Courses = () => {
                       <InfoCard key={index} {...card} />
                     ))}
                   </div>
-                  {showRightChevron && <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/50 hover:bg-white/80 p-2 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>}
+                  {showRightChevron && <button onClick={handleScrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-200 hover:bg-gray-300 p-3 rounded-full shadow-md"><FontAwesomeIcon icon={faChevronRight} /></button>}
                 </div>
         <div className="text-center mt-8">
           <a href="/courses" className="bg-linear-to-r from-purple-600 to-indigo-600 text-white font-bold rounded-full py-4 px-10 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-500 ease-in-out inline-block">
