@@ -79,7 +79,7 @@ const Application = () => {
 
         try {
             // --- IMPORTANT: Replace with the actual URL to your PHP script ---
-            const response = await fetch('https://process.jadetimesuniversity.com/', {
+            const response = await fetch('https://process.jadetimesuniversity.com/CAREERWITHJIU.php', {
                 method: 'POST',
                 body: dataToSend,
                 // DO NOT set 'Content-Type' header. The browser does it automatically for FormData.

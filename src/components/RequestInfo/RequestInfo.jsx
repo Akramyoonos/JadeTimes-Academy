@@ -67,7 +67,7 @@ const RequestInfo = () => {
 
     try {
       // --- IMPORTANT: Replace with the actual URL to your PHP script ---
-      const response = await fetch('https://process.jadetimesuniversity.com/', {
+      const response = await fetch('https://process.jadetimesuniversity.com/RequestInfo.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

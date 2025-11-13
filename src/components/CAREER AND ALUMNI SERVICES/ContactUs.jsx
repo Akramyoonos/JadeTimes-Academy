@@ -53,7 +53,7 @@ const ContactUs = () => {
 
     try {
       // --- IMPORTANT: Replace with the actual URL to your PHP script ---
-      const response = await fetch('https://process.jadetimesuniversity.com/', {
+      const response = await fetch('https://process.jadetimesuniversity.com/CAREERANDALUMNISERVICES.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

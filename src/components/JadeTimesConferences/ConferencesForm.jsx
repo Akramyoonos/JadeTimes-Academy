@@ -77,7 +77,7 @@ const ConferencesForm = () => {
 
     try {
       // --- IMPORTANT: Replace with the actual URL to your PHP script ---
-      const response = await fetch('https://process.jadetimesuniversity.com/', {
+      const response = await fetch('https://process.jadetimesuniversity.com/JADETIMESConferences.php', {
         method: 'POST',
         body: dataToSend, // Send FormData object, do NOT set Content-Type header
       });
