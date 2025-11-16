@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node generate-sitemap.js && react-scripts build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -51,5 +51,4 @@
     "sitemap": "^9.0.0",
     "vite": "7.1.12"
   }
-
 }
