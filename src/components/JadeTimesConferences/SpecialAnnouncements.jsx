@@ -7,45 +7,45 @@ const SpecialAnnouncements = () => {
 
 
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4">Special Announcements</h2>
-                <p className="mb-4 text-base sm:text-lg">Dear Researchers, Scholars, and Academics,</p>
-                <p className="mb-4 text-base sm:text-lg">
-                    We are pleased to announce that due to the overwhelming response and high volume of quality paper submissions, our
-                    upcoming International Research Conference will now be held on <span className="font-bold">July 12th 2025 at 11.00 AM (Indian Time)</span>.
-                </p>
-                <p className="mb-4 text-base sm:text-lg">
-                    We deeply appreciate your enthusiasm and engagement, and we look forward to welcoming you in July for a more
-                    enriched, diverse, and impactful conference experience.
-                </p>
-                <p className="mb-4 text-base sm:text-lg">Further updates and the finalized schedule will be shared shortly.</p>
-                <div className="mt-8">
-                    <p>Warm regards,</p>
-                    <p className="font-bold">Organizing Committee</p>
-                    <p>Jadetimes International Research Conference</p>
-                    <p>Date: 07/02/2025</p>
-                </div>
+<p className="mb-4 text-base sm:text-lg">Dear Researchers, Scholars, and Academics,</p>
+<p className="mb-4 text-base sm:text-lg">
+    We are pleased to announce that due to the overwhelming response and high volume of quality paper submissions, our
+    upcoming International Research Conference will now be held on <span className="font-bold">July 12th 2025 at 11.00 AM(Indian Time)</span>.
+</p>
+<p className="mb-4 text-base sm:text-lg">
+    We deeply appreciate your enthusiasm and engagement, and we look forward to welcoming you in July for a more
+    enriched, diverse, and impactful conference experience.
+</p>
+<p className="mb-4 text-base sm:text-lg">Further updates and the finalized schedule will be shared shortly.</p>
+<div className="mt-8">
+    <p>Warm regards,</p>
+    <p className="font-bold">Organizing Committee</p>
+    <p>Jadetimes International Research Conference</p>
+    <p>Date : 07/02/2025</p>
+</div>
 
-                <hr className="my-8 border-dashed" />
+<hr className="my-8 border-dashed" />
 
-                <p className="mb-4 text-base sm:text-lg">
-                    It is with great pleasure that we welcome you to the International Research Conference 2025, proudly hosted by Jadetimes Media
-                    LLC, United States.
-                </p>
-                <p className="mb-4 text-base sm:text-lg">
-                    In a time where knowledge knows no borders, we are honored to bring together a diverse community of scholars, professionals,
-                    and students from around the globe. This conference is not only a platform to share groundbreaking research, but also a space to
-                    inspire collaboration, spark innovation, and foster meaningful academic connections.
-                </p>
-                <p className="mb-4 text-base sm:text-lg">
-                    Whether you&apos;re joining us through our online platform or participating in hybrid mode from one of our designated locations, we are
-                    excited to provide an inclusive, engaging, and professional environment for your voice to be heard. We look forward to your
-                    valuable contributions and to witnessing the remarkable work you bring to this global stage.
-                </p>
-                <div className="mt-8">
-                    <p>Warm regards,</p>
-                    <p className="font-bold">Organizing Committee</p>
-                    <p>JadeTimes Media LLC</p>
-                    <p>Date: 03/21/2025</p>
-                </div>
+<p className="mb-4 text-base sm:text-lg">
+    It is with great pleasure that we welcome you to the International Research Conference 2025, proudly hosted by Jadetimes Media
+    LLC, United States.
+</p>
+<p className="mb-4 text-base sm:text-lg">
+    In a time where knowledge knows no borders, we are honored to bring together a diverse community of scholars, professionals,
+    and students from around the globe. This conference is not only a platform to share groundbreaking research, but also a space to
+    inspire collaboration, spark innovation, and foster meaningful academic connections.
+</p>
+<p className="mb-4 text-base sm:text-lg">
+    Whether you&apos;re joining us through our online platform or participating in hybrid mode from one of our designated locations, we are
+    excited to provide an inclusive, engaging, and professional environment for your voice to be heard. We look forward to your
+    valuable contributions and to witnessing the remarkable work you bring to this global stage.
+</p>
+<div className="mt-8">
+    <p>Warm regards,</p>
+    <p className="font-bold">Organizing Committee</p>
+    <p>JadeTimes Media LLC</p>
+    <p>Date : 03/21/2025</p>
+</div>
 
                 <div className="my-8">
                     <a href="#" className="text-red-600 underline">Click here to download the conference booklet</a>
